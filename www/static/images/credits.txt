@@ -21,3 +21,11 @@ Sardine Dinner
 Casino
 <img src="images/5817404296_59bfa70fff_m.jpg" width="240" height="160" alt="Slot Machines" /><br />
 <caption><a href="http://www.flickr.com/photos/robboudon/" title="robboudon">robboudon</a></caption>
+
+Our Lady of Fatima
+<img src="images/3688310611_204b78e746_m.jpg" width="240" height="180" alt="Our Lady of Fatima" /><br />
+<caption><a href="http://www.flickr.com/photos/oceanstater/" title="H.C. Williams">H.C. Williams</a></caption>
+
+Shrimp Boil
+<img src="images/416954735_d969e20dba_m.jpg" width="240" height="160" alt="Shrimp boil" /><br />
+<caption><a href="http://www.flickr.com/photos/shawnzlea/" title="">Shawn Rossi</a></caption>
