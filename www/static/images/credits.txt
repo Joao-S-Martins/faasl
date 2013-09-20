@@ -28,4 +28,8 @@ Our Lady of Fatima
 
 Shrimp Boil
 <img src="images/416954735_d969e20dba_m.jpg" width="240" height="160" alt="Shrimp boil" /><br />
-<caption><a href="http://www.flickr.com/photos/shawnzlea/" title="">Shawn Rossi</a></caption>
+<caption><a href="http://www.flickr.com/photos/shawnzlea/" title="Shawn Rossi">Shawn Rossi</a></caption>
+
+Holiday Dinner
+<img src="images/337869291_ccc1b8ba87_m.jpg" width="240" height="160" alt="Shrimp boil" /><br />
+<caption><a href="http://www.flickr.com/photos/nightthree/" title="Justin Russell ">Justin Russell</a></caption>
