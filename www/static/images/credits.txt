@@ -1,13 +1,17 @@
 Filhoes
-<img src="images/5422125261_6943df2271_m.jpg" width="240" height="160" alt="Filhos" /><br />
+<img src="images/5422125261_6943df2271_m.jpg" width="240" height="160" alt="Filhoes" /><br />
 <caption><a href="http://www.flickr.com/photos/photoskate/" title="photoskate">photoskate</a></caption>
 
 Cozida a Portuguesa
 <img src="images/3518829531_333cc1f112_m.jpg" width="240" height="160" alt="Portguese Pork and Beef Stew" /><br />
 <caption><a href="http://www.flickr.com/photos/naotakem/" title="naotakem">naotakem</a></caption>
 
+Beef a Portuguesa
+<img src="images/8632090963_132edfd8c2_m.jpg" width="240" height="180" alt="Steak topped with an egg" /><br />
+<caption><a href="http://www.flickr.com/photos/msvg/" title="msvg">msvg</a></caption>
+
 Sousaphones
-<img src="images/1576839129_d62a4743be_m.jpg" width="240" height="160" alt="Marching Instruments" /><br />
+<img src="images/1576839129_d62a4743be_m.jpg" width="240" height="173" alt="Marching Instruments" /><br />
 <caption><a href="http://www.flickr.com/photos/peasap/" title="peasap">peasap</a></caption>
 						
 Crabs
