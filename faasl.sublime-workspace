@@ -159,7 +159,7 @@
 			"file": "www/static/index.html",
 			"settings":
 			{
-				"buffer_size": 9955,
+				"buffer_size": 11362,
 				"line_ending": "Windows"
 			}
 		},
@@ -167,7 +167,7 @@
 			"file": "www/static/events.html",
 			"settings":
 			{
-				"buffer_size": 10391,
+				"buffer_size": 10334,
 				"line_ending": "Windows"
 			}
 		},
@@ -175,7 +175,7 @@
 			"file": "www/static/lessons.html",
 			"settings":
 			{
-				"buffer_size": 7556,
+				"buffer_size": 7490,
 				"line_ending": "Windows"
 			}
 		},
@@ -183,7 +183,7 @@
 			"file": "www/static/volunteer.html",
 			"settings":
 			{
-				"buffer_size": 7842,
+				"buffer_size": 7776,
 				"line_ending": "Windows"
 			}
 		},
@@ -191,7 +191,7 @@
 			"file": "www/static/about.html",
 			"settings":
 			{
-				"buffer_size": 7757,
+				"buffer_size": 7691,
 				"line_ending": "Windows"
 			}
 		},
@@ -199,7 +199,7 @@
 			"file": "www/static/contact.html",
 			"settings":
 			{
-				"buffer_size": 8087,
+				"buffer_size": 8021,
 				"line_ending": "Windows"
 			}
 		}
@@ -355,7 +355,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -363,15 +363,15 @@
 					"file": "www/static/index.html",
 					"settings":
 					{
-						"buffer_size": 9955,
+						"buffer_size": 11362,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3387,
-								3953
+								9175,
+								8984
 							]
 						],
 						"settings":
@@ -381,7 +381,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 854.0,
+						"translation.y": 2495.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -391,15 +391,15 @@
 					"file": "www/static/events.html",
 					"settings":
 					{
-						"buffer_size": 10391,
+						"buffer_size": 10334,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3986,
-								3986
+								8148,
+								8148
 							]
 						],
 						"settings":
@@ -409,7 +409,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 709.0,
+						"translation.y": 2185.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -419,15 +419,15 @@
 					"file": "www/static/lessons.html",
 					"settings":
 					{
-						"buffer_size": 7556,
+						"buffer_size": 7490,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3986,
-								3986
+								5304,
+								5304
 							]
 						],
 						"settings":
@@ -437,7 +437,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 558.0,
+						"translation.y": 1590.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -447,15 +447,15 @@
 					"file": "www/static/volunteer.html",
 					"settings":
 					{
-						"buffer_size": 7842,
+						"buffer_size": 7776,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3986,
-								3986
+								5590,
+								5590
 							]
 						],
 						"settings":
@@ -465,7 +465,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 959.0,
+						"translation.y": 1624.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -475,15 +475,15 @@
 					"file": "www/static/about.html",
 					"settings":
 					{
-						"buffer_size": 7757,
+						"buffer_size": 7691,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3986,
-								3986
+								5505,
+								5505
 							]
 						],
 						"settings":
@@ -493,7 +493,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 824.0,
+						"translation.y": 1607.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -503,15 +503,15 @@
 					"file": "www/static/contact.html",
 					"settings":
 					{
-						"buffer_size": 8087,
+						"buffer_size": 8021,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3986,
-								3986
+								5835,
+								5835
 							]
 						],
 						"settings":
@@ -521,7 +521,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1087.0,
+						"translation.y": 1675.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
