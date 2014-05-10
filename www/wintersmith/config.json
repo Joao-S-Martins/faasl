@@ -1,0 +1,22 @@
+{
+  "locals": {
+    "title": "FAASL - Enriching lives in our community with the gift of music"
+    "url": "http://www.slowtheory.com",
+    "name": "slowtheory.com",
+    "owner": "Tim Lupfer",
+    "description": "trail running, photography, the outdoors, and other life-living"
+  },
+  "plugins": [],
+  "require": {
+    "moment": "moment",
+    "_": "underscore",
+    "typogr": "typogr"
+  },
+  "jade": {
+    "pretty": true
+  },
+  "markdown": {
+    "smartLists": true,
+    "smartypants": true
+  }
+}

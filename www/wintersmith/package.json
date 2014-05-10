@@ -1,0 +1,21 @@
+{
+  "name": "www.faasl.org",
+  "version": "0.0.1",
+  "description": "Wintersmith 2.0.x files for [faasl.org](http://www.faasl.org).",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "moment": "2.x",
+    "underscore": "1.4.x",
+    "typogr": "0.6.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Joao-S-Martins/faasl.git"
+  },
+  "author": "Joao Martins",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "87490b3d93063c48186c4f4280ebabeb262682dc"
+}

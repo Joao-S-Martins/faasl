@@ -1,0 +1,78 @@
+mixin MenuLink(text, link)
+    li: a(href=link)= text
+
+mixin Header()
+    div#header.container
+        div#banner
+            h1 FAASL
+            h2 Enriching lives in our community with the gift of music
+            div#quick-links
+                ul
+                    +MenuLink('About', 'about.html')
+                    +MenuLink('Contact', 'contact.html')
+        div#log_in
+    //end #header
+
+mixin NavBar()
+    div#nav.container
+        div#menu
+            ul
+                +MenuLink('Home', 'index.html')
+                +MenuLink('Events', 'events.html')
+                +MenuLink('Lessons', 'lessons.html')
+                +MenuLink('Volunteer', 'volunteer.html')
+        div#search
+    //end #nav
+
+mixin SketchA()
+    div.sketch-a
+        div.top
+        div.middle
+            h3 Open Rehearsals
+            p.
+                Rehearsals are every Friday night, starting at 8PM.
+                We're working on new pieces. Guests are welcome to
+                sit-in and play or just listen. Check the Facebook
+                link for up-to-date info and changes.
+        div.bottom
+        //end .sketch-a
+
+mixin SketchB()
+    div.sketch-b
+        div.top
+        div.middle
+            h3 Connect with us!
+            p: a(href='http://www.facebook.com/groups/106826212675216/')
+                | Like us on Facebook
+            p: a(href='http://twitter.com/#!/faasl')
+                | Follow us on Twitter
+        div.bottom
+        //end .sketch-b
+
+mixin PostIt(html)
+    div.post-it
+        div.top
+        div.middle= html
+        div.bottom
+        //end .post-it
+
+mixin FooterLinks()
+    ul#footer-links
+        +MenuLink('Home', 'index.html')
+        +MenuLink('About', 'about.html')
+        +MenuLink('Contact', 'contact.html')
+        +MenuLink('Events', 'about.html')
+        +MenuLink('Lessons', 'lessons.html')
+        +MenuLink('Volunteer', 'volunteer.html')
+
+mixin Legal()
+    p#Legal
+        | The Filarmonica Artista Amadora de San Leandro is a 
+        a(href='http://www.irs.gov/app/pub-78/searchFromResults.do?nameSearchTypeStarts=false&names=Filarmonica+Artista+Amadora+de+San+Leandro&nameSearchTypeAll=true&city=San+Leandro&state=CA&country=USA&deductibility=all&dispatchMethod=search&searched.nameSearchTypeStarts=false&searched.names=Filarmonica+Artista+Amadora+de+San+Leandro&searched.nameSearchTypeAll=false&searched.city=San+Leandro&searched.state=CA&searched.country=USA&searched.deductibility=all&searched.sortColumn=name&searched.indexOfFirstRow=0&searched.isDescending=false&submitName=Search', title='501(c)(3) non-profit', target='_blank')
+            | 501(c)(3) non-profit 
+        | organization.<br>
+        | The contents of this site are copyright &copy; 2007-2014 to various 
+        a(href='volunteer.html') FAASL volunteers 
+        | unless otherwise mentioned.<br>
+        | All rights reserved.
+    //end #legal
