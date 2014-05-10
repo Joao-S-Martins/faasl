@@ -2,6 +2,32 @@
     "persons": [{
         "id": 0,
         "name": "John Martins",
-        "titl": "Web Master & Musical Director"
+        "title": "Web Master & Musical Director",
+        "phone": "510-909-9830"
+    },{
+        "id": 1,
+        "name": "Lorenza DLG Tomaz",
+        "title": "President",
+        "phone": "510-760-9343"
+    },{
+        "id": 2,
+        "name": "Urbano Simas",
+        "title": "Vice-President",
+        "phone": "510-614-2843"
+    },{
+        "id": 3,
+        "name": "Conceicao Homen",
+        "title": "Treasurer",
+        "phone": "510-278-7801"
+    },{
+        "id": 4,
+        "name": "Michele Menezes",
+        "title": "Secretary",
+        "phone": "510-427-2254"
+    },{
+        "id": 5,
+        "name": "Leonilda Cardoso",
+        "title": "Board Director",
+        "phone": "510-537-9322"
     }]
 }

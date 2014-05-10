@@ -1,15 +1,10 @@
 ---
-title: Wintersmith
-template: layout.jade
+title: Filarmonica Artista Amadora
+template: page.jade
 ---
 
+##Spreading the Joy of Music
 
-Hello World
------------
-
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+We are a non-profit group with over 30 years of experience performing and teaching music in the East San Francisco Bay.
+We have seen first hand the benefits music has provided our community.
+Please help us in our continued effort to spread of joy of music.
