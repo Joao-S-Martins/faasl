@@ -1,6 +1,6 @@
 ---
 title: Filarmonica Artista Amadora
-template: page.jade
+date: "2012-05-05T12:00:00-07:00"
 ---
 
 ##Spreading the Joy of Music

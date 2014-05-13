@@ -1,8 +1,43 @@
 {
-    "evnts": [{
+    "events": [{
         "description": "Our 34th Anniversary Celebration",
-        "time": "April 27, 2014, 2:00PM",
-        "street": "550 West Estudillo Ave.",
+        "time": "2014-04-27T14:00:00-07:00",
+        "street": "550 West Estudillo Ave",
+        "city": "San Leandro"
+    },{
+        "description": "Lajense Greeting & Dinner",
+        "time": "2014-05-16T18:30:00-07:00",
+        "street": "1105 C St",
+        "city": "Hayward"
+    },{
+        "description": "Beef a Portuguesa",
+        "time": "2014-05-31T19:00:00-07:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro"
+    },{
+        "description": "Sao Joao Sardine Dinner",
+        "time": "2014-06-21T15:00:00-07:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro"
+    },{
+        "description": "FAASL Padroeira",
+        "time": "2014-09-26T00:00:00-07:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro"
+    },{
+        "description": "FAASL Padroeira",
+        "time": "2014-09-28T00:00:00-07:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro"
+    },{
+        "description": "Shrimp Boil Fundraiser",
+        "time": "2014-10-25T19:00:00-07:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro"
+    },{
+        "description": "Member Appreciation Diner",
+        "time": "2014-12-13T19:00:00-07:00",
+        "street": "857 Alvarado St",
         "city": "San Leandro"
     }]
 }

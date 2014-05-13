@@ -1,10 +1,8 @@
-doctype html
-html(lang='en')
-    head
-        meta(charset='utf-8')
-        title= locals.title
-    body
-        h1= page.title
-        != page.html
-    include mixins
-    +Header()
+extends layout
+block content
+    each item, i in homeItems
+        div
+            h2!= typogr(item.title).typogrify()
+            != typogr(item.html).chain().smartypants().widont().ord().value()
+            - if (i < homeItems.length - 1)
+                div.item-separator

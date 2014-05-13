@@ -7,8 +7,8 @@ template: page.jade
 
 |  |  |  |
 |:-|:-|-:|
-| President | Lorenza DLG Tomaz | 510-760-9343 |
-| Vice-President | Urbano Simas | 510-614-2843 |
-| Treasurer | Conceicao Homen | 510-278-7801 |
-| Secretary | Michele Menezes | 510-427-2254 |
-| Web Master | John Martins | 510-909-9830 |
+| {directify{Lorenza DLG Tomaz:title}} | Lorenza DLG Tomaz | {directify{Lorenza DLG Tomaz:phone}} |
+| {directify{Urbano Simas:title}} | Urbano Simas | {directify{Urbano Simas:phone}} |
+| {directify{Conceicao Homen:title}} | Conceicao Homen | {directify{Conceicao Homen:phone}} |
+| {directify{Michele Menezes:title}} | Michele Menezes | {directify{Michele Menezes:phone}} |
+| {directify{John Martins:title}} | John Martins | {directify{John Martins:phone}} |

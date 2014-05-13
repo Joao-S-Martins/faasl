@@ -52,7 +52,7 @@ mixin SketchB()
 mixin PostIt(html)
     div.post-it
         div.top
-        div.middle= html
+        div.middle!= html
         div.bottom
         //end .post-it
 

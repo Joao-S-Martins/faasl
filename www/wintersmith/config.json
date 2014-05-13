@@ -6,12 +6,18 @@
     "owner": "Tim Lupfer",
     "description": "trail running, photography, the outdoors, and other life-living"
   },
-  "plugins": [],
+  "plugins": [
+    "./plugins/directify.js",
+    "./plugins/event-helpers.js",
+    "./plugins/homepage.js"
+  ],
   "require": {
     "moment": "moment",
     "_": "underscore",
     "typogr": "typogr"
   },
+  "hostname": "localhost",
+  "port": "4747",
   "jade": {
     "pretty": true
   },

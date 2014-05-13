@@ -6,6 +6,7 @@ html(lang='en')
         meta(name='google-site-verification', content='JiOLgEet9r9WnJ7TP-FXGKDxFbTVId9HwD3omN8r0mI')
         title= locals.title
 
+        //link(rel='stylesheet', href='https://rawgithub.com/ekalinin/typogr.js/master/example/style.css', type='text/css', media='screen')
         link(rel='icon', href='/favicon.ico', type='image/x-icon')
         link(rel='stylesheet', href='css/print.css', type='text/css', media='print')
         link(rel='stylesheet', href='css/screen.css', type='text/css', media='screen, projection')
@@ -31,15 +32,15 @@ html(lang='en')
                     div#body.container
                         div#left_col
                             +SketchA()
-                            +PostIt()
+                            +PostIt(env.helpers.events.upcomingPerformanceList())
                             +SketchB()
                         //end #left_col
                         div#content
                             block content
                         //end #content
                         div#right_col
-                            +PostIt()
-                            +PostIt()
+                            +PostIt(env.helpers.events.fundraiserNote(env.helpers.events.getFundraisers(true)[0]))
+                            +PostIt(env.helpers.events.fundraiserNote(env.helpers.events.getFundraisers(true)[1]))
                         //end #right_col
                     //end #body
                     div#footer.container
@@ -50,4 +51,3 @@ html(lang='en')
                 //end #bg_D
             //end #bg_B
         //end #bg_A
-
