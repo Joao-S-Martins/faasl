@@ -1,0 +1,30 @@
+extends layout
+block content
+    hr
+    h2 Community Events
+    hr
+    div
+        h2 Our Event List
+        p
+            | Our list changes regularly, so check back again soon.
+            | Performance dates are being arranged for 2014 and will each be announced as they are signed and confirmed.
+            | For information regarding performances or arraging an event with us,
+            | see our <a href="contact.html">contact</a> page.
+            | Return to our home page for fundraiser dates and other news.
+        div.item-separator
+    div
+        h2 Scheduled dates
+        p
+            table
+                //tr
+                    th Date
+                    th Event
+                    th Location
+                    th Time
+                each event, i in events
+                    - mmt = moment(event.time)
+                    tr
+                        td!= mmt.format('MMMM D')
+                        td!= event.description
+                        td!= _.compact([event.street, event.city]).join(', ')
+                        td!= (mmt.hour() === 0 && mmt.minute() === 0) ? 'TBD' : mmt.format("h:mm a")

@@ -26,6 +26,11 @@
         "city": "San Leandro"
     },{
         "description": "FAASL Padroeira",
+        "time": "2014-09-27T00:00:00-07:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro"
+    },{
+        "description": "FAASL Padroeira",
         "time": "2014-09-28T00:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"

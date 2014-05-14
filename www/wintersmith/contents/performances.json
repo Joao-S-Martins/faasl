@@ -5,7 +5,7 @@
         "street": "400 W. 9th St",
         "city": "Tracy"
     },{
-        "description": "Our 34th Anniversary Celebration",
+        "description": "Concert",
         "time": "2014-04-27T14:00:00-07:00",
         "street": "550 West Estudillo Ave",
         "city": "San Leandro"
@@ -81,7 +81,12 @@
         "city": "San Leandro"
     },{
         "description": "Music Festival",
-        "time": "2014-11-00T00:00:00-07:00",
+        "time": "2014-11-01T00:00:00-07:00",
+        "street": "",
+        "city": "Livingston"
+    },{
+        "description": "Music Festival",
+        "time": "2014-11-08T00:00:00-08:00",
         "street": "",
         "city": "Livingston"
     }]

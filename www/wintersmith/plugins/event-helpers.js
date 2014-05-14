@@ -9,7 +9,9 @@ module.exports = function(env, callback) {
     var defaults, key, options, value;
     defaults = {
         fundraisers: 'fundraisers',
-        performances: 'performances'
+        performances: 'performances',
+        page: 'events.html',
+        template: 'events.jade'
     };
     options = env.config.directify || {};
     for (key in defaults) {
@@ -41,6 +43,7 @@ module.exports = function(env, callback) {
         performances = JSON.parse(data).events;
         performances.sort(sortFn);
     });
+    // env.util.readJSONSync(filename)
 
     function sortFn(a, b) {
         return moment(a.time) - moment(b.time);
@@ -86,10 +89,11 @@ module.exports = function(env, callback) {
         return _getList(fundraisers, fromToday, max);
     }
 
-    function allEvents() {
+    function allEvents(fromToday, max) {
         if (!eventlist) {
             _combineEvents();
         }
+        return _getList(eventlist, fromToday, max);
     }
 
     function upcomingPerformanceList() {
@@ -115,6 +119,43 @@ module.exports = function(env, callback) {
         upcomingPerformanceList: upcomingPerformanceList,
         fundraiserNote: _fundraiserNote
     };
+
+    EventsPage = (function(_super) {
+        __extends(EventsPage, _super);
+
+        /* An EventsPage has a list of events */
+
+        function EventsPage(events) {
+            this.events = events;
+        }
+
+        EventsPage.prototype.getFilename = function() {
+            return options.page;
+        };
+
+        EventsPage.prototype.getView = function() {
+            return function(env, locals, contents, templates, callback) {
+                var ctx, template;
+                template = templates[options.template];
+                if (template == null) {
+                  return callback(new Error("unknown events template '" + options.template + "'"));
+                }
+                ctx = {
+                  env: env,
+                  contents: contents,
+                  events: this.events
+                };
+                env.utils.extend(ctx, locals);
+                return template.render(ctx, callback);
+            };
+        };
+
+        return EventsPage;
+    })(env.plugins.Page);
+
+    env.registerGenerator('events', function(contents, callback) {
+        return callback(null, {'events.page': new EventsPage(allEvents())});
+    });
 
     return callback();
 };
