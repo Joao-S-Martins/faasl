@@ -32,15 +32,18 @@ html(lang='en')
                     div#body.container
                         div#left_col
                             +SketchA()
-                            +PostIt(env.helpers.events.upcomingPerformanceList())
+                            +PostIt(upcoming)
+                                +Upcoming(env.helpers.events.getPerformances(true, 8))
                             +SketchB()
                         //end #left_col
                         div#content
                             block content
                         //end #content
                         div#right_col
-                            +PostIt(env.helpers.events.fundraiserNote(env.helpers.events.getFundraisers(true)[0]))
-                            +PostIt(env.helpers.events.fundraiserNote(env.helpers.events.getFundraisers(true)[1]))
+                            - fundraisers = env.helpers.events.getFundraisers(true, 3)
+                            each fundraiser in fundraisers
+                                +PostIt()
+                                    +FundraiserNote(fundraiser)
                         //end #right_col
                     //end #body
                     div#footer.container

@@ -52,9 +52,37 @@ mixin SketchB()
 mixin PostIt(html)
     div.post-it
         div.top
-        div.middle!= html
+        if block
+            div.middle
+                block
+        else
+            div.middle!= html
         div.bottom
         //end .post-it
+
+mixin Upcoming(events)
+    h3 Upcoming Performances
+    p
+        each event, i in events
+            - mmt = moment(event.time)
+            - date = mmt.format('MMMM D')
+            - time = (mmt.hour() === 0 && mmt.minute() === 0) ? 'TBD' : mmt.format("h:mm a")
+            != _.compact([date, event.city, time]).join(', ')
+            - if (i < events.length - 1)
+                br
+
+mixin FundraiserNote(event)
+    - mmt = moment(event.time)
+    - date = mmt.format('dddd, MMMM Do')
+    - time = time = (mmt.hour() === 0 && mmt.minute() === 0) ? 'TBD' : mmt.format("h:mm a")
+    h5!= event.description
+    p
+        != date
+        br
+        != time
+        br
+        != [event.street, event.city].join(', ')
+
 
 mixin FooterLinks()
     ul#footer-links

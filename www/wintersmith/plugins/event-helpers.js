@@ -69,18 +69,6 @@ module.exports = function(env, callback) {
         return retval;
     }
 
-    function _fundraiserNote(event) {
-        var mmt = moment(event.time),
-            retval = ['<h5>', event.description, '</h5>',
-            '<p>',
-            mmt.format('dddd, MMMM Do') + '<br>',
-            mmt.format('h:mm a') + '<br>',
-            event.street + ', ' + event.city,
-            '</p>'];
-
-        return retval.join('');
-    }
-
     function getPerformances(fromToday, max) {
         return _getList(performances, fromToday, max);
     }
@@ -96,28 +84,10 @@ module.exports = function(env, callback) {
         return _getList(eventlist, fromToday, max);
     }
 
-    function upcomingPerformanceList() {
-        var events = getPerformances(true, 8),
-            retval = '';
-        _.each(events, function (e) {
-            //May 16, Hayward, 6:30PM<br>
-            var mmt = moment(e.time);
-            var date = mmt.format("MMMM D");
-            var time = (mmt.hour() === 0 && mmt.minute() === 0) ?
-                    'TBD' : mmt.format("h:mm a");
-            retval += [date, e.city, time].join(', ') + '<br>';
-        });
-        retval = '<p>' + retval + '</p>';
-        retval = '<h3>Upcoming Performances</h3>' + retval;
-        return retval;
-    }
-
     env.helpers.events = {
         getPerformances: getPerformances,
         getFundraisers: getFundraisers,
-        allEvents: allEvents,
-        upcomingPerformanceList: upcomingPerformanceList,
-        fundraiserNote: _fundraiserNote
+        allEvents: allEvents
     };
 
     EventsPage = (function(_super) {

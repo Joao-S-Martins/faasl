@@ -7,7 +7,7 @@ One of my favorite meals, done right and for charity.
 
 This fundraiser will be sure to fill your stomach for over a day.
 
-![Steak topped with an egg](8632090963_132edfd8c2_m.jpg "More photos by msvg at http://www.flickr.com/photos/msvg/")
+![Steak topped with an egg](8632090963_132edfd8c2_m.jpg "More photos by Michael Gil at http://www.flickr.com/photos/msvg/")
 
 The dinner is being held Saturday, May 31<sub>st</sub> at the FAASL Hall. Dinner is at 7:00PM, with no-host cocktails beforehand.
 
