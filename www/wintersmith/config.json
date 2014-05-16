@@ -1,14 +1,15 @@
 {
   "locals": {
     "title": "FAASL - Enriching lives in our community with the gift of music",
-    "url": "http://www.slowtheory.com",
-    "name": "slowtheory.com",
-    "owner": "Tim Lupfer",
-    "description": "trail running, photography, the outdoors, and other life-living"
+    "url": "http://www.faasl.org",
+    "name": "faasl.org",
+    "owner": "Joao Martins",
+    "description": ""
   },
   "plugins": [
+    "./plugins/utils.js",
     "./plugins/directify.js",
-    "./plugins/event-helpers.js",
+    "./plugins/eventspage.js",
     "./plugins/homepage.js"
   ],
   "require": {

@@ -49,8 +49,9 @@ mixin SketchB()
         div.bottom
         //end .sketch-b
 
-mixin PostIt(html)
-    div.post-it
+mixin PostIt(html, rotate)
+    - style = (!rotate) ? '' : '-webkit-transform:rotate('+rotate+'deg);-ms-transform:rotate('+rotate+'deg);transform:rotate('+rotate+'deg)'
+    div.post-it(style= style)
         div.top
         if block
             div.middle
@@ -62,24 +63,21 @@ mixin PostIt(html)
 
 mixin Upcoming(events)
     h3 Upcoming Performances
+    br
     p
         each event, i in events
             - mmt = moment(event.time)
-            - date = mmt.format('MMMM D')
-            - time = (mmt.hour() === 0 && mmt.minute() === 0) ? 'TBD' : mmt.format("h:mm a")
-            != _.compact([date, event.city, time]).join(', ')
+            != _.compact([env.helpers.utils.formatTime(mmt), event.city, env.helpers.utils.formatTime(mmt)]).join(', ')
             - if (i < events.length - 1)
                 br
 
 mixin FundraiserNote(event)
     - mmt = moment(event.time)
-    - date = mmt.format('dddd, MMMM Do')
-    - time = time = (mmt.hour() === 0 && mmt.minute() === 0) ? 'TBD' : mmt.format("h:mm a")
     h5!= event.description
     p
-        != date
+        != env.helpers.utils.formatDate(mmt)
         br
-        != time
+        != env.helpers.utils.formatTime(mmt)
         br
         != [event.street, event.city].join(', ')
 

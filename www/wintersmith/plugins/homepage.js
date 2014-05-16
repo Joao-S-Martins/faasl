@@ -1,6 +1,3 @@
-var __hasProp = {}.hasOwnProperty,
-__extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
-
 module.exports = function(env, callback) {
 
     /* Homepage plugin. Defaults can be overridden in config.json
@@ -30,7 +27,7 @@ module.exports = function(env, callback) {
             return item[options.itemsMain];
         });
         items = _.filter(items, function(item) {
-            return typeof(item) !== 'undefined' && item.published !== false;
+            return typeof(item) !== 'undefined' && item.metadata.published !== false;
         });
         items.sort(function(a, b) {
             return a.date - b.date;
@@ -39,9 +36,9 @@ module.exports = function(env, callback) {
     };
 
     homePage = (function(_super) {
-        __extends(homePage, _super);
+        env.helpers.utils.__extends(homePage, _super);
 
-        /* A page has a list of items */
+        /* A homePage has a list of items */
 
         function homePage(items) {
             this.items = items;

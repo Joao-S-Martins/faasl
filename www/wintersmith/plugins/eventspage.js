@@ -6,7 +6,9 @@ module.exports = function(env, callback) {
     /* eventHelpers plugin. Defaults can be overridden in config.json
         e.g. "events": {"fundraisers": "fundraisers"}
     */
-    var defaults, key, options, value;
+    var _ = require('underscore'),
+        moment = require('moment'),
+        eventlist, defaults, key, options, value, fundraisers, performances;
     defaults = {
         fundraisers: 'fundraisers',
         performances: 'performances',
@@ -21,29 +23,10 @@ module.exports = function(env, callback) {
         }
     }
 
-    var _ = require('underscore'),
-        moment = require('moment'),
-        fs = require('fs'),
-        eventlist,
-        fundraisers = env.contentsPath + '/' + options.fundraisers + '.json',
-        performances = env.contentsPath + '/' + options.performances + '.json';
-    fs.readFile(fundraisers, 'utf8', function (err, data) {
-        if (err) {
-            console.log('Error: ' + err);
-            return;
-        }
-        fundraisers = JSON.parse(data).events;
-        fundraisers.sort(sortFn);
-    });
-    fs.readFile(performances, 'utf8', function (err, data) {
-        if (err) {
-            console.log('Error: ' + err);
-            return;
-        }
-        performances = JSON.parse(data).events;
-        performances.sort(sortFn);
-    });
-    // env.util.readJSONSync(filename)
+    fundraisers = env.contentsPath + '/' + options.fundraisers + '.json';
+    performances = env.contentsPath + '/' + options.performances + '.json';
+    fundraisers = env.helpers.utils.readJSONSync(fundraisers).events;
+    performances = env.helpers.utils.readJSONSync(performances).events;
 
     function sortFn(a, b) {
         return moment(a.time) - moment(b.time);
@@ -77,21 +60,15 @@ module.exports = function(env, callback) {
         return _getList(fundraisers, fromToday, max);
     }
 
-    function allEvents(fromToday, max) {
+    function getAll(fromToday, max) {
         if (!eventlist) {
             _combineEvents();
         }
         return _getList(eventlist, fromToday, max);
     }
 
-    env.helpers.events = {
-        getPerformances: getPerformances,
-        getFundraisers: getFundraisers,
-        allEvents: allEvents
-    };
-
     EventsPage = (function(_super) {
-        __extends(EventsPage, _super);
+        env.helpers.utils.__extends(EventsPage, _super);
 
         /* An EventsPage has a list of events */
 
@@ -124,8 +101,14 @@ module.exports = function(env, callback) {
     })(env.plugins.Page);
 
     env.registerGenerator('events', function(contents, callback) {
-        return callback(null, {'events.page': new EventsPage(allEvents())});
+        return callback(null, {'events.page': new EventsPage(getAll())});
     });
+
+    env.helpers.events = {
+        getPerformances: getPerformances,
+        getFundraisers: getFundraisers,
+        getAll: getAll
+    };
 
     return callback();
 };

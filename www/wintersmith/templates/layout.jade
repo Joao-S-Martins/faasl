@@ -40,10 +40,14 @@ html(lang='en')
                             block content
                         //end #content
                         div#right_col
-                            - fundraisers = env.helpers.events.getFundraisers(true, 3)
+                            - fundraisers = env.helpers.events.getFundraisers(true, 4)
+                            - rotate = 0
+                            - abs = true
                             each fundraiser in fundraisers
-                                +PostIt()
+                                +PostIt(undefined, (abs) ? Math.abs(rotate) : rotate)
                                     +FundraiserNote(fundraiser)
+                                - abs = !abs
+                                - rotate -= 4
                         //end #right_col
                     //end #body
                     div#footer.container

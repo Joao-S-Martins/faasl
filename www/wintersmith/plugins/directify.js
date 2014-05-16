@@ -1,6 +1,3 @@
-var __hasProp = {}.hasOwnProperty,
-__extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
-
 module.exports = function(env, callback) {
 
     /* Directify plugin. Defaults can be overridden in config.json
@@ -18,16 +15,8 @@ module.exports = function(env, callback) {
         }
     }
 
-    var fs = require('fs'),
-        file = env.contentsPath + '/' + options.directory + '.json';
-    fs.readFile(file, 'utf8', function (err, data) {
-        if (err) {
-            console.log('Error: ' + err);
-            return;
-        }
-         
-        directory = JSON.parse(data);
-    });
+    directory = env.contentsPath + '/' + options.directory + '.json';
+    directory = env.helpers.utils.readJSONSync(directory);
 
     directifyHTML = function(html) {
         var _ = require('underscore'),
@@ -57,7 +46,7 @@ module.exports = function(env, callback) {
     };
 
     Directify = (function (_super) {
-        __extends(Directify, _super);
+        env.helpers.utils.__extends(Directify, _super);
 
         function Directify() {
             return Directify.__super__.constructor.apply(this, arguments);
