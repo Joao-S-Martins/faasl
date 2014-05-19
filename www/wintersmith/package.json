@@ -1,21 +1,32 @@
 {
   "name": "www.faasl.org",
   "version": "0.0.1",
-  "description": "Wintersmith 2.0.x files for [faasl.org](http://www.faasl.org).",
+  "description": "Wintersmith 2.0.x files for generating the [faasl.org](http://www.faasl.org) website.",
+  "author": "Joao Martins (http://www.joao.io)",
+  "license": "CC-BY-1.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no tests specified\" && exit 1"
   },
   "dependencies": {
     "moment": "2.x",
+    "twitter-bootstrap": "git://github.com/twbs/bootstrap.git#v3.1.1",
+    "typogr": "0.6.x",
     "underscore": "1.4.x",
-    "typogr": "0.6.x"
+    "wintersmith-less": "~0.2.2"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Joao-S-Martins/faasl.git"
+    "url": "http://github.com/Joao-S-Martins/faasl.git"
   },
-  "author": "Joao Martins",
-  "license": "BSD",
+  "engines": {
+    "node" : "0.10.28",
+    "npm": "1.4.9",
+    "wintersmith": "2.0.10"
+  },
   "readmeFilename": "README.md",
-  "gitHead": "87490b3d93063c48186c4f4280ebabeb262682dc"
+  "gitHead": "87490b3d93063c48186c4f4280ebabeb262682dc",
+  "bugs": {
+    "url" : "http://github.com/Joao-S-Martins/faasl/issues",
+    "email" : "webmaster@faasl.org"
+  }
 }

@@ -10,7 +10,8 @@
     "./plugins/utils.js",
     "./plugins/directify.js",
     "./plugins/eventspage.js",
-    "./plugins/homepage.js"
+    "./plugins/homepage.js",
+    "wintersmith-less"
   ],
   "require": {
     "moment": "moment",
