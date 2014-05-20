@@ -11,7 +11,8 @@
     "./plugins/directify.js",
     "./plugins/eventspage.js",
     "./plugins/homepage.js",
-    "wintersmith-less"
+    "wintersmith-less",
+    "wintersmith-browserify"
   ],
   "require": {
     "moment": "moment",

@@ -8,25 +8,27 @@
     "test": "echo \"Error: no tests specified\" && exit 1"
   },
   "dependencies": {
+    "jquery": ">= 1.9.0",
     "moment": "2.x",
     "twitter-bootstrap": "git://github.com/twbs/bootstrap.git#v3.1.1",
     "typogr": "0.6.x",
     "underscore": "1.4.x",
-    "wintersmith-less": "~0.2.2"
+    "wintersmith-less": "~0.2.2",
+    "wintersmith-browserify": "~0.3.0"
   },
   "repository": {
     "type": "git",
     "url": "http://github.com/Joao-S-Martins/faasl.git"
   },
   "engines": {
-    "node" : "0.10.28",
+    "node": "0.10.28",
     "npm": "1.4.9",
     "wintersmith": "2.0.10"
   },
   "readmeFilename": "README.md",
   "gitHead": "87490b3d93063c48186c4f4280ebabeb262682dc",
   "bugs": {
-    "url" : "http://github.com/Joao-S-Martins/faasl/issues",
-    "email" : "webmaster@faasl.org"
+    "url": "http://github.com/Joao-S-Martins/faasl/issues",
+    "email": "webmaster@faasl.org"
   }
 }
