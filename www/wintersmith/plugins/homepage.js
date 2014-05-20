@@ -38,7 +38,7 @@ module.exports = function(env, callback) {
                 preview = item.metadata.preview;
 
             switch (true) {
-                case preview:
+                case preview && env.mode === 'preview':
                     return true;
                 case date > now || expires < now:
                     return false;
