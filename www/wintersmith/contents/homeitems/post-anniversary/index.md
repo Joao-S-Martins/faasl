@@ -1,6 +1,8 @@
 ---
 title: "Thanks for supporting us and celebrating with us"
 date: "2014-04-28T12:00:00-07:00"
+expires: "2014-05-19T12:00:00-07:00"
+#preview: true
 ---
 
 Our 34th anniversary was a huge success.

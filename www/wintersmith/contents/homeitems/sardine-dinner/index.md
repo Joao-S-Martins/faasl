@@ -1,7 +1,8 @@
 ---
 title: "Sardine Dinner"
 date: "2014-05-09T12:00:00-07:00"
-published: false
+expires: "2014-05-09T12:00:00-07:00"
+#preview: true
 ---
 
 This is a traditional festival that honors the Catholic Saint John the Baptist.

@@ -20,14 +20,31 @@ module.exports = function(env, callback) {
 
     getHomeItems = function(contents) {
         var items,
-            _ = require('underscore');
+            _ = require('underscore'),
+            moment = require('moment');
         contents = contents[options.itemsDirecotry];
 
         items = contents._.directories.map(function(item) {
             return item[options.itemsMain];
         });
         items = _.filter(items, function(item) {
-            return typeof(item) !== 'undefined' && item.metadata.published !== false;
+            if (typeof(item) === 'undefined') {
+                return false;
+            }
+
+            var now = moment(),
+                date = moment(item.date),
+                expires = moment(item.metadata.expires),
+                preview = item.metadata.preview;
+
+            switch (true) {
+                case preview:
+                    return true;
+                case date > now || expires < now:
+                    return false;
+                default:
+                    return true;
+            }
         });
         items.sort(function(a, b) {
             return a.date - b.date;
