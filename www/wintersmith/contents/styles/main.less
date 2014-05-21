@@ -62,14 +62,6 @@
 @import "@{bootstrap}/forms.less";
 @import "@{bootstrap}/buttons.less";
 
-
-/*** BASIC TYPOGRAPHY ***/
-
-/*** GRID ***/
-/*#header, #bg_D {
-  .container-fixed();
-}*/
-
 .container {
   .container-fixed();
   width: auto;
@@ -114,5 +106,195 @@
   width: auto;
   max-width: 1050px;
 }
+
+/*** COLORS ***/
+a:link { text-decoration: underline; color: #36c; }
+a:visited { text-decoration: underline; color: #99c; }
+a:hover { text-decoration: underline; color: #c33; }
+a:active, a:focus { text-decoration: underline; color: #000; }
+code, pre { color: #c33; } /*** very optional, but still useful. W3C uses about the same colors for codes ***/
+
+/*** NO LINK ICON (use class="noicon" to remove the link icon from a specific link) ***/
+body a.noicon { background:none !important; padding:0 !important; margin:0 !important; }
+
+/*** LINK PADDING FOR ICONS ***/
+a[href^="http:"],
+a[href^="mailto:"],
+a[href$=".pdf"],
+a[href$=".doc"],
+a[href$=".xls"],
+a[href$=".rss"],
+a[href$=".rdf"],
+a[href^="aim:"] { padding:2px 22px 2px 0; margin:-2px 0; background-repeat: no-repeat; background-position: right center; }
+
+/*** EXTERNAL LINK ICONS ***/
+a[href^="http:"]          { background-image: url("img/icons/external.png"); padding-right: 14px; }
+a[href^="mailto:"]        { background-image: url("img/icons/email.png"); }
+a[href^="http:"]:visited  { background-image: url("img/icons/visited.png"); }
+
+/*** FILE LINK ICONS ***/
+a[href$=".pdf"]   { background-image: url("img/icons/pdf.png"); }
+a[href$=".doc"]   { background-image: url("img/icons/doc.png"); }
+a[href$=".xls"]   { background-image: url("img/icons/xls.png"); }
+
+/*** MISCELLANEOUS LINK ICONS ***/
+a[href$=".rss"],
+a[href$=".rdf"]   { background-image: url("img/icons/feed.png"); }
+a[href^="aim:"]   { background-image: url("img/icons/im.png"); }
+a[href^="http://www.drmartinsdc.com"] { background:none; padding:0; margin:0; }
+
+/**************************************/
+/*              GLOBALS               */
+/**************************************/
+html, body {
+  color: #414141;
+}
+
+ul { list-style: none; margin: 0px; padding: 0px; }
+ul li { margin-left: 0em; margin: 0px; padding: 0px; }
+
+h1, h2, h3, h4, h5, h6, #nav #menu, #quick-links { font-family: 'Walter Turncoat', "Liberation Sans", Helvetica, Arial, sans-serif; font-weight: bold; }
+
+#body {}
+
+
+/**************************************/
+/*            BACKGROUNDS             */
+/**************************************/
+html, body { background: url("img/music_bg_large_dark.jpg") top center  repeat; }
+#bg_A, #bg_B, #bg_C, #bg_D { width: 1050px; margin:0 auto; } /* Extra 50px to each side of the .container elements */
+#bg_C { background: url("img/notebook_top.png") top left no-repeat; }
+#bg_D { background: url("img/notebook_bg_light.png") top left repeat-y; }
+
+/**************************************/
+/*             COLUMNS                */
+/**************************************/
+/*
+.span-left, #left_col { float: left; margin-right: 10px; width: 270px; }
+.span-left-center, #banner, #menu, #footer div.wrapper, #wide_content { float: left; margin-right: 10px; width: 750px; }
+.span-center, #content { float: left; margin-right: 10px; width: 430px; padding-right: 40px; }
+.span-right, #log_in, #search, #right_col { float: left; margin-right: 0; width: 190px; }
+*/
+/**************************************/
+/*              HEADER                */
+/**************************************/
+#header {}
+
+#banner { text-align: center; position: relative; }
+
+#banner h1 { margin-top: 2.4em; }
+
+#banner a:hover, #banner a:active, #banner a:focus { text-decoration: none; }
+
+#log_in { vertical-align: middle; text-align: left;}
+
+/**************************************/
+/*             NAVIGATION             */
+/**************************************/
+a:hover, a:active, a:focus { cursor: pointer; }
+
+#body a, #body a:link, #body a:visited, #body a:hover, #body a:active, #body a:focus { color: #000000; font-weight: bold; }
+
+#footer a, #footer a:link, #footer a:visited, #footer a:hover, #footer a:active, #footer a:focus { color: #000000; font-weight: bold; }
+
+#quick-links { float: right; position: absolute; top: 15px; right: 30px; font-size: 1.6em; }
+
+#quick-links { padding: 0.5em 0em; }
+
+#nav, #nav #menu, #nav #menu ul, #nav #menu ul li, #nav #menu ul li a, #nav #menu ul li a span, #nav #search { height: 30px; } /* Staff lines are 30px tall */
+
+#nav #menu { text-align: right; font-size: 1.6em; }
+
+#nav #menu ul { margin-right: 40px; }
+
+#nav #menu ul li, ul.pagenav li, div.pagination ul li { display: inline; padding: 0px; }
+
+ul.pagenav li, div.pagination ul li { padding: 0em 0.5em; }
+
+#menu ul li a, #menu ul li a:link, #menu ul li a:visited, #menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus { padding: 0em 0.5em; vertical-align: middle; }
+
+#menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus {}
+
+#menu ul li a:hover, #menu ul li a:focus, #quick-links ul li a:hover, #quick-linksul li a:focus { color: #000000; text-decoration: none; }
+
+#search { text-align: left; }
+
+#footer-links {}
+
+
+/**************************************/
+/*          LEFT SIDE COLUMN          */
+/**************************************/
+#left_col {}
+
+#left_col div.module {}
+
+#left_col div.post-it { background: url(img/post-it_large_right.png) top center no-repeat; height: 287px; }
+#left_col div.post-it div.top { height: 14px; }
+#left_col div.post-it div.bottom { height: 22px; }
+#left_col div.post-it div.middle { height: 251px; padding: 0 24px; overflow: hidden; }
+#left_col div.post-it div.middle h2,
+#left_col div.post-it div.middle h3,
+#left_col div.post-it div.middle h4,
+#left_col div.post-it div.middle h5,
+#left_col div.post-it div.middle h6 { margin: 0; border-bottom: 1px solid; }
+#left_col div.post-it div.middle p { margin: 0; }
+
+#left_col div.sketch-a div.top { height: 28px; background: url("img/sketch_A_top.png") bottom center no-repeat; }
+#left_col div.sketch-a div.bottom { height: 26px; background: url("img/sketch_A_bottom.png") top center no-repeat; }
+#left_col div.sketch-a div.middle { padding: 0 14px; background: url("img/sketch_A_middle.png") center repeat-y; }
+#left_col div.sketch-a div.middle h2,
+#left_col div.sketch-a div.middle h3,
+#left_col div.sketch-a div.middle h4,
+#left_col div.sketch-a div.middle h5,
+#left_col div.sketch-a div.middle h6 { margin-top: 0; border-bottom: 1px solid; }
+#left_col div.sketch-a div.middle p { margin: 0; }
+
+#left_col div.sketch-b div.top { height: 25px; background: url("img/sketch_B_top.png") bottom center no-repeat; }
+#left_col div.sketch-b div.bottom { height: 22px; background: url("img/sketch_B_bottom.png") top center no-repeat; }
+#left_col div.sketch-b div.middle { padding: 0 24px; background: url("img/sketch_B_middle.png") center repeat-y; }
+#left_col div.sketch-b div.middle h2,
+#left_col div.sketch-b div.middle h3,
+#left_col div.sketch-b div.middle h4,
+#left_col div.sketch-b div.middle h5,
+#left_col div.sketch-b div.middle h6 { margin-top: 0; border-bottom: 1px solid; }
+#left_col div.sketch-b div.middle p { margin: 0; }
+
+/**************************************/
+/*         RIGHT SIDE COLUMN          */
+/**************************************/
+#right_col {}
+
+#right_col div.module {}
+
+#right_col div.post-it { background: url("img/post-it_small_left.png") top center no-repeat; height: 165px; }
+#right_col div.post-it div.top { height: 6px; }
+#right_col div.post-it div.bottom { height: 11px; }
+#right_col div.post-it div.middle { height: 148px; padding: 0 15px; overflow: hidden; }
+#right_col div.post-it div.middle h2,
+#right_col div.post-it div.middle h3,
+#right_col div.post-it div.middle h4,
+#right_col div.post-it div.middle h5,
+#right_col div.post-it div.middle h6 { margin: 0; border-bottom: 1px solid; }
+#right_col div.post-it div.middle p {}
+
+
+/**************************************/
+/*            MAIN CONTENT            */
+/**************************************/
+#content {}
+
+#content div.article{}
+
+p.counter { float: right; padding-right: 6em;}
+
+
+/**************************************/
+/*               FOOTER               */
+/**************************************/
+#footer { text-align: center; font-size: 1em; line-height: 1.875em; }
+
+#footer ul li { display: inline; }
+
 
 
