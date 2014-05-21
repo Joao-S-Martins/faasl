@@ -14,9 +14,9 @@ mixin Header()
     //end #header
 
 mixin NavBar()
-    div#nav.container
-        div#menu
-            ul
+    div#nav.navbar.navbar-default.container(role='navigation')
+        div#menu.collapse.navbar-collapse
+            ul.nav.navbar-nav
                 +MenuLink('Home', 'index.html')
                 +MenuLink('Events', 'events.html')
                 +MenuLink('Lessons', 'lessons.html')

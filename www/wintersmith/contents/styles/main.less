@@ -25,7 +25,7 @@
 // @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
 @grid-columns: 24;
-@grid-gutter-width: 10px;
+@grid-gutter-width: 0;
 
 /** Colors
 - black   #000
@@ -72,9 +72,14 @@
 
 .container {
   .container-fixed();
-  width: 950px;
+  width: auto;
+  max-width: 950px;//Need to remove this width and others
   margin: 0 50px;
 //  .make-row();
+}
+
+.row {
+  .make-row();
 }
 
 /*#nav {
@@ -82,19 +87,32 @@
 }*/
 
 .span-left-center, #banner, #menu, #footer div.wrapper, #wide_content {
-  .make-md-column(19, 0);
+  .make-xs-column(24);
+  .make-md-column(19);
 }
 
 .span-left, #left_col {
-  .make-md-column(7, 0);
+  .make-xs-column(7);
+  .make-md-column(7);
+  .make-md-column-pull(17);
 }
 
 .span-center, #content {
-  .make-md-column(12,);
+  .make-xs-column(24);
+  .make-md-column(12);
+  .make-md-column-push(7);
+  padding: 0 15px;
 }
 
 .span-right, #log_in, #search, #right_col {
-  .make-md-column(5, 0);
+  .make-xs-column(5);
+  .make-md-column(5);
+  .make-md-column-push(7);
+}
+
+#bg_A, #bg_B, #bg_C, #bg_D {
+  width: auto;
+  max-width: 1050px;
 }
 
 

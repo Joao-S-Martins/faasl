@@ -32,25 +32,28 @@ html(lang='en')
                 div#bg_D
                     +NavBar()
                     div#body.container
-                        div#left_col
-                            +SketchA()
-                            +PostIt()
-                                +Upcoming(env.helpers.events.getPerformances(true, 8))
-                            +SketchB()
-                        //end #left_col
-                        div#content
-                            block content
-                        //end #content
-                        div#right_col
-                            - fundraisers = env.helpers.events.getFundraisers(true, 4)
-                            - rotate = 0
-                            - abs = true
-                            each fundraiser in fundraisers
-                                +PostIt(undefined, (abs) ? Math.abs(rotate) : rotate)
-                                    +FundraiserNote(fundraiser)
-                                - abs = !abs
-                                - rotate -= 4
-                        //end #right_col
+                        div.row
+                            div#content
+                                block content
+                            //end #content
+                            div#right_col
+                                - fundraisers = env.helpers.events.getFundraisers(true, 4)
+                                - rotate = 0
+                                - abs = true
+                                each fundraiser in fundraisers
+                                    +PostIt(undefined, (abs) ? Math.abs(rotate) : rotate)
+                                        +FundraiserNote(fundraiser)
+                                    - abs = !abs
+                                    - rotate -= 4
+                            //end #right_col
+                            div#left_col 
+                                //#left_col markup is here for SEO and small screen rendering, but pulled left for normal screens.
+                                +SketchA()
+                                +PostIt()
+                                    +Upcoming(env.helpers.events.getPerformances(true, 8))
+                                +SketchB()
+                            //end #left_col
+                        //end .row
                     //end #body
                     div#footer.container
                         div.wrapper
