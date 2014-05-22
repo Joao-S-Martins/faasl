@@ -32,5 +32,9 @@
   "bugs": {
     "url": "http://github.com/Joao-S-Martins/faasl/issues",
     "email": "webmaster@faasl.org"
+  },
+  "devDependencies": {
+    "grunt-processhtml": "^0.3.3",
+    "grunt-uncss": "^0.3.3"
   }
 }
