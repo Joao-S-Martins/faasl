@@ -1,7 +1,7 @@
 ---
 title: "Beef a Portuguesa Fundraiser"
 date: "2014-05-09T12:00:00-07:00"
-expires: "2014-06-01T12:00:00-07:00"
+expires: "2014-05-22T12:00:00-07:00"
 #preview: true
 ---
 

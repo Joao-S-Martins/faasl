@@ -11,14 +11,17 @@
         "city": "Hayward"
     },{
         "description": "Beef a Portuguesa",
-        "time": "2014-05-31T19:00:00-07:00",
+        "time": "2013-05-31T19:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"
     },{
         "description": "Sao Joao Sardine Dinner",
         "time": "2014-06-21T15:00:00-07:00",
         "street": "857 Alvarado St",
-        "city": "San Leandro"
+        "city": "San Leandro",
+        "note": [
+            "$20 for adults",
+            "$10 for children 6-12 years of age"]
     },{
         "description": "FAASL Padroeira",
         "time": "2014-09-26T00:00:00-07:00",
