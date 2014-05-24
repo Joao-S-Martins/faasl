@@ -19,9 +19,9 @@
         "time": "2014-06-21T15:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
-        "note": [
+        "notes": [
             "$20 for adults",
-            "$10 for children 6-12 years of age"]
+            "$10 for children 6-12 years old"]
     },{
         "description": "FAASL Padroeira",
         "time": "2014-09-26T00:00:00-07:00",

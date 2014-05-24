@@ -80,7 +80,10 @@ mixin FundraiserNote(event)
         != env.helpers.utils.formatTime(mmt)
         br
         != [event.street, event.city].join(', ')
-
+        - if (event.notes)
+            each note in event.notes
+                br
+                != note
 
 mixin FooterLinks()
     ul#footer-links
