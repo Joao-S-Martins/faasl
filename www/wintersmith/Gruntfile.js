@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         dotfiles: false,
         add: false,
         branch: 'gh-pages',
-        message: 'Website updates.',
+        message: 'Testing deploy',
         push: true
       },
       src: '**/*'
