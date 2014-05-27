@@ -7,6 +7,7 @@ Items belonging to the FAA of San Leandro (FAASL), specifically the website.
   - [x] Reproduce all the pages
   - [x] Implement reusable homepage items
   - [ ] Proof content
+  - [ ] Restructure repo
 - [ ] Upgrade to a responsive site
   - [x] Include Bootstrap 3 LESS
   - [ ] Implement Bootstrap elements
