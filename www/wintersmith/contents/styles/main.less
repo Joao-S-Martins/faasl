@@ -8,6 +8,13 @@
 /** Bootstrap core */
 @import "@{bootstrap}/variables.less";
 @import "@{bootstrap}/mixins.less";
+//(BUG) These are expected by navbar.less, but don't exist.
+.pull-right() {
+  float: right !important;
+}
+.pull-left() {
+  float: left !important;
+}
 
 /**************************************/
 /*       Variables Override           */
@@ -24,7 +31,11 @@
 // @font-size-h5:            @font-size-base;
 // @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
-@screen-lg: @screen-md + 1;
+//Responsive updates
+@screen-sm: 740px;//Default sm makes things a little poopy
+@screen-lg: @screen-md + 1;//Intentionally make lg useless
+
+//Porting from bluetrip grid system
 @grid-columns: 24;
 @grid-gutter-width: 0;
 
@@ -62,10 +73,12 @@
 @import "@{bootstrap}/tables.less";
 @import "@{bootstrap}/forms.less";
 @import "@{bootstrap}/buttons.less";
+@import "@{bootstrap}/glyphicons.less";
 
 /** Bootstrap nav */
 @import "@{bootstrap}/navs.less";
-//@import "@{bootstrap}/navbar.less";
+@import "@{bootstrap}/navbar.less";
+@import "@{bootstrap}/component-animations.less";
 
 .container {
   .container-fixed();
@@ -95,6 +108,7 @@
 .span-left-center, #banner, #menu, #wide_content {
   .make-xs-column(24);
   .make-md-column(19);
+  .xs-padding-and-reset(40px, 35px);
 }
 
 .span-left, #left_col {
@@ -161,8 +175,8 @@ html, body {
   color: #414141;
 }
 
-ul { list-style: none; margin: 0px; padding: 0px; }
-ul li { margin-left: 0em; margin: 0px; padding: 0px; }
+//ul { list-style: none; margin: 0px; padding: 0px; }
+//ul li { margin-left: 0em; margin: 0px; padding: 0px; }
 
 h1, h2, h3, h4, h5, h6, #menu, #quick-links { font-family: 'Walter Turncoat', "Liberation Sans", Helvetica, Arial, sans-serif; font-weight: bold; }
 
@@ -226,30 +240,41 @@ a:hover, a:active, a:focus { cursor: pointer; }
 
 //#quick-links { padding: 0.5em 0em; }
 
-#menu, #footer div.wrapper {
+nav, #footer div.wrapper {
+//#footer div.wrapper {
   .make-xs-column(24);
   .make-md-column(19);
-  .xs-padding-and-reset();
+  .xs-padding-and-reset(50px, 50px);
   text-align: center;
 }
 
-#menu, #menu ul, #menu ul li, #menu ul li a, #menu ul li a span, #search { height: 30px; } /* Staff lines are 30px tall */
+//#menu, #menu ul, #menu ul li, #menu ul li a, #menu ul li a span, #search { height: 30px; } /* Staff lines are 30px tall */
 
-#menu { text-align: right; font-size: 1.6em; }
+//#menu { text-align: right; font-size: 1.6em; }
 
-#menu ul { margin-right: 40px; }
+//#menu ul { margin-right: 40px; }
 
-#menu ul li, ul.pagenav li, div.pagination ul li { display: inline; padding: 0px; }
+//#menu ul li, ul.pagenav li, div.pagination ul li { display: inline; padding: 0px; }
 
-ul.pagenav li, div.pagination ul li { padding: 0em 0.5em; }
+//ul.pagenav li, div.pagination ul li { padding: 0em 0.5em; }
 
-#menu ul li a, #menu ul li a:link, #menu ul li a:visited, #menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus { padding: 0em 0.5em; vertical-align: middle; }
+//#menu ul li a, #menu ul li a:link, #menu ul li a:visited, #menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus { padding: 0em 0.5em; vertical-align: middle; }
 
-#menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus {}
+//#menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus {}
 
-#menu ul li a:hover, #menu ul li a:focus, #quick-links ul li a:hover, #quick-linksul li a:focus { color: #000000; text-decoration: none; }
+//#menu ul li a:hover, #menu ul li a:focus, #quick-links ul li a:hover, #quick-linksul li a:focus { color: #000000; text-decoration: none; }
 
-// #search { text-align: left; }
+//#search { text-align: left; }
+
+.navbar-toggle {
+  border-color: #ddd;
+  background-color: #888;
+  margin-right: 10%;
+  .icon-bar {
+    background-color: #ddd;
+    width: 33px;
+  }
+}
 
 #footer-links {}
 

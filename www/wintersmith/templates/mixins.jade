@@ -11,12 +11,17 @@ mixin Header()
                     //-+MenuLink('About', 'about.html')
                     //-+MenuLink('Contact', 'contact.html')
         //-div#log_in
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
     //end #header
 
 mixin NavBar()
-    div.row(role='navigation')
-        div#menu
-            ul
+    nav.navbar(role='navigation')
+        div#menu.collapse.navbar-collapse
+            ul.nav.navbar-nav.navbar-right
                 +MenuLink('Home', 'index.html')
                 +MenuLink('Events', 'events.html')
                 +MenuLink('Lessons', 'lessons.html')
