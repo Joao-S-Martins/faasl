@@ -24,43 +24,36 @@ html(lang='en')
             })();
 
     body
-        div#bg_A
-            div#bg_B
-                div#bg_C
-                    +Header()
-                //end #bg_C
-                div#bg_D
-                    +NavBar()
-                    div#body.container
-                        div.row
-                            div#content
-                                block content
-                            //end #content
-                            div#right_col
-                                - fundraisers = env.helpers.events.getFundraisers(true, 1)
-                                - rotate = 0
-                                - abs = true
-                                each fundraiser in fundraisers
-                                    +PostIt(undefined, (abs) ? Math.abs(rotate) : rotate)
-                                        +FundraiserNote(fundraiser)
-                                    - abs = !abs
-                                    - rotate -= 4
-                            //end #right_col
-                            div#left_col 
-                                //#left_col markup is here for SEO and small screen rendering, but pulled left for normal screens.
-                                +SketchA()
-                                +PostIt()
-                                    +Upcoming(env.helpers.events.getPerformances(true, 8))
-                                +SketchB()
-                            //end #left_col
-                        //end .row
-                    //end #body
-                    div#footer.container
-                        div.wrapper
-                            +FooterLinks()
-                            +Legal()
-                            +License()
-                    //end #footer
-                //end #bg_D
-            //end #bg_B
+        div#bg_A.container
+            +Header()
         //end #bg_A
+        div#bg_B.container
+            +NavBar()
+            div#body.row
+                div#content
+                    block content
+                //end #content
+                div#right_col
+                    - fundraisers = env.helpers.events.getFundraisers(true, 1)
+                    - rotate = 0
+                    - abs = true
+                    each fundraiser in fundraisers
+                        +PostIt(undefined, (abs) ? Math.abs(rotate) : rotate)
+                            +FundraiserNote(fundraiser)
+                        - abs = !abs
+                        - rotate -= 4
+                //end #right_col
+                div#left_col 
+                    //#left_col markup is here for SEO and small screen rendering, but pulled left for normal screens.
+                    +SketchA()
+                    +PostIt()
+                        +Upcoming(env.helpers.events.getPerformances(true, 8))
+                    +SketchB()
+                //end #left_col
+            //end #body
+            div#footer.row
+                div.wrapper
+                    +FooterLinks()
+                    +License()
+            //end #footer
+        //end #bg_B
