@@ -226,12 +226,14 @@ a:hover, a:active, a:focus { cursor: pointer; }
   font-size: 1.6em;
   height: 28px;
   ul {
-    height: 28px;
+    //height: 28px;
     li {
-      height: 28px;
+      //height: 28px;
       a {
-        height: 28px;
-        padding: 0.2em 0.5em;
+        //height: 28px;
+        @media (min-width: @screen-sm-min) {
+          padding: 0.2em 0.5em;
+        }
         vertical-align: middle;
         &:link {
           &:extend(#menu ul li a);
