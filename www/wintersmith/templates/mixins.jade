@@ -1,26 +1,15 @@
 mixin MenuLink(text, link)
     li: a(href=link)= text
 
-mixin Header()
-    div#header.row
-        div#banner
-            h1 FAASL
-            h2 Enriching lives in our community with the gift of music
-            //-div#quick-links
-                //-ul
-                    //-+MenuLink('About', 'about.html')
-                    //-+MenuLink('Contact', 'contact.html')
-        //-div#log_in
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#menu')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-    //end #header
+mixin NavbarToggle(target)
+    button.navbar-toggle(type='button', data-toggle='collapse', data-target=target)
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
 
-mixin NavBar()
-    //-nav.navbar(role='navigation')
-    nav#menu.collapse.navbar-collapse
+mixin SiteMenu(id)
+    nav#menu.collapse.navbar-collapse(role='navigation')
         ul.nav.navbar-nav.navbar-right
             +MenuLink('Home', 'index.html')
             +MenuLink('Events', 'events.html')
@@ -28,8 +17,27 @@ mixin NavBar()
             +MenuLink('Volunteer', 'volunteer.html')
             +MenuLink('About', 'about.html')
             +MenuLink('Contact', 'contact.html')
-        //-div#search
-    //end #nav
+    //end #menu
+
+mixin Header()
+    div#header.row
+        div#banner
+            h1 FAASL
+            h2 Enriching lives in our community with the gift of music
+        +NavbarToggle('#menu')
+    //end #header
+
+mixin NavBar()
+    //-nav.navbar(role='navigation')
+    nav#menu.collapse.navbar-collapse(role='navigation')
+        ul.nav.navbar-nav.navbar-right
+            +MenuLink('Home', 'index.html')
+            +MenuLink('Events', 'events.html')
+            +MenuLink('Lessons', 'lessons.html')
+            +MenuLink('Volunteer', 'volunteer.html')
+            +MenuLink('About', 'about.html')
+            +MenuLink('Contact', 'contact.html')
+    //end #menu
 
 mixin SketchA()
     div.sketch-a

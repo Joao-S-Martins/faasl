@@ -5,9 +5,9 @@
 @bootstrap: "../../node_modules/bootstrap/less";
 
 /** Bootstrap core */
-@import "@{bootstrap}/variables.less";
-@import "@{bootstrap}/mixins.less";
-@import "@{bootstrap}/utilities.less";
+@import (reference) "@{bootstrap}/variables.less";
+@import (reference) "@{bootstrap}/mixins.less";
+@import (reference) "@{bootstrap}/utilities.less";
 
 
 /**************************************/
@@ -26,7 +26,7 @@
 // @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
 
 //Responsive updates
-@screen-sm: 740px;//Default sm makes things a little poopy
+@screen-sm: 718px;//Smaller sm makes things a little poopy
 @screen-lg: @screen-md + 1;//Intentionally make lg useless
 
 //Porting from bluetrip grid system
@@ -103,13 +103,13 @@
 
 
 /** Scaffolding */
-.container {
+/*.container {
   .container-fixed();
 }
 
 .row {
   .make-row();
-}
+}*/
 
 .span-left-center, #banner, #menu, #wide_content {
   .make-xs-column(24);
