@@ -1,5 +1,4 @@
-//@import "../css/screen.css";
-
+@import url(http://fonts.googleapis.com/css?family=Patrick+Hand|Architects+Daughter|Walter+Turncoat);
 /**************************************/
 /*      Twitter Bootstrap Less        */
 /**************************************/
@@ -8,13 +7,8 @@
 /** Bootstrap core */
 @import "@{bootstrap}/variables.less";
 @import "@{bootstrap}/mixins.less";
-//(BUG) These are expected by navbar.less, but don't exist.
-.pull-right() {
-  float: right !important;
-}
-.pull-left() {
-  float: left !important;
-}
+@import "@{bootstrap}/utilities.less";
+
 
 /**************************************/
 /*       Variables Override           */
@@ -75,27 +69,14 @@
 @import "@{bootstrap}/buttons.less";
 @import "@{bootstrap}/glyphicons.less";
 
+
 /** Bootstrap nav */
 @import "@{bootstrap}/navs.less";
 @import "@{bootstrap}/navbar.less";
 @import "@{bootstrap}/component-animations.less";
 
-.container {
-  .container-fixed();
-//  width: auto;
-//  max-width: 950px;//Need to remove this width and others
-//  margin: 0 50px;
-//  .make-row();
-}
 
-.row {
-  .make-row();
-}
-
-/*#nav {
-  .make-md-column(24);
-}*/
-
+/** Mixins */
 .xs-padding-and-reset(@left: 0px; @right: 0px) {
   padding-left: 50px;
   padding-right: 30px;
@@ -105,10 +86,35 @@
   }
 }
 
+.post-it() {
+  background: url("img/post-it_small_left.png");// top center no-repeat;
+  background-size: 100% 100%;
+  padding: 0.6em 5% 2em;
+  margin: 0;
+  overflow: hidden;
+  * {
+    margin: 0;
+  }
+  h2, h3, h4, h5, h6 {
+    margin: 0;
+    border-bottom: 1px solid;
+  }
+}
+
+
+/** Scaffolding */
+.container {
+  .container-fixed();
+}
+
+.row {
+  .make-row();
+}
+
 .span-left-center, #banner, #menu, #wide_content {
   .make-xs-column(24);
   .make-md-column(19);
-  .xs-padding-and-reset(40px, 35px);
+  .xs-padding-and-reset(50px, 50px);
 }
 
 .span-left, #left_col {
@@ -132,9 +138,11 @@
   .xs-padding-and-reset();
 }
 
+
 /*** COLORS ***/
-a:link { text-decoration: underline; color: #36c; }
-a:visited { text-decoration: underline; color: #99c; }
+html, body { color: #414141; }
+//a:link { text-decoration: underline; color: #36c; }
+//a:visited { text-decoration: underline; color: #99c; }
 a:hover { text-decoration: underline; color: #c33; }
 a:active, a:focus { text-decoration: underline; color: #000; }
 code, pre { color: #c33; } /*** very optional, but still useful. W3C uses about the same colors for codes ***/
@@ -168,64 +176,35 @@ a[href$=".rdf"]   { background-image: url("img/icons/feed.png"); }
 a[href^="aim:"]   { background-image: url("img/icons/im.png"); }
 a[href^="http://www.drmartinsdc.com"] { background:none; padding:0; margin:0; }
 
-/**************************************/
-/*              GLOBALS               */
-/**************************************/
-html, body {
-  color: #414141;
-}
-
-//ul { list-style: none; margin: 0px; padding: 0px; }
-//ul li { margin-left: 0em; margin: 0px; padding: 0px; }
-
-h1, h2, h3, h4, h5, h6, #menu, #quick-links { font-family: 'Walter Turncoat', "Liberation Sans", Helvetica, Arial, sans-serif; font-weight: bold; }
 
 /**************************************/
 /*            BACKGROUNDS             */
 /**************************************/
 html, body { background: url("img/music_bg_large_dark.jpg") top center  repeat; }
-//#bg_A, #bg_B { width: 1050px; margin: 0 auto; } /* Extra 50px to each side of the .container elements */
 #bg_A {
-  .notebook_top();
+  background: url("img/notebook_top.png") top left no-repeat;
+  background-size: 924px auto;
   .clearfix();
 }
 #bg_B {
-  .notebook_body();
-  //.container-fixed();
-  .clearfix();
-}
-.notebook_top() {
-  background: url("img/notebook_top.png") top left no-repeat;
-  background-size: 924px auto;
-}
-.notebook_body() {
   background: url("img/notebook_bg_light.png") top left repeat-y;
   background-size: 924px auto;
+  .clearfix();
 }
 
-/**************************************/
-/*             COLUMNS                */
-/**************************************/
-/*
-.span-left, #left_col { float: left; margin-right: 10px; width: 270px; }
-.span-left-center, #banner, #menu, #footer div.wrapper, #wide_content { float: left; margin-right: 10px; width: 750px; }
-.span-center, #content { float: left; margin-right: 10px; width: 430px; padding-right: 40px; }
-.span-right, #log_in, #search, #right_col { float: left; margin-right: 0; width: 190px; }
-*/
+
 /**************************************/
 /*              HEADER                */
 /**************************************/
-#header {
-  //.notebook_top();
+#banner {
+  text-align: center;
+  position: relative;
+  padding: 0 50px;
+  h1 {
+    margin-top: 1.2em;
+  }
 }
 
-#banner { text-align: center; position: relative; padding: 0 50px; .notebook_top(); }
-
-#banner h1 { margin-top: 1.2em; }
-
-//#banner a:hover, #banner a:active, #banner a:focus { text-decoration: none; }
-
-//#log_in { vertical-align: middle; text-align: left;}
 
 /**************************************/
 /*             NAVIGATION             */
@@ -236,35 +215,45 @@ a:hover, a:active, a:focus { cursor: pointer; }
 
 #footer a, #footer a:link, #footer a:visited, #footer a:hover, #footer a:active, #footer a:focus { color: #000000; font-weight: bold; }
 
-//#quick-links { float: right; position: absolute; top: 15px; right: 30px; font-size: 1.6em; }
-
-//#quick-links { padding: 0.5em 0em; }
-
-nav, #footer div.wrapper {
-//#footer div.wrapper {
-  .make-xs-column(24);
-  .make-md-column(19);
-  .xs-padding-and-reset(50px, 50px);
+#footer div.wrapper {
+  &:extend(#wide_content);
   text-align: center;
 }
 
-//#menu, #menu ul, #menu ul li, #menu ul li a, #menu ul li a span, #search { height: 30px; } /* Staff lines are 30px tall */
-
-//#menu { text-align: right; font-size: 1.6em; }
-
-//#menu ul { margin-right: 40px; }
-
-//#menu ul li, ul.pagenav li, div.pagination ul li { display: inline; padding: 0px; }
-
-//ul.pagenav li, div.pagination ul li { padding: 0em 0.5em; }
-
-//#menu ul li a, #menu ul li a:link, #menu ul li a:visited, #menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus { padding: 0em 0.5em; vertical-align: middle; }
-
-//#menu ul li a:hover, #menu ul li a:active, #menu ul li a:focus {}
-
-//#menu ul li a:hover, #menu ul li a:focus, #quick-links ul li a:hover, #quick-linksul li a:focus { color: #000000; text-decoration: none; }
-
-//#search { text-align: left; }
+#menu {
+  font-family: @headings-font-family;
+  font-weight: @headings-font-weight;
+  font-size: 1.6em;
+  height: 28px;
+  ul {
+    height: 28px;
+    li {
+      height: 28px;
+      a {
+        height: 28px;
+        padding: 0.2em 0.5em;
+        vertical-align: middle;
+        &:link {
+          &:extend(#menu ul li a);
+        }
+        &:active {
+          &:extend(#menu ul li a);
+        }
+        &:visited {
+          &:extend(#menu ul li a);
+        }
+        &:hover {
+          &:extend(#menu ul li a);
+          color: #000000;
+          background-color: transparent;
+        }
+        &:focus {
+          &:extend(#menu ul li a:hover);
+        }
+      }
+    }
+  }
+}
 
 .navbar-toggle {
   border-color: #ddd;
@@ -276,70 +265,88 @@ nav, #footer div.wrapper {
   }
 }
 
-#footer-links {}
-
 
 /**************************************/
 /*          LEFT SIDE COLUMN          */
 /**************************************/
-#left_col div.post-it { .post-it(); background-image: url(img/post-it_large_right.png); }
-
-#left_col div.sketch-a div.top { height: 28px; background: url("img/sketch_A_top.png") bottom center no-repeat; background-size: 100% auto; }
-#left_col div.sketch-a div.bottom { height: 26px; background: url("img/sketch_A_bottom.png") top center no-repeat; background-size: 100% auto; }
-#left_col div.sketch-a div.middle { padding: 0 6%; background: url("img/sketch_A_middle.png") center repeat-y; background-size: 100% auto; }
-#left_col div.sketch-a div.middle h2,
-#left_col div.sketch-a div.middle h3,
-#left_col div.sketch-a div.middle h4,
-#left_col div.sketch-a div.middle h5,
-#left_col div.sketch-a div.middle h6 { margin-top: 0; border-bottom: 1px solid; }
-#left_col div.sketch-a div.middle p { margin: 0; }
-
-#left_col div.sketch-b div.top { height: 25px; background: url("img/sketch_B_top.png") bottom center no-repeat; background-size: 100% auto; }
-#left_col div.sketch-b div.bottom { height: 22px; background: url("img/sketch_B_bottom.png") top center no-repeat; background-size: 100% auto; }
-#left_col div.sketch-b div.middle { padding: 0 9%; background: url("img/sketch_B_middle.png") center repeat-y; background-size: 100% auto; }
-#left_col div.sketch-b div.middle h2,
-#left_col div.sketch-b div.middle h3,
-#left_col div.sketch-b div.middle h4,
-#left_col div.sketch-b div.middle h5,
-#left_col div.sketch-b div.middle h6 { margin-top: 0; border-bottom: 1px solid; }
-#left_col div.sketch-b div.middle p { margin: 0; }
+#left_col {
+  div.post-it {
+    .post-it();
+    background-image: url(img/post-it_large_right.png);
+  }
+  div.sketch-a {
+    div.top {
+      height: 28px;
+      background: url("img/sketch_A_top.png") bottom center no-repeat;
+      background-size: 100% 100%;
+    }
+    div.bottom {
+      height: 26px;
+      background: url("img/sketch_A_bottom.png") top center no-repeat;
+      background-size: 100% 100%;
+    }
+    div.middle {
+      padding: 0 6%;
+      background: url("img/sketch_A_middle.png") center repeat-y;
+      background-size: 100% 100%;
+    }
+    div.middle {
+      h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        border-bottom: 1px solid;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  div.sketch-b {
+    div.top {
+      height: 25px;
+      background: url("img/sketch_B_top.png") bottom center no-repeat;
+      background-size: 100% 100%;
+    }
+    div.bottom {
+      height: 22px;
+      background: url("img/sketch_B_bottom.png") top center no-repeat;
+      background-size: 100% 100%;
+    }
+    div.middle {
+      padding: 0 9%;
+      background: url("img/sketch_B_middle.png") center repeat-y;
+      background-size: 100% 100%;
+    }
+    div.middle {
+      h2, h3, h4, h5, h6 {
+        margin-top: 0;
+        border-bottom: 1px solid;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
 
 /**************************************/
 /*         RIGHT SIDE COLUMN          */
 /**************************************/
-.post-it() {
-  background: url("img/post-it_small_left.png");// top center no-repeat;
-  background-size: 100% 100%;
-  padding: 0.6em 5% 2em;
-  margin: 0;
-  overflow: hidden;
-  //max-width: 100%;
-  * {
-    margin: 0;
-  }
-  h2, h3, h4, h5, h6 {
-    margin: 0;
-    border-bottom: 1px solid;
-  }
+#right_col div.post-it {
+  .post-it();
 }
-
-#right_col div.post-it { .post-it(); }
 
 
 /**************************************/
 /*            MAIN CONTENT            */
 /**************************************/
-//p.counter { float: right; padding-right: 6em;}
-
-#content img { .center-block(); }
+#content img {
+  .center-block();
+}
 
 
 /**************************************/
 /*               FOOTER               */
 /**************************************/
-//#footer { text-align: center; font-size: 1em; line-height: 1.875em; }
-
-//#footer ul li { display: inline; }
 
 
 

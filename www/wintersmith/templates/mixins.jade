@@ -19,15 +19,15 @@ mixin Header()
     //end #header
 
 mixin NavBar()
-    nav.navbar(role='navigation')
-        div#menu.collapse.navbar-collapse
-            ul.nav.navbar-nav.navbar-right
-                +MenuLink('Home', 'index.html')
-                +MenuLink('Events', 'events.html')
-                +MenuLink('Lessons', 'lessons.html')
-                +MenuLink('Volunteer', 'volunteer.html')
-                +MenuLink('About', 'about.html')
-                +MenuLink('Contact', 'contact.html')
+    //-nav.navbar(role='navigation')
+    nav#menu.collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+            +MenuLink('Home', 'index.html')
+            +MenuLink('Events', 'events.html')
+            +MenuLink('Lessons', 'lessons.html')
+            +MenuLink('Volunteer', 'volunteer.html')
+            +MenuLink('About', 'about.html')
+            +MenuLink('Contact', 'contact.html')
         //-div#search
     //end #nav
 
