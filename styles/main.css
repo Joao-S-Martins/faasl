@@ -4629,21 +4629,23 @@ a:focus {
   font-size: 1.6em;
   height: 28px;
 }
-#menu ul {
-  height: 28px;
-}
-#menu ul li {
-  height: 28px;
-}
 #menu ul li a,
 #menu ul li a:link,
 #menu ul li a:active,
 #menu ul li a:visited,
 #menu ul li a:hover,
 #menu ul li a:focus {
-  height: 28px;
-  padding: 0.2em 0.5em;
   vertical-align: middle;
+}
+@media (min-width: 740px) {
+  #menu ul li a,
+  #menu ul li a:link,
+  #menu ul li a:active,
+  #menu ul li a:visited,
+  #menu ul li a:hover,
+  #menu ul li a:focus {
+    padding: 0.2em 0.5em;
+  }
 }
 #menu ul li a:hover,
 #menu ul li a:focus,
