@@ -72,6 +72,7 @@
 @import "@{bootstrap}/forms.less";
 @import "@{bootstrap}/buttons.less";
 @import "@{bootstrap}/glyphicons.less";
+@import "@{bootstrap}/responsive-utilities.less";
 
 
 /** Bootstrap nav */
@@ -99,6 +100,7 @@
   max-width: 350px;
   .center-block();
   overflow: hidden;
+  .wide-print();
   * {
     margin: 0;
   }
@@ -106,6 +108,15 @@
     font-size: 120%;
     margin: 0;
     border-bottom: 1px solid;
+  }
+}
+
+.wide-print() {
+  @media print {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    left: 0;
   }
 }
 
@@ -123,9 +134,11 @@
   .make-xs-column(24);
   .make-md-column(19);
   .xs-padding-and-reset(50px, 50px);
+  .wide-print();
 }
 
 .span-left, #left_col {
+  &:extend(.hidden-print);
   .make-xs-column(24);
   .make-md-column(7);
   .make-md-column-pull(17);
@@ -137,6 +150,7 @@
   .make-md-column(11);
   .make-md-column-push(7);
   .xs-padding-and-reset(12px, 12px);
+  .wide-print();
 }
 
 .span-right, #log_in, #search, #right_col {
@@ -144,6 +158,7 @@
   .make-md-column(6);
   .make-md-column-push(7);
   .xs-padding-and-reset();
+  .wide-print();
 }
 
 
@@ -229,6 +244,7 @@ a:hover, a:active, a:focus { cursor: pointer; }
 }
 
 #menu {
+  &:extend(.hidden-print);
   font-family: @headings-font-family;
   font-weight: @headings-font-weight;
   font-size: 1.6em;
@@ -266,6 +282,7 @@ a:hover, a:active, a:focus { cursor: pointer; }
 }
 
 #footer-links {
+  &:extend(.hidden-print);
   font-family: @headings-font-family;
   font-size: 1.2em;
   ul {
@@ -421,6 +438,7 @@ table {
 /**************************************/
 #footer {
   &:extend(.small);
+  &:extend(.hidden-print);
   padding: 2em 0;
 }
 

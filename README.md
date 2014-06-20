@@ -8,12 +8,16 @@ Items belonging to the FAA of San Leandro (FAASL), specifically the website.
   - [x] Implement reusable homepage items
   - [ ] Proof content
   - [ ] Restructure repo
-- [ ] Upgrade to a responsive site
+- [x] Upgrade to a responsive site
   - [x] Include Bootstrap 3 LESS
-  - [ ] Implement Bootstrap elements
-  - [ ] Change layout to work for all screen sizes, starting with xsm
+  - [x] Implement Bootstrap elements
+  - [x] Change layout to work for all screen sizes, starting with xs
+  - [x] Update events table
 - [ ] Improve performance
   - [x] Implement Grunt gh-pages deploy task
+  - [x] Printing CSS
+  - [ ] Refactor LESS and JS
+  - [ ] Swap Bluetrip icons for Bootstraps
   - [ ] Add CSS pruning and minification
   - [ ] Add image embedding
   - [ ] Add CSS/LESS validation
