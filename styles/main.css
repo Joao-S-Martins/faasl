@@ -530,7 +530,8 @@ p {
   }
 }
 small,
-.small {
+.small,
+#footer {
   font-size: 85%;
 }
 cite {
@@ -2091,7 +2092,7 @@ th {
 }
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9;
+  background-color: #e3e3e6;
 }
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
@@ -4377,7 +4378,7 @@ input[type="button"].btn-block {
   .span-center,
   #content {
     padding-left: 12px;
-    padding-right: 8px;
+    padding-right: 12px;
   }
 }
 .span-right,
@@ -4564,8 +4565,9 @@ a:focus {
 #body a:hover,
 #body a:active,
 #body a:focus {
-  color: #000000;
+  color: #666;
   font-weight: bold;
+  text-decoration: underline;
 }
 #footer a,
 #footer a:link,
@@ -4573,8 +4575,9 @@ a:focus {
 #footer a:hover,
 #footer a:active,
 #footer a:focus {
-  color: #000000;
+  color: #666;
   font-weight: bold;
+  text-decoration: underline;
 }
 #footer div.wrapper {
   text-align: center;
@@ -4628,6 +4631,7 @@ a:focus {
 #footer-links ul li a:hover,
 #footer-links ul li a:focus {
   color: #428bca;
+  text-decoration: none;
   vertical-align: middle;
 }
 @media (min-width: 718px) {
@@ -4678,6 +4682,7 @@ a:focus {
 #left_col div.post-it h4,
 #left_col div.post-it h5,
 #left_col div.post-it h6 {
+  font-size: 120%;
   margin: 0;
   border-bottom: 1px solid;
 }
@@ -4693,7 +4698,8 @@ a:focus {
   background: url("img/sketch_A_top.png") bottom center no-repeat;
   background-size: 100% 100%;
 }
-#left_col div.sketch-a div.bottom {
+#left_col div.sketch-a div.bottom,
+#content .item-separator {
   height: 26px;
   background: url("img/sketch_A_bottom.png") top center no-repeat;
   background-size: 100% 100%;
@@ -4708,6 +4714,7 @@ a:focus {
 #left_col div.sketch-a div.middle h4,
 #left_col div.sketch-a div.middle h5,
 #left_col div.sketch-a div.middle h6 {
+  font-size: 150%;
   margin-top: 0;
   border-bottom: 1px solid;
 }
@@ -4741,6 +4748,7 @@ a:focus {
 #left_col div.sketch-b div.middle h4,
 #left_col div.sketch-b div.middle h5,
 #left_col div.sketch-b div.middle h6 {
+  font-size: 150%;
   margin-top: 0;
   border-bottom: 1px solid;
 }
@@ -4769,6 +4777,7 @@ a:focus {
 #right_col div.post-it h4,
 #right_col div.post-it h5,
 #right_col div.post-it h6 {
+  font-size: 120%;
   margin: 0;
   border-bottom: 1px solid;
 }
@@ -4782,6 +4791,15 @@ a:focus {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+#content h4 {
+  border-bottom: 1px solid black;
+}
+#content .item-separator {
+  background-size: 115% 100%;
+}
+table {
+  background-color: white;
 }
 /**************************************/
 /*               FOOTER               */
