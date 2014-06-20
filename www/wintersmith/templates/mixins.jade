@@ -8,16 +8,19 @@ mixin NavbarToggle(target)
         span.icon-bar
         span.icon-bar
 
-mixin SiteMenu(id)
-    nav#menu.collapse.navbar-collapse(role='navigation')
-        ul.nav.navbar-nav.navbar-right
+mixin SiteMenu(id, classes)
+    //-nav.navbar(role='navigation')
+    nav.collapse.navbar-collapse(id=id, role='navigation')
+        - cls = ['nav', 'navbar-nav']
+        - if (classes)
+        -   cls = cls.concat(classes)
+        ul(class=cls.join(' '))
             +MenuLink('Home', 'index.html')
             +MenuLink('Events', 'events.html')
             +MenuLink('Lessons', 'lessons.html')
             +MenuLink('Volunteer', 'volunteer.html')
             +MenuLink('About', 'about.html')
             +MenuLink('Contact', 'contact.html')
-    //end #menu
 
 mixin Header()
     div#header.row
@@ -28,15 +31,7 @@ mixin Header()
     //end #header
 
 mixin NavBar()
-    //-nav.navbar(role='navigation')
-    nav#menu.collapse.navbar-collapse(role='navigation')
-        ul.nav.navbar-nav.navbar-right
-            +MenuLink('Home', 'index.html')
-            +MenuLink('Events', 'events.html')
-            +MenuLink('Lessons', 'lessons.html')
-            +MenuLink('Volunteer', 'volunteer.html')
-            +MenuLink('About', 'about.html')
-            +MenuLink('Contact', 'contact.html')
+    +SiteMenu('menu', ['navbar-right'])
     //end #menu
 
 mixin SketchA()
@@ -102,14 +97,8 @@ mixin FundraiserNote(event)
                 != note
 
 mixin FooterLinks()
-    div#footer-links
-        ul
-            +MenuLink('Home', 'index.html')
-            +MenuLink('About', 'about.html')
-            +MenuLink('Contact', 'contact.html')
-            +MenuLink('Events', 'about.html')
-            +MenuLink('Lessons', 'lessons.html')
-            +MenuLink('Volunteer', 'volunteer.html')
+    //+NavbarToggle('#footer-links')
+    +SiteMenu('footer-links')
     //end #footer-links
 
 mixin Legal()
