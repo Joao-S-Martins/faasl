@@ -3,7 +3,7 @@ title: Helping Through Musical Service
 template: page.jade
 ---
 
-##Musicians always wanted
+####Musicians always wanted
 
 We're always looking for more musicians to help us spread music throughout the communittee.
 We perform as both a marching band and a concert band. Our pieces range from American to European styles of marches and a wider range of concert pieces.

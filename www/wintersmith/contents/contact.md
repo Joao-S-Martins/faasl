@@ -3,7 +3,7 @@ title: Contact Us
 template: page.jade
 ---
 
-##Contact Info
+####Contact Info
 
 |  |  |  |
 |:-|:-|-:|

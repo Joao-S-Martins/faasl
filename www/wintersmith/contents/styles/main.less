@@ -18,12 +18,12 @@
 @headings-font-family: 'Walter Turncoat', "Liberation Sans", Helvetica, Arial, sans-serif;
 @headings-font-weight: bold;
 @font-size-base: 12px;
-// @font-size-h1:            floor((@font-size-base * 2.6)); // ~36px
-// @font-size-h2:            floor((@font-size-base * 2.15)); // ~30px
-// @font-size-h3:            ceil((@font-size-base * 1.7)); // ~24px
-// @font-size-h4:            ceil((@font-size-base * 1.25)); // ~18px
-// @font-size-h5:            @font-size-base;
-// @font-size-h6:            ceil((@font-size-base * 0.85)); // ~12px
+// @font-size-h1: floor((@font-size-base * 2.6)); // ~36px
+// @font-size-h2: floor((@font-size-base * 2.15)); // ~30px
+// @font-size-h3: ceil((@font-size-base * 1.7)); // ~24px
+// @font-size-h4: ceil((@font-size-base * 1.25)); // ~18px
+// @font-size-h5: @font-size-base;
+// @font-size-h6: ceil((@font-size-base * 0.85)); // ~12px
 
 //Responsive updates
 @screen-sm: 718px;//Smaller sm makes things a little poopy
@@ -32,6 +32,9 @@
 //Porting from bluetrip grid system
 @grid-columns: 24;
 @grid-gutter-width: 0;
+
+//tables
+@table-bg-accent: @background-highlight;
 
 /** Colors
 - black   #000
@@ -53,6 +56,7 @@
 #7F3F00
 #00BC00
 ***************************************/
+@background-highlight: #e3e3e6;
 
 /** X-browser reset */
 @import "@{bootstrap}/normalize.less";
@@ -99,6 +103,7 @@
     margin: 0;
   }
   h2, h3, h4, h5, h6 {
+    font-size: 120%;
     margin: 0;
     border-bottom: 1px solid;
   }
@@ -131,7 +136,7 @@
   .make-xs-column(24);
   .make-md-column(11);
   .make-md-column-push(7);
-  .xs-padding-and-reset(12px, 8px);
+  .xs-padding-and-reset(12px, 12px);
 }
 
 .span-right, #log_in, #search, #right_col {
@@ -214,9 +219,9 @@ html, body { background: url("img/music_bg_large_dark.jpg") top center  repeat; 
 /**************************************/
 a:hover, a:active, a:focus { cursor: pointer; }
 
-#body a, #body a:link, #body a:visited, #body a:hover, #body a:active, #body a:focus { color: #000000; font-weight: bold; }
+#body a, #body a:link, #body a:visited, #body a:hover, #body a:active, #body a:focus { color: #666; font-weight: bold; text-decoration: underline; }
 
-#footer a, #footer a:link, #footer a:visited, #footer a:hover, #footer a:active, #footer a:focus { color: #000000; font-weight: bold; }
+#footer a, #footer a:link, #footer a:visited, #footer a:hover, #footer a:active, #footer a:focus { color: #666; font-weight: bold; text-decoration: underline; }
 
 #footer div.wrapper {
   &:extend(#wide_content);
@@ -272,6 +277,7 @@ a:hover, a:active, a:focus { cursor: pointer; }
       }
       a {
         color: #428bca;
+        text-decoration: none;
         @media (min-width: @screen-sm-min) {
           padding: 0.2em 1em;
           display: inline;
@@ -337,6 +343,7 @@ a:hover, a:active, a:focus { cursor: pointer; }
       background: url("img/sketch_A_middle.png") center repeat-y;
       background-size: 100% 100%;
       h2, h3, h4, h5, h6 {
+        font-size: 150%;
         margin-top: 0;
         border-bottom: 1px solid;
       }
@@ -364,6 +371,7 @@ a:hover, a:active, a:focus { cursor: pointer; }
       background: url("img/sketch_B_middle.png") center repeat-y;
       background-size: 100% 100%;
       h2, h3, h4, h5, h6 {
+        font-size: 150%;
         margin-top: 0;
         border-bottom: 1px solid;
       }
@@ -390,8 +398,21 @@ a:hover, a:active, a:focus { cursor: pointer; }
     margin-bottom: 0;
   }
 }
-#content img {
-  .center-block();
+#content {
+  img {
+    .center-block();
+  }
+  h4 {
+    border-bottom: 1px solid black;
+  }
+  .item-separator {
+    &:extend(#left_col div.sketch-a div.bottom);
+    background-size: 115% 100%;
+  }
+}
+
+table {
+  background-color: white;
 }
 
 
@@ -399,6 +420,7 @@ a:hover, a:active, a:focus { cursor: pointer; }
 /*               FOOTER               */
 /**************************************/
 #footer {
+  &:extend(.small);
   padding: 2em 0;
 }
 

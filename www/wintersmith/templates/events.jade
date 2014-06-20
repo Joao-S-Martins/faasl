@@ -1,10 +1,8 @@
 extends layout
 block content
-    hr
-    h2 Community Events
-    hr
+    h3 Community Events
     div
-        h2 Our Event List
+        h4 Our Event List
         p
             | Our list changes regularly, so check back again soon.
             | Performance dates are being arranged for 2014 and will each be announced as they are signed and confirmed.
@@ -13,18 +11,20 @@ block content
             | Return to our home page for fundraiser dates and other news.
         div.item-separator
     div
-        h2 Scheduled dates
-        p
-            table
-                //tr
-                    th Date
-                    th Event
-                    th Location
-                    th Time
-                each event, i in events
-                    - mmt = moment(event.time)
+        h4 Scheduled dates
+        div.table-responsive
+            table.table.table-striped.table-bordered
+                thead
                     tr
-                        td!= mmt.format('MMMM D')
-                        td!= event.description
-                        td!= _.compact([event.street, event.city]).join(', ')
-                        td!= (mmt.hour() === 0 && mmt.minute() === 0) ? 'TBD' : mmt.format("h:mm a")
+                        th Date
+                        th Event
+                        th Location
+                        th Time
+                tbody
+                    each event, i in events
+                        - mmt = moment(event.time)
+                        tr
+                            td!= mmt.format('MMMM D')
+                            td!= event.description
+                            td!= _.compact([event.street, event.city]).join(', ')
+                            td!= (mmt.hour() === 0 && mmt.minute() === 0) ? 'TBD' : mmt.format("h:mm a")

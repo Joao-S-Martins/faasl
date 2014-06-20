@@ -6,7 +6,7 @@ module.exports = function(env, callback) {
     var homePage, defaults, getHomeItems, key, options, value;
     defaults = {
         template: 'index.jade',
-        itemsDirecotry: 'homeitems',
+        itemsDirectory: 'homeitems',
         itemsMain: 'index',
         filename: 'index.html'
     };
@@ -22,7 +22,7 @@ module.exports = function(env, callback) {
         var items,
             _ = require('underscore'),
             moment = require('moment');
-        contents = contents[options.itemsDirecotry];
+        contents = contents[options.itemsDirectory];
 
         items = contents._.directories.map(function(item) {
             return item[options.itemsMain];

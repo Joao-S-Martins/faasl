@@ -38,7 +38,7 @@ mixin SketchA()
     div.sketch-a
         div.top
         div.middle
-            h3 Open Rehearsals
+            h5 Open Rehearsals
             p.
                 Rehearsals are every Friday night, starting at 8PM.
                 We're working on new pieces. Guests are welcome to
@@ -51,7 +51,7 @@ mixin SketchB()
     div.sketch-b
         div.top
         div.middle
-            h3 Connect with us!
+            h5 Connect with us!
             p: a(href='http://www.facebook.com/groups/106826212675216/')
                 | Like us on Facebook
             p: a(href='http://twitter.com/#!/faasl')
@@ -73,7 +73,7 @@ mixin PostIt(html, rotate)
         //end .post-it
 
 mixin Upcoming(events)
-    h3 Upcoming Performances
+    h5 Upcoming Performances
     br
     p
         each event, i in events
@@ -124,6 +124,7 @@ mixin License()
         a(href='http://www.irs.gov/app/pub-78/searchFromResults.do?nameSearchTypeStarts=false&names=Filarmonica+Artista+Amadora+de+San+Leandro&nameSearchTypeAll=true&city=San+Leandro&state=CA&country=USA&deductibility=all&dispatchMethod=search&searched.nameSearchTypeStarts=false&searched.names=Filarmonica+Artista+Amadora+de+San+Leandro&searched.nameSearchTypeAll=false&searched.city=San+Leandro&searched.state=CA&searched.country=USA&searched.deductibility=all&searched.sortColumn=name&searched.indexOfFirstRow=0&searched.isDescending=false&submitName=Search', title='501(c)(3) non-profit', target='_blank')
             | 501(c)(3) non-profit 
         | organization.
+        br
         | The contents of this site are copyright &copy; 2007-2014 to various 
         a(href='volunteer.html')
             | FAASL volunteers 
