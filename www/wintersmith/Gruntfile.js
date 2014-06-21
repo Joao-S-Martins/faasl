@@ -41,6 +41,13 @@ module.exports = function(grunt) {
         }
       }
     },
+    'cssmin': {
+      'combine': {
+        files: {
+          'build/styles/main.min.css': ['build/styles/embeded.css']
+        }
+      }
+    },
     'processhtml': {
       options: {
         includeBase: 'build/'
@@ -60,9 +67,23 @@ module.exports = function(grunt) {
         ],
       }
     },
+    'htmlmin': {
+      'dist': {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'build',
+          src: ['**/*.{html,htm}'],
+          dest: 'build'
+        }]
+      }
+    },
     'imagemin': {
       options: {
-        optimizationLevel: 3,
+        optimizationLevel: 7,
         progressive: true
       },
       'backgrounds': {
@@ -81,6 +102,80 @@ module.exports = function(grunt) {
           dest: 'build/homeitems'
         }]
       }
+    },
+    'grunt-html5-lint': {
+      views: "build", // The value in this key:value pair refer to where your template dir
+      templates: [
+        "index.html"
+      ],
+      ignoreList: []
+    },
+    'closureCompiler': {
+      options: {
+        // [REQUIRED] Path to closure compiler
+        compilerFile: 'vendor/google/closure/compiler.v20140407.jar',
+
+        // [OPTIONAL] set to true if you want to check if files were modified
+        // before starting compilation (can save some time in large sourcebases)
+        checkModified: false,
+
+        // [OPTIONAL] Set Closure Compiler Directives here
+        compilerOpts: {
+          /**
+           * Keys will be used as directives for the compiler
+           * values can be strings or arrays.
+           * If no value is required use null
+           *
+           * The directive 'externs' is treated as a special case
+           * allowing a grunt file syntax (<config:...>, *)
+           *
+           * Following are some directive samples...
+           */
+           compilation_level: 'SIMPLE_OPTIMIZATIONS', //ADVANCED_OPTIMIZATIONS
+           externs: 'vendor/google/closure/externs/*.js',
+           define: ["'goog.DEBUG=false'"],
+           warning_level: 'verbose',
+           jscomp_off: ['checkTypes', 'fileoverviewTags'],
+           summary_detail_level: 3,
+           output_wrapper: '"(function(){%output%}).call(this);"'
+        },
+        // [OPTIONAL] Set exec method options
+        execOpts: {
+           /**
+            * Set maxBuffer if you got message "Error: maxBuffer exceeded."
+            * Node default: 200*1024
+            */
+           maxBuffer: 200 * 1024
+        }
+      },
+      'simple': {
+        // [OPTIONAL] Target files to compile. Can be a string, an array of strings
+        // or grunt file syntax (<config:...>, *)
+        src: 'build/js/bundled.js',
+
+        // [OPTIONAL] set an output file
+        dest: 'build/js/compiled.js'
+      },
+      'advanced': {
+        options: {
+          compilerOpts: {
+            compilation_level: 'ADVANCED_OPTIMIZATIONS'
+          }
+        },
+        // [OPTIONAL] Target files to compile. Can be a string, an array of strings
+        // or grunt file syntax (<config:...>, *)
+        src: 'build/js/bundled.js',
+
+        // [OPTIONAL] set an output file
+        dest: 'build/js/compiled.js'
+      }
+    },
+    'uglify': {
+      'dist': {
+        files: {
+          'build/js/bundled.min.js': ['build/js/bundled.js']
+        }
+      }
     }
   });
 
@@ -88,19 +183,27 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-lesslint')
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-css-url-embed');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-wintersmith');
+  grunt.loadNpmTasks( "grunt-html5-lint" );
+  grunt.loadNpmTasks('grunt-closure-tools');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
 
-  grunt.registerTask('default', ['gh-pages']);
+  grunt.registerTask('default', ['build']);
 
-  grunt.registerTask('css', ['uncss', 'cssUrlEmbed']);
-  grunt.registerTask('html', ['processhtml']);
+  grunt.registerTask('js', ['closureCompiler:simple']);
+  grunt.registerTask('css', ['uncss','cssUrlEmbed','cssmin']);
+  grunt.registerTask('html', ['processhtml','htmlmin']);
   grunt.registerTask('img', ['imagemin:backgrounds','imagemin:homeitems']);
-  grunt.registerTask('deploy', ['gh-pages']);
-  grunt.registerTask('build', ['wintersmith:build','img', 'css', 'html']);
+  grunt.registerTask('deploy', ['build','gh-pages']);
+  grunt.registerTask('build', ['wintersmith:build','js','img','css','html']);
+  grunt.registerTask('dev', ['wintersmith:build','js','img','css','html']);
 
-  grunt.registerTask('lint', ['lesslint']);
+  grunt.registerTask('htmllint', ['grunt-html5-lint']);
+  grunt.registerTask('csslint', ['lesslint']);
   grunt.registerTask('test', []);
 
 };
