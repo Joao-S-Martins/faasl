@@ -38,9 +38,11 @@
     "email": "webmaster@faasl.org"
   },
   "devDependencies": {
+    "grunt-contrib-imagemin": "^0.7.1",
     "grunt-css-url-embed": "^0.1.4",
     "grunt-gh-pages": "^0.9.1",
     "grunt-processhtml": "^0.3.3",
-    "grunt-uncss": "^0.3.3"
+    "grunt-uncss": "^0.3.3",
+    "grunt-wintersmith": "0.0.2"
   }
 }
