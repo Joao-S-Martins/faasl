@@ -26,6 +26,7 @@ module.exports = function(grunt) {
     'uncss': {
       'dist': {
         options: {
+          ignore: ['.in', '.navbar-collapse.in', '.navbar-collapse.in', '.collapse.in', '.fade.in'],
           stylesheets  : ['styles/raw.css']
         },
         files: {
