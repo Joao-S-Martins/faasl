@@ -21,6 +21,7 @@ Items belonging to the FAA of San Leandro (FAASL), specifically the website.
   - [x] Add CSS pruning and minification
   - [x] Add image embedding
   - [ ] Add CSS/LESS linting and validation
+  - [ ] Review css3files.com and create mixins
   - [ ] Add JS linting
   - [x] Pre-require JS
   - [x] Minify JS
