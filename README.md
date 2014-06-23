@@ -39,6 +39,7 @@ Items belonging to the FAA of San Leandro (FAASL), specifically the website.
   - [ ] Update Google Analytics
   - [ ] PageSpeed, Pingdom, and others
   - [ ] High-res images
+  - [ ] Error/maintenance page
   - [x] Improve printing
   - [x] Beautify the events page
 
