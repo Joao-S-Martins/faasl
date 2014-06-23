@@ -20,7 +20,7 @@ Items belonging to the FAA of San Leandro (FAASL), specifically the website.
   - [ ] Swap Bluetrip icons for Bootstraps
   - [x] Add CSS pruning and minification
   - [x] Add image embedding
-  - [ ] Add CSS/LESS linting and validation
+  - [x] Add CSS/LESS linting and validation
   - [ ] Review css3files.com and create mixins
   - [ ] Add JS linting
   - [x] Pre-require JS
@@ -33,6 +33,12 @@ Items belonging to the FAA of San Leandro (FAASL), specifically the website.
   - [ ] Add gallery
   - [ ] Add blog
   - [ ] Revise copy
+  - [ ] Favicon
+  - [ ] Robots.txt
+  - [ ] Humans.txt
+  - [ ] Update Google Analytics
+  - [ ] PageSpeed, Pingdom, and others
+  - [ ] High-res images
   - [x] Improve printing
   - [x] Beautify the events page
 

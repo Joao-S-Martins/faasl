@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         dotfiles: false,
         add: false,
         branch: 'gh-pages',
-        message: 'Testing deploy',
+        message: 'Website updates.',
         push: true
       },
       src: '**/*'
@@ -22,6 +22,20 @@ module.exports = function(grunt) {
     },
     'lesslint': {
       src: ['contents/**/*.less']
+    },
+    'csslint': {
+      'strict': {
+        options: {
+          import: 2
+        },
+        src: ['build/styles/tidy.css']
+      },
+      'lax': {
+        options: {
+          import: false
+        },
+        src: ['build/styles/tidy.css']
+      }
     },
     'uncss': {
       'dist': {
@@ -71,7 +85,11 @@ module.exports = function(grunt) {
       'dist': {
         options: {
           removeComments: true,
-          collapseWhitespace: true
+          collapseWhitespace: true,
+          useShortDoctype: true,
+          removeEmptyAttributes: true,
+          removeRedundantAttributes: true,
+          removeAttributeQuotes: true
         },
         files: [{
           expand: true,
@@ -106,9 +124,17 @@ module.exports = function(grunt) {
     'grunt-html5-lint': {
       views: "build", // The value in this key:value pair refer to where your template dir
       templates: [
-        "index.html"
+        "build/index.html"
       ],
       ignoreList: []
+    },
+    'lint5': {
+      dirPath: "build",
+      defaults: {
+        templates: [
+          "index.html"
+        ]
+      }
     },
     'closureCompiler': {
       options: {
@@ -176,11 +202,16 @@ module.exports = function(grunt) {
           'build/js/bundled.min.js': ['build/js/bundled.js']
         }
       }
+    },
+    'clean': {
+      'build': ["build/"],
+      'dist': ["dist/"]
     }
   });
 
   grunt.loadNpmTasks('grunt-gh-pages');
   grunt.loadNpmTasks('grunt-lesslint')
+  grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-css-url-embed');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -189,8 +220,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-wintersmith');
   grunt.loadNpmTasks( "grunt-html5-lint" );
+  grunt.loadNpmTasks('grunt-lint5');
   grunt.loadNpmTasks('grunt-closure-tools');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-clean');
 
   grunt.registerTask('default', ['build']);
 
@@ -199,11 +232,11 @@ module.exports = function(grunt) {
   grunt.registerTask('html', ['processhtml','htmlmin']);
   grunt.registerTask('img', ['imagemin:backgrounds','imagemin:homeitems']);
   grunt.registerTask('deploy', ['build','gh-pages']);
-  grunt.registerTask('build', ['wintersmith:build','js','img','css','html']);
-  grunt.registerTask('dev', ['wintersmith:build','js','img','css','html']);
+  grunt.registerTask('build', ['clean','wintersmith:build','js','img','css','html']);
+  grunt.registerTask('dev', ['clean','wintersmith:build','js','img','css','html']);
 
-  grunt.registerTask('htmllint', ['grunt-html5-lint']);
-  grunt.registerTask('csslint', ['lesslint']);
-  grunt.registerTask('test', []);
+  //grunt.registerTask('htmllint', ['grunt-html5-lint']);
+  //grunt.registerTask('csslint', ['lesslint']);
+  //grunt.registerTask('test', []);
 
 };
