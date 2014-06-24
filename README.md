@@ -16,12 +16,12 @@ Items belonging to the FAA of San Leandro (FAASL), specifically the website.
 - [ ] Improve performance
   - [x] Implement Grunt gh-pages deploy task
   - [x] Printing CSS
-  - [ ] Refactor LESS and JS
+  - [ ] Refactor LESS & JS
   - [ ] Swap Bluetrip icons for Bootstraps
   - [x] Add CSS pruning and minification
   - [x] Add image embedding
-  - [x] Add CSS/LESS linting and validation
-  - [ ] Review css3files.com and create mixins
+  - [x] Add CSS/LESS linting & validation
+  - [ ] Review css3files.com & create mixins
   - [ ] Add JS linting
   - [x] Pre-require JS
   - [x] Minify JS
@@ -34,8 +34,9 @@ Items belonging to the FAA of San Leandro (FAASL), specifically the website.
   - [ ] Add blog
   - [ ] Revise copy
   - [ ] Favicon
-  - [ ] Robots.txt
-  - [ ] Humans.txt
+  - [x] Robots.txt
+  - [x] Humans.txt
+  - [x] Sitemap & submission
   - [ ] Update Google Analytics
   - [ ] PageSpeed, Pingdom, and others
   - [ ] High-res images
