@@ -1,0 +1,22 @@
+/* TEAM */
+
+Designer: Joao Sousa Martins
+Developer: Joao Sousa Martins
+Webmaster: Joao Sousa Martins
+
+Site: http://www.joao.io
+
+Twitter: @1906_joao
+
+Location: San Francisco, USA
+
+
+/* SITE */
+
+Last update: 2014/06/23 
+
+Standards: HTML5, CSS3
+
+Components: jQuery, Twitter Bootstrap
+
+Software: Node, NPM, Wintersmith, Grunt, Google Closure Tools

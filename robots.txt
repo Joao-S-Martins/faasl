@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /styles
+Disallow: /homeitems
+
+Sitemap: http://www.faasl.org/sitemap.xml
