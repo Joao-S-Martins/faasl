@@ -1,5 +1,14 @@
 {
     "events": [{
+        "description": "Crab Feed Fundraiser",
+        "time": "2015-02-14T19:00:00-08:00",
+        "street": "550 West Estudillo Ave",
+        "city": "San Leandro",
+        "notes": [
+            "No host cocktails at 6:00",
+            "$45 for adults",
+            "$20 for children 6-12 years old"]
+    },{
         "description": "Our 34th Anniversary Celebration",
         "time": "2014-04-27T14:00:00-07:00",
         "street": "550 West Estudillo Ave",
@@ -41,7 +50,20 @@
         "description": "Shrimp Boil Fundraiser",
         "time": "2014-10-25T19:00:00-07:00",
         "street": "857 Alvarado St",
-        "city": "San Leandro"
+        "city": "San Leandro",
+        "notes": [
+            "No host cocktails at 6:00",
+            "$25 for adults",
+            "$12 for children 6-12 years old"]
+    },{
+        "description": "Portuguese Filhozes (Donuts)",
+        "time": "2014-10-25T19:00:00-07:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro",
+        "notes": [
+            "No host cocktails at 6:00",
+            "$25 for adults",
+            "$12 for children 6-12 years old"]
     },{
         "description": "Members Appreciation Dinner",
         "time": "2014-12-13T19:00:00-07:00",

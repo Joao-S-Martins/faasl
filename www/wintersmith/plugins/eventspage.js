@@ -101,7 +101,7 @@ module.exports = function(env, callback) {
     })(env.plugins.Page);
 
     env.registerGenerator('events', function(contents, callback) {
-        return callback(null, {'events.page': new EventsPage(getAll(true))});
+        return callback(null, {'events.page': new EventsPage(getAll(false))});
     });
 
     env.helpers.events = {

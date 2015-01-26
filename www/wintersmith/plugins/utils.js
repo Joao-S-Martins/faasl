@@ -53,7 +53,7 @@ module.exports = function(env, callback) {
      */
     function getFormattedDate(mmt) {
         mmt = mmt || moment();
-        return mmt.format('dddd, MMMM Do');
+        return mmt.format('dddd, MMM. Do');
     }
 
     /**
