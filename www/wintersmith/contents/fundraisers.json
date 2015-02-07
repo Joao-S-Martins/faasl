@@ -9,6 +9,15 @@
             "$45 for adults",
             "$20 for children 6-12 years old"]
     },{
+        "description": "Casino Trip",
+        "time": "2015-02-28T08:30:00-08:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro",
+        "notes": [
+            "Bus departs at 9:00",
+            "$30 per rider",
+            "$20 in vouchers included"]
+    },{
         "description": "Our 34th Anniversary Celebration",
         "time": "2014-04-27T14:00:00-07:00",
         "street": "550 West Estudillo Ave",
