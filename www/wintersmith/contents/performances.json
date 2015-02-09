@@ -84,5 +84,45 @@
         "time": "2014-11-01T08:00:00-07:00",
         "street": "",
         "city": "Hilmar"
+    },{
+        "description": "Anniversary Concert",
+        "time": "2015-04-26T14:00:00-07:00",
+        "street": "550 West Estudillo Ave",
+        "city": "San Leandro"
+    },{
+        "description": "Parade",
+        "time": "2015-05-10T00:00:00-07:00",
+        "street": "41 Oak Ave",
+        "city": "South San Francisco"
+    },{
+        "description": "Parade",
+        "time": "2015-05-17T00:00:00-07:00",
+        "street": "2 Stage Rd",
+        "city": "Pescadero"
+    },{
+        "description": "Procession",
+        "time": "2015-05-23T00:00:00-07:00",
+        "street": "735 Main St",
+        "city": "Half Moon Bay"
+    },{
+        "description": "Parade",
+        "time": "2015-05-24T00:00:00-07:00",
+        "street": "735 Main St",
+        "city": "Half Moon Bay"
+    },{
+        "description": "Procession",
+        "time": "2015-06-20T00:00:00-07:00",
+        "street": "1105 C St",
+        "city": "Hayward"
+    },{
+        "description": "Parade",
+        "time": "2015-06-21T00:00:00-07:00",
+        "street": "1105 C St",
+        "city": "Hayward"
+    },{
+        "description": "Parade",
+        "time": "2015-06-28T00:00:00-07:00",
+        "street": "1670 Orchard Ave",
+        "city": "San Leandro"
     }]
 }

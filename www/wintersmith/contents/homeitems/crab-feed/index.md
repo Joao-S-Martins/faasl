@@ -8,7 +8,7 @@ expires: "2015-02-15T12:00:00-07:00"
 It's crab season and we'll be serving pounds and pounds of steaming hot crab cioppino to you and your date/family.
 
 We'll also have cold crab available. We'll be serving garlic bread, pasta, and more until you
-and your Valentine are full and staisfied.
+and your Valentine are full and staisfied. #crabbylove
 
 ![Bowl of crab](3061947693_367ffa3f06_m.jpg "More photos by Naotake Murayama at http://www.flickr.com/photos/naotakem/")
 
