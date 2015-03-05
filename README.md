@@ -1,5 +1,6 @@
 #FAASL & faasl.org
-Items belonging to the FAA of San Leandro (FAASL), specifically the website.
+Items belonging to the FAA of San Leandro (FAASL), specifically the website. Some old text and stuff available at 
+https://raw.githubusercontent.com/Joao-S-Martins/faasl/2ff063883ad4375ded4df185773da429bcad5ac4/www/static/index.html
 
 ##TODO
 - [ ] Migrate to a static site generator

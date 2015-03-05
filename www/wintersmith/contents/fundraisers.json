@@ -26,20 +26,28 @@
             "$30 per rider",
             "$20 in vouchers included"]
     },{
-        "description": "Cosida Portuguesa",
+        "description": "Cozido Portuguesa",
         "time": "2015-03-21T19:00:00-07:00",
         "street": "857 Alvarado St",
-        "city": "San Leandro"
+        "city": "San Leandro",
+        "notes": [
+            "No host cocktails at 6:00",
+            "$25 for adults",
+            "$12 for children 6-12 years old"]
     },{
         "description": "Our 35th Anniversary Celebration",
-        "time": "2015-04-26T14:00:00-07:00",
+        "time": "2015-04-26T14:30:00-07:00",
         "street": "550 West Estudillo Ave",
         "city": "San Leandro"
     },{
-        "description": "Baccalau (salted cod) Dinner",
-        "time": "2015-05-30T00:00:00-07:00",
+        "description": "Bacalhau (salted cod) Dinner",
+        "time": "2015-05-30T19:00:00-07:00",
         "street": "857 Alvarado St",
-        "city": "San Leandro"
+        "city": "San Leandro",
+        "notes": [
+            "No host cocktails at 6:00",
+            "$30 for adults",
+            "$15 for children 6-12 years old"]
     },{
         "description": "Sao Joao Sardine Dinner",
         "time": "2015-06-27T15:00:00-07:00",
@@ -82,14 +90,5 @@
         "time": "2015-12-05T19:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"
-    },{
-        "description": "Portuguese Filhozes (Donuts)",
-        "time": "2014-10-25T19:00:00-07:00",
-        "street": "857 Alvarado St",
-        "city": "San Leandro",
-        "notes": [
-            "No host cocktails at 6:00",
-            "$25 for adults",
-            "$12 for children 6-12 years old"]
     }]
 }

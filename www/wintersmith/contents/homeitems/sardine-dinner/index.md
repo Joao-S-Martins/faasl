@@ -1,7 +1,7 @@
 ---
 title: "Sardine Dinner"
-date: "2014-05-20T12:00:00-07:00"
-expires: "2014-06-22T12:00:00-07:00"
+date: "2015-05-20T12:00:00-07:00"
+expires: "2015-06-28T12:00:00-07:00"
 #preview: true
 ---
 
@@ -14,7 +14,7 @@ It's pretty tasty.
 
 $20 for adults, $10 for children 6-12 years of age<br>
 Dinner at 3:00<br>
-Saturday, June 21st<br>
+Saturday, June 28th<br>
 857 'B' Alvarado St, San Leandro
 
 For tickets, contact:<br>

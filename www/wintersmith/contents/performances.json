@@ -85,44 +85,89 @@
         "street": "",
         "city": "Hilmar"
     },{
-        "description": "Anniversary Concert",
+        "description": "Tracy Band Anniversary",
+        "time": "2015-04-12T00:00:00-07:00",
+        "street": "400 W. 9th St",
+        "city": "Tracy"
+    },{
+        "description": "Our Anniversary Concert",
         "time": "2015-04-26T14:00:00-07:00",
         "street": "550 West Estudillo Ave",
         "city": "San Leandro"
     },{
         "description": "Parade",
-        "time": "2015-05-10T00:00:00-07:00",
+        "time": "2015-05-10T08:30:00-07:00",
         "street": "41 Oak Ave",
         "city": "South San Francisco"
     },{
         "description": "Parade",
-        "time": "2015-05-17T00:00:00-07:00",
+        "time": "2015-05-17T10:00:00-07:00",
         "street": "2 Stage Rd",
         "city": "Pescadero"
     },{
         "description": "Procession",
-        "time": "2015-05-23T00:00:00-07:00",
+        "time": "2015-05-23T18:00:00-07:00",
         "street": "735 Main St",
         "city": "Half Moon Bay"
     },{
         "description": "Parade",
-        "time": "2015-05-24T00:00:00-07:00",
+        "time": "2015-05-24T09:00:00-07:00",
         "street": "735 Main St",
         "city": "Half Moon Bay"
+    },{
+        "description": "Cherry Festival",
+        "time": "2014-06-06T00:00:00-07:00",
+        "street": "",
+        "city": "San Leandro"
+    },{
+        "description": "Parade",
+        "time": "2014-06-14T09:00:00-07:00",
+        "street": "230 N. Main St",
+        "city": "Manteca"
     },{
         "description": "Procession",
-        "time": "2015-06-20T00:00:00-07:00",
+        "time": "2015-06-20T17:30:00-07:00",
         "street": "1105 C St",
         "city": "Hayward"
     },{
         "description": "Parade",
-        "time": "2015-06-21T00:00:00-07:00",
+        "time": "2015-06-21T11:00:00-07:00",
         "street": "1105 C St",
         "city": "Hayward"
     },{
         "description": "Parade",
-        "time": "2015-06-28T00:00:00-07:00",
+        "time": "2015-06-28T09:00:00-07:00",
         "street": "1670 Orchard Ave",
         "city": "San Leandro"
+    },{
+        "description": "Parade",
+        "time": "2014-07-12T10:00:00-07:00",
+        "street": "16490 Kent Ave",
+        "city": "San Lorenzo"
+    },{
+        "description": "Short Procession & Concert",
+        "time": "2014-09-27T12:00:00-07:00",
+        "street": "857 Alvarado St",
+        "city": "San Leandro"
+    },{
+        "description": "Procession & Short Concert",
+        "time": "2014-10-11T14:00:00-07:00",
+        "street": "550 West Estudillo Ave",
+        "city": "San Leandro"
+    },{
+        "description": "Music Festival",
+        "time": "2014-11-14T08:00:00-08:00",
+        "street": "",
+        "city": "San Jose"
+    },{
+        "description": "Christmas Caroling",
+        "time": "2014-12-04T00:00:00-08:00",
+        "street": "",
+        "city": "San Jose"
+    },{
+        "description": "Christmas Caroling",
+        "time": "2014-12-05T00:00:00-08:00",
+        "street": "",
+        "city": "San Jose"
     }]
 }
