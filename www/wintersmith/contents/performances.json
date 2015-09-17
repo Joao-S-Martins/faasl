@@ -141,33 +141,33 @@
         "city": "San Leandro"
     },{
         "description": "Parade",
-        "time": "2014-07-12T10:00:00-07:00",
+        "time": "2015-07-12T10:00:00-07:00",
         "street": "16490 Kent Ave",
         "city": "San Lorenzo"
     },{
         "description": "Short Procession & Concert",
-        "time": "2014-09-27T12:00:00-07:00",
+        "time": "2015-09-27T12:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"
     },{
         "description": "Procession & Short Concert",
-        "time": "2014-10-11T14:00:00-07:00",
+        "time": "2015-10-11T14:00:00-07:00",
         "street": "550 West Estudillo Ave",
         "city": "San Leandro"
     },{
         "description": "Music Festival",
-        "time": "2014-11-14T08:00:00-08:00",
+        "time": "2015-11-14T08:00:00-08:00",
         "street": "",
         "city": "San Jose"
     },{
         "description": "Christmas Caroling",
-        "time": "2014-12-04T00:00:00-08:00",
+        "time": "2015-12-04T00:00:00-08:00",
         "street": "",
-        "city": "San Jose"
+        "city": "San Leandro"
     },{
         "description": "Christmas Caroling",
-        "time": "2014-12-05T00:00:00-08:00",
+        "time": "2015-12-05T00:00:00-08:00",
         "street": "",
-        "city": "San Jose"
+        "city": "San Leandro"
     }]
 }

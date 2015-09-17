@@ -40,7 +40,7 @@ html(lang='en')
                     block content
                 //end #content
                 div#right_col
-                    - fundraisers = env.helpers.events.getFundraisers(true, 4)
+                    - fundraisers = env.helpers.events.getFundraisers(true, 6)
                     - rotate = 0
                     - abs = true
                     each fundraiser in fundraisers
