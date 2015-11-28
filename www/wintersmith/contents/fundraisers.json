@@ -92,8 +92,12 @@
             "$12 for children 6-12 years old"]
     },{
         "description": "Members Appreciation Dinner",
-        "time": "2015-12-05T19:00:00-07:00",
+        "time": "2015-12-05T19:00:00-08:00",
         "street": "857 Alvarado St",
-        "city": "San Leandro"
+        "city": "San Leandro",
+        "notes": [
+            "No host cocktails at 6:00",
+            "Torresmos dinner at 7:00",
+            "Please bring a dessert to share"]
     }]
 }

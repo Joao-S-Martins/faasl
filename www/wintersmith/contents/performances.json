@@ -160,13 +160,13 @@
         "street": "",
         "city": "San Jose"
     },{
-        "description": "Christmas Caroling",
-        "time": "2015-12-04T00:00:00-08:00",
+        "description": "Hayward Christmas Caroling",
+        "time": "2015-12-04T19:00:00-08:00",
         "street": "",
-        "city": "San Leandro"
+        "city": "Hayward"
     },{
-        "description": "Christmas Caroling",
-        "time": "2015-12-05T00:00:00-08:00",
+        "description": "San Leandro Christmas Caroling",
+        "time": "2015-12-05T18:00:00-08:00",
         "street": "",
         "city": "San Leandro"
     }]
