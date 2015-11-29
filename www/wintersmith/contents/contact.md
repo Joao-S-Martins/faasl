@@ -7,8 +7,8 @@ template: page.jade
 
 |  |  |  |
 |:-|:-|-:|
-| {directify{Lorenza DLG Tomaz:title}} | Lorenza DLG Tomaz | {directify{Lorenza DLG Tomaz:phone}} |
-| {directify{Urbano Simas:title}} | Urbano Simas | {directify{Urbano Simas:phone}} |
-| {directify{Conceicao Homen:title}} | Conceicao Homen | {directify{Conceicao Homen:phone}} |
-| {directify{Michele Menezes:title}} | Michele Menezes | {directify{Michele Menezes:phone}} |
-| {directify{John Martins:title}} | John Martins | {directify{John Martins:phone}} |
+| {directify{Lorenza DLG Tomaz:title}} | {directify{Lorenza DLG Tomaz:name}} | {directify{Lorenza DLG Tomaz:phone}} |
+| {directify{Idalina Gomes:title}} | {directify{Idalina Gomes:name}} | {directify{Idalina Gomes:phone}} |
+| {directify{Conceicao Homen:title}} | {directify{Conceicao Homen:name}} | {directify{Conceicao Homen:phone}} |
+| {directify{Michele Menezes:title}} | {directify{Michele Menezes:name}} | {directify{Michele Menezes:phone}} |
+| {directify{John Martins:title}} | {directify{John Martins:name}} | {directify{John Martins:phone}} |

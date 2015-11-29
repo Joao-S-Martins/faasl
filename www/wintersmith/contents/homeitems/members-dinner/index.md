@@ -11,6 +11,7 @@ This is our annual dinner to celebrate the holidays and the year-long efforts pu
 
 This dinner is free to all members and their immediate families. A special bearded guest will be in attendance, bearing gifts for musicians who have dedicated countless hours to our community.
 
+Please RSVP by December 1st.<br>
 No-host cocktails will begin at 6.<br>
 Torresmos (pork) will be served at 7.<br>
 Please bring a dessert to be shared after dinner.<br>
@@ -19,5 +20,7 @@ Saturday, December 5th<br>
 
 For questions, contact:<br>
 Lorenza DLG Tomaz at {directify{Lorenza DLG Tomaz:phone}}<br>
-Conceicao Homen at {directify{Conceicao Homen:phone}}<br>
-Michele Menezes at {directify{Michele Menezes:phone}}
+Idalina Gomes at {directify{Idalina Gomes:phone}}<br>
+Michele Menezes at {directify{Michele Menezes:phone}}<br>
+Joe Homen at {directify{Joe Homen:phone}}<br>
+Jose Silva at {directify{Jose Silva:phone}}

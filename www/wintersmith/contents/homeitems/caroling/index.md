@@ -13,4 +13,5 @@ Our musicians will be gathering in surprise locations Friday and Saturday, the 4
 
 This is a fun, casual, and optional gig for our musicians who enjoy surprising crowds with a little Christmas music. Uniforms will be left at home, but remember to dress warmly.
 
-Keep you eyes on our Facebook page for last-minute updates and announcements.
+Keep you eyes on our Facebook page for last-minute updates and announcements.<br>
+For questions, call John Martins at {directify{John Martins:phone}}

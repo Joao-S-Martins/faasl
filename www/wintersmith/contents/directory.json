@@ -14,13 +14,13 @@
     "Urbano Simas": {
         "id": 2,
         "name": "Urbano Simas",
-        "title": "Vice-President",
+        "title": "Board Director",
         "phone": "510-614-2843"
     },
     "Conceicao Homen": {
         "id": 3,
         "name": "Conceicao Homen",
-        "title": "Treasurer",
+        "title": "Board Director",
         "phone": "510-278-7801"
     },
     "Michele Menezes": {
@@ -34,5 +34,23 @@
         "name": "Leonilda Cardoso",
         "title": "Board Director",
         "phone": "510-537-9322"
+    },
+    "Joe Homen": {
+        "id": 6,
+        "name": "Joe Homen",
+        "title": "Board Director",
+        "phone": "510-406-3311"
+    },
+    "Jose Silva": {
+        "id": 7,
+        "name": "Jose Silva",
+        "title": "Board Director",
+        "phone": "510-888-1045"
+    },
+    "Idalina Gomes": {
+        "id": 8,
+        "name": "Idalina Gomes",
+        "title": "Vice President",
+        "phone": "510-688-1700"
     }
 }
