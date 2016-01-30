@@ -1,7 +1,7 @@
 ---
 title: "Valentine's Crab Feed"
-date: "2015-01-20T12:00:00-07:00"
-expires: "2015-02-15T12:00:00-07:00"
+date: "2016-01-20T12:00:00-07:00"
+expires: "2016-02-15T12:00:00-07:00"
 #preview: false
 ---
 
@@ -12,10 +12,10 @@ and your Valentine are full and staisfied. #crabbylove
 
 ![Bowl of crab](3061947693_367ffa3f06_m.jpg "More photos by Naotake Murayama at http://www.flickr.com/photos/naotakem/")
 
-$45 for adults, $20 for children 6-12 years of age<br>
+$50 for adults, $20 for children 6-12 years of age<br>
 Dinner at 7:00<br>
 No-host cocktails at 6:00<br>
-Saturday, Frebruary 14th<br>
+Saturday, Frebruary 13th<br>
 857 'B' Alvarado St, San Leandro
 
 For tickets, contact:<br>
