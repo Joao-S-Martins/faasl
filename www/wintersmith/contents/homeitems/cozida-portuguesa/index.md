@@ -1,7 +1,7 @@
 ---
-title: "Cozido Portuguesa Dinner"
-date: "2015-03-01T12:00:00-07:00"
-expires: "2015-03-22T12:00:00-07:00"
+title: "Cozido a Portuguesa Dinner"
+date: "2016-02-025T12:00:00-07:00"
+expires: "2016-03-22T12:00:00-07:00"
 #preview: true
 ---
 
@@ -10,11 +10,12 @@ A delicious Portuguese dish combining beef, pork, kale, cabage, carrots and more
 We still have some seats available for this amazing meal. 
 The ingredients are so simple, but the result of stewing them together with a few spices is much greater than the sum of their parts.
 
-![Bowl of mixed meats and vegetables](3518829531_333cc1f112_m.jpg "More photos by Naotake Murayama at http://www.flickr.com/photos/naotakem/")
+![Plate of mixed meats and vegetables](181px-Cozido_a_portuguesa_1.JPG "More photos by Uxbona at https://commons.wikimedia.org/wiki/User:Uxbona")
 
 $25 for adults, $12 for children 6-12 years of age<br>
 Dinner at 7:00<br>
-Saturday, March 21st<br>
+No-host cocktails at 6:00<br>
+Saturday, March 19th<br>
 857 'B' Alvarado St, San Leandro
 
 For tickets, contact:<br>
