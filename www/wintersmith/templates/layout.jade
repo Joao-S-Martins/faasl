@@ -51,6 +51,7 @@ html(lang='en')
                 //end #right_col
                 div#left_col 
                     //#left_col markup is here for SEO and small screen rendering, but pulled left for normal screens.
+                    +MailChimp()
                     +SketchA()
                     +PostIt()
                         +Upcoming(env.helpers.events.getPerformances(true, 8))
