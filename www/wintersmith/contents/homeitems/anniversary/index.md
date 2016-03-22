@@ -1,7 +1,7 @@
 ---
-title: "Our 35th Anniversary Celebration"
-date: "2015-03-02T12:00:00-07:00"
-expires: "2015-04-27T14:30:00-07:00"
+title: "Our 36th Anniversary Celebration"
+date: "2016-03-02T12:00:00-07:00"
+expires: "2016-04-27T14:30:00-07:00"
 #preview: true
 ---
 
@@ -12,7 +12,7 @@ We'll be serving traditional Soupas de Espirito Santo, the volunteer band will b
 
 ![Marching Instruments](1576839129_d62a4743be_m.jpg "More photos by peasap at http://www.flickr.com/photos/peasap/")
 
-Sunday, April 26th<br>
+Sunday, April 10th<br>
 Free to all!<br>
 Ryan O'Connell Hall<br>
 550 West Estudillo Avenue, San Leandro 94577
