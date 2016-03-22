@@ -78,7 +78,7 @@ mixin Upcoming(events)
     p
         each event, i in events
             - mmt = moment(event.time)
-            != _.compact([env.helpers.utils.formatDate(mmt), event.city, env.helpers.utils.formatTime(mmt)]).join(', ')
+            != _.compact([env.helpers.utils.formatDate(mmt), event.city]).join(', ')
             - if (i < events.length - 1)
                 br
 
