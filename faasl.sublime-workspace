@@ -159,7 +159,7 @@
 			"file": "www/static/index.html",
 			"settings":
 			{
-				"buffer_size": 11362,
+				"buffer_size": 7778,
 				"line_ending": "Windows"
 			}
 		},
@@ -167,7 +167,7 @@
 			"file": "www/static/events.html",
 			"settings":
 			{
-				"buffer_size": 10334,
+				"buffer_size": 13825,
 				"line_ending": "Windows"
 			}
 		},
@@ -175,7 +175,7 @@
 			"file": "www/static/lessons.html",
 			"settings":
 			{
-				"buffer_size": 7490,
+				"buffer_size": 6930,
 				"line_ending": "Windows"
 			}
 		},
@@ -183,7 +183,7 @@
 			"file": "www/static/volunteer.html",
 			"settings":
 			{
-				"buffer_size": 7776,
+				"buffer_size": 7216,
 				"line_ending": "Windows"
 			}
 		},
@@ -191,7 +191,7 @@
 			"file": "www/static/about.html",
 			"settings":
 			{
-				"buffer_size": 7691,
+				"buffer_size": 7131,
 				"line_ending": "Windows"
 			}
 		},
@@ -199,8 +199,24 @@
 			"file": "www/static/contact.html",
 			"settings":
 			{
-				"buffer_size": 8021,
+				"buffer_size": 7461,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "www/wintersmith/contents/fundraisers.json",
+			"settings":
+			{
+				"buffer_size": 3856,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/wintersmith/contents/homeitems/sardine-dinner/index.md",
+			"settings":
+			{
+				"buffer_size": 750,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -355,7 +371,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 7,
 			"sheets":
 			[
 				{
@@ -363,15 +379,15 @@
 					"file": "www/static/index.html",
 					"settings":
 					{
-						"buffer_size": 11362,
+						"buffer_size": 7778,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9175,
-								8984
+								0,
+								0
 							]
 						],
 						"settings":
@@ -391,25 +407,25 @@
 					"file": "www/static/events.html",
 					"settings":
 					{
-						"buffer_size": 10334,
+						"buffer_size": 13825,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								8148,
-								8148
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2185.0,
+						"translation.y": 1718.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -419,15 +435,15 @@
 					"file": "www/static/lessons.html",
 					"settings":
 					{
-						"buffer_size": 7490,
+						"buffer_size": 6930,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5304,
-								5304
+								0,
+								0
 							]
 						],
 						"settings":
@@ -447,15 +463,15 @@
 					"file": "www/static/volunteer.html",
 					"settings":
 					{
-						"buffer_size": 7776,
+						"buffer_size": 7216,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5590,
-								5590
+								0,
+								0
 							]
 						],
 						"settings":
@@ -475,15 +491,15 @@
 					"file": "www/static/about.html",
 					"settings":
 					{
-						"buffer_size": 7691,
+						"buffer_size": 7131,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5505,
-								5505
+								0,
+								0
 							]
 						],
 						"settings":
@@ -503,15 +519,15 @@
 					"file": "www/static/contact.html",
 					"settings":
 					{
-						"buffer_size": 8021,
+						"buffer_size": 7461,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5835,
-								5835
+								0,
+								0
 							]
 						],
 						"settings":
@@ -522,6 +538,60 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 1675.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "www/wintersmith/contents/fundraisers.json",
+					"settings":
+					{
+						"buffer_size": 3856,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1462,
+								1462
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "www/wintersmith/contents/homeitems/sardine-dinner/index.md",
+					"settings":
+					{
+						"buffer_size": 750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								39,
+								39
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
