@@ -155,70 +155,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "www/static/index.html",
-			"settings":
-			{
-				"buffer_size": 7778,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/static/events.html",
-			"settings":
-			{
-				"buffer_size": 13825,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/static/lessons.html",
-			"settings":
-			{
-				"buffer_size": 6930,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/static/volunteer.html",
-			"settings":
-			{
-				"buffer_size": 7216,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/static/about.html",
-			"settings":
-			{
-				"buffer_size": 7131,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/static/contact.html",
-			"settings":
-			{
-				"buffer_size": 7461,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "www/wintersmith/contents/fundraisers.json",
-			"settings":
-			{
-				"buffer_size": 3856,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "www/wintersmith/contents/homeitems/sardine-dinner/index.md",
-			"settings":
-			{
-				"buffer_size": 750,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -248,6 +184,16 @@
 	},
 	"file_history":
 	[
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/index.html",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/events.html",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/lessons.html",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/volunteer.html",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/about.html",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/contact.html",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/wintersmith/contents/fundraisers.json",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/wintersmith/contents/homeitems/sardine-dinner/index.md",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/wintersmith/contents/performances.json",
+		"/Users/joaomartins/Documents/personal/dev/faasl/www/wintersmith/contents/homeitems/padroeia/index.md",
 		"/Users/joaomartins/Documents/personal/dev/istanbul/steps/istanbul.html",
 		"/Users/joaomartins/Documents/personal/dev/istanbul/css/glyphicons.css",
 		"/Users/joaomartins/Documents/personal/dev/istanbul/css/main.css",
@@ -266,12 +212,6 @@
 		"/Users/joaomartins/Documents/personal/dev/istanbul/steps/execution.html",
 		"/Users/joaomartins/Documents/personal/dev/istanbul/steps/product.html",
 		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/images/credits.txt",
-		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/index.html",
-		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/about.html",
-		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/contact.html",
-		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/events.html",
-		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/lessons.html",
-		"/Users/joaomartins/Documents/personal/dev/faasl/www/static/volunteer.html",
 		"/Users/joaomartins/Downloads/autocompleteremotedata (1).js",
 		"/Users/joaomartins/dev/lfmod/src/javascript/fyre/mod/widget/windowcontroller.js",
 		"/Users/joaomartins/dev/lfmod/src/javascript/fyre/mod/widget/keyboardcontroller.js",
@@ -371,231 +311,8 @@
 	"groups":
 	[
 		{
-			"selected": 7,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "www/static/index.html",
-					"settings":
-					{
-						"buffer_size": 7778,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2495.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "www/static/events.html",
-					"settings":
-					{
-						"buffer_size": 13825,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1718.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "www/static/lessons.html",
-					"settings":
-					{
-						"buffer_size": 6930,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1590.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "www/static/volunteer.html",
-					"settings":
-					{
-						"buffer_size": 7216,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1624.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "www/static/about.html",
-					"settings":
-					{
-						"buffer_size": 7131,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1607.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "www/static/contact.html",
-					"settings":
-					{
-						"buffer_size": 7461,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1675.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "www/wintersmith/contents/fundraisers.json",
-					"settings":
-					{
-						"buffer_size": 3856,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1462,
-								1462
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "www/wintersmith/contents/homeitems/sardine-dinner/index.md",
-					"settings":
-					{
-						"buffer_size": 750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								39,
-								39
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],

@@ -56,28 +56,38 @@
         "city": "San Lorenzo"
     },{
         "description": "Short Procession & Concert",
-        "time": "2016-09-25T12:00:00-07:00",
+        "time": "2016-09-11T00:00:00-07:00",
+        "street": "21160 Ocean View Dr",
+        "city": "Hayward"
+    },{
+        "description": "Parade & Concert",
+        "time": "2016-09-18T09:00:00-07:00",
+        "street": "1375 Lafayette St",
+        "city": "Santa Clara"
+    },{
+        "description": "Short Procession & Concert",
+        "time": "2016-09-25T11:30:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"
     },{
-        "description": "Procession & Short Concert",
+        "description": "Procession",
         "time": "2016-10-09T14:00:00-07:00",
         "street": "550 West Estudillo Ave",
         "city": "San Leandro"
     },{
         "description": "Music Festival",
         "time": "2016-11-05T08:00:00-07:00",
-        "street": "",
+        "street": "11903 Ashworth St",
         "city": "Artesia"
     },{
-        "description": "Hayward Christmas Caroling",
-        "time": "2016-12-02T19:00:00-08:00",
-        "street": "",
-        "city": "Hayward"
-    },{
         "description": "San Leandro Christmas Caroling",
+        "time": "2016-12-02T19:00:00-08:00",
+        "street": "1499 Washington Ave",
+        "city": "San Leandro"
+    },{
+        "description": "FAASL Party Christmas Caroling",
         "time": "2016-12-03T18:00:00-08:00",
-        "street": "",
+        "street": "857 Alvarado St",
         "city": "San Leandro"
     }]
 }
