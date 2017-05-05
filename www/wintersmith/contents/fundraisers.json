@@ -33,10 +33,10 @@
         "notes": [
             "No host cocktails at 6:00",
             "Dinner at 7:00",
-            "$25 for adults",
-            "$12 for children 6-12 years old"]
+            "$30 for adults",
+            "$15 for children 6-12 years old"]
     },{
-        "description": "Our 36th Anniversary Celebration",
+        "description": "Our 37th Anniversary Celebration",
         "time": "2017-04-2T14:30:00-07:00",
         "street": "550 West Estudillo Ave",
         "city": "San Leandro"
@@ -106,7 +106,9 @@
         "city": "San Leandro",
         "notes": [
             "No host cocktails at 6:00",
-            "Dinner at 7:00"]
+            "Dinner at 7:00",
+            "$30 for adults",
+            "$15 for children 6-12 years old"]
     },{
         "description": "Members Appreciation Dinner",
         "time": "2017-12-02T19:00:00-08:00",
