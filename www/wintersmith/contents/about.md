@@ -3,7 +3,7 @@ title: Since 1980
 template: page.jade
 ---
 
-####About the FAASL
+#### About the FAASL
 
 The Filarmonica Artista Amadora was created in 1980 by mostly Portuguese imigrants.
 They met to rehears and provide music for mostly traditional festivals throughout the bay.
