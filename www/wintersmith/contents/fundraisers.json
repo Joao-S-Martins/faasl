@@ -1,16 +1,16 @@
 {
     "events": [{
         "description": "Valentine's Crab Feed",
-        "time": "2016-02-13T19:00:00-08:00",
+        "time": "2017-02-11T19:00:00-08:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
             "No host cocktails at 6:00",
-            "$45 for adults",
-            "$20 for children 6-12 years old"]
+            "$50 for adults",
+            "$25 for children 6-12 years old"]
     },{
         "description": "Fat Tuesday Filhozes (Donuts)",
-        "time": "2015-02-17T00:00:00-08:00",
+        "time": "2017-02-28T00:00:00-08:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
@@ -18,7 +18,7 @@
             "$1 each"]
     },{
         "description": "Casino Trip",
-        "time": "2015-02-28T08:30:00-08:00",
+        "time": "2017-03-11T08:30:00-08:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
@@ -27,7 +27,7 @@
             "$20 in vouchers included"]
     },{
         "description": "Cozido a Portuguesa",
-        "time": "2016-03-19T19:00:00-07:00",
+        "time": "2017-03-18T19:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
@@ -37,12 +37,12 @@
             "$12 for children 6-12 years old"]
     },{
         "description": "Our 36th Anniversary Celebration",
-        "time": "2016-04-10T14:30:00-07:00",
+        "time": "2017-04-2T14:30:00-07:00",
         "street": "550 West Estudillo Ave",
         "city": "San Leandro"
     },{
         "description": "Bife a Portuguesa Dinner",
-        "time": "2015-05-21T19:00:00-07:00",
+        "time": "2017-05-20T19:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
@@ -50,7 +50,7 @@
             "$10 for children 6-12 years old"]
     },{
         "description": "Sao Joao Sardine Dinner",
-        "time": "2016-06-25T15:00:00-07:00",
+        "time": "2017-06-24T15:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
@@ -58,17 +58,17 @@
             "$10 for children 6-12 years old"]
     },{
         "description": "FAASL Padroeira Rosary",
-        "time": "2016-09-22T19:00:00-07:00",
+        "time": "2017-09-21T19:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"
     },{
         "description": "FAASL Padroeira Rosary",
-        "time": "2016-09-23T19:00:00-07:00",
+        "time": "2017-09-22T19:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"
     },{
         "description": "Filhozes (Donuts) Pick-up",
-        "time": "2016-09-24T11:00:00-08:00",
+        "time": "2017-09-23T11:00:00-08:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
@@ -76,13 +76,13 @@
             "$1 each"]
     },{
         "description": "FAASL Padroeira Vigil",
-        "time": "2016-09-24T19:00:00-07:00",
+        "time": "2017-09-23T19:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": ["Rosary followed by candle light vigil"]
     },{
         "description": "FAASL Padroeira Festival",
-        "time": "2016-09-25T11:00:00-07:00",
+        "time": "2017-09-24T11:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
@@ -101,7 +101,7 @@
             "$12 for children 6-12 years old"]
     },{
         "description": "Bacalhau Dinner",
-        "time": "2016-10-22T19:00:00-07:00",
+        "time": "2017-10-21T19:00:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [
@@ -109,7 +109,7 @@
             "Dinner at 7:00"]
     },{
         "description": "Members Appreciation Dinner",
-        "time": "2016-12-03T19:00:00-08:00",
+        "time": "2017-12-02T19:00:00-08:00",
         "street": "857 Alvarado St",
         "city": "San Leandro",
         "notes": [

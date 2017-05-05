@@ -121,13 +121,6 @@ module.exports = function(grunt) {
         }]
       }
     },
-    'grunt-html5-lint': {
-      views: "build", // The value in this key:value pair refer to where your template dir
-      templates: [
-        "build/index.html"
-      ],
-      ignoreList: []
-    },
     'lint5': {
       dirPath: "build",
       defaults: {
@@ -219,7 +212,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-wintersmith');
-  grunt.loadNpmTasks( "grunt-html5-lint" );
   grunt.loadNpmTasks('grunt-lint5');
   grunt.loadNpmTasks('grunt-closure-tools');
   grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -235,7 +227,6 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['clean','wintersmith:build','js','img','css','html']);
   grunt.registerTask('dev', ['clean','wintersmith:build','js','img','css','html']);
 
-  //grunt.registerTask('htmllint', ['grunt-html5-lint']);
   //grunt.registerTask('csslint', ['lesslint']);
   //grunt.registerTask('test', []);
 

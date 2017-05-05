@@ -1,34 +1,49 @@
 {
     "events": [{
+        "description": "50th Annual Portuguese Immigrant Week",
+        "time": "2017-03-04T10:30:00-07:00",
+        "street": "24000 Amador St",
+        "city": "Hayward"
+    },{
+        "description": "50th Annual Portuguese Immigrant Week",
+        "time": "2017-03-04T11:45:00-07:00",
+        "street": "1033 E 14th St",
+        "city": "San Leandro"
+    },{
         "description": "Our Anniversary Concert",
-        "time": "2016-04-10-T14:00:00-07:00",
+        "time": "2017-04-2-T14:00:00-07:00",
         "street": "550 West Estudillo Ave",
         "city": "San Leandro"
     },{
+        "description": "Tracy Band Anniversary",
+        "time": "2017-04-09T09:00:00-07:00",
+        "street": "400 W. 9th St",
+        "city": "Tracy"
+    },{
         "description": "Parade",
-        "time": "2016-05-01T08:30:00-07:00",
+        "time": "2017-05-21T08:30:00-07:00",
         "street": "41 Oak Ave",
         "city": "South San Francisco"
     },{
         "description": "Parade",
-        "time": "2016-05-08T09:30:00-07:00",
+        "time": "2017-05-28T09:30:00-07:00",
         "street": "2 Stage Rd",
         "city": "Pescadero"
     },{
+        "description": "Cherry Festival",
+        "time": "2017-06-03T09:00:00-07:00",
+        "street": "",
+        "city": "San Leandro"
+    },{
         "description": "Procession",
-        "time": "2016-05-14T17:30:00-07:00",
+        "time": "2017-06-03T17:30:00-07:00",
         "street": "735 Main St",
         "city": "Half Moon Bay"
     },{
         "description": "Parade",
-        "time": "2016-05-15T08:30:00-07:00",
+        "time": "2017-06-04T08:30:00-07:00",
         "street": "735 Main St",
         "city": "Half Moon Bay"
-    },{
-        "description": "Cherry Festival",
-        "time": "2016-06-04T09:00:00-07:00",
-        "street": "",
-        "city": "San Leandro"
     },{
         "description": "Parade",
         "time": "2016-06-05T09:00:00-07:00",
@@ -36,17 +51,17 @@
         "city": "Manteca"
     },{
         "description": "Procession",
-        "time": "2016-06-18T17:30:00-07:00",
+        "time": "2017-06-17T17:30:00-07:00",
         "street": "1105 C St",
         "city": "Hayward"
     },{
         "description": "Parade",
-        "time": "2016-06-19T09:30:00-07:00",
+        "time": "2017-06-18T09:30:00-07:00",
         "street": "1105 C St",
         "city": "Hayward"
     },{
         "description": "Parade",
-        "time": "2016-06-26T09:00:00-07:00",
+        "time": "2017-06-25T09:00:00-07:00",
         "street": "1670 Orchard Ave",
         "city": "San Leandro"
     },{
@@ -66,7 +81,7 @@
         "city": "Santa Clara"
     },{
         "description": "Short Procession & Concert",
-        "time": "2016-09-25T11:30:00-07:00",
+        "time": "2017-09-24T11:30:00-07:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"
     },{
@@ -76,17 +91,17 @@
         "city": "San Leandro"
     },{
         "description": "Music Festival",
-        "time": "2016-11-05T08:00:00-07:00",
+        "time": "2017-11-11T08:00:00-07:00",
         "street": "11903 Ashworth St",
         "city": "Artesia"
     },{
         "description": "San Leandro Christmas Caroling",
-        "time": "2016-12-02T19:00:00-08:00",
+        "time": "2017-12-01T19:00:00-08:00",
         "street": "1499 Washington Ave",
         "city": "San Leandro"
     },{
         "description": "FAASL Party Christmas Caroling",
-        "time": "2016-12-03T18:00:00-08:00",
+        "time": "2017-12-02T18:00:00-08:00",
         "street": "857 Alvarado St",
         "city": "San Leandro"
     }]
