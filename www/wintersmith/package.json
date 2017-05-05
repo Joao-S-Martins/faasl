@@ -49,6 +49,7 @@
     "grunt-lint5": "~0.3.2",
     "grunt-processhtml": "~0.4.1",
     "grunt-uncss": "~0.6.1",
-    "grunt-wintersmith": "~0.0.2"
+    "grunt-wintersmith": "~0.0.2",
+    "wintersmith": "~2.0.10"
   }
 }
