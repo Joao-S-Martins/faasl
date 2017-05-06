@@ -1,7 +1,7 @@
 ---
 title: "Christmas Caroling"
-date: "2015-11-19T12:00:00-07:00"
-expires: "2015-12-07T12:00:00-07:00"
+date: "2017-11-09T12:00:00-07:00"
+expires: "2017-12-05T12:00:00-07:00"
 #preview: true
 ---
 
@@ -9,9 +9,9 @@ It's time for classic carols on cold winter nights.
 
 ![Marching Instruments](1576839129_d62a4743be_m.jpg "More photos by peasap at http://www.flickr.com/photos/peasap/")
 
-Our musicians will be gathering in surprise locations Friday and Saturday, the 4th and 5th of December. The rumor is that we'll be somewhere near restaurants in Hayward on Friday and somewhere near a San Leandro shopping center on Saturday, before our membership dinner.
+Our musicians will be performing for the San Leandro Downtown Associations's _It's a Wonderful Night_ holiday festival Friday, December 1st. We'll also be entertaining our supporters and guests at our members appreciation dinner on Saturday, December 2nd.
 
-This is a fun, casual, and optional gig for our musicians who enjoy surprising crowds with a little Christmas music. Uniforms will be left at home, but remember to dress warmly.
+For these special engagements, uniforms will be left at home, but remember to dress warmly. Invite your musician friends to join us just for the fun of it.
 
 Keep you eyes on our Facebook page for last-minute updates and announcements.<br>
 For questions, call John Martins at {directify{John Martins:phone}}
