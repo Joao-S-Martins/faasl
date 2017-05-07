@@ -25,6 +25,11 @@
         "street": "22824 Second St",
         "city": "Hayward"
     },{
+        "description": "Procession",
+        "time": "2017-05-13T17:30:00-07:00",
+        "street": "550 W Estudillo Ave",
+        "city": "San Leandro"
+    },{
         "description": "Parade",
         "time": "2017-05-21T08:30:00-07:00",
         "street": "41 Oak Ave",
