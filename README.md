@@ -1,4 +1,5 @@
 #FAASL & faasl.org
+__The Portuguese Band of San Leandro, a non-profit focused on music education and mentorship for underserved youth in the East Bay__
 Items belonging to the FAA of San Leandro (FAASL), specifically the website. Some old text and stuff available at 
 https://raw.githubusercontent.com/Joao-S-Martins/faasl/2ff063883ad4375ded4df185773da429bcad5ac4/www/static/index.html
 
