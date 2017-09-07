@@ -11,7 +11,7 @@ This is a religious festival for us, by us. It's modest and helps build our comm
 
 A rosary will be held at our hall nightly, at 7pm, from Thursday the 21st through Saturday the 23rd. There will be a candle light vigil following the rosary on Saturday night.
 
-Sunday the 24th will start at 11am with a Catholic mass at our hall. Mass will be followed with a short parade, BBQ chicken lunch, auction, and concert.
+Sunday the 24th will start at 1pm with a Catholic mass at our hall. Mass will be followed with a short parade, BBQ chicken lunch, auction, and concert.
 
 For more info, contact:<br>
 Lorenza Tomaz at {directify{Lorenza DLG Tomaz:phone}}<br>

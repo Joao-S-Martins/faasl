@@ -1,7 +1,7 @@
 ---
 title: "Filarmonica Festival 2017"
-date: "2017-09-01T12:00:00-07:00"
-expires: "2017-11-14T12:00:00-07:00"
+date: "2017-09-06T00:00:00-07:00"
+expires: "2017-11-14T00:00:00-07:00"
 #preview: true
 ---
 

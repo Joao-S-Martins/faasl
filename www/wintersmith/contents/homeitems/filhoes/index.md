@@ -1,7 +1,7 @@
 ---
 title: "Padroeira Filhoes Fundraiser"
-date: "2017-08-16T12:00:00-07:00"
-expires: "2017-09-26T12:00:00-07:00"
+date: "2016-08-16T12:00:00-07:00"
+expires: "2016-09-26T12:00:00-07:00"
 #preview: true
 ---
 
