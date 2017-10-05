@@ -15,7 +15,7 @@ We'll be cooking some by traditional means and we'd like you to join us. Take a 
 $30 for adults, $12 for children 6-12 years of age<br>
 No-host cocktails at 6:00<br>
 Dinner at 7:00<br>
-Saturday, October 22nd<br>
+Saturday, October 21st<br>
 857 'B' Alvarado St, San Leandro
 
 For tickets, contact:<br>
