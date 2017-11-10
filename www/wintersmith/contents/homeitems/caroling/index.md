@@ -1,6 +1,6 @@
 ---
 title: "Christmas Caroling"
-date: "2017-11-09T12:00:00-07:00"
+date: "2017-11-01T12:00:00-07:00"
 expires: "2017-12-05T12:00:00-07:00"
 #preview: true
 ---
