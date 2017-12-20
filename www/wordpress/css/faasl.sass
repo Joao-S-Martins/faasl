@@ -77,47 +77,50 @@
 //        color: $colHighlight
 //        background-color: $bgHighlight
 
-header#page_header
-	position: absolute
-	top: 100px
-	width: 100%
-	color: #F3DD3E
-	background: rgba( $brand-primary, .6 )
-
-.leader_shor_desc
-	margin: auto
-	max-width: 300px
-
 body
-	position: relative
-
-.logo
-	height: 35px
-
-.carousel-inner .item
-	background-position: center
-	background-attachment: fixed
-	background-repeat: no-repeat
-	background-size: cover
-
-.leader_card
-	background-color: #FFFFFF
-
-.carousel-inner .item
-	height: 100vh
-
-.carousel-inner .item.active .carousel-caption
+  position: relative
+  margin: 20px
 
 .top-nav-collapse
-	background-color: #355749
-
-#title_carousel, #title_carousel .carousel-inner, #title_carousel .carousel-control
-	height: 100vh
+  background-color: #355749
 
 .scrolling-navbar
-	transition: background .5s ease-in-out, padding .5s ease-in-out
-	-moz-transition: background .5s ease-in-out, padding .5s ease-in-out
-	-webkit-transition: background .5s ease-in-out, padding .5s ease-in-out
+  transition: background .5s ease-in-out, padding .5s ease-in-out
+  -moz-transition: background .5s ease-in-out, padding .5s ease-in-out
+  -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out
+
+.logo
+  height: 35px
+
+#title_carousel, #title_carousel .carousel-inner, #title_carousel .carousel-control
+  height: 100vh
+
+.carousel-inner .item
+  background-position: center
+  background-attachment: fixed
+  background-repeat: no-repeat
+  background-size: cover
+  height: 100vh
+
+header#page_header
+  position: absolute
+  top: 100px
+  width: 100%
+  color: #F3DD3E
+  background: rgba( $brand-primary, .6 )
+
+.leader_card
+  background-color: #FFFFFF
+
+.leader_shor_desc
+  margin: auto
+  max-width: 300px
+
+section#community
+  img
+    margin-top: 20px
+  .img-rounded
+    border-radius: 20px
 
 footer#page_footer
   color: #fff
@@ -125,10 +128,5 @@ footer#page_footer
   a
     color: $gray-lighter
   .btn-social-icon
-
-section#community
-  img
-    margin-top: 20px
-  .img-rounded
-    border-radius: 20px
+    margin: 4px 8px
 
