@@ -3,6 +3,9 @@
 /* Imports */
 @import './variables.sass'
 @import './../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap'
+@import './../node_modules/bootstrap-social/bootstrap-social.scss'
+//@import './../node_modules/mdbootstrap/sass/mdb.scss'
+
 
 
 /* Nav generated at https://work.smarchal.com/twbscolor/3.3.7/sass/355749355749fffffff3dd3e1 */
@@ -79,7 +82,7 @@ header#page_header
 	top: 100px
 	width: 100%
 	color: #F3DD3E
-	background: rgba(53, 87, 73, .6)
+	background: rgba( $brand-primary, .6 )
 
 .leader_shor_desc
 	margin: auto
@@ -115,4 +118,17 @@ body
 	transition: background .5s ease-in-out, padding .5s ease-in-out
 	-moz-transition: background .5s ease-in-out, padding .5s ease-in-out
 	-webkit-transition: background .5s ease-in-out, padding .5s ease-in-out
+
+footer#page_footer
+  color: #fff
+  background: $brand-primary
+  a
+    color: $gray-lighter
+  .btn-social-icon
+
+section#community
+  img
+    margin-top: 20px
+  .img-rounded
+    border-radius: 20px
 
