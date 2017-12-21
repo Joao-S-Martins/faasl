@@ -1,6 +1,35 @@
-.DS_Store
-www/dreamweaver/imgs/*
+# Mac
+.DS_STORE
+
+# Node
+node_modules
+npm-debug.log
+
+# WWW
+www/dreamweaver/imgs/
 www/dreamweaver/inspiration-1.html
-www/wordpress/imgs/*
+www/dreamweaver/*
+www/wordpress/imgs/
 www/wordpress/inspiration-1.html
+www/wordpress/**/*.css
+
+# Wordpress
+*.log
+www/wordpress/wp-config.php
+www/wordpress/wp-content/advanced-cache.php
+www/wordpress/wp-content/backup-db/
+www/wordpress/wp-content/backups/
+www/wordpress/wp-content/blogs.dir/
+www/wordpress/wp-content/cache/
+www/wordpress/wp-content/upgrade/
+www/wordpress/wp-content/uploads/
+www/wordpress/wp-content/mu-plugins/
+www/wordpress/wp-content/wp-cache-config.php
+www/wordpress/wp-content/plugins/hello.php
+
+www/wordpress/.htaccess
+www/wordpress/license.txt
+www/wordpress/readme.html
+www/wordpress/sitemap.xml
+www/wordpress/sitemap.xml.gz
 

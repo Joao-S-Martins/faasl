@@ -1,5 +1,13 @@
 - [x] Figure out SASS overrides
 - [x] Import bootstrap fonts
-- [ ] Decide copy for body content
-- [ ] Footer with social stuff
+- [ ] Decide copy for body content{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Footer with social stuff
+- [ ] Finalize contact section{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Replace all images{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Polish slideshow{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Finalize nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Create CSS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
+- [ ] Create JS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
+- [ ] Create HTML task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
+- [ ] Retina images
 

@@ -79,10 +79,17 @@
 
 body
   position: relative
-  margin: 20px
+//  margin: 20px
+
+section.container-fluid
+  padding-left  : 30px
+  padding-right : 30px
 
 .top-nav-collapse
   background-color: #355749
+  
+.navbar-fixed-top
+  @include box-shadow(4px 4px 10px 0px rgba(0,0,0,0.3))
 
 .scrolling-navbar
   transition: background .5s ease-in-out, padding .5s ease-in-out
@@ -92,7 +99,7 @@ body
 .logo
   height: 35px
 
-#title_carousel, #title_carousel .carousel-inner, #title_carousel .carousel-control
+#title-carousel, #title-carousel .carousel-inner, #title-carousel .carousel-control
   height: 100vh
 
 .carousel-inner .item
@@ -102,27 +109,38 @@ body
   background-size: cover
   height: 100vh
 
-header#page_header
+header#page-header
   position: absolute
   top: 100px
   width: 100%
   color: #F3DD3E
   background: rgba( $brand-primary, .6 )
 
-.leader_card
-  background-color: #FFFFFF
+.leader-card-inner
+  background-color: #fff
+  border-radius: 10px
+  @include box-shadow(4px 4px 10px 0px rgba(0,0,0,0.3))
+  margin: 10px 15px
+  padding: ($grid-gutter-width / 2)
 
-.leader_shor_desc
-  margin: auto
-  max-width: 300px
+.leader-headshot
+  @extend .img-rounded
+
+.leader-shor-desc
+  @extend .text-justify
 
 section#community
   img
     margin-top: 20px
   .img-rounded
     border-radius: 20px
+    
+section#leadership
+  background: $brand-primary
+  h2
+    color: #fff
 
-footer#page_footer
+footer#page-footer
   color: #fff
   background: $brand-primary
   a
