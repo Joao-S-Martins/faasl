@@ -10,4 +10,5 @@
 - [ ] Create JS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [ ] Create HTML task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [ ] Retina images
+- [ ] fonts
 

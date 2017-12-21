@@ -7,7 +7,51 @@
 //@import './../node_modules/mdbootstrap/sass/mdb.scss'
 
 
+/* Mixins */
 
+
+/* Utilities */
+// Backgrounds ported from http://lea.verou.me/css3patterns/
+.argyle-background
+  background-color: $brand-primary;
+  background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1))
+  background-size: 70px 120px
+  
+.carbon-background
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424)
+  background-color: #131313
+  background-size: 20px 20px
+  
+.cube-background
+  $cube-bg: $brand-primary //#556
+  $cube-bg-1: darken($brand-primary, 10%) //#445
+  $cube-bg-2: lighten($brand-primary, 10%) //#99a
+  background-color: #556;
+  background-image: linear-gradient(30deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(150deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(30deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(150deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(60deg, $cube-bg-2 25%, transparent 25.5%, transparent 75%, $cube-bg-2 75%, $cube-bg-2),  linear-gradient(60deg, $cube-bg-2 25%, transparent 25.5%, transparent 75%, $cube-bg-2 75%, $cube-bg-2)
+  background-size: 80px 140px
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px
+  
+.hearts-background
+  $hearts-bg     : lighten($brand-primary, 50%) //#b03
+  $hearts-bg-1 : lighten($brand-primary, 60%) //#d35
+  $hearts-bg-2 : rgba($brand-primary,0) //rgba(187,0,51,0)
+  $hearts-bg-3 : rgba($brand-primary,0) //rgba(221,51,85,0)
+  background: radial-gradient(circle closest-side at 60% 43%, $hearts-bg 26%, $hearts-bg-2 27%), radial-gradient(circle closest-side at 40% 43%, $hearts-bg 26%, $hearts-bg-2 27%), radial-gradient(circle closest-side at 40% 22%, $hearts-bg-1 45%, $hearts-bg-3 46%), radial-gradient(circle closest-side at 60% 22%, $hearts-bg-1 45%, $hearts-bg-3 46%), radial-gradient(circle closest-side at 50% 35%, $hearts-bg-1 30%, $hearts-bg-3 31%), radial-gradient(circle closest-side at 60% 43%, $hearts-bg 26%, $hearts-bg-2 27%) 50px 50px, radial-gradient(circle closest-side at 40% 43%, $hearts-bg 26%, $hearts-bg-2 27%) 50px 50px, radial-gradient(circle closest-side at 40% 22%, $hearts-bg-1 45%, $hearts-bg-3 46%) 50px 50px, radial-gradient(circle closest-side at 60% 22%, $hearts-bg-1 45%, $hearts-bg-3 46%) 50px 50px, radial-gradient(circle closest-side at 50% 35%, $hearts-bg-1 30%, $hearts-bg-3 31%) 50px 50px
+  background-color: $hearts-bg
+  background-size: 100px 100px
+  
+.marrakesh-background
+  background-color: white
+  background-image: radial-gradient($brand-primary 9px, transparent 10px),         repeating-radial-gradient($brand-primary 0, $brand-primary 4px, transparent 5px, transparent 20px, $brand-primary 21px, $brand-primary 25px, transparent 26px, transparent 50px)
+  background-size: 30px 30px, 90px 90px
+  background-position: 0 0
+  
+.upholstery-background
+  background: radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0, radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px, radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0, radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px, radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0, radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px, radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0, radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px, linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0, linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0
+  background-color: #300
+  background-size: 100px 100px
+  
+  
 /* Nav generated at https://work.smarchal.com/twbscolor/3.3.7/sass/355749355749fffffff3dd3e1 */
 //$bgDefault      : #355749
 //$bgHighlight    : #355749
@@ -129,20 +173,26 @@ header#page-header
 .leader-shor-desc
   @extend .text-justify
 
-section#community
+article.community
   img
     margin-top: 20px
   .img-rounded
     border-radius: 20px
-    
+
+article#learn
+  background-color: lighten($gold, 30%)
+
+article#grow
+  @extend .hearts-background
+
 section#leadership
-  background: $brand-primary
+  @extend .argyle-background
   h2
     color: #fff
 
 footer#page-footer
+  @extend .carbon-background
   color: #fff
-  background: $brand-primary
   a
     color: $gray-lighter
   .btn-social-icon

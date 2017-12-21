@@ -8320,40 +8320,80 @@ button.close {
     color: #720e9e;
     background-color: #fff; }
 
+/* Mixins */
+/* Utilities */
+/* line 15, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.argyle-background, section#leadership {
+  background-color: #355749;
+  background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), linear-gradient(120deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
+  background-size: 70px 120px; }
+
+/* line 20, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.carbon-background, footer#page-footer {
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+  background-color: #131313;
+  background-size: 20px 20px; }
+
+/* line 25, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.cube-background {
+  background-color: #556;
+  background-image: linear-gradient(30deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(150deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(30deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(150deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(60deg, #487764 25%, transparent 25.5%, transparent 75%, #487764 75%, #487764), linear-gradient(60deg, #487764 25%, transparent 25.5%, transparent 75%, #487764 75%, #487764);
+  background-size: 80px 140px;
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px; }
+
+/* line 34, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.hearts-background, article#grow {
+  background: radial-gradient(circle closest-side at 60% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%), radial-gradient(circle closest-side at 40% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%), radial-gradient(circle closest-side at 40% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%), radial-gradient(circle closest-side at 60% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%), radial-gradient(circle closest-side at 50% 35%, #d7e7e0 30%, rgba(53, 87, 73, 0) 31%), radial-gradient(circle closest-side at 60% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 60% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 50% 35%, #d7e7e0 30%, rgba(53, 87, 73, 0) 31%) 50px 50px;
+  background-color: #b8d3c8;
+  background-size: 100px 100px; }
+
+/* line 43, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.marrakesh-background {
+  background-color: white;
+  background-image: radial-gradient(#355749 9px, transparent 10px), repeating-radial-gradient(#355749 0, #355749 4px, transparent 5px, transparent 20px, #355749 21px, #355749 25px, transparent 26px, transparent 50px);
+  background-size: 30px 30px, 90px 90px;
+  background-position: 0 0; }
+
+/* line 49, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.upholstery-background {
+  background: radial-gradient(#8a0000 4%, #5c0000 9%, rgba(102, 0, 0, 0) 9%) 0 0, radial-gradient(#8a0000 4%, #5c0000 8%, rgba(102, 0, 0, 0) 10%) 50px 50px, radial-gradient(rgba(153, 0, 0, 0.8) 20%, rgba(102, 0, 0, 0)) 50px 0, radial-gradient(rgba(153, 0, 0, 0.8) 20%, rgba(102, 0, 0, 0)) 0 50px, radial-gradient(#660000 35%, rgba(102, 0, 0, 0) 60%) 50px 0, radial-gradient(#660000 35%, rgba(102, 0, 0, 0) 60%) 100px 50px, radial-gradient(rgba(77, 0, 0, 0.7), rgba(102, 0, 0, 0)) 0 0, radial-gradient(rgba(77, 0, 0, 0.7), rgba(102, 0, 0, 0)) 50px 50px, linear-gradient(45deg, rgba(102, 0, 0, 0) 49%, black 50%, rgba(102, 0, 0, 0) 70%) 0 0, linear-gradient(-45deg, rgba(102, 0, 0, 0) 49%, black 50%, rgba(102, 0, 0, 0) 70%) 0 0;
+  background-color: #300;
+  background-size: 100px 100px; }
+
 /* Nav generated at https://work.smarchal.com/twbscolor/3.3.7/sass/355749355749fffffff3dd3e1 */
-/* line 80, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 124, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 body {
   position: relative; }
 
-/* line 84, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 128, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section.container-fluid {
   padding-left: 30px;
   padding-right: 30px; }
 
-/* line 88, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 132, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .top-nav-collapse {
   background-color: #355749; }
 
-/* line 91, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 135, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .navbar-fixed-top {
   -webkit-box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3); }
 
-/* line 94, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 138, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .scrolling-navbar {
   transition: background .5s ease-in-out, padding .5s ease-in-out;
   -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
   -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out; }
 
-/* line 99, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 143, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .logo {
   height: 35px; }
 
-/* line 102, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 146, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 #title-carousel, #title-carousel .carousel-inner, #title-carousel .carousel-control {
   height: 100vh; }
 
-/* line 105, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 149, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .carousel-inner .item {
   background-position: center;
   background-attachment: fixed;
@@ -8361,7 +8401,7 @@ section.container-fluid {
   background-size: cover;
   height: 100vh; }
 
-/* line 112, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 156, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 header#page-header {
   position: absolute;
   top: 100px;
@@ -8369,7 +8409,7 @@ header#page-header {
   color: #F3DD3E;
   background: rgba(53, 87, 73, 0.6); }
 
-/* line 119, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 163, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .leader-card-inner {
   background-color: #fff;
   border-radius: 10px;
@@ -8378,29 +8418,29 @@ header#page-header {
   margin: 10px 15px;
   padding: 15px; }
 
-/* line 133, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-section#community img {
+/* line 177, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+article.community img {
   margin-top: 20px; }
 
-/* line 135, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-section#community .img-rounded, section#community .leader-headshot {
+/* line 179, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+article.community .img-rounded, article.community .leader-headshot {
   border-radius: 20px; }
 
-/* line 138, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-section#leadership {
-  background: #355749; }
-  /* line 140, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-  section#leadership h2 {
-    color: #fff; }
+/* line 182, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+article#learn {
+  background-color: #fcf6ce; }
 
-/* line 143, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 190, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+section#leadership h2 {
+  color: #fff; }
+
+/* line 193, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 footer#page-footer {
-  color: #fff;
-  background: #355749; }
-  /* line 146, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  color: #fff; }
+  /* line 196, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer a {
     color: #eeeeee; }
-  /* line 148, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 198, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer .btn-social-icon {
     margin: 4px 8px; }
 
