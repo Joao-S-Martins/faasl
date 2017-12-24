@@ -12,4 +12,6 @@
 - [ ] Retina images
 - [ ] Fonts
 - [x] Events/calendar{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Convert "Donate" link to buton & write the subdomain into htaccess{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Create "Hours volunteered YTD" widget
 
