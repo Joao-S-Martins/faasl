@@ -4,7 +4,7 @@
 - [x] Footer with social stuff
 - [x] Finalize contact section{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Replace all images{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Polish slideshow{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Polish slideshow{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Finalize nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Create CSS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [ ] Create JS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
