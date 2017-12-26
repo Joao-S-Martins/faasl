@@ -179,13 +179,22 @@ section.container-fluid:not(#community), article.container-fluid
   background-repeat: no-repeat
   background-size: cover
   height: 100vh
+  
+.carousel-caption, .carousel-indicators, .carousel-control
+  @extend .sr-only
 
 header#page-header
   position: absolute
-  top: 100px
+  height: 100vh
   width: 100%
   color: $gold
-  background: rgba(darken($brand-primary, 40%), .6)
+  top: 0
+
+#page-header-row
+  background: rgba(darken($brand-primary, 40%), .7)
+  position: absolute
+  width: 100%
+  bottom: 50px
 
 //  min-height: 80vh
 section#intro

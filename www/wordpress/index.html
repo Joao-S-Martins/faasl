@@ -93,29 +93,36 @@
     </nav>
     <!--  END nav.navbar.top-nav-collapse  -->
     <!--  START section#title-carousel  -->
-    <section id="title-carousel" class="carousel-fluid slide" data-ride="carousel">
+    <section id="title-carousel" class="carousel-fluid slide" data-ride="carousel" data-interval="6000" data-pause="" data-keyboard="false">
       <ol class="carousel-indicators">
         <li data-target="#title-carousel" data-slide-to="0" class="active"></li>
         <li data-target="#title-carousel" data-slide-to="1"></li>
         <li data-target="#title-carousel" data-slide-to="2"></li>
+        <li data-target="#title-carousel" data-slide-to="3"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="item active" style="background-image: url(https://baconmockup.com/1280/720)">
+        <div class="item active" style="background-image: url(/img/slide_1@2.jpg)">
           <div class="carousel-caption">
             <h3>First slide Heading</h3>
             <p>First slide Caption</p>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://baconmockup.com/1280/720)">
+        <div class="item" style="background-image: url(/img/slide_2@2.jpg)">
           <div class="carousel-caption">
             <h3>Second slide Heading</h3>
             <p>Second slide Caption</p>
           </div>
         </div>
-        <div class="item" style="background-image: url(https://baconmockup.com/1280/720)">
+        <div class="item" style="background-image: url(img/slide_3@2.jpg)">
           <div class="carousel-caption">
             <h3>Third slide Heading</h3>
             <p>Third slide Caption</p>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(/img/slide_4@2.jpg)">
+          <div class="carousel-caption">
+            <h3>Fourth slide Heading</h3>
+            <p>Fourth slide Caption</p>
           </div>
         </div>
       </div>
@@ -123,7 +130,7 @@
     <!--  END section#title-carousel  -->
     <!--  START header#page-header  -->
     <header id="page-header" class="container-fluid">
-      <div class="row">
+      <div id="page-header-row" class="row">
         <h1 class="col-xs-12 text-center">Portuguese Band<br>
           <small>of<br></small><small>San Leandro</small></h1>
         <p class="text-center"><a class="btn btn-primary btn-lg" href="#intro" role="button">Learn more</a> </p>

@@ -1,8 +1,8 @@
 - [x] Figure out SASS overrides
 - [x] Import bootstrap fonts
-- [ ] Decide copy for body content{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Decide copy for body content{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Footer with social stuff
-- [ ] Finalize contact section{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Finalize contact section{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Replace all images{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Polish slideshow{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Finalize nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
@@ -14,4 +14,6 @@
 - [x] Events/calendar{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Convert "Donate" link to buton & write the subdomain into htaccess{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Create "Hours volunteered YTD" widget
+- [ ] Create contact form PHP{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Contact form validation{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 
