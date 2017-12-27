@@ -13,7 +13,8 @@
 - [ ] Fonts
 - [x] Events/calendar{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Convert "Donate" link to buton & write the subdomain into htaccess{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Create "Hours volunteered YTD" widget
+- [x] Create "Hours volunteered YTD" widget
 - [ ] Create contact form PHP{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Contact form validation{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Create FTP task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 

@@ -39,6 +39,20 @@ module.exports = function(grunt) {
     watch: {
       files: ['<%= jshint.files %>'],
       tasks: ['jshint', 'qunit']
+    },
+    'ftp-deploy': {
+      build: {
+        auth: {
+          host: 'ftp.faasl.org',
+          port: 21,
+          authPath: '../.ftppass',
+          authKey: 'beta'
+        },
+        src: '.',
+        dest: '/',
+        exclusions: ['Gruntfile.js', './**/.DS_Store', './**/Thumbs.db', './dist/tmp'],
+        forceVerbose: true
+      }
     }
   });
 
@@ -47,6 +61,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-ftp-deploy');
+  
+  grunt.registerTask('beta', ['ftp-deploy']);
 
   grunt.registerTask('test', ['jshint', 'qunit']);
 
