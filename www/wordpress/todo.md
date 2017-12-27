@@ -19,4 +19,5 @@
 - [x] Create FTP task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [x] ScrollSpy Nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Navbar affix
+- [x] Slide effects
 

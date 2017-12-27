@@ -34,7 +34,42 @@ blockquote
 .indent
   text-indent: 1em
 
+  
 /* Mixins */
+@mixin image-overlay-bg
+  background-color: rgba(darken($brand-primary, 40%), .7)
+  border-color: rgba(0, 0, 0, 0)
+
+@mixin fade-to-green
+  @include transition(background-color .5s ease-in-out)
+  @include transition(border-color .5s ease-in-out)
+  background-color: $navbar-default-bg
+  border-color: $navbar-default-border
+
+
+/* Animations */
+// SOURCE https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
+.animate
+  position: relative
+
+.come-in
+  @include animation(come-in .8s ease forwards);
+  &.slide-up
+    transform: translateY(20%)
+  &.slide-left
+    transform: translateX(20%)
+  &.slide-right
+    transform: translateX(-20%)
+
+//.come-in:nth-child(odd)
+//  animation-duration: 0.6s; /* So they look staggered */
+
+@keyframes come-in
+  from
+    opacity: 0.2
+  to
+    transform: translateY(0)
+    opacity: 1
 
 
 /* Utilities */
@@ -157,34 +192,24 @@ body
 section.container-fluid:not(#community), article.container-fluid
   padding: ($navbar-height + $navbar-height) $grid-gutter-width
 
-
-
-$header-bg-color: rgba(darken($brand-primary, 40%), .7)
-
 nav#main-navbar
-  background-color: $header-bg-color
-  border-color: rgba(0, 0, 0, 0)
+  @include image-overlay-bg
   @include box-shadow(4px 4px 10px 0px rgba(0,0,0,0.3))
   top: calc(100vh - 50px)
   position: absolute
   height: $navbar-height
   width: 100%
   z-index: $zindex-navbar
-  &.affix
+nav#main-navbar.affix
     position: fixed
     top: 0
-    @include transition(background-color .5s ease-in-out)
-    background-color: $navbar-default-bg
-    border-color: $navbar-default-border
+    @include fade-to-green
 @media (max-width: 767px)
   .navbar-collapse
-    background-color: $header-bg-color
-    border-color: rgba(0, 0, 0, 0)
+    @include image-overlay-bg
   nav#main-navbar.affix
     .navbar-collapse
-      @include transition(background-color .5s ease-in-out)
-      background-color: $navbar-default-bg
-      border-color: $navbar-default-border
+      @include fade-to-green
       
 .logo
   height: 35px
@@ -210,7 +235,7 @@ header#page-header
   top: 0
 
 #page-header-row
-  background: $header-bg-color
+  @include image-overlay-bg
   position: absolute
   width: 100%
   bottom: 50px

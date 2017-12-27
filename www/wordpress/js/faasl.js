@@ -15,6 +15,21 @@ $(document).ready(function() {
     target: null,
     remove: false
   });
+  
+  // SOURCE https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
+  var win = $(window);
+  var allMods = $(".animate");
+
+  win.scroll(function(event) {
+
+    allMods.each(function(i, el) {
+      var el = $(el);
+      var offset = el.offset().top;
+      var bottom = window.scrollY + window.outerHeight;
+      el.toggleClass('come-in', offset < bottom);
+    });
+
+  });
 //    $('#contact-form').bootstrapValidator({
 //        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
 //        feedbackIcons: {
