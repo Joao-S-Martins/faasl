@@ -18,4 +18,5 @@
 - [ ] Contact form validation{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Create FTP task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [x] ScrollSpy Nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Navbar affix
 

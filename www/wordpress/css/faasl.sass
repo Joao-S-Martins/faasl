@@ -14,9 +14,10 @@ $heading-sans-serif:  "annabelle-jf","Helvetica Neue", Helvetica, Arial, sans-se
 $fancy-sans-serif: $heading-sans-serif
 $body-font: "Helvetica Neue", Helvetica, Arial, sans-serif
 
-h1, h2, h3, h4, h5, h6
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
   font-family: $heading-serif
   letter-spacing: .05em
+  margin-bottom: 1em
 h1 small, h2 small, h3 small, h4 small, h4.leader-title, h5 small, h6 small
   font-family: $fancy-sans-serif
   font-size: 100%
@@ -154,19 +155,37 @@ body
   position: relative
 
 section.container-fluid:not(#community), article.container-fluid
-  padding: $navbar-height $grid-gutter-width
+  padding: ($navbar-height + $navbar-height) $grid-gutter-width
 
-.top-nav-collapse
-  background-color: $brand-primary
-  
-.navbar-fixed-top
+
+
+$header-bg-color: rgba(darken($brand-primary, 40%), .7)
+
+nav#main-navbar
+  background-color: $header-bg-color
+  border-color: rgba(0, 0, 0, 0)
   @include box-shadow(4px 4px 10px 0px rgba(0,0,0,0.3))
-
-.scrolling-navbar
-  transition: background .5s ease-in-out, padding .5s ease-in-out
-  -moz-transition: background .5s ease-in-out, padding .5s ease-in-out
-  -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out
-
+  top: calc(100vh - 50px)
+  position: absolute
+  height: $navbar-height
+  width: 100%
+  z-index: $zindex-navbar
+  &.affix
+    position: fixed
+    top: 0
+    @include transition(background-color .5s ease-in-out)
+    background-color: $navbar-default-bg
+    border-color: $navbar-default-border
+@media (max-width: 767px)
+  .navbar-collapse
+    background-color: $header-bg-color
+    border-color: rgba(0, 0, 0, 0)
+  nav#main-navbar.affix
+    .navbar-collapse
+      @include transition(background-color .5s ease-in-out)
+      background-color: $navbar-default-bg
+      border-color: $navbar-default-border
+      
 .logo
   height: 35px
 
@@ -191,7 +210,7 @@ header#page-header
   top: 0
 
 #page-header-row
-  background: rgba(darken($brand-primary, 40%), .7)
+  background: $header-bg-color
   position: absolute
   width: 100%
   bottom: 50px
@@ -219,7 +238,8 @@ section#community, article#learn
   background-color: lighten($gold, 30%)
   p
     @extend .indent
-
+article#learn
+  padding-top: 0
 article#grow
   @extend .hearts-background
   p
@@ -244,7 +264,10 @@ section#leadership
 .leader-shor-desc
   @extend .text-justify
 
-//section#calendar
+section#calendar.container-fluid
+  padding-top: $navbar-height
+  padding-bottom: $navbar-height
+  
 //  @extend .cube-background
 //  h2
 //    color: #fff
@@ -254,6 +277,7 @@ section#leadership
   height: 0;
   width: 100%;
   padding-bottom: 100%;
+  margin-bottom: 2em
   iframe
     position: absolute;
     top: 0;
@@ -261,7 +285,9 @@ section#leadership
     width: 100%;
     height: 100%;
 
-section#contact
+section#contact.container-fluid
+  padding-top: $navbar-height
+  padding-bottom: $navbar-height
   .radio
     display: inline
     margin-right: 2em
