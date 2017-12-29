@@ -142,7 +142,7 @@
         <h3 class="col-xs-12 col-md-6 col-md-pull-6 animate slide-right">Novice musicians growing<br><small>together with experienced musicians</small></h3>
         <p class="col-xs-12 col-md-6 col-md-pull-6 animate slide-up">A community must nourish its core. For us, this is our volunteer band. This band is a group of musicians that rehearse weekly and perform on occasions throught the year. It is comprised of musicians young and old, new and experienced, who share a common passion for playing music. The repitiore is updated semi-yearly to push each musician into growing and improving. This challenge encourages all our musicians to help one another, builds commaraderie, and teaches lessons that can't be learned simply by playing in a group of their own peers.</p>
         <blockquote class="tk-antiquarian-scribe blockquote-reverse col-xs-11 col-md-5 col-md-pull-6">
-          <p>After joining <abbr title="the Filarmonica Artista Amadora de San Leandro">FAASL</abbr>, I think I've grown as a musician because I have the opportunity to play with more experienced musicians.</p>
+          <p><i class="fa fa-quote-left fa-pull-left"></i>After joining <abbr title="the Filarmonica Artista Amadora de San Leandro">FAASL</abbr>, I think I've grown as a musician because I have the opportunity to play with more experienced musicians.<i class="fa fa-quote-right fa-pull-right"></i></p>
           <footer>Aubury Freed</footer>
         </blockquote>
       </div>
@@ -205,8 +205,8 @@
         <h2 class="col-xs-12">Meet our community</h2>
         <div class="col-xs-12 col-lg-10 col-lg-offset-1 animate slide-up">
           <!-- SOURCE https://codepen.io/profstein/pen/ozrbPJ -->
-          <div class="googleCalendar">
-            <iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23ffffff&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23ffffff&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles" style="border-width:0" class="embed-responsive-item" scrolling="no"></iframe>
           </div>
         </div>
         <h3 class="col-xs-12 text-center">Add our calendars to yours</h3>
@@ -230,25 +230,27 @@
         <h2 class="col-xs-12">Contact us today!</h2>
         <!--  SOURCE https://codepen.io/jaycbrf/pen/iBszr  -->
         <!--  START form#contact-form  -->
-        <form class="form-horizontal col-xs-12 col-md-8 col-lg-6" action=" " method="post" id="contact-form">
+        <form class="form-horizontal col-xs-12 col-md-8 col-lg-6" id="contact-form">
           <fieldset class="animate slide-right">
             <legend class="sr-only">Contact form</legend>
             <div class="form-group">
-              <label class="col-md-4 control-label">Full Name</label>
+              <label class="col-md-4 control-label">Full Name&ensp;<i class="fa fa-asterisk form-required"><small class="sr-only">required</small></i></label>
               <div class="col-md-8 inputGroupContainer">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                  <input name="full_name" placeholder="Full name" class="form-control" type="text">
+                  <input name="full_name" placeholder="Full name" class="form-control" type="text" required>
                 </div>
+                <small id="name_error" class="form-error text-muted"></small>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-4 control-label">E-Mail</label>
+              <label class="col-md-4 control-label">E-Mail&ensp;<i class="fa fa-asterisk form-required"><small class="sr-only">required</small></i></label>
               <div class="col-md-8 inputGroupContainer">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                  <input name="email" placeholder="E-Mail address" class="form-control" type="text">
+                  <input name="email" placeholder="E-Mail address" class="form-control" type="text" required>
                 </div>
+                <small id="email_error" class="form-error text-muted"></small>
               </div>
             </div>
             <div class="form-group">
@@ -258,6 +260,7 @@
                   <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
                   <input name="phone" placeholder="(845) 555-1212" class="form-control" type="text">
                 </div>
+                <small id="phone_error" class="form-error text-muted"></small>
               </div>
             </div>
             <div class="form-group">
@@ -265,30 +268,39 @@
               <div class="col-md-4">
                 <span class="radio">
                   <label>
-                    <input type="radio" name="hosting" value="yes" /> Yes
+                    <input type="radio" name="texting" value="yes" /> Yes
                   </label>
                 </span>
                 <span class="radio">
                   <label>
-                    <input type="radio" name="hosting" value="no" /> No
+                    <input type="radio" name="texting" value="no" /> No
                   </label>
                 </span>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-md-4 control-label">Message</label>
+              <label class="col-md-4 control-label">Message&ensp;<i class="fa fa-asterisk form-required"><small class="sr-only">required</small></i></label>
               <div class="col-md-8 inputGroupContainer">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-                  <textarea class="form-control" name="comment" placeholder="Questions and comments"></textarea>
+                  <textarea class="form-control" name="message" placeholder="Questions and comments" required></textarea>
                 </div>
+                <small id="message_error" class="form-error text-muted"></small>
               </div>
             </div>
-            <div class="alert alert-success" role="alert" id="success-message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us. We will get back to you soon.</div>
+            <div class="alert alert-success" role="alert" id="contact-success-message">
+              Success <i class="fa fa-thumbs-up"></i> Thanks for contacting us. We will get back to you soon.
+            </div>
+            <div class="alert alert-warning" role="alert" id="contact-warning-message">
+              Invalid <i class="fa fa-thumbs-down"></i> There is a problem with the form. Correct it and submit again.
+            </div>
+            <div class="alert alert-danger" role="alert" id="contact-failure-message">
+              Failure <i class="fa fa-warning"></i> There was a technical problem submitting the form. Try again later.
+            </div>
             <div class="form-group">
               <label class="col-md-4 control-label"></label>
               <div class="col-md-4">
-                <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                <button id="contact-submit" type="submit" class="btn btn-warning">Send <span class="fa fa-send"></span></button>
               </div>
             </div>
           </fieldset>

@@ -20,10 +20,10 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
   margin-bottom: 1em
 h1 small, h2 small, h3 small, h4 small, h4.leader-title, h5 small, h6 small
   font-family: $fancy-sans-serif
-  font-size: 100%
+  letter-spacing: -.01em // Connect the script lettering
+  font-size: 100% // Override small behavior
 header#page-header h1
   font-family: "mr-eaves-modern","velino-poster",Georgia, "Times New Roman", Times, serif
-  letter-spacing: .12em
   small
     font-size: 65%
   small + small
@@ -78,7 +78,12 @@ blockquote
   background-color: $brand-primary;
   background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1))
   background-size: 70px 120px
-  
+
+.arrows-background
+  background: linear-gradient(45deg, lighten($brand-primary, 67%) 45px, transparent 45px)64px 64px, linear-gradient(45deg, lighten($brand-primary, 67%) 45px, transparent 45px,transparent 91px, lighten($gold, 60%) 91px, lighten($gold, 60%) 135px, transparent 135px), linear-gradient(-45deg, lighten($brand-primary, 67%) 23px, transparent 23px, transparent 68px,lighten($brand-primary, 67%) 68px,lighten($brand-primary, 67%) 113px,transparent 113px,transparent 158px,lighten($brand-primary, 67%) 158px)
+  background-color: lighten($gold, 60%)
+  background-size: 128px 128px
+
 .carbon-background
   background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424)
   background-color: #131313
@@ -92,7 +97,12 @@ blockquote
   background-image: linear-gradient(30deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(150deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(30deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(150deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(60deg, $cube-bg-2 25%, transparent 25.5%, transparent 75%, $cube-bg-2 75%, $cube-bg-2),  linear-gradient(60deg, $cube-bg-2 25%, transparent 25.5%, transparent 75%, $cube-bg-2 75%, $cube-bg-2)
   background-size: 80px 140px
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px
-  
+
+.half-rombes-background
+  background: $brand-primary
+  background: linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0, linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0, linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px, linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px, lighten($brand-primary, 65%)
+  background-size: 15px 30px
+
 .hearts-background
   $hearts-bg     : lighten($brand-primary, 50%) //#b03
   $hearts-bg-1 : lighten($brand-primary, 60%) //#d35
@@ -108,10 +118,19 @@ blockquote
   background-size: 30px 30px, 90px 90px
   background-position: 0 0
   
+.stairs-background
+  background: linear-gradient(63deg, $brand-primary 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, $brand-primary 78%), linear-gradient(63deg, transparent 34%, $brand-primary 38%, $brand-primary 58%, transparent 62%), #444
+  background-size: 16px 48px;
+  
 .upholstery-background
   background: radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0, radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px, radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0, radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px, radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0, radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px, radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0, radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px, linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0, linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0
   background-color: #300
   background-size: 100px 100px
+
+.weave-background
+  background: linear-gradient(135deg, lighten($brand-primary, 67%) 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, lighten($brand-primary, 67%) 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px)0 64px
+  background-color: lighten($brand-primary, 67%)
+  background-size: 64px 128px
   
   
 /* Nav generated at https://work.smarchal.com/twbscolor/3.3.7/sass/355749355749fffffff3dd3e1 */
@@ -293,24 +312,8 @@ section#calendar.container-fluid
   padding-top: $navbar-height
   padding-bottom: $navbar-height
   
-//  @extend .cube-background
-//  h2
-//    color: #fff
-  
-.googleCalendar
-  position: relative;
-  height: 0;
-  width: 100%;
-  padding-bottom: 100%;
-  margin-bottom: 2em
-  iframe
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
 section#contact.container-fluid
+  @extend .weave-background
   padding-top: $navbar-height
   padding-bottom: $navbar-height
   .radio
@@ -327,8 +330,10 @@ section#contact.container-fluid
       @extend .pull-left
     strong + p
       margin-left: 1.8em
-  #success-message
+  #contact-success-message, #contact-warning-message, #contact-failure-message
     display: none
+  .form-required, .form-error
+    color: #f00
 
 .btn-youtube
   @include btn-social($youtube)

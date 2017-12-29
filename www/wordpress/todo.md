@@ -20,4 +20,5 @@
 - [x] ScrollSpy Nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Navbar affix
 - [x] Slide effects
+- [ ] Hide animations in ie8 & 9
 

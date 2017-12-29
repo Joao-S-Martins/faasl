@@ -1,7 +1,95 @@
-function setNavAffix () {
+function setNavAffix() {
   $('#main-navbar').affix({offset: {
     top: $('#title-carousel').outerHeight(true) - $('#main-navbar').outerHeight(true)
   }});
+}
+
+function validContact() {
+  var ret = true;
+  var nameRegX = /\S{2}/;
+  var emailRegX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var phoneRegX = /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
+  $name = $("input[name=full_name]");
+  $email = $("input[name=email]");
+  $phone = $("input[name=phone]");
+  $message = $("textarea[name=message]");
+  
+  function check($el, regx, msg, errSel) {
+    var val = $el.val();
+    if (!regx.test(val)) {
+      $(errSel).text(msg);
+      ret = false;
+    }
+  }
+  
+  var checks = [
+    [$name, nameRegX, 'A name is required', '#name_error'],
+    [$email, emailRegX, 'A valid email address is required.', '#email_error'],
+    [$message, nameRegX, 'A message is required', '#message_error']
+  ];
+  
+  if ($phone.val().trim().length) {
+    checks.push([$phone, phoneRegX, 'This is not a valid phone number.', '#phone_error'])
+  }
+
+  // TODO checks.reduce();
+  for (var i = 0; i < checks.length; i++) {
+    check.apply(null, checks[i]);
+  }
+  
+  return ret;
+}
+
+function submitForm() {
+  // TODO after handler is writter
+}
+
+function clearFormErrors() {
+  $('#name_error').text('');
+  $('#email_error').text('');
+  $('#phone_error').text('');
+  $('#message_error').text('');
+}
+
+function toggleFormMessage(selector, show) {
+  if (!!show) {
+    $(selector).slideDown({ opacity: "show" }, "slow");
+  } else {
+    $(selector).slideUp({ opacity: "hide" }, "fast");
+  }
+}
+
+function hideAllMessages() {
+  var arr = ['#contact-success-message', '#contact-warning-message', '#contact-failure-message'];
+  arr.forEach(function (sel) {
+    toggleFormMessage(sel);
+  });
+}
+
+function toggleFormPending(bool) {
+  var $span = $('#contact-submit span');
+  if (bool) {
+    $('#contact-submit').attr("disabled", "disabled");
+    $span.removeClass() && $span.addClass('fa fa-spinner fa-pulse');
+  } else {
+    $('#contact-submit').removeAttr("disabled");
+    $span.removeClass() && $span.addClass('fa fa-send');
+  }
+}
+
+function formSuccess() {
+  toggleFormMessage('#contact-success-message', true);
+  $('#contact-submit').hide();
+}
+
+function formInvalid() {
+  toggleFormMessage('#contact-warning-message', true);
+  toggleFormPending(false);
+}
+
+function formFailure() {
+  toggleFormMessage('#contact-failure-message', true);
+  toggleFormPending(false);
 }
 
 $(document).ready(function() {
@@ -18,11 +106,11 @@ $(document).ready(function() {
   
   // SOURCE https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
   var win = $(window);
-  var allMods = $(".animate");
+  var allAnim = $(".animate");
 
   win.scroll(function(event) {
 
-    allMods.each(function(i, el) {
+    allAnim.each(function(i, el) {
       var el = $(el);
       var offset = el.offset().top;
       var bottom = window.scrollY + window.outerHeight;
@@ -30,114 +118,22 @@ $(document).ready(function() {
     });
 
   });
-//    $('#contact-form').bootstrapValidator({
-//        // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
-//        feedbackIcons: {
-//            valid: 'glyphicon glyphicon-ok',
-//            invalid: 'glyphicon glyphicon-remove',
-//            validating: 'glyphicon glyphicon-refresh'
-//        },
-//        fields: {
-//            full_name: {
-//                validators: {
-//                        stringLength: {
-//                        min: 2,
-//                    },
-//                        notEmpty: {
-//                        message: 'Please supply your full name'
-//                    }
-//                }
-//            },
-//            email: {
-//                validators: {
-//                    notEmpty: {
-//                        message: 'Please supply your email address'
-//                    },
-//                    emailAddress: {
-//                        message: 'Please supply a valid email address'
-//                    }
-//                }
-//            },
-//            phone: {
-//                validators: {
-//                    notEmpty: {
-//                        message: 'Please supply your phone number'
-//                    },
-//                    phone: {
-//                        country: 'US',
-//                        message: 'Please supply a vaild phone number with area code'
-//                    }
-//                }
-//            },
-//            address: {
-//                validators: {
-//                     stringLength: {
-//                        min: 8,
-//                    },
-//                    notEmpty: {
-//                        message: 'Please supply your street address'
-//                    }
-//                }
-//            },
-//            city: {
-//                validators: {
-//                     stringLength: {
-//                        min: 4,
-//                    },
-//                    notEmpty: {
-//                        message: 'Please supply your city'
-//                    }
-//                }
-//            },
-//            state: {
-//                validators: {
-//                    notEmpty: {
-//                        message: 'Please select your state'
-//                    }
-//                }
-//            },
-//            zip: {
-//                validators: {
-//                    notEmpty: {
-//                        message: 'Please supply your zip code'
-//                    },
-//                    zipCode: {
-//                        country: 'US',
-//                        message: 'Please supply a vaild zip code'
-//                    }
-//                }
-//            },
-//            comment: {
-//                validators: {
-//                      stringLength: {
-//                        min: 10,
-//                        max: 200,
-//                        message:'Please enter at least 10 characters and no more than 200'
-//                    },
-//                    notEmpty: {
-//                        message: 'Please supply a description of your project'
-//                    }
-//                    }
-//                }
-//            }
-//        })
-//        .on('success.form.bv', function(e) {
-//            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
-//                $('#contact_form').data('bootstrapValidator').resetForm();
-//
-//            // Prevent form submission
-//            e.preventDefault();
-//
-//            // Get the form instance
-//            var $form = $(e.target);
-//
-//            // Get the BootstrapValidator instance
-//            var bv = $form.data('bootstrapValidator');
-//
-//            // Use Ajax to submit form data
-//            $.post($form.attr('action'), $form.serialize(), function(result) {
-//                console.log(result);
-//            }, 'json');
-//        });
+  
+  $('form#contact-form').submit(function(ev){
+    ev.preventDefault();
+    clearFormErrors();
+    hideAllMessages();
+    toggleFormPending(true);
+    if (!validContact()) {
+      formInvalid();
+      return false;
+    }
+    formSuccess(); // DEBUG until  form handler is written
+//      $.post( 'some-url', $('form#myForm').serialize(), function(data) {
+//         ... do something with response from server
+//       },
+//       'json' // I expect a JSON response
+//    );
+  });
 });
 
