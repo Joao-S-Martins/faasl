@@ -128,8 +128,8 @@ blockquote
   background-size: 100px 100px
 
 .weave-background
-  background: linear-gradient(135deg, lighten($brand-primary, 67%) 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px), linear-gradient(225deg, lighten($brand-primary, 67%) 22px, #fff 22px, #fff 24px, transparent 24px, transparent 67px, #fff 67px, #fff 69px, transparent 69px)0 64px
-  background-color: lighten($brand-primary, 67%)
+  background: linear-gradient(135deg, $compound2 22px, lighten($compound2, 60%) 22px, lighten($compound2, 60%) 24px, transparent 24px, transparent 67px, lighten($compound2, 60%) 67px, lighten($compound2, 60%) 69px, transparent 69px), linear-gradient(225deg, $compound2 22px, lighten($compound2, 60%) 22px, lighten($compound2, 60%) 24px, transparent 24px, transparent 67px, lighten($compound2, 60%) 67px, lighten($compound2, 60%) 69px, transparent 69px)0 64px
+  background-color: $compound2
   background-size: 64px 128px
   
   
@@ -202,6 +202,10 @@ blockquote
 //        color: $colHighlight
 //        background-color: $bgHighlight
 
+/* Common */
+.btn-call-d
+  @include button-variant($white-text, $complement2, darken($complement2, 20%))
+
 body
   font-family: "serenity","mr-eaves-modern","velino-poster",Georgia, "Times New Roman", Times, serif
   font-size: 16px
@@ -219,11 +223,21 @@ nav#main-navbar
   height: $navbar-height
   width: 100%
   z-index: $zindex-navbar
+  .navbar-brand
+    padding: 8px $navbar-padding-horizontal
+  .btn-donate
+    @include button-variant(#000, $gold, darken($gold, 40%))
+    padding: 5px
+    margin-top: 8px
 nav#main-navbar.affix
     position: fixed
     top: 0
     @include fade-to-green
 @media (max-width: 767px)
+  nav#main-navbar
+    .btn-donate
+      padding: 15px
+      margin-top: 0
   .navbar-collapse
     @include image-overlay-bg
   nav#main-navbar.affix
@@ -279,20 +293,30 @@ article.community
     @extend .indent
 
 section#community, article#learn
-  background-color: lighten($gold, 30%)
+  background-color: $compound1
+  color: $white-text
+  h3 small
+    color: lighten($complement1, 40%)
   p
     @extend .indent
 article#learn
   padding-top: 0
 article#grow
-  @extend .hearts-background
+  background: $complement1
+  color: $white-text
+  h3 small
+    color: lighten($compound2, 20%)
+  blockquote
+    border-right-color: lighten($compound2, 20%)
+    .fa, footer
+      color: lighten($compound2, 20%)
   p
     @extend .indent
 
 section#leadership
   @extend .argyle-background
   h2
-    color: #fff
+    color: $white-text
 
 .leader-card-inner
   background-color: #fff
@@ -309,11 +333,11 @@ section#leadership
   @extend .text-justify
 
 section#calendar.container-fluid
+  @extend .weave-background
   padding-top: $navbar-height
   padding-bottom: $navbar-height
   
 section#contact.container-fluid
-  @extend .weave-background
   padding-top: $navbar-height
   padding-bottom: $navbar-height
   .radio
@@ -340,7 +364,7 @@ section#contact.container-fluid
 
 footer#page-footer
   @extend .carbon-background
-  color: #fff
+  color: $white-text
   a
     color: $gray-lighter
   .social-links
