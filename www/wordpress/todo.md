@@ -8,7 +8,7 @@
 - [ ] Finalize nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Create CSS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [ ] Create JS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
-- [ ] Create HTML task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
+- [x] Create HTML task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [ ] Retina images & image optimization
 - [ ] Fonts
 - [x] Events/calendar{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}

@@ -7,7 +7,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/css/styles.min.css': 'dist/tmp/tidy.css'
+          'dist/css/styles.min.css': 'dist/tmp/faasl.tidy.css'
         }
       }
     },
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
     },
     sass: {
       options: {
-        sourceComments: true,
+        sourceComments: false,
         sourceMap: false
       },
       dist: {
@@ -89,6 +89,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-uncss');
   
   grunt.registerTask('beta', ['ftp-deploy']);
+  grunt.registerTask('build', ['css', 'html']);
   grunt.registerTask('css', ['sass', 'uncss', 'cssmin']);
   grunt.registerTask('html', ['processhtml', 'htmlmin']);
 };
