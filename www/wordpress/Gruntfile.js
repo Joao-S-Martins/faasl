@@ -19,11 +19,42 @@ module.exports = function(grunt) {
           authPath: '../.ftppass',
           authKey: 'beta'
         },
-        src: '.',
+        src: 'dist',
         dest: '/',
         exclusions: ['Gruntfile.js', './**/.DS_Store', './**/Thumbs.db', './dist/tmp'],
         forceVerbose: true
       }
+    },
+    htmlmin: {
+      dist: {
+        options: {
+          removeComments: true,
+          collapseWhitespace: true
+        },
+        files:[
+          {
+            expand: true,
+            cwd: 'dist/tmp',
+            src: ['*.processed.html'],
+            dest: 'dist',
+            ext: '.html',
+            extDot: 'first'
+          },
+        ],
+      }
+    },
+    processhtml: {
+      dist: {
+        files: [
+          {
+            expand: true,     // Enable dynamic expansion.
+            src: ['*.html', '!example.html', '!inspiration-1.html'], // Actual pattern(s) to match.
+            dest: 'dist/tmp',   // Destination path prefix.
+            ext: '.processed.html',   // Dest filepaths will have this extension.
+            extDot: 'first'   // Extensions in filenames begin after the first dot
+          },
+        ],
+      },
     },
     sass: {
       options: {
@@ -51,10 +82,13 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-uncss');
   
   grunt.registerTask('beta', ['ftp-deploy']);
   grunt.registerTask('css', ['sass', 'uncss', 'cssmin']);
+  grunt.registerTask('html', ['processhtml', 'htmlmin']);
 };
