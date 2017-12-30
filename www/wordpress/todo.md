@@ -6,10 +6,10 @@
 - [ ] Replace all images{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Polish slideshow{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Finalize nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Create CSS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
+- [x] Create CSS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [ ] Create JS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [ ] Create HTML task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
-- [ ] Retina images
+- [ ] Retina images & image optimization
 - [ ] Fonts
 - [x] Events/calendar{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Convert "Donate" link to buton & write the subdomain into htaccess{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}

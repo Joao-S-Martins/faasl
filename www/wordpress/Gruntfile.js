@@ -1,44 +1,15 @@
 module.exports = function(grunt) {
-
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    concat: {
+    cssmin: {
       options: {
-        separator: ';'
+        sourceMap: true
       },
-      dist: {
-        src: ['src/**/*.js'],
-        dest: 'dist/<%= pkg.name %>.js'
-      }
-    },
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-      },
-      dist: {
+      target: {
         files: {
-          'dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          'dist/css/styles.min.css': 'dist/tmp/tidy.css'
         }
       }
-    },
-    qunit: {
-      files: ['test/**/*.html']
-    },
-    jshint: {
-      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
-      options: {
-        // options here to override JSHint defaults
-        globals: {
-          jQuery: true,
-          console: true,
-          module: true,
-          document: true
-        }
-      }
-    },
-    watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint', 'qunit']
     },
     'ftp-deploy': {
       build: {
@@ -53,21 +24,37 @@ module.exports = function(grunt) {
         exclusions: ['Gruntfile.js', './**/.DS_Store', './**/Thumbs.db', './dist/tmp'],
         forceVerbose: true
       }
+    },
+    sass: {
+      options: {
+        sourceComments: true,
+        sourceMap: false
+      },
+      dist: {
+        files: {
+          'dist/tmp/faasl.css': 'css/faasl.sass'
+        }
+      }
+    },
+    uncss: {
+      dist: {
+        options: {
+          ignore: ['.come-in', '.fa-spinner', '.fa-pulse']
+        },
+        files: [{
+          nonull: true,
+          src: ['index.html'],
+          dest: 'dist/tmp/faasl.tidy.css'
+        }]
+      }
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-sass');
+  grunt.loadNpmTasks('grunt-uncss');
   
   grunt.registerTask('beta', ['ftp-deploy']);
-
-  grunt.registerTask('test', ['jshint', 'qunit']);
-
-  grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
-
+  grunt.registerTask('css', ['sass', 'uncss', 'cssmin']);
 };
-
