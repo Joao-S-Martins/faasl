@@ -14,7 +14,7 @@ module.exports = function(grunt) {
         tagName: 'v%VERSION%',
         tagMessage: 'Version %VERSION%',
         push: true,
-        pushTo: 'upstream',
+        pushTo: 'origin',
         gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
         globalReplace: false,
         prereleaseName: false,
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/css/styles.min.css': 'dist/tmp/faasl.css' // 'dist/tmp/faasl.tidy.css'
+          'dist/css/styles.min.css': ['css/font-awesome.min.css', 'dist/tmp/faasl.css'] // 'dist/tmp/faasl.tidy.css'
         }
       }
     },
@@ -100,6 +100,23 @@ module.exports = function(grunt) {
         dest: '/',
         exclusions: ['Gruntfile.js', './**/.DS_Store', './**/Thumbs.db', './dist/tmp'],
         forceVerbose: true
+      }
+    },
+    gitadd: {
+      phantomas: {
+        files: {
+          src: ['phantomas/*']
+        }
+      }
+    },
+    gitcommit: {
+      phantomas: {
+        options: {
+          message: 'Adding phantomas stats for latest release.'
+        },
+        files: {
+          src: ['phantomas/*']
+        }
       }
     },
     htmlmin: {
@@ -133,6 +150,11 @@ module.exports = function(grunt) {
           src: ['**/*.jpg'],
           dest: 'dist/img/'
         }]
+      }
+    },
+    newer: {
+      options: {
+        tolerance: 1000
       }
     },
     phantomas: {
@@ -272,20 +294,21 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-git');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-phantomas');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-uncss');
   
-  grunt.registerTask('beta', ['build', 'bump', 'ftp-deploy:beta', 'phantomas:beta']);
+  grunt.registerTask('beta', ['build', 'bump-only', 'ftp-deploy:beta', 'phantomas:beta', 'gitadd:phantomas', 'bump-commit']); //'gitcommit:phantomas']);
   grunt.registerTask('build', ['img', 'fonts', 'css', 'js', 'html', 'favicons']);
 //  grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:cssmin']);
   grunt.registerTask('css', ['newer:sass', 'newer:cssmin']);
-  grunt.registerTask('favicons', ['newer:copy:favicons']);
-  grunt.registerTask('fonts', ['newer:copy:fonts']);
+  grunt.registerTask('favicons', ['copy:favicons']);
+  grunt.registerTask('fonts', ['copy:fonts']);
   grunt.registerTask('html', ['newer:processhtml', 'newer:htmlmin']);
-  grunt.registerTask('img', ['newer:imagemin:jpgs', 'newer:copy:svg']);
+  grunt.registerTask('img', ['newer:imagemin:jpgs', 'copy:svg']);
   grunt.registerTask('js', ['newer:uglify']);
   grunt.registerTask('perf', ['connect:phantomas']);
   grunt.registerTask('release', ['ftp-deploy:release', 'phantomas:faasl'])
