@@ -72,7 +72,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/css/styles.min.css': ['css/font-awesome.min.css', 'dist/tmp/faasl.css'] // 'dist/tmp/faasl.tidy.css'
+          'dist/css/styles.min.css': 'dist/tmp/faasl.tidy.css'
         }
       }
     },
@@ -210,17 +210,17 @@ module.exports = function(grunt) {
       dist: {
         options: {
           ignore: [
-            '.come-in',
-            '.come-in.slide-up',
-            '.come-in.slide-left',
-            '.come-in.slide-right',
-            '.fa-spinner',
-            '.fa-pulse',
+            /.come-in/,
+            /.slide-up/,
+            /.slide-left/,
+            /.slide-right/,
+            /.fa-spinner/,
+            /.fa-pulse/,
             /\w\.in/,
-            '.fade',
-            '.collapse',
-            '.collapsed',
-            '.collapsing',
+            /.fade/,
+            /.collapse/,
+            /.collapsed/,
+            /.collapsing/,
             /(#|\.)navbar(-[a-zA-Z]+)?/,
             /(#|\.)dropdown(-[a-zA-Z]+)?/,
             /(#|\.)(open)/,
@@ -228,29 +228,26 @@ module.exports = function(grunt) {
             /disabled/,
             /\.no-js/,
             /\.defer/,
-            '.active',
-            /^.*\.affix/,
-            'nav#main-navbar.affix',
-            'nav#main-navbar.affix .navbar-collapse',
-            '.affix',
-            '.alert',
-            '.close',
-            '.collaps',
-            '.fade',
-            '.has',
-            '.help',
-            '.in',
-            '.modal',
-            '.open',
-            '.popover',
-            '.tooltip',
-            '.item',
-            '.next',
-            '.left',
-            '.item.active',
-            '.item.active.left',
-            '.item.next',
-            '.item.next.left'
+            /.active/,
+            /\.affix/,
+//            /nav#main-navbar.affix/,
+//            /nav#main-navbar.affix .navbar-collapse/,
+            /.affix/,
+            /.alert/,
+            /.close/,
+            /.collaps/,
+            /.fade/,
+            /.has/,
+            /.help/,
+            /.in/,
+//            /.modal/,
+            /.open/,
+//            /.popover/,
+//            /.tooltip/,
+            /.item/,
+            /.active/,
+            /.next/,
+            /.left/
           ]
         },
         files: [{
@@ -292,8 +289,7 @@ module.exports = function(grunt) {
   
   grunt.registerTask('beta', ['build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('build', ['img', 'fonts', 'css', 'js', 'html', 'favicons']);
-//  grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:cssmin']);
-  grunt.registerTask('css', ['newer:sass', 'newer:cssmin']);
+  grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:cssmin']);
   grunt.registerTask('favicons', ['copy:favicons']);
   grunt.registerTask('fonts', ['copy:fonts']);
   grunt.registerTask('html', ['newer:processhtml', 'newer:htmlmin']);
@@ -303,3 +299,7 @@ module.exports = function(grunt) {
   grunt.registerTask('release', ['build', 'bump-only:minor', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('test', ['build', 'connect:dist']);
 };
+
+// Useful things
+
+// $ grunt bump --setversion=2.0.1

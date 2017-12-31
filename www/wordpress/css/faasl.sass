@@ -180,6 +180,9 @@ nav#main-navbar.affix
 .logo
   height: 35px
 
+#title-carousel
+  @extend .hidden-print
+
 #title-carousel, #title-carousel .carousel-inner, #title-carousel .carousel-control
   height: 100vh
 
@@ -341,3 +344,14 @@ footer#page-footer
   #non-profit-statement
     margin-top: 0
 
+@media print {
+  header#page-header
+    position: initial
+    height: initial
+    top: initial
+
+  #page-header-row
+    @include image-overlay-bg
+    position: initial
+    bottom: initial
+}

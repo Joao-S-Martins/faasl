@@ -26,5 +26,6 @@
 - [x] Timer task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [x] Bump task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [ ] Test retina behavior
-- [ ] Fix uncss
+- [x] Fix uncss
+- [ ] Print styles{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass"}}
 
