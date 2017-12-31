@@ -1,6 +1,6 @@
 {
   "name": "faasl.org",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Template for faasl.org.",
   "main": "index.html",
   "dependencies": {},
