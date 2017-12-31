@@ -229,6 +229,10 @@ section#intro
     @extend .indent
 
 article.community
+  .img-wrapper
+    @extend .col-xs-12
+    @extend .col-md-6
+    @extend .text-center
   img
     @extend .img-responsive
     @extend .img-thumbnail
@@ -253,6 +257,9 @@ article#learn
 article#grow
   background: $complement1
   color: $white-text
+  .img-wrapper
+    @extend .col-md-push-6
+    overflow: hidden
   img
     border-color: lighten($compound2, 20%)
   h3 small
