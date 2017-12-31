@@ -76,30 +76,19 @@ module.exports = function(grunt) {
         }
       }
     },
-    'ftp-deploy': {
+    ftpush: {
       beta: {
         auth: {
           host: 'ftp.faasl.org',
           port: 21,
-          authPath: '../.ftppass',
           authKey: 'beta'
         },
-        src: 'dist',
+        src: 'dist/',
         dest: '/',
-        exclusions: ['Gruntfile.js', './**/.DS_Store', './**/Thumbs.db', './dist/tmp'],
-        forceVerbose: true
-      },
-      release: {
-        auth: {
-          host: 'ftp.faasl.org',
-          port: 21,
-          authPath: '../.ftppass',
-          authKey: 'faasl'
-        },
-        src: 'dist',
-        dest: '/',
-        exclusions: ['Gruntfile.js', './**/.DS_Store', './**/Thumbs.db', './dist/tmp'],
-        forceVerbose: true
+        exclusions: ['./**/.DS_Store', './**/Thumbs.db', './dist/tmp'],
+//        keep: ['/important/images/at/server/*.jpg'],
+        simple: true,
+        useList: true
       }
     },
     gitadd: {
@@ -293,7 +282,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-ftp-deploy');
+  grunt.loadNpmTasks('grunt-ftpush');
   grunt.loadNpmTasks('grunt-git');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-phantomas');
@@ -301,7 +290,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-uncss');
   
-  grunt.registerTask('beta', ['build', 'bump-only', 'ftp-deploy:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
+  grunt.registerTask('beta', ['build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('build', ['img', 'fonts', 'css', 'js', 'html', 'favicons']);
 //  grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:cssmin']);
   grunt.registerTask('css', ['newer:sass', 'newer:cssmin']);
@@ -311,6 +300,6 @@ module.exports = function(grunt) {
   grunt.registerTask('img', ['newer:imagemin:jpgs', 'copy:svg']);
   grunt.registerTask('js', ['newer:uglify']);
   grunt.registerTask('perf', ['connect:phantomas']);
-  grunt.registerTask('release', ['build', 'bump-only:minor', 'ftp-deploy:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
+  grunt.registerTask('release', ['build', 'bump-only:minor', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('test', ['build', 'connect:dist']);
 };
