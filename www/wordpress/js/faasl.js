@@ -118,6 +118,10 @@ $(document).ready(function() {
     });
 
   });
+
+  $('.navbar-nav li a').click(function () {
+    window.innerWidth < 768 && $('.navbar-toggle').click()//.dropdown('toggle');
+  })
   
   $('form#contact-form').submit(function(ev){
     ev.preventDefault();

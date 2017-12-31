@@ -3,22 +3,28 @@
 - [x] Decide copy for body content{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Footer with social stuff
 - [x] Finalize contact section{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Replace all images{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Replace all images{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Polish slideshow{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Finalize nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Finalize nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Create CSS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
-- [ ] Create JS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
+- [x] Create JS task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [x] Create HTML task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
-- [ ] Retina images & image optimization
-- [ ] Fonts
+- [x] Retina images & image optimization
+- [x] Fonts
 - [x] Events/calendar{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Convert "Donate" link to buton & write the subdomain into htaccess{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Convert "Donate" link to buton & write the subdomain into htaccess{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Create "Hours volunteered YTD" widget
 - [ ] Create contact form PHP{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Contact form validation{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Contact form validation{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Create FTP task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [x] ScrollSpy Nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Navbar affix
 - [x] Slide effects
-- [ ] Hide animations in ie8 & 9
+- [ ] Test/hide animations in ie8 & 9
+- [ ] Get Steve headshot{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] XS menu, onClick, hide drop-down
+- [x] Timer task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
+- [x] Bump task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
+- [ ] Test retina behavior
+- [ ] Fix uncss
 

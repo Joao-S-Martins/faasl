@@ -12,6 +12,7 @@ www/dreamweaver/*
 www/wordpress/imgs/
 www/wordpress/inspiration-1.html
 www/wordpress/**/*.css
+www/wordpress/dist/
 .ftppass
 
 # Wordpress

@@ -1,0 +1,2374 @@
+{
+  "assertions": {},
+  "metrics": {
+    "requests": {
+      "values": [
+        5,
+        5,
+        5,
+        8,
+        26,
+        null
+      ],
+      "sum": 49,
+      "min": 5,
+      "max": 26,
+      "median": 5,
+      "average": 9.8
+    },
+    "gzipRequests": {
+      "values": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        null
+      ],
+      "sum": 8,
+      "min": 1,
+      "max": 3,
+      "median": 1,
+      "average": 1.6
+    },
+    "postRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "httpsRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        null
+      ],
+      "sum": 1,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.2
+    },
+    "notFound": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "bodySize": {
+      "values": [
+        6363,
+        10743,
+        18043,
+        54955,
+        137010,
+        null
+      ],
+      "sum": 227114,
+      "min": 6363,
+      "max": 137010,
+      "median": 18043,
+      "average": 45422.8
+    },
+    "contentLength": {
+      "values": [
+        160692,
+        160692,
+        160692,
+        463600,
+        618576,
+        null
+      ],
+      "sum": 1564252,
+      "min": 160692,
+      "max": 618576,
+      "median": 160692,
+      "average": 312850.4
+    },
+    "httpTrafficCompleted": {
+      "values": [
+        4131,
+        4688,
+        5316,
+        8654,
+        14796,
+        null
+      ],
+      "sum": 37585,
+      "min": 4131,
+      "max": 14796,
+      "median": 5316,
+      "average": 7517
+    },
+    "timeToFirstByte": {
+      "values": [
+        315,
+        315,
+        321,
+        522,
+        522,
+        null
+      ],
+      "sum": 1995,
+      "min": 315,
+      "max": 522,
+      "median": 321,
+      "average": 399
+    },
+    "timeToLastByte": {
+      "values": [
+        322,
+        322,
+        328,
+        528,
+        838,
+        null
+      ],
+      "sum": 2338,
+      "min": 322,
+      "max": 838,
+      "median": 328,
+      "average": 467.6
+    },
+    "ajaxRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "htmlCount": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "htmlSize": {
+      "values": [
+        13271,
+        13271,
+        13271,
+        13271,
+        13271,
+        null
+      ],
+      "sum": 66355,
+      "min": 13271,
+      "max": 13271,
+      "median": 13271,
+      "average": 13271
+    },
+    "cssCount": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "cssSize": {
+      "values": [
+        99619,
+        99619,
+        99619,
+        99619,
+        99619,
+        null
+      ],
+      "sum": 498095,
+      "min": 99619,
+      "max": 99619,
+      "median": 99619,
+      "average": 99619
+    },
+    "jsCount": {
+      "values": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        null
+      ],
+      "sum": 4,
+      "min": 0,
+      "max": 2,
+      "median": 0,
+      "average": 0.8
+    },
+    "jsSize": {
+      "values": [
+        0,
+        0,
+        0,
+        289724,
+        302907,
+        null
+      ],
+      "sum": 592631,
+      "min": 0,
+      "max": 302907,
+      "median": 0,
+      "average": 118526.2
+    },
+    "jsonCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jsonSize": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "imageCount": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        18,
+        null
+      ],
+      "sum": 22,
+      "min": 1,
+      "max": 18,
+      "median": 1,
+      "average": 4.4
+    },
+    "imageSize": {
+      "values": [
+        47802,
+        47802,
+        47802,
+        47802,
+        215149,
+        null
+      ],
+      "sum": 406357,
+      "min": 47802,
+      "max": 215149,
+      "median": 47802,
+      "average": 81271.4
+    },
+    "videoCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "videoSize": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "webfontCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        null
+      ],
+      "sum": 1,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.2
+    },
+    "webfontSize": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        812,
+        null
+      ],
+      "sum": 812,
+      "min": 0,
+      "max": 812,
+      "median": 0,
+      "average": 162.4
+    },
+    "base64Count": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "base64Size": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "otherCount": {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        null
+      ],
+      "sum": 2,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.4
+    },
+    "otherSize": {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        null
+      ],
+      "sum": 2,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.4
+    },
+    "cacheHits": {
+      "values": [
+        4,
+        4,
+        4,
+        6,
+        22,
+        null
+      ],
+      "sum": 40,
+      "min": 4,
+      "max": 22,
+      "median": 4,
+      "average": 8
+    },
+    "cacheMisses": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cachePasses": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cachingNotSpecified": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "cachingTooShort": {
+      "values": [
+        3,
+        3,
+        3,
+        5,
+        20,
+        null
+      ],
+      "sum": 34,
+      "min": 3,
+      "max": 20,
+      "median": 3,
+      "average": 6.8
+    },
+    "cachingDisabled": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        null
+      ],
+      "sum": 2,
+      "min": 0,
+      "max": 2,
+      "median": 0,
+      "average": 0.4
+    },
+    "oldCachingHeaders": {
+      "values": [
+        4,
+        4,
+        4,
+        7,
+        27,
+        null
+      ],
+      "sum": 46,
+      "min": 4,
+      "max": 27,
+      "median": 4,
+      "average": 9.2
+    },
+    "consoleMessages": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cookiesSent": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cookiesRecv": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        135,
+        null
+      ],
+      "sum": 135,
+      "min": 0,
+      "max": 135,
+      "median": 0,
+      "average": 27
+    },
+    "domainsWithCookies": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        null
+      ],
+      "sum": 1,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.2
+    },
+    "documentCookiesLength": {
+      "values": [
+        0,
+        0,
+        0,
+        203,
+        205,
+        null
+      ],
+      "sum": 408,
+      "min": 0,
+      "max": 205,
+      "median": 0,
+      "average": 81.6
+    },
+    "documentCookiesCount": {
+      "values": [
+        1,
+        1,
+        1,
+        5,
+        5,
+        null
+      ],
+      "sum": 13,
+      "min": 1,
+      "max": 5,
+      "median": 1,
+      "average": 2.6
+    },
+    "documentHeight": {
+      "values": [
+        0,
+        0,
+        0,
+        1403,
+        1856,
+        null
+      ],
+      "sum": 3259,
+      "min": 0,
+      "max": 1856,
+      "median": 0,
+      "average": 651.8
+    },
+    "commentsSize": {
+      "values": [
+        0,
+        0,
+        0,
+        613,
+        613,
+        null
+      ],
+      "sum": 1226,
+      "min": 0,
+      "max": 613,
+      "median": 0,
+      "average": 245.2
+    },
+    "whiteSpacesSize": {
+      "values": [
+        0,
+        0,
+        0,
+        1577,
+        1577,
+        null
+      ],
+      "sum": 3154,
+      "min": 0,
+      "max": 1577,
+      "median": 0,
+      "average": 630.8
+    },
+    "DOMelementsCount": {
+      "values": [
+        0,
+        0,
+        0,
+        171,
+        171,
+        null
+      ],
+      "sum": 342,
+      "min": 0,
+      "max": 171,
+      "median": 0,
+      "average": 68.4
+    },
+    "DOMelementMaxDepth": {
+      "values": [
+        0,
+        0,
+        0,
+        10,
+        10,
+        null
+      ],
+      "sum": 20,
+      "min": 0,
+      "max": 10,
+      "median": 0,
+      "average": 4
+    },
+    "nodesWithInlineCSS": {
+      "values": [
+        0,
+        0,
+        0,
+        4,
+        4,
+        null
+      ],
+      "sum": 8,
+      "min": 0,
+      "max": 4,
+      "median": 0,
+      "average": 1.6
+    },
+    "imagesScaledDown": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "imagesWithoutDimensions": {
+      "values": [
+        0,
+        0,
+        0,
+        3,
+        3,
+        null
+      ],
+      "sum": 6,
+      "min": 0,
+      "max": 3,
+      "median": 0,
+      "average": 1.2
+    },
+    "DOMidDuplicated": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "hiddenContentSize": {
+      "values": [
+        0,
+        0,
+        0,
+        492,
+        492,
+        null
+      ],
+      "sum": 984,
+      "min": 0,
+      "max": 492,
+      "median": 0,
+      "average": 196.8
+    },
+    "hiddenImages": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMmutationsInserts": {
+      "values": [
+        0,
+        0,
+        0,
+        2,
+        2,
+        null
+      ],
+      "sum": 4,
+      "min": 0,
+      "max": 2,
+      "median": 0,
+      "average": 0.8
+    },
+    "DOMmutationsRemoves": {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        null
+      ],
+      "sum": 2,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.4
+    },
+    "DOMmutationsAttributes": {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        null
+      ],
+      "sum": 2,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.4
+    },
+    "DOMqueries": {
+      "values": [
+        0,
+        0,
+        0,
+        8,
+        8,
+        null
+      ],
+      "sum": 16,
+      "min": 0,
+      "max": 8,
+      "median": 0,
+      "average": 3.2
+    },
+    "DOMqueriesWithoutResults": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueriesById": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueriesByClassName": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueriesByTagName": {
+      "values": [
+        0,
+        0,
+        0,
+        8,
+        8,
+        null
+      ],
+      "sum": 16,
+      "min": 0,
+      "max": 8,
+      "median": 0,
+      "average": 3.2
+    },
+    "DOMqueriesByQuerySelectorAll": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMinserts": {
+      "values": [
+        0,
+        0,
+        0,
+        4,
+        4,
+        null
+      ],
+      "sum": 8,
+      "min": 0,
+      "max": 4,
+      "median": 0,
+      "average": 1.6
+    },
+    "DOMqueriesDuplicated": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueriesAvoidable": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "domains": {
+      "values": [
+        3,
+        3,
+        3,
+        5,
+        7,
+        null
+      ],
+      "sum": 21,
+      "min": 3,
+      "max": 7,
+      "median": 3,
+      "average": 4.2
+    },
+    "maxRequestsPerDomain": {
+      "values": [
+        3,
+        3,
+        3,
+        4,
+        18,
+        null
+      ],
+      "sum": 31,
+      "min": 3,
+      "max": 18,
+      "median": 3,
+      "average": 6.2
+    },
+    "medianRequestsPerDomain": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "eventsBound": {
+      "values": [
+        0,
+        0,
+        0,
+        3,
+        4,
+        null
+      ],
+      "sum": 7,
+      "min": 0,
+      "max": 4,
+      "median": 0,
+      "average": 1.4
+    },
+    "eventsDispatched": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "eventsScrollBound": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "globalVariables": {
+      "values": [
+        0,
+        0,
+        0,
+        5,
+        5,
+        null
+      ],
+      "sum": 10,
+      "min": 0,
+      "max": 5,
+      "median": 0,
+      "average": 2
+    },
+    "globalVariablesFalsy": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "headersCount": {
+      "values": [
+        73,
+        73,
+        73,
+        161,
+        369,
+        null
+      ],
+      "sum": 749,
+      "min": 73,
+      "max": 369,
+      "median": 73,
+      "average": 149.8
+    },
+    "headersSentCount": {
+      "values": [
+        17,
+        17,
+        17,
+        74,
+        77,
+        null
+      ],
+      "sum": 202,
+      "min": 17,
+      "max": 77,
+      "median": 17,
+      "average": 40.4
+    },
+    "headersRecvCount": {
+      "values": [
+        56,
+        56,
+        56,
+        87,
+        292,
+        null
+      ],
+      "sum": 547,
+      "min": 56,
+      "max": 292,
+      "median": 56,
+      "average": 109.4
+    },
+    "headersSize": {
+      "values": [
+        2368,
+        2368,
+        2368,
+        5355,
+        11339,
+        null
+      ],
+      "sum": 23798,
+      "min": 2368,
+      "max": 11339,
+      "median": 2368,
+      "average": 4759.6
+    },
+    "headersSentSize": {
+      "values": [
+        703,
+        703,
+        703,
+        2698,
+        2803,
+        null
+      ],
+      "sum": 7610,
+      "min": 703,
+      "max": 2803,
+      "median": 703,
+      "average": 1522
+    },
+    "headersRecvSize": {
+      "values": [
+        1665,
+        1665,
+        1665,
+        2657,
+        8536,
+        null
+      ],
+      "sum": 16188,
+      "min": 1665,
+      "max": 8536,
+      "median": 1665,
+      "average": 3237.6
+    },
+    "headersBiggerThanContent": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        4,
+        null
+      ],
+      "sum": 4,
+      "min": 0,
+      "max": 4,
+      "median": 0,
+      "average": 0.8
+    },
+    "jQueryVersionsLoaded": {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        null
+      ],
+      "sum": 2,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.4
+    },
+    "jQueryOnDOMReadyFunctions": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jQueryWindowOnLoadFunctions": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jQuerySizzleCalls": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jQueryEventTriggers": {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        null
+      ],
+      "sum": 2,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.4
+    },
+    "jQueryDOMReads": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jQueryDOMWrites": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jQueryDOMWriteReadSwitches": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "documentWriteCalls": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "evalCalls": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jsErrors": {
+      "values": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        null
+      ],
+      "sum": 6,
+      "min": 0,
+      "max": 2,
+      "median": 2,
+      "average": 1.2
+    },
+    "closedConnections": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "lazyLoadableImagesBelowTheFold": {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        null
+      ],
+      "sum": 3,
+      "min": 0,
+      "max": 2,
+      "median": 0,
+      "average": 0.6
+    },
+    "localStorageEntries": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "redirects": {
+      "values": [
+        0,
+        0,
+        0,
+        1,
+        1,
+        null
+      ],
+      "sum": 2,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.4
+    },
+    "redirectsTime": {
+      "values": [
+        0,
+        0,
+        0,
+        184,
+        222,
+        null
+      ],
+      "sum": 406,
+      "min": 0,
+      "max": 222,
+      "median": 0,
+      "average": 81.2
+    },
+    "repaints": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "firstPaint": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "requestsToFirstPaint": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "domainsToFirstPaint": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "requestsToDomContentLoaded": {
+      "values": [
+        0,
+        0,
+        0,
+        6,
+        6,
+        null
+      ],
+      "sum": 12,
+      "min": 0,
+      "max": 6,
+      "median": 0,
+      "average": 2.4
+    },
+    "domainsToDomContentLoaded": {
+      "values": [
+        0,
+        0,
+        0,
+        3,
+        3,
+        null
+      ],
+      "sum": 6,
+      "min": 0,
+      "max": 3,
+      "median": 0,
+      "average": 1.2
+    },
+    "requestsToDomComplete": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        25,
+        null
+      ],
+      "sum": 25,
+      "min": 0,
+      "max": 25,
+      "median": 0,
+      "average": 5
+    },
+    "domainsToDomComplete": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        7,
+        null
+      ],
+      "sum": 7,
+      "min": 0,
+      "max": 7,
+      "median": 0,
+      "average": 1.4
+    },
+    "assetsNotGzipped": {
+      "values": [
+        3,
+        3,
+        3,
+        4,
+        4,
+        null
+      ],
+      "sum": 17,
+      "min": 3,
+      "max": 4,
+      "median": 3,
+      "average": 3.4
+    },
+    "assetsWithQueryString": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        null
+      ],
+      "sum": 6,
+      "min": 1,
+      "max": 2,
+      "median": 1,
+      "average": 1.2
+    },
+    "assetsWithCookies": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        null
+      ],
+      "sum": 1,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.2
+    },
+    "smallImages": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        null
+      ],
+      "sum": 3,
+      "min": 0,
+      "max": 3,
+      "median": 0,
+      "average": 0.6
+    },
+    "smallCssFiles": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "smallJsFiles": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        null
+      ],
+      "sum": 1,
+      "min": 0,
+      "max": 1,
+      "median": 0,
+      "average": 0.2
+    },
+    "multipleRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "timeToFirstCss": {
+      "values": [
+        466,
+        584,
+        835,
+        835,
+        898,
+        null
+      ],
+      "sum": 3618,
+      "min": 466,
+      "max": 898,
+      "median": 835,
+      "average": 723.6
+    },
+    "timeToFirstJs": {
+      "values": [
+        0,
+        0,
+        0,
+        6366,
+        14574,
+        null
+      ],
+      "sum": 20940,
+      "min": 0,
+      "max": 14574,
+      "median": 0,
+      "average": 4188
+    },
+    "timeToFirstImage": {
+      "values": [
+        4133,
+        4689,
+        4746,
+        5137,
+        5316,
+        null
+      ],
+      "sum": 24021,
+      "min": 4133,
+      "max": 5316,
+      "median": 4746,
+      "average": 4804.2
+    },
+    "domInteractive": {
+      "values": [
+        0,
+        0,
+        0,
+        6003,
+        14288,
+        null
+      ],
+      "sum": 20291,
+      "min": 0,
+      "max": 14288,
+      "median": 0,
+      "average": 4058.2
+    },
+    "domContentLoaded": {
+      "values": [
+        0,
+        0,
+        0,
+        6003,
+        14288,
+        null
+      ],
+      "sum": 20291,
+      "min": 0,
+      "max": 14288,
+      "median": 0,
+      "average": 4058.2
+    },
+    "domContentLoadedEnd": {
+      "values": [
+        0,
+        0,
+        0,
+        6014,
+        14300,
+        null
+      ],
+      "sum": 20314,
+      "min": 0,
+      "max": 14300,
+      "median": 0,
+      "average": 4062.8
+    },
+    "domComplete": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        8149,
+        null
+      ],
+      "sum": 8149,
+      "min": 0,
+      "max": 8149,
+      "median": 0,
+      "average": 1629.8
+    },
+    "timeBackend": {
+      "values": [
+        6,
+        100,
+        100,
+        100,
+        100,
+        null
+      ],
+      "sum": 406,
+      "min": 6,
+      "max": 100,
+      "median": 100,
+      "average": 81.2
+    },
+    "timeFrontend": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        94,
+        null
+      ],
+      "sum": 94,
+      "min": 0,
+      "max": 94,
+      "median": 0,
+      "average": 18.8
+    },
+    "requestsWithTimeout": {
+      "values": [
+        0,
+        1,
+        1,
+        1,
+        17,
+        null
+      ],
+      "sum": 20,
+      "min": 0,
+      "max": 17,
+      "median": 1,
+      "average": 4
+    },
+    "windowAlerts": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "windowConfirms": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "windowPrompts": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "bodyHTMLSize": {
+      "values": [
+        0,
+        0,
+        0,
+        11662,
+        11662,
+        null
+      ],
+      "sum": 23324,
+      "min": 0,
+      "max": 11662,
+      "median": 0,
+      "average": 4664.8
+    },
+    "iframesCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "smallestResponse": {
+      "values": [
+        35,
+        846,
+        846,
+        846,
+        846,
+        null
+      ],
+      "sum": 3419,
+      "min": 35,
+      "max": 846,
+      "median": 846,
+      "average": 683.8
+    },
+    "biggestResponse": {
+      "values": [
+        96670,
+        96670,
+        96670,
+        288377,
+        288377,
+        null
+      ],
+      "sum": 866764,
+      "min": 96670,
+      "max": 288377,
+      "median": 96670,
+      "average": 173352.8
+    },
+    "fastestResponse": {
+      "values": [
+        42,
+        63,
+        176,
+        187,
+        295,
+        null
+      ],
+      "sum": 763,
+      "min": 42,
+      "max": 295,
+      "median": 176,
+      "average": 152.6
+    },
+    "slowestResponse": {
+      "values": [
+        2243,
+        2603,
+        3817,
+        5958,
+        14249,
+        null
+      ],
+      "sum": 28870,
+      "min": 2243,
+      "max": 14249,
+      "median": 3817,
+      "average": 5774
+    },
+    "smallestLatency": {
+      "values": [
+        42,
+        62,
+        155,
+        187,
+        266,
+        null
+      ],
+      "sum": 712,
+      "min": 42,
+      "max": 266,
+      "median": 155,
+      "average": 142.4
+    },
+    "biggestLatency": {
+      "values": [
+        516,
+        591,
+        791,
+        884,
+        1476,
+        null
+      ],
+      "sum": 4258,
+      "min": 516,
+      "max": 1476,
+      "median": 791,
+      "average": 851.6
+    },
+    "medianResponse": {
+      "values": [
+        328,
+        516,
+        516,
+        681,
+        838,
+        null
+      ],
+      "sum": 2879,
+      "min": 328,
+      "max": 838,
+      "median": 516,
+      "average": 575.8
+    },
+    "medianLatency": {
+      "values": [
+        284,
+        295,
+        315,
+        476,
+        545,
+        null
+      ],
+      "sum": 1915,
+      "min": 284,
+      "max": 545,
+      "median": 315,
+      "average": 383
+    }
+  },
+  "offenders": {
+    "gzipRequests": [
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (gzip: 0.83 kB / uncompressed: 0.83 kB)",
+      "http://www.google-analytics.com/ga.js (gzip: 1.32 kB / uncompressed: 1.32 kB)",
+      "http://fonts.gstatic.com/s/walterturncoat/v8/sG9su5g4GXy1KP73cU3hvVtilBVlnnYjrhQJoWzUtmo.ttf (gzip: 0.79 kB / uncompressed: 0.79 kB)",
+      "http://www.google-analytics.com/ga.js (gzip: 14.19 kB / uncompressed: 14.19 kB)"
+    ],
+    "httpsRequests": [
+      "https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png"
+    ],
+    "htmlCount": [
+      "http://www.faasl.org/ (size: 12.96 kB, latency: 522 ms)",
+      "http://www.faasl.org/ (size: 12.96 kB, latency: 315 ms)",
+      "http://www.faasl.org/ (size: 12.96 kB, latency: 321 ms)"
+    ],
+    "cssCount": [
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css (size: 2.05 kB, latency: 56 ms)",
+      "http://www.faasl.org/styles/raw.css (size: 94.40 kB, latency: 297 ms)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (size: 0.83 kB, latency: 82 ms)",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css (size: 2.05 kB, latency: 62 ms)",
+      "http://www.faasl.org/styles/raw.css (size: 94.40 kB, latency: 591 ms)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (size: 0.83 kB, latency: 81 ms)",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css (size: 2.05 kB, latency: 516 ms)",
+      "http://www.faasl.org/styles/raw.css (size: 94.40 kB, latency: 884 ms)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (size: 0.83 kB, latency: 187 ms)",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css (size: 2.05 kB, latency: 258 ms)",
+      "http://www.faasl.org/styles/raw.css (size: 94.40 kB, latency: 496 ms)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (size: 0.83 kB, latency: 284 ms)",
+      "http://www.faasl.org/styles/raw.css (size: 94.40 kB, latency: 295 ms)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (size: 0.83 kB, latency: 295 ms)"
+    ],
+    "jsCount": [
+      "http://www.faasl.org/js/bundled.js (size: 281.62 kB, latency: 590 ms)",
+      "http://www.google-analytics.com/ga.js (size: 1.32 kB, latency: 239 ms)",
+      "http://www.faasl.org/js/bundled.js (size: 281.62 kB, latency: 791 ms)",
+      "http://www.google-analytics.com/ga.js (size: 14.19 kB, latency: 155 ms)"
+    ],
+    "imageCount": [
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg (size: 46.68 kB, latency: 275 ms)",
+      "http://www.faasl.org/styles/img/notebook_bg_light.png (size: 7.83 kB, latency: 544 ms)",
+      "http://www.faasl.org/styles/img/sketch_A_bottom.png (size: 4.58 kB, latency: 545 ms)",
+      "http://www.faasl.org/homeitems/caroling/1576839129_d62a4743be_m.jpg (size: 16.46 kB, latency: 545 ms)",
+      "http://www.faasl.org/homeitems/band-festival/4088806261_14a21c7dec_m.jpg (size: 17.25 kB, latency: 545 ms)",
+      "http://www.faasl.org/styles/img/post-it_small_left.png (size: 3.80 kB, latency: 567 ms)",
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (size: 0.03 kB, latency: 42 ms)",
+      "http://www.faasl.org/styles/img/sketch_B_middle.png (size: 3.91 kB, latency: 744 ms)",
+      "http://www.faasl.org/styles/img/sketch_B_top.png (size: 4.93 kB, latency: 1090 ms)",
+      "http://www.faasl.org/styles/img/sketch_B_bottom.png (size: 4.38 kB, latency: 1090 ms)",
+      "http://www.faasl.org/styles/img/sketch_A_middle.png (size: 9.74 kB, latency: 1091 ms)",
+      "http://www.faasl.org/styles/img/sketch_A_top.png (size: 5.29 kB, latency: 1091 ms)",
+      "http://www.faasl.org/styles/img/post-it_large_right.png (size: 7.85 kB, latency: 1090 ms)",
+      "https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png (size: 0.43 kB, latency: 681 ms)",
+      "http://www.faasl.org/styles/img/icons/external.png (size: 0.11 kB, latency: 1476 ms)",
+      "http://www.faasl.org/homeitems/members-dinner/337869291_ccc1b8ba87_m.jpg (size: 22.00 kB, latency: 545 ms)",
+      "http://www.faasl.org/styles/img/notebook_top.png (size: 54.79 kB, latency: 548 ms)",
+      "http://www.google-analytics.com/__utm.gif?utmwv=5.7.1&utms=2&utmn=1718159213&utmhn=www.faasl.org&utmt=event&utme=14(8600*0*0*0*520*0*6500*6500)(8677*0*0*0*528*0*6530*6531)&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691798711&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (size: 0.03 kB, latency: 93 ms)",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg (size: 46.68 kB, latency: 476 ms)",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg (size: 46.68 kB, latency: 190 ms)",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg (size: 46.68 kB, latency: 269 ms)",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg (size: 46.68 kB, latency: 266 ms)"
+    ],
+    "webfontCount": [
+      "http://fonts.gstatic.com/s/walterturncoat/v8/sG9su5g4GXy1KP73cU3hvVtilBVlnnYjrhQJoWzUtmo.ttf (size: 0.79 kB, latency: 199 ms)"
+    ],
+    "otherCount": [
+      "http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png (size: NaN kB, latency: undefined ms)"
+    ],
+    "cacheHits": [
+      "http://www.faasl.org/",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css",
+      "http://www.faasl.org/styles/raw.css",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg",
+      "http://www.faasl.org/js/bundled.js",
+      "http://www.faasl.org/styles/img/notebook_bg_light.png",
+      "http://www.google-analytics.com/ga.js",
+      "http://www.faasl.org/styles/img/sketch_A_bottom.png",
+      "http://fonts.gstatic.com/s/walterturncoat/v8/sG9su5g4GXy1KP73cU3hvVtilBVlnnYjrhQJoWzUtmo.ttf",
+      "http://www.faasl.org/homeitems/caroling/1576839129_d62a4743be_m.jpg",
+      "http://www.faasl.org/homeitems/band-festival/4088806261_14a21c7dec_m.jpg",
+      "http://www.faasl.org/styles/img/post-it_small_left.png",
+      "http://www.faasl.org/styles/img/sketch_B_middle.png",
+      "http://www.faasl.org/styles/img/sketch_B_top.png",
+      "http://www.faasl.org/styles/img/sketch_B_bottom.png",
+      "http://www.faasl.org/styles/img/sketch_A_middle.png",
+      "http://www.faasl.org/styles/img/sketch_A_top.png",
+      "http://www.faasl.org/styles/img/post-it_large_right.png",
+      "http://www.faasl.org/styles/img/icons/external.png",
+      "http://www.faasl.org/homeitems/members-dinner/337869291_ccc1b8ba87_m.jpg",
+      "http://www.faasl.org/styles/img/notebook_top.png",
+      "http://www.google-analytics.com/__utm.gif?utmwv=5.7.1&utms=2&utmn=1718159213&utmhn=www.faasl.org&utmt=event&utme=14(8600*0*0*0*520*0*6500*6500)(8677*0*0*0*528*0*6530*6531)&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691798711&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~"
+    ],
+    "cachingNotSpecified": [
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css"
+    ],
+    "cachingTooShort": [
+      "http://www.faasl.org/styles/raw.css cached for 14400 s",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat cached for 86400 s",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg cached for 14400 s",
+      "http://www.faasl.org/js/bundled.js cached for 14400 s",
+      "http://www.faasl.org/styles/img/notebook_bg_light.png cached for 14400 s",
+      "http://www.google-analytics.com/ga.js cached for 7200 s",
+      "http://www.faasl.org/styles/img/sketch_A_bottom.png cached for 14400 s",
+      "http://www.faasl.org/homeitems/caroling/1576839129_d62a4743be_m.jpg cached for 14400 s",
+      "http://www.faasl.org/homeitems/band-festival/4088806261_14a21c7dec_m.jpg cached for 14400 s",
+      "http://www.faasl.org/styles/img/post-it_small_left.png cached for 14400 s",
+      "http://www.faasl.org/styles/img/sketch_B_middle.png cached for 14400 s",
+      "http://www.faasl.org/styles/img/sketch_B_top.png cached for 14400 s",
+      "http://www.faasl.org/styles/img/sketch_B_bottom.png cached for 14400 s",
+      "http://www.faasl.org/styles/img/sketch_A_middle.png cached for 14400 s",
+      "http://www.faasl.org/styles/img/sketch_A_top.png cached for 14400 s",
+      "http://www.faasl.org/styles/img/post-it_large_right.png cached for 14400 s",
+      "https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png cached for 432000 s",
+      "http://www.faasl.org/styles/img/icons/external.png cached for 14400 s",
+      "http://www.faasl.org/homeitems/members-dinner/337869291_ccc1b8ba87_m.jpg cached for 14400 s",
+      "http://www.faasl.org/styles/img/notebook_top.png cached for 14400 s"
+    ],
+    "cachingDisabled": [
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~",
+      "http://www.google-analytics.com/__utm.gif?utmwv=5.7.1&utms=2&utmn=1718159213&utmhn=www.faasl.org&utmt=event&utme=14(8600*0*0*0*520*0*6500*6500)(8677*0*0*0*528*0*6530*6531)&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691798711&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~"
+    ],
+    "oldCachingHeaders": [
+      "http://www.faasl.org/ - Expires: Sun, 31 Dec 2017 04:33:59 GMT",
+      "http://www.faasl.org/styles/raw.css - Expires: Sun, 31 Dec 2017 07:36:40 GMT",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat - Expires: Sun, 31 Dec 2017 03:43:12 GMT",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg - Expires: Sun, 31 Dec 2017 07:36:41 GMT",
+      "http://www.faasl.org/js/bundled.js - Expires: Sun, 31 Dec 2017 07:36:40 GMT",
+      "http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png - Expires: Sun, 31 Dec 2017 04:43:16 GMT",
+      "http://www.faasl.org/styles/img/notebook_bg_light.png - Expires: Sun, 31 Dec 2017 07:36:48 GMT",
+      "http://www.google-analytics.com/ga.js - Expires: Sun, 31 Dec 2017 04:31:03 GMT",
+      "http://www.faasl.org/styles/img/sketch_A_bottom.png - Expires: Sun, 31 Dec 2017 07:36:48 GMT",
+      "http://fonts.gstatic.com/s/walterturncoat/v8/sG9su5g4GXy1KP73cU3hvVtilBVlnnYjrhQJoWzUtmo.ttf - Expires: Fri, 07 Dec 2018 05:12:32 GMT",
+      "http://www.faasl.org/homeitems/caroling/1576839129_d62a4743be_m.jpg - Expires: Sun, 31 Dec 2017 07:36:48 GMT",
+      "http://www.faasl.org/homeitems/band-festival/4088806261_14a21c7dec_m.jpg - Expires: Sun, 31 Dec 2017 07:36:48 GMT",
+      "http://www.faasl.org/styles/img/post-it_small_left.png - Expires: Sun, 31 Dec 2017 07:36:49 GMT",
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ - Pragma: no-cache",
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "http://www.faasl.org/styles/img/sketch_B_middle.png - Expires: Sun, 31 Dec 2017 07:36:49 GMT",
+      "http://www.faasl.org/styles/img/sketch_B_top.png - Expires: Sun, 31 Dec 2017 07:36:49 GMT",
+      "http://www.faasl.org/styles/img/sketch_B_bottom.png - Expires: Sun, 31 Dec 2017 07:36:49 GMT",
+      "http://www.faasl.org/styles/img/sketch_A_middle.png - Expires: Sun, 31 Dec 2017 07:36:49 GMT",
+      "http://www.faasl.org/styles/img/sketch_A_top.png - Expires: Sun, 31 Dec 2017 07:36:49 GMT",
+      "http://www.faasl.org/styles/img/post-it_large_right.png - Expires: Sun, 31 Dec 2017 07:36:50 GMT",
+      "https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png - Expires: Fri, 05 Jan 2018 03:43:17 GMT",
+      "http://www.faasl.org/styles/img/icons/external.png - Expires: Sun, 31 Dec 2017 07:36:50 GMT",
+      "http://www.faasl.org/homeitems/members-dinner/337869291_ccc1b8ba87_m.jpg - Expires: Sun, 31 Dec 2017 07:36:49 GMT",
+      "http://www.faasl.org/styles/img/notebook_top.png - Expires: Sun, 31 Dec 2017 07:36:48 GMT",
+      "http://www.google-analytics.com/__utm.gif?utmwv=5.7.1&utms=2&utmn=1718159213&utmhn=www.faasl.org&utmt=event&utme=14(8600*0*0*0*520*0*6500*6500)(8677*0*0*0*528*0*6530*6531)&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691798711&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ - Pragma: no-cache",
+      "http://www.google-analytics.com/__utm.gif?utmwv=5.7.1&utms=2&utmn=1718159213&utmhn=www.faasl.org&utmt=event&utme=14(8600*0*0*0*520*0*6500*6500)(8677*0*0*0*528*0*6530*6531)&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691798711&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ - Expires: Mon, 01 Jan 1990 00:00:00 GMT",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat - Expires: Sun, 31 Dec 2017 03:43:13 GMT",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat - Expires: Sun, 31 Dec 2017 03:43:14 GMT",
+      "http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png - Expires: Sun, 31 Dec 2017 04:43:24 GMT"
+    ],
+    "domainsWithCookies": [
+      "licensebuttons.net: 1 cookie(s)"
+    ],
+    "commentsSize": [
+      "body > div#bg_B > div#body > div#left_col > #comment[0] (103 characters)",
+      "body > div#bg_B > div#body > div#left_col > div.sketch-b > div.middle > div#mc_embed_signup > form#mc-embedded-subscribe-form > div#mc_embed_signup_scroll > #comment[0] (111 characters)"
+    ],
+    "DOMelementMaxDepth": [
+      "body > div#bg_B > div#body > div#left_col > div.sketch-b > div.middle > div#mc_embed_signup > form#mc-embedded-subscribe-form > div#mc_embed_signup_scroll > div[1] > input[0]",
+      "body > div#bg_B > div#body > div#left_col > div.sketch-b > div.middle > div#mc_embed_signup > form#mc-embedded-subscribe-form > div#mc_embed_signup_scroll > div.clear > input#mc-embedded-subscribe"
+    ],
+    "nodesWithInlineCSS": [
+      "body > div#bg_B > div#body > div#right_col > div.post-it ()",
+      "body > div#bg_B > div#body > div#left_col > div.sketch-b > div.middle > div#mc_embed_signup > form#mc-embedded-subscribe-form > div#mc_embed_signup_scroll > div[1] (position: absolute; left: -5000px;)",
+      "body > div#bg_B > div#body > div#left_col > div.post-it ()",
+      "body > div#bg_B > div#footer > div.wrapper > div#license > a[0] > img[0] (border-width:0;width:80px;height:15px)"
+    ],
+    "imagesWithoutDimensions": [
+      "body > div#bg_B > div#body > div#content > div[2] > p[2] > img[0] <http://www.faasl.org/homeitems/band-festival/4088806261_14a21c7dec_m.jpg>",
+      "body > div#bg_B > div#body > div#content > div[3] > p[2] > img[0] <http://www.faasl.org/homeitems/caroling/1576839129_d62a4743be_m.jpg>",
+      "body > div#bg_B > div#body > div#content > div[4] > p[2] > img[0] <http://www.faasl.org/homeitems/members-dinner/337869291_ccc1b8ba87_m.jpg>"
+    ],
+    "DOMmutationsInserts": [
+      "\"div\" added to \"body\"",
+      "\"div[0]\" added to \"div\""
+    ],
+    "DOMmutationsRemoves": [
+      "\"div\" removed from \"body\""
+    ],
+    "DOMmutationsAttributes": [
+      "\"style\" attr set on div[0]"
+    ],
+    "DOMqueriesByTagName": [
+      "* (in div)",
+      "tbody (in div)",
+      "link (in div)",
+      "a (in div)",
+      "input (in div)",
+      "script (in #document)",
+      "body (in #document)"
+    ],
+    "DOMinserts": [
+      "\"html > div[1]\" appended to \"html\"",
+      "\"head > script[5]\" appended to \"head\"",
+      "\"body > div[2]\" appended to \"body\"",
+      "\"body > div[2] > div[0]\" appended to \"body > div[2]\""
+    ],
+    "domains": [
+      "www.faasl.org: 18 request(s)",
+      "www.google-analytics.com: 3 request(s)",
+      "cdn-images.mailchimp.com: 1 request(s)",
+      "fonts.googleapis.com: 1 request(s)",
+      "i.creativecommons.org: 1 request(s)",
+      "fonts.gstatic.com: 1 request(s)",
+      "licensebuttons.net: 1 request(s)",
+      "www.faasl.org: 3 request(s)",
+      "www.faasl.org: 4 request(s)",
+      "www.google-analytics.com: 1 request(s)"
+    ],
+    "eventsBound": [
+      "\"DOMContentLoaded\" bound to \"#document\"",
+      "\"load\" bound to \"window\"",
+      "\"click\" bound to \"#document\""
+    ],
+    "globalVariables": [
+      "_gaq",
+      "jQuery",
+      "$",
+      "_gat",
+      "gaGlobal"
+    ],
+    "headersBiggerThanContent": [
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (body: 0.03 kB / headers: 0.31 kB)",
+      "https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png (body: 0.43 kB / headers: 0.58 kB)",
+      "http://www.faasl.org/styles/img/icons/external.png (body: 0.11 kB / headers: 0.29 kB)",
+      "http://www.google-analytics.com/__utm.gif?utmwv=5.7.1&utms=2&utmn=1718159213&utmhn=www.faasl.org&utmt=event&utme=14(8600*0*0*0*520*0*6500*6500)(8677*0*0*0*528*0*6530*6531)&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691798711&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (body: 0.03 kB / headers: 0.33 kB)"
+    ],
+    "jQueryVersionsLoaded": [
+      "v1.11.1"
+    ],
+    "jQueryEventTriggers": [
+      "\"ready\" on \"#document\""
+    ],
+    "lazyLoadableImagesBelowTheFold": [
+      "http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png",
+      "/homeitems/members-dinner/337869291_ccc1b8ba87_m.jpg"
+    ],
+    "redirects": [
+      "http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png is a redirect (HTTP 301 Moved Permanently) to https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png (took 222 ms)",
+      "http://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png is a redirect (HTTP 301 Moved Permanently) to https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png (took 184 ms)"
+    ],
+    "domainsToDomContentLoaded": [
+      "www.faasl.org (4 requests)",
+      "cdn-images.mailchimp.com (1 requests)",
+      "fonts.googleapis.com (1 requests)"
+    ],
+    "domainsToDomComplete": [
+      "www.faasl.org (18 requests)",
+      "www.google-analytics.com (2 requests)",
+      "cdn-images.mailchimp.com (1 requests)",
+      "fonts.googleapis.com (1 requests)",
+      "i.creativecommons.org (1 requests)",
+      "fonts.gstatic.com (1 requests)",
+      "licensebuttons.net (1 requests)"
+    ],
+    "assetsNotGzipped": [
+      "http://www.faasl.org/ (HTML)",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css (CSS)",
+      "http://www.faasl.org/styles/raw.css (CSS)",
+      "http://www.faasl.org/js/bundled.js (JS)"
+    ],
+    "assetsWithQueryString": [
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (CSS)",
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (IMAGE)"
+    ],
+    "assetsWithCookies": [
+      "https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png (IMAGE)"
+    ],
+    "smallImages": [
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (0.03 kB)",
+      "https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png (0.43 kB)",
+      "http://www.faasl.org/styles/img/icons/external.png (0.11 kB)"
+    ],
+    "smallCssFiles": [
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (0.83 kB)"
+    ],
+    "smallJsFiles": [
+      "http://www.google-analytics.com/ga.js (1.32 kB)"
+    ],
+    "timeToFirstCss": [
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css received in 466 ms",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css received in 898 ms",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css received in 835 ms",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css received in 584 ms"
+    ],
+    "timeToFirstJs": [
+      "http://www.faasl.org/js/bundled.js received in 6366 ms",
+      "http://www.faasl.org/js/bundled.js received in 14574 ms"
+    ],
+    "timeToFirstImage": [
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg received in 4746 ms",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg received in 4689 ms",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg received in 5316 ms",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg received in 5137 ms",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg received in 4133 ms"
+    ],
+    "smallestResponse": [
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (0.03 kB)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (0.83 kB)"
+    ],
+    "biggestResponse": [
+      "http://www.faasl.org/js/bundled.js (281.62 kB)",
+      "http://www.faasl.org/styles/raw.css (94.40 kB)"
+    ],
+    "fastestResponse": [
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (42 ms)",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css (63 ms)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (187 ms)",
+      "http://www.google-analytics.com/ga.js (176 ms)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (295 ms)"
+    ],
+    "slowestResponse": [
+      "http://www.faasl.org/js/bundled.js (5958 ms)",
+      "http://www.faasl.org/styles/raw.css (2603 ms)",
+      "http://www.faasl.org/styles/raw.css (3817 ms)",
+      "http://www.faasl.org/js/bundled.js (14249 ms)",
+      "http://www.faasl.org/styles/raw.css (2243 ms)"
+    ],
+    "smallestLatency": [
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=951442410&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=2732x1536&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=1527513200&utmr=-&utmp=%2F&utmht=1514691797139&utmac=UA-6265635-2&utmcc=__utma%3D255976092.2050670300.1514691797.1514691797.1514691797.1%3B%2B__utmz%3D255976092.1514691797.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1763501804&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~ (42 ms)",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css (62 ms)",
+      "http://fonts.googleapis.com/css?family=Patrick+Hand%7CArchitects+Daughter%7CWalter+Turncoat (187 ms)",
+      "http://www.google-analytics.com/ga.js (155 ms)",
+      "http://www.faasl.org/styles/img/music_bg_large_dark.jpg (266 ms)"
+    ],
+    "biggestLatency": [
+      "http://www.faasl.org/styles/img/icons/external.png (1476 ms)",
+      "http://www.faasl.org/styles/raw.css (591 ms)",
+      "http://www.faasl.org/styles/raw.css (884 ms)",
+      "http://www.faasl.org/js/bundled.js (791 ms)",
+      "http://cdn-images.mailchimp.com/embedcode/slim-10_7.css (516 ms)"
+    ],
+    "jsErrors": [
+      "TypeError: null is not an object (evaluating 'body.scrollHeight') - unknown fn: undefined @ 7 / unknown fn:  @ 8",
+      "TypeError: null is not an object (evaluating 'document.body.getElementsByTagName') - unknown fn: undefined @ 5 / unknown fn:  @ 59 / unknown fn:  @ 60"
+    ],
+    "requestsWithTimeout": [
+      "http://www.faasl.org/js/bundled.js",
+      "http://www.faasl.org/styles/img/notebook_top.png",
+      "http://www.faasl.org/styles/img/notebook_bg_light.png",
+      "http://www.faasl.org/styles/img/sketch_A_bottom.png",
+      "http://www.faasl.org/homeitems/band-festival/4088806261_14a21c7dec_m.jpg",
+      "http://www.faasl.org/homeitems/caroling/1576839129_d62a4743be_m.jpg",
+      "http://www.faasl.org/homeitems/members-dinner/337869291_ccc1b8ba87_m.jpg",
+      "http://www.faasl.org/styles/img/post-it_small_left.png",
+      "http://www.faasl.org/styles/img/sketch_B_top.png",
+      "http://www.faasl.org/styles/img/sketch_B_middle.png",
+      "http://www.faasl.org/styles/img/sketch_B_bottom.png",
+      "http://www.faasl.org/styles/img/sketch_A_top.png",
+      "http://www.faasl.org/styles/img/sketch_A_middle.png",
+      "http://www.faasl.org/styles/img/post-it_large_right.png",
+      "http://www.faasl.org/styles/img/icons/external.png",
+      "http://fonts.gstatic.com/s/walterturncoat/v8/sG9su5g4GXy1KP73cU3hvVtilBVlnnYjrhQJoWzUtmo.ttf",
+      "http://www.google-analytics.com/r/__utm.gif?utmwv=5.7.1&utms=1&utmn=1505707003&utmhn=www.faasl.org&utmcs=UTF-8&utmsr=1366x768&utmvp=1366x768&utmsc=24-bit&utmul=en-us&utmje=0&utmfl=-&utmdt=FAASL%20-%20Enriching%20lives%20in%20our%20community%20with%20the%20gift%20of%20music&utmhid=489699679&utmr=-&utmp=%2F&utmht=1514691804828&utmac=UA-6265635-2&utmcc=__utma%3D255976092.1522431187.1514691805.1514691805.1514691805.1%3B%2B__utmz%3D255976092.1514691805.1.1.utmcsr%3D(direct)%7Cutmccn%3D(direct)%7Cutmcmd%3D(none)%3B&utmjid=1817885288&utmredir=1&utmu=qAAAAAAAAAAAAAAAAAAAAAAE~",
+      "https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png"
+    ]
+  }
+}
