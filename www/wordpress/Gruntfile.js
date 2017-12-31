@@ -112,7 +112,7 @@ module.exports = function(grunt) {
     gitcommit: {
       phantomas: {
         options: {
-          message: 'Adding phantomas stats for latest release.'
+          message: 'Adding phantomas stats for upcoming release.'
         },
         files: {
           src: ['phantomas/*']
@@ -301,7 +301,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-uncss');
   
-  grunt.registerTask('beta', ['build', 'bump-only', 'ftp-deploy:beta', 'phantomas:beta', 'gitadd:phantomas', 'bump-commit']); //'gitcommit:phantomas']);
+  grunt.registerTask('beta', ['build', 'bump-only', 'ftp-deploy:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('build', ['img', 'fonts', 'css', 'js', 'html', 'favicons']);
 //  grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:cssmin']);
   grunt.registerTask('css', ['newer:sass', 'newer:cssmin']);
@@ -311,6 +311,6 @@ module.exports = function(grunt) {
   grunt.registerTask('img', ['newer:imagemin:jpgs', 'copy:svg']);
   grunt.registerTask('js', ['newer:uglify']);
   grunt.registerTask('perf', ['connect:phantomas']);
-  grunt.registerTask('release', ['ftp-deploy:release', 'phantomas:faasl'])
+  grunt.registerTask('release', ['build', 'bump-only:minor', 'ftp-deploy:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('test', ['build', 'connect:dist']);
 };
