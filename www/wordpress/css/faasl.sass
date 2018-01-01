@@ -8,12 +8,6 @@
 
 
 /* Typography */
-$heading-slab-serif: "velino-poster",Georgia, "Times New Roman", Times, serif
-$heading-serif: $heading-slab-serif
-$heading-sans-serif:  "annabelle-jf","Helvetica Neue", Helvetica, Arial, sans-serif
-$fancy-sans-serif: $heading-sans-serif
-$body-font: "Helvetica Neue", Helvetica, Arial, sans-serif
-
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
   font-family: $heading-serif
   letter-spacing: .05em
@@ -23,13 +17,13 @@ h1 small, h2 small, h3 small, h4 small, h4.leader-title, h5 small, h6 small
   letter-spacing: -.01em // Connect the script lettering
   font-size: 100% // Override small behavior
 header#page-header h1
-  font-family: "mr-eaves-modern","velino-poster",Georgia, "Times New Roman", Times, serif
+  font-family: $page-header-font
   small
     font-size: 65%
   small + small
     font-size: 150%
 blockquote
-  font-family: "antiquarian-scribe", $body-font
+  font-family: "caliban-std", $body-font
   font-size: 150%
 .indent
   text-indent: 1em
@@ -126,10 +120,15 @@ blockquote
   background: radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0, radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px, radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0, radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px, radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0, radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px, radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0, radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px, linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0, linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0
   background-color: #300
   background-size: 100px 100px
+  
+.wave-background
+  background: linear-gradient(#FFFFFF 50%, rgba(255,255,255,0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 $compound1
+  background-size: 110px 200px
+  background-repeat: repeat-x
 
 .weave-background
-  background: linear-gradient(135deg, lighten($compound2, 20%) 22px, lighten($compound2, 60%) 22px, lighten($compound2, 60%) 24px, transparent 24px, transparent 67px, lighten($compound2, 60%) 67px, lighten($compound2, 60%) 69px, transparent 69px), linear-gradient(225deg, lighten($compound2, 20%) 22px, lighten($compound2, 60%) 22px, lighten($compound2, 60%) 24px, transparent 24px, transparent 67px, lighten($compound2, 60%) 67px, lighten($compound2, 60%) 69px, transparent 69px)0 64px
-  background-color: lighten($compound2, 20%)
+  background: linear-gradient(135deg, lighten($compound2, 0%) 22px, lighten($compound2, 60%) 22px, lighten($compound2, 60%) 24px, transparent 24px, transparent 67px, lighten($compound2, 60%) 67px, lighten($compound2, 60%) 69px, transparent 69px), linear-gradient(225deg, lighten($compound2, 0%) 22px, lighten($compound2, 60%) 22px, lighten($compound2, 60%) 24px, transparent 24px, transparent 67px, lighten($compound2, 60%) 67px, lighten($compound2, 60%) 69px, transparent 69px)0 64px
+  background-color: lighten($compound2, 0%)
   background-size: 64px 128px
   
 
@@ -140,8 +139,6 @@ blockquote
   @include button-variant($text-color, $gold, darken($gold, 15%))
 
 body
-  font-family: "serenity","mr-eaves-modern","velino-poster",Georgia, "Times New Roman", Times, serif
-  font-size: 16px
   letter-spacing: .05em
   position: relative
 
@@ -213,9 +210,6 @@ header#page-header
   width: 100%
   bottom: 50px
 
-//section.container-fluid:not(#intro, #community), article.container-fluid
-//  padding: ($navbar-height + $navbar-height) $grid-gutter-width
-
 section.container-fluid, article.container-fluid
   padding: $navbar-height $grid-gutter-width 0
 article.container-fluid
@@ -246,17 +240,16 @@ article.community
   p
     @extend .indent
 
-section#community, article#learn
+section#community, article#learn, article#perform
   background-color: $compound1
-  color: $white-text
   h3 small
-    color: lighten($complement1, 40%)
+    color: lighten($complement1, 0%)
   p
     @extend .indent
 article#learn
   padding-top: 0
   img
-    border-color: lighten($complement1, 40%)
+    border-color: lighten($complement1, 0%)
 article#grow
   background: $complement1
   color: $white-text
@@ -276,6 +269,9 @@ article#grow
 article#perform
   img
     border-color: $text-color
+  .well
+    background-color: darken($gold, 0%)
+    border-color: darken($gold, 7%)
 
 section#leadership
   @extend .argyle-background
@@ -297,7 +293,7 @@ section#leadership
   @extend .text-justify
 
 section#calendar.container-fluid
-  @extend .weave-background
+  @extend .wave-background
   padding-top: $navbar-height
   padding-bottom: $navbar-height
   
@@ -344,7 +340,14 @@ footer#page-footer
   #non-profit-statement
     margin-top: 0
 
-@media print {
+@media print
+  section.container-fluid, article.container-fluid
+    padding: initial
+  article.container-fluid
+    padding: initial
+  section.container-fluid:not(#community), article.container-fluid
+    padding: initial
+  
   header#page-header
     position: initial
     height: initial
@@ -354,4 +357,6 @@ footer#page-footer
     @include image-overlay-bg
     position: initial
     bottom: initial
-}
+    
+  .leader-card
+    width: 33%

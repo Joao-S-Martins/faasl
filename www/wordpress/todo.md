@@ -28,4 +28,7 @@
 - [ ] Test retina behavior
 - [x] Fix uncss
 - [ ] Print styles{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass"}}
+- [x] Optimize  typekit font usage
+- [x] Google analytics
+- [x] Try gold complementary pallete
 

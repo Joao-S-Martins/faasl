@@ -22,6 +22,7 @@ module.exports = function(grunt) {
         regExp: false
       }
     },
+    clean: ['dist'],
     connect: {
       dist: {
         options: {
@@ -85,7 +86,7 @@ module.exports = function(grunt) {
         },
         src: 'dist/',
         dest: '/',
-        exclusions: ['./**/.DS_Store', './**/Thumbs.db', './dist/tmp'],
+        exclusions: ['./**/.DS_Store', './**/Thumbs.db', './**/tmp/*'],
 //        keep: ['/important/images/at/server/*.jpg'],
         simple: true,
         useList: true
@@ -167,17 +168,28 @@ module.exports = function(grunt) {
       }
     },
     processhtml: {
-      dist: {
+      beta: {
         files: [
           {
-            expand: true,     // Enable dynamic expansion.
-            src: ['*.html', '!example.html', '!inspiration-1.html'], // Actual pattern(s) to match.
-            dest: 'dist/tmp',   // Destination path prefix.
-            ext: '.processed.html',   // Dest filepaths will have this extension.
-            extDot: 'first'   // Extensions in filenames begin after the first dot
+            expand: true,
+            src: ['*.html', '!example.html', '!goog-anal.html', '!inspiration-1.html'],
+            dest: 'dist/tmp',
+            ext: '.processed.html',
+            extDot: 'first'
           },
         ],
       },
+      release: {
+        files: [
+          {
+            expand: true,
+            src: ['*.html', '!example.html', '!goog-anal.html', '!inspiration-1.html'],
+            dest: 'dist/tmp',
+            ext: '.processed.html',
+            extDot: 'first'
+          },
+        ],
+      }
     },
     sass: {
       options: {
@@ -272,6 +284,7 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-bump');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
@@ -288,7 +301,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-uncss');
   
   grunt.registerTask('beta', ['build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
-  grunt.registerTask('build', ['img', 'fonts', 'css', 'js', 'html', 'favicons']);
+  grunt.registerTask('beta-build', ['clean', 'img', 'fonts', 'css', 'js', 'beta-html', 'favicons']);
+  grunt.registerTask('beta-html', ['processhtml:beta', 'newer:htmlmin']);
   grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:cssmin']);
   grunt.registerTask('favicons', ['copy:favicons']);
   grunt.registerTask('fonts', ['copy:fonts']);
@@ -297,6 +311,8 @@ module.exports = function(grunt) {
   grunt.registerTask('js', ['newer:uglify']);
   grunt.registerTask('perf', ['connect:phantomas']);
   grunt.registerTask('release', ['build', 'bump-only:minor', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
+  grunt.registerTask('release-build', ['clean', 'img', 'fonts', 'css', 'js', 'release-html', 'favicons']);
+  grunt.registerTask('release-html', ['processhtml:release', 'newer:htmlmin']);
   grunt.registerTask('test', ['build', 'connect:dist']);
 };
 

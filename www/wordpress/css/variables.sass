@@ -4,14 +4,27 @@
 $hunter-green : #355749 // rgba(53, 87, 73, 1)
 $gold         : #F3DD3E // rgba(243, 221, 62, 1)
 
-$compound1    : #46808A // rgba(70, 128, 138, 1)
-$compound2    : #28A8BD // rgba(40, 168, 189, 1)
-$complement1  : #A35243 // rgba(163, 82, 67, 1)
-$complement2  : #573A35 // rgba(87, 58, 53, 1)
+//$compound1    : #46808A // rgba(70, 128, 138, 1)
+//$compound2    : #28A8BD // rgba(40, 168, 189, 1)
+//$complement1  : #A35243 // rgba(163, 82, 67, 1)
+//$complement2  : #573A35 // rgba(87, 58, 53, 1)
+$compound1    : #FFEB5B // rgba(70, 128, 138, 1)
+$compound2    : #FFEB5B // rgba(40, 168, 189, 1)
+$complement1  : $hunter-green // rgba(163, 82, 67, 1)
+$complement2  : $hunter-green // rgba(87, 58, 53, 1)
 
 $white-text   : #f0f0f0
 
 $youtube      : #bb0000
+
+
+/* Typography */
+$page-header-font   : "mr-eaves-modern","velino-poster",Georgia, "Times New Roman", Times, serif
+$heading-slab-serif : "velino-poster",Georgia, "Times New Roman", Times, serif
+$heading-serif      : $heading-slab-serif
+$heading-sans-serif :  "annabelle-jf","Helvetica Neue", Helvetica, Arial, sans-serif
+$fancy-sans-serif   : $heading-sans-serif
+$body-font          : "serenity", "Helvetica Neue", Helvetica, Arial, sans-serif
 
 /* Bootstrap Overrides */
 $bootstrap-sass-asset-helper: false !default;
@@ -63,9 +76,9 @@ $font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !defaul
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
-$font-family-base:        $font-family-sans-serif !default;
+$font-family-base:        $body-font
 
-$font-size-base:          14px !default;
+$font-size-base:          16px
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 

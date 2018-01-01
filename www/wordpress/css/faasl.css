@@ -3,6 +3,7 @@
 /* Imports */
 /* Sass Document */
 /* Colors */
+/* Typography */
 /* Bootstrap Overrides */
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -1384,8 +1385,8 @@ html {
 
 /* line 27, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-family: "serenity", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
   line-height: 1.42857;
   color: #333333;
   background-color: #fff; }
@@ -1450,8 +1451,8 @@ img {
 
 /* line 113, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 22px;
+  margin-bottom: 22px;
   border: 0;
   border-top: 1px solid #eeeeee; }
 
@@ -1509,8 +1510,8 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  margin-top: 20px;
-  margin-bottom: 10px; }
+  margin-top: 22px;
+  margin-bottom: 11px; }
   /* line 30, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
   h1 small,
   h1 .small, .h1 small,
@@ -1527,8 +1528,8 @@ h3, .h3 {
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-top: 11px;
+  margin-bottom: 11px; }
   /* line 41, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
   h4 small,
   h4 .small, .h4 small,
@@ -1543,47 +1544,47 @@ h6, .h6 {
 
 /* line 47, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h1, .h1 {
-  font-size: 36px; }
+  font-size: 41px; }
 
 /* line 48, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h2, .h2 {
-  font-size: 30px; }
+  font-size: 34px; }
 
 /* line 49, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h3, .h3 {
-  font-size: 24px; }
+  font-size: 28px; }
 
 /* line 50, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h4, .h4 {
-  font-size: 18px; }
+  font-size: 20px; }
 
 /* line 51, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h5, .h5 {
-  font-size: 14px; }
+  font-size: 16px; }
 
 /* line 52, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 h6, .h6 {
-  font-size: 12px; }
+  font-size: 14px; }
 
 /* line 58, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 p {
-  margin: 0 0 10px; }
+  margin: 0 0 11px; }
 
 /* line 62, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 .lead {
-  margin-bottom: 20px;
-  font-size: 16px;
+  margin-bottom: 22px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.4; }
   @media (min-width: 768px) {
     /* line 62, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
     .lead {
-      font-size: 21px; } }
+      font-size: 24px; } }
 
 /* line 78, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 small,
 .small {
-  font-size: 85%; }
+  font-size: 87%; }
 
 /* line 83, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 mark,
@@ -1723,15 +1724,15 @@ a.bg-danger:focus {
 
 /* line 138, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  margin: 44px 0 22px;
   border-bottom: 1px solid #eeeeee; }
 
 /* line 149, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px; }
+  margin-bottom: 11px; }
   /* line 153, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
   ul ul,
   ul ol,
@@ -1758,7 +1759,7 @@ ol {
 /* line 185, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 dl {
   margin-top: 0;
-  margin-bottom: 20px; }
+  margin-bottom: 22px; }
 
 /* line 189, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 dt,
@@ -1808,9 +1809,9 @@ abbr[data-original-title] {
 
 /* line 241, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
-  font-size: 17.5px;
+  padding: 11px 22px;
+  margin: 0 0 22px;
+  font-size: 20px;
   border-left: 5px solid #eeeeee; }
   /* line 250, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
   blockquote p:last-child,
@@ -1858,7 +1859,7 @@ blockquote.pull-right {
 
 /* line 294, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 address {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   font-style: normal;
   line-height: 1.42857; }
 
@@ -1895,9 +1896,9 @@ kbd {
 /* line 41, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_code.scss */
 pre {
   display: block;
-  padding: 9.5px;
-  margin: 0 0 10px;
-  font-size: 13px;
+  padding: 10.5px;
+  margin: 0 0 11px;
+  font-size: 15px;
   line-height: 1.42857;
   word-break: break-all;
   word-wrap: break-word;
@@ -2679,7 +2680,7 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20px; }
+  margin-bottom: 22px; }
   /* line 31, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tables.scss */
   .table > thead > tr > th,
   .table > thead > tr > td,
@@ -2879,7 +2880,7 @@ table th[class*="col-"] {
     /* line 171, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tables.scss */
     .table-responsive {
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 16.5px;
       overflow-y: hidden;
       -ms-overflow-style: -ms-autohiding-scrollbar;
       border: 1px solid #ddd; }
@@ -2932,8 +2933,8 @@ legend {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 20px;
-  font-size: 21px;
+  margin-bottom: 22px;
+  font-size: 24px;
   line-height: inherit;
   color: #333333;
   border: 0;
@@ -2984,7 +2985,7 @@ input[type="checkbox"]:focus {
 output {
   display: block;
   padding-top: 7px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #555555; }
 
@@ -2992,9 +2993,9 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  height: 34px;
+  height: 36px;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857;
   color: #555555;
   background-color: #fff;
@@ -3050,7 +3051,7 @@ input[type="search"] {
   input[type="time"].form-control,
   input[type="datetime-local"].form-control,
   input[type="month"].form-control {
-    line-height: 34px; }
+    line-height: 36px; }
   /* line 197, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
   .input-group-sm > input[type="date"].input-group-addon,
@@ -3074,7 +3075,7 @@ input[type="search"] {
   .input-group-sm > .input-group-btn > input[type="month"].btn,
   .input-group-sm
   input[type="month"] {
-    line-height: 30px; }
+    line-height: 33px; }
   /* line 202, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
   .input-group-lg > input[type="date"].input-group-addon,
@@ -3098,7 +3099,7 @@ input[type="search"] {
   .input-group-lg > .input-group-btn > input[type="month"].btn,
   .input-group-lg
   input[type="month"] {
-    line-height: 46px; } }
+    line-height: 49px; } }
 
 /* line 215, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group {
@@ -3114,7 +3115,7 @@ input[type="search"] {
   /* line 231, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .radio label,
   .checkbox label {
-    min-height: 20px;
+    min-height: 22px;
     padding-left: 20px;
     margin-bottom: 0;
     font-weight: normal;
@@ -3181,7 +3182,7 @@ fieldset[disabled]
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
-  min-height: 34px; }
+  min-height: 38px; }
   /* line 315, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
   .input-group-lg > .form-control-static.input-group-addon,
@@ -3195,9 +3196,9 @@ fieldset[disabled]
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
 .input-group-sm > .input-group-btn > .btn {
-  height: 30px;
+  height: 33px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -3205,8 +3206,8 @@ fieldset[disabled]
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
 .input-group-sm > .input-group-btn > select.btn {
-  height: 30px;
-  line-height: 30px; }
+  height: 33px;
+  line-height: 33px; }
 
 /* line 84, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
 textarea.input-sm, .input-group-sm > textarea.form-control,
@@ -3220,16 +3221,16 @@ select[multiple].input-sm,
 
 /* line 333, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-sm .form-control {
-  height: 30px;
+  height: 33px;
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
 /* line 340, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-sm select.form-control {
-  height: 30px;
-  line-height: 30px; }
+  height: 33px;
+  line-height: 33px; }
 
 /* line 344, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-sm textarea.form-control,
@@ -3238,19 +3239,19 @@ select[multiple].input-sm,
 
 /* line 348, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-sm .form-control-static {
-  height: 30px;
-  min-height: 32px;
+  height: 33px;
+  min-height: 36px;
   padding: 6px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5; }
 
 /* line 71, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
 .input-group-lg > .input-group-btn > .btn {
-  height: 46px;
+  height: 49px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333;
   border-radius: 6px; }
 
@@ -3258,8 +3259,8 @@ select[multiple].input-sm,
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
 .input-group-lg > .input-group-btn > select.btn {
-  height: 46px;
-  line-height: 46px; }
+  height: 49px;
+  line-height: 49px; }
 
 /* line 84, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
 textarea.input-lg, .input-group-lg > textarea.form-control,
@@ -3273,16 +3274,16 @@ select[multiple].input-lg,
 
 /* line 359, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-lg .form-control {
-  height: 46px;
+  height: 49px;
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333;
   border-radius: 6px; }
 
 /* line 366, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-lg select.form-control {
-  height: 46px;
-  line-height: 46px; }
+  height: 49px;
+  line-height: 49px; }
 
 /* line 370, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-lg textarea.form-control,
@@ -3291,10 +3292,10 @@ select[multiple].input-lg,
 
 /* line 374, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-group-lg .form-control-static {
-  height: 46px;
-  min-height: 38px;
+  height: 49px;
+  min-height: 42px;
   padding: 11px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333; }
 
 /* line 388, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -3302,7 +3303,7 @@ select[multiple].input-lg,
   position: relative; }
   /* line 393, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .has-feedback .form-control {
-    padding-right: 42.5px; }
+    padding-right: 45px; }
 
 /* line 398, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-control-feedback {
@@ -3311,9 +3312,9 @@ select[multiple].input-lg,
   right: 0;
   z-index: 2;
   display: block;
-  width: 34px;
-  height: 34px;
-  line-height: 34px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
   text-align: center;
   pointer-events: none; }
 
@@ -3323,9 +3324,9 @@ select[multiple].input-lg,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
-  width: 46px;
-  height: 46px;
-  line-height: 46px; }
+  width: 49px;
+  height: 49px;
+  line-height: 49px; }
 
 /* line 417, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
@@ -3333,9 +3334,9 @@ select[multiple].input-lg,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
-  width: 30px;
-  height: 30px;
-  line-height: 30px; }
+  width: 33px;
+  height: 33px;
+  line-height: 33px; }
 
 /* line 8, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
 .has-success .help-block,
@@ -3441,7 +3442,7 @@ select[multiple].input-lg,
 
 /* line 439, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback label ~ .form-control-feedback {
-  top: 25px; }
+  top: 27px; }
 
 /* line 442, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .has-feedback label.sr-only ~ .form-control-feedback, .has-feedback label.carousel-caption ~ .form-control-feedback, .has-feedback label.carousel-indicators ~ .form-control-feedback, .has-feedback label.carousel-control ~ .form-control-feedback {
@@ -3516,7 +3517,7 @@ select[multiple].input-lg,
 /* line 569, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-horizontal .radio,
 .form-horizontal .checkbox {
-  min-height: 27px; }
+  min-height: 29px; }
 
 /* line 575, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
 .form-horizontal .form-group {
@@ -3545,13 +3546,13 @@ select[multiple].input-lg,
   /* line 603, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .form-horizontal .form-group-lg .control-label {
     padding-top: 11px;
-    font-size: 18px; } }
+    font-size: 20px; } }
 
 @media (min-width: 768px) {
   /* line 611, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .form-horizontal .form-group-sm .control-label {
     padding-top: 6px;
-    font-size: 12px; } }
+    font-size: 14px; } }
 
 /* line 9, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn {
@@ -3566,7 +3567,7 @@ select[multiple].input-lg,
   border: 1px solid transparent;
   white-space: nowrap;
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.42857;
   border-radius: 4px;
   -webkit-user-select: none;
@@ -3900,21 +3901,21 @@ fieldset[disabled] a.btn {
 /* line 135, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333;
   border-radius: 6px; }
 
 /* line 139, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-sm, .btn-group-sm > .btn {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
 /* line 143, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn-xs, .btn-group-xs > .btn {
   padding: 1px 5px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
@@ -4003,7 +4004,7 @@ tbody.collapse.in {
   padding: 5px 0;
   margin: 2px 0 0;
   list-style: none;
-  font-size: 14px;
+  font-size: 16px;
   text-align: left;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -4019,7 +4020,7 @@ tbody.collapse.in {
   /* line 60, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
   .dropdown-menu .divider {
     height: 1px;
-    margin: 9px 0;
+    margin: 10px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   /* line 65, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
@@ -4079,7 +4080,7 @@ tbody.collapse.in {
 .dropdown-header {
   display: block;
   padding: 3px 20px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.42857;
   color: #777777;
   white-space: nowrap; }
@@ -4377,7 +4378,7 @@ tbody.collapse.in {
 /* line 77, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
 .input-group-addon {
   padding: 6px 12px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: normal;
   line-height: 1;
   color: #555555;
@@ -4390,14 +4391,14 @@ tbody.collapse.in {
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn {
     padding: 5px 10px;
-    font-size: 12px;
+    font-size: 14px;
     border-radius: 3px; }
   /* line 94, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 10px 16px;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 6px; }
   /* line 101, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
   .input-group-addon input[type="radio"],
@@ -4499,7 +4500,7 @@ tbody.collapse.in {
   /* line 59, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navs.scss */
   .nav .nav-divider {
     height: 1px;
-    margin: 9px 0;
+    margin: 10px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
   /* line 66, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navs.scss */
@@ -4746,9 +4747,9 @@ tbody.collapse.in {
 /* line 163, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-brand {
   float: left;
-  padding: 14.5px 15px;
-  font-size: 18px;
-  line-height: 20px;
+  padding: 13.5px 15px;
+  font-size: 20px;
+  line-height: 22px;
   height: 50px; }
   /* line 170, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-brand:hover, .navbar-brand:focus {
@@ -4793,12 +4794,12 @@ tbody.collapse.in {
 
 /* line 232, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-nav {
-  margin: 7.25px -15px; }
+  margin: 6.75px -15px; }
   /* line 235, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
-    line-height: 20px; }
+    line-height: 22px; }
   @media (max-width: 767px) {
     /* line 243, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
     .navbar-nav .open .dropdown-menu {
@@ -4815,7 +4816,7 @@ tbody.collapse.in {
         padding: 5px 15px 5px 25px; }
       /* line 255, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
       .navbar-nav .open .dropdown-menu > li > a {
-        line-height: 20px; }
+        line-height: 22px; }
         /* line 257, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
         .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-nav .open .dropdown-menu > li > a:focus {
           background-image: none; } }
@@ -4829,8 +4830,8 @@ tbody.collapse.in {
         float: left; }
         /* line 272, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
         .navbar-nav > li > a {
-          padding-top: 14.5px;
-          padding-bottom: 14.5px; } }
+          padding-top: 13.5px;
+          padding-bottom: 13.5px; } }
 
 /* line 286, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-form {
@@ -4841,8 +4842,8 @@ tbody.collapse.in {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-top: 7px;
+  margin-bottom: 7px; }
   @media (min-width: 768px) {
     /* line 478, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
     .navbar-form .form-group {
@@ -4927,12 +4928,12 @@ tbody.collapse.in {
 
 /* line 343, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-top: 7px;
+  margin-bottom: 7px; }
   /* line 346, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 10px;
-    margin-bottom: 10px; }
+    margin-top: 8.5px;
+    margin-bottom: 8.5px; }
   /* line 349, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
     margin-top: 14px;
@@ -4940,8 +4941,8 @@ tbody.collapse.in {
 
 /* line 359, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-top: 14px;
+  margin-bottom: 14px; }
   @media (min-width: 768px) {
     /* line 359, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
     .navbar-text {
@@ -5130,7 +5131,7 @@ tbody.collapse.in {
 /* line 6, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_breadcrumbs.scss */
 .breadcrumb {
   padding: 8px 15px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   list-style: none;
   background-color: #f5f5f5;
   border-radius: 4px; }
@@ -5150,7 +5151,7 @@ tbody.collapse.in {
 .pagination {
   display: inline-block;
   padding-left: 0;
-  margin: 20px 0;
+  margin: 22px 0;
   border-radius: 4px; }
   /* line 10, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_pagination.scss */
   .pagination > li {
@@ -5212,7 +5213,7 @@ tbody.collapse.in {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33333; }
 
 /* line 12, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_pagination.scss */
@@ -5231,7 +5232,7 @@ tbody.collapse.in {
 .pagination-sm > li > a,
 .pagination-sm > li > span {
   padding: 5px 10px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.5; }
 
 /* line 12, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_pagination.scss */
@@ -5249,7 +5250,7 @@ tbody.collapse.in {
 /* line 6, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_pager.scss */
 .pager {
   padding-left: 0;
-  margin: 20px 0;
+  margin: 22px 0;
   list-style: none;
   text-align: center; }
   /* line 14, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
@@ -5365,7 +5366,7 @@ a.label:hover, a.label:focus {
   display: inline-block;
   min-width: 10px;
   padding: 3px 7px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
   color: #fff;
   line-height: 1;
@@ -5421,7 +5422,7 @@ a.badge:hover, a.badge:focus {
   /* line 18, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_jumbotron.scss */
   .jumbotron p {
     margin-bottom: 15px;
-    font-size: 21px;
+    font-size: 24px;
     font-weight: 200; }
   /* line 24, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_jumbotron.scss */
   .jumbotron > hr {
@@ -5448,13 +5449,13 @@ a.badge:hover, a.badge:focus {
       /* line 49, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_jumbotron.scss */
       .jumbotron h1,
       .jumbotron .h1 {
-        font-size: 63px; } }
+        font-size: 72px; } }
 
 /* line 7, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_thumbnails.scss */
 .thumbnail {
   display: block;
   padding: 4px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   line-height: 1.42857;
   background-color: #fff;
   border: 1px solid #ddd;
@@ -5484,7 +5485,7 @@ a.thumbnail.active {
 /* line 9, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
 .alert {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   border: 1px solid transparent;
   border-radius: 4px; }
   /* line 16, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
@@ -5577,8 +5578,8 @@ a.thumbnail.active {
 /* line 26, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_progress-bars.scss */
 .progress {
   overflow: hidden;
-  height: 20px;
-  margin-bottom: 20px;
+  height: 22px;
+  margin-bottom: 22px;
   background-color: #f5f5f5;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -5589,8 +5590,8 @@ a.thumbnail.active {
   float: left;
   width: 0%;
   height: 100%;
-  font-size: 12px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 22px;
   color: #fff;
   text-align: center;
   background-color: #355749;
@@ -5910,7 +5911,7 @@ button.list-group-item-danger {
 
 /* line 7, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_panels.scss */
 .panel {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   background-color: #fff;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -5942,7 +5943,7 @@ button.list-group-item-danger {
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 16px;
+  font-size: 18px;
   color: inherit; }
   /* line 39, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_panels.scss */
   .panel-title > a,
@@ -6145,7 +6146,7 @@ button.list-group-item-danger {
 
 /* line 222, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_panels.scss */
 .panel-group {
-  margin-bottom: 20px; }
+  margin-bottom: 22px; }
   /* line 226, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_panels.scss */
   .panel-group .panel {
     margin-bottom: 0;
@@ -6338,7 +6339,7 @@ button.list-group-item-danger {
 /* line 6, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_close.scss */
 .close {
   float: right;
-  font-size: 21px;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1;
   color: #000;
@@ -6515,7 +6516,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "serenity", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6530,7 +6531,7 @@ button.close {
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  font-size: 12px;
+  font-size: 14px;
   opacity: 0;
   filter: alpha(opacity=0); }
   /* line 18, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_tooltip.scss */
@@ -6644,7 +6645,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "serenity", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -6659,7 +6660,7 @@ button.close {
   word-break: normal;
   word-spacing: normal;
   word-wrap: normal;
-  font-size: 14px;
+  font-size: 16px;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #ccc;
@@ -6684,7 +6685,7 @@ button.close {
 .popover-title {
   margin: 0;
   padding: 8px 14px;
-  font-size: 14px;
+  font-size: 16px;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
   border-radius: 5px 5px 0 0; }
@@ -7285,7 +7286,7 @@ button.close {
 /* line 15, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
 .btn-social, .btn-social-icon {
   position: relative;
-  padding-left: 44px;
+  padding-left: 46px;
   text-align: left;
   white-space: nowrap;
   overflow: hidden;
@@ -7296,40 +7297,40 @@ button.close {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 32px;
-    line-height: 34px;
+    width: 34px;
+    line-height: 36px;
     font-size: 1.6em;
     text-align: center;
     border-right: 1px solid rgba(0, 0, 0, 0.2); }
   /* line 33, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
   .btn-social.btn-lg, .btn-group-lg > .btn-social.btn, .btn-group-lg > .btn.btn-social-icon, .btn-lg.btn-social-icon {
-    padding-left: 61px; }
+    padding-left: 64px; }
     /* line 35, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
     .btn-social.btn-lg > :first-child, .btn-group-lg > .btn-social.btn > :first-child, .btn-group-lg > .btn.btn-social-icon > :first-child, .btn-lg.btn-social-icon > :first-child {
-      line-height: 45px;
-      width: 45px;
+      line-height: 48px;
+      width: 48px;
       font-size: 1.8em; }
   /* line 41, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
   .btn-social.btn-sm, .btn-group-sm > .btn-social.btn, .btn-group-sm > .btn.btn-social-icon, .btn-sm.btn-social-icon {
-    padding-left: 38px; }
+    padding-left: 41px; }
     /* line 43, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
     .btn-social.btn-sm > :first-child, .btn-group-sm > .btn-social.btn > :first-child, .btn-group-sm > .btn.btn-social-icon > :first-child, .btn-sm.btn-social-icon > :first-child {
-      line-height: 28px;
-      width: 28px;
+      line-height: 31px;
+      width: 31px;
       font-size: 1.4em; }
   /* line 49, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
   .btn-social.btn-xs, .btn-group-xs > .btn-social.btn, .btn-group-xs > .btn.btn-social-icon, .btn-xs.btn-social-icon {
-    padding-left: 30px; }
+    padding-left: 32px; }
     /* line 51, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
     .btn-social.btn-xs > :first-child, .btn-group-xs > .btn-social.btn > :first-child, .btn-group-xs > .btn.btn-social-icon > :first-child, .btn-xs.btn-social-icon > :first-child {
-      line-height: 20px;
-      width: 20px;
+      line-height: 22px;
+      width: 22px;
       font-size: 1.2em; }
 
 /* line 59, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
 .btn-social-icon {
-  height: 34px;
-  width: 34px;
+  height: 36px;
+  width: 36px;
   padding: 0; }
   /* line 64, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
   .btn-social-icon > :first-child {
@@ -7338,20 +7339,20 @@ button.close {
     width: 100% !important; }
   /* line 69, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
   .btn-social-icon.btn-lg, .btn-group-lg > .btn-social-icon.btn {
-    height: 45px;
-    width: 45px;
+    height: 48px;
+    width: 48px;
     padding-left: 0;
     padding-right: 0; }
   /* line 75, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
   .btn-social-icon.btn-sm, .btn-group-sm > .btn-social-icon.btn {
-    height: 30px;
-    width: 30px;
+    height: 33px;
+    width: 33px;
     padding-left: 0;
     padding-right: 0; }
   /* line 81, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
   .btn-social-icon.btn-xs, .btn-group-xs > .btn-social-icon.btn {
-    height: 22px;
-    width: 22px;
+    height: 24px;
+    width: 24px;
     padding-left: 0;
     padding-right: 0; }
 
@@ -8322,55 +8323,55 @@ button.close {
     background-color: #fff; }
 
 /* Typography */
-/* line 17, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 11, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "velino-poster", Georgia, "Times New Roman", Times, serif;
   letter-spacing: .05em;
   margin-bottom: 1em; }
 
-/* line 21, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 15, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 h1 small, h2 small, h3 small, h4 small, h4.leader-title, h5 small, h6 small {
   font-family: "annabelle-jf", "Helvetica Neue", Helvetica, Arial, sans-serif;
   letter-spacing: -.01em;
   font-size: 100%; }
 
-/* line 25, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 19, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 header#page-header h1 {
-  font-family: "mr-eaves-modern","velino-poster",Georgia, "Times New Roman", Times, serif; }
-  /* line 27, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  font-family: "mr-eaves-modern", "velino-poster", Georgia, "Times New Roman", Times, serif; }
+  /* line 21, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   header#page-header h1 small {
     font-size: 65%; }
-  /* line 29, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 23, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   header#page-header h1 small + small {
     font-size: 150%; }
 
-/* line 31, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 25, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 blockquote {
-  font-family: "antiquarian-scribe", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "caliban-std", "serenity", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 150%; }
 
-/* line 34, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-.indent, section#intro p, article.community p, section#community p, article#learn p, article#grow p {
+/* line 28, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.indent, section#intro p, article.community p, section#community p, article#learn p, article#perform p, article#grow p {
   text-indent: 1em; }
 
 /* Mixins */
 /* Animations */
-/* line 52, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 46, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .animate {
   position: relative; }
 
-/* line 55, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 49, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .come-in {
   -webkit-animation: come-in 0.8s ease forwards;
   -o-animation: come-in 0.8s ease forwards;
   animation: come-in 0.8s ease forwards; }
-  /* line 57, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 51, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .come-in.slide-up {
     transform: translateY(20%); }
-  /* line 59, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 53, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .come-in.slide-left {
     transform: translateX(20%); }
-  /* line 61, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 55, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .come-in.slide-right {
     transform: translateX(-20%); }
 
@@ -8382,88 +8383,94 @@ blockquote {
     opacity: 1; } }
 
 /* Utilities */
-/* line 77, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 71, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .argyle-background, section#leadership {
   background-color: #355749;
   background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), linear-gradient(120deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
   background-size: 70px 120px; }
 
-/* line 82, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 76, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .arrows-background {
   background: linear-gradient(45deg, #edf4f1 45px, transparent 45px) 64px 64px, linear-gradient(45deg, #edf4f1 45px, transparent 45px, transparent 91px, white 91px, white 135px, transparent 135px), linear-gradient(-45deg, #edf4f1 23px, transparent 23px, transparent 68px, #edf4f1 68px, #edf4f1 113px, transparent 113px, transparent 158px, #edf4f1 158px);
   background-color: white;
   background-size: 128px 128px; }
 
-/* line 87, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 81, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .carbon-background, footer#page-footer {
   background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
   background-color: #131313;
   background-size: 20px 20px; }
 
-/* line 92, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 86, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .cube-background {
   background-color: #556;
   background-image: linear-gradient(30deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(150deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(30deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(150deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(60deg, #487764 25%, transparent 25.5%, transparent 75%, #487764 75%, #487764), linear-gradient(60deg, #487764 25%, transparent 25.5%, transparent 75%, #487764 75%, #487764);
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px; }
 
-/* line 101, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 95, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .half-rombes-background {
   background: #355749;
   background: linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 0 0, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 0 0, linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 7px -15px, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 7px -15px, #e7f0ed;
   background-size: 15px 30px; }
 
-/* line 106, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 100, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .hearts-background {
   background: radial-gradient(circle closest-side at 60% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%), radial-gradient(circle closest-side at 40% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%), radial-gradient(circle closest-side at 40% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%), radial-gradient(circle closest-side at 60% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%), radial-gradient(circle closest-side at 50% 35%, #d7e7e0 30%, rgba(53, 87, 73, 0) 31%), radial-gradient(circle closest-side at 60% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 60% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 50% 35%, #d7e7e0 30%, rgba(53, 87, 73, 0) 31%) 50px 50px;
   background-color: #b8d3c8;
   background-size: 100px 100px; }
 
-/* line 115, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 109, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .marrakesh-background {
   background-color: white;
   background-image: radial-gradient(#355749 9px, transparent 10px), repeating-radial-gradient(#355749 0, #355749 4px, transparent 5px, transparent 20px, #355749 21px, #355749 25px, transparent 26px, transparent 50px);
   background-size: 30px 30px, 90px 90px;
   background-position: 0 0; }
 
-/* line 121, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 115, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .stairs-background {
   background: linear-gradient(63deg, #355749 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, #355749 78%), linear-gradient(63deg, transparent 34%, #355749 38%, #355749 58%, transparent 62%), #444;
   background-size: 16px 48px; }
 
-/* line 125, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 119, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .upholstery-background {
   background: radial-gradient(#8a0000 4%, #5c0000 9%, rgba(102, 0, 0, 0) 9%) 0 0, radial-gradient(#8a0000 4%, #5c0000 8%, rgba(102, 0, 0, 0) 10%) 50px 50px, radial-gradient(rgba(153, 0, 0, 0.8) 20%, rgba(102, 0, 0, 0)) 50px 0, radial-gradient(rgba(153, 0, 0, 0.8) 20%, rgba(102, 0, 0, 0)) 0 50px, radial-gradient(#660000 35%, rgba(102, 0, 0, 0) 60%) 50px 0, radial-gradient(#660000 35%, rgba(102, 0, 0, 0) 60%) 100px 50px, radial-gradient(rgba(77, 0, 0, 0.7), rgba(102, 0, 0, 0)) 0 0, radial-gradient(rgba(77, 0, 0, 0.7), rgba(102, 0, 0, 0)) 50px 50px, linear-gradient(45deg, rgba(102, 0, 0, 0) 49%, black 50%, rgba(102, 0, 0, 0) 70%) 0 0, linear-gradient(-45deg, rgba(102, 0, 0, 0) 49%, black 50%, rgba(102, 0, 0, 0) 70%) 0 0;
   background-color: #300;
   background-size: 100px 100px; }
 
-/* line 130, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-.weave-background, section#calendar.container-fluid {
-  background: linear-gradient(135deg, #6bcfe0 22px, white 22px, white 24px, transparent 24px, transparent 67px, white 67px, white 69px, transparent 69px), linear-gradient(225deg, #6bcfe0 22px, white 22px, white 24px, transparent 24px, transparent 67px, white 67px, white 69px, transparent 69px) 0 64px;
-  background-color: #6bcfe0;
+/* line 124, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.wave-background, section#calendar.container-fluid {
+  background: linear-gradient(#FFFFFF 50%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #FFEB5B;
+  background-size: 110px 200px;
+  background-repeat: repeat-x; }
+
+/* line 129, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.weave-background {
+  background: linear-gradient(135deg, #ffeb5b 22px, white 22px, white 24px, transparent 24px, transparent 67px, white 67px, white 69px, transparent 69px), linear-gradient(225deg, #ffeb5b 22px, white 22px, white 24px, transparent 24px, transparent 67px, white 67px, white 69px, transparent 69px) 0 64px;
+  background-color: #ffeb5b;
   background-size: 64px 128px; }
 
 /* Common */
-/* line 137, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 136, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .btn-call-d {
   color: #f0f0f0;
-  background-color: #573A35;
-  border-color: #18100e; }
+  background-color: #355749;
+  border-color: #0e1814; }
   /* line 11, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
   .btn-call-d:focus, .btn-call-d.focus {
     color: #f0f0f0;
-    background-color: #372522;
+    background-color: #22372e;
     border-color: black; }
   /* line 17, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
   .btn-call-d:hover {
     color: #f0f0f0;
-    background-color: #372522;
+    background-color: #22372e;
     border-color: black; }
   /* line 22, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
   .btn-call-d:active, .btn-call-d.active,
   .open > .btn-call-d.dropdown-toggle {
     color: #f0f0f0;
-    background-color: #372522;
+    background-color: #22372e;
     border-color: black; }
     /* line 29, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
     .btn-call-d:active:hover, .btn-call-d:active:focus, .btn-call-d:active.focus, .btn-call-d.active:hover, .btn-call-d.active:focus, .btn-call-d.active.focus,
@@ -8471,7 +8478,7 @@ blockquote {
     .open > .btn-call-d.dropdown-toggle:focus,
     .open > .btn-call-d.dropdown-toggle.focus {
       color: #f0f0f0;
-      background-color: #211614;
+      background-color: #14211c;
       border-color: black; }
   /* line 37, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
   .btn-call-d:active, .btn-call-d.active,
@@ -8482,14 +8489,14 @@ blockquote {
   fieldset[disabled] .btn-call-d:hover,
   fieldset[disabled] .btn-call-d:focus,
   fieldset[disabled] .btn-call-d.focus {
-    background-color: #573A35;
-    border-color: #18100e; }
+    background-color: #355749;
+    border-color: #0e1814; }
   /* line 53, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
   .btn-call-d .badge {
-    color: #573A35;
+    color: #355749;
     background-color: #f0f0f0; }
 
-/* line 139, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 138, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .btn-gold, nav#main-navbar .btn-donate {
   color: #333333;
   background-color: #F3DD3E;
@@ -8545,14 +8552,12 @@ blockquote {
     color: #F3DD3E;
     background-color: #333333; }
 
-/* line 142, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 141, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 body {
-  font-family: "serenity","mr-eaves-modern","velino-poster",Georgia, "Times New Roman", Times, serif;
-  font-size: 16px;
   letter-spacing: .05em;
   position: relative; }
 
-/* line 148, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 145, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 nav#main-navbar {
   background-color: rgba(0, 0, 0, 0.7);
   border-color: transparent;
@@ -8563,19 +8568,19 @@ nav#main-navbar {
   height: 50px;
   width: 100%;
   z-index: 1000; }
-  /* line 156, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 153, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar .navbar-brand {
     width: 64px;
     padding: 8px 15px; }
-  /* line 159, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 156, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar .navbar-toggle:hover {
     background-color: #F3DD3E; }
-  /* line 161, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 158, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar .btn-donate {
     padding: 6px 12px;
     margin-top: 7px; }
 
-/* line 165, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 162, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 nav#main-navbar.affix {
   position: fixed;
   top: 0;
@@ -8589,15 +8594,15 @@ nav#main-navbar.affix {
   border-color: #284238; }
 
 @media (max-width: 767px) {
-  /* line 171, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 168, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar .btn-donate {
     padding: 15px;
     margin-top: 0; }
-  /* line 174, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 171, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .navbar-collapse {
     background-color: rgba(0, 0, 0, 0.7);
     border-color: transparent; }
-  /* line 177, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 174, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar.affix .navbar-collapse {
     -webkit-transition: background-color 0.5s ease-in-out;
     -o-transition: background-color 0.5s ease-in-out;
@@ -8608,15 +8613,15 @@ nav#main-navbar.affix {
     background-color: #355749;
     border-color: #284238; } }
 
-/* line 180, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 177, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .logo {
   height: 35px; }
 
-/* line 186, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 183, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 #title-carousel, #title-carousel .carousel-inner, #title-carousel .carousel-control {
   height: 100vh; }
 
-/* line 189, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 186, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .carousel-inner .item {
   background-position: center;
   background-attachment: fixed;
@@ -8624,21 +8629,21 @@ nav#main-navbar.affix {
   background-size: cover;
   height: 100vh; }
 
-/* line 199, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 196, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 header#page-header {
   position: absolute;
   height: 100vh;
   width: 100%;
   color: #F3DD3E;
   top: 0; }
-  /* line 205, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 202, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   header#page-header h1 {
     margin-bottom: .1em; }
-  /* line 207, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 204, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   header#page-header .h1 {
     font-size: 150%; }
 
-/* line 210, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 207, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 #page-header-row {
   background-color: rgba(0, 0, 0, 0.7);
   border-color: transparent;
@@ -8646,74 +8651,78 @@ header#page-header {
   width: 100%;
   bottom: 50px; }
 
-/* line 219, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 213, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section.container-fluid, article.container-fluid {
   padding: 50px 30px 0; }
 
-/* line 221, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 215, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article.container-fluid {
   padding-top: 100px; }
 
-/* line 223, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 217, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section.container-fluid:not(#community), article.container-fluid {
   padding-bottom: 100px; }
 
-/* line 228, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 222, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#intro + .row {
   margin-top: auto;
   margin-bottom: auto; }
 
-/* line 239, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 233, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article.community img {
   background: none;
   border-radius: 12px;
   margin-top: 20px;
   width: 640px; }
 
-/* line 249, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-section#community, article#learn {
-  background-color: #46808A;
-  color: #f0f0f0; }
-  /* line 252, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-  section#community h3 small, article#learn h3 small {
-    color: #e9cec9; }
+/* line 243, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+section#community, article#learn, article#perform {
+  background-color: #FFEB5B; }
+  /* line 245, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  section#community h3 small, article#learn h3 small, article#perform h3 small {
+    color: #355749; }
 
-/* line 256, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 249, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article#learn {
   padding-top: 0; }
-  /* line 258, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 251, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#learn img {
-    border-color: #e9cec9; }
+    border-color: #355749; }
 
-/* line 260, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 253, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article#grow {
-  background: #A35243;
+  background: #355749;
   color: #f0f0f0; }
-  /* line 263, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 256, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#grow .img-wrapper {
     overflow: hidden; }
-  /* line 266, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 259, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#grow img {
-    border-color: #6bcfe0; }
-  /* line 268, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    border-color: #fff7c1; }
+  /* line 261, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#grow h3 small {
-    color: #6bcfe0; }
-  /* line 270, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    color: #fff7c1; }
+  /* line 263, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#grow blockquote {
-    border-right-color: #6bcfe0; }
-    /* line 272, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    border-right-color: #fff7c1; }
+    /* line 265, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
     article#grow blockquote .fa, article#grow blockquote footer {
-      color: #6bcfe0; }
+      color: #fff7c1; }
 
-/* line 277, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 270, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article#perform img {
   border-color: #333333; }
 
-/* line 282, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 272, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+article#perform .well {
+  background-color: #f3dd3e;
+  border-color: #f1d71c; }
+
+/* line 278, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#leadership h2 {
   color: #f0f0f0; }
 
-/* line 285, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 281, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .leader-card-inner {
   background-color: #fff;
   border-radius: 10px;
@@ -8722,38 +8731,38 @@ section#leadership h2 {
   margin: 10px 15px;
   padding: 15px; }
 
-/* line 292, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 288, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .leader-headshot {
   -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2); }
 
-/* line 299, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 295, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#calendar.container-fluid {
   padding-top: 50px;
   padding-bottom: 50px; }
 
-/* line 304, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 300, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#contact.container-fluid {
   padding-top: 50px;
   padding-bottom: 50px; }
-  /* line 307, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 303, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid .radio {
     display: inline;
     margin-right: 2em; }
-  /* line 310, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 306, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid address {
     margin-bottom: .2em; }
-    /* line 319, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    /* line 315, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
     section#contact.container-fluid address strong + p {
       margin-left: 1.8em; }
-  /* line 321, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 317, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid #contact-success-message, section#contact.container-fluid #contact-warning-message, section#contact.container-fluid #contact-failure-message {
     display: none; }
-  /* line 323, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 319, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid .form-required, section#contact.container-fluid .form-error {
     color: #f00; }
 
-/* line 326, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 322, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .btn-youtube {
   background-color: #bb0000;
   color: #fff;
@@ -8799,23 +8808,48 @@ section#contact.container-fluid {
     color: #bb0000;
     background-color: #fff; }
 
-/* line 329, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 325, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 footer#page-footer {
   color: #f0f0f0; }
-  /* line 332, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 328, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer a {
     color: #eeeeee; }
-  /* line 334, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 330, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer .social-links {
     margin: 1em auto 2em; }
-  /* line 336, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 332, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer .btn-social-icon {
     margin: 4px 8px; }
-  /* line 342, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 338, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer #copyright {
     margin-top: 2em; }
-  /* line 344, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 340, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer #non-profit-statement {
     margin-top: 0; }
+
+@media print {
+  /* line 344, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  section.container-fluid, article.container-fluid {
+    padding: initial; }
+  /* line 346, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  article.container-fluid {
+    padding: initial; }
+  /* line 348, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  section.container-fluid:not(#community), article.container-fluid {
+    padding: initial; }
+  /* line 351, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  header#page-header {
+    position: initial;
+    height: initial;
+    top: initial; }
+  /* line 356, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  #page-header-row {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-color: transparent;
+    position: initial;
+    bottom: initial; }
+  /* line 361, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  .leader-card {
+    width: 33%; } }
 
 /*# sourceMappingURL=faasl.css.map */
