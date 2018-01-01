@@ -341,22 +341,40 @@ footer#page-footer
     margin-top: 0
 
 @media print
+  section#intro
+    p
+      width: 50%
   section.container-fluid, article.container-fluid
     padding: initial
   article.container-fluid
     padding: initial
   section.container-fluid:not(#community), article.container-fluid
     padding: initial
-  
   header#page-header
     position: initial
     height: initial
     top: initial
-
   #page-header-row
     @include image-overlay-bg
     position: initial
     bottom: initial
-    
+  section#community
+    h2
+      margin-bottom: .5em
+  article.community
+    img
+      display: none !important
+    p, ul, blockquote, dl
+      width: 48%
+    blockquote p, ul p
+      width: 100%
+    ul
+      width: 40%
   .leader-card
     width: 33%
+  section#contact.container-fluid
+    address
+      width: 50%
+  footer#page-footer
+    .social-links
+      display: none
