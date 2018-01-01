@@ -300,7 +300,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-uncss');
   
-  grunt.registerTask('beta', ['build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
+  grunt.registerTask('beta', ['beta-build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('beta-build', ['clean', 'img', 'fonts', 'css', 'js', 'beta-html', 'favicons']);
   grunt.registerTask('beta-html', ['processhtml:beta', 'newer:htmlmin']);
   grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:cssmin']);
@@ -310,7 +310,7 @@ module.exports = function(grunt) {
   grunt.registerTask('img', ['newer:imagemin:jpgs', 'copy:svg']);
   grunt.registerTask('js', ['newer:uglify']);
   grunt.registerTask('perf', ['connect:phantomas']);
-  grunt.registerTask('release', ['build', 'bump-only:minor', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
+  grunt.registerTask('release', ['release-build', 'bump-only:minor', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('release-build', ['clean', 'img', 'fonts', 'css', 'js', 'release-html', 'favicons']);
   grunt.registerTask('release-html', ['processhtml:release', 'newer:htmlmin']);
   grunt.registerTask('test', ['build', 'connect:dist']);
