@@ -105,23 +105,19 @@ $(document).ready(function() {
   });
   
   // SOURCE https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
-  var win = $(window);
   var allAnim = $(".animate");
-
-  win.scroll(function(event) {
-
+  $(window).scroll(function(event) {
     allAnim.each(function(i, el) {
       var el = $(el);
       var offset = el.offset().top;
       var bottom = window.scrollY + window.outerHeight;
       el.toggleClass('come-in', offset < bottom);
     });
-
   });
 
   $('.navbar-nav li a').click(function () {
-    window.innerWidth < 768 && $('.navbar-toggle').click()//.dropdown('toggle');
-  })
+    window.innerWidth < 768 && $('.navbar-toggle').click();
+  });
   
   $('form#contact-form').submit(function(ev){
     ev.preventDefault();
