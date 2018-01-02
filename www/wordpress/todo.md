@@ -32,4 +32,5 @@
 - [x] Google analytics
 - [x] Try gold complementary pallete
 - [x] Browser testing
+- [ ] Fix calendar.faasl.org
 

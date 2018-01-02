@@ -36,11 +36,8 @@ blockquote
   background-color: rgba(darken($brand-primary, 40%), .7)
   border-color: rgba(0, 0, 0, 0)
 
-@mixin fade-to-green
-  @include transition(background-color .5s ease-in-out)
-  @include transition(border-color .5s ease-in-out)
-  background-color: $navbar-default-bg
-  border-color: $navbar-default-border
+@mixin navbar-transition
+  @include transition(background-color .8s ease-out, border-color .8s ease-out)
 
 
 /* Animations */
@@ -145,6 +142,7 @@ body
   position: relative
 
 nav#main-navbar
+  @include navbar-transition
   @include image-overlay-bg
   @include box-shadow(4px 4px 10px 0px rgba(0,0,0,0.3))
   top: calc(100vh - 50px)
@@ -155,8 +153,8 @@ nav#main-navbar
   .navbar-brand
     width: 64px;
     padding: 8px $navbar-padding-horizontal
-  .navbar-toggle:hover
-    background-color: $gold
+  .navbar-toggle:hover, .navbar-toggle:focus
+    background-color: $navbar-default-link-active-bg
   .btn-donate
     @extend .btn-gold
     padding: 6px 12px
@@ -164,17 +162,20 @@ nav#main-navbar
 nav#main-navbar.affix
     position: fixed
     top: 0
-    @include fade-to-green
+    background-color: $navbar-default-bg
+    border-color: $navbar-default-border
 @media (max-width: 767px)
   nav#main-navbar
     .btn-donate
       padding: 15px
       margin-top: 0
   .navbar-collapse
+    @include navbar-transition
     @include image-overlay-bg
   nav#main-navbar.affix
     .navbar-collapse
-      @include fade-to-green
+      background-color: $navbar-default-bg
+      border-color: $navbar-default-border
 
 .logo
   height: 35px
@@ -185,12 +186,20 @@ nav#main-navbar.affix
 #title-carousel, #title-carousel .carousel-inner, #title-carousel .carousel-control
   height: 100vh
 
-.carousel-inner .item
-  background-position: center
-  background-attachment: fixed
-  background-repeat: no-repeat
-  background-size: cover
-  height: 100vh
+.carousel-inner
+  .item
+    background-position: center
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh
+    background-image: url(/img/slide_1@2x.jpg)
+    & + .item
+      background-image: url(/img/slide_2@2x.jpg)
+      & + .item
+        background-image: url(/img/slide_3@2x.jpg)
+        & + .item
+          background-image: url(/img/slide_4@2x.jpg)
   
 .carousel-caption, .carousel-indicators, .carousel-control
   @extend .sr-only
@@ -248,7 +257,7 @@ article.community
 section#community, article#learn
   background-color: $compound1
   h3 small
-    color: lighten($complement1, 0%)
+    color: darken($complement1, 0%)
   p
     @extend .indent
 article#learn
@@ -262,18 +271,24 @@ article#grow
     @extend .col-md-push-6
     overflow: hidden
   img
-    border-color: lighten($compound2, 20%)
+    border-color: lighten($compound2, 10%)
   h3 small
-    color: lighten($compound2, 20%)
+    color: lighten($compound2, 10%)
   blockquote
-    border-right-color: lighten($compound2, 20%)
+    border-right-color: lighten($compound2, 10%)
     .fa, footer
-      color: lighten($compound2, 20%)
+      color: lighten($compound2, 10%)
   p
     @extend .indent
 article#perform
   img
     border-color: $text-color
+
+// Must set calendar embed `bgcolor` to match this background
+section#calendar.container-fluid
+  @extend .wave-background
+  padding-top: $navbar-height
+  padding-bottom: $navbar-height
 
 section#leadership
   @extend .argyle-background
@@ -286,18 +301,11 @@ section#leadership
   @include box-shadow(4px 4px 10px 0px rgba(0,0,0,0.3))
   margin: 10px 15px
   padding: ($grid-gutter-width / 2)
-
-.leader-headshot
-  @extend .img-thumbnail
-  @include box-shadow(2px 2px 10px 0px rgba(0,0,0,0.2))
-  
-.leader-shor-desc
-  @extend .text-justify
-
-section#calendar.container-fluid
-  @extend .wave-background
-  padding-top: $navbar-height
-  padding-bottom: $navbar-height
+  .leader-headshot
+    @extend .img-thumbnail
+    @include box-shadow(2px 2px 10px 0px rgba(0,0,0,0.2))
+  .leader-shor-desc
+    @extend .text-justify
   
 section#contact.container-fluid
   padding-top: $navbar-height
