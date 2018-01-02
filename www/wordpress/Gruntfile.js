@@ -86,7 +86,7 @@ module.exports = function(grunt) {
         },
         src: 'dist/',
         dest: '/',
-        exclusions: ['./**/.DS_Store', './**/Thumbs.db', 'tmp/'],
+        exclusions: ['./**/.DS_Store', './**/Thumbs.db', 'tmp'],
 //        keep: ['/important/images/at/server/*.jpg'],
         simple: true,
         useList: true
