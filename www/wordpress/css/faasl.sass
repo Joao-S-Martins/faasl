@@ -214,6 +214,7 @@ header#page-header
 
 section.container-fluid, article.container-fluid
   padding: $navbar-height $grid-gutter-width 0
+  page-break-inside: avoid
 article.container-fluid
   padding-top: ($navbar-height + $navbar-height)
 section.container-fluid:not(#community), article.container-fluid
@@ -326,6 +327,7 @@ section#contact.container-fluid
 footer#page-footer
   @extend .carbon-background
   color: $white-text
+  page-break-inside: avoid
   a
     color: $gray-lighter
   .social-links
