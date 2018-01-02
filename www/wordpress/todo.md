@@ -20,7 +20,7 @@
 - [x] ScrollSpy Nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Navbar affix
 - [x] Slide effects
-- [ ] Test/hide animations in ie8 & 9
+- [x] Test/hide animations in ie8 & 9
 - [ ] Get Steve headshot{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] XS menu, onClick, hide drop-down
 - [x] Timer task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
@@ -31,5 +31,5 @@
 - [x] Optimize  typekit font usage
 - [x] Google analytics
 - [x] Try gold complementary pallete
-- [ ] Browser testing
+- [x] Browser testing
 
