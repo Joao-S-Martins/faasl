@@ -218,7 +218,9 @@ article.container-fluid
   padding-top: ($navbar-height + $navbar-height)
 section.container-fluid:not(#community), article.container-fluid
   padding-bottom: ($navbar-height + $navbar-height)
-
+@media (max-width: 767px)
+  article.container-fluid:not(#learn)
+    padding-top: $navbar-height
 
 section#intro
   & + .row
@@ -242,7 +244,7 @@ article.community
   p
     @extend .indent
 
-section#community, article#learn, article#perform
+section#community, article#learn
   background-color: $compound1
   h3 small
     color: lighten($complement1, 0%)
@@ -271,9 +273,6 @@ article#grow
 article#perform
   img
     border-color: $text-color
-  .well
-    background-color: darken($gold, 0%)
-    border-color: darken($gold, 7%)
 
 section#leadership
   @extend .argyle-background

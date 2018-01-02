@@ -26,6 +26,12 @@
   <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="/css/faasl.css" rel="stylesheet" type="text/css">
   <!-- /build -->
+  <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="ie9.css" />
+  <![endif]-->
+  <!--[if IE 9]>
+    <link rel="stylesheet" type="text/css" href="ie9.css" />
+  <![endif]-->
   <link rel="stylesheet" href="https://use.typekit.net/puk0cdd.css">
 </head>
 
@@ -47,8 +53,8 @@
             <li><a href="#community">Learn</a></li>
             <li><a href="#grow">Grow</a></li>
             <li><a href="#perform">Perform</a></li>
-            <li><a href="#leadership">Leadership</a></li>
             <li><a href="#calendar">Calendar</a></li>
+            <li><a href="#leadership">Leadership</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="nav navbar-nav navbar-right">
@@ -63,30 +69,10 @@
     <!--  START section#title-carousel  -->
     <section id="title-carousel" class="carousel-fluid slide" data-ride="carousel" data-interval="6000" data-pause="" data-keyboard="false">
       <div class="carousel-inner" role="listbox">
-        <div class="item active" style="background-image: url(/img/slide_1@2x.jpg)">
-          <div class="carousel-caption">
-            <h3>First slide Heading</h3>
-            <p>First slide Caption</p>
-          </div>
-        </div>
-        <div class="item" style="background-image: url(/img/slide_2@2x.jpg)">
-          <div class="carousel-caption">
-            <h3>Second slide Heading</h3>
-            <p>Second slide Caption</p>
-          </div>
-        </div>
-        <div class="item" style="background-image: url(img/slide_3@2x.jpg)">
-          <div class="carousel-caption">
-            <h3>Third slide Heading</h3>
-            <p>Third slide Caption</p>
-          </div>
-        </div>
-        <div class="item" style="background-image: url(/img/slide_4@2x.jpg)">
-          <div class="carousel-caption">
-            <h3>Fourth slide Heading</h3>
-            <p>Fourth slide Caption</p>
-          </div>
-        </div>
+        <div class="item active" style="background-image: url(/img/slide_1@2x.jpg)"></div>
+        <div class="item" style="background-image: url(/img/slide_2@2x.jpg)"></div>
+        <div class="item" style="background-image: url(img/slide_3@2x.jpg)"></div>
+        <div class="item" style="background-image: url(/img/slide_4@2x.jpg)"></div>
       </div>
     </section>
     <!--  END section#title-carousel  -->
@@ -160,6 +146,32 @@
       </div>
     </article>
     <!--  END section#community  -->
+    <!--  START section#calendar  -->
+    <section id="calendar" class="container-fluid">
+      <div class="row">
+        <h2 class="col-xs-12">Meet our community</h2>
+        <p class="col-xs-12 visible-print-inline">Visit http://calendar.faasl.org for our calendar of public events. Hope to see you soon!</p>
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1 animate slide-up hidden-print">
+          <!-- SOURCE https://codepen.io/profstein/pen/ozrbPJ -->
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles" style="border-width:0" class="embed-responsive-item" scrolling="no"></iframe>
+          </div>
+        </div>
+        <h3 class="col-xs-12 text-center hidden-print">Add our calendars to yours</h3>
+        <ul class="list-inline col-xs-12 text-center hidden-print">
+          <li>
+            <a href="https://calendar.google.com/calendar/embed?src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&ctz=America/Los_Angeles" class="btn btn-default" target="_blank"><i class="fa fa-calendar-plus-o"></i>&ensp;Lessons &amp; rehearsals</a>
+          </li>
+          <li>
+            <a href="https://calendar.google.com/calendar/embed?src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&ctz=America/Los_Angeles" class="btn btn-default" target="_blank"><i class="fa fa-calendar-plus-o"></i>&ensp;Performances</a>
+          </li>
+          <li>
+            <a href="https://calendar.google.com/calendar/embed?src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&ctz=America/Los_Angeles" class="btn btn-default" target="_blank"><i class="fa fa-calendar-plus-o"></i>&ensp;Social events</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!--  END section#calendar  -->
     <!--  START section#leadership  -->
     <section id="leadership" class="container-fluid">
       <div class="row">
@@ -194,32 +206,6 @@
       </div>
     </section>
     <!--  END section#leadership  -->
-    <!--  START section#calendar  -->
-    <section id="calendar" class="container-fluid">
-      <div class="row">
-        <h2 class="col-xs-12">Meet our community</h2>
-        <p class="col-xs-12 visible-print-inline">Visit http://calendar.faasl.org for our calendar of public events. Hope to see you soon!</p>
-        <div class="col-xs-12 col-lg-10 col-lg-offset-1 animate slide-up hidden-print">
-          <!-- SOURCE https://codepen.io/profstein/pen/ozrbPJ -->
-          <div class="embed-responsive embed-responsive-4by3">
-            <iframe src="https://calendar.google.com/calendar/embed?showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles" style="border-width:0" class="embed-responsive-item" scrolling="no"></iframe>
-          </div>
-        </div>
-        <h3 class="col-xs-12 text-center hidden-print">Add our calendars to yours</h3>
-        <ul class="list-inline col-xs-12 text-center hidden-print">
-          <li>
-            <a href="https://calendar.google.com/calendar/embed?src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&ctz=America/Los_Angeles" class="btn btn-default" target="_blank"><i class="fa fa-calendar-plus-o"></i>&ensp;Lessons &amp; rehearsals</a>
-          </li>
-          <li>
-            <a href="https://calendar.google.com/calendar/embed?src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&ctz=America/Los_Angeles" class="btn btn-default" target="_blank"><i class="fa fa-calendar-plus-o"></i>&ensp;Performances</a>
-          </li>
-          <li>
-            <a href="https://calendar.google.com/calendar/embed?src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&ctz=America/Los_Angeles" class="btn btn-default" target="_blank"><i class="fa fa-calendar-plus-o"></i>&ensp;Social events</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <!--  END section#calendar  -->
     <!--  START section#contact  -->
     <section id="contact" class="container-fluid">
       <div class="row">

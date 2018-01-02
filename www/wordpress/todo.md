@@ -31,4 +31,5 @@
 - [x] Optimize  typekit font usage
 - [x] Google analytics
 - [x] Try gold complementary pallete
+- [ ] Browser testing
 
