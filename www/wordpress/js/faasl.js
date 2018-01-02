@@ -111,7 +111,8 @@ $(document).ready(function() {
       var el = $(el);
       var offset = el.offset().top;
       var bottom = window.scrollY + window.outerHeight;
-      el.toggleClass('come-in', offset < bottom);
+//      el.toggleClass('come-in', offset < bottom); // Do it every scroll
+      offset < bottom && el.addClass('come-in'); // Do it once while scrolling
     });
   });
 
