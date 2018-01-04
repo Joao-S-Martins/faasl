@@ -33,4 +33,8 @@
 - [x] Try gold complementary pallete
 - [x] Browser testing
 - [ ] Fix calendar.faasl.org
+- [ ] CSS image embed
+- [ ] Musicians/volunteers resources page
+- [ ] students page
+- [ ] Google form to update contact info
 

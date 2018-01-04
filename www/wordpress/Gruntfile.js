@@ -73,8 +73,17 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/css/styles.min.css': 'dist/tmp/faasl.tidy.css'
+          'dist/css/styles.min.css': 'dist/tmp/faasl.tidy.embedded.css'
         }
+      }
+    },
+    cssUrlEmbed: {
+      dist: {
+        files: {
+          "dist/tmp/faasl.tidy.embedded.css": "dist/tmp/faasl.tidy.css"
+        },
+        failOnMissingUrl: false,
+        skipUrlsLargerThan: '300 KB'
       }
     },
     ftpush: {
@@ -125,6 +134,20 @@ module.exports = function(grunt) {
             extDot: 'first'
           },
         ],
+      }
+    },
+    imageEmbed: {
+      dist: {
+        src: [ "dist/tmp/faasl.tidy.css" ],
+        dest: "dist/tmp/faasl.tidy.embedded.css",
+        options: {
+//          baseDir: '..',
+          deleteAfterEncoding : false,
+          maxImageSize: 32768,
+          preEncodeCallback: function (filename) { return true; },
+          regexInclude: /\.(jpg|png|gif|jpeg)/gi,
+          regexExclude: /.(eot|woff|ttf|svg|typekit)/gi
+        }
       }
     },
     imagemin: {
@@ -293,8 +316,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-css-url-embed');
   grunt.loadNpmTasks('grunt-ftpush');
   grunt.loadNpmTasks('grunt-git');
+  grunt.loadNpmTasks("grunt-image-embed");
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-phantomas');
   grunt.loadNpmTasks('grunt-processhtml');
@@ -304,7 +329,7 @@ module.exports = function(grunt) {
   grunt.registerTask('beta', ['beta-build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('beta-build', ['clean', 'img', 'fonts', 'css', 'js', 'beta-html', 'favicons']);
   grunt.registerTask('beta-html', ['processhtml:beta', 'newer:htmlmin']);
-  grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:cssmin']);
+  grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:imageEmbed', 'newer:cssmin']);
   grunt.registerTask('favicons', ['copy:favicons']);
   grunt.registerTask('fonts', ['copy:fonts']);
   grunt.registerTask('html', ['newer:processhtml', 'newer:htmlmin']);
@@ -314,7 +339,7 @@ module.exports = function(grunt) {
   grunt.registerTask('release', ['release-build', 'bump-only:minor', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('release-build', ['clean', 'img', 'fonts', 'css', 'js', 'release-html', 'favicons']);
   grunt.registerTask('release-html', ['processhtml:release', 'newer:htmlmin']);
-  grunt.registerTask('test', ['build', 'connect:dist']);
+  grunt.registerTask('test', ['beta-build', 'connect:dist']);
 };
 
 // Useful things
