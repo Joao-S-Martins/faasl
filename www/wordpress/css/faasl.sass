@@ -13,12 +13,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
   letter-spacing: .05em
   margin-bottom: 1em
 h1 small, h2 small, h3 small, h4 small, h4.leader-title, h5 small, h6 small
+  color: #767676 // WCAG AAA  for large text against white background
   font-family: $fancy-sans-serif
   letter-spacing: -.01em // Connect the script lettering
   font-size: 100% // Override small behavior
 header#page-header h1
   font-family: $page-header-font
   small
+    color: $gold
     font-size: 65%
   small + small
     font-size: 150%
@@ -273,13 +275,13 @@ article#grow
     @extend .col-md-push-6
     overflow: hidden
   img
-    border-color: lighten($compound2, 10%)
+    border-color: lighten($compound2, 11%)
   h3 small
-    color: lighten($compound2, 10%)
+    color: lighten($compound2, 11%)
   blockquote
-    border-right-color: lighten($compound2, 10%)
+    border-right-color: lighten($compound2, 11%)
     .fa, footer
-      color: lighten($compound2, 10%)
+      color: lighten($compound2, 11%)
   p
     @extend .indent
 article#perform
