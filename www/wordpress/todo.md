@@ -33,8 +33,20 @@
 - [x] Try gold complementary pallete
 - [x] Browser testing
 - [ ] Fix calendar.faasl.org
-- [ ] CSS image embed
+- [x] CSS image embed
 - [ ] Musicians/volunteers resources page
 - [ ] students page
 - [ ] Google form to update contact info
-
+- [ ] Robots.txt
+- [ ] Humans.txt
+- [ ] Sitemap & submission
+- [ ] PageSpeed, Pingdom, and others
+- [ ] Error/maintenance page
+- [ ] Add HTML5 linting and validation
+- [ ] Add CSS3 linting and validation
+- [ ] Add JS linting
+- [ ] Remove Glyphicon font loading
+- [ ] Complete Open Graph
+- [ ] Complete Twitter Card
+- [ ] Complete schema.org
+- [ ] 
