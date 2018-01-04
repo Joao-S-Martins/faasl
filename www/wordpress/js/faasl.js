@@ -106,15 +106,17 @@ $(document).ready(function() {
   
   // SOURCE https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
   var allAnim = $(".animate");
-  $(window).scroll(function(event) {
+  function animateIn() {
+    var bottom = window.scrollY + window.outerHeight;
     allAnim.each(function(i, el) {
       var el = $(el);
       var offset = el.offset().top;
-      var bottom = window.scrollY + window.outerHeight;
-//      el.toggleClass('come-in', offset < bottom); // Do it every scroll
+  //      el.toggleClass('come-in', offset < bottom); // Do it every scroll
       offset < bottom && el.addClass('come-in'); // Do it once while scrolling
     });
-  });
+  }
+  animateIn();
+  $(window).scroll(animateIn);
 
   $('.navbar-nav li a').click(function () {
     window.innerWidth < 768 && $('.navbar-toggle').click();
