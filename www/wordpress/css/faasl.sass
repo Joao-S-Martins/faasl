@@ -19,11 +19,23 @@ h1 small, h2 small, h3 small, h4 small, h4.leader-title, h5 small, h6 small
   font-size: 100% // Override small behavior
 header#page-header h1
   font-family: $page-header-font
+  margin-bottom: .1em
+  overflow: hidden
+  .h1
+    font-size: 150%
   small
     color: $gold
     font-size: 65%
   small + small
     font-size: 150%
+@media (max-width: 500px)
+  header#page-header h1
+    .h1
+      font-size: 120%
+    small
+      font-size: 45%
+    small + small
+      font-size: 120%
 blockquote
   font-family: "caliban-std", $body-font
   font-size: 150%
@@ -210,10 +222,6 @@ header#page-header
   width: 100%
   color: $gold
   top: 0
-  h1
-    margin-bottom: .1em
-  .h1
-    font-size: 150%
 
 #page-header-row
   @include image-overlay-bg
