@@ -14,7 +14,8 @@
 - [x] Events/calendar{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Convert "Donate" link to buton & write the subdomain into htaccess{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Create "Hours volunteered YTD" widget
-- [ ] Create contact form PHP{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Create contact form PHP{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Text contact form on beta server
 - [x] Contact form validation{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Create FTP task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [x] ScrollSpy Nav{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
@@ -32,7 +33,7 @@
 - [x] Google analytics
 - [x] Try gold complementary pallete
 - [x] Browser testing
-- [ ] Fix calendar.faasl.org
+- [x] Fix events.faasl.org
 - [x] CSS image embed
 - [ ] Musicians/volunteers resources page
 - [ ] students page

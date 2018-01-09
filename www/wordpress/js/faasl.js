@@ -131,12 +131,19 @@ $(document).ready(function() {
       formInvalid();
       return false;
     }
-    formSuccess(); // DEBUG until  form handler is written
+//    formSuccess(); // DEBUG until  form handler is written
 //      $.post( 'some-url', $('form#myForm').serialize(), function(data) {
 //         ... do something with response from server
 //       },
 //       'json' // I expect a JSON response
 //    );
+    
+    // Submit the form using AJAX.
+    $.ajax({
+      type: 'POST',
+      url: $(form).attr('action'),
+      data: $('form#contact-form').serialize()
+    }).done(formSuccess).fail(formFailure);
   });
 });
 
