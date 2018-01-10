@@ -68,6 +68,13 @@ module.exports = function(grunt) {
           }
         ]
       },
+      meta: {
+        files: {
+          'dist/humants.txt': 'humans.txt',
+          'dist/robots.txt': 'robots.txt',
+          'dist/sitemap.xml': 'sitemap.xml'
+        }
+      },
       svg: {
         files: [
           {

@@ -38,16 +38,17 @@
 - [ ] Musicians/volunteers resources page
 - [ ] students page
 - [ ] Google form to update contact info
-- [ ] Robots.txt
-- [ ] Humans.txt
-- [ ] Sitemap & submission
+- [x] Robots.txt
+- [x] Humans.txt
+- [x] Sitemap
 - [ ] PageSpeed, Pingdom, and others
 - [ ] Error/maintenance page
 - [ ] Add HTML5 linting and validation
 - [ ] Add CSS3 linting and validation
 - [ ] Add JS linting
-- [ ] Remove Glyphicon font loading
+- [x] Remove Glyphicon font loading
 - [ ] Complete Open Graph
 - [ ] Complete Twitter Card
 - [ ] Complete schema.org
+- [ ] Submit sitemap to Google
 

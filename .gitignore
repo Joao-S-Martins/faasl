@@ -35,6 +35,6 @@ www/wordpress/wp-content/plugins/hello.php
 www/wordpress/.htaccess
 www/wordpress/license.txt
 www/wordpress/readme.html
-www/wordpress/sitemap.xml
+# www/wordpress/sitemap.xml
 www/wordpress/sitemap.xml.gz
 
