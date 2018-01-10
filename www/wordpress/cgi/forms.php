@@ -6,9 +6,9 @@
     $name = strip_tags(trim($_POST["full_name"]));
     $name = str_replace(array("\r","\n"),array(" "," "),$name);
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-    $phone = strip_tags(trim($_POST['phone']);
+    $phone = strip_tags(trim($_POST['phone']));
     $phone = str_replace(array("\r","\n"),array(" "," "),$phone);
-    $texting = strip_tags(trim($_POST['texting']);
+    $texting = strip_tags(trim($_POST['texting']));
     $texting = str_replace(array("\r","\n"),array(" "," "),$texting);
     $message = trim($_POST["message"]);
     $referer = $_SERVER['HTTP_REFERER'];
