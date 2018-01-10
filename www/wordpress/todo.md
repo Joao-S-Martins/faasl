@@ -22,7 +22,7 @@
 - [x] Navbar affix
 - [x] Slide effects
 - [x] Test/hide animations in ie8 & 9
-- [ ] Get Steve headshot{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Get Steve headshot{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] XS menu, onClick, hide drop-down
 - [x] Timer task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
 - [x] Bump task{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/Gruntfile.js"}}
