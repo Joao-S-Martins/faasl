@@ -51,4 +51,19 @@
 - [ ] Complete Twitter Card
 - [ ] Complete schema.org
 - [ ] Submit sitemap to Google
+- [ ] Spellcheck{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Implement Subscribe modal{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Find out how radio buttons rendered for Chrysantha{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [ ] Stories - Replace logo
+- [ ] Stories - Point logo to faasl.org
+- [x] More calls to action
+- [ ] Fix Email MX records
+- [ ] Stories - Adjust links at bottom
+- [ ] Create local Stories page
+- [ ] Stories - Uncapitalize "Lives" and align text with "community" message
+- [ ] Update social profile images
+- [ ] Double-check all social links
+- [x] Create social banners
+- [ ] Updated phone number to work as call link on mobile devices
+- [ ] Upload social profiles & banner images
 

@@ -281,8 +281,10 @@ th {
   .navbar {
     display: none; }
   /* line 77, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_print.scss */
-  .btn > .caret,
-  .dropup > .btn > .caret {
+  .btn > .caret, .call-to-action > .caret, section#calendar.container-fluid .btn-calendar > .caret,
+  .dropup > .btn > .caret,
+  .dropup > .call-to-action > .caret, section#calendar.container-fluid
+  .dropup > .btn-calendar > .caret {
     border-top-color: #000 !important; }
   /* line 81, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_print.scss */
   .label {
@@ -1834,7 +1836,11 @@ blockquote {
 
 /* line 274, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
 .blockquote-reverse,
-blockquote.pull-right {
+blockquote.pull-right,
+blockquote blockquote.btn,
+blockquote blockquote.call-to-action,
+blockquote section#calendar.container-fluid blockquote.btn-calendar,
+section#calendar.container-fluid blockquote blockquote.btn-calendar {
   padding-right: 15px;
   padding-left: 0;
   border-right: 5px solid #eeeeee;
@@ -1844,17 +1850,17 @@ blockquote.pull-right {
   .blockquote-reverse footer:before,
   .blockquote-reverse small:before,
   .blockquote-reverse .small:before,
-  blockquote.pull-right footer:before,
-  blockquote.pull-right small:before,
-  blockquote.pull-right .small:before {
+  blockquote.pull-right footer:before, blockquote blockquote.btn footer:before, blockquote blockquote.call-to-action footer:before, blockquote section#calendar.container-fluid blockquote.btn-calendar footer:before, section#calendar.container-fluid blockquote blockquote.btn-calendar footer:before,
+  blockquote.pull-right small:before, blockquote blockquote.btn small:before, blockquote blockquote.call-to-action small:before, blockquote section#calendar.container-fluid blockquote.btn-calendar small:before, section#calendar.container-fluid blockquote blockquote.btn-calendar small:before,
+  blockquote.pull-right .small:before, blockquote blockquote.btn .small:before, blockquote blockquote.call-to-action .small:before, blockquote section#calendar.container-fluid blockquote.btn-calendar .small:before, section#calendar.container-fluid blockquote blockquote.btn-calendar .small:before {
     content: ''; }
   /* line 287, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
   .blockquote-reverse footer:after,
   .blockquote-reverse small:after,
   .blockquote-reverse .small:after,
-  blockquote.pull-right footer:after,
-  blockquote.pull-right small:after,
-  blockquote.pull-right .small:after {
+  blockquote.pull-right footer:after, blockquote blockquote.btn footer:after, blockquote blockquote.call-to-action footer:after, blockquote section#calendar.container-fluid blockquote.btn-calendar footer:after, section#calendar.container-fluid blockquote blockquote.btn-calendar footer:after,
+  blockquote.pull-right small:after, blockquote blockquote.btn small:after, blockquote blockquote.call-to-action small:after, blockquote section#calendar.container-fluid blockquote.btn-calendar small:after, section#calendar.container-fluid blockquote blockquote.btn-calendar small:after,
+  blockquote.pull-right .small:after, blockquote blockquote.btn .small:after, blockquote blockquote.call-to-action .small:after, blockquote section#calendar.container-fluid blockquote.btn-calendar .small:after, section#calendar.container-fluid blockquote blockquote.btn-calendar .small:after {
     content: '\00A0 \2014'; }
 
 /* line 294, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_type.scss */
@@ -1973,14 +1979,14 @@ pre {
     clear: both; }
 
 /* line 11, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, footer#page-footer .subdomain, .col-xs-3, .col-sm-3, footer#page-footer .subdomain, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, footer#page-footer .subdomain, .col-sm-6, section#contact.container-fluid address, .col-md-6, article.community .img-wrapper, .col-lg-6, section#contact.container-fluid address, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, article.community .img-wrapper, section#contact.container-fluid address, .col-sm-12, .col-md-12, section#contact.container-fluid address, .col-lg-12 {
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, footer#page-footer .subdomain, .col-xs-3, .col-sm-3, footer#page-footer .subdomain, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .call-to-action, footer#page-footer .subdomain, .col-sm-6, section#contact.container-fluid address, .col-md-6, article.community .img-wrapper, .col-lg-6, section#contact.container-fluid address, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, article.community .img-wrapper, section#contact.container-fluid address, .col-sm-12, .col-md-12, section#contact.container-fluid address, .col-lg-12 {
   position: relative;
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px; }
 
 /* line 27, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, footer#page-footer .subdomain, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, article.community .img-wrapper, section#contact.container-fluid address {
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .call-to-action, footer#page-footer .subdomain, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, article.community .img-wrapper, section#contact.container-fluid address {
   float: left; }
 
 /* line 35, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
@@ -2004,7 +2010,7 @@ pre {
   width: 41.66667%; }
 
 /* line 35, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-6, footer#page-footer .subdomain {
+.col-xs-6, .call-to-action, footer#page-footer .subdomain {
   width: 50%; }
 
 /* line 35, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
@@ -2148,7 +2154,7 @@ pre {
   margin-left: 16.66667%; }
 
 /* line 60, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-.col-xs-offset-3 {
+.col-xs-offset-3, .call-to-action {
   margin-left: 25%; }
 
 /* line 60, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
@@ -3056,23 +3062,34 @@ input[type="search"] {
   input[type="date"].input-sm, .input-group-sm > input[type="date"].form-control,
   .input-group-sm > input[type="date"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="date"].btn,
+  .input-group-sm > .input-group-btn > input[type="date"].call-to-action, section#calendar.container-fluid
+  .input-group-sm > .input-group-btn > input[type="date"].btn-calendar,
   .input-group-sm input[type="date"],
   input[type="time"].input-sm,
   .input-group-sm > input[type="time"].form-control,
   .input-group-sm > input[type="time"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="time"].btn,
+  .input-group-sm > .input-group-btn > input[type="time"].call-to-action,
+  section#calendar.container-fluid
+  .input-group-sm > .input-group-btn > input[type="time"].btn-calendar,
   .input-group-sm
   input[type="time"],
   input[type="datetime-local"].input-sm,
   .input-group-sm > input[type="datetime-local"].form-control,
   .input-group-sm > input[type="datetime-local"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="datetime-local"].btn,
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].call-to-action,
+  section#calendar.container-fluid
+  .input-group-sm > .input-group-btn > input[type="datetime-local"].btn-calendar,
   .input-group-sm
   input[type="datetime-local"],
   input[type="month"].input-sm,
   .input-group-sm > input[type="month"].form-control,
   .input-group-sm > input[type="month"].input-group-addon,
   .input-group-sm > .input-group-btn > input[type="month"].btn,
+  .input-group-sm > .input-group-btn > input[type="month"].call-to-action,
+  section#calendar.container-fluid
+  .input-group-sm > .input-group-btn > input[type="month"].btn-calendar,
   .input-group-sm
   input[type="month"] {
     line-height: 33px; }
@@ -3080,23 +3097,34 @@ input[type="search"] {
   input[type="date"].input-lg, .input-group-lg > input[type="date"].form-control,
   .input-group-lg > input[type="date"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="date"].btn,
+  .input-group-lg > .input-group-btn > input[type="date"].call-to-action, section#calendar.container-fluid
+  .input-group-lg > .input-group-btn > input[type="date"].btn-calendar,
   .input-group-lg input[type="date"],
   input[type="time"].input-lg,
   .input-group-lg > input[type="time"].form-control,
   .input-group-lg > input[type="time"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="time"].btn,
+  .input-group-lg > .input-group-btn > input[type="time"].call-to-action,
+  section#calendar.container-fluid
+  .input-group-lg > .input-group-btn > input[type="time"].btn-calendar,
   .input-group-lg
   input[type="time"],
   input[type="datetime-local"].input-lg,
   .input-group-lg > input[type="datetime-local"].form-control,
   .input-group-lg > input[type="datetime-local"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="datetime-local"].btn,
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].call-to-action,
+  section#calendar.container-fluid
+  .input-group-lg > .input-group-btn > input[type="datetime-local"].btn-calendar,
   .input-group-lg
   input[type="datetime-local"],
   input[type="month"].input-lg,
   .input-group-lg > input[type="month"].form-control,
   .input-group-lg > input[type="month"].input-group-addon,
   .input-group-lg > .input-group-btn > input[type="month"].btn,
+  .input-group-lg > .input-group-btn > input[type="month"].call-to-action,
+  section#calendar.container-fluid
+  .input-group-lg > .input-group-btn > input[type="month"].btn-calendar,
   .input-group-lg
   input[type="month"] {
     line-height: 49px; } }
@@ -3186,16 +3214,22 @@ fieldset[disabled]
   /* line 315, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
   .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control,
   .input-group-lg > .form-control-static.input-group-addon,
-  .input-group-lg > .input-group-btn > .form-control-static.btn, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
+  .input-group-lg > .input-group-btn > .form-control-static.btn,
+  .input-group-lg > .input-group-btn > .form-control-static.call-to-action, section#calendar.container-fluid
+  .input-group-lg > .input-group-btn > .form-control-static.btn-calendar, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control,
   .input-group-sm > .form-control-static.input-group-addon,
-  .input-group-sm > .input-group-btn > .form-control-static.btn {
+  .input-group-sm > .input-group-btn > .form-control-static.btn,
+  .input-group-sm > .input-group-btn > .form-control-static.call-to-action, section#calendar.container-fluid
+  .input-group-sm > .input-group-btn > .form-control-static.btn-calendar {
     padding-left: 0;
     padding-right: 0; }
 
 /* line 71, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
 .input-sm, .input-group-sm > .form-control,
 .input-group-sm > .input-group-addon,
-.input-group-sm > .input-group-btn > .btn {
+.input-group-sm > .input-group-btn > .btn,
+.input-group-sm > .input-group-btn > .call-to-action, section#calendar.container-fluid
+.input-group-sm > .input-group-btn > .btn-calendar {
   height: 33px;
   padding: 5px 10px;
   font-size: 14px;
@@ -3205,7 +3239,9 @@ fieldset[disabled]
 /* line 79, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
 select.input-sm, .input-group-sm > select.form-control,
 .input-group-sm > select.input-group-addon,
-.input-group-sm > .input-group-btn > select.btn {
+.input-group-sm > .input-group-btn > select.btn,
+.input-group-sm > .input-group-btn > select.call-to-action, section#calendar.container-fluid
+.input-group-sm > .input-group-btn > select.btn-calendar {
   height: 33px;
   line-height: 33px; }
 
@@ -3213,10 +3249,15 @@ select.input-sm, .input-group-sm > select.form-control,
 textarea.input-sm, .input-group-sm > textarea.form-control,
 .input-group-sm > textarea.input-group-addon,
 .input-group-sm > .input-group-btn > textarea.btn,
+.input-group-sm > .input-group-btn > textarea.call-to-action, section#calendar.container-fluid
+.input-group-sm > .input-group-btn > textarea.btn-calendar,
 select[multiple].input-sm,
 .input-group-sm > select[multiple].form-control,
 .input-group-sm > select[multiple].input-group-addon,
-.input-group-sm > .input-group-btn > select[multiple].btn {
+.input-group-sm > .input-group-btn > select[multiple].btn,
+.input-group-sm > .input-group-btn > select[multiple].call-to-action,
+section#calendar.container-fluid
+.input-group-sm > .input-group-btn > select[multiple].btn-calendar {
   height: auto; }
 
 /* line 333, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -3248,7 +3289,9 @@ select[multiple].input-sm,
 /* line 71, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
 .input-lg, .input-group-lg > .form-control,
 .input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn {
+.input-group-lg > .input-group-btn > .btn,
+.input-group-lg > .input-group-btn > .call-to-action, section#calendar.container-fluid
+.input-group-lg > .input-group-btn > .btn-calendar {
   height: 49px;
   padding: 10px 16px;
   font-size: 20px;
@@ -3258,7 +3301,9 @@ select[multiple].input-sm,
 /* line 79, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_forms.scss */
 select.input-lg, .input-group-lg > select.form-control,
 .input-group-lg > select.input-group-addon,
-.input-group-lg > .input-group-btn > select.btn {
+.input-group-lg > .input-group-btn > select.btn,
+.input-group-lg > .input-group-btn > select.call-to-action, section#calendar.container-fluid
+.input-group-lg > .input-group-btn > select.btn-calendar {
   height: 49px;
   line-height: 49px; }
 
@@ -3266,10 +3311,15 @@ select.input-lg, .input-group-lg > select.form-control,
 textarea.input-lg, .input-group-lg > textarea.form-control,
 .input-group-lg > textarea.input-group-addon,
 .input-group-lg > .input-group-btn > textarea.btn,
+.input-group-lg > .input-group-btn > textarea.call-to-action, section#calendar.container-fluid
+.input-group-lg > .input-group-btn > textarea.btn-calendar,
 select[multiple].input-lg,
 .input-group-lg > select[multiple].form-control,
 .input-group-lg > select[multiple].input-group-addon,
-.input-group-lg > .input-group-btn > select[multiple].btn {
+.input-group-lg > .input-group-btn > select[multiple].btn,
+.input-group-lg > .input-group-btn > select[multiple].call-to-action,
+section#calendar.container-fluid
+.input-group-lg > .input-group-btn > select[multiple].btn-calendar {
   height: auto; }
 
 /* line 359, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_forms.scss */
@@ -3322,6 +3372,8 @@ select[multiple].input-lg,
 .input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback,
 .input-group-lg > .input-group-addon + .form-control-feedback,
 .input-group-lg > .input-group-btn > .btn + .form-control-feedback,
+.input-group-lg > .input-group-btn > .call-to-action + .form-control-feedback, section#calendar.container-fluid
+.input-group-lg > .input-group-btn > .btn-calendar + .form-control-feedback,
 .input-group-lg + .form-control-feedback,
 .form-group-lg .form-control + .form-control-feedback {
   width: 49px;
@@ -3332,6 +3384,8 @@ select[multiple].input-lg,
 .input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback,
 .input-group-sm > .input-group-addon + .form-control-feedback,
 .input-group-sm > .input-group-btn > .btn + .form-control-feedback,
+.input-group-sm > .input-group-btn > .call-to-action + .form-control-feedback, section#calendar.container-fluid
+.input-group-sm > .input-group-btn > .btn-calendar + .form-control-feedback,
 .input-group-sm + .form-control-feedback,
 .form-group-sm .form-control + .form-control-feedback {
   width: 33px;
@@ -3555,7 +3609,7 @@ select[multiple].input-lg,
     font-size: 14px; } }
 
 /* line 9, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn {
+.btn, .call-to-action, section#calendar.container-fluid .btn-calendar {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -3575,22 +3629,25 @@ select[multiple].input-lg,
   -ms-user-select: none;
   user-select: none; }
   /* line 26, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-  .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+  .btn:focus, .call-to-action:focus, section#calendar.container-fluid .btn-calendar:focus, .btn.focus, .focus.call-to-action, section#calendar.container-fluid .focus.btn-calendar, .btn:active:focus, .call-to-action:active:focus, section#calendar.container-fluid .btn-calendar:active:focus, .btn:active.focus, .call-to-action:active.focus, section#calendar.container-fluid .btn-calendar:active.focus, .btn.active:focus, .active.call-to-action:focus, section#calendar.container-fluid .active.btn-calendar:focus, .btn.active.focus, .active.focus.call-to-action, section#calendar.container-fluid .active.focus.btn-calendar {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px; }
   /* line 32, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-  .btn:hover, .btn:focus, .btn.focus {
+  .btn:hover, .call-to-action:hover, section#calendar.container-fluid .btn-calendar:hover, .btn:focus, .call-to-action:focus, section#calendar.container-fluid .btn-calendar:focus, .btn.focus, .focus.call-to-action, section#calendar.container-fluid .focus.btn-calendar {
     color: #333;
     text-decoration: none; }
   /* line 39, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-  .btn:active, .btn.active {
+  .btn:active, .call-to-action:active, section#calendar.container-fluid .btn-calendar:active, .btn.active, .active.call-to-action, section#calendar.container-fluid .active.btn-calendar {
     outline: 0;
     background-image: none;
     -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
     box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125); }
   /* line 46, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-  .btn.disabled, .btn[disabled],
-  fieldset[disabled] .btn {
+  .btn.disabled, .disabled.call-to-action, section#calendar.container-fluid .disabled.btn-calendar, .btn[disabled], [disabled].call-to-action, section#calendar.container-fluid [disabled].btn-calendar,
+  fieldset[disabled] .btn,
+  fieldset[disabled] .call-to-action,
+  fieldset[disabled] section#calendar.container-fluid .btn-calendar, section#calendar.container-fluid
+  fieldset[disabled] .btn-calendar {
     cursor: not-allowed;
     opacity: 0.65;
     filter: alpha(opacity=65);
@@ -3598,8 +3655,11 @@ select[multiple].input-lg,
     box-shadow: none; }
 
 /* line 58, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-a.btn.disabled,
-fieldset[disabled] a.btn {
+a.btn.disabled, a.disabled.call-to-action, section#calendar.container-fluid a.disabled.btn-calendar,
+fieldset[disabled] a.btn,
+fieldset[disabled] a.call-to-action,
+fieldset[disabled] section#calendar.container-fluid a.btn-calendar, section#calendar.container-fluid
+fieldset[disabled] a.btn-calendar {
   pointer-events: none; }
 
 /* line 68, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
@@ -3899,21 +3959,21 @@ fieldset[disabled] a.btn {
     text-decoration: none; }
 
 /* line 135, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-lg, .btn-group-lg > .btn {
+.btn-lg, .btn-group-lg > .btn, .btn-group-lg > .call-to-action, section#calendar.container-fluid .btn-group-lg > .btn-calendar {
   padding: 10px 16px;
   font-size: 20px;
   line-height: 1.33333;
   border-radius: 6px; }
 
 /* line 139, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-sm, .btn-group-sm > .btn {
+.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .call-to-action, section#calendar.container-fluid .btn-group-sm > .btn-calendar {
   padding: 5px 10px;
   font-size: 14px;
   line-height: 1.5;
   border-radius: 3px; }
 
 /* line 143, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-xs, .btn-group-xs > .btn {
+.btn-xs, .btn-group-xs > .btn, .btn-group-xs > .call-to-action, section#calendar.container-fluid .btn-group-xs > .btn-calendar {
   padding: 1px 5px;
   font-size: 14px;
   line-height: 1.5;
@@ -4014,7 +4074,7 @@ tbody.collapse.in {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box; }
   /* line 54, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
-  .dropdown-menu.pull-right {
+  .dropdown-menu.pull-right, blockquote .dropdown-menu.btn, blockquote .dropdown-menu.call-to-action, blockquote section#calendar.container-fluid .dropdown-menu.btn-calendar, section#calendar.container-fluid blockquote .dropdown-menu.btn-calendar {
     right: 0;
     left: auto; }
   /* line 60, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
@@ -4095,7 +4155,7 @@ tbody.collapse.in {
   z-index: 990; }
 
 /* line 173, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
-.pull-right > .dropdown-menu {
+.pull-right > .dropdown-menu, blockquote .btn > .dropdown-menu, blockquote .call-to-action > .dropdown-menu, blockquote section#calendar.container-fluid .btn-calendar > .dropdown-menu, section#calendar.container-fluid blockquote .btn-calendar > .dropdown-menu {
   right: 0;
   left: auto; }
 
@@ -4131,22 +4191,38 @@ tbody.collapse.in {
   display: inline-block;
   vertical-align: middle; }
   /* line 11, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-  .btn-group > .btn,
-  .btn-group-vertical > .btn {
+  .btn-group > .btn, .btn-group > .call-to-action, section#calendar.container-fluid .btn-group > .btn-calendar,
+  .btn-group-vertical > .btn,
+  .btn-group-vertical > .call-to-action, section#calendar.container-fluid
+  .btn-group-vertical > .btn-calendar {
     position: relative;
     float: left; }
     /* line 15, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-    .btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
+    .btn-group > .btn:hover, .btn-group > .call-to-action:hover, section#calendar.container-fluid .btn-group > .btn-calendar:hover, .btn-group > .btn:focus, .btn-group > .call-to-action:focus, section#calendar.container-fluid .btn-group > .btn-calendar:focus, .btn-group > .btn:active, .btn-group > .call-to-action:active, section#calendar.container-fluid .btn-group > .btn-calendar:active, .btn-group > .btn.active, .btn-group > .active.call-to-action, section#calendar.container-fluid .btn-group > .active.btn-calendar,
     .btn-group-vertical > .btn:hover,
+    .btn-group-vertical > .call-to-action:hover, section#calendar.container-fluid
+    .btn-group-vertical > .btn-calendar:hover,
     .btn-group-vertical > .btn:focus,
+    .btn-group-vertical > .call-to-action:focus, section#calendar.container-fluid
+    .btn-group-vertical > .btn-calendar:focus,
     .btn-group-vertical > .btn:active,
-    .btn-group-vertical > .btn.active {
+    .btn-group-vertical > .call-to-action:active, section#calendar.container-fluid
+    .btn-group-vertical > .btn-calendar:active,
+    .btn-group-vertical > .btn.active,
+    .btn-group-vertical > .active.call-to-action, section#calendar.container-fluid
+    .btn-group-vertical > .active.btn-calendar {
       z-index: 2; }
 
 /* line 26, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group .btn + .btn,
+.btn-group .btn + .btn, .btn-group .call-to-action + .btn, .btn-group section#calendar.container-fluid .btn-calendar + .btn, section#calendar.container-fluid .btn-group .btn-calendar + .btn, .btn-group .btn + .call-to-action, .btn-group .call-to-action + .call-to-action, .btn-group section#calendar.container-fluid .btn-calendar + .call-to-action, section#calendar.container-fluid .btn-group .btn-calendar + .call-to-action, .btn-group section#calendar.container-fluid .btn + .btn-calendar, section#calendar.container-fluid .btn-group .btn + .btn-calendar, .btn-group section#calendar.container-fluid .call-to-action + .btn-calendar, section#calendar.container-fluid .btn-group .call-to-action + .btn-calendar, .btn-group section#calendar.container-fluid .btn-calendar + .btn-calendar, section#calendar.container-fluid .btn-group .btn-calendar + .btn-calendar,
 .btn-group .btn + .btn-group,
+.btn-group .call-to-action + .btn-group,
+.btn-group section#calendar.container-fluid .btn-calendar + .btn-group, section#calendar.container-fluid
+.btn-group .btn-calendar + .btn-group,
 .btn-group .btn-group + .btn,
+.btn-group .btn-group + .call-to-action,
+.btn-group section#calendar.container-fluid .btn-group + .btn-calendar, section#calendar.container-fluid
+.btn-group .btn-group + .btn-calendar,
 .btn-group .btn-group + .btn-group {
   margin-left: -1px; }
 
@@ -4161,30 +4237,30 @@ tbody.collapse.in {
   .btn-toolbar:after {
     clear: both; }
   /* line 39, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-  .btn-toolbar .btn,
+  .btn-toolbar .btn, .btn-toolbar .call-to-action, .btn-toolbar section#calendar.container-fluid .btn-calendar, section#calendar.container-fluid .btn-toolbar .btn-calendar,
   .btn-toolbar .btn-group,
   .btn-toolbar .input-group {
     float: left; }
   /* line 44, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-  .btn-toolbar > .btn,
+  .btn-toolbar > .btn, .btn-toolbar > .call-to-action, section#calendar.container-fluid .btn-toolbar > .btn-calendar,
   .btn-toolbar > .btn-group,
   .btn-toolbar > .input-group {
     margin-left: 5px; }
 
 /* line 51, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+.btn-group > .btn:not(:first-child):not(:last-child):not(.dropdown-toggle), .btn-group > .call-to-action:not(:first-child):not(:last-child):not(.dropdown-toggle), section#calendar.container-fluid .btn-group > .btn-calendar:not(:first-child):not(:last-child):not(.dropdown-toggle) {
   border-radius: 0; }
 
 /* line 56, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:first-child {
+.btn-group > .btn:first-child, .btn-group > .call-to-action:first-child, section#calendar.container-fluid .btn-group > .btn-calendar:first-child {
   margin-left: 0; }
   /* line 58, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle), .btn-group > .call-to-action:first-child:not(:last-child):not(.dropdown-toggle), section#calendar.container-fluid .btn-group > .btn-calendar:first-child:not(:last-child):not(.dropdown-toggle) {
     border-bottom-right-radius: 0;
     border-top-right-radius: 0; }
 
 /* line 63, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn:last-child:not(:first-child),
+.btn-group > .btn:last-child:not(:first-child), .btn-group > .call-to-action:last-child:not(:first-child), section#calendar.container-fluid .btn-group > .btn-calendar:last-child:not(:first-child),
 .btn-group > .dropdown-toggle:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
@@ -4194,17 +4270,17 @@ tbody.collapse.in {
   float: left; }
 
 /* line 72, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group > .btn-group:not(:first-child):not(:last-child) > .call-to-action, section#calendar.container-fluid .btn-group > .btn-group:not(:first-child):not(:last-child) > .btn-calendar {
   border-radius: 0; }
 
 /* line 76, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group > .btn-group:first-child:not(:last-child) > .call-to-action:last-child, section#calendar.container-fluid .btn-group > .btn-group:first-child:not(:last-child) > .btn-calendar:last-child,
 .btn-group > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
 /* line 81, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group > .btn-group:last-child:not(:first-child) > .call-to-action:first-child, section#calendar.container-fluid .btn-group > .btn-group:last-child:not(:first-child) > .btn-calendar:first-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -4214,12 +4290,12 @@ tbody.collapse.in {
   outline: 0; }
 
 /* line 105, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn + .dropdown-toggle, .btn-group > .call-to-action + .dropdown-toggle, section#calendar.container-fluid .btn-group > .btn-calendar + .dropdown-toggle {
   padding-left: 8px;
   padding-right: 8px; }
 
 /* line 109, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle, .btn-group-lg.btn-group > .btn + .dropdown-toggle, .btn-group-lg.btn-group > .call-to-action + .dropdown-toggle, section#calendar.container-fluid .btn-group-lg.btn-group > .btn-calendar + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px; }
 
@@ -4233,22 +4309,24 @@ tbody.collapse.in {
     box-shadow: none; }
 
 /* line 127, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn .caret {
+.btn .caret, .call-to-action .caret, section#calendar.container-fluid .btn-calendar .caret {
   margin-left: 0; }
 
 /* line 131, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-lg .caret, .btn-group-lg > .btn .caret {
+.btn-lg .caret, .btn-group-lg > .btn .caret, .btn-group-lg > .call-to-action .caret, section#calendar.container-fluid .btn-group-lg > .btn-calendar .caret {
   border-width: 5px 5px 0;
   border-bottom-width: 0; }
 
 /* line 136, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret {
+.dropup .btn-lg .caret, .dropup .btn-group-lg > .btn .caret, .dropup .btn-group-lg > .call-to-action .caret, .dropup section#calendar.container-fluid .btn-group-lg > .btn-calendar .caret, section#calendar.container-fluid .dropup .btn-group-lg > .btn-calendar .caret {
   border-width: 0 5px 5px; }
 
 /* line 145, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn,
+.btn-group-vertical > .btn, .btn-group-vertical > .call-to-action, section#calendar.container-fluid .btn-group-vertical > .btn-calendar,
 .btn-group-vertical > .btn-group,
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn,
+.btn-group-vertical > .btn-group > .call-to-action, section#calendar.container-fluid
+.btn-group-vertical > .btn-group > .btn-calendar {
   display: block;
   float: none;
   width: 100%;
@@ -4264,47 +4342,51 @@ tbody.collapse.in {
   clear: both; }
 
 /* line 157, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group > .btn {
+.btn-group-vertical > .btn-group > .btn, .btn-group-vertical > .btn-group > .call-to-action, section#calendar.container-fluid .btn-group-vertical > .btn-group > .btn-calendar {
   float: none; }
 
 /* line 162, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn + .btn,
+.btn-group-vertical > .btn + .btn, .btn-group-vertical > .call-to-action + .btn, section#calendar.container-fluid .btn-group-vertical > .btn-calendar + .btn, .btn-group-vertical > .btn + .call-to-action, .btn-group-vertical > .call-to-action + .call-to-action, section#calendar.container-fluid .btn-group-vertical > .btn-calendar + .call-to-action, section#calendar.container-fluid .btn-group-vertical > .btn + .btn-calendar, section#calendar.container-fluid .btn-group-vertical > .call-to-action + .btn-calendar, section#calendar.container-fluid .btn-group-vertical > .btn-calendar + .btn-calendar,
 .btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > .call-to-action + .btn-group, section#calendar.container-fluid
+.btn-group-vertical > .btn-calendar + .btn-group,
 .btn-group-vertical > .btn-group + .btn,
+.btn-group-vertical > .btn-group + .call-to-action, section#calendar.container-fluid
+.btn-group-vertical > .btn-group + .btn-calendar,
 .btn-group-vertical > .btn-group + .btn-group {
   margin-top: -1px;
   margin-left: 0; }
 
 /* line 172, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:not(:first-child):not(:last-child) {
+.btn-group-vertical > .btn:not(:first-child):not(:last-child), .btn-group-vertical > .call-to-action:not(:first-child):not(:last-child), section#calendar.container-fluid .btn-group-vertical > .btn-calendar:not(:first-child):not(:last-child) {
   border-radius: 0; }
 
 /* line 175, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:first-child:not(:last-child) {
+.btn-group-vertical > .btn:first-child:not(:last-child), .btn-group-vertical > .call-to-action:first-child:not(:last-child), section#calendar.container-fluid .btn-group-vertical > .btn-calendar:first-child:not(:last-child) {
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 /* line 179, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn:last-child:not(:first-child) {
+.btn-group-vertical > .btn:last-child:not(:first-child), .btn-group-vertical > .call-to-action:last-child:not(:first-child), section#calendar.container-fluid .btn-group-vertical > .btn-calendar:last-child:not(:first-child) {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px; }
 
 /* line 184, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
+.btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn, .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .call-to-action, section#calendar.container-fluid .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn-calendar {
   border-radius: 0; }
 
 /* line 188, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child,
+.btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn:last-child, .btn-group-vertical > .btn-group:first-child:not(:last-child) > .call-to-action:last-child, section#calendar.container-fluid .btn-group-vertical > .btn-group:first-child:not(:last-child) > .btn-calendar:last-child,
 .btn-group-vertical > .btn-group:first-child:not(:last-child) > .dropdown-toggle {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
 /* line 193, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child {
+.btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn:first-child, .btn-group-vertical > .btn-group:last-child:not(:first-child) > .call-to-action:first-child, section#calendar.container-fluid .btn-group-vertical > .btn-group:last-child:not(:first-child) > .btn-calendar:first-child {
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
 
@@ -4315,23 +4397,29 @@ tbody.collapse.in {
   table-layout: fixed;
   border-collapse: separate; }
   /* line 206, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-  .btn-group-justified > .btn,
+  .btn-group-justified > .btn, .btn-group-justified > .call-to-action, section#calendar.container-fluid .btn-group-justified > .btn-calendar,
   .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
     width: 1%; }
   /* line 212, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-  .btn-group-justified > .btn-group .btn {
+  .btn-group-justified > .btn-group .btn, .btn-group-justified > .btn-group .call-to-action, .btn-group-justified > .btn-group section#calendar.container-fluid .btn-calendar, section#calendar.container-fluid .btn-group-justified > .btn-group .btn-calendar {
     width: 100%; }
   /* line 216, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
   .btn-group-justified > .btn-group .dropdown-menu {
     left: auto; }
 
 /* line 237, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_button-groups.scss */
-[data-toggle="buttons"] > .btn input[type="radio"],
+[data-toggle="buttons"] > .btn input[type="radio"], [data-toggle="buttons"] > .call-to-action input[type="radio"], section#calendar.container-fluid [data-toggle="buttons"] > .btn-calendar input[type="radio"],
 [data-toggle="buttons"] > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .call-to-action input[type="checkbox"], section#calendar.container-fluid
+[data-toggle="buttons"] > .btn-calendar input[type="checkbox"],
 [data-toggle="buttons"] > .btn-group > .btn input[type="radio"],
-[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"] {
+[data-toggle="buttons"] > .btn-group > .call-to-action input[type="radio"], section#calendar.container-fluid
+[data-toggle="buttons"] > .btn-group > .btn-calendar input[type="radio"],
+[data-toggle="buttons"] > .btn-group > .btn input[type="checkbox"],
+[data-toggle="buttons"] > .btn-group > .call-to-action input[type="checkbox"], section#calendar.container-fluid
+[data-toggle="buttons"] > .btn-group > .btn-calendar input[type="checkbox"] {
   position: absolute;
   clip: rect(0, 0, 0, 0);
   pointer-events: none; }
@@ -4389,14 +4477,18 @@ tbody.collapse.in {
   /* line 89, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
   .input-group-addon.input-sm,
   .input-group-sm > .input-group-addon,
-  .input-group-sm > .input-group-btn > .input-group-addon.btn {
+  .input-group-sm > .input-group-btn > .input-group-addon.btn,
+  .input-group-sm > .input-group-btn > .input-group-addon.call-to-action, section#calendar.container-fluid
+  .input-group-sm > .input-group-btn > .input-group-addon.btn-calendar {
     padding: 5px 10px;
     font-size: 14px;
     border-radius: 3px; }
   /* line 94, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
-  .input-group-lg > .input-group-btn > .input-group-addon.btn {
+  .input-group-lg > .input-group-btn > .input-group-addon.btn,
+  .input-group-lg > .input-group-btn > .input-group-addon.call-to-action, section#calendar.container-fluid
+  .input-group-lg > .input-group-btn > .input-group-addon.btn-calendar {
     padding: 10px 16px;
     font-size: 20px;
     border-radius: 6px; }
@@ -4409,10 +4501,18 @@ tbody.collapse.in {
 .input-group .form-control:first-child,
 .input-group-addon:first-child,
 .input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .call-to-action, section#calendar.container-fluid
+.input-group-btn:first-child > .btn-calendar,
 .input-group-btn:first-child > .btn-group > .btn,
+.input-group-btn:first-child > .btn-group > .call-to-action, section#calendar.container-fluid
+.input-group-btn:first-child > .btn-group > .btn-calendar,
 .input-group-btn:first-child > .dropdown-toggle,
 .input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle),
-.input-group-btn:last-child > .btn-group:not(:last-child) > .btn {
+.input-group-btn:last-child > .call-to-action:not(:last-child):not(.dropdown-toggle), section#calendar.container-fluid
+.input-group-btn:last-child > .btn-calendar:not(:last-child):not(.dropdown-toggle),
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn,
+.input-group-btn:last-child > .btn-group:not(:last-child) > .call-to-action, section#calendar.container-fluid
+.input-group-btn:last-child > .btn-group:not(:last-child) > .btn-calendar {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
 
@@ -4424,10 +4524,18 @@ tbody.collapse.in {
 .input-group .form-control:last-child,
 .input-group-addon:last-child,
 .input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .call-to-action, section#calendar.container-fluid
+.input-group-btn:last-child > .btn-calendar,
 .input-group-btn:last-child > .btn-group > .btn,
+.input-group-btn:last-child > .btn-group > .call-to-action, section#calendar.container-fluid
+.input-group-btn:last-child > .btn-group > .btn-calendar,
 .input-group-btn:last-child > .dropdown-toggle,
 .input-group-btn:first-child > .btn:not(:first-child),
-.input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+.input-group-btn:first-child > .call-to-action:not(:first-child), section#calendar.container-fluid
+.input-group-btn:first-child > .btn-calendar:not(:first-child),
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn,
+.input-group-btn:first-child > .btn-group:not(:first-child) > .call-to-action, section#calendar.container-fluid
+.input-group-btn:first-child > .btn-group:not(:first-child) > .btn-calendar {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0; }
 
@@ -4441,20 +4549,20 @@ tbody.collapse.in {
   font-size: 0;
   white-space: nowrap; }
   /* line 144, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-  .input-group-btn > .btn {
+  .input-group-btn > .btn, .input-group-btn > .call-to-action, section#calendar.container-fluid .input-group-btn > .btn-calendar {
     position: relative; }
     /* line 146, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-    .input-group-btn > .btn + .btn {
+    .input-group-btn > .btn + .btn, .input-group-btn > .call-to-action + .btn, section#calendar.container-fluid .input-group-btn > .btn-calendar + .btn, .input-group-btn > .btn + .call-to-action, .input-group-btn > .call-to-action + .call-to-action, section#calendar.container-fluid .input-group-btn > .btn-calendar + .call-to-action, section#calendar.container-fluid .input-group-btn > .btn + .btn-calendar, section#calendar.container-fluid .input-group-btn > .call-to-action + .btn-calendar, section#calendar.container-fluid .input-group-btn > .btn-calendar + .btn-calendar {
       margin-left: -1px; }
     /* line 150, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-    .input-group-btn > .btn:hover, .input-group-btn > .btn:focus, .input-group-btn > .btn:active {
+    .input-group-btn > .btn:hover, .input-group-btn > .call-to-action:hover, section#calendar.container-fluid .input-group-btn > .btn-calendar:hover, .input-group-btn > .btn:focus, .input-group-btn > .call-to-action:focus, section#calendar.container-fluid .input-group-btn > .btn-calendar:focus, .input-group-btn > .btn:active, .input-group-btn > .call-to-action:active, section#calendar.container-fluid .input-group-btn > .btn-calendar:active {
       z-index: 2; }
   /* line 159, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-  .input-group-btn:first-child > .btn,
+  .input-group-btn:first-child > .btn, .input-group-btn:first-child > .call-to-action, section#calendar.container-fluid .input-group-btn:first-child > .btn-calendar,
   .input-group-btn:first-child > .btn-group {
     margin-right: -1px; }
   /* line 165, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_input-groups.scss */
-  .input-group-btn:last-child > .btn,
+  .input-group-btn:last-child > .btn, .input-group-btn:last-child > .call-to-action, section#calendar.container-fluid .input-group-btn:last-child > .btn-calendar,
   .input-group-btn:last-child > .btn-group {
     z-index: 2;
     margin-left: -1px; }
@@ -4479,7 +4587,7 @@ tbody.collapse.in {
     .nav > li > a {
       position: relative;
       display: block;
-      padding: 10px 15px; }
+      padding: 10px 0.8em; }
       /* line 23, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navs.scss */
       .nav > li > a:hover, .nav > li > a:focus {
         text-decoration: none;
@@ -4931,11 +5039,11 @@ tbody.collapse.in {
   margin-top: 7px;
   margin-bottom: 7px; }
   /* line 346, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
+  .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn, .btn-group-sm > .navbar-btn.call-to-action, section#calendar.container-fluid .btn-group-sm > .navbar-btn.btn-calendar {
     margin-top: 8.5px;
     margin-bottom: 8.5px; }
   /* line 349, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
-  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
+  .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn, .btn-group-xs > .navbar-btn.call-to-action, section#calendar.container-fluid .btn-group-xs > .navbar-btn.btn-calendar {
     margin-top: 14px;
     margin-bottom: 14px; }
 
@@ -5309,7 +5417,7 @@ tbody.collapse.in {
   .label:empty {
     display: none; }
   /* line 25, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_labels.scss */
-  .btn .label {
+  .btn .label, .call-to-action .label, section#calendar.container-fluid .btn-calendar .label {
     position: relative;
     top: -1px; }
 
@@ -5379,12 +5487,14 @@ a.label:hover, a.label:focus {
   .badge:empty {
     display: none; }
   /* line 27, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss */
-  .btn .badge {
+  .btn .badge, .call-to-action .badge, section#calendar.container-fluid .btn-calendar .badge {
     position: relative;
     top: -1px; }
   /* line 32, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss */
-  .btn-xs .badge, .btn-group-xs > .btn .badge,
-  .btn-group-xs > .btn .badge {
+  .btn-xs .badge, .btn-group-xs > .btn .badge, .btn-group-xs > .call-to-action .badge, section#calendar.container-fluid .btn-group-xs > .btn-calendar .badge,
+  .btn-group-xs > .btn .badge,
+  .btn-group-xs > .call-to-action .badge, section#calendar.container-fluid
+  .btn-group-xs > .btn-calendar .badge {
     top: 0;
     padding: 1px 5px; }
   /* line 41, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_badges.scss */
@@ -5678,13 +5788,20 @@ a.thumbnail.active {
 
 /* line 29, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_media.scss */
 .media-right,
-.media > .pull-right {
+.media > .pull-right, blockquote
+.media > .btn, blockquote
+.media > .call-to-action, blockquote section#calendar.container-fluid
+.media > .btn-calendar, section#calendar.container-fluid blockquote
+.media > .btn-calendar {
   padding-left: 10px; }
 
 /* line 34, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_media.scss */
 .media-left,
-.media > .pull-left, blockquote
-.media > .btn, section#contact.container-fluid address
+.media > .pull-left, blockquoteblockquote-reverse
+.media > .btn, blockquoteblockquote-reverse
+.media > .call-to-action, blockquoteblockquote-reverse section#calendar.container-fluid
+.media > .btn-calendar, section#calendar.container-fluid blockquoteblockquote-reverse
+.media > .btn-calendar, section#contact.container-fluid address
 .media > .fa {
   padding-right: 10px; }
 
@@ -6476,11 +6593,11 @@ button.close {
   .modal-footer:after {
     clear: both; }
   /* line 110, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
-  .modal-footer .btn + .btn {
+  .modal-footer .btn + .btn, .modal-footer .call-to-action + .btn, .modal-footer section#calendar.container-fluid .btn-calendar + .btn, section#calendar.container-fluid .modal-footer .btn-calendar + .btn, .modal-footer .btn + .call-to-action, .modal-footer .call-to-action + .call-to-action, .modal-footer section#calendar.container-fluid .btn-calendar + .call-to-action, section#calendar.container-fluid .modal-footer .btn-calendar + .call-to-action, .modal-footer section#calendar.container-fluid .btn + .btn-calendar, section#calendar.container-fluid .modal-footer .btn + .btn-calendar, .modal-footer section#calendar.container-fluid .call-to-action + .btn-calendar, section#calendar.container-fluid .modal-footer .call-to-action + .btn-calendar, .modal-footer section#calendar.container-fluid .btn-calendar + .btn-calendar, section#calendar.container-fluid .modal-footer .btn-calendar + .btn-calendar {
     margin-left: 5px;
     margin-bottom: 0; }
   /* line 115, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
-  .modal-footer .btn-group .btn + .btn {
+  .modal-footer .btn-group .btn + .btn, .modal-footer .btn-group .call-to-action + .btn, .modal-footer .btn-group section#calendar.container-fluid .btn-calendar + .btn, section#calendar.container-fluid .modal-footer .btn-group .btn-calendar + .btn, .modal-footer .btn-group .btn + .call-to-action, .modal-footer .btn-group .call-to-action + .call-to-action, .modal-footer .btn-group section#calendar.container-fluid .btn-calendar + .call-to-action, section#calendar.container-fluid .modal-footer .btn-group .btn-calendar + .call-to-action, .modal-footer .btn-group section#calendar.container-fluid .btn + .btn-calendar, section#calendar.container-fluid .modal-footer .btn-group .btn + .btn-calendar, .modal-footer .btn-group section#calendar.container-fluid .call-to-action + .btn-calendar, section#calendar.container-fluid .modal-footer .btn-group .call-to-action + .btn-calendar, .modal-footer .btn-group section#calendar.container-fluid .btn-calendar + .btn-calendar, section#calendar.container-fluid .modal-footer .btn-group .btn-calendar + .btn-calendar {
     margin-left: -1px; }
   /* line 119, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_modals.scss */
   .modal-footer .btn-block + .btn-block {
@@ -6973,7 +7090,7 @@ button.close {
   text-align: center;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
   /* line 229, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_carousel.scss */
-  .carousel-caption .btn {
+  .carousel-caption .btn, .carousel-caption .call-to-action, .carousel-caption section#calendar.container-fluid .btn-calendar, section#calendar.container-fluid .carousel-caption .btn-calendar {
     text-shadow: none; }
 
 @media screen and (min-width: 768px) {
@@ -7019,11 +7136,11 @@ button.close {
   margin-right: auto; }
 
 /* line 15, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_utilities.scss */
-.pull-right {
+.pull-right, blockquote .btn, blockquote .call-to-action, blockquote section#calendar.container-fluid .btn-calendar, section#calendar.container-fluid blockquote .btn-calendar {
   float: right !important; }
 
 /* line 18, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_utilities.scss */
-.pull-left, blockquote .btn, section#contact.container-fluid address .fa {
+.pull-left, blockquoteblockquote-reverse .btn, blockquoteblockquote-reverse .call-to-action, blockquoteblockquote-reverse section#calendar.container-fluid .btn-calendar, section#calendar.container-fluid blockquoteblockquote-reverse .btn-calendar, section#contact.container-fluid address .fa {
   float: left !important; }
 
 /* line 27, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_utilities.scss */
@@ -7273,7 +7390,7 @@ button.close {
 
 @media print {
   /* line 17, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_responsive-visibility.scss */
-  .hidden-print, #title-carousel {
+  .hidden-print, .call-to-action, #title-carousel {
     display: none !important; } }
 
 /*
@@ -7304,26 +7421,26 @@ button.close {
     text-align: center;
     border-right: 1px solid rgba(0, 0, 0, 0.2); }
   /* line 33, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-  .btn-social.btn-lg, .btn-group-lg > .btn-social.btn, .btn-group-lg > .btn.btn-social-icon, .btn-lg.btn-social-icon {
+  .btn-social.btn-lg, .btn-group-lg > .btn-social.btn, .btn-group-lg > .btn.btn-social-icon, .btn-group-lg > .btn-social-icon.call-to-action, section#calendar.container-fluid .btn-group-lg > .btn-social-icon.btn-calendar, .btn-group-lg > .btn-social.call-to-action, section#calendar.container-fluid .btn-group-lg > .btn-social.btn-calendar, .btn-lg.btn-social-icon {
     padding-left: 64px; }
     /* line 35, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-    .btn-social.btn-lg > :first-child, .btn-group-lg > .btn-social.btn > :first-child, .btn-group-lg > .btn.btn-social-icon > :first-child, .btn-lg.btn-social-icon > :first-child {
+    .btn-social.btn-lg > :first-child, .btn-group-lg > .btn-social.btn > :first-child, .btn-group-lg > .btn.btn-social-icon > :first-child, .btn-group-lg > .btn-social-icon.call-to-action > :first-child, section#calendar.container-fluid .btn-group-lg > .btn-social-icon.btn-calendar > :first-child, .btn-group-lg > .btn-social.call-to-action > :first-child, section#calendar.container-fluid .btn-group-lg > .btn-social.btn-calendar > :first-child, .btn-lg.btn-social-icon > :first-child {
       line-height: 48px;
       width: 48px;
       font-size: 1.8em; }
   /* line 41, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-  .btn-social.btn-sm, .btn-group-sm > .btn-social.btn, .btn-group-sm > .btn.btn-social-icon, .btn-sm.btn-social-icon {
+  .btn-social.btn-sm, .btn-group-sm > .btn-social.btn, .btn-group-sm > .btn.btn-social-icon, .btn-group-sm > .btn-social-icon.call-to-action, section#calendar.container-fluid .btn-group-sm > .btn-social-icon.btn-calendar, .btn-group-sm > .btn-social.call-to-action, section#calendar.container-fluid .btn-group-sm > .btn-social.btn-calendar, .btn-sm.btn-social-icon {
     padding-left: 41px; }
     /* line 43, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-    .btn-social.btn-sm > :first-child, .btn-group-sm > .btn-social.btn > :first-child, .btn-group-sm > .btn.btn-social-icon > :first-child, .btn-sm.btn-social-icon > :first-child {
+    .btn-social.btn-sm > :first-child, .btn-group-sm > .btn-social.btn > :first-child, .btn-group-sm > .btn.btn-social-icon > :first-child, .btn-group-sm > .btn-social-icon.call-to-action > :first-child, section#calendar.container-fluid .btn-group-sm > .btn-social-icon.btn-calendar > :first-child, .btn-group-sm > .btn-social.call-to-action > :first-child, section#calendar.container-fluid .btn-group-sm > .btn-social.btn-calendar > :first-child, .btn-sm.btn-social-icon > :first-child {
       line-height: 31px;
       width: 31px;
       font-size: 1.4em; }
   /* line 49, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-  .btn-social.btn-xs, .btn-group-xs > .btn-social.btn, .btn-group-xs > .btn.btn-social-icon, .btn-xs.btn-social-icon {
+  .btn-social.btn-xs, .btn-group-xs > .btn-social.btn, .btn-group-xs > .btn.btn-social-icon, .btn-group-xs > .btn-social-icon.call-to-action, section#calendar.container-fluid .btn-group-xs > .btn-social-icon.btn-calendar, .btn-group-xs > .btn-social.call-to-action, section#calendar.container-fluid .btn-group-xs > .btn-social.btn-calendar, .btn-xs.btn-social-icon {
     padding-left: 32px; }
     /* line 51, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-    .btn-social.btn-xs > :first-child, .btn-group-xs > .btn-social.btn > :first-child, .btn-group-xs > .btn.btn-social-icon > :first-child, .btn-xs.btn-social-icon > :first-child {
+    .btn-social.btn-xs > :first-child, .btn-group-xs > .btn-social.btn > :first-child, .btn-group-xs > .btn.btn-social-icon > :first-child, .btn-group-xs > .btn-social-icon.call-to-action > :first-child, section#calendar.container-fluid .btn-group-xs > .btn-social-icon.btn-calendar > :first-child, .btn-group-xs > .btn-social.call-to-action > :first-child, section#calendar.container-fluid .btn-group-xs > .btn-social.btn-calendar > :first-child, .btn-xs.btn-social-icon > :first-child {
       line-height: 22px;
       width: 22px;
       font-size: 1.2em; }
@@ -7339,19 +7456,19 @@ button.close {
     text-align: center;
     width: 100% !important; }
   /* line 69, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-  .btn-social-icon.btn-lg, .btn-group-lg > .btn-social-icon.btn {
+  .btn-social-icon.btn-lg, .btn-group-lg > .btn-social-icon.btn, .btn-group-lg > .btn-social-icon.call-to-action, section#calendar.container-fluid .btn-group-lg > .btn-social-icon.btn-calendar {
     height: 48px;
     width: 48px;
     padding-left: 0;
     padding-right: 0; }
   /* line 75, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-  .btn-social-icon.btn-sm, .btn-group-sm > .btn-social-icon.btn {
+  .btn-social-icon.btn-sm, .btn-group-sm > .btn-social-icon.btn, .btn-group-sm > .btn-social-icon.call-to-action, section#calendar.container-fluid .btn-group-sm > .btn-social-icon.btn-calendar {
     height: 33px;
     width: 33px;
     padding-left: 0;
     padding-right: 0; }
   /* line 81, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-social/bootstrap-social.scss */
-  .btn-social-icon.btn-xs, .btn-group-xs > .btn-social-icon.btn {
+  .btn-social-icon.btn-xs, .btn-group-xs > .btn-social-icon.btn, .btn-group-xs > .btn-social-icon.call-to-action, section#calendar.container-fluid .btn-group-xs > .btn-social-icon.btn-calendar {
     height: 24px;
     width: 24px;
     padding-left: 0;
@@ -8367,32 +8484,39 @@ header#page-header h1 {
     font-size: 120%; } }
 
 /* line 41, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+p {
+  margin-bottom: 1em; }
+
+/* line 43, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 blockquote {
   font-family: "caliban-std", "serenity", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 150%; }
+  /* line 46, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  blockquote p {
+    margin-bottom: 0.5em; }
 
-/* line 46, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 52, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .indent, section#intro p, article.community p, section#community p, article#learn p, article#grow p {
   text-indent: 1em; }
 
 /* Mixins */
 /* Animations */
-/* line 61, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 67, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .animate {
   position: relative; }
 
-/* line 64, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 70, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .come-in {
   -webkit-animation: come-in 0.8s ease forwards;
   -o-animation: come-in 0.8s ease forwards;
   animation: come-in 0.8s ease forwards; }
-  /* line 66, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 72, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .come-in.slide-up {
     transform: translateY(20%); }
-  /* line 68, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 74, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .come-in.slide-left {
     transform: translateX(20%); }
-  /* line 70, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 76, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .come-in.slide-right {
     transform: translateX(-20%); }
 
@@ -8404,181 +8528,268 @@ blockquote {
     opacity: 1; } }
 
 /* Utilities */
-/* line 86, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 92, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .argyle-background, section#leadership {
   background-color: #355749;
   background-image: repeating-linear-gradient(120deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1)), linear-gradient(120deg, rgba(0, 0, 0, 0.1) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.1) 75%, rgba(0, 0, 0, 0.1));
   background-size: 70px 120px; }
 
-/* line 91, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 97, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .arrows-background {
   background: linear-gradient(45deg, #edf4f1 45px, transparent 45px) 64px 64px, linear-gradient(45deg, #edf4f1 45px, transparent 45px, transparent 91px, white 91px, white 135px, transparent 135px), linear-gradient(-45deg, #edf4f1 23px, transparent 23px, transparent 68px, #edf4f1 68px, #edf4f1 113px, transparent 113px, transparent 158px, #edf4f1 158px);
   background-color: white;
   background-size: 128px 128px; }
 
-/* line 96, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 102, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .carbon-background, footer#page-footer {
   background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
   background-color: #131313;
   background-size: 20px 20px; }
 
-/* line 101, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 107, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .cube-background {
   background-color: #556;
   background-image: linear-gradient(30deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(150deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(30deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(150deg, #22372e 12%, transparent 12.5%, transparent 87%, #22372e 87.5%, #22372e), linear-gradient(60deg, #487764 25%, transparent 25.5%, transparent 75%, #487764 75%, #487764), linear-gradient(60deg, #487764 25%, transparent 25.5%, transparent 75%, #487764 75%, #487764);
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px; }
 
-/* line 110, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 116, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .half-rombes-background {
   background: #355749;
   background: linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 0 0, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 0 0, linear-gradient(115deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 7px -15px, linear-gradient(245deg, transparent 75%, rgba(255, 255, 255, 0.8) 75%) 7px -15px, #e7f0ed;
   background-size: 15px 30px; }
 
-/* line 115, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 121, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .hearts-background {
   background: radial-gradient(circle closest-side at 60% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%), radial-gradient(circle closest-side at 40% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%), radial-gradient(circle closest-side at 40% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%), radial-gradient(circle closest-side at 60% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%), radial-gradient(circle closest-side at 50% 35%, #d7e7e0 30%, rgba(53, 87, 73, 0) 31%), radial-gradient(circle closest-side at 60% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 43%, #b8d3c8 26%, rgba(53, 87, 73, 0) 27%) 50px 50px, radial-gradient(circle closest-side at 40% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 60% 22%, #d7e7e0 45%, rgba(53, 87, 73, 0) 46%) 50px 50px, radial-gradient(circle closest-side at 50% 35%, #d7e7e0 30%, rgba(53, 87, 73, 0) 31%) 50px 50px;
   background-color: #b8d3c8;
   background-size: 100px 100px; }
 
-/* line 124, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 130, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .marrakesh-background {
   background-color: white;
   background-image: radial-gradient(#355749 9px, transparent 10px), repeating-radial-gradient(#355749 0, #355749 4px, transparent 5px, transparent 20px, #355749 21px, #355749 25px, transparent 26px, transparent 50px);
   background-size: 30px 30px, 90px 90px;
   background-position: 0 0; }
 
-/* line 130, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 136, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .stairs-background {
   background: linear-gradient(63deg, #355749 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, #355749 78%), linear-gradient(63deg, transparent 34%, #355749 38%, #355749 58%, transparent 62%), #444;
   background-size: 16px 48px; }
 
-/* line 134, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 140, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .upholstery-background {
   background: radial-gradient(#8a0000 4%, #5c0000 9%, rgba(102, 0, 0, 0) 9%) 0 0, radial-gradient(#8a0000 4%, #5c0000 8%, rgba(102, 0, 0, 0) 10%) 50px 50px, radial-gradient(rgba(153, 0, 0, 0.8) 20%, rgba(102, 0, 0, 0)) 50px 0, radial-gradient(rgba(153, 0, 0, 0.8) 20%, rgba(102, 0, 0, 0)) 0 50px, radial-gradient(#660000 35%, rgba(102, 0, 0, 0) 60%) 50px 0, radial-gradient(#660000 35%, rgba(102, 0, 0, 0) 60%) 100px 50px, radial-gradient(rgba(77, 0, 0, 0.7), rgba(102, 0, 0, 0)) 0 0, radial-gradient(rgba(77, 0, 0, 0.7), rgba(102, 0, 0, 0)) 50px 50px, linear-gradient(45deg, rgba(102, 0, 0, 0) 49%, black 50%, rgba(102, 0, 0, 0) 70%) 0 0, linear-gradient(-45deg, rgba(102, 0, 0, 0) 49%, black 50%, rgba(102, 0, 0, 0) 70%) 0 0;
   background-color: #300;
   background-size: 100px 100px; }
 
-/* line 139, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 145, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .wave-background, section#calendar.container-fluid {
   background: linear-gradient(#FFFFFF 50%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255, 255, 255, 0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255, 255, 255, 0) 0) 55px 0 #FFEB5B;
   background-size: 110px 220px;
   background-repeat: repeat-x; }
 
-/* line 144, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 150, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .weave-background {
   background: linear-gradient(135deg, #ffeb5b 22px, white 22px, white 24px, transparent 24px, transparent 67px, white 67px, white 69px, transparent 69px), linear-gradient(225deg, #ffeb5b 22px, white 22px, white 24px, transparent 24px, transparent 67px, white 67px, white 69px, transparent 69px) 0 64px;
   background-color: #ffeb5b;
   background-size: 64px 128px; }
 
 /* Common */
-/* line 151, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-.btn-gold, nav#main-navbar .btn-donate {
+/* line 157, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.btn-gold, .call-to-action.gold, nav#main-navbar .btn-donate {
   color: #333333;
   background-color: #F3DD3E;
   border-color: #d7bf0d; }
   /* line 11, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-gold:focus, nav#main-navbar .btn-donate:focus, .btn-gold.focus, nav#main-navbar .focus.btn-donate {
+  .btn-gold:focus, .call-to-action.gold:focus, nav#main-navbar .btn-donate:focus, .btn-gold.focus, .focus.call-to-action.gold, nav#main-navbar .focus.btn-donate {
     color: #333333;
     background-color: #efd40f;
     border-color: #5f5406; }
   /* line 17, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-gold:hover, nav#main-navbar .btn-donate:hover {
+  .btn-gold:hover, .call-to-action.gold:hover, nav#main-navbar .btn-donate:hover {
     color: #333333;
     background-color: #efd40f;
     border-color: #9e8c0a; }
   /* line 22, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-gold:active, nav#main-navbar .btn-donate:active, .btn-gold.active, nav#main-navbar .active.btn-donate,
-  .open > .btn-gold.dropdown-toggle, nav#main-navbar
+  .btn-gold:active, .call-to-action.gold:active, nav#main-navbar .btn-donate:active, .btn-gold.active, .active.call-to-action.gold, nav#main-navbar .active.btn-donate,
+  .open > .btn-gold.dropdown-toggle,
+  .open > .dropdown-toggle.call-to-action.gold, nav#main-navbar
   .open > .dropdown-toggle.btn-donate {
     color: #333333;
     background-color: #efd40f;
     border-color: #9e8c0a; }
     /* line 29, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-    .btn-gold:active:hover, nav#main-navbar .btn-donate:active:hover, .btn-gold:active:focus, nav#main-navbar .btn-donate:active:focus, .btn-gold:active.focus, nav#main-navbar .btn-donate:active.focus, .btn-gold.active:hover, nav#main-navbar .active.btn-donate:hover, .btn-gold.active:focus, nav#main-navbar .active.btn-donate:focus, .btn-gold.active.focus, nav#main-navbar .active.focus.btn-donate,
-    .open > .btn-gold.dropdown-toggle:hover, nav#main-navbar
+    .btn-gold:active:hover, .call-to-action.gold:active:hover, nav#main-navbar .btn-donate:active:hover, .btn-gold:active:focus, .call-to-action.gold:active:focus, nav#main-navbar .btn-donate:active:focus, .btn-gold:active.focus, .call-to-action.gold:active.focus, nav#main-navbar .btn-donate:active.focus, .btn-gold.active:hover, .active.call-to-action.gold:hover, nav#main-navbar .active.btn-donate:hover, .btn-gold.active:focus, .active.call-to-action.gold:focus, nav#main-navbar .active.btn-donate:focus, .btn-gold.active.focus, .active.focus.call-to-action.gold, nav#main-navbar .active.focus.btn-donate,
+    .open > .btn-gold.dropdown-toggle:hover,
+    .open > .dropdown-toggle.call-to-action.gold:hover, nav#main-navbar
     .open > .dropdown-toggle.btn-donate:hover,
-    .open > .btn-gold.dropdown-toggle:focus, nav#main-navbar
+    .open > .btn-gold.dropdown-toggle:focus,
+    .open > .dropdown-toggle.call-to-action.gold:focus, nav#main-navbar
     .open > .dropdown-toggle.btn-donate:focus,
-    .open > .btn-gold.dropdown-toggle.focus, nav#main-navbar
+    .open > .btn-gold.dropdown-toggle.focus,
+    .open > .dropdown-toggle.focus.call-to-action.gold, nav#main-navbar
     .open > .dropdown-toggle.focus.btn-donate {
       color: #333333;
       background-color: #ceb60d;
       border-color: #5f5406; }
   /* line 37, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-gold:active, nav#main-navbar .btn-donate:active, .btn-gold.active, nav#main-navbar .active.btn-donate,
-  .open > .btn-gold.dropdown-toggle, nav#main-navbar
+  .btn-gold:active, .call-to-action.gold:active, nav#main-navbar .btn-donate:active, .btn-gold.active, .active.call-to-action.gold, nav#main-navbar .active.btn-donate,
+  .open > .btn-gold.dropdown-toggle,
+  .open > .dropdown-toggle.call-to-action.gold, nav#main-navbar
   .open > .dropdown-toggle.btn-donate {
     background-image: none; }
   /* line 45, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-gold.disabled:hover, nav#main-navbar .disabled.btn-donate:hover, .btn-gold.disabled:focus, nav#main-navbar .disabled.btn-donate:focus, .btn-gold.disabled.focus, nav#main-navbar .disabled.focus.btn-donate, .btn-gold[disabled]:hover, nav#main-navbar [disabled].btn-donate:hover, .btn-gold[disabled]:focus, nav#main-navbar [disabled].btn-donate:focus, .btn-gold[disabled].focus, nav#main-navbar [disabled].focus.btn-donate,
+  .btn-gold.disabled:hover, .disabled.call-to-action.gold:hover, nav#main-navbar .disabled.btn-donate:hover, .btn-gold.disabled:focus, .disabled.call-to-action.gold:focus, nav#main-navbar .disabled.btn-donate:focus, .btn-gold.disabled.focus, .disabled.focus.call-to-action.gold, nav#main-navbar .disabled.focus.btn-donate, .btn-gold[disabled]:hover, [disabled].call-to-action.gold:hover, nav#main-navbar [disabled].btn-donate:hover, .btn-gold[disabled]:focus, [disabled].call-to-action.gold:focus, nav#main-navbar [disabled].btn-donate:focus, .btn-gold[disabled].focus, [disabled].focus.call-to-action.gold, nav#main-navbar [disabled].focus.btn-donate,
   fieldset[disabled] .btn-gold:hover,
+  fieldset[disabled] .call-to-action.gold:hover,
   fieldset[disabled] nav#main-navbar .btn-donate:hover, nav#main-navbar
   fieldset[disabled] .btn-donate:hover,
   fieldset[disabled] .btn-gold:focus,
+  fieldset[disabled] .call-to-action.gold:focus,
   fieldset[disabled] nav#main-navbar .btn-donate:focus, nav#main-navbar
   fieldset[disabled] .btn-donate:focus,
   fieldset[disabled] .btn-gold.focus,
+  fieldset[disabled] .focus.call-to-action.gold,
   fieldset[disabled] nav#main-navbar .focus.btn-donate, nav#main-navbar
   fieldset[disabled] .focus.btn-donate {
     background-color: #F3DD3E;
     border-color: #d7bf0d; }
   /* line 53, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-gold .badge, nav#main-navbar .btn-donate .badge {
+  .btn-gold .badge, .call-to-action.gold .badge, nav#main-navbar .btn-donate .badge {
     color: #F3DD3E;
     background-color: #333333; }
 
-/* line 153, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-.btn-blue {
+/* line 159, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.btn-blue, .call-to-action.blue, section#calendar.container-fluid .btn-calendar {
   color: #f0f0f0;
   background-color: #7C88F4;
   border-color: #3548ee; }
   /* line 11, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-blue:focus, .btn-blue.focus {
+  .btn-blue:focus, .call-to-action.blue:focus, section#calendar.container-fluid .btn-calendar:focus, .btn-blue.focus, .focus.call-to-action.blue, section#calendar.container-fluid .focus.btn-calendar {
     color: #f0f0f0;
     background-color: #4d5df0;
     border-color: #0d1b97; }
   /* line 17, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-blue:hover {
+  .btn-blue:hover, .call-to-action.blue:hover, section#calendar.container-fluid .btn-calendar:hover {
     color: #f0f0f0;
     background-color: #4d5df0;
     border-color: #1225d4; }
   /* line 22, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-blue:active, .btn-blue.active,
-  .open > .btn-blue.dropdown-toggle {
+  .btn-blue:active, .call-to-action.blue:active, section#calendar.container-fluid .btn-calendar:active, .btn-blue.active, .active.call-to-action.blue, section#calendar.container-fluid .active.btn-calendar,
+  .open > .btn-blue.dropdown-toggle,
+  .open > .dropdown-toggle.call-to-action.blue, section#calendar.container-fluid
+  .open > .dropdown-toggle.btn-calendar {
     color: #f0f0f0;
     background-color: #4d5df0;
     border-color: #1225d4; }
     /* line 29, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-    .btn-blue:active:hover, .btn-blue:active:focus, .btn-blue:active.focus, .btn-blue.active:hover, .btn-blue.active:focus, .btn-blue.active.focus,
+    .btn-blue:active:hover, .call-to-action.blue:active:hover, section#calendar.container-fluid .btn-calendar:active:hover, .btn-blue:active:focus, .call-to-action.blue:active:focus, section#calendar.container-fluid .btn-calendar:active:focus, .btn-blue:active.focus, .call-to-action.blue:active.focus, section#calendar.container-fluid .btn-calendar:active.focus, .btn-blue.active:hover, .active.call-to-action.blue:hover, section#calendar.container-fluid .active.btn-calendar:hover, .btn-blue.active:focus, .active.call-to-action.blue:focus, section#calendar.container-fluid .active.btn-calendar:focus, .btn-blue.active.focus, .active.focus.call-to-action.blue, section#calendar.container-fluid .active.focus.btn-calendar,
     .open > .btn-blue.dropdown-toggle:hover,
+    .open > .dropdown-toggle.call-to-action.blue:hover, section#calendar.container-fluid
+    .open > .dropdown-toggle.btn-calendar:hover,
     .open > .btn-blue.dropdown-toggle:focus,
-    .open > .btn-blue.dropdown-toggle.focus {
+    .open > .dropdown-toggle.call-to-action.blue:focus, section#calendar.container-fluid
+    .open > .dropdown-toggle.btn-calendar:focus,
+    .open > .btn-blue.dropdown-toggle.focus,
+    .open > .dropdown-toggle.focus.call-to-action.blue, section#calendar.container-fluid
+    .open > .dropdown-toggle.focus.btn-calendar {
       color: #f0f0f0;
       background-color: #2c3fed;
       border-color: #0d1b97; }
   /* line 37, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-blue:active, .btn-blue.active,
-  .open > .btn-blue.dropdown-toggle {
+  .btn-blue:active, .call-to-action.blue:active, section#calendar.container-fluid .btn-calendar:active, .btn-blue.active, .active.call-to-action.blue, section#calendar.container-fluid .active.btn-calendar,
+  .open > .btn-blue.dropdown-toggle,
+  .open > .dropdown-toggle.call-to-action.blue, section#calendar.container-fluid
+  .open > .dropdown-toggle.btn-calendar {
     background-image: none; }
   /* line 45, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-blue.disabled:hover, .btn-blue.disabled:focus, .btn-blue.disabled.focus, .btn-blue[disabled]:hover, .btn-blue[disabled]:focus, .btn-blue[disabled].focus,
+  .btn-blue.disabled:hover, .disabled.call-to-action.blue:hover, section#calendar.container-fluid .disabled.btn-calendar:hover, .btn-blue.disabled:focus, .disabled.call-to-action.blue:focus, section#calendar.container-fluid .disabled.btn-calendar:focus, .btn-blue.disabled.focus, .disabled.focus.call-to-action.blue, section#calendar.container-fluid .disabled.focus.btn-calendar, .btn-blue[disabled]:hover, [disabled].call-to-action.blue:hover, section#calendar.container-fluid [disabled].btn-calendar:hover, .btn-blue[disabled]:focus, [disabled].call-to-action.blue:focus, section#calendar.container-fluid [disabled].btn-calendar:focus, .btn-blue[disabled].focus, [disabled].focus.call-to-action.blue, section#calendar.container-fluid [disabled].focus.btn-calendar,
   fieldset[disabled] .btn-blue:hover,
+  fieldset[disabled] .call-to-action.blue:hover,
+  fieldset[disabled] section#calendar.container-fluid .btn-calendar:hover, section#calendar.container-fluid
+  fieldset[disabled] .btn-calendar:hover,
   fieldset[disabled] .btn-blue:focus,
-  fieldset[disabled] .btn-blue.focus {
+  fieldset[disabled] .call-to-action.blue:focus,
+  fieldset[disabled] section#calendar.container-fluid .btn-calendar:focus, section#calendar.container-fluid
+  fieldset[disabled] .btn-calendar:focus,
+  fieldset[disabled] .btn-blue.focus,
+  fieldset[disabled] .focus.call-to-action.blue,
+  fieldset[disabled] section#calendar.container-fluid .focus.btn-calendar, section#calendar.container-fluid
+  fieldset[disabled] .focus.btn-calendar {
     background-color: #7C88F4;
     border-color: #3548ee; }
   /* line 53, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-  .btn-blue .badge {
+  .btn-blue .badge, .call-to-action.blue .badge, section#calendar.container-fluid .btn-calendar .badge {
     color: #7C88F4;
     background-color: #f0f0f0; }
 
-/* line 156, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 161, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.btn-green, .call-to-action.green {
+  color: #f0f0f0;
+  background-color: #355749;
+  border-color: #182721; }
+  /* line 11, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+  .btn-green:focus, .call-to-action.green:focus, .btn-green.focus, .focus.call-to-action.green {
+    color: #f0f0f0;
+    background-color: #22372e;
+    border-color: black; }
+  /* line 17, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+  .btn-green:hover, .call-to-action.green:hover {
+    color: #f0f0f0;
+    background-color: #22372e;
+    border-color: #010101; }
+  /* line 22, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+  .btn-green:active, .call-to-action.green:active, .btn-green.active, .active.call-to-action.green,
+  .open > .btn-green.dropdown-toggle,
+  .open > .dropdown-toggle.call-to-action.green {
+    color: #f0f0f0;
+    background-color: #22372e;
+    border-color: #010101; }
+    /* line 29, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+    .btn-green:active:hover, .call-to-action.green:active:hover, .btn-green:active:focus, .call-to-action.green:active:focus, .btn-green:active.focus, .call-to-action.green:active.focus, .btn-green.active:hover, .active.call-to-action.green:hover, .btn-green.active:focus, .active.call-to-action.green:focus, .btn-green.active.focus, .active.focus.call-to-action.green,
+    .open > .btn-green.dropdown-toggle:hover,
+    .open > .dropdown-toggle.call-to-action.green:hover,
+    .open > .btn-green.dropdown-toggle:focus,
+    .open > .dropdown-toggle.call-to-action.green:focus,
+    .open > .btn-green.dropdown-toggle.focus,
+    .open > .dropdown-toggle.focus.call-to-action.green {
+      color: #f0f0f0;
+      background-color: #14211c;
+      border-color: black; }
+  /* line 37, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+  .btn-green:active, .call-to-action.green:active, .btn-green.active, .active.call-to-action.green,
+  .open > .btn-green.dropdown-toggle,
+  .open > .dropdown-toggle.call-to-action.green {
+    background-image: none; }
+  /* line 45, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+  .btn-green.disabled:hover, .disabled.call-to-action.green:hover, .btn-green.disabled:focus, .disabled.call-to-action.green:focus, .btn-green.disabled.focus, .disabled.focus.call-to-action.green, .btn-green[disabled]:hover, [disabled].call-to-action.green:hover, .btn-green[disabled]:focus, [disabled].call-to-action.green:focus, .btn-green[disabled].focus, [disabled].focus.call-to-action.green,
+  fieldset[disabled] .btn-green:hover,
+  fieldset[disabled] .call-to-action.green:hover,
+  fieldset[disabled] .btn-green:focus,
+  fieldset[disabled] .call-to-action.green:focus,
+  fieldset[disabled] .btn-green.focus,
+  fieldset[disabled] .focus.call-to-action.green {
+    background-color: #355749;
+    border-color: #182721; }
+  /* line 53, /Users/jmartins/dev/faasl/www/wordpress/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_buttons.scss */
+  .btn-green .badge, .call-to-action.green .badge {
+    color: #355749;
+    background-color: #f0f0f0; }
+
+/* line 163, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+.call-to-action {
+  -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin-top: 1em; }
+
+/* line 178, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 body {
   letter-spacing: .05em;
   position: relative; }
 
-/* line 160, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 182, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 nav#main-navbar {
   -webkit-transition: background-color 0.8s ease-out, border-color 0.8s ease-out;
   -o-transition: background-color 0.8s ease-out, border-color 0.8s ease-out;
@@ -8592,19 +8803,21 @@ nav#main-navbar {
   height: 50px;
   width: 100%;
   z-index: 1000; }
-  /* line 169, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 191, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar .navbar-brand {
     width: 64px;
     padding: 8px 15px; }
-  /* line 172, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 194, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar .navbar-toggle:hover, nav#main-navbar .navbar-toggle:focus {
     background-color: #284238; }
-  /* line 174, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 196, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar .btn-donate {
+    -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
     padding: 6px 12px;
     margin-top: 7px; }
 
-/* line 178, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 201, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 nav#main-navbar.affix {
   position: fixed;
   top: 0;
@@ -8612,31 +8825,31 @@ nav#main-navbar.affix {
   border-color: #284238; }
 
 @media (max-width: 767px) {
-  /* line 185, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 208, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar .btn-donate {
     padding: 15px;
     margin-top: 0; }
-  /* line 188, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 211, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .navbar-collapse {
     -webkit-transition: background-color 0.8s ease-out, border-color 0.8s ease-out;
     -o-transition: background-color 0.8s ease-out, border-color 0.8s ease-out;
     transition: background-color 0.8s ease-out, border-color 0.8s ease-out;
     background-color: rgba(0, 0, 0, 0.7);
     border-color: transparent; }
-  /* line 192, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 215, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   nav#main-navbar.affix .navbar-collapse {
     background-color: #355749;
     border-color: #284238; } }
 
-/* line 196, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 219, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .logo {
   height: 35px; }
 
-/* line 202, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 225, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 #title-carousel, #title-carousel .carousel-inner, #title-carousel .carousel-control {
   height: 100vh; }
 
-/* line 206, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 229, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .carousel-inner .item {
   background-position: center;
   background-attachment: fixed;
@@ -8644,17 +8857,17 @@ nav#main-navbar.affix {
   background-size: cover;
   height: 100vh;
   background-image: url(/img/slide_1@2x.jpg); }
-  /* line 213, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 236, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .carousel-inner .item + .item {
     background-image: url(/img/slide_2@2x.jpg); }
-    /* line 215, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    /* line 238, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
     .carousel-inner .item + .item + .item {
       background-image: url(/img/slide_3@2x.jpg); }
-      /* line 217, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+      /* line 240, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
       .carousel-inner .item + .item + .item + .item {
         background-image: url(/img/slide_4@2x.jpg); }
 
-/* line 223, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 246, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 header#page-header {
   position: absolute;
   height: 100vh;
@@ -8662,7 +8875,7 @@ header#page-header {
   color: #F3DD3E;
   top: 0; }
 
-/* line 230, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 253, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 #page-header-row {
   background-color: rgba(0, 0, 0, 0.7);
   border-color: transparent;
@@ -8670,93 +8883,111 @@ header#page-header {
   width: 100%;
   bottom: 50px; }
 
-/* line 236, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 259, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section.container-fluid, article.container-fluid {
   padding: 50px 30px 0;
   page-break-inside: avoid; }
 
-/* line 239, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 262, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article.container-fluid {
   padding-top: 100px; }
 
-/* line 241, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 264, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section.container-fluid:not(#community), article.container-fluid {
   padding-bottom: 100px; }
 
-/* line 243, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 266, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article#perform {
   padding-bottom: 50px; }
 
 @media (max-width: 767px) {
-  /* line 246, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 269, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article.container-fluid:not(#learn) {
     padding-top: 50px; } }
 
-/* line 250, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 273, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#intro + .row {
   margin-top: auto;
   margin-bottom: auto; }
 
-/* line 261, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+@media (max-width: 767px) {
+  /* line 280, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  section#intro blockquote {
+    border: 0; } }
+
+/* line 288, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article.community img {
   background: none;
   border-radius: 12px;
   margin-top: 20px;
   width: 640px; }
 
-/* line 271, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 298, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#community, article#learn {
   background-color: #FFEB5B; }
-  /* line 273, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 300, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#community h3 small, article#learn h3 small {
     color: #355749; }
 
-/* line 277, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 304, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article#learn {
   padding-top: 0; }
-  /* line 279, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 306, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#learn img {
     border-color: #355749; }
 
-/* line 281, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 308, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article#grow {
   background: #355749;
   color: #f0f0f0; }
-  /* line 284, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 311, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#grow .img-wrapper {
     overflow: hidden; }
-  /* line 287, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 314, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#grow img {
     border-color: #fff293; }
-  /* line 289, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 316, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#grow h3 small {
     color: #fff293; }
-  /* line 291, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 318, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article#grow blockquote {
     border-right-color: #fff293; }
-    /* line 293, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    /* line 320, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
     article#grow blockquote .fa, article#grow blockquote footer {
       color: #fff293; }
-    /* line 295, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-    article#grow blockquote a.btn {
+    /* line 322, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    article#grow blockquote a.btn, article#grow blockquote a.call-to-action, article#grow blockquote section#calendar.container-fluid a.btn-calendar, section#calendar.container-fluid article#grow blockquote a.btn-calendar {
       position: absolute;
       left: 30px;
       bottom: 5.5px; }
 
-/* line 302, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+@media (max-width: 445px) {
+  /* line 329, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  article#grow blockquote a.btn, article#grow blockquote a.call-to-action, article#grow blockquote section#calendar.container-fluid a.btn-calendar, section#calendar.container-fluid article#grow blockquote a.btn-calendar {
+    bottom: inherit; } }
+
+/* line 332, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+article#perform dt {
+  text-transform: capitalize; }
+
+/* line 334, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 article#perform img {
   border-color: #333333; }
 
-/* line 306, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 338, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#calendar.container-fluid {
   padding-top: 50px;
   padding-bottom: 50px; }
+  /* line 342, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  section#calendar.container-fluid .btn-calendar {
+    padding: 10px;
+    margin-bottom: 1em; }
 
-/* line 313, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 350, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#leadership h2 {
   color: #f0f0f0; }
 
-/* line 316, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 353, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .leader-card-inner {
   background-color: #fff;
   border-radius: 10px;
@@ -8764,54 +8995,54 @@ section#leadership h2 {
   box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
   margin: 10px 15px;
   padding: 15px; }
-  /* line 322, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 359, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .leader-card-inner .leader-headshot {
     -webkit-box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2); }
 
-/* line 328, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 365, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 section#contact.container-fluid {
   padding-top: 50px;
   padding-bottom: 50px; }
-  /* line 331, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 368, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid .fa {
     font-size: 16px;
     width: 18px; }
-    /* line 334, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    /* line 371, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
     section#contact.container-fluid .fa.fa-mobile-phone, section#contact.container-fluid .fa.fa-pencil {
       font-size: 20px; }
-  /* line 336, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 373, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid .radio-wrapper {
     margin-top: 7px; }
-    /* line 338, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    /* line 375, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
     section#contact.container-fluid .radio-wrapper .radio {
       display: inline;
       margin-right: 2em; }
-      /* line 341, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+      /* line 378, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
       section#contact.container-fluid .radio-wrapper .radio label {
         padding-left: 2em; }
-      /* line 343, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+      /* line 380, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
       section#contact.container-fluid .radio-wrapper .radio input[type="radio"] {
         margin-top: -20px;
         margin-left: -2em; }
-  /* line 346, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 383, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid address {
     margin-bottom: .2em; }
-    /* line 353, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    /* line 390, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
     section#contact.container-fluid address .fa {
       position: absolute;
       top: 2px; }
-    /* line 357, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+    /* line 394, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
     section#contact.container-fluid address strong + p {
       margin-left: 1.8em; }
-  /* line 359, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 396, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid #contact-success-message, section#contact.container-fluid #contact-warning-message, section#contact.container-fluid #contact-failure-message {
     display: none; }
-  /* line 361, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 398, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid .form-required, section#contact.container-fluid .form-error {
     color: #f00; }
 
-/* line 364, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 401, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .btn-youtube {
   background-color: #bb0000;
   color: #fff;
@@ -8857,72 +9088,72 @@ section#contact.container-fluid {
     color: #bb0000;
     background-color: #fff; }
 
-/* line 367, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+/* line 404, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 footer#page-footer {
   color: #f0f0f0;
   page-break-inside: avoid; }
-  /* line 371, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 408, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer a {
     color: #eeeeee; }
-  /* line 373, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 410, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer .social-links {
     margin: 1em auto 2em; }
-  /* line 375, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 412, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer .btn-social-icon {
     margin: 4px 8px; }
-  /* line 381, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 418, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer #copyright {
     margin-top: 2em; }
-  /* line 383, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 420, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer #non-profit-statement {
     margin-top: 0; }
 
 @media print {
-  /* line 388, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
-  section#intro p {
-    width: 50%; }
-  /* line 390, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 424, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  h2 {
+    margin: 0; }
+  /* line 426, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section.container-fluid, article.container-fluid {
     padding: initial; }
-  /* line 392, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 428, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article.container-fluid {
     padding: initial; }
-  /* line 394, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 430, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section.container-fluid:not(#community), article.container-fluid {
     padding: initial; }
-  /* line 396, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 432, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   header#page-header {
     position: initial;
     height: initial;
     top: initial; }
-  /* line 400, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 436, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   #page-header-row {
     background-color: rgba(0, 0, 0, 0.7);
     border-color: transparent;
     position: initial;
     bottom: initial; }
-  /* line 405, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 441, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#community h2 {
     margin-bottom: 0; }
-  /* line 408, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 444, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article.community img {
     display: none !important; }
-  /* line 410, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 446, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article.community p, article.community ul, article.community blockquote, article.community dl {
     width: 48%; }
-  /* line 412, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 448, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article.community blockquote p, article.community ul p {
     width: 100%; }
-  /* line 414, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 450, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   article.community ul {
     width: 40%; }
-  /* line 416, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 452, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .leader-card {
     width: 33%; }
-  /* line 419, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 455, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   section#contact.container-fluid address {
     width: 50%; }
-  /* line 422, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  /* line 458, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   footer#page-footer .social-links {
     display: none; } }
 

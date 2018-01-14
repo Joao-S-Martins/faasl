@@ -38,10 +38,16 @@ header#page-header h1
       font-size: 45%
     small + small
       font-size: 120%
+p
+  margin-bottom: 1em
 blockquote
   font-family: "caliban-std", $body-font
   font-size: 150%
+  p
+    margin-bottom: 0.5em
   .btn
+    @extend .pull-right
+  &blockquote-reverse .btn
     @extend .pull-left
 .indent
   text-indent: 1em
@@ -152,6 +158,22 @@ blockquote
   @include button-variant($text-color, $gold, darken($gold, 15%))
 .btn-blue
   @include button-variant($white-text, $light-blue, darken($light-blue, 15%))
+.btn-green
+  @include button-variant($white-text, $brand-primary, darken($brand-primary, 15%))
+.call-to-action
+  @extend .btn
+  @extend .col-xs-6
+  @extend .col-xs-offset-3
+  @extend .hidden-print
+  @include box-shadow(2px 2px 10px 0px rgba(0,0,0,0.2))
+  padding: 10px
+  margin-top: 1em
+  &.blue
+    @extend .btn-blue
+  &.green
+    @extend .btn-green
+  &.gold
+    @extend .btn-gold
 
 body
   letter-spacing: .05em
@@ -173,6 +195,7 @@ nav#main-navbar
     background-color: $navbar-default-link-active-bg
   .btn-donate
     @extend .btn-gold
+    @include box-shadow(2px 2px 10px 0px rgba(0,0,0,0.2))
     padding: 6px 12px
     margin-top: 7px
 nav#main-navbar.affix
@@ -252,6 +275,10 @@ section#intro
     margin-bottom: auto
   p
     @extend .indent
+@media (max-width: 767px)
+  section#intro
+    blockquote
+      border: 0
 
 article.community
   .img-wrapper
@@ -298,7 +325,12 @@ article#grow
       bottom: ($line-height-computed / 4)
   p
     @extend .indent
+@media (max-width: 445px)
+  article#grow blockquote a.btn
+    bottom: inherit
 article#perform
+  dt
+    text-transform: capitalize
   img
     border-color: $text-color
 
@@ -307,6 +339,11 @@ section#calendar.container-fluid
   @extend .wave-background
   padding-top: $navbar-height
   padding-bottom: $navbar-height
+  .btn-calendar
+    @extend .btn
+    @extend .btn-blue
+    padding: 10px
+    margin-bottom: 1em
 
 section#leadership
   @extend .argyle-background
@@ -384,9 +421,8 @@ footer#page-footer
     margin-top: 0
 
 @media print
-  section#intro
-    p
-      width: 50%
+  h2
+    margin: 0
   section.container-fluid, article.container-fluid
     padding: initial
   article.container-fluid
