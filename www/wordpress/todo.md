@@ -47,23 +47,23 @@
 - [ ] Add CSS3 linting and validation
 - [ ] Add JS linting
 - [x] Remove Glyphicon font loading
-- [ ] Complete Open Graph
-- [ ] Complete Twitter Card
+- [x] Complete Open Graph
+- [x] Complete Twitter Card
 - [ ] Complete schema.org
 - [ ] Submit sitemap to Google
 - [ ] Spellcheck{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Implement Subscribe modal{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Find out how radio buttons rendered for Chrysantha{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-- [ ] Stories - Replace logo
-- [ ] Stories - Point logo to faasl.org
+- [x] Stories - Replace logo
+- [x] Stories - Point logo to faasl.org
 - [x] More calls to action
-- [ ] Fix Email MX records
-- [ ] Stories - Adjust links at bottom
+- [x] Fix Email MX records
+- [x] Stories - Adjust links at bottom
 - [ ] Create local Stories page
-- [ ] Stories - Uncapitalize "Lives" and align text with "community" message
-- [ ] Update social profile images
+- [x] Stories - Uncapitalize "Lives" and align text with "community" message
 - [ ] Double-check all social links
 - [x] Create social banners
-- [ ] Updated phone number to work as call link on mobile devices
-- [ ] Upload social profiles & banner images
+- [x] Updated phone number to work as call link on mobile devices
+- [x] Upload social profiles & banner images
+- [ ] Point MX to Google
+- [x] Add mailchimp pop-up subscribe{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 
