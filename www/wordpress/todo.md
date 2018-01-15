@@ -51,7 +51,7 @@
 - [x] Complete Twitter Card
 - [ ] Complete schema.org
 - [ ] Submit sitemap to Google
-- [ ] Spellcheck{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
+- [x] Spellcheck{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [ ] Find out how radio buttons rendered for Chrysantha{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
 - [x] Stories - Replace logo
 - [x] Stories - Point logo to faasl.org
