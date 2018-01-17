@@ -116,6 +116,19 @@ module.exports = function(grunt) {
 //        keep: ['/important/images/at/server/*.jpg'],
         simple: true,
         useList: true
+      },
+      release: {
+        auth: {
+          host: 'ftp.faasl.org',
+          port: 21,
+          authKey: 'faasl'
+        },
+        src: 'dist/',
+        dest: '/',
+        exclusions: ['./**/.DS_Store', './**/Thumbs.db', 'tmp'],
+//        keep: ['/important/images/at/server/*.jpg'],
+        simple: true,
+        useList: true
       }
     },
     gitadd: {
