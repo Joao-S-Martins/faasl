@@ -148,6 +148,7 @@ module.exports = function(grunt) {
         }
       }
     },
+    gitpush: {},
     htmlmin: {
       dist: {
         options: {
@@ -367,7 +368,7 @@ module.exports = function(grunt) {
   grunt.registerTask('img', ['newer:imagemin:jpgs', 'copy:svg']);
   grunt.registerTask('js', ['newer:uglify']);
   grunt.registerTask('perf', ['connect:phantomas']);
-  grunt.registerTask('release', ['release-build', 'bump-only:minor', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
+  grunt.registerTask('release', ['release-build', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'gitpush']);
   grunt.registerTask('release-build', ['clean', 'cgi', 'img', 'fonts', 'css', 'js', 'release-html', 'favicons']);
   grunt.registerTask('release-html', ['processhtml:release', 'newer:htmlmin']);
   grunt.registerTask('test', ['beta-build', 'connect:dist']);

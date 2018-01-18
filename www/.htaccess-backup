@@ -25,6 +25,8 @@ RewriteCond %{HTTP_HOST} subscribe.faasl.org [NC]
 RewriteRule ^(.*)$ http://eepurl.com/bU0fQf [L]
 RewriteCond %{HTTP_HOST} brochure.faasl.org [NC]
 RewriteRule ^(.*)$ http://www.faasl.org/downloads/tri-fold_brochure.pdf [L]
+RewriteCond %{HTTP_HOST} contact.faasl.org [NC]
+RewriteRule ^(.*)$ http://www.faasl.org/index.html#contact [NE,L]
 RewriteCond %{HTTP_HOST} log.faasl.org [NC]
 RewriteRule ^(.*)$ https://goo.gl/forms/yfo74L2SO0LK6Pst1 [L]
 
