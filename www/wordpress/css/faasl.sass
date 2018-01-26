@@ -88,8 +88,38 @@ blockquote
 
 
 /* Utilities */
+.black-bg
+  background-color: #000000
+  color: $white-text
+  a
+    color: $gray-lighter
+
+.green-bg
+  background: $complement1
+  color: $white-text
+  h2
+    color: $white-text
+  h3 small
+    color: lighten($compound2, 11%)
+  blockquote
+  border-right-color: lighten($compound2, 11%)
+  .fa, footer
+    color: lighten($compound2, 11%)
+
+.yellow-bg
+  background-color: $compound1
+  h3 small
+    color: darken($complement1, 0%)
+  img
+    border-color: lighten($complement1, 0%)
+
+.white-bg
+  background-color: #fff
+  color: $text-color
+
 // Backgrounds ported from http://lea.verou.me/css3patterns/
-.argyle-background
+.argyle-bg
+  @extend .green-bg
   background-color: $brand-primary;
   background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1))
   background-size: 70px 120px
@@ -99,7 +129,8 @@ blockquote
   background-color: lighten($gold, 60%)
   background-size: 128px 128px
 
-.carbon-background
+.carbon-bg
+  @extend .black-bg
   background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424)
   background-color: #131313
   background-size: 20px 20px
@@ -142,7 +173,8 @@ blockquote
   background-color: #300
   background-size: 100px 100px
   
-.wave-background
+.wave-bg
+  @extend .yellow-bg
   background: linear-gradient(#FFFFFF 50%, rgba(255,255,255,0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 $compound1
   background-size: 110px 220px
   background-repeat: repeat-x
@@ -299,33 +331,27 @@ article.community
     @extend .indent
 
 section#community, article#learn
-  background-color: $compound1
-  h3 small
-    color: darken($complement1, 0%)
+  @extend .yellow-bg
   p
     @extend .indent
+
 article#learn
+  @extend .yellow-bg
   padding-top: 0
-  img
-    border-color: lighten($complement1, 0%)
+    
+
+
 article#grow
-  background: $complement1
-  color: $white-text
+  @extend .green-bg
   .img-wrapper
     @extend .col-md-push-6
     overflow: hidden
   img
     border-color: lighten($compound2, 11%)
-  h3 small
-    color: lighten($compound2, 11%)
-  blockquote
-    border-right-color: lighten($compound2, 11%)
-    .fa, footer
-      color: lighten($compound2, 11%)
-    a.btn
-      position: absolute
-      left: 30px
-      bottom: ($line-height-computed / 4)
+  blockquote a.btn
+    position: absolute
+    left: 30px
+    bottom: ($line-height-computed / 4)
   p
     @extend .indent
   .call-to-action
@@ -341,7 +367,7 @@ article#perform
 
 // Must set calendar embed `bgcolor` to match this background
 section#calendar.container-fluid
-  @extend .wave-background
+  @extend .wave-bg
   padding-top: $navbar-height
   padding-bottom: $navbar-height
   .btn-calendar
@@ -351,12 +377,11 @@ section#calendar.container-fluid
     margin-bottom: 1em
 
 section#leadership
-  @extend .argyle-background
-  h2
-    color: $white-text
+  color: $text-color
+  @extend .argyle-bg
 
 .leader-card-inner
-  background-color: #fff
+  @extend .white-bg
   border-radius: 10px
   @include box-shadow(4px 4px 10px 0px rgba(0,0,0,0.3))
   margin: 10px 15px
@@ -370,6 +395,22 @@ section#leadership
 section#contact.container-fluid
   padding-top: $navbar-height
   padding-bottom: $navbar-height
+
+address
+  @extend .col-xs-12
+  @extend .col-sm-6
+  @extend .col-md-12
+  @extend .col-lg-6
+  @extend .text-left
+  margin-bottom: .2em
+  .fa
+    @extend .pull-left
+    position: absolute
+    top: 2px
+  strong + p
+    margin-left: 1.8em
+  
+#contact-form
   .fa
     font-size: 16px
     width: 18px
@@ -385,19 +426,6 @@ section#contact.container-fluid
       & input[type="radio"]
         margin-top: -20px
         margin-left: -2em
-  address
-    @extend .col-xs-12
-    @extend .col-sm-6
-    @extend .col-md-12
-    @extend .col-lg-6
-    @extend .text-left
-    margin-bottom: .2em
-    .fa
-      @extend .pull-left
-      position: absolute
-      top: 2px
-    strong + p
-      margin-left: 1.8em
   #contact-success-message, #contact-warning-message, #contact-failure-message
     display: none
   .form-required, .form-error
@@ -407,12 +435,9 @@ section#contact.container-fluid
   @include btn-social($youtube)
 
 footer#page-footer
-  @extend .carbon-background
-  color: $white-text
+  @extend .carbon-bg
   padding-bottom: 65px
   page-break-inside: avoid
-  a
-    color: $gray-lighter
   .social-links
     margin: 1em auto 2em
   .btn-social-icon

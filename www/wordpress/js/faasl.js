@@ -145,5 +145,17 @@ $(document).ready(function() {
       data: $('form#contact-form').serialize()
     }).done(formSuccess).fail(formFailure);
   });
+  
+  $('.instrument-list a').click(function (e) {
+    e.preventDefault()
+    var href = e.target.href;
+//    var url =  'https://www.youtube.com/embed/CCTeSjpDsIs?start=';
+    // <iframe width="560" height="315" src="https://www.youtube.com/embed/CCTeSjpDsIs?start=61" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    var time = href.split('=')[1].split('m');
+    var m = time[0];
+    var s = time[1].split('s')[0];
+    time = Number(m) * 60 + Number(s);
+    seekVideo(time);
+  })
 });
 
