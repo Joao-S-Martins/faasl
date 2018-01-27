@@ -8539,14 +8539,16 @@ blockquote {
 /* line 97, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
 .green-bg, .argyle-bg, section#leadership, article#grow {
   background: #355749;
-  color: #f0f0f0;
-  border-right-color: #fff293; }
+  color: #f0f0f0; }
   /* line 100, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .green-bg h2, .argyle-bg h2, section#leadership h2, article#grow h2 {
     color: #f0f0f0; }
   /* line 102, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .green-bg h3 small, .argyle-bg h3 small, section#leadership h3 small, article#grow h3 small {
     color: #fff293; }
+  /* line 104, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
+  .green-bg blockquote, .argyle-bg blockquote, section#leadership blockquote, article#grow blockquote {
+    border-right-color: #fff293; }
   /* line 106, /Users/jmartins/dev/faasl/www/wordpress/css/faasl.sass */
   .green-bg .fa, .argyle-bg .fa, section#leadership .fa, article#grow .fa, .green-bg footer, .argyle-bg footer, section#leadership footer, article#grow footer {
     color: #fff293; }
