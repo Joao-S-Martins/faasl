@@ -148,6 +148,8 @@ $(document).ready(function() {
   
   $('.instrument-list a').click(function (e) {
     e.preventDefault()
+    $('.instrument-list a').removeClass('active');
+    $(e.target).addClass('active');
     var href = e.target.href;
 //    var url =  'https://www.youtube.com/embed/CCTeSjpDsIs?start=';
     // <iframe width="560" height="315" src="https://www.youtube.com/embed/CCTeSjpDsIs?start=61" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -156,6 +158,7 @@ $(document).ready(function() {
     var s = time[1].split('s')[0];
     time = Number(m) * 60 + Number(s);
     seekVideo(time);
+    playVideo();
   })
 });
 

@@ -50,7 +50,7 @@
   <link rel="stylesheet" href="https://use.typekit.net/puk0cdd.css">
 </head>
 
-<body data-spy="scroll" data-target="#main-navbar" data-offset="50">
+<body class="students" data-spy="scroll" data-target="#main-navbar" data-offset="50">
   <!--  START .body-wrapper  -->
   <div class="body-wrapper">
     <!--  START nav.navbar.top-nav-collapse  -->
@@ -74,11 +74,6 @@
           <div class="nav navbar-nav navbar-right">
             <li><a href="/index.html" class="btn btn-donate" title="Go to our newsletter subscription page">About Us</a></li>
           </div>
-<!--
-          <div class="nav navbar-nav navbar-right">
-            <li><a href="http://help.faasl.org" class="btn btn-donate">Donate</a></li>
-          </div>
--->
         </div>
         <!-- /.navbar-collapse -->
       </div>
@@ -89,8 +84,6 @@
     <section id="title-carousel" class="carousel-fluid slide" data-ride="carousel" data-interval="6000" data-pause="" data-keyboard="false">
       <div class="carousel-inner" role="listbox">
         <div class="item active"></div>
-        <div class="item"></div>
-        <div class="item"></div>
         <div class="item"></div>
       </div>
     </section>
@@ -133,87 +126,80 @@
     <section id="instruments" class="container-fluid green-bg">
       <div class="row">
         <h2>Choose an instrument<br><small>and fall head-over-heals in love</small></h2>
-        <div class="col-md-6">
-          <h3 class="">Common starting instruments</h3>
-          <p class="">These instruments are the most common primarily due to their size and cost.
+        <div class="col-xs-12 col-md-9 col-md-push-3">
+          <h3 class="">Band instruments</h3>
+          <p class="hidden-print">Click to play the video or select an instrument to jump directly to its demo. Instruments with an asterisk are the most common for beginners.
           </p>
-          <ul class="instrument-list">
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=5m30s" target="_blank" title="Play a video demo of this instrument">Alto Saxophone</a></li>
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=3m23s" target="_blank" title="Play a video demo of this instrument">Clarinet</a></li>
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=0m17s" target="_blank" title="Play a video demo of this instrument">Flute</a></li>
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=18m43s" target="_blank" title="Play a video demo of this instrument">Snare drum</a></li>
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=12m47s" target="_blank" title="Play a video demo of this instrument">Trombone</a></li>
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=8m25s" target="_blank" title="Play a video demo of this instrument">Trumpet</a></li>
-          </ul>
+          <p class="visible-print-inline">Visit http://students.faasl.org for an interactive demo video of these instruments.</p>
+          <div id="instruments-demo" class="embed-responsive embed-responsive-16by9 hidden-print">
+            <div id="player"></div>
+          </div>
         </div>
-        <div class="col-md-6">
-          <h3 class="">Other acceptable instruments</h3>
-          <p class="">These are instruments that can be taught as part of our program. Due to their size or complexity, they aren't usually what an eight year old student starts with. Older students may start with or transition to these instruments.
-          </p>
-          <ul class="instrument-list">
-            <li>Baritone Saxophone</li>
-            <li>Bass clarinet</li>
-            <li>E-flat clarinet</li>
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=15m16s" target="_blank" title="Play a video demo of this instrument">Euphonium</a></li>
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=10m11s" target="_blank" title="Play a video demo of this instrument">French horn</a></li>
-            <li><a href="https://youtu.be/CCTeSjpDsIs?t=1m27s" target="_blank" title="Play a video demo of this instrument">Oboe</a></li>
-            <li>Piccolo</li>
-              <li><a href="https://youtu.be/CCTeSjpDsIs?t=19m38s" target="_blank" title="Play a video demo of this instrument">Pitched percussion</a></li>
-            <li>Tenor Saxophone</li>
-              <li><a href="https://youtu.be/CCTeSjpDsIs?t=17m6s" target="_blank" title="Play a video demo of this instrument">Tuba</a></li>
-          </ul>
-        </div>
-        <div id="instruments-demo" class="embed-responsive embed-responsive-16by9 col-xs-12">
-          <div id="player"></div>
+        <div class="instrument-list white-bg col-xs-12 col-md-3 col-md-pull-9">
+          <a href="https://youtu.be/CCTeSjpDsIs?t=5m30s" target="_blank" title="Play a video demo of this instrument">Alto Saxophone <span class="fa fa-asterisk"></span></a>
+          <li class="disabled">Tenor Saxophone</li>
+          <li class="disabled">Baritone Saxophone</li>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=3m23s" target="_blank" title="Play a video demo of this instrument">Clarinet <span class="fa fa-asterisk"></span></a>
+          <li class="disabled">Bass clarinet</li>
+          <li class="disabled">E-flat clarinet</li>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=1m27s" target="_blank" title="Play a video demo of this instrument">Oboe</a>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=0m17s" target="_blank" title="Play a video demo of this instrument">Flute <span class="fa fa-asterisk"></span></a>
+          <li class="disabled">Piccolo</li>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=18m43s" target="_blank" title="Play a video demo of this instrument">Snare drum <span class="fa fa-asterisk"></span></a>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=19m38s" target="_blank" title="Play a video demo of this instrument">Pitched percussion</a>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=12m47s" target="_blank" title="Play a video demo of this instrument">Trombone <span class="fa fa-asterisk"></span></a>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=8m25s" target="_blank" title="Play a video demo of this instrument">Trumpet <span class="fa fa-asterisk"></span></a>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=15m16s" target="_blank" title="Play a video demo of this instrument">Euphonium</a>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=10m11s" target="_blank" title="Play a video demo of this instrument">French horn</a>
+          <a href="https://youtu.be/CCTeSjpDsIs?t=17m6s" target="_blank" title="Play a video demo of this instrument">Tuba</a>
         </div>
       </div>
     </section>
     <section id="materials" class="container-fluid white-bg">
       <div class="row">
-        <h3 class="">Other supplies<br><small>and educational materials</small></h3>
+        <h3>Educational materials<br><small>and recommended stores</small></h3>
+        
         <div class="col-md-6">
-          <p class="">Here is a list of items requered by each type of instrument for them to be played and maintained. Some of these things might be included with your instrument already.
+          <p>Each student will need a copy of the red instructional method book, <em>"Standard of Excellence, book 1"</em>.</p>
+          <img class="img-responsive" src="/img/standards-of-excel-001.jpg" title="A short stack of method books. Credit to drumsonsale.com" style="max-width: 450px; max-height: 450px; ">
+          <div class="caption alert alert-warning">Purchase the version of the book that is written for your chosen instrument.</div>
+          <hr />
+          <p>Additionally, here is a list of items that your instrument will regularly need.
           </p>
           <dl class="well dl-horizontal" title="List of accessories required by each instrument type">
-            <dt>Clarinets</dt>
+            <dt>Most woodwinds</dt>
             <dd>Extra reeds, a swab &amp; cork grease</dd>
             <dt>Flutes</dt>
             <dd>A swab</dd>
-            <dt>Trumpets</dt>
+            <dt>Most brass</dt>
             <dd>Valve oil &amp; slide grease</dd>
             <dt>Trombones</dt>
             <dd>Slide oil</dd>
             <dt>Drums</dt>
             <dd>An extra pair of sticks</dd>
-            <dt>Saxophones</dt>
-            <dd>Extra reeds &amp; a swab</dd>
           </dl>
         </div>
         <div class="col-md-6">
-          <p>Each student also needs a copy of our instructional method book, <em>"Standard of Excellence, book 1"</em>.
-          <img class="img-responsive" src="/img/standards-of-excel-001.jpg" title="A short stack of method books. Credit to drumsonsale.com">
-          </p>
-          <div class="caption alert alert-warning">Make sure to purchase the version of the book that is written for your chosen instrument.</div>
+          <p>Our musicians have been happy to work with these local music shops through the years.</p>
+          <ul>
+            <li><a href="http://www.agmusic.com/" title="Musical instrument store in Oakland" target="_blank">A &amp; G Music, Oakland</a></li>
+            <li><a href="https://www.facebook.com/MusicUnlimitedSanLeandro/" title="Musical instrument store in San Leandro" target="_blank">Music Unlimited, San Leandro</a></li>
+            <li><a href="http://www.abcmusiccastrovalley.com/" title="Musical instrument store in Castro Valley" target="_blank">ABC Music, Castro Valley</a></li>
+            <li><a href="http://jamsmusicdublin.com/" title="Musical instrument store in Dublin" target="_blank">Jams Music, Dublin</a></li>
+            <li><a href="http://www.allegromusic.net/" title="Musical instrument store in Fremont" target="_blank">Allegro Music, Fremont</a></li>
+          </ul>
+          <p><a href="http://www.wwbw.com" title="Online music shop specializing in wind instruments" target="_blank">Woodwind &amp; Brasswind</a> and <a href="musiciansfriend.com" title="An online music shop with some wind instrument support" target="_blank">Musician's Friend</a> are popular online shops, but we recommend visiting a local store with knowledable staff when possible.</p>
         </div>
-      </div>
-    </section>
-    <section class="container-fluid wave-bg">
-      <div class="row">
-        <h2>Stores we recommend TODO create a map</h2>
-        <ul>
-          <li>A&G Music: Oakland</li>
-          <li>Music Unlimited: San Leandro</li>
-          <li>ABC Music: CV</li>
-          <li>Jams Music: Dublin</li>
-          <li>Allegro Music: Fremont</li>
-          <li>Woodwind and Brasswind: wwbw.com</li>
-          <li>Musicians Friend: musiciansfriend.com</li>
-        </ul>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-4by3">
+            <iframe src="https://www.google.com/maps/d/u/2/embed?mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa"></iframe>
+          </div>
+        </div>
       </div>
     </section>
     <!--  END section#community  -->
     <!--  START section#leadership  -->
-    <section id="faq" class="container-fluid argyle-bg">
+    <section id="faq" class="container-fluid wave-bg">
       <div class="row">
         <h2 class="col-xs-12">FAQs</h2>
       </div>
@@ -471,7 +457,6 @@
   <script>
     var tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
-    tag.className = 'embed-responsive-item';//id="instruments-demo" class="embed-responsive-item" 
     var firstScriptTag = document.getElementsByTagName('script')[0];
     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -487,6 +472,10 @@
 
     function onPlayerReady(event) {
       event.target.setVolume(100);
+    }
+    
+    function playVideo() {
+      player.playVideo();
     }
     
     function seekVideo(s) {
