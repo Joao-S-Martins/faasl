@@ -252,7 +252,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'dist/tmp/faasl.css': 'css/faasl.sass',
+          'css/faasl.css': 'css/faasl.sass',
           'dist/css/ie9.css': 'css/ie9.sass'
         }
       }

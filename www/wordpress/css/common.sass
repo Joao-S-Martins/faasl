@@ -1,0 +1,408 @@
+/* Common Sass Document */
+@import 'variables.sass'
+@import './../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap'
+@import './../node_modules/bootstrap-social/bootstrap-social.scss'
+
+/* Typography */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+  font-family: $heading-serif
+  letter-spacing: .05em
+  line-height: 150%
+  margin-bottom: 1em
+  text-transform: capitalize
+h1 small, h2 small, h3 small, h4 small, h4.card-title, h5 small, h6 small
+  color: #767676 // WCAG AAA  for large text against white background
+  font-family: $fancy-sans-serif
+  letter-spacing: -.01em // Connect the script lettering
+  font-size: 100% // Override small behavior
+header#page-header h1
+  font-family: $page-header-font
+  margin-bottom: .1em
+  overflow: hidden
+  .h1
+    font-size: 150%
+  small
+    color: $gold
+    font-size: 65%
+  small + small
+    font-size: 150%
+@media (max-width: 500px)
+  header#page-header h1
+    .h1
+      font-size: 120%
+    small
+      font-size: 45%
+    small + small
+      font-size: 120%
+p
+  margin-bottom: 1em
+blockquote
+  font-family: "caliban-std", $body-font
+  font-size: 150%
+  p
+    margin-bottom: 0.5em
+  .btn
+    @extend .pull-right
+  &blockquote-reverse .btn
+    @extend .pull-left
+.indent
+  text-indent: 1em
+
+/* Mixins */
+@mixin image-overlay-bg
+  background-color: rgba(darken($brand-primary, 40%), .7)
+  border-color: rgba(0, 0, 0, 0)
+
+@mixin navbar-transition
+  @include transition(background-color .8s ease-out, border-color .8s ease-out)
+
+/* Animations */
+// SOURCE https://css-tricks.com/slide-in-as-you-scroll-down-boxes/
+.animate
+  position: relative
+
+.come-in
+  @include animation(come-in .8s ease forwards);
+  &.slide-up
+    transform: translateY(20%)
+  &.slide-left
+    transform: translateX(20%)
+  &.slide-right
+    transform: translateX(-20%)
+  &.stagger:nth-child(odd)
+    animation-duration: 0.6s; /* So they look staggered */
+
+@keyframes come-in
+  from
+    opacity: 0.2
+  to
+    transform: translateY(0)
+    opacity: 1
+
+
+/* Utilities */
+.btn-gold
+  @include button-variant($text-color, $gold, darken($gold, 15%))
+.btn-blue
+  @include button-variant($white-text, $light-blue, darken($light-blue, 15%))
+.btn-green
+  @include button-variant($white-text, $brand-primary, darken($brand-primary, 15%))
+.call-to-action
+  @extend .btn
+  @extend .col-xs-6
+  @extend .col-xs-offset-3
+  @extend .col-md-4
+  @extend .col-md-offset-1
+  @extend .hidden-print
+  @include box-shadow($sm-shadow)
+  padding: 10px
+  margin-top: 1em
+  &.blue
+    @extend .btn-blue
+  &.green
+    @extend .btn-green
+  &.gold
+    @extend .btn-gold
+
+.black-bg
+  background-color: #000000
+  color: $white-text
+  a
+    color: $gray-lighter
+
+.green-bg
+  background: $complement1
+  color: $white-text
+  img
+    border-color: lighten($compound2, 11%)
+  h1, h2, h3, h4, h5, h6
+    color: $white-text
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
+    color: lighten($compound2, 11%)
+  a
+    color: lighten($compound2, 11%);
+    &:hover, &:focus
+      color: lighten($compound2, 0%);
+  blockquote
+    border-right-color: lighten($compound2, 11%)
+    .fa, footer
+      color: lighten($compound2, 11%)
+  .call-to-action
+    @extend .btn-gold
+
+.yellow-bg
+  background-color: $compound1
+  img
+    border-color: lighten($complement1, 0%)
+  h1, h2, h3, h4, h5, h6
+    color: $text-color
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
+    color: darken($complement1, 0%)
+  a
+    color: darken($complement1, 0%)
+    &:hover, &:focus
+      color: darken($complement1, 12%)
+  blockquote
+    color: $text-color
+    border-right-color: $headings-small-color
+    .fa, footer
+      color: darken($complement1, 0%)
+  .call-to-action
+    @extend .btn-blue
+
+.white-bg
+  background-color: #fff
+  color: $text-color
+  img
+    border-color: $text-color
+  h1, h2, h3, h4, h5, h6
+    color: $text-color
+  h1 small, h2 small, h3 small, h4 small, h5 small, h6 small
+    color: $headings-small-color
+  a
+    color: $link-color
+    &:hover, &:focus
+      color: $link-hover-color
+  blockquote
+    color: $text-color
+    border-right-color: $headings-small-color
+    .fa, footer
+      color: $headings-small-color
+  .call-to-action
+    @extend .btn-green
+
+// Backgrounds ported from http://lea.verou.me/css3patterns/
+.argyle-bg
+  @extend .green-bg
+  background-color: $brand-primary;
+  background-image: repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px), linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)), linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1))
+  background-size: 70px 120px
+
+.arrows-background
+  background: linear-gradient(45deg, lighten($brand-primary, 67%) 45px, transparent 45px)64px 64px, linear-gradient(45deg, lighten($brand-primary, 67%) 45px, transparent 45px,transparent 91px, lighten($gold, 60%) 91px, lighten($gold, 60%) 135px, transparent 135px), linear-gradient(-45deg, lighten($brand-primary, 67%) 23px, transparent 23px, transparent 68px,lighten($brand-primary, 67%) 68px,lighten($brand-primary, 67%) 113px,transparent 113px,transparent 158px,lighten($brand-primary, 67%) 158px)
+  background-color: lighten($gold, 60%)
+  background-size: 128px 128px
+
+.carbon-bg
+  @extend .black-bg
+  background: linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px, linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px, linear-gradient(90deg, #1b1b1b 10px, transparent 10px), linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424)
+  background-color: #131313
+  background-size: 20px 20px
+  
+.cube-background
+  $cube-bg: $brand-primary //#556
+  $cube-bg-1: darken($brand-primary, 10%) //#445
+  $cube-bg-2: lighten($brand-primary, 10%) //#99a
+  background-color: #556;
+  background-image: linear-gradient(30deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(150deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(30deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(150deg, $cube-bg-1 12%, transparent 12.5%, transparent 87%, $cube-bg-1 87.5%, $cube-bg-1), linear-gradient(60deg, $cube-bg-2 25%, transparent 25.5%, transparent 75%, $cube-bg-2 75%, $cube-bg-2),  linear-gradient(60deg, $cube-bg-2 25%, transparent 25.5%, transparent 75%, $cube-bg-2 75%, $cube-bg-2)
+  background-size: 80px 140px
+  background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px
+
+.half-rombes-background
+  background: $brand-primary
+  background: linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0, linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 0 0, linear-gradient(115deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px, linear-gradient(245deg, transparent 75%, rgba(255,255,255,.8) 75%) 7px -15px, lighten($brand-primary, 65%)
+  background-size: 15px 30px
+
+.hearts-background
+  $hearts-bg     : lighten($brand-primary, 50%) //#b03
+  $hearts-bg-1 : lighten($brand-primary, 60%) //#d35
+  $hearts-bg-2 : rgba($brand-primary,0) //rgba(187,0,51,0)
+  $hearts-bg-3 : rgba($brand-primary,0) //rgba(221,51,85,0)
+  background: radial-gradient(circle closest-side at 60% 43%, $hearts-bg 26%, $hearts-bg-2 27%), radial-gradient(circle closest-side at 40% 43%, $hearts-bg 26%, $hearts-bg-2 27%), radial-gradient(circle closest-side at 40% 22%, $hearts-bg-1 45%, $hearts-bg-3 46%), radial-gradient(circle closest-side at 60% 22%, $hearts-bg-1 45%, $hearts-bg-3 46%), radial-gradient(circle closest-side at 50% 35%, $hearts-bg-1 30%, $hearts-bg-3 31%), radial-gradient(circle closest-side at 60% 43%, $hearts-bg 26%, $hearts-bg-2 27%) 50px 50px, radial-gradient(circle closest-side at 40% 43%, $hearts-bg 26%, $hearts-bg-2 27%) 50px 50px, radial-gradient(circle closest-side at 40% 22%, $hearts-bg-1 45%, $hearts-bg-3 46%) 50px 50px, radial-gradient(circle closest-side at 60% 22%, $hearts-bg-1 45%, $hearts-bg-3 46%) 50px 50px, radial-gradient(circle closest-side at 50% 35%, $hearts-bg-1 30%, $hearts-bg-3 31%) 50px 50px
+  background-color: $hearts-bg
+  background-size: 100px 100px
+  
+.marrakesh-background
+  background-color: white
+  background-image: radial-gradient($brand-primary 9px, transparent 10px),         repeating-radial-gradient($brand-primary 0, $brand-primary 4px, transparent 5px, transparent 20px, $brand-primary 21px, $brand-primary 25px, transparent 26px, transparent 50px)
+  background-size: 30px 30px, 90px 90px
+  background-position: 0 0
+  
+.stairs-background
+  background: linear-gradient(63deg, $brand-primary 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, $brand-primary 78%), linear-gradient(63deg, transparent 34%, $brand-primary 38%, $brand-primary 58%, transparent 62%), #444
+  background-size: 16px 48px;
+  
+.upholstery-background
+  background: radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 9%, hsla(0, 100%, 20%, 0) 9%) 0 0, radial-gradient(hsl(0, 100%, 27%) 4%, hsl(0, 100%, 18%) 8%, hsla(0, 100%, 20%, 0) 10%) 50px 50px, radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 50px 0, radial-gradient(hsla(0, 100%, 30%, 0.8) 20%, hsla(0, 100%, 20%, 0)) 0 50px, radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 50px 0, radial-gradient(hsla(0, 100%, 20%, 1) 35%, hsla(0, 100%, 20%, 0) 60%) 100px 50px, radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 0 0, radial-gradient(hsla(0, 100%, 15%, 0.7), hsla(0, 100%, 20%, 0)) 50px 50px, linear-gradient(45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0, linear-gradient(-45deg, hsla(0, 100%, 20%, 0) 49%, hsla(0, 100%, 0%, 1) 50%, hsla(0, 100%, 20%, 0) 70%) 0 0
+  background-color: #300
+  background-size: 100px 100px
+  
+.wave-bg
+  @extend .yellow-bg
+  background: linear-gradient(#FFFFFF 50%, rgba(255,255,255,0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 53%, rgba(255,255,255,0) 0) 0 0, radial-gradient(circle closest-side, #FFFFFF 50%, rgba(255,255,255,0) 0) 55px 0 $compound1
+  background-size: 110px 220px
+  background-repeat: repeat-x
+
+.weave-background
+  background: linear-gradient(135deg, lighten($compound2, 0%) 22px, lighten($compound2, 60%) 22px, lighten($compound2, 60%) 24px, transparent 24px, transparent 67px, lighten($compound2, 60%) 67px, lighten($compound2, 60%) 69px, transparent 69px), linear-gradient(225deg, lighten($compound2, 0%) 22px, lighten($compound2, 60%) 22px, lighten($compound2, 60%) 24px, transparent 24px, transparent 67px, lighten($compound2, 60%) 67px, lighten($compound2, 60%) 69px, transparent 69px)0 64px
+  background-color: lighten($compound2, 0%)
+  background-size: 64px 128px
+
+/* Common */
+body
+  letter-spacing: .05em
+  position: relative
+
+nav#main-navbar
+  @include navbar-transition
+  @include image-overlay-bg
+  @include box-shadow($md-shadow)
+  top: calc(100vh - 50px)
+  position: absolute
+  height: $navbar-height
+  width: 100%
+  z-index: $zindex-navbar
+  .navbar-brand
+    width: 64px;
+    padding: 8px $navbar-padding-horizontal
+  .navbar-toggle:hover, .navbar-toggle:focus
+    background-color: $navbar-default-link-active-bg
+  .btn-donate
+    @extend .btn-gold
+    @include box-shadow($sm-shadow)
+    padding: 6px 12px
+    margin-top: 7px
+nav#main-navbar.affix
+    position: fixed
+    top: 0
+    background-color: $navbar-default-bg
+    border-color: $navbar-default-border
+@media (max-width: 767px)
+  nav#main-navbar
+    .btn-donate
+      padding: 15px
+      margin-top: 0
+  .navbar-collapse
+    @include navbar-transition
+    @include image-overlay-bg
+  nav#main-navbar.affix
+    .navbar-collapse
+      background-color: $navbar-default-bg
+      border-color: $navbar-default-border
+
+.logo
+  height: 35px
+
+#title-carousel
+  @extend .hidden-print
+
+#title-carousel, #title-carousel .carousel-inner, #title-carousel .carousel-control
+  height: 100vh
+
+.carousel-inner
+  .item
+    background-position: center
+    background-attachment: fixed
+    background-repeat: no-repeat
+    background-size: cover
+    height: 100vh
+  
+.carousel-caption, .carousel-indicators, .carousel-control
+  @extend .sr-only
+
+header#page-header
+  position: absolute
+  height: 100vh
+  width: 100%
+  color: $gold
+  top: 0
+
+#page-header-row
+  @include image-overlay-bg
+  position: absolute
+  width: 100%
+  bottom: 50px
+
+section.container-fluid
+  padding: $navbar-height $grid-gutter-width ($navbar-height + $navbar-height)
+
+.card-inner
+  @extend .white-bg
+  border-radius: 10px
+  @include box-shadow($md-shadow)
+  margin: 10px 15px
+  padding: ($grid-gutter-width / 2)
+  .card-headshot
+    @extend .img-thumbnail
+    @include box-shadow($sm-shadow)
+  .card-shor-desc
+    @extend .text-justify
+
+address
+  @extend .col-xs-12
+  @extend .col-sm-6
+  @extend .col-md-12
+  @extend .col-lg-6
+  @extend .text-left
+  margin-bottom: .2em
+  .fa
+    @extend .pull-left
+    position: absolute
+    top: 2px
+  strong + p
+    margin-left: 1.8em
+
+#contact-form
+  .fa
+    font-size: 16px
+    width: 18px
+    &.fa-mobile-phone, &.fa-pencil
+      font-size: 20px
+  .radio-wrapper
+    margin-top: 7px
+    .radio
+      display: inline
+      margin-right: 2em
+      & label
+        padding-left: 2em
+      & input[type="radio"]
+        margin-top: -20px
+        margin-left: -2em
+  #contact-success-message, #contact-warning-message, #contact-failure-message
+    display: none
+  .form-required, .form-error
+    color: #f00
+
+.btn-youtube
+  @include btn-social($youtube)
+
+.map
+  @include box-shadow($lg-shadow)
+  border: 1px solid $gray-light
+
+footer#page-footer
+  @extend .carbon-bg
+  padding-bottom: 65px
+  page-break-inside: avoid
+  .social-links
+    margin: 1em auto 2em
+  .btn-social-icon
+    margin: 4px 8px
+  .subdomain
+    @extend .col-xs-6
+    @extend .col-sm-3
+    @extend .col-lg-2
+  #copyright
+    margin-top: 2em
+  #non-profit-statement
+    margin-top: 0
+
+@media print
+  h2
+    margin: 0
+  section.container-fluid
+    padding: initial $grid-gutter-width
+    page-break-inside: avoid
+  header#page-header
+    position: initial
+    height: initial
+    top: initial
+  #page-header-row
+    @include image-overlay-bg
+    position: initial
+    bottom: initial
+  .card
+    width: 33%
+  footer#page-footer
+    .social-links
+      display: none

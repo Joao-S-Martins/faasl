@@ -37,4 +37,6 @@ www/wordpress/license.txt
 www/wordpress/readme.html
 # www/wordpress/sitemap.xml
 www/wordpress/sitemap.xml.gz
+www/wordpress/css/*.css
+www/wordpress/css/*.css.map
 

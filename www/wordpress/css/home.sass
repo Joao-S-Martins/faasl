@@ -1,0 +1,130 @@
+/* Home Sass Document */
+@import 'imports.sass'
+
+body.home
+  section.container-fluid, article.container-fluid
+    padding: $navbar-height $grid-gutter-width 0
+    page-break-inside: avoid
+  article.container-fluid
+    padding-top: ($navbar-height + $navbar-height)
+  section.container-fluid:not(#community), article.container-fluid
+    padding-bottom: ($navbar-height + $navbar-height)
+  .carousel-inner
+    .item
+      background-image: url(/img/home_slide_1@2x.jpg)
+      & + .item
+        background-image: url(/img/home_slide_2@2x.jpg)
+        & + .item
+          background-image: url(/img/home_slide_3@2x.jpg)
+          & + .item
+            background-image: url(/img/home_slide_4@2x.jpg)
+
+  #intro
+    & + .row
+      margin-top: auto
+      margin-bottom: auto
+    p
+      @extend .indent
+
+  article.community
+    .img-wrapper
+      @extend .col-xs-12
+      @extend .col-md-6
+      @extend .text-center
+    img
+      @extend .img-responsive
+      @extend .img-thumbnail
+      background: none;
+      border-radius: 12px
+      margin-top: 20px
+      width: 640px
+    p
+      @extend .indent
+
+  section#community, article#learn
+    @extend .yellow-bg
+    p
+      @extend .indent
+
+  article#learn
+    @extend .yellow-bg
+    padding-top: 0
+
+  article#grow
+    @extend .green-bg
+    .img-wrapper
+      @extend .col-md-push-6
+      overflow: hidden
+    img
+      border-color: lighten($compound2, 11%)
+    blockquote a.btn
+      position: absolute
+      left: 30px
+      bottom: ($line-height-computed / 4)
+    p
+      @extend .indent
+    .call-to-action
+      @extend .col-md-offset-7
+
+  article#perform
+    padding-bottom: $navbar-height
+    dt
+      text-transform: capitalize
+    img
+      border-color: $text-color
+
+  // Must set calendar embed `bgcolor` to match this background
+  section#calendar.container-fluid
+    @extend .wave-bg
+    padding-top: $navbar-height
+    padding-bottom: $navbar-height
+    .btn-calendar
+      @extend .btn
+      @extend .btn-blue
+      padding: 10px
+      margin-bottom: 1em
+
+  section#leadership
+    color: $text-color
+    @extend .argyle-bg
+
+  section#contact.container-fluid
+    padding-top: $navbar-height
+    padding-bottom: $navbar-height
+
+@media (max-width: 445px)
+  body.home
+    article#grow blockquote a.btn
+      bottom: inherit
+
+@media (max-width: 767px)
+  body.home
+    article.container-fluid:not(#learn)
+      padding-top: $navbar-height
+    #intro
+      blockquote
+        border: 0
+
+@media print
+  body.home
+    section.container-fluid, article.container-fluid
+      padding: initial
+    article.container-fluid
+      padding: initial
+    section.container-fluid:not(#community), article.container-fluid
+      padding: initial
+    section#community
+      h2
+        margin-bottom: 0
+    article.community
+      img
+        display: none !important
+      p, ul, blockquote, dl
+        width: 48%
+      blockquote p, ul p
+        width: 100%
+      ul
+        width: 40%
+    section#contact.container-fluid
+      address
+        width: 50%

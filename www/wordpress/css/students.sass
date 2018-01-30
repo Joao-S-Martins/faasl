@@ -1,0 +1,97 @@
+/* Students Sass Document */
+@import 'imports.sass'
+
+body.students
+  .carousel-inner
+    .item
+      background-image: url(/img/home_slide_4@2x.jpg)
+      & + .item
+        background-image: url(/img/students_slide_1@2x.jpg)
+
+  #instruments
+    h3
+      margin: 0
+
+  #instruments-demo
+    margin-bottom: 1em
+    @include box-shadow($lg-shadow)
+
+  .instrument-list
+    @extend .list-group
+    p
+      @extend .green-bg
+      margin-left: 15px
+    background-color: initial
+    li
+      @extend .list-group-item
+      margin-left: 15px
+    a
+      @extend .list-group-item
+      margin-left: 15px
+      &.active, &.active:hover, &.active:active, &.active:focus
+        background-color: lighten($compound2, 11%)
+        border-color: lighten($compound2, 11%)
+        color: $text-color
+  #materials
+    padding-bottom: 0
+
+@media print
+  body.students
+    font-size: 14px
+    abbr[title]:after
+      content: ''
+    section.container-fluid
+      padding: 0 $grid-gutter-width
+      page-break-after: initial
+      page-break-before: avoid
+      page-break-inside: avoid
+    .comment
+      .col-md-6
+        width: 48%
+        float: left
+      .col-md-4
+        width: 30%
+        float: left
+      .col-md-3
+        width: 23%
+        float: left
+    a[href]:after
+      content: ''
+    #instruments
+      .col-md-9
+        width: 100%
+      .col-md-push-3
+        left: 0
+    .instrument-list
+      right: 0
+      width: 100%
+      li, a
+        border: 0
+        display: inline
+        padding-left: 0
+        white-space: pre
+        &:after
+          content: ','
+        &:last-child:after
+          content: ''
+    #materials
+      .col-md-6
+        width: 32%
+        float: left
+      dl.dl-horizontal
+        dt
+          float: initial
+          width: initial
+          clear: initial
+          text-align: initial
+          overflow: initial
+          text-overflow: initial
+          white-space: initial
+        dd
+          margin-left: initial
+          font-size: 12px
+    #connect
+      width: 100%
+      address
+        display: inline-block
+        width: initial
