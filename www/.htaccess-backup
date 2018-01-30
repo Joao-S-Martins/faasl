@@ -29,6 +29,10 @@ RewriteCond %{HTTP_HOST} contact.faasl.org [NC]
 RewriteRule ^(.*)$ http://www.faasl.org/index.html#contact [NE,L]
 RewriteCond %{HTTP_HOST} log.faasl.org [NC]
 RewriteRule ^(.*)$ https://goo.gl/forms/yfo74L2SO0LK6Pst1 [L]
+RewriteCond %{HTTP_HOST} students.faasl.org [NC]
+RewriteRule ^(.*)$ http://www.faasl.org/students.html [L]
+RewriteCond %{HTTP_HOST} volunteer.faasl.org [NC]
+RewriteRule ^(.*)$ https://docs.google.com/forms/d/1T5RKcQmOUZ2LyR4nkhu5rbxMQllpn0ePETf_H_88RIs [L]
 
 RewriteCond %{HTTP_HOST} survey.faasl.org [NC]
 RewriteRule ^(.*)$ https://www.surveymonkey.com/r/V6C86KL
