@@ -17793,74 +17793,75 @@ body.home article#grow img {
   border-color: #fff293; }
 
 /* line 62, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
-body.home article#grow blockquote a.call-to-action {
+body.home article#grow blockquote a.btn.btn-gold, body.home article#grow blockquote a.btn-gold.call-to-action, body.home article#grow blockquote a.call-to-action.gold, body.home article#grow blockquote .green-bg a.call-to-action, .green-bg body.home article#grow blockquote a.call-to-action, body.home article#grow blockquote .argyle-bg a.call-to-action, .argyle-bg body.home article#grow blockquote a.call-to-action, body.home article#grow blockquote section#leadership a.call-to-action, body.home section#leadership article#grow blockquote a.call-to-action, body.home article#grow blockquote a.call-to-action, body.home article#grow blockquote body.students .instrument-list p a.call-to-action, body.students .instrument-list p body.home article#grow blockquote a.call-to-action, body.home article#grow blockquote nav#main-navbar a.call-to-action.btn-donate, nav#main-navbar body.home article#grow blockquote a.call-to-action.btn-donate, body.home article#grow blockquote section#calendar.container-fluid a.call-to-action.btn-calendar, body.home article#grow section#calendar.container-fluid blockquote a.call-to-action.btn-calendar, body.home section#calendar.container-fluid article#grow blockquote a.call-to-action.btn-calendar, body.home article#grow blockquote nav#main-navbar a.btn.btn-donate, nav#main-navbar body.home article#grow blockquote a.btn.btn-donate, nav#main-navbar body.home article#grow blockquote section#calendar.container-fluid a.btn-donate.btn-calendar, nav#main-navbar body.home section#calendar.container-fluid article#grow blockquote a.btn-donate.btn-calendar, body.home article#grow blockquote section#calendar.container-fluid nav#main-navbar a.btn-donate.btn-calendar, body.home section#calendar.container-fluid nav#main-navbar article#grow blockquote a.btn-donate.btn-calendar, body.home article#grow blockquote section#calendar.container-fluid a.btn-gold.btn-calendar, body.home section#calendar.container-fluid article#grow blockquote a.btn-gold.btn-calendar {
   position: absolute;
   left: 30px;
-  bottom: 5.5px; }
+  bottom: 5.5px;
+  color: #333333; }
 
-/* line 71, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+/* line 72, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
 body.home article#perform {
   padding-bottom: 50px; }
-  /* line 73, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 74, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article#perform dt {
     text-transform: capitalize; }
-  /* line 75, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 76, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article#perform img {
     border-color: #333333; }
 
-/* line 79, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+/* line 80, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
 body.home section#calendar.container-fluid {
   padding-top: 50px;
   padding-bottom: 50px; }
-  /* line 83, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 84, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home section#calendar.container-fluid .btn-calendar {
     padding: 10px;
     margin-bottom: 1em; }
 
-/* line 94, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+/* line 95, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
 body.home section#contact.container-fluid {
   padding-top: 50px;
   padding-bottom: 50px; }
 
 @media (max-width: 445px) {
-  /* line 100, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 101, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article#grow blockquote a.btn, body.home article#grow blockquote a.call-to-action, body.home article#grow blockquote section#calendar.container-fluid a.btn-calendar, body.home section#calendar.container-fluid article#grow blockquote a.btn-calendar {
     bottom: inherit; } }
 
 @media (max-width: 767px) {
-  /* line 105, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 106, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article.container-fluid:not(#learn) {
     padding-top: 50px; }
-  /* line 108, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 109, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home #intro blockquote {
     border: 0; } }
 
 @media print {
-  /* line 113, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 114, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home section.container-fluid, body.home article.container-fluid {
     padding: initial; }
-  /* line 115, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 116, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article.container-fluid {
     padding: initial; }
-  /* line 117, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 118, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home section.container-fluid:not(#community), body.home article.container-fluid {
     padding: initial; }
-  /* line 120, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 121, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home section#community h2 {
     margin-bottom: 0; }
-  /* line 123, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 124, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article.community img {
     display: none !important; }
-  /* line 125, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 126, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article.community p, body.home article.community ul, body.home article.community blockquote, body.home article.community dl {
     width: 48%; }
-  /* line 127, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 128, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article.community blockquote p, body.home article.community ul p {
     width: 100%; }
-  /* line 129, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 130, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home article.community ul {
     width: 40%; }
-  /* line 132, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
+  /* line 133, /Users/jmartins/dev/faasl/www/wordpress/css/home.sass */
   body.home section#contact.container-fluid address {
     width: 50%; } }
 
@@ -17904,61 +17905,65 @@ body.students .instrument-list {
 body.students #materials {
   padding-bottom: 0; }
 
+/* line 40, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+body.students .card-inner address {
+  width: 100%; }
+
 @media print {
-  /* line 43, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+  /* line 45, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
   body.students {
     font-size: 14px; }
-    /* line 45, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 47, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students abbr[title]:after {
       content: ''; }
-    /* line 47, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 49, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students section.container-fluid {
       padding: 0 30px;
       page-break-after: initial;
       page-break-before: avoid;
       page-break-inside: avoid; }
-    /* line 53, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 55, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students .comment .col-md-6, body.students .comment body.home article.community .img-wrapper, body.home article.community body.students .comment .img-wrapper {
       width: 48%;
       float: left; }
-    /* line 56, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 58, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students .comment .col-md-4, body.students .comment .call-to-action {
       width: 30%;
       float: left; }
-    /* line 59, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 61, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students .comment .col-md-3 {
       width: 23%;
       float: left; }
-    /* line 62, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 64, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students a[href]:after {
       content: ''; }
-    /* line 65, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 67, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #instruments .col-md-9 {
       width: 100%; }
-    /* line 67, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 69, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #instruments .col-md-push-3 {
       left: 0; }
-    /* line 69, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 71, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students .instrument-list {
       right: 0;
       width: 100%; }
-      /* line 72, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+      /* line 74, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
       body.students .instrument-list li, body.students .instrument-list a {
         border: 0;
         display: inline;
         padding-left: 0;
         white-space: pre; }
-        /* line 77, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+        /* line 79, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
         body.students .instrument-list li:after, body.students .instrument-list a:after {
           content: ','; }
-        /* line 79, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+        /* line 81, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
         body.students .instrument-list li:last-child:after, body.students .instrument-list a:last-child:after {
           content: ''; }
-    /* line 82, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 84, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #materials .col-md-6, body.students #materials body.home article.community .img-wrapper, body.home article.community body.students #materials .img-wrapper {
       width: 32%;
       float: left; }
-    /* line 86, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 88, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #materials dl.dl-horizontal dt {
       float: initial;
       width: initial;
@@ -17967,14 +17972,14 @@ body.students #materials {
       overflow: initial;
       text-overflow: initial;
       white-space: initial; }
-    /* line 94, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 96, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #materials dl.dl-horizontal dd {
       margin-left: initial;
       font-size: 12px; }
-    /* line 97, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 99, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #connect {
       width: 100%; }
-      /* line 99, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+      /* line 101, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
       body.students #connect address {
         display: inline-block;
         width: initial; } }
