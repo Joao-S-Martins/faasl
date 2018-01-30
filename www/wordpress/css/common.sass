@@ -267,18 +267,7 @@ nav#main-navbar.affix
     top: 0
     background-color: $navbar-default-bg
     border-color: $navbar-default-border
-@media (max-width: 767px)
-  nav#main-navbar
-    .btn-donate
-      padding: 15px
-      margin-top: 0
-  .navbar-collapse
-    @include navbar-transition
-    @include image-overlay-bg
-  nav#main-navbar.affix
-    .navbar-collapse
-      background-color: $navbar-default-bg
-      border-color: $navbar-default-border
+
 
 .logo
   height: 35px
@@ -317,7 +306,6 @@ section.container-fluid
   padding: $navbar-height $grid-gutter-width ($navbar-height + $navbar-height)
 
 .card-inner
-  @extend .white-bg
   border-radius: 10px
   @include box-shadow($md-shadow)
   margin: 10px 15px
@@ -382,9 +370,22 @@ footer#page-footer
     @extend .col-xs-6
     @extend .col-sm-3
     @extend .col-lg-2
-  #copyright
+  #copyright, #non-profit-statement
     margin-top: 2em
-  #non-profit-statement
+
+@media (max-width: 767px)
+  nav#main-navbar
+    .btn-donate
+      padding: 15px
+      margin-top: 0
+  .navbar-collapse
+    @include navbar-transition
+    @include image-overlay-bg
+  nav#main-navbar.affix
+    .navbar-collapse
+      background-color: $navbar-default-bg
+      border-color: $navbar-default-border
+  footer#page-footer #non-profit-statement
     margin-top: 0
 
 @media print
@@ -404,5 +405,5 @@ footer#page-footer
   .card
     width: 33%
   footer#page-footer
-    .social-links
+    .social-links, .subdomain
       display: none

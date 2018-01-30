@@ -1,5 +1,4 @@
 /* Students Sass Document */
-@import 'imports.sass'
 
 body.students
   .carousel-inner
@@ -32,8 +31,13 @@ body.students
         background-color: lighten($compound2, 11%)
         border-color: lighten($compound2, 11%)
         color: $text-color
+
   #materials
     padding-bottom: 0
+
+  .card-inner
+    @extend .white-bg
+  
 
 @media print
   body.students

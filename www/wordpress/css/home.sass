@@ -1,5 +1,4 @@
 /* Home Sass Document */
-@import 'imports.sass'
 
 body.home
   section.container-fluid, article.container-fluid
@@ -19,6 +18,9 @@ body.home
           & + .item
             background-image: url(/img/home_slide_4@2x.jpg)
 
+  img
+    background-color: initial
+
   #intro
     & + .row
       margin-top: auto
@@ -34,7 +36,7 @@ body.home
     img
       @extend .img-responsive
       @extend .img-thumbnail
-      background: none;
+      background-color: initial
       border-radius: 12px
       margin-top: 20px
       width: 640px
@@ -57,13 +59,13 @@ body.home
       overflow: hidden
     img
       border-color: lighten($compound2, 11%)
-    blockquote a.btn
+    blockquote a.call-to-action
       position: absolute
       left: 30px
       bottom: ($line-height-computed / 4)
     p
       @extend .indent
-    .call-to-action
+    blockquote + .call-to-action
       @extend .col-md-offset-7
 
   article#perform
@@ -85,8 +87,9 @@ body.home
       margin-bottom: 1em
 
   section#leadership
-    color: $text-color
     @extend .argyle-bg
+    .card-inner
+      @extend .white-bg
 
   section#contact.container-fluid
     padding-top: $navbar-height
