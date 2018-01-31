@@ -357,9 +357,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-uncss');
   
-  grunt.registerTask('beta', ['beta-build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
-  grunt.registerTask('beta-build', ['clean', 'cgi', 'img', 'fonts', 'css', 'js', 'beta-html', 'favicons']);
-  grunt.registerTask('beta-html', ['processhtml:beta', 'newer:htmlmin']);
+  
+  // Common
   grunt.registerTask('cgi', ['copy:cgi']);
   grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:imageEmbed', 'newer:cssmin']);
   grunt.registerTask('favicons', ['copy:favicons']);
@@ -367,13 +366,25 @@ module.exports = function(grunt) {
   grunt.registerTask('html', ['newer:processhtml', 'newer:htmlmin']);
   grunt.registerTask('img', ['newer:imagemin:jpgs', 'copy:svg']);
   grunt.registerTask('js', ['newer:uglify']);
+  
+  // Dev
+  grunt.registerTask('finishFeature', ['bump:minor']);
   grunt.registerTask('perf', ['connect:phantomas']);
+  grunt.registerTask('startFeature', ['bump:preminor']);
+  grunt.registerTask('test', ['beta-build', 'connect:dist']);
+  
+  // Beta
+  grunt.registerTask('beta', ['beta-build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
+  grunt.registerTask('beta-build', ['clean', 'cgi', 'img', 'fonts', 'css', 'js', 'beta-html', 'favicons']);
+  grunt.registerTask('beta-html', ['processhtml:beta', 'newer:htmlmin']);
   grunt.registerTask('prerelease', ['beta-build', 'bump-only:prerelease', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
+
+  // Release
   grunt.registerTask('release', ['release-build', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'gitpush']);
   grunt.registerTask('release-build', ['clean', 'cgi', 'img', 'fonts', 'css', 'js', 'release-html', 'favicons']);
   grunt.registerTask('release-html', ['processhtml:release', 'newer:htmlmin']);
-  grunt.registerTask('test', ['beta-build', 'connect:dist']);
 };
+
 
 // Useful things
 
