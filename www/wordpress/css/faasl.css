@@ -17904,66 +17904,69 @@ body.students .instrument-list {
 /* line 35, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
 body.students #materials {
   padding-bottom: 0; }
+  /* line 37, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+  body.students #materials .img-wrapper {
+    max-width: 450px; }
 
-/* line 40, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+/* line 42, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
 body.students .card-inner address {
   width: 100%; }
 
 @media print {
-  /* line 45, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+  /* line 47, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
   body.students {
     font-size: 14px; }
-    /* line 47, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 49, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students abbr[title]:after {
       content: ''; }
-    /* line 49, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 51, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students section.container-fluid {
       padding: 0 30px;
       page-break-after: initial;
       page-break-before: avoid;
       page-break-inside: avoid; }
-    /* line 55, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 57, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students .comment .col-md-6, body.students .comment body.home article.community .img-wrapper, body.home article.community body.students .comment .img-wrapper {
       width: 48%;
       float: left; }
-    /* line 58, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 60, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students .comment .col-md-4, body.students .comment .call-to-action {
       width: 30%;
       float: left; }
-    /* line 61, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 63, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students .comment .col-md-3 {
       width: 23%;
       float: left; }
-    /* line 64, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 66, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students a[href]:after {
       content: ''; }
-    /* line 67, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 69, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #instruments .col-md-9 {
       width: 100%; }
-    /* line 69, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 71, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #instruments .col-md-push-3 {
       left: 0; }
-    /* line 71, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 73, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students .instrument-list {
       right: 0;
       width: 100%; }
-      /* line 74, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+      /* line 76, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
       body.students .instrument-list li, body.students .instrument-list a {
         border: 0;
         display: inline;
         padding-left: 0;
         white-space: pre; }
-        /* line 79, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+        /* line 81, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
         body.students .instrument-list li:after, body.students .instrument-list a:after {
           content: ','; }
-        /* line 81, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+        /* line 83, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
         body.students .instrument-list li:last-child:after, body.students .instrument-list a:last-child:after {
           content: ''; }
-    /* line 84, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 86, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #materials .col-md-6, body.students #materials body.home article.community .img-wrapper, body.home article.community body.students #materials .img-wrapper {
       width: 32%;
       float: left; }
-    /* line 88, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 90, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #materials dl.dl-horizontal dt {
       float: initial;
       width: initial;
@@ -17972,14 +17975,14 @@ body.students .card-inner address {
       overflow: initial;
       text-overflow: initial;
       white-space: initial; }
-    /* line 96, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 98, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #materials dl.dl-horizontal dd {
       margin-left: initial;
       font-size: 12px; }
-    /* line 99, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+    /* line 101, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
     body.students #connect {
       width: 100%; }
-      /* line 101, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
+      /* line 103, /Users/jmartins/dev/faasl/www/wordpress/css/students.sass */
       body.students #connect address {
         display: inline-block;
         width: initial; } }
