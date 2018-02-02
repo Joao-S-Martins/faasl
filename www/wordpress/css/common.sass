@@ -268,7 +268,6 @@ nav#main-navbar.affix
     background-color: $navbar-default-bg
     border-color: $navbar-default-border
 
-
 .logo
   height: 35px
 
@@ -301,6 +300,11 @@ header#page-header
   position: absolute
   width: 100%
   bottom: 50px
+  .print-url
+    @extend .visible-print-block
+    font-size: 20px
+    padding-right: 15px
+    text-align: right
 
 section.container-fluid
   padding: $navbar-height $grid-gutter-width ($navbar-height + $navbar-height)
@@ -341,11 +345,9 @@ address
     .radio
       display: inline
       margin-right: 2em
-      & label
-        padding-left: 2em
       & input[type="radio"]
-        margin-top: -20px
-        margin-left: -2em
+        margin-right: 0.5em
+        position: initial
   #contact-success-message, #contact-warning-message, #contact-failure-message
     display: none
   .form-required, .form-error
@@ -407,5 +409,5 @@ footer#page-footer
   footer#page-footer
     .social-links, .subdomain
       display: none
-  #PopupSignupForm_0
+  #PopupSignupForm_0, .mc-modal, .mc-banner
     @extend .hidden-print
