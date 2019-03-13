@@ -28,14 +28,13 @@ RewriteRule ^(.*)$ http://www.faasl.org/downloads/tri-fold_brochure.pdf [L]
 RewriteCond %{HTTP_HOST} contact.faasl.org [NC]
 RewriteRule ^(.*)$ http://www.faasl.org/index.html#contact [NE,L]
 RewriteCond %{HTTP_HOST} log.faasl.org [NC]
-RewriteRule ^(.*)$ https://goo.gl/forms/yfo74L2SO0LK6Pst1 [L]
+RewriteRule ^(.*)$ https://docs.google.com/forms/d/e/1FAIpQLScfSwNayjOu39cSeluLOvIH9vOuvGx9DJ74IZXsFkHuG_jpWw/viewform?usp=sf_link [L]
 RewriteCond %{HTTP_HOST} students.faasl.org [NC]
 RewriteRule ^(.*)$ http://www.faasl.org/students.html [L]
 RewriteCond %{HTTP_HOST} rsvp.faasl.org [NC]
-RewriteRule ^(.*)$ https://docs.google.com/forms/d/1NLyM1u8hoS1VJpsSarLJg0TZGtfT9MAE1DgwM40jG4Q [L]
+RewriteRule ^(.*)$ https://docs.google.com/forms/d/e/1FAIpQLSfiLZjjYsEvrw1iKzW0veXSzvdbfAKXtiabcfv0UFdn5SLNQA/viewform [L]
 RewriteCond %{HTTP_HOST} volunteer.faasl.org [NC]
 RewriteRule ^(.*)$ https://docs.google.com/forms/d/1T5RKcQmOUZ2LyR4nkhu5rbxMQllpn0ePETf_H_88RIs [L]
 
 RewriteCond %{HTTP_HOST} survey.faasl.org [NC]
 RewriteRule ^(.*)$ https://www.surveymonkey.com/r/V6C86KL
-
