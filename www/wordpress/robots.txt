@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /cgi
+Disallow: /css
+Disallow: /fonts
+Disallow: /img
+Disallow: /js
+
+Sitemap: http://www.faasl.org/sitemap.xml
