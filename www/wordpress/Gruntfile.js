@@ -169,7 +169,7 @@ module.exports = function(grunt) {
     },
     imageEmbed: {
       dist: {
-        src: [ "dist/tmp/faasl.tidy.css" ],
+        src: [ "dist/tmp/faasl.css" ],
         dest: "dist/tmp/faasl.tidy.embedded.css",
         options: {
 //          baseDir: '..',
@@ -332,11 +332,21 @@ module.exports = function(grunt) {
         options: {
           livereload: {
             host: 'localhost',
-            port: 4747,
+            port: 1337,
           }
-        },
+        }
       },
-    },
+      html: {
+        files: '*.html*',
+        tasks: ['processhtml:beta'],
+        options: {
+          livereload: {
+            host: 'localhost',
+            port: 1337,
+          }
+        }
+      }
+    }
   });
 
   grunt.loadNpmTasks('grunt-bump');
@@ -361,7 +371,7 @@ module.exports = function(grunt) {
   
   // Common
   grunt.registerTask('cgi', ['copy:cgi']);
-  grunt.registerTask('css', ['newer:sass', 'newer:uncss', 'newer:imageEmbed', 'newer:cssmin']);
+  grunt.registerTask('css', ['newer:sass', 'newer:imageEmbed', 'newer:cssmin']);
   grunt.registerTask('favicons', ['copy:favicons']);
   grunt.registerTask('fonts', ['copy:fonts']);
   grunt.registerTask('html', ['newer:processhtml', 'newer:htmlmin']);
