@@ -277,6 +277,7 @@ module.exports = function(grunt) {
       dist: {
         options: {
           ignore: [
+            /.yellow-bg/,
             /.come-in/,
             /.slide-up/,
             /.slide-left/,
