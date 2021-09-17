@@ -50,6 +50,7 @@ https://raw.githubusercontent.com/Joao-S-Martins/faasl/2ff063883ad4375ded4df1857
   - [ ] Printable new member docs
   - [ ] Fix CSS build tasks
   - [ ] Fix watch task
+  - [x] Fix favicons
 
 ## Install
 Install Node

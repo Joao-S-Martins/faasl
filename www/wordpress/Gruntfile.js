@@ -62,7 +62,7 @@ module.exports = function(grunt) {
         files: [
           {
             expand: true,
-            src: ['node_modules/jquery-match-height/jquery.matchHeight.js', 'node_modules/retinajs/dist/retina.js', 'cgi/*', 'favicons/*', 'fonts/*', 'img/*', 'js/*'],
+            src: ['node_modules/font-awesome/css/*', 'node_modules/font-awesome/fonts/*', 'node_modules/jquery-match-height/jquery.matchHeight.js', 'node_modules/retinajs/dist/retina.js', 'cgi/*', 'favicons/*', 'fonts/*', 'img/*', 'js/*'],
             dest: 'dev/'
           }
         ]
