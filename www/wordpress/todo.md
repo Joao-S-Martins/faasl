@@ -36,7 +36,7 @@
 - [x] Fix events.faasl.org
 - [x] CSS image embed
 - [ ] Musicians/volunteers resources page
-- [ ] students page
+- [x] students page
 - [ ] Google form to update contact info
 - [x] Robots.txt
 - [x] Humans.txt

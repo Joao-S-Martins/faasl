@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "bootstrap-sass": "^3.3.7",
+    "bootstrap-social": "^5.1.1",
     "coffeescript": "^2.5.1",
     "connect-url-rewrite": "^0.1.0",
     "grunt": "^1.0.1",

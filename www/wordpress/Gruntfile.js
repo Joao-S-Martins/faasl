@@ -24,6 +24,14 @@ module.exports = function(grunt) {
     },
     clean: ['dist'],
     connect: {
+      dev: {
+        options: {
+          keepalive: true,
+          port: 4747,
+          base: 'dev',
+          livereload: true
+        }
+      },
       dist: {
         options: {
           keepalive: true,
@@ -47,6 +55,15 @@ module.exports = function(grunt) {
             cwd: 'cgi/',
             src: ['**'],
             dest: 'dist/cgi/'
+          }
+        ]
+      },
+      dev: {
+        files: [
+          {
+            expand: true,
+            src: ['node_modules/jquery-match-height/jquery.matchHeight.js', 'node_modules/retinajs/dist/retina.js', 'cgi/*', 'favicons/*', 'fonts/*', 'img/*', 'js/*'],
+            dest: 'dev/'
           }
         ]
       },
@@ -233,6 +250,17 @@ module.exports = function(grunt) {
           },
         ],
       },
+      dev: {
+        files: [
+          {
+            expand: true,
+            src: ['*.html', '!example.html', '!goog-anal.html', '!inspiration-1.html'],
+            dest: 'dev',
+            ext: '.html',
+            extDot: 'first'
+          },
+        ],
+      },
       release: {
         files: [
           {
@@ -249,6 +277,12 @@ module.exports = function(grunt) {
       options: {
         sourceComments: false,
         sourceMap: false
+      },
+      dev: {
+        files: {
+          'dev/css/faasl.css': 'css/faasl.sass',
+          'dev/css/ie9.css': 'css/ie9.sass'
+        }
       },
       dist: {
         files: {
@@ -328,7 +362,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: 'css/**/*.sass',
-        tasks: ['sass'],
+        tasks: ['sass:dev'],
         options: {
           livereload: {
             host: 'localhost',
@@ -338,11 +372,21 @@ module.exports = function(grunt) {
       },
       html: {
         files: '*.html*',
-        tasks: ['processhtml:beta'],
+        tasks: ['processhtml:dev'],
         options: {
           livereload: {
             host: 'localhost',
-            port: 1337,
+            port: 1338,
+          }
+        }
+      },
+      js: {
+        files: 'js/**/*.js',
+        tasks: ['copy:dev'],
+        options: {
+          livereload: {
+            host: 'localhost',
+            port: 1339,
           }
         }
       }
@@ -371,16 +415,19 @@ module.exports = function(grunt) {
   
   // Common
   grunt.registerTask('cgi', ['copy:cgi']);
-  grunt.registerTask('css', ['newer:sass', 'newer:imageEmbed', 'newer:cssmin']);
+  grunt.registerTask('css', ['sass', 'imageEmbed', 'cssmin']);
   grunt.registerTask('favicons', ['copy:favicons']);
   grunt.registerTask('fonts', ['copy:fonts']);
-  grunt.registerTask('html', ['newer:processhtml', 'newer:htmlmin']);
-  grunt.registerTask('img', ['newer:imagemin:jpgs', 'copy:svg']);
-  grunt.registerTask('js', ['newer:uglify']);
+  // grunt.registerTask('html', ['processhtml', 'htmlmin']);
+  grunt.registerTask('img', ['imagemin:jpgs', 'copy:svg']);
+  grunt.registerTask('js', ['uglify']);
   
   // Dev
+  grunt.registerTask('dev-build', ['copy:dev', 'sass:dev', 'processhtml:dev']);
   grunt.registerTask('finishFeature', ['bump:minor']);
   grunt.registerTask('perf', ['connect:phantomas']);
+  grunt.registerTask('refresh', ['clean', 'cgi', 'img', 'fonts', 'favicons']);
+  grunt.registerTask('run', ['dev-build', 'connect:dev']);
   grunt.registerTask('startFeature', ['bump:preminor']);
   grunt.registerTask('test', ['beta-build', 'connect:dist']);
   
