@@ -240,10 +240,18 @@ module.exports = function(grunt) {
     },
     processhtml: {
       beta: {
+        options: {
+          customBlockTypes: ['html/blocks/header.js', 'html/blocks/socialopengraph.js', 'html/blocks/twittercard.js'],
+          data: {
+            year: '' + new Date(Date.now()).getFullYear()
+          },
+          process: true,
+          recursive: true
+        },
         files: [
           {
             expand: true,
-            src: ['*.html', '!example.html', '!goog-anal.html', '!inspiration-1.html'],
+            src: ['html/*.html', '!html/tmpl'],
             dest: 'dist/tmp',
             ext: '.processed.html',
             extDot: 'first'
@@ -251,10 +259,19 @@ module.exports = function(grunt) {
         ],
       },
       dev: {
+        options: {
+          customBlockTypes: ['html/blocks/header.js', 'html/blocks/socialopengraph.js', 'html/blocks/twittercard.js'],
+          data: {
+            year: '' + new Date(Date.now()).getFullYear()
+          },
+          process: true,
+          recursive: true
+        },
         files: [
           {
             expand: true,
-            src: ['*.html', '!example.html', '!goog-anal.html', '!inspiration-1.html'],
+            cwd: 'html',
+            src: ['*.html', '!tmpl/'],
             dest: 'dev',
             ext: '.html',
             extDot: 'first'
@@ -262,10 +279,18 @@ module.exports = function(grunt) {
         ],
       },
       release: {
+        options: {
+          customBlockTypes: ['html/blocks/header.js', 'html/blocks/socialopengraph.js', 'html/blocks/twittercard.js'],
+          data: {
+            year: '' + new Date(Date.now()).getFullYear()
+          },
+          process: true,
+          recursive: true
+        },
         files: [
           {
             expand: true,
-            src: ['*.html', '!example.html', '!goog-anal.html', '!inspiration-1.html'],
+            src: ['html/*.html', '!html/tmpl'],
             dest: 'dist/tmp',
             ext: '.processed.html',
             extDot: 'first'

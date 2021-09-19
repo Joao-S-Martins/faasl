@@ -66,4 +66,4 @@
 - [x] Upload social profiles & banner images
 - [ ] Point MX to Google
 - [x] Add mailchimp pop-up subscribe{{"_file":"/Users/jmartins/dev/faasl/www/wordpress/index.html"}}
-
+- [x] Fix logo home link
