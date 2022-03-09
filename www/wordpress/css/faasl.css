@@ -13545,6 +13545,9 @@ button.close {
     color: #720e9e;
     background-color: #fff; }
 
+object {
+  pointer-events: none; }
+
 /* Typography */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   font-family: "abril-display", Georgia, "Times New Roman", Times, serif;

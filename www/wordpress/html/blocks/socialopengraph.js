@@ -15,7 +15,7 @@ module.exports = function (processor) {
       <meta name="og:url" content="http://www.faasl.org/${asset[2]}">
       <meta name="og:type" content="website">
       <meta name="og:title" content="${asset[0]}">
-      <meta name="og:description" content=${asset[1]}">
+      <meta name="og:description" content="${asset[1]}">
       <meta name="og:image" content="/img/social/${asset[2]}.jpg">`;
     let result = content.replace(blockLine, html);
     return result;

@@ -107,7 +107,7 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/css/styles.min.css': 'dist/tmp/faasl.tidy.embedded.css'
+          'dist/css/styles.min.css': 'dist/tmp/css/faasl.css'
         }
       }
     },
@@ -175,9 +175,9 @@ module.exports = function(grunt) {
         files:[
           {
             expand: true,
-            cwd: 'dist/tmp',
+            cwd: 'dist/tmp/html',
             src: ['*.processed.html'],
-            dest: 'dist',
+            dest: './dist',
             ext: '.html',
             extDot: 'first'
           },
@@ -186,10 +186,10 @@ module.exports = function(grunt) {
     },
     imageEmbed: {
       dist: {
-        src: [ "dist/tmp/faasl.css" ],
-        dest: "dist/tmp/faasl.tidy.embedded.css",
+        src: [ "dist/tmp/css/faasl.css" ],
+        dest: "dist/tmp/css/faasl.tidy.embedded.css",
         options: {
-//          baseDir: '..',
+          baseDir: 'dist',
           deleteAfterEncoding : false,
           maxImageSize: 32768,
           preEncodeCallback: function (filename) { return true; },
@@ -311,7 +311,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'css/faasl.css': 'css/faasl.sass',
+          'dist/tmp/css/faasl.css': 'css/faasl.sass',
           'dist/css/ie9.css': 'css/ie9.sass'
         }
       }
@@ -396,7 +396,7 @@ module.exports = function(grunt) {
         }
       },
       html: {
-        files: '*.html*',
+        files: 'html/**/*.html',
         tasks: ['processhtml:dev'],
         options: {
           livereload: {
@@ -440,7 +440,7 @@ module.exports = function(grunt) {
   
   // Common
   grunt.registerTask('cgi', ['copy:cgi']);
-  grunt.registerTask('css', ['sass', 'imageEmbed', 'cssmin']);
+  grunt.registerTask('css', ['sass', 'cssmin']);
   grunt.registerTask('favicons', ['copy:favicons']);
   grunt.registerTask('fonts', ['copy:fonts']);
   // grunt.registerTask('html', ['processhtml', 'htmlmin']);
@@ -459,7 +459,7 @@ module.exports = function(grunt) {
   // Beta
   grunt.registerTask('beta', ['beta-build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
   grunt.registerTask('beta-build', ['clean', 'cgi', 'img', 'fonts', 'css', 'js', 'beta-html', 'favicons']);
-  grunt.registerTask('beta-html', ['processhtml:beta', 'newer:htmlmin']);
+  grunt.registerTask('beta-html', ['processhtml:beta', 'htmlmin']);
   grunt.registerTask('prerelease', ['beta-build', 'bump-only:prerelease', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
 
   // Release
