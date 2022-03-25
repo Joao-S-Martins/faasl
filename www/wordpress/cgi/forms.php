@@ -10,11 +10,12 @@
     $phone = str_replace(array("\r","\n"),array(" "," "),$phone);
     $texting = strip_tags(trim($_POST['texting']));
     $texting = str_replace(array("\r","\n"),array(" "," "),$texting);
-    $message = trim($_POST["message"]);
+    $message = strip_tags(trim($_POST["message"]));
+    $math = filter_var(trim($_POST["math"]), FILTER_SANITIZE_NUMBER_INT);
     $referer = $_SERVER['HTTP_REFERER'];
 
     // Check that data was sent to the mailer.
-    if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR $math != "22" ) {
       // Set a 400 (bad request) response code and exit.
       http_response_code(400);
       echo "Oops! There was a problem with your submission. Please complete the form and try again.";

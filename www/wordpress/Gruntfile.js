@@ -107,7 +107,8 @@ module.exports = function(grunt) {
       },
       target: {
         files: {
-          'dist/css/styles.min.css': 'dist/tmp/css/faasl.css'
+          'dist/css/styles.min.css': 'dist/tmp/css/faasl.css',
+          'dist/css/fa.min.css': 'dist/tmp/css/fa.css'
         }
       }
     },
@@ -312,6 +313,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'dist/tmp/css/faasl.css': 'css/faasl.sass',
+          'dist/tmp/css/fa.css': 'css/font-awesome.scss',
           'dist/css/ie9.css': 'css/ie9.sass'
         }
       }

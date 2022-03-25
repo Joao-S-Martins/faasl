@@ -8,11 +8,13 @@ function validContact() {
   var ret = true;
   var nameRegX = /\S{2}/;
   var emailRegX = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  var mathRegX = /22/;
   var phoneRegX = /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/;
   $name = $("input[name=full_name]");
   $email = $("input[name=email]");
   $phone = $("input[name=phone]");
   $message = $("textarea[name=message]");
+  $math = $("input[name=math]");
   
   function check($el, regx, msg, errSel) {
     var val = $el.val();
@@ -25,7 +27,8 @@ function validContact() {
   var checks = [
     [$name, nameRegX, 'A name is required', '#name_error'],
     [$email, emailRegX, 'A valid email address is required.', '#email_error'],
-    [$message, nameRegX, 'A message is required', '#message_error']
+    [$message, nameRegX, 'A message is required', '#message_error'],
+    [$math, mathRegX, 'Answer correctly or maybe you\'re a robot' ]
   ];
   
   if ($phone.val().trim().length) {

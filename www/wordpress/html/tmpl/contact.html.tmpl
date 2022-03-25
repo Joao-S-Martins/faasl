@@ -62,6 +62,30 @@
             <small id="message_error" class="form-error text-muted"></small>
           </div>
         </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="contact-form-math-input">
+            Answer&emsp;
+            <script type="text/javascript">
+              var rand = Math.ceil(Math.random()*10);
+              var num = 22 - rand;
+              document.write(num + " + " + rand);
+            </script>
+            &ensp;
+            <span class="fa fa-asterisk form-required">
+              <small class="sr-only">required</small>
+            </span>
+          </label>
+          <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+              <span class="input-group-addon"><span class="fa fa-calculator"></span></span>
+              <input id="contact-form-math-input" name="math" placeholder="It's 22" class="form-control" type="text" required>
+            </div>
+            <small id="name_error" class="form-error text-muted"></small>
+          </div>
+          <div class="col-md-4 text-right">
+            <button id="contact-submit" type="submit" class="btn btn-green">Send <span class="fa fa-send"></span></button>
+          </div>
+        </div>
         <div class="alert alert-success" role="alert" id="contact-success-message">
           Success <span class="fa fa-thumbs-up"></span> Thanks for contacting us. We will get back to you soon.
         </div>
@@ -70,12 +94,6 @@
         </div>
         <div class="alert alert-danger" role="alert" id="contact-failure-message">
           Failure <span class="fa fa-warning"></span> There was a technical problem submitting the form. Try again later.
-        </div>
-        <div class="form-group">
-          <label class="col-md-4 control-label"></label>
-          <div class="col-md-4">
-            <button id="contact-submit" type="submit" class="btn btn-green">Send <span class="fa fa-send"></span></button>
-          </div>
         </div>
       </fieldset>
     </form>
