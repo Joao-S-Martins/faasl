@@ -63,7 +63,7 @@ Directions for creating the FTP password file https://github.com/inossidabile/gr
 `grunt watch` to update `dev` folder for JS, CSS, and HTML changes.
 
 ## Beta & Release
-`grunt beta-build` & `connect:dist` to build a beta candidate into the `dist` folder for local testing.
+`grunt beta-build` & `grunt connect:dist` to build a beta candidate into the `dist` folder for local testing.
 `grunt beta` to build and push a beta to `beta.faasl.org`.
 `grunt release` to push a public website update and commit changes.
 
