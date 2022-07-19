@@ -1,0 +1,49 @@
+ErrorDocument 400 /v-web/errdocs/400.html
+ErrorDocument 401 /v-web/errdocs/401.html
+ErrorDocument 403 /v-web/errdocs/403.html
+ErrorDocument 404 /v-web/errdocs/404.html
+ErrorDocument 500 /v-web/errdocs/500.html
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} stories.faasl.org [NC]
+RewriteRule ^(.*)$ https://spark.adobe.com/page/cqFpRvvAaWTzt/ [L]
+RewriteCond %{HTTP_HOST} facebook.faasl.org [NC]
+RewriteRule ^(.*)$ https://facebook.com/the.faasl [L]
+RewriteCond %{HTTP_HOST} instagram.faasl.org [NC]
+RewriteRule ^(.*)$ https://instagram.com/the.faasl [L]
+RewriteCond %{HTTP_HOST} linkedin.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.linkedin.com/company/faasl/
+RewriteCond %{HTTP_HOST} twitter.faasl.org [NC]
+RewriteRule ^(.*)$ https://twitter.com/faasl [L]
+RewriteCond %{HTTP_HOST} youtube.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.youtube.com/channel/UCIWQ1_SGK9Ql4D9fzNE56cw
+RewriteCond %{HTTP_HOST} events.faasl.org [NC]
+RewriteRule ^(.*)$ https://calendar.google.com/calendar/embed?showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=#ffffff&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com&color=#5229A3&src=faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com&color=#1B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com&color=#A32929&ctz=America/Los_Angeles [L]
+RewriteCond %{HTTP_HOST} newsletter.faasl.org [NC]
+RewriteRule ^(.*)$ https://us13.campaign-archive.com/home/?u=f22bc0566c10786141f983313&id=d0d21800a2 [L]
+RewriteCond %{HTTP_HOST} subscribe.faasl.org [NC]
+RewriteRule ^(.*)$ https://eepurl.com/bU0fQf [L]
+RewriteCond %{HTTP_HOST} brochure.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.faasl.org/downloads/tri-fold_brochure.pdf [L]
+RewriteCond %{HTTP_HOST} contact.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.faasl.org/index.html#contact [NE,L]
+RewriteCond %{HTTP_HOST} log.faasl.org [NC]
+RewriteRule ^(.*)$ https://docs.google.com/forms/d/e/1FAIpQLScfSwNayjOu39cSeluLOvIH9vOuvGx9DJ74IZXsFkHuG_jpWw/viewform?usp=sf_link [L]
+RewriteCond %{HTTP_HOST} students.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.faasl.org/students.html [L]
+RewriteCond %{HTTP_HOST} remote.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.faasl.org/index.html [L]
+RewriteCond %{HTTP_HOST} covid.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.faasl.org/covid.html [L]
+RewriteCond %{HTTP_HOST} donate.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.faasl.org/donate.html [L]
+RewriteCond %{HTTP_HOST} practice.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.youtube.com/playlist?list=PLUc6RuyKwWdnL192YgHQ5P-VH8CVN3MEU [L]
+RewriteCond %{HTTP_HOST} rsvp.faasl.org [NC]
+RewriteRule ^(.*)$ https://docs.google.com/forms/d/e/1FAIpQLSfiLZjjYsEvrw1iKzW0veXSzvdbfAKXtiabcfv0UFdn5SLNQA/viewform [L]
+RewriteCond %{HTTP_HOST} enter.faasl.org [NC]
+RewriteRule ^(.*)$ https://docs.google.com/forms/d/e/1FAIpQLSdO7CSJ4Y14YTVLd52XN6YHX2pjnTeIg3tDWrbaWceNmmFqww/viewform [L]
+RewriteCond %{HTTP_HOST} volunteer.faasl.org [NC]
+RewriteRule ^(.*)$ https://docs.google.com/forms/d/1T5RKcQmOUZ2LyR4nkhu5rbxMQllpn0ePETf_H_88RIs [L]
+RewriteCond %{HTTP_HOST} survey.faasl.org [NC]
+RewriteRule ^(.*)$ https://www.surveymonkey.com/r/V6C86KL

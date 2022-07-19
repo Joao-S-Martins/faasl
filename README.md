@@ -8,7 +8,7 @@ https://raw.githubusercontent.com/Joao-S-Martins/faasl/2ff063883ad4375ded4df1857
   - [x] Choose a generator
   - [x] Reproduce all the pages
   - [x] Implement reusable homepage items
-  - [ ] Proof content
+  - [x] Proof content
   - [ ] Restructure repo
 - [x] Upgrade to a responsive site
   - [x] Include Bootstrap 3 LESS
@@ -34,19 +34,40 @@ https://raw.githubusercontent.com/Joao-S-Martins/faasl/2ff063883ad4375ded4df1857
 - [ ] Improve content
   - [ ] Add gallery
   - [ ] Add blog
-  - [ ] Revise copy
   - [ ] Favicon
   - [x] Robots.txt
   - [x] Humans.txt
   - [x] Sitemap & submission
-  - [ ] Update Google Analytics
+  - [x] Update Google Analytics
   - [ ] PageSpeed, Pingdom, and others
   - [ ] High-res images
   - [ ] Error/maintenance page
   - [x] Improve printing
   - [x] Beautify the events page
+- [ ] Post-rona expansion
+  - [ ] Fix contact form inconsistencies
+  - [ ] Printable covid policies
+  - [ ] Printable new member docs
+  - [ ] Fix CSS build tasks
+  - [ ] Fix watch task
+  - [x] Fix favicons
 
-##License
+## Install
+Install Node 14
+`npm install`
+Create `alias grunt=./node_modules/.bin/grunt`
+Directions for creating the FTP password file https://github.com/inossidabile/grunt-ftpush#authentication-parameters
+
+## Dev
+`grunt run` to build into the `dev` folder and run server.
+`grunt watch` to update `dev` folder for JS, CSS, and HTML changes.
+
+## Beta & Release
+`grunt beta-build` & `grunt connect:dist` to build a beta candidate into the `dist` folder for local testing.
+`grunt beta` to build and push a beta to `beta.faasl.org`.
+`grunt release` to push a public website update and commit changes.
+
+## License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">FAASL.org</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.faasl.org/volunteer.html" property="cc:attributionName" rel="cc:attributionURL">FAASL Volunteers</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.github.com/joao-s-martins/faasl/issues" rel="cc:morePermissions">http://www.github.com/joao-s-martins/faasl/issues</a>.
 
 Not all content here is original to the FAASL

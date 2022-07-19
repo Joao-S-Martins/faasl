@@ -1,9 +1,0 @@
-extends layout
-block content
-    h3 Filarmonica Artista Amadora
-    each item, i in homeItems
-        div
-            h4!= typogr(item.title).typogrify()
-            != typogr(item.html).chain().smartypants().widont().ord().value()
-            - if (i < homeItems.length - 1)
-                div.item-separator
