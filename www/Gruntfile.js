@@ -58,11 +58,21 @@ module.exports = function(grunt) {
           }
         ]
       },
+      pdf: {
+        files: [
+          {
+            expand: true,
+            cwd: 'pdf/',
+            src: ['**'],
+            dest: 'dist/pdf/'
+          }
+        ]
+      },
       dev: {
         files: [
           {
             expand: true,
-            src: ['node_modules/font-awesome/css/*', 'node_modules/font-awesome/fonts/*', 'node_modules/jquery-match-height/jquery.matchHeight.js', 'node_modules/retinajs/dist/retina.js', 'cgi/*', 'favicons/*', 'fonts/*', 'img/*', 'js/*'],
+            src: ['node_modules/font-awesome/css/*', 'node_modules/font-awesome/fonts/*', 'node_modules/jquery-match-height/jquery.matchHeight.js', 'node_modules/retinajs/dist/retina.js', 'cgi/*', 'pdf/*', 'favicons/*', 'fonts/*', 'img/*', 'js/*'],
             dest: 'dev/'
           }
         ]
@@ -398,7 +408,7 @@ module.exports = function(grunt) {
         }
       },
       html: {
-        files: 'html/**/*.html',
+        files: 'html/**/*.*',
         tasks: ['processhtml:dev'],
         options: {
           livereload: {
@@ -442,6 +452,7 @@ module.exports = function(grunt) {
   
   // Common
   grunt.registerTask('cgi', ['copy:cgi']);
+  grunt.registerTask('pdf', ['copy:pdf']);
   grunt.registerTask('css', ['sass', 'cssmin']);
   grunt.registerTask('favicons', ['copy:favicons']);
   grunt.registerTask('fonts', ['copy:fonts']);
@@ -453,20 +464,20 @@ module.exports = function(grunt) {
   grunt.registerTask('dev-build', ['copy:dev', 'sass:dev', 'processhtml:dev']);
   grunt.registerTask('finishFeature', ['bump:minor']);
   grunt.registerTask('perf', ['connect:phantomas']);
-  grunt.registerTask('refresh', ['clean', 'cgi', 'img', 'fonts', 'favicons']);
+  grunt.registerTask('refresh', ['clean', 'cgi', 'pdf', 'img', 'fonts', 'favicons']);
   grunt.registerTask('run', ['dev-build', 'connect:dev']);
   grunt.registerTask('startFeature', ['bump:preminor']);
   grunt.registerTask('test', ['beta-build', 'connect:dist']);
   
   // Beta
   grunt.registerTask('beta', ['beta-build', 'bump-only', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
-  grunt.registerTask('beta-build', ['clean', 'cgi', 'img', 'fonts', 'css', 'js', 'beta-html', 'favicons']);
+  grunt.registerTask('beta-build', ['clean', 'cgi', 'pdf', 'img', 'fonts', 'css', 'js', 'beta-html', 'favicons']);
   grunt.registerTask('beta-html', ['processhtml:beta', 'htmlmin']);
   grunt.registerTask('prerelease', ['beta-build', 'bump-only:prerelease', 'ftpush:beta', 'phantomas:beta', 'gitadd:phantomas', 'gitcommit:phantomas', 'bump-commit']);
 
   // Release
   grunt.registerTask('release', ['release-build', 'ftpush:release', 'phantomas:faasl', 'gitadd:phantomas', 'gitcommit:phantomas', 'gitpush']);
-  grunt.registerTask('release-build', ['clean', 'cgi', 'img', 'fonts', 'css', 'js', 'release-html', 'favicons']);
+  grunt.registerTask('release-build', ['clean', 'cgi', 'pdf', 'img', 'fonts', 'css', 'js', 'release-html', 'favicons']);
   grunt.registerTask('release-html', ['processhtml:release', 'newer:htmlmin']);
 };
 
