@@ -53,7 +53,7 @@ https://raw.githubusercontent.com/Joao-S-Martins/faasl/2ff063883ad4375ded4df1857
   - [x] Fix favicons
 
 ## Install
-Install Node 14
+Use Node 14
 `npm install`
 Create `alias grunt=./node_modules/.bin/grunt`
 Directions for creating the FTP password file https://github.com/inossidabile/grunt-ftpush#authentication-parameters

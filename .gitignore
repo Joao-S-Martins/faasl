@@ -40,5 +40,6 @@ www/wordpress/css/*.css
 www/wordpress/css/*.css.map
 
 # Build process
-www/wordpress/dev
-www/wordpress/dist/tmp
+www/**/dev/
+www/**/tmp/
+

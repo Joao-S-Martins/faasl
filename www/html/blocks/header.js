@@ -10,10 +10,14 @@ module.exports = function (processor) {
   processor.registerBlockType('header', function (content, block, blockLine, blockContent) {
   	let [,asset] = blockLine.match(RegExp(/build:\w*\s(.*)\s--><!--/));
   	asset = asset.split(';');
-  	let nav = asset[0].split(',');
-  	let hash = asset[1].split(',');
+    let page = asset[0];
+  	let nav = asset[1].split(',');
+  	let hash = asset[2].split(',');
   	let str = '';
   	nav.forEach((nav, i) => str += '    <li><a href="#' + hash[i] + '">' + nav + '</a></li>\n    ');
+    if (page !== 'hall') {
+      str += '    <li><a href="./hall.html">Hall Rental</a></li>\n    '; // Add hall rental link
+    }
   	let html = `
     	<!--  START nav.navbar.top-nav-collapse  -->
     	<nav id="main-navbar" class="navbar navbar-default scrolling-navbar .top-nav-collapse" data-spy="affix">
