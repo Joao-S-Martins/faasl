@@ -1,0 +1,2818 @@
+{
+  "assertions": {},
+  "metrics": {
+    "requests": {
+      "values": [
+        39,
+        39,
+        39,
+        39,
+        39,
+        null
+      ],
+      "sum": 195,
+      "min": 39,
+      "max": 39,
+      "median": 39,
+      "average": 39
+    },
+    "gzipRequests": {
+      "values": [
+        15,
+        15,
+        15,
+        15,
+        15,
+        null
+      ],
+      "sum": 75,
+      "min": 15,
+      "max": 15,
+      "median": 15,
+      "average": 15
+    },
+    "postRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "httpsRequests": {
+      "values": [
+        23,
+        23,
+        23,
+        23,
+        23,
+        null
+      ],
+      "sum": 115,
+      "min": 23,
+      "max": 23,
+      "median": 23,
+      "average": 23
+    },
+    "notFound": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "bodySize": {
+      "values": [
+        1893054,
+        1929119,
+        2029365,
+        2096715,
+        2204504,
+        null
+      ],
+      "sum": 10152757,
+      "min": 1893054,
+      "max": 2204504,
+      "median": 2029365,
+      "average": 2030551.4
+    },
+    "contentLength": {
+      "values": [
+        1932055,
+        1998994,
+        2067770,
+        2119791,
+        2206028,
+        null
+      ],
+      "sum": 10324638,
+      "min": 1932055,
+      "max": 2206028,
+      "median": 2067770,
+      "average": 2064927.6
+    },
+    "httpTrafficCompleted": {
+      "values": [
+        6584,
+        6643,
+        6646,
+        6691,
+        10959,
+        null
+      ],
+      "sum": 37523,
+      "min": 6584,
+      "max": 10959,
+      "median": 6646,
+      "average": 7504.6
+    },
+    "timeToFirstByte": {
+      "values": [
+        2623,
+        2623,
+        2623,
+        2645,
+        2645,
+        null
+      ],
+      "sum": 13159,
+      "min": 2623,
+      "max": 2645,
+      "median": 2623,
+      "average": 2631.8
+    },
+    "timeToLastByte": {
+      "values": [
+        2641,
+        2645,
+        2645,
+        2660,
+        2660,
+        null
+      ],
+      "sum": 13251,
+      "min": 2641,
+      "max": 2660,
+      "median": 2645,
+      "average": 2650.2
+    },
+    "ajaxRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "htmlCount": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "htmlSize": {
+      "values": [
+        28174,
+        28705,
+        29704,
+        29704,
+        29704,
+        null
+      ],
+      "sum": 145991,
+      "min": 28174,
+      "max": 29704,
+      "median": 29704,
+      "average": 29198.2
+    },
+    "cssCount": {
+      "values": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        null
+      ],
+      "sum": 25,
+      "min": 5,
+      "max": 5,
+      "median": 5,
+      "average": 5
+    },
+    "cssSize": {
+      "values": [
+        465755,
+        465755,
+        465755,
+        474786,
+        486648,
+        null
+      ],
+      "sum": 2358699,
+      "min": 465755,
+      "max": 486648,
+      "median": 465755,
+      "average": 471739.8
+    },
+    "jsCount": {
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        null
+      ],
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
+    },
+    "jsSize": {
+      "values": [
+        146243,
+        164335,
+        168751,
+        170458,
+        205121,
+        null
+      ],
+      "sum": 854908,
+      "min": 146243,
+      "max": 205121,
+      "median": 168751,
+      "average": 170981.6
+    },
+    "jsonCount": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "jsonSize": {
+      "values": [
+        13543,
+        13543,
+        13543,
+        13543,
+        13543,
+        null
+      ],
+      "sum": 67715,
+      "min": 13543,
+      "max": 13543,
+      "median": 13543,
+      "average": 13543
+    },
+    "imageCount": {
+      "values": [
+        14,
+        14,
+        14,
+        14,
+        14,
+        null
+      ],
+      "sum": 70,
+      "min": 14,
+      "max": 14,
+      "median": 14,
+      "average": 14
+    },
+    "imageSize": {
+      "values": [
+        1055952,
+        1055952,
+        1055952,
+        1055952,
+        1055952,
+        null
+      ],
+      "sum": 5279760,
+      "min": 1055952,
+      "max": 1055952,
+      "median": 1055952,
+      "average": 1055952
+    },
+    "videoCount": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "videoSize": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "webfontCount": {
+      "values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        null
+      ],
+      "sum": 35,
+      "min": 7,
+      "max": 7,
+      "median": 7,
+      "average": 7
+    },
+    "webfontSize": {
+      "values": [
+        56840,
+        99741,
+        157779,
+        225953,
+        249512,
+        null
+      ],
+      "sum": 789825,
+      "min": 56840,
+      "max": 249512,
+      "median": 157779,
+      "average": 157965
+    },
+    "base64Count": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "base64Size": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "otherCount": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "otherSize": {
+      "values": [
+        165548,
+        165548,
+        165548,
+        165548,
+        165548,
+        null
+      ],
+      "sum": 827740,
+      "min": 165548,
+      "max": 165548,
+      "median": 165548,
+      "average": 165548
+    },
+    "cacheHits": {
+      "values": [
+        12,
+        12,
+        12,
+        13,
+        13,
+        null
+      ],
+      "sum": 62,
+      "min": 12,
+      "max": 13,
+      "median": 12,
+      "average": 12.4
+    },
+    "cacheMisses": {
+      "values": [
+        10,
+        10,
+        11,
+        11,
+        11,
+        null
+      ],
+      "sum": 53,
+      "min": 10,
+      "max": 11,
+      "median": 11,
+      "average": 10.6
+    },
+    "cachePasses": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cachingNotSpecified": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cachingTooShort": {
+      "values": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        null
+      ],
+      "sum": 85,
+      "min": 17,
+      "max": 17,
+      "median": 17,
+      "average": 17
+    },
+    "cachingDisabled": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "oldCachingHeaders": {
+      "values": [
+        32,
+        32,
+        32,
+        32,
+        32,
+        null
+      ],
+      "sum": 160,
+      "min": 32,
+      "max": 32,
+      "median": 32,
+      "average": 32
+    },
+    "consoleMessages": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cookiesSent": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "cookiesRecv": {
+      "values": [
+        256,
+        256,
+        256,
+        256,
+        256,
+        null
+      ],
+      "sum": 1280,
+      "min": 256,
+      "max": 256,
+      "median": 256,
+      "average": 256
+    },
+    "domainsWithCookies": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "documentCookiesLength": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "documentCookiesCount": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "documentHeight": {
+      "values": [
+        7061,
+        7061,
+        7061,
+        7061,
+        8568,
+        null
+      ],
+      "sum": 36812,
+      "min": 7061,
+      "max": 8568,
+      "median": 7061,
+      "average": 7362.4
+    },
+    "commentsSize": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "whiteSpacesSize": {
+      "values": [
+        28,
+        28,
+        28,
+        28,
+        28,
+        null
+      ],
+      "sum": 140,
+      "min": 28,
+      "max": 28,
+      "median": 28,
+      "average": 28
+    },
+    "DOMelementsCount": {
+      "values": [
+        328,
+        328,
+        328,
+        328,
+        328,
+        null
+      ],
+      "sum": 1640,
+      "min": 328,
+      "max": 328,
+      "median": 328,
+      "average": 328
+    },
+    "DOMelementMaxDepth": {
+      "values": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        null
+      ],
+      "sum": 50,
+      "min": 10,
+      "max": 10,
+      "median": 10,
+      "average": 10
+    },
+    "nodesWithInlineCSS": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "imagesScaledDown": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "imagesWithoutDimensions": {
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        null
+      ],
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
+    },
+    "DOMidDuplicated": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "hiddenContentSize": {
+      "values": [
+        2345,
+        2345,
+        2345,
+        2345,
+        2345,
+        null
+      ],
+      "sum": 11725,
+      "min": 2345,
+      "max": 2345,
+      "median": 2345,
+      "average": 2345
+    },
+    "hiddenImages": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMmutationsInserts": {
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        null
+      ],
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
+    },
+    "DOMmutationsRemoves": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "DOMmutationsAttributes": {
+      "values": [
+        32,
+        32,
+        32,
+        32,
+        44,
+        null
+      ],
+      "sum": 172,
+      "min": 32,
+      "max": 44,
+      "median": 32,
+      "average": 34.4
+    },
+    "DOMqueries": {
+      "values": [
+        33,
+        33,
+        33,
+        33,
+        34,
+        null
+      ],
+      "sum": 166,
+      "min": 33,
+      "max": 34,
+      "median": 33,
+      "average": 33.2
+    },
+    "DOMqueriesWithoutResults": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueriesById": {
+      "values": [
+        11,
+        11,
+        11,
+        11,
+        11,
+        null
+      ],
+      "sum": 55,
+      "min": 11,
+      "max": 11,
+      "median": 11,
+      "average": 11
+    },
+    "DOMqueriesByClassName": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMqueriesByTagName": {
+      "values": [
+        22,
+        22,
+        22,
+        22,
+        23,
+        null
+      ],
+      "sum": 111,
+      "min": 22,
+      "max": 23,
+      "median": 22,
+      "average": 22.2
+    },
+    "DOMqueriesByQuerySelectorAll": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "DOMinserts": {
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        null
+      ],
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
+    },
+    "DOMqueriesDuplicated": {
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        null
+      ],
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
+    },
+    "DOMqueriesAvoidable": {
+      "values": [
+        10,
+        10,
+        10,
+        10,
+        11,
+        null
+      ],
+      "sum": 51,
+      "min": 10,
+      "max": 11,
+      "median": 10,
+      "average": 10.2
+    },
+    "domains": {
+      "values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        null
+      ],
+      "sum": 35,
+      "min": 7,
+      "max": 7,
+      "median": 7,
+      "average": 7
+    },
+    "maxRequestsPerDomain": {
+      "values": [
+        16,
+        16,
+        16,
+        16,
+        16,
+        null
+      ],
+      "sum": 80,
+      "min": 16,
+      "max": 16,
+      "median": 16,
+      "average": 16
+    },
+    "medianRequestsPerDomain": {
+      "values": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        null
+      ],
+      "sum": 20,
+      "min": 4,
+      "max": 4,
+      "median": 4,
+      "average": 4
+    },
+    "eventsBound": {
+      "values": [
+        22,
+        22,
+        22,
+        22,
+        22,
+        null
+      ],
+      "sum": 110,
+      "min": 22,
+      "max": 22,
+      "median": 22,
+      "average": 22
+    },
+    "eventsDispatched": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "eventsScrollBound": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "globalVariables": {
+      "values": [
+        17,
+        17,
+        17,
+        17,
+        17,
+        null
+      ],
+      "sum": 85,
+      "min": 17,
+      "max": 17,
+      "median": 17,
+      "average": 17
+    },
+    "globalVariablesFalsy": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "headersCount": {
+      "values": [
+        640,
+        640,
+        640,
+        640,
+        640,
+        null
+      ],
+      "sum": 3200,
+      "min": 640,
+      "max": 640,
+      "median": 640,
+      "average": 640
+    },
+    "headersSentCount": {
+      "values": [
+        134,
+        134,
+        134,
+        134,
+        134,
+        null
+      ],
+      "sum": 670,
+      "min": 134,
+      "max": 134,
+      "median": 134,
+      "average": 134
+    },
+    "headersRecvCount": {
+      "values": [
+        506,
+        506,
+        506,
+        506,
+        506,
+        null
+      ],
+      "sum": 2530,
+      "min": 506,
+      "max": 506,
+      "median": 506,
+      "average": 506
+    },
+    "headersSize": {
+      "values": [
+        28758,
+        28775,
+        28778,
+        28778,
+        28780,
+        null
+      ],
+      "sum": 143869,
+      "min": 28758,
+      "max": 28780,
+      "median": 28778,
+      "average": 28773.8
+    },
+    "headersSentSize": {
+      "values": [
+        9428,
+        9428,
+        9428,
+        9428,
+        9428,
+        null
+      ],
+      "sum": 47140,
+      "min": 9428,
+      "max": 9428,
+      "median": 9428,
+      "average": 9428
+    },
+    "headersRecvSize": {
+      "values": [
+        19330,
+        19347,
+        19350,
+        19350,
+        19352,
+        null
+      ],
+      "sum": 96729,
+      "min": 19330,
+      "max": 19352,
+      "median": 19350,
+      "average": 19345.8
+    },
+    "headersBiggerThanContent": {
+      "values": [
+        6,
+        7,
+        7,
+        8,
+        8,
+        null
+      ],
+      "sum": 36,
+      "min": 6,
+      "max": 8,
+      "median": 7,
+      "average": 7.2
+    },
+    "jQueryVersionsLoaded": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "jQueryOnDOMReadyFunctions": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "jQueryWindowOnLoadFunctions": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "jQuerySizzleCalls": {
+      "values": [
+        14,
+        14,
+        14,
+        14,
+        15,
+        null
+      ],
+      "sum": 71,
+      "min": 14,
+      "max": 15,
+      "median": 14,
+      "average": 14.2
+    },
+    "jQueryEventTriggers": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "jQueryDOMReads": {
+      "values": [
+        62,
+        62,
+        62,
+        62,
+        84,
+        null
+      ],
+      "sum": 332,
+      "min": 62,
+      "max": 84,
+      "median": 62,
+      "average": 66.4
+    },
+    "jQueryDOMWrites": {
+      "values": [
+        36,
+        36,
+        36,
+        36,
+        52,
+        null
+      ],
+      "sum": 196,
+      "min": 36,
+      "max": 52,
+      "median": 36,
+      "average": 39.2
+    },
+    "jQueryDOMWriteReadSwitches": {
+      "values": [
+        15,
+        15,
+        15,
+        15,
+        23,
+        null
+      ],
+      "sum": 83,
+      "min": 15,
+      "max": 23,
+      "median": 15,
+      "average": 16.6
+    },
+    "documentWriteCalls": {
+      "values": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        null
+      ],
+      "sum": 10,
+      "min": 2,
+      "max": 2,
+      "median": 2,
+      "average": 2
+    },
+    "evalCalls": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "jsErrors": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "closedConnections": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "lazyLoadableImagesBelowTheFold": {
+      "values": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        null
+      ],
+      "sum": 30,
+      "min": 6,
+      "max": 6,
+      "median": 6,
+      "average": 6
+    },
+    "localStorageEntries": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "redirects": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "redirectsTime": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "repaints": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "firstPaint": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "requestsToFirstPaint": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "domainsToFirstPaint": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "requestsToDomContentLoaded": {
+      "values": [
+        17,
+        20,
+        21,
+        24,
+        24,
+        null
+      ],
+      "sum": 106,
+      "min": 17,
+      "max": 24,
+      "median": 21,
+      "average": 21.2
+    },
+    "domainsToDomContentLoaded": {
+      "values": [
+        5,
+        5,
+        5,
+        5,
+        6,
+        null
+      ],
+      "sum": 26,
+      "min": 5,
+      "max": 6,
+      "median": 5,
+      "average": 5.2
+    },
+    "requestsToDomComplete": {
+      "values": [
+        36,
+        36,
+        36,
+        36,
+        38,
+        null
+      ],
+      "sum": 182,
+      "min": 36,
+      "max": 38,
+      "median": 36,
+      "average": 36.4
+    },
+    "domainsToDomComplete": {
+      "values": [
+        7,
+        7,
+        7,
+        7,
+        7,
+        null
+      ],
+      "sum": 35,
+      "min": 7,
+      "max": 7,
+      "median": 7,
+      "average": 7
+    },
+    "assetsNotGzipped": {
+      "values": [
+        10,
+        10,
+        10,
+        10,
+        10,
+        null
+      ],
+      "sum": 50,
+      "min": 10,
+      "max": 10,
+      "median": 10,
+      "average": 10
+    },
+    "assetsWithQueryString": {
+      "values": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        null
+      ],
+      "sum": 25,
+      "min": 5,
+      "max": 5,
+      "median": 5,
+      "average": 5
+    },
+    "assetsWithCookies": {
+      "values": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        null
+      ],
+      "sum": 20,
+      "min": 4,
+      "max": 4,
+      "median": 4,
+      "average": 4
+    },
+    "smallImages": {
+      "values": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        null
+      ],
+      "sum": 15,
+      "min": 3,
+      "max": 3,
+      "median": 3,
+      "average": 3
+    },
+    "smallCssFiles": {
+      "values": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        null
+      ],
+      "sum": 8,
+      "min": 1,
+      "max": 2,
+      "median": 2,
+      "average": 1.6
+    },
+    "smallJsFiles": {
+      "values": [
+        1,
+        2,
+        2,
+        3,
+        3,
+        null
+      ],
+      "sum": 11,
+      "min": 1,
+      "max": 3,
+      "median": 2,
+      "average": 2.2
+    },
+    "multipleRequests": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "timeToFirstCss": {
+      "values": [
+        3313,
+        3465,
+        3470,
+        3699,
+        3700,
+        null
+      ],
+      "sum": 17647,
+      "min": 3313,
+      "max": 3700,
+      "median": 3470,
+      "average": 3529.4
+    },
+    "timeToFirstJs": {
+      "values": [
+        3823,
+        3937,
+        3938,
+        3965,
+        3984,
+        null
+      ],
+      "sum": 19647,
+      "min": 3823,
+      "max": 3984,
+      "median": 3938,
+      "average": 3929.4
+    },
+    "timeToFirstImage": {
+      "values": [
+        3582,
+        3731,
+        3732,
+        3801,
+        3803,
+        null
+      ],
+      "sum": 18649,
+      "min": 3582,
+      "max": 3803,
+      "median": 3732,
+      "average": 3729.8
+    },
+    "domInteractive": {
+      "values": [
+        2995,
+        3297,
+        3304,
+        3317,
+        3317,
+        null
+      ],
+      "sum": 16230,
+      "min": 2995,
+      "max": 3317,
+      "median": 3304,
+      "average": 3246
+    },
+    "domContentLoaded": {
+      "values": [
+        2986,
+        3294,
+        3301,
+        3308,
+        3313,
+        null
+      ],
+      "sum": 16202,
+      "min": 2986,
+      "max": 3313,
+      "median": 3301,
+      "average": 3240.4
+    },
+    "domContentLoadedEnd": {
+      "values": [
+        3346,
+        3371,
+        3379,
+        3404,
+        3406,
+        null
+      ],
+      "sum": 16906,
+      "min": 3346,
+      "max": 3406,
+      "median": 3379,
+      "average": 3381.2
+    },
+    "domComplete": {
+      "values": [
+        3645,
+        3718,
+        3727,
+        3898,
+        7016,
+        null
+      ],
+      "sum": 22004,
+      "min": 3645,
+      "max": 7016,
+      "median": 3727,
+      "average": 4400.8
+    },
+    "timeBackend": {
+      "values": [
+        27,
+        40,
+        42,
+        42,
+        42,
+        null
+      ],
+      "sum": 193,
+      "min": 27,
+      "max": 42,
+      "median": 42,
+      "average": 38.6
+    },
+    "timeFrontend": {
+      "values": [
+        58,
+        58,
+        58,
+        60,
+        73,
+        null
+      ],
+      "sum": 307,
+      "min": 58,
+      "max": 73,
+      "median": 58,
+      "average": 61.4
+    },
+    "requestsWithTimeout": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "windowAlerts": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "windowConfirms": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "windowPrompts": {
+      "values": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        null
+      ],
+      "sum": 0,
+      "min": 0,
+      "max": 0,
+      "median": 0,
+      "average": 0
+    },
+    "bodyHTMLSize": {
+      "values": [
+        23472,
+        23472,
+        23472,
+        23472,
+        23472,
+        null
+      ],
+      "sum": 117360,
+      "min": 23472,
+      "max": 23472,
+      "median": 23472,
+      "average": 23472
+    },
+    "iframesCount": {
+      "values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "sum": 5,
+      "min": 1,
+      "max": 1,
+      "median": 1,
+      "average": 1
+    },
+    "smallestResponse": {
+      "values": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        null
+      ],
+      "sum": 25,
+      "min": 5,
+      "max": 5,
+      "median": 5,
+      "average": 5
+    },
+    "biggestResponse": {
+      "values": [
+        430309,
+        430309,
+        430309,
+        430309,
+        430309,
+        null
+      ],
+      "sum": 2151545,
+      "min": 430309,
+      "max": 430309,
+      "median": 430309,
+      "average": 430309
+    },
+    "fastestResponse": {
+      "values": [
+        24,
+        27,
+        28,
+        35,
+        44,
+        null
+      ],
+      "sum": 158,
+      "min": 24,
+      "max": 44,
+      "median": 28,
+      "average": 31.6
+    },
+    "slowestResponse": {
+      "values": [
+        2641,
+        2645,
+        2645,
+        2660,
+        2660,
+        null
+      ],
+      "sum": 13251,
+      "min": 2641,
+      "max": 2660,
+      "median": 2645,
+      "average": 2650.2
+    },
+    "smallestLatency": {
+      "values": [
+        15,
+        17,
+        19,
+        24,
+        27,
+        null
+      ],
+      "sum": 102,
+      "min": 15,
+      "max": 27,
+      "median": 19,
+      "average": 20.4
+    },
+    "biggestLatency": {
+      "values": [
+        2623,
+        2623,
+        2643,
+        2645,
+        2645,
+        null
+      ],
+      "sum": 13179,
+      "min": 2623,
+      "max": 2645,
+      "median": 2643,
+      "average": 2635.8
+    },
+    "medianResponse": {
+      "values": [
+        626,
+        853,
+        915,
+        1054,
+        1055,
+        null
+      ],
+      "sum": 4503,
+      "min": 626,
+      "max": 1055,
+      "median": 915,
+      "average": 900.6
+    },
+    "medianLatency": {
+      "values": [
+        626,
+        852,
+        912,
+        1052,
+        1053,
+        null
+      ],
+      "sum": 4495,
+      "min": 626,
+      "max": 1053,
+      "median": 912,
+      "average": 899
+    }
+  },
+  "offenders": {
+    "gzipRequests": [
+      "https://use.typekit.net/puk0cdd.css (gzip: 5.27 kB / uncompressed: 5.27 kB)",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles (gzip: 2.76 kB / uncompressed: 2.76 kB)",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (gzip: 0.72 kB / uncompressed: 0.72 kB)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (gzip: 3.45 kB / uncompressed: 3.45 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (gzip: 0.04 kB / uncompressed: 0.04 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (gzip: 3.26 kB / uncompressed: 3.26 kB)",
+      "https://use.typekit.net/af/f3231f/00000000000000003b9ad9a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3 (gzip: 29.21 kB / uncompressed: 29.21 kB)",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 (gzip: 4.31 kB / uncompressed: 4.31 kB)",
+      "https://use.typekit.net/af/390e6b/00000000000000003b9ad97d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3 (gzip: 30.01 kB / uncompressed: 30.01 kB)",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (gzip: 35.32 kB / uncompressed: 35.32 kB)",
+      "https://use.typekit.net/af/8cda38/0000000000000000000130d6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (gzip: 33.77 kB / uncompressed: 33.77 kB)",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 (gzip: 29.71 kB / uncompressed: 29.71 kB)",
+      "https://use.typekit.net/af/3329a4/0000000000000000000119b0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3 (gzip: 58.32 kB / uncompressed: 58.32 kB)",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup (gzip: 17.96 kB / uncompressed: 17.96 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (gzip: 0.31 kB / uncompressed: 0.31 kB)",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles (gzip: 3.74 kB / uncompressed: 3.74 kB)",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (gzip: 9.54 kB / uncompressed: 9.54 kB)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (gzip: 9.26 kB / uncompressed: 9.26 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (gzip: 0.20 kB / uncompressed: 0.20 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (gzip: 0.31 kB / uncompressed: 0.31 kB)",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 (gzip: 27.32 kB / uncompressed: 27.32 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (gzip: 3.28 kB / uncompressed: 3.28 kB)",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 (gzip: 1.92 kB / uncompressed: 1.92 kB)",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (gzip: 1.62 kB / uncompressed: 1.62 kB)",
+      "https://use.typekit.net/af/390e6b/00000000000000003b9ad97d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3 (gzip: 1.92 kB / uncompressed: 1.92 kB)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (gzip: 0.60 kB / uncompressed: 0.60 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (gzip: 0.28 kB / uncompressed: 0.28 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (gzip: 10.19 kB / uncompressed: 10.19 kB)",
+      "https://use.typekit.net/af/3329a4/0000000000000000000119b0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3 (gzip: 1.64 kB / uncompressed: 1.64 kB)",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 (gzip: 1.91 kB / uncompressed: 1.91 kB)",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles (gzip: 2.24 kB / uncompressed: 2.24 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (gzip: 0.34 kB / uncompressed: 0.34 kB)",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 (gzip: 2.00 kB / uncompressed: 2.00 kB)",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup (gzip: 2.95 kB / uncompressed: 2.95 kB)",
+      "https://use.typekit.net/af/8cda38/0000000000000000000130d6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (gzip: 17.16 kB / uncompressed: 17.16 kB)",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (gzip: 1.66 kB / uncompressed: 1.66 kB)",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (gzip: 21.12 kB / uncompressed: 21.12 kB)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (gzip: 37.06 kB / uncompressed: 37.06 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (gzip: 0.09 kB / uncompressed: 0.09 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (gzip: 6.47 kB / uncompressed: 6.47 kB)"
+    ],
+    "httpsRequests": [
+      "https://use.typekit.net/puk0cdd.css",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css",
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif",
+      "https://use.typekit.net/af/f3231f/00000000000000003b9ad9a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=413953832",
+      "https://use.typekit.net/af/390e6b/00000000000000003b9ad97d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
+      "https://use.typekit.net/af/8cda38/0000000000000000000130d6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3",
+      "https://use.typekit.net/af/3329a4/0000000000000000000119b0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=1402374703",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=287525709",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=495862507",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=631026984"
+    ],
+    "htmlCount": [
+      "http://www.faasl.org/ (size: 24.90 kB, latency: 2623 ms)",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles (size: 2.76 kB, latency: 1187 ms)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=413953832 (size: 0.37 kB, latency: 2643 ms)",
+      "http://www.faasl.org/ (size: 24.90 kB, latency: 2645 ms)",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles (size: 3.74 kB, latency: 1185 ms)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=1402374703 (size: 0.37 kB, latency: 1679 ms)",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles (size: 3.74 kB, latency: 1153 ms)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=287525709 (size: 0.37 kB, latency: 1730 ms)",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles (size: 2.24 kB, latency: 1144 ms)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=495862507 (size: 0.37 kB, latency: 1715 ms)",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles (size: 3.74 kB, latency: 1166 ms)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=631026984 (size: 0.37 kB, latency: 1704 ms)"
+    ],
+    "cssCount": [
+      "http://www.faasl.org/css/fa.min.css (size: 28.63 kB, latency: 843 ms)",
+      "https://use.typekit.net/puk0cdd.css (size: 5.27 kB, latency: 1110 ms)",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (size: 0.72 kB, latency: 32 ms)",
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (size: 0.00 kB, latency: 211 ms)",
+      "http://www.faasl.org/css/styles.min.css (size: 420.22 kB, latency: 1916 ms)",
+      "http://www.faasl.org/css/fa.min.css (size: 28.63 kB, latency: 1052 ms)",
+      "https://use.typekit.net/puk0cdd.css (size: 5.27 kB, latency: 1080 ms)",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (size: 9.54 kB, latency: 34 ms)",
+      "http://www.faasl.org/css/styles.min.css (size: 420.22 kB, latency: 1767 ms)",
+      "http://www.faasl.org/css/fa.min.css (size: 28.63 kB, latency: 1053 ms)",
+      "https://use.typekit.net/puk0cdd.css (size: 5.27 kB, latency: 1079 ms)",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (size: 0.72 kB, latency: 51 ms)",
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (size: 0.00 kB, latency: 213 ms)",
+      "http://www.faasl.org/css/styles.min.css (size: 420.22 kB, latency: 1764 ms)",
+      "http://www.faasl.org/css/fa.min.css (size: 28.63 kB, latency: 846 ms)",
+      "https://use.typekit.net/puk0cdd.css (size: 5.27 kB, latency: 1102 ms)",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (size: 0.72 kB, latency: 62 ms)",
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (size: 0.00 kB, latency: 185 ms)",
+      "http://www.faasl.org/css/styles.min.css (size: 420.22 kB, latency: 1768 ms)",
+      "http://www.faasl.org/css/fa.min.css (size: 28.63 kB, latency: 852 ms)",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (size: 21.12 kB, latency: 60 ms)",
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (size: 0.00 kB, latency: 195 ms)",
+      "http://www.faasl.org/css/styles.min.css (size: 420.22 kB, latency: 1790 ms)"
+    ],
+    "jsCount": [
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (size: 3.45 kB, latency: 60 ms)",
+      "http://www.faasl.org/js/app.min.js (size: 135.46 kB, latency: 1410 ms)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (size: 0.04 kB, latency: 208 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 3.26 kB, latency: 24 ms)",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup (size: 17.96 kB, latency: 84 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 0.31 kB, latency: 241 ms)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (size: 9.26 kB, latency: 82 ms)",
+      "http://www.faasl.org/js/app.min.js (size: 135.46 kB, latency: 1394 ms)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (size: 0.20 kB, latency: 210 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 0.31 kB, latency: 15 ms)",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup (size: 17.96 kB, latency: 58 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 3.28 kB, latency: 22 ms)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (size: 0.60 kB, latency: 88 ms)",
+      "http://www.faasl.org/js/app.min.js (size: 135.46 kB, latency: 1387 ms)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (size: 0.28 kB, latency: 241 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 0.31 kB, latency: 19 ms)",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup (size: 17.96 kB, latency: 40 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 10.19 kB, latency: 26 ms)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (size: 3.45 kB, latency: 99 ms)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (size: 0.34 kB, latency: 232 ms)",
+      "http://www.faasl.org/js/app.min.js (size: 135.46 kB, latency: 1439 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 0.31 kB, latency: 28 ms)",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup (size: 2.95 kB, latency: 50 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 0.31 kB, latency: 27 ms)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (size: 37.06 kB, latency: 81 ms)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (size: 0.09 kB, latency: 239 ms)",
+      "http://www.faasl.org/js/app.min.js (size: 135.46 kB, latency: 1424 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 6.47 kB, latency: 17 ms)",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup (size: 17.96 kB, latency: 50 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (size: 3.28 kB, latency: 33 ms)"
+    ],
+    "jsonCount": [
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 0.38 kB, latency: 466 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 8.07 kB, latency: 1441 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 4.77 kB, latency: 1441 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 0.38 kB, latency: 215 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 4.77 kB, latency: 429 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 8.07 kB, latency: 439 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 0.38 kB, latency: 301 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 4.77 kB, latency: 407 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 8.07 kB, latency: 410 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 4.77 kB, latency: 243 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 8.07 kB, latency: 271 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 0.38 kB, latency: 378 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 0.38 kB, latency: 177 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 4.77 kB, latency: 258 ms)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (size: 8.07 kB, latency: 335 ms)"
+    ],
+    "imageCount": [
+      "http://www.faasl.org/img/leader_luci.jpg (size: 4.56 kB, latency: 1097 ms)",
+      "http://www.faasl.org/img/leader_geronimo.jpg (size: 9.00 kB, latency: 1216 ms)",
+      "http://www.faasl.org/img/students.jpg (size: 150.54 kB, latency: 1278 ms)",
+      "http://www.faasl.org/img/growing_together.jpg (size: 119.15 kB, latency: 1285 ms)",
+      "http://www.faasl.org/img/performing.jpg (size: 111.42 kB, latency: 1286 ms)",
+      "http://www.faasl.org/img/leader_joao.jpg (size: 2.79 kB, latency: 1326 ms)",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png (size: 0.09 kB, latency: 2221 ms)",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png (size: 1.03 kB, latency: 2129 ms)",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif (size: 0.12 kB, latency: 631 ms)",
+      "http://www.faasl.org/img/logo.svg (size: 2.43 kB, latency: 2573 ms)",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg (size: 75.38 kB, latency: 621 ms)",
+      "http://www.faasl.org/img/home_slide_2@2x.jpg (size: 167.41 kB, latency: 623 ms)",
+      "http://www.faasl.org/img/home_slide_4@2x.jpg (size: 138.82 kB, latency: 624 ms)",
+      "http://www.faasl.org/img/home_slide_1@2x.jpg (size: 248.46 kB, latency: 626 ms)",
+      "http://www.faasl.org/img/leader_luci.jpg (size: 4.56 kB, latency: 1139 ms)",
+      "http://www.faasl.org/img/leader_geronimo.jpg (size: 9.00 kB, latency: 1238 ms)",
+      "http://www.faasl.org/img/leader_joao.jpg (size: 2.79 kB, latency: 1340 ms)",
+      "http://www.faasl.org/img/performing.jpg (size: 111.42 kB, latency: 1388 ms)",
+      "http://www.faasl.org/img/growing_together.jpg (size: 119.15 kB, latency: 1393 ms)",
+      "http://www.faasl.org/img/students.jpg (size: 150.54 kB, latency: 1395 ms)",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png (size: 0.09 kB, latency: 156 ms)",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif (size: 0.12 kB, latency: 1413 ms)",
+      "http://www.faasl.org/img/logo.svg (size: 2.43 kB, latency: 1417 ms)",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg (size: 75.38 kB, latency: 1413 ms)",
+      "http://www.faasl.org/img/home_slide_4@2x.jpg (size: 138.82 kB, latency: 1411 ms)",
+      "http://www.faasl.org/img/home_slide_2@2x.jpg (size: 167.41 kB, latency: 1414 ms)",
+      "http://www.faasl.org/img/home_slide_1@2x.jpg (size: 248.46 kB, latency: 1414 ms)",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png (size: 1.03 kB, latency: 1687 ms)",
+      "http://www.faasl.org/img/leader_luci.jpg (size: 4.56 kB, latency: 1138 ms)",
+      "http://www.faasl.org/img/leader_geronimo.jpg (size: 9.00 kB, latency: 1255 ms)",
+      "http://www.faasl.org/img/students.jpg (size: 150.54 kB, latency: 1370 ms)",
+      "http://www.faasl.org/img/leader_joao.jpg (size: 2.79 kB, latency: 1370 ms)",
+      "http://www.faasl.org/img/performing.jpg (size: 111.42 kB, latency: 1383 ms)",
+      "http://www.faasl.org/img/growing_together.jpg (size: 119.15 kB, latency: 1401 ms)",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png (size: 0.09 kB, latency: 148 ms)",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif (size: 0.12 kB, latency: 1120 ms)",
+      "http://www.faasl.org/img/logo.svg (size: 2.43 kB, latency: 1126 ms)",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg (size: 75.38 kB, latency: 1122 ms)",
+      "http://www.faasl.org/img/home_slide_1@2x.jpg (size: 248.46 kB, latency: 1418 ms)",
+      "http://www.faasl.org/img/home_slide_2@2x.jpg (size: 167.41 kB, latency: 1419 ms)",
+      "http://www.faasl.org/img/home_slide_4@2x.jpg (size: 138.82 kB, latency: 1420 ms)",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png (size: 1.03 kB, latency: 1695 ms)",
+      "http://www.faasl.org/img/leader_luci.jpg (size: 4.56 kB, latency: 1094 ms)",
+      "http://www.faasl.org/img/leader_geronimo.jpg (size: 9.00 kB, latency: 1248 ms)",
+      "http://www.faasl.org/img/growing_together.jpg (size: 119.15 kB, latency: 1279 ms)",
+      "http://www.faasl.org/img/performing.jpg (size: 111.42 kB, latency: 1283 ms)",
+      "http://www.faasl.org/img/students.jpg (size: 150.54 kB, latency: 1290 ms)",
+      "http://www.faasl.org/img/leader_joao.jpg (size: 2.79 kB, latency: 1343 ms)",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png (size: 0.09 kB, latency: 134 ms)",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif (size: 0.12 kB, latency: 1135 ms)",
+      "http://www.faasl.org/img/logo.svg (size: 2.43 kB, latency: 1443 ms)",
+      "http://www.faasl.org/img/home_slide_1@2x.jpg (size: 248.46 kB, latency: 1436 ms)",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png (size: 1.03 kB, latency: 1700 ms)",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg (size: 75.38 kB, latency: 1568 ms)",
+      "http://www.faasl.org/img/home_slide_4@2x.jpg (size: 138.82 kB, latency: 1567 ms)",
+      "http://www.faasl.org/img/home_slide_2@2x.jpg (size: 167.41 kB, latency: 1569 ms)",
+      "http://www.faasl.org/img/leader_luci.jpg (size: 4.56 kB, latency: 1090 ms)",
+      "http://www.faasl.org/img/leader_geronimo.jpg (size: 9.00 kB, latency: 1215 ms)",
+      "http://www.faasl.org/img/growing_together.jpg (size: 119.15 kB, latency: 1281 ms)",
+      "http://www.faasl.org/img/students.jpg (size: 150.54 kB, latency: 1295 ms)",
+      "http://www.faasl.org/img/leader_joao.jpg (size: 2.79 kB, latency: 1344 ms)",
+      "http://www.faasl.org/img/performing.jpg (size: 111.42 kB, latency: 1357 ms)",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png (size: 0.09 kB, latency: 175 ms)",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif (size: 0.12 kB, latency: 1392 ms)",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png (size: 1.03 kB, latency: 1566 ms)",
+      "http://www.faasl.org/img/logo.svg (size: 2.43 kB, latency: 1540 ms)",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg (size: 75.38 kB, latency: 1535 ms)",
+      "http://www.faasl.org/img/home_slide_2@2x.jpg (size: 167.41 kB, latency: 1537 ms)",
+      "http://www.faasl.org/img/home_slide_4@2x.jpg (size: 138.82 kB, latency: 1535 ms)",
+      "http://www.faasl.org/img/home_slide_1@2x.jpg (size: 248.46 kB, latency: 1539 ms)"
+    ],
+    "webfontCount": [
+      "https://use.typekit.net/af/f3231f/00000000000000003b9ad9a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3 (size: 29.21 kB, latency: 44 ms)",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 (size: 4.31 kB, latency: 74 ms)",
+      "https://use.typekit.net/af/390e6b/00000000000000003b9ad97d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3 (size: 30.01 kB, latency: 604 ms)",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 35.32 kB, latency: 605 ms)",
+      "https://use.typekit.net/af/8cda38/0000000000000000000130d6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 33.77 kB, latency: 606 ms)",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 (size: 29.71 kB, latency: 608 ms)",
+      "https://use.typekit.net/af/3329a4/0000000000000000000119b0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3 (size: 58.32 kB, latency: 609 ms)",
+      "https://use.typekit.net/af/f3231f/00000000000000003b9ad9a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3 (size: 29.21 kB, latency: 438 ms)",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 (size: 27.32 kB, latency: 489 ms)",
+      "https://use.typekit.net/af/8cda38/0000000000000000000130d6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 33.77 kB, latency: 489 ms)",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 (size: 1.92 kB, latency: 619 ms)",
+      "https://use.typekit.net/af/3329a4/0000000000000000000119b0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3 (size: 58.32 kB, latency: 636 ms)",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 1.62 kB, latency: 677 ms)",
+      "https://use.typekit.net/af/390e6b/00000000000000003b9ad97d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3 (size: 1.92 kB, latency: 786 ms)",
+      "https://use.typekit.net/af/f3231f/00000000000000003b9ad9a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3 (size: 29.21 kB, latency: 318 ms)",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 (size: 27.32 kB, latency: 520 ms)",
+      "https://use.typekit.net/af/8cda38/0000000000000000000130d6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 33.77 kB, latency: 517 ms)",
+      "https://use.typekit.net/af/390e6b/00000000000000003b9ad97d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3 (size: 1.92 kB, latency: 664 ms)",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 1.62 kB, latency: 698 ms)",
+      "https://use.typekit.net/af/3329a4/0000000000000000000119b0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3 (size: 1.64 kB, latency: 740 ms)",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 (size: 1.91 kB, latency: 757 ms)",
+      "https://use.typekit.net/af/f3231f/00000000000000003b9ad9a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3 (size: 29.21 kB, latency: 450 ms)",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 (size: 2.00 kB, latency: 494 ms)",
+      "https://use.typekit.net/af/8cda38/0000000000000000000130d6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 17.16 kB, latency: 540 ms)",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 1.66 kB, latency: 734 ms)",
+      "https://use.typekit.net/af/390e6b/00000000000000003b9ad97d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3 (size: 1.92 kB, latency: 733 ms)",
+      "https://use.typekit.net/af/3329a4/0000000000000000000119b0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3 (size: 1.64 kB, latency: 840 ms)",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 (size: 1.92 kB, latency: 912 ms)",
+      "https://use.typekit.net/af/f3231f/00000000000000003b9ad9a1/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n3&v=3 (size: 29.21 kB, latency: 451 ms)",
+      "https://use.typekit.net/af/8cda38/0000000000000000000130d6/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 33.77 kB, latency: 513 ms)",
+      "https://use.typekit.net/af/126301/00000000000000003b9ad9b5/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3 (size: 27.32 kB, latency: 515 ms)",
+      "https://use.typekit.net/af/390e6b/00000000000000003b9ad97d/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i3&v=3 (size: 30.01 kB, latency: 640 ms)",
+      "https://use.typekit.net/af/3329a4/0000000000000000000119b0/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n8&v=3 (size: 58.32 kB, latency: 653 ms)",
+      "https://use.typekit.net/af/012907/00000000000000003b9ad999/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i7&v=3 (size: 29.71 kB, latency: 688 ms)",
+      "https://use.typekit.net/af/79f1c1/00000000000000003b9ada7e/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3 (size: 35.32 kB, latency: 688 ms)"
+    ],
+    "otherCount": [
+      "http://www.faasl.org/fonts/fontawesome-webfont.ttf?v=4.7.0 (size: 161.67 kB, latency: 619 ms)",
+      "http://www.faasl.org/fonts/fontawesome-webfont.ttf?v=4.7.0 (size: 161.67 kB, latency: 445 ms)",
+      "http://www.faasl.org/fonts/fontawesome-webfont.ttf?v=4.7.0 (size: 161.67 kB, latency: 476 ms)",
+      "http://www.faasl.org/fonts/fontawesome-webfont.ttf?v=4.7.0 (size: 161.67 kB, latency: 436 ms)",
+      "http://www.faasl.org/fonts/fontawesome-webfont.ttf?v=4.7.0 (size: 161.67 kB, latency: 461 ms)"
+    ],
+    "cacheHits": [
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif",
+      "http://www.faasl.org/img/logo.svg",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg",
+      "http://www.faasl.org/img/home_slide_2@2x.jpg",
+      "http://www.faasl.org/img/home_slide_4@2x.jpg",
+      "http://www.faasl.org/img/home_slide_1@2x.jpg",
+      "http://www.faasl.org/fonts/fontawesome-webfont.ttf?v=4.7.0",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs",
+      "http://www.faasl.org/img/leader_luci.jpg"
+    ],
+    "cacheMisses": [
+      "http://www.faasl.org/",
+      "http://www.faasl.org/css/fa.min.css",
+      "http://www.faasl.org/img/leader_luci.jpg",
+      "http://www.faasl.org/img/leader_geronimo.jpg",
+      "http://www.faasl.org/img/students.jpg",
+      "http://www.faasl.org/img/growing_together.jpg",
+      "http://www.faasl.org/img/performing.jpg",
+      "http://www.faasl.org/img/leader_joao.jpg",
+      "http://www.faasl.org/js/app.min.js",
+      "http://www.faasl.org/css/styles.min.css",
+      "http://www.faasl.org/fonts/fontawesome-webfont.ttf?v=4.7.0",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg"
+    ],
+    "cachingTooShort": [
+      "http://www.faasl.org/css/fa.min.css cached for 14400 s",
+      "https://use.typekit.net/puk0cdd.css cached for 600 s",
+      "http://www.faasl.org/img/leader_luci.jpg cached for 14400 s",
+      "http://www.faasl.org/img/leader_geronimo.jpg cached for 14400 s",
+      "http://www.faasl.org/img/students.jpg cached for 14400 s",
+      "http://www.faasl.org/img/growing_together.jpg cached for 14400 s",
+      "http://www.faasl.org/img/performing.jpg cached for 14400 s",
+      "http://www.faasl.org/img/leader_joao.jpg cached for 14400 s",
+      "http://www.faasl.org/js/app.min.js cached for 14400 s",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded cached for 1800 s",
+      "http://www.faasl.org/css/styles.min.css cached for 14400 s",
+      "http://www.faasl.org/img/logo.svg cached for 14400 s",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg cached for 14400 s",
+      "http://www.faasl.org/img/home_slide_2@2x.jpg cached for 14400 s",
+      "http://www.faasl.org/img/home_slide_4@2x.jpg cached for 14400 s",
+      "http://www.faasl.org/img/home_slide_1@2x.jpg cached for 14400 s",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup cached for 1800 s"
+    ],
+    "oldCachingHeaders": [
+      "http://www.faasl.org/ - Expires: Wed, 07 Jun 2023 05:20:04 GMT",
+      "http://www.faasl.org/css/fa.min.css - Expires: Wed, 07 Jun 2023 08:20:06 GMT",
+      "http://www.faasl.org/img/leader_luci.jpg - Expires: Wed, 07 Jun 2023 08:20:06 GMT",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles - Pragma: no-cache",
+      "https://calendar.google.com/calendar/embed?showNav=0&showCalendars=0&showTitle=0&showTz=0&height=600&wkst=1&bgcolor=%23FFEB5B&src=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&color=%235229A3&src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&color=%231B887A&src=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&color=%23A32929&ctz=America%2FLos_Angeles - Expires: Mon, 01 Jan 1990 00:00:00 GMT",
+      "http://www.faasl.org/img/leader_geronimo.jpg - Expires: Wed, 07 Jun 2023 08:20:07 GMT",
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css - Expires: Sat, 01 Jun 2024 12:32:14 GMT",
+      "http://www.faasl.org/img/students.jpg - Expires: Wed, 07 Jun 2023 08:20:06 GMT",
+      "http://www.faasl.org/img/growing_together.jpg - Expires: Wed, 07 Jun 2023 08:20:06 GMT",
+      "http://www.faasl.org/img/performing.jpg - Expires: Wed, 07 Jun 2023 08:20:06 GMT",
+      "http://www.faasl.org/img/leader_joao.jpg - Expires: Wed, 07 Jun 2023 08:20:07 GMT",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed - Expires: Sat, 01 Jun 2024 19:58:45 GMT",
+      "http://www.faasl.org/js/app.min.js - Expires: Wed, 07 Jun 2023 08:20:06 GMT",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded - Expires: Wed, 07 Jun 2023 04:20:07 GMT",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs - Expires: Sat, 01 Jun 2024 00:14:43 GMT",
+      "http://www.faasl.org/css/styles.min.css - Expires: Wed, 07 Jun 2023 08:20:06 GMT",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png - Expires: Thu, 30 May 2024 23:20:48 GMT",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png - Expires: Sun, 02 Jun 2024 20:09:04 GMT",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif - Expires: Tue, 04 Jun 2024 13:23:25 GMT",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=413953832 - Pragma: no-cache",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=413953832 - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "http://www.faasl.org/img/logo.svg - Expires: Wed, 07 Jun 2023 08:20:07 GMT",
+      "http://www.faasl.org/img/home_slide_3@2x.jpg - Expires: Wed, 07 Jun 2023 08:20:08 GMT",
+      "http://www.faasl.org/img/home_slide_2@2x.jpg - Expires: Wed, 07 Jun 2023 08:20:08 GMT",
+      "http://www.faasl.org/img/home_slide_4@2x.jpg - Expires: Wed, 07 Jun 2023 08:20:08 GMT",
+      "http://www.faasl.org/img/home_slide_1@2x.jpg - Expires: Wed, 07 Jun 2023 08:20:07 GMT",
+      "http://www.faasl.org/fonts/fontawesome-webfont.ttf?v=4.7.0 - Expires: Wed, 07 Jun 2023 08:20:09 GMT",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup - Expires: Wed, 07 Jun 2023 04:20:10 GMT",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs - Expires: Fri, 31 May 2024 16:46:29 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:13 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:13 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:13 GMT",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=1402374703 - Pragma: no-cache",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=1402374703 - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup - Expires: Wed, 07 Jun 2023 04:20:09 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:09 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:10 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:10 GMT",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=287525709 - Pragma: no-cache",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=287525709 - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=495862507 - Pragma: no-cache",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=495862507 - Expires: Fri, 01 Jan 1990 00:00:00 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:09 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:09 GMT",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs - Expires: Wed, 07 Jun 2023 04:20:10 GMT",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=631026984 - Pragma: no-cache",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=631026984 - Expires: Fri, 01 Jan 1990 00:00:00 GMT"
+    ],
+    "domainsWithCookies": [
+      "calendar.google.com: 1 cookie(s)"
+    ],
+    "DOMelementMaxDepth": [
+      "body > div.body-wrapper > section#contact > div.row > form#contact-form > fieldset.animate.slide-right > div.form-group > div.col-md-8.inputGroupContainer > div.input-group > span.input-group-addon > span.fa.fa-user",
+      "body > div.body-wrapper > section#contact > div.row > form#contact-form > fieldset.animate.slide-right > div.form-group > div.col-md-8.inputGroupContainer > div.input-group > span.input-group-addon > span.fa.fa-envelope",
+      "body > div.body-wrapper > section#contact > div.row > form#contact-form > fieldset.animate.slide-right > div.form-group > div.col-md-8.inputGroupContainer > div.input-group > span.input-group-addon > span.fa.fa-mobile-phone",
+      "body > div.body-wrapper > section#contact > div.row > form#contact-form > fieldset.animate.slide-right > div.form-group > div.col-md-8.radio-wrapper > span.radio > label[0] > input[0]",
+      "body > div.body-wrapper > section#contact > div.row > form#contact-form > fieldset.animate.slide-right > div.form-group > div.col-md-8.inputGroupContainer > div.input-group > span.input-group-addon > span.fa.fa-pencil",
+      "body > div.body-wrapper > section#contact > div.row > form#contact-form > fieldset.animate.slide-right > div.form-group > div.col-md-4.inputGroupContainer > div.input-group > span.input-group-addon > span.fa.fa-calculator"
+    ],
+    "nodesWithInlineCSS": [
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height (height: 396px;)",
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height (height: 396px;)",
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height (height: 396px;)",
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height (height: 438px;)",
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height (height: 438px;)",
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height (height: 438px;)"
+    ],
+    "imagesWithoutDimensions": [
+      "body > div.body-wrapper > article#learn > div.row > div.img-wrapper > img.animate.slide-right <http://www.faasl.org/img/students.jpg>",
+      "body > div.body-wrapper > article#grow > div.row > div.img-wrapper > img.animate.slide-left <http://www.faasl.org/img/growing_together.jpg>",
+      "body > div.body-wrapper > article#perform > div.row > div.img-wrapper > img.animate.slide-right <http://www.faasl.org/img/performing.jpg>",
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height > img.card-headshot <http://www.faasl.org/img/leader_luci.jpg>",
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height > img.card-headshot <http://www.faasl.org/img/leader_geronimo.jpg>",
+      "body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height > img.card-headshot <http://www.faasl.org/img/leader_joao.jpg>"
+    ],
+    "DOMidDuplicated": [
+      "name_error: 2 occurrences"
+    ],
+    "hiddenContentSize": [
+      "body > div.body-wrapper > section#contact > div.row > div#connect > div.row > address[8] > script[3] (1658 characters)"
+    ],
+    "DOMmutationsInserts": [
+      "\"div\" added to \"body\"",
+      "\"div[0]\" added to \"div\"",
+      "\"div\" added to \"div[0]\"",
+      "\"table[0]\" added to \"div[0]\""
+    ],
+    "DOMmutationsRemoves": [
+      "\"div\" removed from \"body\"",
+      "\"div\" removed from \"div[0]\""
+    ],
+    "DOMmutationsAttributes": [
+      "\"style\" attr set on div[0]",
+      "\"style\" attr set on div",
+      "\"style\" attr set on td[0]",
+      "\"style\" attr set on td[1]",
+      "\"class\" attr set on nav#main-navbar",
+      "\"style\" attr set on div.card-inner.row-eq-height"
+    ],
+    "DOMqueriesById": [
+      "#main-navbar (in #document)",
+      "#title-carousel (in #document)",
+      "#contact-form (in #document)",
+      "#intro (in #document)",
+      "#community (in #document)",
+      "#grow (in #document)",
+      "#perform (in #document)",
+      "#calendar (in #document)",
+      "#leadership (in #document)",
+      "#contact (in #document)"
+    ],
+    "DOMqueriesByTagName": [
+      "* (in div)",
+      "tbody (in div)",
+      "link (in div)",
+      "a (in div)",
+      "input (in div)",
+      "body (in #document)",
+      "* (in #document)",
+      "td (in body > div[2] > div[0])",
+      "html (in #document)",
+      "a (in #document)",
+      "* (in body > div.body-wrapper > section#title-carousel)",
+      "a (in body)"
+    ],
+    "DOMinserts": [
+      "\"html > div[2]\" appended to \"html\"",
+      "\"body > div[2]\" appended to \"body\"",
+      "\"body > div[2] > div[0]\" appended to \"body > div[2]\"",
+      "\"body > div[2] > div[0] > div[0]\" appended to \"body > div[2] > div[0]\""
+    ],
+    "DOMqueriesDuplicated": [
+      "tag name \"*\" (in #document): 6 queries",
+      "tag name \"html\" (in #document): 3 queries",
+      "tag name \"body\" (in #document): 2 queries",
+      "id \"#main-navbar\" (in #document): 2 queries",
+      "tag name \"a\" (in #document): 2 queries",
+      "tag name \"*\" (in body > div.body-wrapper > section#title-carousel): 2 queries",
+      "tag name \"html\" (in #document): 2 queries"
+    ],
+    "domains": [
+      "www.faasl.org: 16 request(s)",
+      "use.typekit.net: 8 request(s)",
+      "calendar.google.com: 5 request(s)",
+      "apis.google.com: 4 request(s)",
+      "clients6.google.com: 4 request(s)",
+      "p.typekit.net: 1 request(s)",
+      "www.gstatic.com: 1 request(s)"
+    ],
+    "eventsBound": [
+      "\"DOMContentLoaded\" bound to \"#document\"",
+      "\"load\" bound to \"window\"",
+      "\"click\" bound to \"#document\"",
+      "\"blur\" bound to \"#document\"",
+      "\"focus\" bound to \"#document\"",
+      "\"keydown\" bound to \"#document\"",
+      "\"orientationchange\" bound to \"window\"",
+      "\"resize\" bound to \"window\"",
+      "\"scroll\" bound to \"window\"",
+      "\"click\" bound to \"window\"",
+      "\"resize\" bound to \"#document\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[0] > a[0]\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[1] > a[0]\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[2] > a[0]\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[3] > a[0]\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[4] > a[0]\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[5] > a[0]\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[6] > a[0]\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[7] > a[0]\"",
+      "\"click\" bound to \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > div.nav.navbar-nav.navbar-right > li[0] > a.btn.btn-donate\"",
+      "\"submit\" bound to \"body > div.body-wrapper > section#contact > div.row > form#contact-form\""
+    ],
+    "eventsScrollBound": [
+      "bound by http://www.faasl.org/js/app.min.js:2:93700 / each@http://www.faasl.org/js/app.min.js:2:3397 / each@http://www.faasl.org/js/app.min.js:2:1281 / on@http://www.faasl.org/js/app.min.js:2:47156 / phantomjs://code/scope.js:221:28 / c@http://www.faasl.org/js/app.min.js:2:132099 / http://www.faasl.org/js/app.min.js:2:264451 / each@http://www.faasl.org/js/app.min.js:2:3397 / each@http://www.faasl.org/js/app.min.js:2:1281 / n@http://www.faasl.org/js/app.min.js:2:264352 / setNavAffix@http://www.faasl.org/js/app.min.js:2:95539 / http://www.faasl.org/js/app.min.js:2:137689 / d@http://www.faasl.org/js/app.min.js:2:27653 / fireWith@http://www.faasl.org/js/app.min.js:2:55601 / ready@http://www.faasl.org/js/app.min.js:2:30293 / _@http://www.faasl.org/js/app.min.js:2:27385"
+    ],
+    "globalVariables": [
+      "toggleFormPending",
+      "formFailure",
+      "validContact",
+      "x",
+      "rand",
+      "clearFormErrors",
+      "num",
+      "hideAllMessages",
+      "formSuccess",
+      "toggleFormMessage",
+      "submitForm",
+      "setNavAffix",
+      "formInvalid",
+      "jQuery",
+      "f",
+      "$",
+      "jQuery111302133835598360747",
+      "jQuery11130586907020304352",
+      "jQuery111301694667381234467",
+      "jQuery111305371349414344877",
+      "jQuery1113031594394496642053"
+    ],
+    "headersBiggerThanContent": [
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (body: 0.00 kB / headers: 0.40 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (body: 0.04 kB / headers: 0.81 kB)",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png (body: 0.09 kB / headers: 0.72 kB)",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif (body: 0.12 kB / headers: 0.73 kB)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=413953832 (body: 0.37 kB / headers: 1.02 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (body: 0.31 kB / headers: 0.86 kB)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (body: 0.38 kB / headers: 0.39 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (body: 0.20 kB / headers: 0.81 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (body: 0.31 kB / headers: 0.86 kB)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=1402374703 (body: 0.37 kB / headers: 1.02 kB)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (body: 0.60 kB / headers: 0.73 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (body: 0.28 kB / headers: 0.81 kB)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=287525709 (body: 0.37 kB / headers: 1.02 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (body: 0.34 kB / headers: 0.81 kB)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=495862507 (body: 0.37 kB / headers: 1.02 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (body: 0.09 kB / headers: 0.81 kB)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=631026984 (body: 0.37 kB / headers: 1.02 kB)"
+    ],
+    "jQueryVersionsLoaded": [
+      "v1.11.3"
+    ],
+    "jQueryOnDOMReadyFunctions": [
+      "global code@http://www.faasl.org/js/app.min.js:2:98623",
+      "http://www.faasl.org/js/app.min.js:2:134549",
+      "null"
+    ],
+    "jQueryWindowOnLoadFunctions": [
+      "null"
+    ],
+    "jQuerySizzleCalls": [
+      "[data-match-height], [data-mh] (in #document)",
+      ".row-eq-height (in #document)",
+      "html (in #document)",
+      ".animate (in #document)",
+      ".navbar-nav li a (in #document)",
+      "form#contact-form (in #document)",
+      ".instrument-list a (in #document)",
+      "[data-ride=\"carousel\"] (in #document)",
+      ".carousel-indicators (in body > div.body-wrapper > section#title-carousel)",
+      ".next, .prev (in body > div.body-wrapper > section#title-carousel)",
+      "[data-spy=\"scroll\"] (in #document)",
+      "#main-navbar .nav li > a (in body)",
+      "[data-spy=\"affix\"] (in #document)"
+    ],
+    "jQueryEventTriggers": [
+      "\"affix-top\" on \"body > div.body-wrapper > nav#main-navbar\"",
+      "\"affixed-top.bs.affix\" on \"body > div.body-wrapper > nav#main-navbar\"",
+      "\"ready\" on \"#document\""
+    ],
+    "jQueryDOMReads": [
+      "$.height([]) on \"body > div.body-wrapper > nav#main-navbar\"",
+      "$.height([]) on \"#document\"",
+      "$.height([]) on \"body\"",
+      "$.scrollTop([]) on \"window\"",
+      "$.offset([]) on \"body > div.body-wrapper > nav#main-navbar\"",
+      "$.height([]) on \"window\"",
+      "$.attr([\"style\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.css([\"display\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.attr([\"style\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.css([\"display\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.attr([\"style\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.css([\"display\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.css([\"box-sizing\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.css([\"box-sizing\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.css([\"box-sizing\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#intro > div.row > p.col-xs-12.animate.slide-up\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#intro > div.row > blockquote.col-sm-6.col-sm-push-6.animate.slide-left\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#intro > div.row > p.col-xs-12.col-sm-6.col-sm-pull-6.animate.slide-right\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#learn > div.row > div.img-wrapper > img.animate.slide-right\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#learn > div.row > h3.col-xs-12.col-md-6.animate.slide-left\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#learn > div.row > p.col-xs-12.col-md-6.animate.slide-up\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#grow > div.row > div.img-wrapper > img.animate.slide-left\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#grow > div.row > h3.col-xs-12.col-md-6.col-md-pull-6.animate.slide-right\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#grow > div.row > p.col-xs-12.col-md-6.col-md-pull-6.animate.slide-up\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#perform > div.row > div.img-wrapper > img.animate.slide-right\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#perform > div.row > h3.col-xs-12.col-md-6.animate.slide-left\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#perform > div.row > p.col-xs-12.col-md-6.animate.slide-up\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#calendar > div.row > div.col-xs-12.col-lg-10.col-lg-offset-1.animate.slide-up.hidden-print\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#contact > div.row > form#contact-form > fieldset.animate.slide-right\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#contact > div.row > div#connect\"",
+      "$.width([]) on \"window\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[0] > a[0]\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#intro\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[1] > a[0]\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#community\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[2] > a[0]\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#grow\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[3] > a[0]\"",
+      "$.offset([]) on \"body > div.body-wrapper > article#perform\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[4] > a[0]\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#calendar\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[5] > a[0]\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#leadership\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[6] > a[0]\"",
+      "$.offset([]) on \"body > div.body-wrapper > section#contact\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > ul.nav.navbar-nav > li[7] > a[0]\"",
+      "$.attr([\"href\"]) on \"body > div.body-wrapper > nav#main-navbar > div.container-fluid > div#main-navbar-collapse-1 > div.nav.navbar-nav.navbar-right > li[0] > a.btn.btn-donate\""
+    ],
+    "jQueryDOMWrites": [
+      "$.outerHeight([true]) on \"body > div.body-wrapper > section#title-carousel\"",
+      "$.outerHeight([true]) on \"body > div.body-wrapper > nav#main-navbar\"",
+      "$.removeClass([\"affix affix-top affix-bottom\"]) on \"body > div.body-wrapper > nav#main-navbar\"",
+      "$.addClass([\"affix-top\"]) on \"body > div.body-wrapper > nav#main-navbar\"",
+      "$.outerHeight([true]) on \"html\"",
+      "$.css([\"display\",\"block\"]) on \"false\"",
+      "$.css([{\"display\":\"block\",\"height\":\"\"}]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.outerHeight([false]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.css([\"display\",\"\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.css([{\"display\":\"block\",\"height\":\"\"}]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.outerHeight([false]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.css([\"display\",\"\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.css([{\"display\":\"block\",\"height\":\"\"}]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.outerHeight([false]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.css([\"display\",\"\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"396px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"396px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"396px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.attr([\"style\",\"height: 396px;\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.attr([\"style\",\"height: 396px;\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.attr([\"style\",\"height: 396px;\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"460px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"460px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"460px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.attr([\"style\",\"height: 460px;\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.attr([\"style\",\"height: 460px;\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.attr([\"style\",\"height: 460px;\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"438px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"438px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "$.css([\"height\",\"438px\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\""
+    ],
+    "jQueryDOMWriteReadSwitches": [
+      "before $.height([]) on \"body > div.body-wrapper > nav#main-navbar\"",
+      "before $.scrollTop([]) on \"window\"",
+      "before $.attr([\"style\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "before $.attr([\"style\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "before $.attr([\"style\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "before $.css([\"box-sizing\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-right > div.card-inner.row-eq-height\"",
+      "before $.css([\"box-sizing\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-up > div.card-inner.row-eq-height\"",
+      "before $.css([\"box-sizing\"]) on \"body > div.body-wrapper > section#leadership > div.row > article.card.col-xs-12.col-sm-4.text-center.animate.slide-left > div.card-inner.row-eq-height\"",
+      "before $.offset([]) on \"body > div.body-wrapper > section#intro > div.row > p.col-xs-12.animate.slide-up\"",
+      "before $.width([]) on \"window\""
+    ],
+    "documentWriteCalls": [
+      "document.write() used from null",
+      "document.writeln() used from null"
+    ],
+    "lazyLoadableImagesBelowTheFold": [
+      "/img/students.jpg",
+      "/img/growing_together.jpg",
+      "/img/performing.jpg",
+      "/img/leader_luci.jpg",
+      "/img/leader_geronimo.jpg",
+      "/img/leader_joao.jpg"
+    ],
+    "domainsToDomContentLoaded": [
+      "www.faasl.org (10 requests)",
+      "calendar.google.com (3 requests)",
+      "apis.google.com (2 requests)",
+      "use.typekit.net (1 requests)",
+      "p.typekit.net (1 requests)",
+      "www.faasl.org (15 requests)",
+      "calendar.google.com (5 requests)",
+      "www.faasl.org (12 requests)",
+      "www.gstatic.com (1 requests)"
+    ],
+    "domainsToDomComplete": [
+      "www.faasl.org (16 requests)",
+      "use.typekit.net (8 requests)",
+      "calendar.google.com (5 requests)",
+      "apis.google.com (4 requests)",
+      "p.typekit.net (1 requests)",
+      "www.gstatic.com (1 requests)",
+      "clients6.google.com (1 requests)",
+      "clients6.google.com (3 requests)"
+    ],
+    "assetsNotGzipped": [
+      "http://www.faasl.org/ (HTML)",
+      "http://www.faasl.org/css/fa.min.css (CSS)",
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (CSS)",
+      "http://www.faasl.org/js/app.min.js (JS)",
+      "http://www.faasl.org/css/styles.min.css (CSS)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=413953832 (HTML)",
+      "http://www.faasl.org/img/logo.svg (IMAGE)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_13dt8l4l6cc6s7fea0nq9lg2og@group.calendar.google.com/events?calendarId=faasl.org_13dt8l4l6cc6s7fea0nq9lg2og%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (JSON)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com/events?calendarId=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (JSON)",
+      "https://clients6.google.com/calendar/v3/calendars/faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com/events?calendarId=faasl.org_92pmmquc4hv1bku5n9qq67gf0g%40group.calendar.google.com&singleEvents=true&timeZone=America%2FLos_Angeles&maxAttendees=1&maxResults=250&sanitizeHtml=true&timeMin=2023-05-28T00%3A00%3A00-07%3A00&timeMax=2023-07-02T00%3A00%3A00-07%3A00&key=AIzaSyBNlYH01_9Hc5S1J9vuFmu2nUqBZJNAXxs (JSON)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=1402374703 (HTML)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=287525709 (HTML)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=495862507 (HTML)",
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=631026984 (HTML)"
+    ],
+    "assetsWithQueryString": [
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (CSS)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (JS)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (JS)",
+      "https://apis.google.com/js/googleapis.proxy.js?onload=startup (JS)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (JS)"
+    ],
+    "assetsWithCookies": [
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (CSS)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (JS)",
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png (IMAGE)",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif (IMAGE)"
+    ],
+    "smallImages": [
+      "https://calendar.google.com/googlecalendar/images/logo-plus.png (0.09 kB)",
+      "https://www.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_46x16dp.png (1.03 kB)",
+      "https://calendar.google.com/googlecalendar/images/icon_print.gif (0.12 kB)"
+    ],
+    "smallCssFiles": [
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (0.72 kB)",
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (0.00 kB)"
+    ],
+    "smallJsFiles": [
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (0.04 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (0.31 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (0.20 kB)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (0.31 kB)",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed (0.60 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (0.28 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (0.34 kB)",
+      "https://apis.google.com/js/client.js?onload=clientLibraryLoaded (0.09 kB)"
+    ],
+    "timeToFirstCss": [
+      "http://www.faasl.org/css/fa.min.css received in 3313 ms",
+      "http://www.faasl.org/css/fa.min.css received in 3700 ms",
+      "http://www.faasl.org/css/fa.min.css received in 3699 ms",
+      "http://www.faasl.org/css/fa.min.css received in 3465 ms",
+      "http://www.faasl.org/css/fa.min.css received in 3470 ms"
+    ],
+    "timeToFirstJs": [
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed received in 3823 ms",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed received in 3984 ms",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed received in 3965 ms",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed received in 3937 ms",
+      "https://calendar.google.com/calendar/_/web/calendar-static/_/js/k=calendar-web.embed.en.H-zBEWJ1Ks8.es5.O/d=1/rs=ABFko3-jlL2g4_u-CNlp18ZkTdinszc-_Q/m=embed received in 3938 ms"
+    ],
+    "timeToFirstImage": [
+      "http://www.faasl.org/img/leader_luci.jpg received in 3582 ms",
+      "http://www.faasl.org/img/leader_luci.jpg received in 3801 ms",
+      "http://www.faasl.org/img/leader_luci.jpg received in 3803 ms",
+      "http://www.faasl.org/img/leader_luci.jpg received in 3732 ms",
+      "http://www.faasl.org/img/leader_luci.jpg received in 3731 ms"
+    ],
+    "smallestResponse": [
+      "https://p.typekit.net/p.css?s=1&k=puk0cdd&ht=tk&f=14058.18360.27907.27935.27943.27965.28156&a=9018230&app=typekit&e=css (0.00 kB)"
+    ],
+    "biggestResponse": [
+      "http://www.faasl.org/css/styles.min.css (420.22 kB)"
+    ],
+    "fastestResponse": [
+      "https://calendar.google.com/calendar/static/4fd255d3cd1b68d564d449383512b0d7embedcompiled_fastui.css (44 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (24 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (27 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (28 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (35 ms)"
+    ],
+    "slowestResponse": [
+      "http://www.faasl.org/ (2645 ms)",
+      "http://www.faasl.org/ (2660 ms)",
+      "http://www.faasl.org/ (2641 ms)"
+    ],
+    "smallestLatency": [
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (24 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (15 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (19 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=googleapis_proxy/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (27 ms)",
+      "https://apis.google.com/_/scs/abc-static/_/js/k=gapi.lb.en.wW0KrNepdTU.O/m=client/rt=j/sv=1/d=1/ed=1/rs=AHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g/cb=gapi.loaded_0?le=scs (17 ms)"
+    ],
+    "biggestLatency": [
+      "https://clients6.google.com/static/proxy.html?usegapi=1&jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.wW0KrNepdTU.O%2Fd%3D1%2Frs%3DAHpOoo8Je2IwWe-sD_xcm5fABAaEfyuc1g%2Fm%3D__features__#parent=https%3A%2F%2Fcalendar.google.com&rpctoken=413953832 (2643 ms)",
+      "http://www.faasl.org/ (2645 ms)",
+      "http://www.faasl.org/ (2623 ms)"
+    ]
+  }
+}
