@@ -6,7 +6,7 @@ ErrorDocument 500 /v-web/errdocs/500.html
 
 RewriteEngine on
 RewriteCond %{HTTP_HOST} stories.faasl.org [NC]
-RewriteRule ^(.*)$ https://spark.adobe.com/page/cqFpRvvAaWTzt/ [L]
+RewriteRule ^(.*)$ https://new.express.adobe.com/webpage/QA4cx0phRdfoF [L]
 RewriteCond %{HTTP_HOST} facebook.faasl.org [NC]
 RewriteRule ^(.*)$ https://facebook.com/the.faasl [L]
 RewriteCond %{HTTP_HOST} instagram.faasl.org [NC]
