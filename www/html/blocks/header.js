@@ -15,9 +15,6 @@ module.exports = function (processor) {
   	let hash = asset[2].split(',');
   	let str = '';
   	nav.forEach((nav, i) => str += '    <li><a href="#' + hash[i] + '">' + nav + '</a></li>\n    ');
-    if (page !== 'hall') {
-      str += '    <li><a href="./hall.html">Hall Rental</a></li>\n    '; // Add hall rental link
-    }
   	let html = `
     	<!--  START nav.navbar.top-nav-collapse  -->
     	<nav id="main-navbar" class="navbar navbar-default scrolling-navbar .top-nav-collapse" data-spy="affix">
