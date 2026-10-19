@@ -1,33 +1,35 @@
 # FAASL.org v3 — To-do & roadmap
 
 The plan for the v3 relaunch, in phases. Review it, reorder it, cross things out.
-Related: [`brief.md`](./brief.md) (goals & decisions) · [`content.md`](./content.md) · [`architecture.md`](./architecture.md) · [`astro-extensibility.md`](./astro-extensibility.md)
+Related: [`brief.md`](./brief.md) (requirements & decisions) · [`strategy.md`](./strategy.md) (goals, audiences & landing pages) · [`content.md`](./content.md) · [`architecture.md`](./architecture.md) · [`astro-extensibility.md`](./astro-extensibility.md)
 (The old `www/todo.md` is the v2 list and will be retired along with `www/`.)
 
 **Owner key:** 🧑 you · 🤖 me (Claude) · 🤝 together
 
 | Phase | What | Gate before moving on |
 |---|---|---|
-| 0 | Brief & decisions | You've reviewed `brief.md` |
+| 0 | Brief & decisions | You've reviewed `brief.md` and `strategy.md` |
 | 1 | Infrastructure & test page | Test page live on a Cloudflare preview URL; CI green |
 | 2 | Section planning | Each section has an agreed outline and content model |
 | 3 | **⏸ Design (pause)** | Layout and visual direction approved, mobile first |
 | 4 | Build sections | Each section reviewed on a preview URL |
 | 5 | Pre-launch | Launch checklist complete |
-| 6 | Launch & follow-up | Live on faasl.org |
+| 6 | **Beta** for stakeholders | Feedback gathered and addressed |
+| 7 | Launch & follow-up | Live on www.faasl.org |
 | — | Content gathering | Runs alongside every phase |
 
 ---
 
 ## Phase 0 — Brief & decisions
 
-- [ ] 🧑 Review `brief.md`: goals order, audiences, requirements, constraints
-- [ ] 🧑 Answer the ❓ decisions that block Phase 1:
-  - [ ] Who owns the Cloudflare account (💡 an organization account on an faasl.org email)
-  - [ ] Plain CSS vs. Tailwind
-  - [ ] `faasl.org` vs. `www.faasl.org` as the main address (only needed before launch, but good to settle early)
-- [ ] 🧑 Target launch date (💡 early January, before February lesson recruitment)
-- [ ] 🧑 Collect inspirations (`brief.md` §4). Needed before Phase 3.
+- [ ] 🧑 Review `brief.md` and `strategy.md`: goals order, audiences, landing pages, requirements, constraints
+- [ ] 🧑 Collect inspirations (`brief.md` §3). Needed before Phase 3.
+- [x] Main address: `www.faasl.org`
+- [x] No launch date
+- [x] CSS framework decided in the design phase
+- [ ] 🧑 **Decide the contact form service** (💡 Web3Forms or Formspree free tiers). Needed by Phase 4.
+- [ ] 🧑 Confirm the existing photo consent form covers publishing on the website (`brief.md` §5.1)
+- [ ] 🧑 Decide the copyright & license statement for content and code (`brief.md` §5.2)
 
 ## Phase 1 — Infrastructure & test page
 
@@ -58,7 +60,8 @@ Goal: prove the whole pipeline end to end (code → CI → Cloudflare preview) w
 
 ### CI & deploys
 - [ ] 🤖 GitHub Actions on every push and PR: install → `astro check` → lint → build
-- [ ] 🧑 Create the Cloudflare account / project; connect the GitHub repo (needs your login)
+- [ ] 🧑 **Create a Cloudflare account** (free plan, your ownership for now) and enable two-factor login
+- [ ] 🧑 Create the Cloudflare project and connect the GitHub repo (needs your login; I'll give step-by-step instructions)
 - [ ] 🤝 Configure the Cloudflare project: build command, output folder, Node version; production branch = `v3` until launch; previews for other branches
 - [ ] 🤝 Confirm a preview URL deploys on push
 - [ ] 🤖 Lighthouse check in CI (report only for now; budgets once the design exists)
@@ -67,14 +70,17 @@ Goal: prove the whole pipeline end to end (code → CI → Cloudflare preview) w
 
 For each section, agree on: **purpose & audience · URL · content fields (schema) · components · SEO target (title, keywords, structured data) · open content questions.** I'll draft each as a short spec for you to review.
 
-- [ ] 🤝 Information architecture: confirm the site map and the **hybrid long home page** approach (`brief.md` §7)
+- [ ] 🤝 Information architecture: confirm the site map (`strategy.md` §7), the **hybrid long home page**, and launch priority
 - [ ] 🤝 Global: header & mobile nav, footer, announcement banner, SEO defaults, 404 page
-- [ ] 🤝 Home (long scrolling story: intro → learn → grow → perform → events → leadership → contact)
+- [ ] 🤝 Home (long scrolling story + "I want to…" audience router)
 - [ ] 🤝 Lessons: about, instruments + demo video, materials & stores, FAQ, Remind sign-up
-- [ ] 🤝 Join the band (adults / returning / experienced players)
-- [ ] 🤝 About: history & name, leadership, teachers
-- [ ] 🤝 Events: upcoming (from Google Calendar), subscribe links; past write-ups later
-- [ ] 🤝 Support: donate, volunteer, 501(c)(3) info
+- [ ] 🤝 Join the band (sharpened for experienced players: repertoire, open chairs, sit-in invite)
+- [ ] 🤝 Give (community donors: donate, honor/memorial gifts, dinners, other ways to help)
+- [ ] 🤝 Impact (funders & agencies: mission, numbers, governance, documents, verification links)
+- [ ] 🤝 Sponsor (corporate: tiers, benefits, matching gifts, sponsor packet)
+- [ ] 🤝 Volunteer (organizational talent: open roles, board, skilled volunteers)
+- [ ] 🤝 About: history & heritage, leadership, teachers
+- [ ] 🤝 Events: upcoming (from Google Calendar), fundraiser dinners, subscribe links; past write-ups later
 - [ ] 🤝 Contact: form, address, phone, map, socials
 - [ ] 🤝 Members (unlisted): calendars, hours log, practice playlist, RSVP
 - [ ] 🤝 Later sections, so the content model leaves room for them: stories, event deep dives, galleries, volunteer bios, tags, search
@@ -96,9 +102,13 @@ Built in this order, each reviewed on a preview URL:
 - [ ] 🤖 Home
 - [ ] 🤖 Lessons
 - [ ] 🤖 About (leadership + teachers)
+- [ ] 🤖 Join
+- [ ] 🤖 Give
+- [ ] 🤖 Impact
 - [ ] 🤖 Contact (+ form service)
 - [ ] 🤖 Events (calendar loader)
-- [ ] 🤖 Join, Support, Members
+- [ ] 🤖 Sponsor, Volunteer (once the board has defined tiers and open roles)
+- [ ] 🤖 Members
 - [ ] 🤖 404 page, print styles
 
 ## Phase 5 — Pre-launch
@@ -112,10 +122,19 @@ Built in this order, each reviewed on a preview URL:
 - [ ] 🤖 Automated tests: every shortcut subdomain and old URL redirects to the expected target
 - [ ] 🧑 Final content proofread
 
-## Phase 6 — Launch & follow-up
+## Phase 6 — Beta for stakeholders
+
+- [ ] 🤝 Beta address: 💡 `beta.faasl.org` (the old site used it for betas). It can point at the Cloudflare project with one DNS record at the current DNS host, before any full DNS move. Fallback: the free `*.pages.dev` address.
+- [ ] 🤖 Beta is hidden from search engines (`noindex` + `robots.txt`) and marked with a "Beta: tell us what you think" banner
+- [ ] 🤖 Feedback link on every page (a simple form or `mailto:`, with the page address filled in)
+- [ ] 🧑 Stakeholder list: board, Edgard, Geronimo, key volunteers, a few parents and members, maybe a friendly donor
+- [ ] 🧑 Share the beta with a short note: what to look at, how to send feedback, by when
+- [ ] 🤝 Triage feedback → fix → second look if needed
+
+## Phase 7 — Launch & follow-up
 
 - [ ] 🤝 Add faasl.org to Cloudflare; **verify every DNS record (especially MX/TXT for email)** against the current host
-- [ ] 🤝 Switch nameservers; attach the custom domain; production branch → `main` (merge `v3`)
+- [ ] 🤝 Switch nameservers; attach `www.faasl.org` (and redirect `faasl.org` → `www`); production branch → `main` (merge `v3`)
 - [ ] 🤝 Shortcut subdomain redirect rules live; run the redirect tests against production
 - [ ] 🤖 Allow indexing (`robots.txt`), submit the sitemap
 - [ ] 🧑 Google Search Console + Bing Webmaster Tools verified
@@ -156,8 +175,19 @@ Built in this order, each reviewed on a preview URL:
 Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] 🧑 Confirm the destination for each one (some point at old Google Forms / Adobe Express)
 - [ ] 🤖 Write the redirect rules and the automated tests (Phase 5)
-- [ ] 🤝 Test every shortcut and old page URL after launch (Phase 6)
+- [ ] 🤝 Test every shortcut and old page URL after launch (Phase 7)
 - [ ] `hall.faasl.org` / `rental.faasl.org` point to Home for now (revisit in v3.1)
+- [ ] 🧑 Pick new campaign shortcuts for the audience pages (💡 `give.`, `sponsor.`, `join.`, `impact.`, `lessons.`), optionally tagged for analytics (`strategy.md` §5)
+
+### Proof assets for funders & talent (`strategy.md` §6) 🧑
+- [ ] Yearly numbers: students taught, musicians in the band, volunteer hours (from `log.faasl.org`), performances per year
+- [ ] Testimonials: a parent, a student, an experienced musician, a board member, a community partner
+- [ ] Annual report or financial summary; IRS determination letter; recent Form 990
+- [ ] Claim / update the Candid (GuideStar) profile; check California Attorney General Registry of Charities status
+- [ ] Sponsorship tiers and benefits (board decision)
+- [ ] Open chairs (instruments needed) and open volunteer / board roles
+- [ ] Suggested gift amounts tied to real costs (method book, instrument repair, etc.)
+- [ ] 1–2 short performance videos
 
 ### Content items 🧑
 - [ ] **Gather Edgard Gonzalez's details:** exact title, 2–3 sentence bio, instruments, credentials, year joined, headshot, and how families should contact him (for the "What if we're late?" FAQ)
@@ -184,6 +214,14 @@ Goal: a brochure that **regenerates itself from the site's content**, with nothi
 ## v3.1
 
 Follow-up work after the v3 launch.
+
+### Portuguese language
+- [ ] Portuguese version of key pages (Home, Lessons, Give, About) under `/pt/`, using Astro's built-in i18n routing
+- [ ] Who translates and reviews? (a community volunteer?)
+
+### Newsletter
+- [ ] Decide whether to restart a newsletter, and on which service (Mailchimp or another)
+- [ ] Until then, `newsletter.faasl.org` and `subscribe.faasl.org` keep redirecting to the old Mailchimp pages
 
 ### Hall & rental
 Whether the hall appears on the site at all is up for debate. Return to it after launch.

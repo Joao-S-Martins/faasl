@@ -111,6 +111,8 @@ Moving DNS means copying **every existing record**, especially the **MX records*
 
 ## 4. Proposed site map
 
+> **Updated:** the audience-based site map in [`strategy.md`](./strategy.md) §7 replaces this table (adds Give, Sponsor, Impact and Volunteer pages). Main address is `www.faasl.org`.
+
 Today the site is mostly one long page with in-page anchors. For SEO, **each topic people search for should have its own URL** with its own title and description.
 
 | URL | Content (from `content.md`) | Primary search intent |

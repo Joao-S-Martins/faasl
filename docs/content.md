@@ -38,6 +38,7 @@ These details show up across many pages, so the new site will store them once.
 | Copyright line | © 2007–{current year} Filarmonica Artista Amadora de San Leandro. All rights reserved. |
 | Brand color | Green — Pantone Green CP, HEX `#00A079`, RGB 0 160 121, CMYK 93 0 63 0 |
 | Secondary color (favicon/tile) | `#355749` |
+| Full palette | Greens, golds and whites from v2 are the official v3 palette; see `brief.md` §5.3 |
 | Logo | `www/img/Logo.svg` |
 
 > [!NOTE]
