@@ -56,6 +56,8 @@ Every option below can output a fully static site, so none needs a server or dat
 
 ### 1.3 Recommendation: Astro
 
+> A closer comparison of Astro, Docusaurus and TanStack Start is in [`framework-deep-dive.md`](./framework-deep-dive.md).
+
 - It's the only option that is built **for content sites**, uses **templates**, and treats **React components** as a first-class add-on, while shipping almost no JavaScript. That's the best combination for SEO and page speed.
 - Content collections and image optimization are built in, so `content.md` maps straight onto typed Markdown files, and your existing JPGs get resized and converted automatically.
 - Very active development with the strongest developer satisfaction, and as of 2026 a large company funding it. Astro is MIT-licensed and runs on any host, so we're never locked into Cloudflare.
