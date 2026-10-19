@@ -8,8 +8,8 @@ This file holds all the content from the current site (v2), audited and gathered
 - Lines starting with `> [!NOTE]` / `> [!WARNING]` are **review notes** from the audit. They're not content. Delete each one once you've dealt with it.
 - `TODO:` marks content that's missing and needs writing.
 - `🖼️` lines describe the image used in that spot. Image filenames are in `www/img/` (higher-res `@2x` versions sit next to them).
-- `[link text](url)` is a link. Vanity subdomains like `events.faasl.org` are listed in [Section 9](#9-vanity-subdomains--redirects).
-- Obvious typos were fixed inline. Each fix is listed in [Section 12](#12-audit-log-edits-made-while-transcribing) so you can check them.
+- `[link text](url)` is a link. Vanity subdomains like `events.faasl.org` are listed in [Section 7](#7-vanity-subdomains--redirects).
+- Obvious typos were fixed inline. Each fix is listed in [Section 10](#10-audit-log-edits-made-while-transcribing) so you can check them.
 
 **Where this came from:** `www/html/*.html`, `www/html/tmpl/*`, `www/html/blocks/*`, `www/.htaccess.bak`, `www/meta/*` and `branding/` on `main` at commit `68faca3`. I also checked git history for content that was removed or reverted.
 
@@ -41,7 +41,7 @@ These details show up across many pages, so the new site will store them once.
 | Logo | `www/img/Logo.svg` |
 
 > [!WARNING]
-> **Check the address.** The COVID page talks about "our new facilities" and "our conservatory", and the removed hall page says the hall was "just built in 2021". Is 844 Alvarado St. still the right address for lessons and rehearsals?
+> **Check the address.** The old COVID page talked about "our new facilities" and "our conservatory", and the removed hall page says the hall was "just built in 2021". Is 844 Alvarado St. still the right address for lessons and rehearsals?
 
 > [!NOTE]
 > The README's "underserved youth in the East Bay" wording doesn't appear anywhere on the site. Do you want it as the official mission statement? It works well as the meta description for search results.
@@ -99,12 +99,12 @@ These are internal notes, not site copy, but they're useful for voice and tone.
 ### Footer
 
 - Social icons: Facebook, Instagram, Twitter, YouTube, LinkedIn
-- Quick links: see [Section 9](#9-vanity-subdomains--redirects). The footer listed every vanity subdomain.
+- Quick links: see [Section 7](#7-vanity-subdomains--redirects). The footer listed every vanity subdomain.
 - Copyright line and 501(c)(3) statement:
   > The Filarmonica Artista Amadora de San Leandro is a [501(c)(3) non-profit](https://apps.irs.gov/app/eos/) organization. EIN: 94-2930722
 
 > [!NOTE]
-> I'd suggest a shorter footer in v3: nav links, social icons, address/phone/email and the non-profit line. The long subdomain list is useful to members but adds clutter for new visitors. A "Members" page could hold those links instead (see Section 8).
+> I'd suggest a shorter footer in v3: nav links, social icons, address/phone/email and the non-profit line. The long subdomain list is useful to members but adds clutter for new visitors. A "Members" page could hold those links instead (see Section 7).
 
 ---
 
@@ -200,21 +200,14 @@ Print-only text: "Visit events.faasl.org for our upcoming events. Hope to see yo
 
 ### 3.4 Our leadership team
 
-> [!WARNING]
-> **Please confirm the current leadership.** Git history shows that in June 2023, **Lucia Lopes Gallagher** replaced Lorenza as *President of the Board* ("Add Luci to the leadership section"). Then the June 2024 "Removed hall info" commit put **Lorenza** back, which looks accidental. The live site currently shows Lorenza. Both are listed below; delete whichever doesn't apply.
-
-**Lucia "Luci" Lopes Gallagher** — *President of the Board*
-🖼️ `leader_luci.jpg`
-Luci has been a volunteer with FAASL for several years, recruited by her parents. She was raised going to many festas and enjoys everything Portuguese.
-
 **Lorenza D.L.G. Tomaz** — *President of the Board*
-🖼️ `leader_lorenza.jpg`
+🖼️ `leader_lorenza.jpg` (new headshot needed, see `todo.md`)
 Lorenza raised her son in our program years ago. She actively volunteered in non-musician roles and has served as the president for over five years now.
 
-> [!WARNING]
-> "for over five years now" is out of date if Lorenza is still president. If she's stepping down, she could move to a "Past presidents" / thank-you line instead.
+> [!NOTE]
+> "for over five years now" needs updating (tracked in `todo.md`).
 
-**Geronimo Rojas** — *Conductor*
+**Geronimo Rojas** — *Band Conductor*
 🖼️ `leader_geronimo.jpg`
 Geronimo has been a member of our volunteer band since he was a young middle school student. His love of music has earned him scholarships and taken him traveling. Now he leads the band that supported his journey.
 
@@ -223,7 +216,7 @@ Geronimo has been a member of our volunteer band since he was a young middle sch
 John was born into our program, pushed in his stroller as his father volunteered musically. He learned to play as a child and continues to help develop the program in new and innovative ways.
 
 > [!NOTE]
-> Headshots are only 280×280 px at most. That's fine for small circles, but larger cards in v3 will need higher-resolution originals.
+> New, higher-resolution headshots are tracked in `todo.md`.
 
 ---
 
@@ -232,19 +225,12 @@ John was born into our program, pushed in his stroller as his father volunteered
 > [!NOTE]
 > The current site has no Teachers section, but the home page promises "credentialed music teachers". Giving each teacher a short bio (name, instruments, credentials) supports that claim, and is good for SEO and for parents' trust. Should this live on the Lessons page, the About page, or both?
 
-**Edgard Gonzalez** — *TODO: title, e.g. "Music Instructor" or "Beginning Band Instructor"*
-🖼️ TODO: headshot (square, at least 600×600 px)
+**Edgard Gonzalez** — *Music Teacher* (TODO: confirm exact title)
+🖼️ TODO: headshot (see `todo.md`)
 TODO: Bio, 2–3 sentences. Suggested points: instruments taught, education / credentials, teaching background, how he's connected to the FAASL, something personal.
 - **Teaches:** TODO (e.g. beginner class, woodwinds, brass, percussion)
 - **Credentials:** TODO
 - **Joined FAASL:** TODO (year)
-
-**Steve Silva** — *Lead Instructor* (unconfirmed)
-🖼️ `leader_steve.jpg` (photo exists but isn't used on the site)
-TODO: Bio.
-
-> [!WARNING]
-> Steve Silva was listed as "Lead Instructor" in a commented-out contact block, and the Students FAQ says "Please notify Steve if you're running late". Is Steve still teaching? If not, remove him here and update FAQ 6.3.
 
 ---
 
@@ -356,7 +342,7 @@ Typically Friday nights at 6:00 for the new beginning students, 6:30 for the int
 30 minutes for the instructional time. Intermediate students will also participate in the volunteer band rehearsal, which runs about 90 minutes.
 
 **What if we're late?**
-Please notify Steve ASAP if you're running late or have to miss a lesson entirely. When arriving late, enter quietly.
+Please notify Edgard ASAP if you're running late or have to miss a lesson entirely. When arriving late, enter quietly.
 
 **Where are lessons?**
 Lessons are taught in the same hall where our volunteer band rehearses.
@@ -366,7 +352,7 @@ Lessons are taught in the same hall where our volunteer band rehearses.
 Students should arrive 10 minutes early to assemble their instruments and warm up. Parents are welcome to sit near the class so long as they are completely silent. Parents can also talk in the clubhouse.
 
 > [!WARNING]
-> Please confirm the lesson schedule (Friday times), who to notify when late (Steve? Edgard? info@?), and the address.
+> Please confirm the lesson schedule (Friday times) and the address. "Notify Steve" was changed to Edgard. Should it say how to reach him (phone/email), or point to info@faasl.org?
 
 ---
 
@@ -408,113 +394,11 @@ Messages shown after submitting:
 
 ---
 
-## 7. Remote Restart page (`/remote.html`) — COVID-era
+## 7. Vanity subdomains & redirects
 
-> [!WARNING]
-> **Keep, archive or drop?** This page was a COVID-19 lockdown program ("Remote Restart": one-on-one video sessions for lapsed musicians). It's no longer linked from the nav, and `remote.faasl.org` already redirects to the home page. My recommendation: **drop** it, and turn the good idea in it (helping adults who used to play get back into it) into a short "Played in school? Come back to music" section on a Join page. The full text is kept below so nothing is lost.
+These currently live in `www/.htaccess.bak` on the shared host. They're printed in brochures and handed out at events, so **they must keep working** after the move. `docs/architecture.md` covers how. Testing every one is tracked in `todo.md`.
 
-<details>
-<summary>Full text of the Remote Restart page</summary>
-
-**Nav:** Remote Learning · The Program · What You'll Learn · Sign-up · Continued Learning
-
-## We're offering a remote learning opportunity
-#### because COVID-19 can't stop us!
-
-Just because you can't leave your house doesn't mean you can't play music. In fact, the best way to pass this time of seclusion might be to *play more music*.
-
-> 🎵 Stay home and rekindle your love for playing music.
-
-You know that old instrument tucked away in the back of your closet or gathering dust in the garage? You probably have some great memories of playing it in the past. *We want you to make new memories playing it into the future as well.*
-
-## And we're here to help
-
-We are launching our limited Remote Restart program to help you do just that. We are scheduling one-on-one video sessions right now to help you relearn your instrument. You might only remember how to blow a few notes. You might have forgotten your scales. You might not have any sheet music to play in your house. Maybe you don't even know if your instrument works correctly.
-
-We're here to help you through all of this. During these sessions, we'll field any questions you might have, help you relearn your way around your instrument, provide you with sheet music to practice, and schedule follow-up sessions as needed.
-
-## What to expect
-
-To prepare for your session:
-- Print any music we've sent you
-- Find a way to stand the sheet(s) near your laptop or phone
-- Clean your mouthpiece and assemble your instrument
-- Install the video conference software if your device requires it
-
-During your first session, we'll cover:
-- Any questions you might have
-- How to get some notes out
-- Review of musical notation, like note lengths and symbols
-- Work through some scales or songs together
-- Discuss practicing alone and schedule a follow-up session
-
-After the session, you should:
-- Set your practice schedule as discussed
-- Be bold
-- Make noise
-- Take pride in rediscovering your talent
-
-## How to get started
-
-To get started, just send an email to [info@faasl.org](mailto:info@faasl.org). Tell us your name, city, the instrument(s) you'd like to play, and a phone number that we can call you at. We'll follow up with you to arrange a session time. It's *just that simple*.
-
-There are just a few requirements:
-- Have a wind instrument or drum available to learn (no string instruments or pianos)
-- Have some experience playing music (absolute beginners can join our [free lessons](/lessons) when they resume)
-- Reside in one of these San Francisco Bay Area counties: Alameda, Contra Costa, San Mateo, Santa Clara, and San Francisco
-
-Our resources are limited and there are just some cases that we aren't able to help with at this time. [Contact us today](mailto:info@faasl.org)
-
-## How we can continue to support you
-#### once public gatherings are allowed to resume
-
-At the Portuguese Band of San Leandro, we take a lot of pride in bringing people of all ages and experiences together to play music throughout our communities. Our goal with these Remote Restart sessions is to get more musicians active and performing. As soon as public gatherings are allowed to resume, you'll be invited to sit in at our volunteer band rehearsals or join our always [free music lessons](/lessons).
-
-</details>
-
----
-
-## 8. COVID-19 policies page (`/covid.html`)
-
-> [!WARNING]
-> **Keep, archive or drop?** These policies refer to 2022-era CDC "COVID by county" guidance and an `enter.faasl.org` check-in form. Unless the board still enforces them, I recommend **dropping** this page (with a redirect to Home) or replacing it with a short, general "Health & safety" note on the Lessons page. Full text is kept below.
-
-<details>
-<summary>Full text of the COVID-19 page</summary>
-
-**Nav:** Home · Lessons
-
-## Covid-19 mitigation
-#### policies to keep us safe
-
-We take the health of our students and volunteers very seriously. After the extended shutdown of our services, we are very happy to be able to once again invite musicians and students into our new facilities. The ability to safely run our programs in person relies on everyone's cooperation following our temporary safety procedures.
-
-**If you have recently had Covid or may have been exposed,** please speak with a board member outside or before arriving. We will admit recovered persons without current symptoms on the 6th day after their Covid symptoms first appeared or they first tested Covid positive. We will insist that potentially exposed persons fully apply the mask and bell cover guidance below.
-
-Mandatory Covid precautions include:
-- Check in online at [enter.faasl.org](https://enter.faasl.org) upon entering our conservatory.
-- Sanitize hands upon entering.
-- Spaced seating and individual music stands. People residing in the same household may sit near one another and share music stands.
-- Brass instruments are to void their spit onto disposable dinner plates.
-
-Optional Covid precautions that may be reinstated by [CDC](https://www.cdc.gov/coronavirus/2019-ncov/your-health/covid-by-county.html) or [ACPHD](https://covid-19.acgov.org/face-masks.page) guidance include:
-- Temperature check during check-in.
-- Regular masks worn when not eating or drinking.
-- Specialty masks worn while playing an instrument.
-- Instrument bell covers.
-- Wipe your stand and chair with a sanitization wipe after use.
-- Rehearsal breaks will occur every 50 minutes or less.
-- Lessons will be limited to 20 minutes to allow for cleaning and airflow between classes.
-
-</details>
-
----
-
-## 9. Vanity subdomains & redirects
-
-These currently live in `www/.htaccess.bak` on the shared host. They're printed in brochures and handed out at events, so **they must keep working** after the move. `docs/architecture.md` covers how.
-
-| Subdomain | Currently goes to | In footer? | Keep? |
+| Subdomain | Currently goes to | In footer? | v3 target |
 |---|---|---|---|
 | `stories.faasl.org` | Adobe Express page (`new.express.adobe.com/webpage/QA4cx0phRdfoF`) | ✔ | TODO |
 | `facebook.faasl.org` | facebook.com/the.faasl | ✔ | TODO |
@@ -522,34 +406,34 @@ These currently live in `www/.htaccess.bak` on the shared host. They're printed 
 | `twitter.faasl.org` | twitter.com/faasl | ✔ | TODO |
 | `youtube.faasl.org` | YouTube channel `UCIWQ1_SGK9Ql4D9fzNE56cw` | (icon) | TODO |
 | `linkedin.faasl.org` | linkedin.com/company/faasl | (icon) | TODO |
-| `events.faasl.org` | Google Calendar (all 3 calendars) | ✔ | TODO → `/events` |
+| `events.faasl.org` | Google Calendar (all 3 calendars) | ✔ | `/events` |
 | `newsletter.faasl.org` | Mailchimp campaign archive | ✔ | TODO |
 | `subscribe.faasl.org` | Mailchimp sign-up (`eepurl.com/bU0fQf`) | ✔ | TODO |
-| `brochure.faasl.org` | `/downloads/tri-fold_brochure.pdf` | ✔ | ⚠️ PDF isn't in the repo — do you have it? |
-| `contact.faasl.org` | Home page `#contact` | ✔ | TODO → `/contact` |
+| `brochure.faasl.org` | `/downloads/tri-fold_brochure.pdf` | ✔ | Brochure project (see `todo.md`). PDF isn't in the repo. |
+| `contact.faasl.org` | Home page `#contact` | ✔ | `/contact` |
 | `log.faasl.org` | Google Form: volunteer hours log | ✔ | TODO |
 | `practice.faasl.org` | YouTube practice playlist `PLUc6RuyKwWdnL192YgHQ5P-VH8CVN3MEU` | ✔ | TODO |
 | `volunteer.faasl.org` | Google Form `1T5RKcQmOUZ2LyR4nkhu5rbxMQllpn0ePETf_H_88RIs` | ✔ | TODO |
-| `students.faasl.org` | `/students.html` | ✔ | TODO → `/lessons` |
-| `covid.faasl.org` | `/covid.html` | ✔ | TODO |
-| `enter.faasl.org` | Google Form: COVID check-in | ✔ | TODO (probably drop) |
-| `remote.faasl.org` | Home page | | TODO |
-| `donate.faasl.org` | `/donate.html` (⚠️ this page doesn't exist) | | TODO |
-| `hall.faasl.org` | `/hall.html` (removed) | | TODO |
-| `rental.faasl.org` | `/hall.html` (removed) | | TODO |
+| `students.faasl.org` | `/students.html` | ✔ | `/lessons` |
+| `covid.faasl.org` | `/covid.html` | ✔ | Home (program ended) |
+| `enter.faasl.org` | Google Form: COVID check-in | ✔ | Home (program ended) |
+| `remote.faasl.org` | Home page | | Home (program ended) |
+| `donate.faasl.org` | `/donate.html` (⚠️ this page doesn't exist) | | `/support` |
+| `hall.faasl.org` | `/hall.html` (removed) | | TODO: Home or `/about` |
+| `rental.faasl.org` | `/hall.html` (removed) | | TODO: Home or `/about` |
 | `rsvp.faasl.org` | Google Form (RSVP) | | TODO |
 | `survey.faasl.org` | SurveyMonkey `V6C86KL` | (commented out) | TODO |
-| `calendar.faasl.org` | (not in `.htaccess`; commented out in footer) | | TODO |
-| `drive.`, `mail.`, `uniform.`, `help.`, `soundcloud.` | (commented out in footer; no redirect rule) | | probably drop |
+| `calendar.faasl.org` | (not in `.htaccess`; commented out in footer) | | `/events` |
+| `drive.`, `mail.`, `uniform.`, `help.`, `soundcloud.` | (commented out in footer; no redirect rule) | | not set up today; skip |
 
-Also: old page URLs (`/index.html`, `/students.html`, `/covid.html`, `/remote.html`, `/hall.html`) should get permanent (301) redirects to their v3 equivalents, so existing Google rankings and bookmarks carry over.
+Also: old page URLs (`/index.html`, `/students.html`, `/covid.html`, `/remote.html`, `/hall.html`) should get permanent (301) redirects to their v3 equivalents (`/covid.html` and `/remote.html` → Home), so existing Google rankings and bookmarks carry over.
 
 > [!NOTE]
 > **Members page idea:** the member-only links (volunteer hours log, practice playlist, RSVP, calendars, volunteer form) could go on one unlisted `/members` page rather than in the public footer.
 
 ---
 
-## 10. Removed / historical content
+## 8. Removed / historical content
 
 ### Hall rental page (removed June 2024)
 
@@ -563,13 +447,17 @@ The Hall page and its banner were removed in commit `68faca3` ("Removed hall inf
 > [!NOTE]
 > Even without taking rentals, the hall photos (`rental_01`, `rental_04`, `rental_06`) look great for an "Our home" / About section or for fundraiser dinners. Use them?
 
+### COVID-19 policies and Remote Restart pages (dropped in v3)
+
+Both programs have ended, so `/covid.html` and `/remote.html` aren't carried over; their old URLs and subdomains redirect to Home. Their full text remains in git history (`www/html/covid.html`, `www/html/remote.html`). The "Played in school? Come back to music" idea from Remote Restart may still fit on the `/join` page.
+
 ### Old site text
 
 The README points to an even older static page (commit `2ff0638`). It isn't carried over.
 
 ---
 
-## 11. Image inventory
+## 9. Image inventory
 
 All in `www/img/`. "@2x" means a double-resolution copy exists.
 
@@ -585,17 +473,18 @@ All in `www/img/`. "@2x" means a double-resolution copy exists.
 | `growing_together.jpg` | 1280×1200 @2x | mixed-age band marching | home "Grow" | Home |
 | `performing.jpg` | 1280×1280 @2x | band marching at a carnival | home "Perform" | Performances |
 | `standards-of-excel-001.jpg` | 900×900 | method books (third-party photo) | students | Lessons (or replace) |
-| `leader_*.jpg` (geronimo, joao, lorenza, luci, steve) | 280×280 @2x | headshots | leadership | leadership / teachers (need higher res) |
+| `leader_*.jpg` (geronimo, joao, lorenza) | 280×280 @2x | headshots | leadership | to be replaced (see `todo.md`) |
+| `leader_luci.jpg`, `leader_steve.jpg` | 280×280 @2x | former leader / instructor | no | not used in v3 |
 | `rental_01`–`06.jpg` | 1008×1344 max | hall events | removed hall page | About / fundraisers |
 | `social/index.jpg`, `social/students.jpg` | — | social share cards | meta tags | regenerate per page |
 | `www/favicons/*` | — | favicon set | all | regenerate from `Logo.svg` |
 
 > [!NOTE]
-> Fresh photos would help the most: recent performances, students with their teachers (including Edgard), and higher-resolution headshots. Do you have a shared album to pull from?
+> Fresh photos would help the most: recent performances, students with their teachers (including Edgard), and new headshots (in `todo.md`). Do you have a shared album to pull from?
 
 ---
 
-## 12. Audit log: edits made while transcribing
+## 10. Audit log: edits made while transcribing
 
 Fixed inline (original → new):
 - "learning in a **manor**" → "manner"
@@ -604,21 +493,16 @@ Fixed inline (original → new):
 - "comparable and **complimentary**" → "complementary"
 - "prior **begining** students" → "beginning"
 - "**warm-up**" (verb) → "warm up"
-- "back of **you** closet" → "your"
-- "You might have **forgetten**" → "forgotten"
-- "And **We're** here to help" → "And we're here to help"
-- "We'll **follow-up**" (verb) → "follow up"
-- "some cases that we **aren't to help**" → "aren't able to help with"
-- "**recenlty**" → "recently"; "**proceedures**" → "procedures"; "**full** apply" → "fully apply"
-- "Check-in online" (verb) → "Check in online"
 - "150 **sitting** capacity" → "seating"; "just **build** in 2021" → "built"
 - "Musician's Friend" link was missing `https://` (broken relative link) → fixed
-- "Luci has been a volunteer … **recruited** by her parents" → added a comma for readability
 
-Not changed. These need your decision and are flagged above:
-- "Over 35 years later" (out of date)
-- "president for over five years now" (out of date)
-- Lorenza vs. Luci as President
-- Steve as the contact for late arrivals
-- Lesson times, address, store list
-- Image alt text that said "Portrait of Lorenzo Tomaz" (also used on Luci's photo). The new site will write fresh alt text.
+Content decisions applied (October 2026 review):
+- President: Lorenza D.L.G. Tomaz (the Luci entry was removed)
+- Teacher: Edgard Gonzalez (Steve removed; the FAQ's "notify Steve" now says Edgard)
+- Conductor: Geronimo Rojas, titled "Band Conductor"
+- COVID-19 and Remote Restart pages dropped
+
+Not changed yet:
+- "Over 35 years later" and "president for over five years now" (date updates are in `todo.md`)
+- Lesson times, address, store list (flagged above)
+- Image alt text that said "Portrait of Lorenzo Tomaz". The new site will write fresh alt text.

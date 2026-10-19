@@ -82,7 +82,7 @@ Moving DNS means copying **every existing record**, especially the **MX records*
 | v2 feature | How it worked | v3 replacement (no server) |
 |---|---|---|
 | Contact form | `cgi/forms.php` on the shared host, using PHP `mail()` | Form posts to **Web3Forms** / **Formspree** (free tiers), which email info@faasl.org. Spam: hidden honeypot field + Cloudflare Turnstile instead of the "22" math question. *Later option:* a ~30-line Cloudflare Pages Function. |
-| Vanity subdomains | Apache `.htaccess` rewrite rules | Cloudflare Redirect Rules (see `content.md` §9 for the list) |
+| Vanity subdomains | Apache `.htaccess` rewrite rules | Cloudflare Redirect Rules (see `content.md` §7 for the list) |
 | Old page URLs (`/students.html`…) | — | 301 redirects in a `_redirects` file: `/students.html → /lessons`, etc. |
 | Calendar | Google Calendar iframe | Keep the iframe for members **and** render upcoming performances as HTML at build time from the public iCal feed. A scheduled rebuild (e.g. daily) keeps it fresh. |
 | Newsletter | Mailchimp links | unchanged |
@@ -106,7 +106,7 @@ Today the site is mostly one long page with in-page anchors. For SEO, **each top
 | `/contact` | Form, address, phone, social | — |
 | `/members` (unlisted, `noindex`) | Hours log, practice playlist, RSVP, member calendars | — |
 
-Pages for COVID / Remote Restart / Hall depend on your decisions in `content.md`.
+The COVID-19 and Remote Restart pages are dropped (their URLs redirect to Home). Whether the hall gets a mention on `/about` is still open.
 
 ---
 
@@ -168,7 +168,7 @@ The legacy `www/` folder would be removed once v3 launches (it stays in git hist
 ## 8. Migration plan
 
 1. ✅ Audit content → `docs/content.md` *(this branch)*
-2. You review `content.md`: answer the ⚠️ notes and fill in TODOs (Edgard's bio, leadership, links to keep)
+2. You review `content.md` and work through `todo.md` (leadership, teacher and COVID/Remote decisions are done)
 3. Agree on the architecture (this doc) and a visual direction (I can mock up 2–3 options)
 4. Build v3 on this branch. Deploy previews to a free `*.pages.dev` URL for review.
 5. Pre-launch: set up form service, Search Console, analytics; test every redirect
