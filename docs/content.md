@@ -40,11 +40,8 @@ These details show up across many pages, so the new site will store them once.
 | Secondary color (favicon/tile) | `#355749` |
 | Logo | `www/img/Logo.svg` |
 
-> [!WARNING]
-> **Check the address.** The old COVID page talked about "our new facilities" and "our conservatory", and the removed hall page says the hall was "just built in 2021". Is 844 Alvarado St. still the right address for lessons and rehearsals?
-
 > [!NOTE]
-> The README's "underserved youth in the East Bay" wording doesn't appear anywhere on the site. Do you want it as the official mission statement? It works well as the meta description for search results.
+> The README's "underserved youth in the East Bay" wording doesn't appear anywhere on the site. Reviewing the mission statement is tracked in `todo.md`.
 
 ### Social accounts
 
@@ -59,7 +56,7 @@ These details show up across many pages, so the new site will store them once.
 | Newsletter sign-up | — | https://eepurl.com/bU0fQf |
 
 > [!NOTE]
-> Which of these are still active? Dead social links hurt credibility (and a little SEO). Your TODO list already had "Double-check all social links". A SoundCloud link was commented out in the footer and is left out here.
+> All of these are treated as active. A SoundCloud link was commented out in the footer and is left out.
 
 ### Brand values & persona (from `branding/readme.md`)
 
@@ -86,7 +83,7 @@ These are internal notes, not site copy, but they're useful for voice and tone.
 - A "Donate" nav button was commented out (it pointed to `help.faasl.org`).
 
 > [!NOTE]
-> Do you want a **Donate** button in v3? For a 501(c)(3) it's usually the second most important call to action. If yes, where should it link (PayPal, Givebutter, Zeffy, Benevity…)?
+> A **Donate** button is tracked in `todo.md`. For a 501(c)(3) it's usually the second most important call to action.
 
 ### Announcement banner (Home and Students)
 
@@ -163,7 +160,7 @@ A community must nourish its core. For us, this is our volunteer band. This mixe
 > The "Grow with us" and "Have fun with us" buttons both go to the Students page, but their tooltips say "Jump to our contact form". For adult and experienced musicians, a **Join the band** page or a contact link probably fits better than the beginner lessons page.
 
 > [!NOTE]
-> **Stories:** the member stories live on an external Adobe Express page. Bringing them onto faasl.org (your old TODO "Create local Stories page") would be a real SEO win: original, human content on your own domain. Can you export that text?
+> **Stories:** the member stories live on an external Adobe Express page. Rewriting them as a Stories page on faasl.org is tracked in `todo.md`. Original, human content on your own domain is a real SEO win.
 
 #### Perform — Public performances
 ##### and social events
@@ -326,8 +323,8 @@ Our musicians have been happy to work with these local music shops through the y
 
 **Map:** Google My Maps embed of the stores (`mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa`)
 
-> [!WARNING]
-> **Check the stores.** This list is 8+ years old. Please make sure each shop is still open before relaunch. (The image credit for the method books should also be confirmed, or swapped for your own photo.)
+> [!NOTE]
+> Reviewing the store list (8+ years old) is tracked in `todo.md`. The image credit for the method books should also be confirmed, or the photo swapped for your own.
 
 ### 5.4 FAQs
 
@@ -335,7 +332,7 @@ Our musicians have been happy to work with these local music shops through the y
 > v3 will mark these up as `FAQPage` structured data, so keeping them as clear question/answer pairs helps search.
 
 **When are lessons?**
-Typically Friday nights at 6:00 for the new beginning students, 6:30 for the intermediate students, 7:00 for the prior beginning students, and 7:30 for the advanced students. Check the calendar for updates. Each lesson is punctual and runs a half hour.
+Typically Friday nights at 6:30 and 7:15. Check the calendar for updates. Each lesson is punctual and runs a half hour.
 [Lessons & rehearsals calendar](https://calendar.google.com/calendar/embed?src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&ctz=America/Los_Angeles)
 
 **How long are lessons?**
@@ -352,7 +349,10 @@ Lessons are taught in the same hall where our volunteer band rehearses.
 Students should arrive 10 minutes early to assemble their instruments and warm up. Parents are welcome to sit near the class so long as they are completely silent. Parents can also talk in the clubhouse.
 
 > [!WARNING]
-> Please confirm the lesson schedule (Friday times) and the address. "Notify Steve" was changed to Edgard. Should it say how to reach him (phone/email), or point to info@faasl.org?
+> "Notify Steve" was changed to Edgard. How families reach him is part of gathering Edgard's details in `todo.md`.
+
+**How do I get lesson updates?**
+TODO: Instructions and link for joining the Remind notifications list for lessons (tracked in `todo.md`).
 
 ---
 
@@ -419,8 +419,8 @@ These currently live in `www/.htaccess.bak` on the shared host. They're printed 
 | `enter.faasl.org` | Google Form: COVID check-in | ✔ | Home (program ended) |
 | `remote.faasl.org` | Home page | | Home (program ended) |
 | `donate.faasl.org` | `/donate.html` (⚠️ this page doesn't exist) | | `/support` |
-| `hall.faasl.org` | `/hall.html` (removed) | | TODO: Home or `/about` |
-| `rental.faasl.org` | `/hall.html` (removed) | | TODO: Home or `/about` |
+| `hall.faasl.org` | `/hall.html` (removed) | | Home for now; revisit in v3.1 |
+| `rental.faasl.org` | `/hall.html` (removed) | | Home for now; revisit in v3.1 |
 | `rsvp.faasl.org` | Google Form (RSVP) | | TODO |
 | `survey.faasl.org` | SurveyMonkey `V6C86KL` | (commented out) | TODO |
 | `calendar.faasl.org` | (not in `.htaccess`; commented out in footer) | | `/events` |
@@ -445,7 +445,7 @@ The Hall page and its banner were removed in commit `68faca3` ("Removed hall inf
 > 🖼️ `rental_01.jpg` – `rental_06.jpg`: banquet setups and an evening concert in the hall
 
 > [!NOTE]
-> Even without taking rentals, the hall photos (`rental_01`, `rental_04`, `rental_06`) look great for an "Our home" / About section or for fundraiser dinners. Use them?
+> The hall and rental content is up for debate and deferred to v3.1 (see `todo.md`).
 
 ### COVID-19 policies and Remote Restart pages (dropped in v3)
 
@@ -500,9 +500,13 @@ Content decisions applied (October 2026 review):
 - President: Lorenza D.L.G. Tomaz (the Luci entry was removed)
 - Teacher: Edgard Gonzalez (Steve removed; the FAQ's "notify Steve" now says Edgard)
 - Conductor: Geronimo Rojas, titled "Band Conductor"
+- John Martins stays on the leadership team
+- Address confirmed: 844 Alvarado St., San Leandro
+- Lessons: Friday 6:30 and 7:15
+- All social accounts treated as active
 - COVID-19 and Remote Restart pages dropped
 
 Not changed yet:
 - "Over 35 years later" and "president for over five years now" (date updates are in `todo.md`)
-- Lesson times, address, store list (flagged above)
+- Store list (review tracked in `todo.md`)
 - Image alt text that said "Portrait of Lorenzo Tomaz". The new site will write fresh alt text.

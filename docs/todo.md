@@ -8,7 +8,7 @@ Work items for the v3 relaunch. Content lives in [`content.md`](./content.md); t
 ### New headshots
 - [ ] Lorenza D.L.G. Tomaz (President of the Board)
 - [ ] Geronimo Rojas (Band Conductor)
-- [ ] João "John" Martins (Director of Stuff & Things). Confirm he stays on the leadership list.
+- [ ] João "John" Martins (Director of Stuff & Things)
 - [ ] Edgard Gonzalez (Music Teacher)
 
 **Recommended specs** (the site will crop and resize automatically, so bigger is fine):
@@ -21,7 +21,6 @@ Work items for the v3 relaunch. Content lives in [`content.md`](./content.md); t
 ### Other photos (nice to have)
 - [ ] Recent performance photos (current uniforms, wide and close-up)
 - [ ] Students in a lesson with Edgard (with photo permission from parents)
-- [ ] Decide whether the hall photos (`rental_01`, `04`, `06`) appear on `/about`
 
 ## Dates & ages to update
 - [ ] "Over 35 years later" → years since 1980. Plan: the site calculates this automatically.
@@ -37,20 +36,16 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Set up redirect rules on the new host / DNS
 - [ ] Test every shortcut before launch (automated check in CI: each one returns a redirect to the expected URL)
 - [ ] Test every old page URL (`/index.html`, `/students.html`, `/covid.html`, `/remote.html`, `/hall.html`) after launch
-- [ ] Decide where `hall.faasl.org` / `rental.faasl.org` go (Home or `/about`)
+- [ ] `hall.faasl.org` / `rental.faasl.org` point to Home for now (revisit in v3.1)
 
-## Content questions still open
-These are flagged in `content.md` but not decided yet:
-- [ ] Edgard Gonzalez: exact title, bio, instruments, credentials, year joined
-- [ ] FAQ "What if we're late?": how to reach Edgard (phone, email, or info@faasl.org)
-- [ ] Clubhouse address: is 844 Alvarado St. still current?
-- [ ] Lesson schedule (Friday 6:00 / 6:30 / 7:00 / 7:30): still accurate?
-- [ ] Music store list: check each shop is still open
+## Content
+- [ ] **Gather Edgard Gonzalez's details:** exact title, 2–3 sentence bio, instruments, credentials, year joined, headshot, and how families should contact him (for the "What if we're late?" FAQ)
+- [ ] **Review the music stores:** check each shop on the Lessons page is still open, confirm links, and add or remove shops
+- [ ] **Remind notifications:** add a link and step-by-step instructions on the Lessons page for joining the Remind list for lesson updates
+- [ ] **Review the mission statement:** decide on official wording (the README uses "music education and mentorship for underserved youth in the East Bay")
+- [ ] **Donate button:** decide yes/no and the provider (PayPal, Givebutter, Zeffy…), then point `donate.faasl.org` at it
+- [ ] **Rewrite the Stories page:** bring member stories over from Adobe Express as a Stories page on faasl.org, then point `stories.faasl.org` at it
 - [ ] Instrument list: any changes?
-- [ ] Social accounts: which are still active (Facebook, Instagram, Twitter/X, YouTube, LinkedIn)?
-- [ ] Mission statement: use "music education and mentorship for underserved youth in the East Bay"?
-- [ ] Donate button: yes/no, and which provider
-- [ ] Member stories: export from Adobe Express so they can live on faasl.org
 - [ ] "Grow with us" / "Have fun with us" buttons: link to a Join page instead of beginner lessons?
 
 ## Separate project: brochure
@@ -68,3 +63,16 @@ Goal: a brochure that **regenerates itself from the site's content**, with nothi
 - [ ] Google Search Console + Bing Webmaster Tools; submit sitemap
 - [ ] Google Business Profile for the clubhouse
 - [ ] Retire the shared host about 30 days after launch
+
+---
+
+## v3.1
+
+Follow-up work after the v3 launch.
+
+### Hall & rental
+Whether the hall appears on the site at all is up for debate. Return to it after launch.
+- [ ] Decide whether the hall gets a mention (e.g. "Our home" on `/about`) or a rental page again
+- [ ] If rentals return: update the rental package (`www/pdf/FAASL_RENTAL_PACKAGE_10.22.pdf`), rates and rental@faasl.org contact
+- [ ] Decide whether to use the hall photos (`rental_01`–`06`)
+- [ ] Re-point `hall.faasl.org` and `rental.faasl.org` (Home until then)

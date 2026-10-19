@@ -14,7 +14,7 @@ Status: **draft for discussion**. Nothing here is built yet. Content lives in [`
 
 | Layer | Pick | Why |
 |---|---|---|
-| Site framework | **Astro** | Outputs plain static HTML (ideal for SEO). You can write components in React when you want to, with zero JS shipped by default. Markdown content is built in. |
+| Site framework | **Astro** | Outputs plain static HTML (ideal for SEO). You can write components in React when you want to, with zero JS shipped by default. Markdown content and image optimization are built in. Very active, and funded by Cloudflare since 2026. See §1. |
 | Hosting | **Cloudflare** (Pages / Workers static assets), free plan | Free, fast global CDN. Also handles **DNS and all the vanity-subdomain redirects** in one dashboard, which replaces `.htaccess`. |
 | Contact form | **Web3Forms** or **Formspree** free tier (or a Cloudflare Pages Function later) | No server; submissions emailed to info@faasl.org. Spam check via honeypot + Cloudflare Turnstile. |
 | Events | Google Calendar (unchanged) **plus** a build-time fetch of the Performances calendar | Events render as real HTML with `Event` structured data, so Google can show them. |
@@ -28,27 +28,44 @@ Monthly cost: **$0** (you keep paying for the domain registration only).
 
 ## 1. Framework options
 
-All three below produce a static site, so none needs a server or database.
+Every option below can output a fully static site, so none needs a server or database. Data was gathered on **19 Oct 2026**: GitHub stars from each repo page, release counts and dates from the npm registry. Popularity and satisfaction figures come from the [State of JS 2025 meta-frameworks survey](https://2025.stateofjs.com/en-US/libraries/meta-frameworks/).
 
-### ✅ Astro (recommended)
+### 1.1 Features
 
-- **What it is:** a static-site framework built around content. Pages are `.astro` files (HTML with a JSX-like syntax that will feel familiar). You can drop in **React components** wherever you need interactivity (the instrument video picker, the contact form, a photo gallery), and only those components ship JavaScript ("islands").
-- **SEO:** every page is pre-rendered HTML. It has a built-in sitemap integration, image optimization (`astro:assets` creates responsive WebP/AVIF from your JPGs), and it's easy to give every page its own title, description and structured data.
-- **Content:** "content collections" read Markdown/YAML with a typed schema. `content.md` splits naturally into `src/content/pages/*.md`, `src/content/people/*.md` (leaders + teachers like Edgard), `src/content/faqs/*.md`, etc. Adding a teacher is adding one small Markdown file.
-- **Learning curve:** low for a React developer. This is the "learn something new" option that doesn't throw away what you know.
+| | **Astro** | **Next.js** (static export) | **React Router v7** (framework mode, pre-render) | **TanStack Start** (pre-render) | **Docusaurus** | **Gatsby** | **Eleventy / Build Awesome** |
+|---|---|---|---|---|---|---|---|
+| Page templates | `.astro` (HTML + JSX-like syntax), Markdown, MDX | React (JSX) | React (JSX) | React (JSX) | React + MDX | React (JSX) | Nunjucks, Liquid, WebC, Markdown, etc. |
+| React components | ✔ first-class "islands": only interactive parts ship JS | ✔ whole site is React | ✔ whole site is React | ✔ whole site is React | ✔ whole site is React | ✔ whole site is React | ⚠ not first-class (DIY bundling, or via plugins) |
+| JS shipped on a content page | **~0 KB** by default | React runtime + page data | React runtime + page data | React runtime + page data | React runtime | React runtime | ~0 KB |
+| Content / Markdown | ✔ **Content collections** with typed schemas | ⚠ bring your own (MDX plugin, Velite, etc.) | ⚠ bring your own | ⚠ bring your own | ✔ docs/blog/pages built in (docs-shaped) | ✔ GraphQL data layer (complex) | ✔ data cascade + Markdown built in |
+| Image optimization | ✔ built in (`astro:assets`: responsive, WebP/AVIF, lazy-load) | ⚠ `next/image` needs a custom loader or is disabled in static export | ✘ none built in | ✘ none built in | ⚠ plugin (`plugin-ideal-image`) | ✔ `gatsby-plugin-image` (excellent) | ✔ `eleventy-img` (excellent) |
+| Sitemap / SEO helpers | ✔ official sitemap integration; easy per-page head | ✔ Metadata API, sitemap | ⚠ manual `meta` exports | ⚠ manual head management | ✔ built in | ✔ plugins | ⚠ plugins / manual |
+| Best fit | Content sites, marketing sites, blogs | Web apps, large sites | Web apps | Web apps | Documentation sites | (legacy) content sites | Content sites without React |
+| Fit for FAASL | ★★★★★ | ★★★ | ★★ | ★★ | ★★ | ★ | ★★★ |
 
-### Next.js (static export)
+### 1.2 Health: development activity, popularity and future
 
-- You already know React, so there's nothing new to learn.
-- Downsides for this site: it's built for apps. Even static pages ship React's runtime and hydrate, which makes them heavier and a bit slower (Core Web Vitals affect SEO). There's more config for a site that's basically 5–8 content pages, and image optimization needs extra work in static-export mode.
-- Reasonable, but more machinery than this site needs.
+| | **Astro** | **Next.js** | **React Router v7** | **TanStack Start** | **Docusaurus** | **Gatsby** | **Eleventy / Build Awesome** |
+|---|---|---|---|---|---|---|---|
+| GitHub stars | 63.3k | 143.1k | 56.6k | 15.2k (TanStack Router repo) | 66.5k | 55.9k | 20.0k |
+| Latest release | 7.4.1 (19 Oct 2026) | 16.4.2 (15 Oct 2026) | 8.5.0 (19 Oct 2026) | 1.169.3 (16 Oct 2026) | 3.10.2 (10 Jul 2026) | 5.16.1 (10 Feb 2026) | 3.1.7 (15 Oct 2026) |
+| npm releases, last 12 months | 153 | 579 | 166 | 387 | 222 | **7** | 9 |
+| Developer sentiment (State of JS 2025) | **Highest satisfaction**; ~94% retention | **Highest usage** (~45% use it at work), but falling satisfaction | Long-standing, widely used router | Newer and growing quickly | Popular for docs | Lowest retention | Well-loved, niche |
+| Who backs it | **Cloudflare** (acquired the Astro team Jan 2026; stays MIT-licensed with open governance) | Vercel | Shopify | TanStack (independent, sponsor-funded) | Meta | Netlify (largely dormant) | Font Awesome (renaming to "Build Awesome"; commercial "Pro" tier in progress) |
+| Outlook | **Strong.** Very active, well funded, and keeps its multi-host promise | Strong, but tied to Vercel's priorities; app-focused | Strong for apps | Promising but young | Stable, but docs-focused | ⚠ **Avoid.** In maintenance mode | Stable core; some uncertainty around the rebrand and monetization |
 
-### Eleventy (11ty)
+### 1.3 Recommendation: Astro
 
-- The simplest of the three: Markdown + templates → HTML. Very fast, very stable.
-- No component model like React's. Interactive bits are hand-written JS. Fine, but less fun for you and less reusable.
+- It's the only option that is built **for content sites**, uses **templates**, and treats **React components** as a first-class add-on, while shipping almost no JavaScript. That's the best combination for SEO and page speed.
+- Content collections and image optimization are built in, so `content.md` maps straight onto typed Markdown files, and your existing JPGs get resized and converted automatically.
+- Very active development with the strongest developer satisfaction, and as of 2026 a large company funding it. Astro is MIT-licensed and runs on any host, so we're never locked into Cloudflare.
+- The `.astro` syntax is close to JSX, so it's a small step from React. It's also a useful new skill.
 
-**Verdict:** Astro gives Eleventy's output (fast, plain HTML) with React's component model where you want it.
+**Runner-up: Next.js** if you'd rather stay 100% in React. It's the most popular and very safe long-term, but it's more machinery than an 8-page content site needs, it ships React to every page, and its image optimization doesn't work in static-export mode without extra setup.
+
+Not recommended: **Gatsby** (dormant), **Docusaurus** (shaped for docs), **React Router / TanStack Start** (app frameworks with no built-in content or image tooling). **Eleventy** is excellent but has no first-class React, and its rebrand adds uncertainty.
+
+Sources: [Astro on GitHub](https://github.com/withastro/astro), [Next.js on GitHub](https://github.com/vercel/next.js), [React Router on GitHub](https://github.com/remix-run/react-router), [TanStack Router on GitHub](https://github.com/TanStack/router), [Docusaurus on GitHub](https://github.com/facebook/docusaurus), [Gatsby on GitHub](https://github.com/gatsbyjs/gatsby), [Eleventy on GitHub](https://github.com/11ty/eleventy), [State of JS 2025: meta-frameworks](https://2025.stateofjs.com/en-US/libraries/meta-frameworks/), [Cloudflare acquires Astro (Business Wire, Jan 2026)](https://secure.businesswire.com/news/home/20260116386991/en/Cloudflare-Acquires-Astro-to-Accelerate-the-Future-of-High-Performance-Web-Development), [Gatsby Cloud evolution (Netlify)](https://www.netlify.com/blog/gatsby-cloud-evolution/), [Eleventy is becoming Build Awesome](https://www.11ty.dev/blog/build-awesome/).
 
 ---
 
