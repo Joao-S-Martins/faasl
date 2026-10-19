@@ -125,7 +125,7 @@ Today the site is mostly one long page with in-page anchors. For SEO, **each top
 | `/stories` | Member stories (brought in from Adobe Express) | brand + trust |
 | `/support` | Donate, volunteer, 501(c)(3)/EIN | "donate music education San Leandro" |
 | `/contact` | Form, address, phone, social | — |
-| `/members` (unlisted, `noindex`) | Hours log, practice playlist, RSVP, member calendars | — |
+| `/members` (unlisted, `noindex`) | Onboarding forms, Remind, calendars, RSVP, special contacts, practice playlist (see `content.md` §6b) | — |
 
 The COVID-19 and Remote Restart pages are dropped (their URLs redirect to Home). Whether the hall gets a mention on `/about` is still open.
 

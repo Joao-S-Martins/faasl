@@ -395,6 +395,39 @@ Messages shown after submitting:
 
 ---
 
+## 6b. Members page (`/members`, unlisted)
+
+For current members, students and families. **Unlisted** for now: not in the menu and hidden from search engines, but anyone with the link can open it (no login). It may be listed publicly later, **without the practice playlist** (the "music link"). The site will have a switch for that, so listing it is a one-line change.
+
+> [!WARNING]
+> Because anyone with the link can see this page, it must only hold **blank** forms and general information. Completed forms (emergency contacts, medical info, signatures) never go on the website; they're returned on paper, by email, or through a Google Form that only the board can see. The same goes for personal phone numbers (see "Special contacts" below).
+
+### New member onboarding
+Everything a new student, family or musician needs to get started, in order:
+
+1. **Emergency contact & medical form** — TODO: current document (PDF to download and print, or a link to a Google Form)
+2. **Uniform agreement** — TODO: current document
+3. **Photo consent form** — TODO: current document (must cover publishing on the website; see `brief.md` §5.1)
+4. TODO: anything else in the current new-member packet (code of conduct? instrument loan agreement? membership dues?)
+5. Where to return completed forms: TODO (in person to whom / email address / online form)
+
+### Stay in the loop
+- **Remind:** TODO: how to join the lessons Remind list (same instructions as the Lessons page)
+- **Calendars:** subscribe links for Lessons & rehearsals, Performances, Social events (see §3.3)
+- **RSVP form** (`rsvp.faasl.org`)
+- **Volunteer form** (`volunteer.faasl.org`)
+
+### Practice
+- **Practice playlist** (`practice.faasl.org`, YouTube). ⚠ Hidden if the page is ever listed publicly.
+
+### Special contacts
+TODO: who to contact for what, e.g. absences and lateness (Edgard?), uniforms, music and folders, general questions (info@faasl.org).
+
+> [!NOTE]
+> 💡 Prefer **role-based email addresses** (e.g. uniforms@faasl.org forwarding to the right volunteer) or "message us on Remind" over personal phone numbers. They survive volunteers changing roles and keep personal numbers off a public page.
+
+---
+
 ## 7. Vanity subdomains & redirects
 
 These currently live in `www/.htaccess.bak` on the shared host. They're printed in brochures and handed out at events, so **they must keep working** after the move. `docs/architecture.md` covers how. Testing every one is tracked in `todo.md`.

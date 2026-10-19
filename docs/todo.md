@@ -80,7 +80,7 @@ For each section, agree on: **purpose & audience · URL · content fields (schem
 - [ ] 🤝 About: history & heritage, leadership, teachers, short "Get involved" note
 - [ ] 🤝 Events: upcoming (from Google Calendar), fundraiser dinners, subscribe links; past write-ups later
 - [ ] 🤝 Contact: form, address, phone, map, socials
-- [ ] 🤝 Members (unlisted): calendars, practice playlist, RSVP
+- [ ] 🤝 Members (unlisted): onboarding forms, Remind, calendars, RSVP, practice playlist, special contacts (`content.md` §6b). Include a switch to list it publicly later with the practice playlist hidden.
 - [ ] 🤝 Later sections, so the content model leaves room for them: stories, event deep dives, galleries, volunteer bios, tags, search
 
 ## Phase 3 — ⏸ Design (pause before building sections)
@@ -182,6 +182,14 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Claim / update the Candid (GuideStar) profile; check California Attorney General Registry of Charities status
 - [ ] Suggested gift amounts tied to real costs (method book, instrument repair, etc.)
 - [ ] 1–2 short performance videos
+
+### Members page 🧑 (`content.md` §6b)
+- [ ] Current emergency contact / medical form (blank)
+- [ ] Current uniform agreement (blank)
+- [ ] Current photo consent form (blank); confirm it covers the website
+- [ ] Anything else in the new-member packet (code of conduct, instrument loan, dues?)
+- [ ] For each form: printable PDF, online Google Form, or both? Where do completed forms go?
+- [ ] Special contacts: who handles what (absences, uniforms, music, general). 💡 Role-based emails (e.g. uniforms@faasl.org) instead of personal numbers.
 
 ### Content items 🧑
 - [ ] **Gather Edgard Gonzalez's details:** exact title, 2–3 sentence bio, instruments, credentials, year joined, headshot, and how families should contact him (for the "What if we're late?" FAQ)
