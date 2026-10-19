@@ -412,7 +412,7 @@ These currently live in `www/.htaccess.bak` on the shared host. They're printed 
 | `subscribe.faasl.org` | Mailchimp sign-up (`eepurl.com/bU0fQf`) | ✔ | TODO |
 | `brochure.faasl.org` | `/downloads/tri-fold_brochure.pdf` | ✔ | Brochure project (see `todo.md`). PDF isn't in the repo. |
 | `contact.faasl.org` | Home page `#contact` | ✔ | `/contact` |
-| `log.faasl.org` | Google Form: volunteer hours log | ✔ | TODO |
+| `log.faasl.org` | Google Form: volunteer hours log | ✔ | Keep the redirect; not linked from the v3 site |
 | `practice.faasl.org` | YouTube practice playlist `PLUc6RuyKwWdnL192YgHQ5P-VH8CVN3MEU` | ✔ | TODO |
 | `volunteer.faasl.org` | Google Form `1T5RKcQmOUZ2LyR4nkhu5rbxMQllpn0ePETf_H_88RIs` | ✔ | TODO |
 | `students.faasl.org` | `/students.html` | ✔ | `/lessons` |
@@ -430,7 +430,7 @@ These currently live in `www/.htaccess.bak` on the shared host. They're printed 
 Also: old page URLs (`/index.html`, `/students.html`, `/covid.html`, `/remote.html`, `/hall.html`) should get permanent (301) redirects to their v3 equivalents (`/covid.html` and `/remote.html` → Home), so existing Google rankings and bookmarks carry over.
 
 > [!NOTE]
-> **Members page idea:** the member-only links (volunteer hours log, practice playlist, RSVP, calendars, volunteer form) could go on one unlisted `/members` page rather than in the public footer.
+> **Members page idea:** the member-only links (practice playlist, RSVP, calendars, volunteer form) could go on one unlisted `/members` page rather than in the public footer. The volunteer hours log is no longer featured.
 
 ---
 

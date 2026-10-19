@@ -74,15 +74,13 @@ For each section, agree on: **purpose & audience · URL · content fields (schem
 - [ ] 🤝 Global: header & mobile nav, footer, announcement banner, SEO defaults, 404 page
 - [ ] 🤝 Home (long scrolling story + "I want to…" audience router)
 - [ ] 🤝 Lessons: about, instruments + demo video, materials & stores, FAQ, Remind sign-up
-- [ ] 🤝 Join the band (sharpened for experienced players: repertoire, open chairs, sit-in invite)
-- [ ] 🤝 Give (community donors: donate, honor/memorial gifts, dinners, other ways to help)
+- [ ] 🤝 Join the band (general invitation to skilled and aspiring musicians: repertoire, conductor, sit-in invite)
+- [ ] 🤝 Give (community donors: donate, honor/memorial gifts, dinners, other ways to help; a short "Businesses" section with matching gifts and a contact line)
 - [ ] 🤝 Impact (funders & agencies: mission, numbers, governance, documents, verification links)
-- [ ] 🤝 Sponsor (corporate: tiers, benefits, matching gifts, sponsor packet)
-- [ ] 🤝 Volunteer (organizational talent: open roles, board, skilled volunteers)
-- [ ] 🤝 About: history & heritage, leadership, teachers
+- [ ] 🤝 About: history & heritage, leadership, teachers, short "Get involved" note
 - [ ] 🤝 Events: upcoming (from Google Calendar), fundraiser dinners, subscribe links; past write-ups later
 - [ ] 🤝 Contact: form, address, phone, map, socials
-- [ ] 🤝 Members (unlisted): calendars, hours log, practice playlist, RSVP
+- [ ] 🤝 Members (unlisted): calendars, practice playlist, RSVP
 - [ ] 🤝 Later sections, so the content model leaves room for them: stories, event deep dives, galleries, volunteer bios, tags, search
 
 ## Phase 3 — ⏸ Design (pause before building sections)
@@ -107,7 +105,6 @@ Built in this order, each reviewed on a preview URL:
 - [ ] 🤖 Impact
 - [ ] 🤖 Contact (+ form service)
 - [ ] 🤖 Events (calendar loader)
-- [ ] 🤖 Sponsor, Volunteer (once the board has defined tiers and open roles)
 - [ ] 🤖 Members
 - [ ] 🤖 404 page, print styles
 
@@ -177,15 +174,12 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] 🤖 Write the redirect rules and the automated tests (Phase 5)
 - [ ] 🤝 Test every shortcut and old page URL after launch (Phase 7)
 - [ ] `hall.faasl.org` / `rental.faasl.org` point to Home for now (revisit in v3.1)
-- [ ] 🧑 Pick new campaign shortcuts for the audience pages (💡 `give.`, `sponsor.`, `join.`, `impact.`, `lessons.`), optionally tagged for analytics (`strategy.md` §5)
+- [ ] 🧑 Pick new campaign shortcuts for the audience pages (💡 `give.`, `join.`, `impact.`, `lessons.`), optionally tagged for analytics (`strategy.md` §5)
 
 ### Proof assets for funders & talent (`strategy.md` §6) 🧑
-- [ ] Yearly numbers: students taught, musicians in the band, volunteer hours (from `log.faasl.org`), performances per year
-- [ ] Testimonials: a parent, a student, an experienced musician, a board member, a community partner
+- [ ] Yearly numbers: students taught, musicians in the band, performances per year (no volunteer hours)
 - [ ] Annual report or financial summary; IRS determination letter; recent Form 990
 - [ ] Claim / update the Candid (GuideStar) profile; check California Attorney General Registry of Charities status
-- [ ] Sponsorship tiers and benefits (board decision)
-- [ ] Open chairs (instruments needed) and open volunteer / board roles
 - [ ] Suggested gift amounts tied to real costs (method book, instrument repair, etc.)
 - [ ] 1–2 short performance videos
 
@@ -195,7 +189,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] **Remind notifications:** link and step-by-step instructions for joining the Remind list for lesson updates
 - [ ] **Review the mission statement:** decide on official wording (the README uses "music education and mentorship for underserved youth in the East Bay")
 - [ ] **Donate button:** decide yes/no and the provider (PayPal, Givebutter, Zeffy…), then point `donate.faasl.org` at it
-- [ ] **Rewrite the Stories page:** bring member stories over from Adobe Express as a Stories page on faasl.org, then point `stories.faasl.org` at it
+- [ ] **Rewrite the Stories page:** collect **new** member stories / testimonials (a parent, a student, an experienced musician, a board member, a community partner), using the old Adobe Express stories as a starting point; publish them on faasl.org and point `stories.faasl.org` at it
 - [ ] Instrument list: any changes?
 - [ ] "Grow with us" / "Have fun with us" buttons: link to a Join page instead of beginner lessons?
 
@@ -218,6 +212,19 @@ Follow-up work after the v3 launch.
 ### Portuguese language
 - [ ] Portuguese version of key pages (Home, Lessons, Give, About) under `/pt/`, using Astro's built-in i18n routing
 - [ ] Who translates and reviews? (a community volunteer?)
+
+### Sponsorship program
+No program or tiers exist yet. Define it, then build the page.
+- [ ] Define the program: goals, what sponsors fund (e.g. lessons, instruments, uniforms, a concert season), who manages sponsor relationships
+- [ ] Draft tiers with clear benefits (e.g. recognition on the site and at concerts, logo on banners/programs, a performance at a company event, employee volunteer opportunities); board approval
+- [ ] Sponsor agreement / acknowledgment letter template (and tax-receipt wording)
+- [ ] `/sponsor` page with tiers, impact, matching gifts and a contact path
+- [ ] Sponsor packet PDF generated from site content (same approach as the brochure)
+- [ ] `sponsor.faasl.org` shortcut; sponsor logos on the site once there are sponsors
+
+### Volunteer & board roles
+- [ ] When roles are being advertised: `/volunteer` page with specific roles and time commitments
+- [ ] Re-point `volunteer.faasl.org` (currently a Google Form) at it; consider volunteer bios
 
 ### Newsletter
 - [ ] Decide whether to restart a newsletter, and on which service (Mailchimp or another)

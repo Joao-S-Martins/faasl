@@ -21,7 +21,8 @@ Related: [`strategy.md`](./strategy.md) (goals, audiences & landing pages) · [`
 - ✅ **Beta launch** for stakeholders before the public launch
 - ✅ **No launch date:** quality over deadline
 - ✅ **Ownership:** you own the accounts (Cloudflare, GitHub, domain) for now
-- ✅ **Deferred to v3.1:** Portuguese-language version; newsletter (Mailchimp or other)
+- ✅ **Deferred to v3.1:** Portuguese-language version; newsletter (Mailchimp or other); sponsorship program & `/sponsor` page; volunteer/board roles page
+- ✅ **No volunteer-hours figures** on the site (recording is spotty and only covers musicians)
 - ✅ **CSS framework:** decided during the design phase, after seeing designs (you lean towards using one)
 
 ---
@@ -34,11 +35,11 @@ See [`strategy.md`](./strategy.md). In short:
 - **Approach:** one site at `www.faasl.org`, a home page that routes each audience, a dedicated landing page per audience, and vanity subdomains that redirect to those pages for print and campaigns.
 
 ### Success measures 💡
-- Online gifts, sponsorship enquiries, volunteer/board enquiries, experienced-player enquiries, lesson enquiries
+- Online gifts, business and grant enquiries, musician enquiries (skilled and aspiring), lesson enquiries
 - Funders can verify FAASL (mission, numbers, documents, governance) from the Impact page alone
 - Ranking for searches like "free music lessons San Leandro", "Portuguese band California", "community band East Bay"
 - Lighthouse scores of 95+ for performance, accessibility, best practices and SEO on mobile
-- No stale content: dates calculated; schedule, leadership, open roles and numbers reviewed yearly
+- No stale content: dates calculated; schedule, leadership and numbers reviewed yearly
 
 ---
 
@@ -135,7 +136,7 @@ These become the official palette and design tokens. Exact uses are settled in t
 ### Content & voice
 - ❓ Mission statement wording (in `todo.md`)
 - ❓ Tone: 💡 warm, plain, welcoming for families; confident and factual on Give, Sponsor and Impact pages
-- ❓ Sponsorship tiers and benefits (board decision)
+- ✅ Sponsorship program and tiers: v3.1 (`todo.md`)
 - ❓ Copyright & license statement (§5.2)
 
 ### Services
