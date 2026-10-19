@@ -1,6 +1,6 @@
 # FAASL.org v3 — Architecture Proposal
 
-Status: **draft for discussion**. Nothing here is built yet. Content lives in [`content.md`](./content.md).
+Status: **Astro + Cloudflare decided** (Oct 2026). Goals, requirements and open decisions are in [`brief.md`](./brief.md); the plan is in [`todo.md`](./todo.md). Content lives in [`content.md`](./content.md).
 
 ## Goals (from your brief)
 
