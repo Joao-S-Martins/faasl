@@ -131,6 +131,6 @@ Funders and stronger talent respond to evidence. These are mostly yours to colle
 | `/events` | Events | unchanged (fundraiser dinners featured) |
 | `/stories` | Stories | rewritten with new member stories / testimonials; feeds every audience page |
 | `/contact` | Contact | unchanged |
-| `/members` | Members (unlisted) | adds new-member onboarding and special contacts |
+| `/members` | Members (footer link, not in search) | adds onboarding forms, BAND app and contacts |
 
 Launch priority 💡: Home, Lessons, Join, Give, Impact, About, Contact first. Then Events, Stories, galleries. Sponsor and Volunteer pages are v3.1.
