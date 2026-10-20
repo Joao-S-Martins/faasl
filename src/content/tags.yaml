@@ -1,0 +1,10 @@
+# Shared tags. Every section uses these ids; a misspelled id fails the build.
+- id: lessons
+  label: Free lessons
+  description: Our free group music lessons for beginner and intermediate students.
+- id: holy-ghost-festas
+  label: Holy Ghost Festas
+  description: Parades and festas hosted by Portuguese communities across California.
+- id: cherry-festival
+  label: San Leandro Cherry Festival
+  description: Our hometown parade.

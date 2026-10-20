@@ -1,0 +1,41 @@
+/*
+ * Design tokens. Colors carry over from the v2 site (see docs/brief.md §5.3).
+ * Type, spacing and the rest are placeholders until the design phase.
+ */
+:root {
+  /* Brand palette */
+  --color-hunter-green: #355749;
+  --color-faasl-green: #00a079;
+  --color-gold: #f3dd3e;
+  --color-light-gold: #ffeb5b;
+  --color-white: #ffffff;
+  --color-off-white: #f0f0f0;
+  --color-ink: #333333;
+
+  /* Roles */
+  --color-bg: var(--color-white);
+  --color-text: var(--color-ink);
+  --color-link: var(--color-hunter-green);
+  --color-surface: var(--color-off-white);
+  --color-accent: var(--color-gold);
+
+  /* Type (system fonts until the design phase picks a typeface) */
+  --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --step--1: clamp(0.875rem, 0.85rem + 0.1vw, 0.95rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --step-2: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
+  --step-3: clamp(1.875rem, 1.5rem + 1.8vw, 3rem);
+
+  /* Space */
+  --space-xs: 0.5rem;
+  --space-s: 1rem;
+  --space-m: 1.5rem;
+  --space-l: 2.5rem;
+  --space-xl: 4rem;
+  --gutter: 1rem;
+  --content-width: 70rem;
+
+  --radius: 0.5rem;
+}

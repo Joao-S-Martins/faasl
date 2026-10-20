@@ -1,4 +1,40 @@
-#FAASL & faasl.org
+# FAASL.org
+
+Website of the **Portuguese Band of San Leandro** (Filarmonica Artista Amadora de San Leandro), a non-profit focused on music education and mentorship in the East Bay.
+
+## v3 (in progress)
+
+The v3 site is built with [Astro](https://astro.build) and hosted on Cloudflare Workers. Planning docs are in [`docs/`](docs/): start with [`todo.md`](docs/todo.md) and [`brief.md`](docs/brief.md). The v2 site in `www/` stays untouched until launch.
+
+### Run it locally
+Requires Node 22.22+ (CI uses the version in `.nvmrc`).
+
+```sh
+npm install
+npm run dev        # http://localhost:4321
+npm run verify     # type check, lint, format check and build (same as CI)
+```
+
+### Where things live
+| Path | What |
+|---|---|
+| `src/content/` | Site content: organization facts (`site.yaml`), people, tags, instruments. Schemas are in `src/content.config.ts`. |
+| `src/pages/` | Routes (file path = URL) |
+| `src/components/`, `src/layouts/` | Astro and React components |
+| `src/styles/tokens.css` | Design tokens (brand colors from `docs/brief.md` §5.3) |
+| `src/integrations/site-headers.mjs` | Writes `robots.txt` and `_headers`; non-production builds are hidden from search engines |
+| `wrangler.jsonc` | Cloudflare Workers config (`faasl-beta` and `faasl`) |
+| `.github/workflows/` | CI and deploys (see [`docs/deployment.md`](docs/deployment.md)) |
+
+### Deploys
+- **Beta:** every push to `v3` is checked and deployed automatically (once Cloudflare is connected).
+- **Production:** publish a GitHub Release; the deploy waits for the owner's approval.
+
+---
+
+## v2 (legacy, `www/`)
+
+#### FAASL & faasl.org
 __The Portuguese Band of San Leandro, a non-profit focused on music education and mentorship for underserved youth in the East Bay__
 Items belonging to the FAA of San Leandro (FAASL), specifically the website. Some old text and stuff available at 
 https://raw.githubusercontent.com/Joao-S-Martins/faasl/2ff063883ad4375ded4df185773da429bcad5ac4/www/static/index.html

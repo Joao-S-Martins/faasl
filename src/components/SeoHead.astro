@@ -1,0 +1,58 @@
+---
+import { isProduction, getSite } from '../lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Hide this page from search engines even in production. */
+  noindex?: boolean;
+  /** Absolute or root-relative URL of the social share image. */
+  image?: string;
+}
+
+const { title, description, noindex = false, image } = Astro.props;
+const site = await getSite();
+
+const fullTitle = title === site.name ? title : `${title} | ${site.name}`;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const imageUrl = image ? new URL(image, Astro.site) : undefined;
+const robots = noindex || !isProduction ? 'noindex, nofollow' : 'index, follow';
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': ['NGO', 'MusicGroup'],
+  name: site.name,
+  legalName: site.legalName,
+  alternateName: site.alternateName,
+  url: Astro.site?.href,
+  logo: new URL('/favicon.svg', Astro.site).href,
+  foundingDate: String(site.foundingYear),
+  email: site.email,
+  telephone: site.phone,
+  taxID: site.ein,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: site.clubhouse.street,
+    addressLocality: site.clubhouse.city,
+    addressRegion: site.clubhouse.region,
+    postalCode: site.clubhouse.postalCode,
+    addressCountry: 'US',
+  },
+  sameAs: site.social.map((s) => s.url),
+};
+---
+
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="robots" content={robots} />
+<link rel="canonical" href={canonical} />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content={site.name} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+{imageUrl && <meta property="og:image" content={imageUrl} />}
+<meta name="twitter:card" content={imageUrl ? 'summary_large_image' : 'summary'} />
+
+<script type="application/ld+json" set:html={JSON.stringify(organization)} />

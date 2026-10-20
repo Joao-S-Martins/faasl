@@ -1,0 +1,29 @@
+# Instruments we teach. demoStartSeconds is where each one appears in the demo video.
+- { id: flute, name: Flute, family: woodwind, beginnerFriendly: true, demoStartSeconds: 17 }
+- { id: piccolo, name: Piccolo, family: woodwind }
+- { id: oboe, name: Oboe, family: woodwind, demoStartSeconds: 87 }
+- { id: clarinet, name: Clarinet, family: woodwind, beginnerFriendly: true, demoStartSeconds: 203 }
+- { id: bass-clarinet, name: Bass clarinet, family: woodwind }
+- { id: e-flat-clarinet, name: E-flat clarinet, family: woodwind }
+- {
+    id: alto-saxophone,
+    name: Alto saxophone,
+    family: woodwind,
+    beginnerFriendly: true,
+    demoStartSeconds: 330,
+  }
+- { id: tenor-saxophone, name: Tenor saxophone, family: woodwind }
+- { id: baritone-saxophone, name: Baritone saxophone, family: woodwind }
+- { id: trumpet, name: Trumpet, family: brass, beginnerFriendly: true, demoStartSeconds: 505 }
+- { id: french-horn, name: French horn, family: brass, demoStartSeconds: 611 }
+- { id: trombone, name: Trombone, family: brass, beginnerFriendly: true, demoStartSeconds: 767 }
+- { id: euphonium, name: Euphonium, family: brass, demoStartSeconds: 916 }
+- { id: tuba, name: Tuba, family: brass, demoStartSeconds: 1026 }
+- {
+    id: snare-drum,
+    name: Snare drum,
+    family: percussion,
+    beginnerFriendly: true,
+    demoStartSeconds: 1123,
+  }
+- { id: pitched-percussion, name: Pitched percussion, family: percussion, demoStartSeconds: 1178 }

@@ -1,0 +1,45 @@
+# Every push to the beta branch is checked, built in beta mode (hidden from
+# search engines) and deployed to the faasl-beta Worker. After launch the
+# beta branch becomes `main`. See docs/deployment.md.
+name: Deploy beta
+
+on:
+  push:
+    branches: [v3]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-beta
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    uses: ./.github/workflows/ci.yml
+    with:
+      site-env: beta
+
+  deploy:
+    needs: ci
+    # Skipped until Cloudflare is set up: set the repository variable
+    # BETA_DEPLOY_ENABLED to "true".
+    if: vars.BETA_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: beta
+      url: ${{ vars.BETA_URL }}
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          SITE_ENV: beta
+      - run: npx wrangler deploy --env beta
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

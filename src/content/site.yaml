@@ -1,0 +1,35 @@
+# Organization facts, edited here once and reused across the site.
+faasl:
+  name: Portuguese Band of San Leandro
+  legalName: Filarmonica Artista Amadora de San Leandro
+  alternateName: FAASL
+  nameTranslation: Band of Amateur Artists of San Leandro
+  tagline: We're committed to impacting lives through music education and mentorship.
+  foundingYear: 1980
+  ein: 94-2930722
+  email: info@faasl.org
+  phone: (510) 357-1449
+  mailingAddress:
+    street: P.O. Box 2354
+    city: San Leandro
+    region: CA
+    postalCode: 94577-0235
+  clubhouse:
+    street: 844 Alvarado St.
+    city: San Leandro
+    region: CA
+    postalCode: '94577'
+  social:
+    - name: Facebook
+      handle: '@the.faasl'
+      url: https://facebook.com/the.faasl
+    - name: Instagram
+      handle: '@the.faasl'
+      url: https://instagram.com/the.faasl
+    - name: Twitter
+      handle: '@faasl'
+      url: https://twitter.com/faasl
+    - name: YouTube
+      url: https://www.youtube.com/channel/UCIWQ1_SGK9Ql4D9fzNE56cw
+    - name: LinkedIn
+      url: https://www.linkedin.com/company/faasl/

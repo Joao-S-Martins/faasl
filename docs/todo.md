@@ -36,22 +36,23 @@ Related: [`brief.md`](./brief.md) (requirements & decisions) · [`strategy.md`](
 Goal: prove the whole pipeline end to end (code → CI → Cloudflare preview) with one throwaway page, before any real design.
 
 ### Project setup
-- [ ] 🤖 Scaffold Astro at the repo root (TypeScript strict); leave `www/` untouched
-- [ ] 🤖 Pin Node LTS (`.nvmrc` / `engines`) and lock dependencies
-- [ ] 🤖 Add integrations: React, MDX, sitemap
-- [ ] 🤖 Prettier + ESLint (with Astro plugins), `astro check`
-- [ ] 🤖 `.gitignore`, `.editorconfig`, and a README section: how to run, build, preview, add content
+- [x] 🤖 Scaffold Astro at the repo root (TypeScript strict); leave `www/` untouched
+- [x] 🤖 Pin Node LTS (`.nvmrc` / `engines`) and lock dependencies
+- [x] 🤖 Add integrations: React, MDX, sitemap
+- [x] 🤖 Prettier + ESLint (with Astro plugins), `astro check`
+- [x] 🤖 `.gitignore`, `.editorconfig`, and a README section: how to run, build, preview, add content
 
 ### Foundations
-- [ ] 🤖 `BaseLayout` with an SEO head component: title, description, canonical, Open Graph/Twitter, JSON-LD organization
-- [ ] 🤖 Content collections skeleton with schemas: `site` (org facts), `people`, `tags`
-- [ ] 🤖 Seed content: org facts from `content.md` §1, plus Edgard's stub entry (marked unpublished)
-- [ ] 🤖 Base CSS: reset, design-token placeholders (colors, type scale, spacing), mobile-first breakpoints
-- [ ] 🤖 `public/robots.txt` that blocks indexing on preview URLs (and a launch-time switch to allow it)
-- [ ] 🤖 `_redirects` / `_headers` skeletons (old URLs → new, security headers)
+- [x] 🤖 `BaseLayout` with an SEO head component: title, description, canonical, Open Graph/Twitter, JSON-LD organization
+- [x] 🤖 Content collections skeleton with schemas: `site` (org facts), `people`, `tags`
+- [x] 🤖 Seed content: org facts from `content.md` §1, plus Edgard's stub entry (marked unpublished)
+- [x] 🤖 Base CSS: reset, design-token placeholders (colors, type scale, spacing), mobile-first breakpoints
+- [x] 🤖 `public/robots.txt` that blocks indexing on preview URLs (and a launch-time switch to allow it)
+- [x] 🤖 `_headers` (security headers, noindex outside production)
+- [ ] 🤖 `_redirects` for old URLs (once the new pages exist, Phase 4)
 
 ### Test page
-- [ ] 🤖 One `noindex` test page that exercises everything:
+- [x] 🤖 One `noindex` test page that exercises everything:
   - an optimized responsive photo (from `www/img`)
   - a `PersonCard` rendered from the `people` collection
   - a tiny React island (e.g. a counter or the instrument picker prototype)
@@ -60,14 +61,14 @@ Goal: prove the whole pipeline end to end (code → CI → Cloudflare preview) w
 
 ### CI & deploys
 Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build and deploy; beta deploys automatically, production only with your approval.
-- [ ] 🤖 `ci.yml`: on every push and PR: install → `astro check` → lint → build
+- [x] 🤖 `ci.yml`: on every push and PR: install → `astro check` → lint → build
 - [ ] 🧑 **Create a Cloudflare account** (free plan, your ownership for now) and enable two-factor login
 - [ ] 🧑 Create a least-privilege Cloudflare API token (I'll give the exact permissions) and note the account ID
 - [ ] 🧑 GitHub: create environments `beta` and `production`; add the token and account ID as environment secrets; make yourself the required reviewer on `production`, limited to `main` and release tags
 - [ ] 🧑 GitHub: branch protection on `main` (pull requests, CI must pass, no force-push)
-- [ ] 🤖 `wrangler.jsonc` with two Workers (`faasl-beta`, `faasl`) and beta mode (`noindex`, robots block, beta banner)
-- [ ] 🤖 `deploy-beta.yml`: on push to `v3` after CI passes → build in beta mode → deploy to `faasl-beta`
-- [ ] 🤖 `deploy-production.yml`: on a published GitHub Release or manual start → waits for your approval → deploy to `faasl` (disabled until launch)
+- [x] 🤖 `wrangler.jsonc` with two Workers (`faasl-beta`, `faasl`) and beta mode (`noindex`, robots block)
+- [x] 🤖 `deploy-beta.yml`: on push to `v3` after CI passes → build in beta mode → deploy to `faasl-beta`
+- [x] 🤖 `deploy-production.yml`: on a published GitHub Release or manual start → waits for your approval → deploy to `faasl` (disabled until launch)
 - [ ] 🤝 First beta deploy of the test page to its `*.workers.dev` address; check it on a real phone
 - [ ] 🤝 💡 Move faasl.org DNS to Cloudflare early (copy every record, especially MX/TXT; `www` keeps pointing at the old host), then attach `beta.faasl.org`. Can happen any time before the stakeholder beta.
 - [ ] 🤖 Lighthouse check in CI (report only for now; budgets once the design exists)
@@ -128,10 +129,9 @@ Built in this order, each reviewed on a preview URL:
 ## Phase 6 — Beta for stakeholders
 
 - [ ] 🤝 Beta address: 💡 `beta.faasl.org` (the old site used it for betas). It can point at the Cloudflare project with one DNS record at the current DNS host, before any full DNS move. Fallback: the free `*.pages.dev` address.
-- [ ] 🤖 Beta is hidden from search engines (`noindex` + `robots.txt`) and marked with a "Beta: tell us what you think" banner
-- [ ] 🤖 Feedback link on every page (a simple form or `mailto:`, with the page address filled in)
+- [x] 🤖 Beta is hidden from search engines (`noindex`, `robots.txt`, `X-Robots-Tag`). No beta banner.
 - [ ] 🧑 Stakeholder list: board, Edgard, Geronimo, key volunteers, a few parents and members, maybe a friendly donor
-- [ ] 🧑 Share the beta with a short note: what to look at, how to send feedback, by when
+- [ ] 🧑 Share the beta with a short note: what to look at, how to send feedback (e.g. reply by email), by when
 - [ ] 🤝 Triage feedback → fix → second look if needed
 
 ## Phase 7 — Launch & follow-up

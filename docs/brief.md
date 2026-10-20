@@ -47,7 +47,8 @@ See [`strategy.md`](./strategy.md). In short:
 
 Please collect a few examples. Even "I like the photos on X" or "I hate the menu on Y" is useful.
 
-- [ ] 3–5 websites you like (any topic): what do you like about each?
+- [x] **[awesomeorchestra.com](https://awesomeorchestra.com)**: a fan of its design, structure and organization. Not to copy its design or text, but a model for how organized and clear our messaging can grow to be over time.
+- [ ] 2–4 more websites you like (any topic): what do you like about each?
 - [ ] 1–2 other community bands, youth music programs or filarmónicas, as peers
 - [ ] 1–2 non-profit sites with donation and sponsor pages you find convincing
 - [ ] Anything you specifically **don't** want
@@ -71,7 +72,7 @@ Please collect a few examples. Even "I like the photos on X" or "I hate the menu
 - [ ] Toggleable announcement banner with an expiry date ("New lessons start soon!")
 - [ ] Shortcut subdomains and old URLs redirect correctly
 - [ ] Prints cleanly (the lessons page especially)
-- [ ] Beta site for stakeholders, hidden from search engines, with an easy way to send feedback
+- [ ] Beta site for stakeholders, hidden from search engines (no beta banner)
 - [ ] Automatic deploys to beta; production deploys only with the owner's approval (`deployment.md`)
 - [ ] Later: galleries, event write-ups, stories, tags, search (see `astro-extensibility.md`); Portuguese (v3.1)
 

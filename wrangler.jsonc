@@ -1,0 +1,22 @@
+// Cloudflare Workers config: two separate Workers serve the static build.
+// Deploys run from GitHub Actions only (see docs/deployment.md).
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "faasl-dev",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page",
+  },
+  "env": {
+    "beta": {
+      "name": "faasl-beta",
+      "workers_dev": true,
+    },
+    "production": {
+      "name": "faasl",
+      // Served from www.faasl.org once DNS is on Cloudflare (Phase 7).
+      "workers_dev": false,
+    },
+  },
+}

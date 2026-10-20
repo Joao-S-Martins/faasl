@@ -1,0 +1,46 @@
+# Deploys a published GitHub Release to the live site. The `production`
+# environment requires the owner's approval before the deploy job runs, and
+# its Cloudflare token is only available to approved jobs. See docs/deployment.md.
+name: Deploy production
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  ci:
+    # Disabled until launch: set the repository variable
+    # PRODUCTION_DEPLOY_ENABLED to "true".
+    if: vars.PRODUCTION_DEPLOY_ENABLED == 'true'
+    uses: ./.github/workflows/ci.yml
+    with:
+      site-env: production
+
+  deploy:
+    needs: ci
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://www.faasl.org
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+        env:
+          SITE_ENV: production
+      - run: npx wrangler deploy --env production
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

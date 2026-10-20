@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getSite } from '../lib/site';
+
+const site = await getSite();
+---
+
+<BaseLayout title={site.name} description={site.tagline} noindex>
+  <main class="container">
+    <h1>{site.name}</h1>
+    <p>Our new website is on its way.</p>
+    <p>
+      <a href="/test">Infrastructure test page</a>
+    </p>
+  </main>
+</BaseLayout>
+
+<style>
+  main {
+    display: grid;
+    gap: var(--space-m);
+    padding-block: var(--space-xl);
+  }
+</style>

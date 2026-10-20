@@ -9,7 +9,7 @@ Related: [`architecture.md`](./architecture.md) · [`todo.md`](./todo.md)
 |---|---|---|
 | Address | `beta.faasl.org` (until DNS moves: a free `*.workers.dev` address) | `www.faasl.org` |
 | Deployed by | GitHub Actions, **automatically** on every push to the beta branch, once checks pass | GitHub Actions, **only after you approve** a specific release |
-| Search engines | Blocked (`noindex`, `robots.txt`, "Beta" banner) | Allowed |
+| Search engines | Blocked (`noindex`, `robots.txt`, `X-Robots-Tag`) | Allowed |
 | Cloudflare credential | Stored in the GitHub `beta` environment | Stored **only** in the protected GitHub `production` environment |
 | Rollback | Re-run an older deploy | One command or one click in the Cloudflare dashboard |
 
@@ -88,7 +88,6 @@ Several layers, each cheap to set up:
 
 The same code builds slightly differently when `SITE_ENV=beta`:
 - `robots.txt` blocks everything and every page gets `noindex` (plus an `X-Robots-Tag` header), so the beta never competes with the live site in Google
-- A "Beta: tell us what you think" banner with a feedback link
 - Canonical URLs still point at `www.faasl.org`
 
 ## 5. Domains and the DNS question

@@ -4,7 +4,7 @@
 # Node
 node_modules
 npm-debug.log
-package-lock.json
+www/package-lock.json
 
 # Grunt
 .grunt
@@ -43,3 +43,11 @@ www/wordpress/css/*.css.map
 www/**/dev/
 www/**/tmp/
 
+
+# v3 site (Astro + Cloudflare)
+dist/
+.astro/
+.wrangler/
+.dev.vars
+.env
+.env.*
