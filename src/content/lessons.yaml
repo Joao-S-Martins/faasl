@@ -1,0 +1,19 @@
+# Facts about the free lesson program, reused on Home, Lessons and the FAQ.
+program:
+  cost: Free
+  minimumAge: 8
+  beginnerStartMonth: February
+  day: Friday
+  times: ['18:30', '19:15']
+  durationMinutes: 30
+  methodBook:
+    title: Standard of Excellence, Book 1
+    note: Buy the version written for your chosen instrument.
+  accessories:
+    - { instruments: Most woodwinds, items: 'Extra reeds (size 2.5), a swab and cork grease' }
+    - { instruments: Flutes, items: Cleaning cloth or swab }
+    - { instruments: Most brass, items: Valve oil and slide grease }
+    - { instruments: Trombones, items: Slide oil }
+    - { instruments: Drums, items: An extra pair of sticks }
+  demoVideoId: CCTeSjpDsIs
+  # TODO: Remind sign-up link and instructions (docs/todo.md)

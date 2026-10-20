@@ -316,10 +316,9 @@ Additionally, here is a list of items that your instrument will regularly need:
 - **Drums:** An extra pair of sticks
 
 Our musicians have been happy to work with these local music shops through the years:
-- [A & G Music, Oakland](http://www.agmusic.com/)
 - [Music Unlimited, San Leandro](https://www.facebook.com/MusicUnlimitedSanLeandro/)
-- [ABC Music, Castro Valley](http://www.abcmusiccastrovalley.com/)
-- [Jams Music, Dublin](http://jamsmusicdublin.com/)
+- [ABC Music, Castro Valley](https://www.facebook.com/abcmusiccastrovalley/)
+- [JAMS Music, Dublin](https://www.jamsmusicdublin.com/)
 - [Allegro Music, Fremont](http://www.allegromusic.net/)
 
 [Woodwind & Brasswind](https://www.wwbw.com) and [Musician's Friend](https://www.musiciansfriend.com) are popular online shops, but we recommend visiting a local store with knowledgeable staff when possible.
@@ -327,7 +326,15 @@ Our musicians have been happy to work with these local music shops through the y
 **Map:** Google My Maps embed of the stores (`mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa`)
 
 > [!NOTE]
-> Reviewing the store list (8+ years old) is tracked in `todo.md`. The image credit for the method books should also be confirmed, or the photo swapped for your own.
+> **Stores checked 2026-10-20** by web search (details and sources in `src/content/stores.yaml`):
+> - **A & G Music, Oakland: closed.** Yelp and MapQuest list it as permanently closed (a forum post says June 2024). Removed.
+> - **Music Unlimited, San Leandro:** appears open, operating as the showroom for the Instrumentpro online store. No website found.
+> - **ABC Music, Castro Valley:** open (Yelp updated September 2026). Its old website link was swapped for its Facebook page.
+> - **JAMS Music, Dublin:** open; own website current, with school band rentals.
+> - **Allegro Music, Fremont:** probably open (directory listings, a February 2026 review); website not verified.
+> - **Woodwind & Brasswind:** merged into Music & Arts in 2024; wwbw.com still operates. **Musician's Friend:** relaunched in May 2026 as an off-price outlet, less suited to beginners. 💡 Consider listing **Music & Arts** instead (Bay Area stores and band rental programs).
+>
+> A phone call is the only sure check; worth doing for Music Unlimited and Allegro before launch. The image credit for the method books should also be confirmed, or the photo swapped for your own.
 
 ### 5.4 FAQs
 

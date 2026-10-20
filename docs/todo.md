@@ -76,7 +76,11 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 
 ## Phase 2 — Section planning
 
-For each section, agree on: **purpose & audience · URL · content fields (schema) · components · SEO target (title, keywords, structured data) · open content questions.** I'll draft each as a short spec for you to review.
+Draft plans for every page are in [`sections.md`](./sections.md), ready for review. Structured content files for them are in `src/content/`.
+
+- [x] 🤖 Move structured content into content files with schemas: stores, FAQ, calendars, lessons program, announcements, stories, member forms
+- [ ] 🧑 Review `sections.md` and answer its ❓ questions
+- [ ] 🤖 Move long page copy from `content.md` into Markdown page files
 
 - [ ] 🤝 Information architecture: confirm the site map (`strategy.md` §7), the **hybrid long home page**, and launch priority
 - [ ] 🤝 Global: header & mobile nav, footer, announcement banner, SEO defaults, 404 page
@@ -201,7 +205,10 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 
 ### Content items 🧑
 - [ ] **Gather Edgard Gonzalez's details:** exact title, 2–3 sentence bio, instruments, credentials, year joined, headshot, and how families should contact him (for the "What if we're late?" FAQ)
-- [ ] **Review the music stores:** check each shop on the Lessons page is still open, confirm links, and add or remove shops
+- [x] **Review the music stores:** web-searched 2026-10-20 (`content.md` §5.3, `src/content/stores.yaml`). A & G Music (Oakland) has closed and is removed.
+  - [ ] Call Music Unlimited and Allegro Music to confirm they're open and still rent band instruments
+  - [ ] Decide: replace Musician's Friend (now an off-price outlet) with Music & Arts?
+  - [ ] Any new shops to add?
 - [ ] **Remind notifications:** link and step-by-step instructions for joining the Remind list for lesson updates
 - [ ] **Review the mission statement:** decide on official wording (the README uses "music education and mentorship for underserved youth in the East Bay")
 - [ ] **Donate button:** decide yes/no and the provider (PayPal, Givebutter, Zeffy…), then point `donate.faasl.org` at it

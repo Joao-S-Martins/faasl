@@ -1,0 +1,6 @@
+# Site-wide announcement banner. Shown only between `starts` and `expires`.
+- id: lessons-start
+  message: New music lessons start soon!
+  link: { label: Learn more, href: /lessons }
+  starts: 2026-11-01
+  expires: 2027-02-28

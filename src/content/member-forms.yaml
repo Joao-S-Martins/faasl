@@ -1,0 +1,11 @@
+# Printable onboarding forms for the Members page. Put the PDFs in
+# public/forms/ and set `file`. Forms without a file show "coming soon".
+- id: emergency-contact
+  title: Emergency contact & medical form
+  order: 1
+- id: uniform-agreement
+  title: Uniform agreement
+  order: 2
+- id: photo-consent
+  title: Photo consent form
+  order: 3

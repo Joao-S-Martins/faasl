@@ -20,6 +20,11 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
   beginnerFriendly: data.beginnerFriendly,
   demoStartSeconds: data.demoStartSeconds,
 }));
+const stores = (await getCollection('stores', ({ data }) => data.status === 'open')).sort((a, b) =>
+  a.data.name.localeCompare(b.data.name),
+);
+const faqs = (await getCollection('faqs')).sort((a, b) => a.data.order - b.data.order);
+const [story] = await getCollection('stories', ({ data }) => data.published);
 const builtAt = new Date().toISOString();
 ---
 
@@ -67,6 +72,32 @@ const builtAt = new Date().toISOString();
     <section class="stack">
       <h2>React island</h2>
       <InstrumentPicker client:visible videoId="CCTeSjpDsIs" instruments={instruments} />
+    </section>
+
+    <section class="stack">
+      <h2>Structured content</h2>
+      {story && (
+        <blockquote>
+          <p>“{story.data.quote}”</p>
+          <footer>— {story.data.name}</footer>
+        </blockquote>
+      )}
+      <h3>Open music stores</h3>
+      <ul>
+        {stores.map(({ data }) => (
+          <li>
+            <a href={data.url}>{data.name}</a>
+            {data.city && `, ${data.city}`}
+          </li>
+        ))}
+      </ul>
+      <h3>FAQ</h3>
+      {faqs.map(({ data }) => (
+        <details>
+          <summary>{data.question}</summary>
+          <p>{data.answer}</p>
+        </details>
+      ))}
     </section>
 
     <section class="stack">

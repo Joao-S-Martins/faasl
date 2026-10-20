@@ -1,0 +1,66 @@
+# Music stores recommended on the Lessons page. Only stores with status "open"
+# are shown. Re-check each year (search the name and city; look for "closed"
+# on Google, Yelp or MapQuest) and update lastChecked.
+- id: music-unlimited
+  name: Music Unlimited
+  kind: local
+  city: San Leandro
+  address: 14417 E 14th St, San Leandro, CA 94578
+  phone: (510) 357-4880
+  url: https://www.facebook.com/MusicUnlimitedSanLeandro/
+  status: open
+  lastChecked: 2026-10-20
+  notes: Listings show it operating as the showroom for the Instrumentpro online store. No official website found; the old Facebook link is kept.
+- id: abc-music
+  name: ABC Music
+  kind: local
+  city: Castro Valley
+  address: 3145 Castro Valley Blvd, Castro Valley, CA 94546
+  phone: (510) 537-1861
+  url: https://www.facebook.com/abcmusiccastrovalley/
+  status: open
+  lastChecked: 2026-10-20
+  notes: Yelp listing updated September 2026; offers rentals, repairs and lessons. The old abcmusiccastrovalley.com link was replaced with their Facebook page.
+- id: jams-music
+  name: JAMS Music
+  kind: local
+  city: Dublin
+  address: 7282 San Ramon Rd, Dublin, CA 94568
+  phone: (925) 828-5267
+  url: https://www.jamsmusicdublin.com/
+  status: open
+  lastChecked: 2026-10-20
+  notes: Own website is current; school band rentals (rent-to-own) for grades 4–12.
+- id: allegro-music
+  name: Allegro Music
+  kind: local
+  city: Fremont
+  address: 3115 Walnut Ave, Fremont, CA 94538
+  phone: (510) 793-3500
+  url: http://www.allegromusic.net/
+  status: open
+  lastChecked: 2026-10-20
+  notes: Directory listings and a February 2026 review; rent-to-own band instruments. Website not verified.
+- id: a-and-g-music
+  name: A & G Music
+  kind: local
+  city: Oakland
+  address: 564 14th St, Oakland, CA 94612
+  url: http://www.agmusic.com/
+  status: closed
+  lastChecked: 2026-10-20
+  notes: Yelp and MapQuest list it as permanently closed (a forum post says June 2024). Removed from the page.
+- id: woodwind-brasswind
+  name: Woodwind & Brasswind
+  kind: online
+  url: https://www.wwbw.com
+  status: open
+  lastChecked: 2026-10-20
+  notes: Merged into sister brand Music & Arts (Guitar Center family) in 2024; wwbw.com still operates. Music & Arts also has Bay Area stores and band rental programs.
+- id: musicians-friend
+  name: Musician's Friend
+  kind: online
+  url: https://www.musiciansfriend.com
+  status: open
+  lastChecked: 2026-10-20
+  notes: Relaunched in May 2026 as an off-price outlet (overstock, open-box). Less suited to beginner band instruments; consider replacing with Music & Arts.
