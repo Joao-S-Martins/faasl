@@ -1,0 +1,40 @@
+---
+// The weekly schedule from src/content/schedule.yaml.
+import { getSchedule } from '../lib/schedule';
+
+interface Props {
+  /** Only these schedule ids (default: all). */
+  only?: string[];
+}
+
+const { only } = Astro.props;
+const schedule = (await getSchedule()).filter((item) => !only || only.includes(item.id));
+---
+
+<dl class="schedule">
+  {schedule.map((item) => (
+    <div>
+      <dt>{item.label}</dt>
+      <dd>
+        {item.day}s at {item.time}, {item.length}
+        {item.note && `, ${item.note}`}
+      </dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  .schedule div {
+    display: grid;
+    gap: 0 var(--space-s);
+    grid-template-columns: 11rem 1fr;
+  }
+
+  dt {
+    font-weight: 700;
+  }
+
+  dd {
+    margin: 0;
+  }
+</style>

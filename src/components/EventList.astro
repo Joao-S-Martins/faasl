@@ -1,0 +1,89 @@
+---
+// Upcoming events from one calendar (src/content/events.json, refreshed
+// weekly), with Event data for search.
+import { getCollection, getEntry } from 'astro:content';
+import { formatEventWhen } from '../lib/format';
+import Todo from './Todo.astro';
+
+interface Props {
+  calendar: 'performances' | 'social';
+  /** Show at most this many (default: all). */
+  limit?: number;
+  /** Shown when there's nothing coming up. */
+  empty: string;
+  /** Heading level for event titles. */
+  level?: 3 | 4;
+}
+
+const { calendar, limit, empty, level = 3 } = Astro.props;
+const Heading = `h${level}` as 'h3' | 'h4';
+const now = new Date().toISOString().slice(0, 10);
+const events = (await getCollection('events', ({ data }) => data.calendar.id === calendar))
+  .filter(({ data }) => data.end.slice(0, 10) >= now)
+  .sort((a, b) => a.data.start.localeCompare(b.data.start))
+  .slice(0, limit);
+const calendarEntry = await getEntry('calendars', calendar);
+const hasSamples = events.some(({ data }) => data.sample);
+
+const structuredData = events.map(({ data }) => ({
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: data.title,
+  startDate: data.start,
+  endDate: data.end,
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  ...(data.location && {
+    location: { '@type': 'Place', name: data.location, address: data.location },
+  }),
+  ...(data.description && { description: data.description }),
+  organizer: {
+    '@type': 'Organization',
+    name: 'Portuguese Band of San Leandro',
+    url: Astro.site?.href,
+  },
+}));
+---
+
+{hasSamples && (
+  <Todo block>
+    these are sample events from scripts/fixtures, not the real {calendarEntry?.data.name} calendar
+  </Todo>
+)}
+{events.length ? (
+  <ol class="events">
+    {events.map(({ data }) => (
+      <li>
+        <article>
+          <Heading>{data.title}</Heading>
+          <p class="when">
+            <time datetime={data.start}>{formatEventWhen(data)}</time>
+          </p>
+          {data.location && <p class="where">{data.location}</p>}
+          {data.description && <p class="description">{data.description}</p>}
+        </article>
+      </li>
+    ))}
+  </ol>
+) : (
+  <p>{empty}</p>
+)}
+{structuredData.length > 0 && (
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+)}
+
+<style>
+  .events {
+    display: grid;
+    gap: var(--space-m);
+    padding: 0;
+    list-style: none;
+  }
+
+  .when {
+    font-weight: 700;
+  }
+
+  .description {
+    white-space: pre-line;
+  }
+</style>

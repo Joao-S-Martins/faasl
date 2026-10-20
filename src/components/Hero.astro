@@ -1,0 +1,41 @@
+---
+// Home page hero. Shows the first photo for now; becomes an animated
+// slideshow (with a pause button and a still image for reduced motion) in
+// the design phase.
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  photos: { src: ImageMetadata; alt: string }[];
+}
+
+const [first] = Astro.props.photos;
+---
+
+<header class="hero">
+  {first && (
+    <Image
+      src={first.src}
+      alt={first.alt}
+      width={1600}
+      widths={[400, 800, 1200, 1600]}
+      sizes="(min-width: 70rem) 70rem, 100vw"
+      loading="eager"
+      class="hero-image"
+    />
+  )}
+  <slot />
+</header>
+
+<style>
+  .hero {
+    display: grid;
+    gap: var(--space-s);
+    padding-block: var(--space-l);
+  }
+
+  .hero-image {
+    width: 100%;
+    border-radius: var(--radius);
+  }
+</style>

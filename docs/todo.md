@@ -72,7 +72,7 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 - [x] 🤖 `deploy-production.yml`: on a published GitHub Release or manual start → waits for your approval → deploy to `faasl` (disabled until launch)
 - [ ] 🤝 First beta deploy of the test page to its `*.workers.dev` address; check it on a real phone
 - [ ] 🤝 💡 Move faasl.org DNS to Cloudflare early (copy every record, especially MX/TXT; `www` keeps pointing at the old host), then attach `beta.faasl.org`. Can happen any time before the stakeholder beta.
-- [ ] 🤖 Google Calendar fetch script: Performances and Social events (including descriptions, which hold call times, ticket prices and dress code). Sample feed for testing includes a **fake raffle** as an example non-dinner fundraiser → `src/content/events/*.json` (tested with a sample feed; real feed in CI)
+- [x] 🤖 Google Calendar fetch script (`npm run events`): Performances and Social events, with descriptions (call times, ticket prices, dress code), recurring/moved/cancelled/all-day events → `src/content/events.json`. Sample feeds include a fake raffle (`npm run events:sample`); CI prints a live report (`npm run events:report`)
 - [x] 🤝 Refresh approach: B, automatic content releases with patch tags (`deployment.md` §6)
 - [ ] 🤖 `refresh.yml`: weekly + manual; fetch events → commit if changed → tag next patch → deploy (data-only changes skip approval)
 - [ ] 🧑 GitHub: `production-refresh` environment + a narrow credential allowed to commit event data to `main`
@@ -83,8 +83,8 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 Draft plans for every page are in [`sections.md`](./sections.md), ready for review. Structured content files for them are in `src/content/`.
 
 - [x] 🤖 Move structured content into content files with schemas: stores, FAQ, calendars, lessons program, stories, member forms
-- [ ] 🧑 Review `sections.md` and answer its ❓ questions
-- [ ] 🤖 Move long page copy from `content.md` into Markdown page files
+- [x] 🧑 Review `sections.md` (confirmed)
+- [x] 🤖 Build every v3 page from the reviewed copy: simple semantic HTML on shared components (`src/components/`), facts from content files, TODOs and drafts visible on beta
 
 - [ ] 🤝 Information architecture: confirm the site map (`strategy.md` §7), the **hybrid long home page**, and launch priority
 - [ ] 🤝 Global: header & mobile nav, footer, SEO defaults, 404 page
@@ -207,6 +207,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [x] Special contacts: Edgard for lessons; Geronimo for forms, uniforms, music and folders (to be replaced); info@faasl.org for everything else
 
 ### Content items 🧑
+- [ ] **Keep the public Google Calendars up to date.** The first live report (2026-10-20) found only **1** upcoming performance in the next 12 months ("[Tentative] Festival das Filarmónicas 2026", Nov 7, no location or description) and **0** social events, versus about 12 parades, 6 concerts and several dinners a year. The site can only list what's on the calendars: add each event with a location and a description (call time, tickets, dress code).
 - [ ] **BAND app** (band messages and RSVPs): install links for iPhone and Android, and step-by-step instructions to join our group, for the Musicians page
 - [ ] **Play-along playlist:** revive and update the YouTube play-along playlist (`practice.faasl.org`) for the Musicians page
 - [ ] **Replace Geronimo as the default contact** for forms, uniforms, music and folders (💡 a role-based address such as members@faasl.org)

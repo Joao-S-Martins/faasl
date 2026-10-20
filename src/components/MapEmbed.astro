@@ -1,0 +1,29 @@
+---
+// A Google map that only loads when opened, so pages stay fast.
+interface Props {
+  src: string;
+  title: string;
+  label?: string;
+}
+
+const { src, title, label = 'Show map' } = Astro.props;
+---
+
+<details class="map">
+  <summary>{label}</summary>
+  <iframe src={src} title={title} loading="lazy"></iframe>
+</details>
+
+<style>
+  iframe {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: 0;
+    margin-top: var(--space-xs);
+  }
+
+  summary {
+    cursor: pointer;
+    font-weight: 700;
+  }
+</style>

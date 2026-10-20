@@ -1,0 +1,59 @@
+---
+// The lessons FAQ, with schedule tokens filled in and FAQPage data for search.
+import { getCollection, getEntry } from 'astro:content';
+import { fillTokens } from '../lib/schedule';
+import { subscribeUrl } from '../lib/calendars';
+
+const entries = (await getCollection('faqs')).sort((a, b) => a.data.order - b.data.order);
+const faqs = await Promise.all(
+  entries.map(async ({ id, data }) => {
+    let link: { label: string; href: string } | undefined;
+    if (data.link?.calendar) {
+      const calendar = await getEntry(data.link.calendar);
+      if (calendar) link = { label: data.link.label, href: subscribeUrl(calendar.data) };
+    } else if (data.link?.href) {
+      link = { label: data.link.label, href: data.link.href };
+    }
+    return { id, question: data.question, answer: await fillTokens(data.answer), link };
+  }),
+);
+
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: { '@type': 'Answer', text: answer },
+  })),
+};
+---
+
+<div class="faq">
+  {faqs.map(({ id, question, answer, link }) => (
+    <details id={`faq-${id}`}>
+      <summary>{question}</summary>
+      <p>
+        {answer}
+        {link && (
+          <>
+            {' '}
+            <a href={link.href}>{link.label}</a>
+          </>
+        )}
+      </p>
+    </details>
+  ))}
+</div>
+<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+<style>
+  .faq {
+    display: grid;
+    gap: var(--space-xs);
+  }
+
+  summary {
+    font-weight: 700;
+    cursor: pointer;
+  }
+</style>

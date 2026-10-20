@@ -5,9 +5,11 @@ import { Image } from 'astro:assets';
 
 interface Props {
   person: CollectionEntry<'people'>;
+  /** Photo, name and title only (no bio), for quick recognition. */
+  compact?: boolean;
 }
 
-const { person } = Astro.props;
+const { person, compact = false } = Astro.props;
 const { name, title, photo, draft } = person.data;
 const { Content } = await render(person);
 ---
@@ -21,9 +23,11 @@ const { Content } = await render(person);
   )}
   <h3>{name}</h3>
   <p class="title">{title}</p>
-  <div class="bio">
-    <Content />
-  </div>
+  {!compact && (
+    <div class="bio">
+      <Content />
+    </div>
+  )}
 </article>
 
 <style>

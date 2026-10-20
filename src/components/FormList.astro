@@ -1,0 +1,26 @@
+---
+// Printable onboarding forms for the Musicians page.
+import { getCollection } from 'astro:content';
+import Todo from './Todo.astro';
+
+const forms = (await getCollection('musicianForms')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<ol class="forms">
+  {forms.map(({ data }) => (
+    <li>
+      <strong>{data.title}</strong>
+      {data.description && <span> · {data.description}</span>}
+      {' · '}
+      {data.file ? (
+        <a href={data.file} download>
+          Download PDF
+        </a>
+      ) : (
+        <>
+          <span>Coming soon</span> <Todo>add the PDF to public/forms/</Todo>
+        </>
+      )}
+    </li>
+  ))}
+</ol>

@@ -1,0 +1,48 @@
+---
+// Top of every page: the h1, a subtitle, an optional photo and intro text.
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+}
+
+const { title, subtitle, image, imageAlt = '' } = Astro.props;
+---
+
+<header class="page-header">
+  {image && (
+    <Image
+      src={image}
+      alt={imageAlt}
+      width={1600}
+      widths={[400, 800, 1200, 1600]}
+      sizes="(min-width: 70rem) 70rem, 100vw"
+      loading="eager"
+      class="page-image"
+    />
+  )}
+  <h1>{title}</h1>
+  {subtitle && <p class="subtitle">{subtitle}</p>}
+  <slot />
+</header>
+
+<style>
+  .page-header {
+    display: grid;
+    gap: var(--space-s);
+    padding-block: var(--space-l);
+  }
+
+  .page-image {
+    width: 100%;
+    border-radius: var(--radius);
+  }
+
+  .subtitle {
+    font-size: var(--step-1);
+  }
+</style>

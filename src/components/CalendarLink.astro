@@ -1,0 +1,17 @@
+---
+// "Add to your calendar" links for one public calendar.
+import { getEntry } from 'astro:content';
+import { icalUrl, subscribeUrl } from '../lib/calendars';
+
+interface Props {
+  calendar: 'lessons' | 'performances' | 'social';
+}
+
+const entry = await getEntry('calendars', Astro.props.calendar);
+if (!entry) throw new Error(`Unknown calendar ${Astro.props.calendar}`);
+---
+
+<span class="calendar-link">
+  <a href={subscribeUrl(entry.data)}>Add {entry.data.name} to Google Calendar</a>(
+  <a href={icalUrl(entry.data)}>iCal feed</a>)
+</span>

@@ -1,0 +1,89 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Section from '../components/Section.astro';
+import FormList from '../components/FormList.astro';
+import CalendarLink from '../components/CalendarLink.astro';
+import Todo from '../components/Todo.astro';
+import { getSite } from '../lib/site';
+import { fillTokens } from '../lib/schedule';
+
+const site = await getSite();
+const thisWeek = await fillTokens('{{schedule}}, at {{address}}.');
+---
+
+<PageLayout
+  title="Musicians"
+  description="Forms, calendars and contacts for current students, families and band musicians of the Portuguese Band of San Leandro."
+  noindex
+>
+  <PageHeader title="Musicians" subtitle="everything for current students, families and musicians">
+    <p>Welcome to the band! This page has the forms, apps, calendars and contacts you'll need.</p>
+  </PageHeader>
+
+  <Section title="New member? Start here">
+    <p>Print, fill in and return these forms:</p>
+    <FormList />
+    <p>
+      Return completed forms to <strong>Geronimo</strong>.
+      <Todo>replace with a role-based contact</Todo>
+    </p>
+  </Section>
+
+  <Section title="Stay in the loop">
+    <ul>
+      <li>
+        <strong>BAND app:</strong> we use BAND for band messages and RSVPs.
+        <Todo>install links for iPhone and Android, and how to join our group</Todo>
+      </li>
+      <li>
+        <strong>Remind:</strong> lesson updates for students and families. <Todo>how to join</Todo>
+      </li>
+      <li>
+        <strong>Calendars:</strong>
+        <ul>
+          <li>
+            <CalendarLink calendar="lessons" />
+          </li>
+          <li>
+            <CalendarLink calendar="performances" />
+          </li>
+          <li>
+            <CalendarLink calendar="social" />
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="This week">
+    <p>{thisWeek}</p>
+  </Section>
+
+  <Section title="Play along at home">
+    <p>
+      Practice with our{' '}
+      <a href="https://www.youtube.com/playlist?list=PLUc6RuyKwWdnL192YgHQ5P-VH8CVN3MEU">
+        play-along playlist on YouTube
+      </a>
+      .<Todo>revive and update the playlist</Todo>
+    </p>
+  </Section>
+
+  <Section title="Who to contact">
+    <dl>
+      <dt>Missing or late to a lesson</dt>
+      <dd>
+        Edgard <Todo>how to reach him</Todo>
+      </dd>
+      <dt>Forms, uniforms, music and folders</dt>
+      <dd>
+        Geronimo <Todo>replace with a role-based contact</Todo>
+      </dd>
+      <dt>Everything else</dt>
+      <dd>
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </dd>
+    </dl>
+  </Section>
+</PageLayout>

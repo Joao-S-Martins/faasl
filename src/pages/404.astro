@@ -1,20 +1,21 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
 ---
 
-<BaseLayout title="Page not found" description="This page doesn't exist." noindex>
-  <main class="container">
-    <h1>Page not found</h1>
-    <p>
-      Sorry, we couldn't find that page. <a href="/">Go to the home page</a>.
-    </p>
-  </main>
-</BaseLayout>
-
-<style>
-  main {
-    display: grid;
-    gap: var(--space-m);
-    padding-block: var(--space-xl);
-  }
-</style>
+<PageLayout title="Page not found" description="This page doesn't exist." noindex>
+  <PageHeader title="Page not found">
+    <p>Sorry, we couldn't find that page. Try one of these:</p>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      <li>
+        <a href="/lessons">Free music lessons</a>
+      </li>
+      <li>
+        <a href="/contact">Contact us</a>
+      </li>
+    </ul>
+  </PageHeader>
+</PageLayout>

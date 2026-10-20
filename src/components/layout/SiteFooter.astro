@@ -1,0 +1,70 @@
+---
+import { getSite } from '../../lib/site';
+import Address from '../Address.astro';
+import SocialLinks from '../SocialLinks.astro';
+import Todo from '../Todo.astro';
+
+const site = await getSite();
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container columns">
+    <section aria-label="About">
+      <p>
+        <strong>{site.name}</strong>
+      </p>
+      <p>{site.tagline}</p>
+      <p>
+        The {site.legalName} is a 501(c)(3) nonprofit organization. EIN: {site.ein}
+      </p>
+    </section>
+    <section aria-label="Visit and contact">
+      <p>
+        <strong>Clubhouse</strong>
+      </p>
+      <Address directions />
+      <p>
+        <strong>Mail</strong>
+      </p>
+      <Address which="mailing" />
+      <p>
+        <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a>
+        <br />
+        <a href={`mailto:${site.email}`}>{site.email}</a>
+      </p>
+    </section>
+    <section aria-label="Follow and more">
+      <p>
+        <strong>Follow us</strong>
+      </p>
+      <SocialLinks />
+      <p>
+        <a href="/musicians">For musicians</a>
+      </p>
+    </section>
+  </div>
+  <p class="container copyright">
+    {`© 2007–${year} ${site.legalName}. All rights reserved.`}
+    <Todo>confirm copyright and license wording (docs/brief.md §5.2)</Todo>
+  </p>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: var(--space-xl);
+    padding-block: var(--space-l);
+    background: var(--color-surface);
+    font-size: var(--step--1);
+  }
+
+  .columns {
+    display: grid;
+    gap: var(--space-m);
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+
+  .copyright {
+    margin-top: var(--space-m);
+  }
+</style>

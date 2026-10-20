@@ -227,6 +227,6 @@ Onboarding forms (printable PDFs from `musicianForms`, returned to Geronimo for 
 | Stories / testimonials | `stories/*.md` | ✅ Aubury's quote; new stories to collect |
 | Member forms | `member-forms.yaml` | ✅ titles; PDFs to collect |
 | Tags | `tags.yaml` | ✅ starter set |
-| Page copy (long prose) | `pages/*.md` | Next: move from `content.md` |
+| Page copy (long prose) | `src/pages/*.astro` | ✅ built from reviewed copy |
 | Impact numbers | `impact.yaml` | ✅ 2026 figures |
-| Upcoming events | Google Calendar | Next: build-time loader |
+| Upcoming events | `events.json` from Google Calendar | ✅ fetch script; sample data until the weekly content release runs |

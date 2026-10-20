@@ -1,24 +1,131 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { getSite } from '../lib/site';
+import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/Hero.astro';
+import RouterLinks from '../components/RouterLinks.astro';
+import Section from '../components/Section.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Actions from '../components/Actions.astro';
+import Testimonial from '../components/Testimonial.astro';
+import EventList from '../components/EventList.astro';
+import PeopleGrid from '../components/PeopleGrid.astro';
+import Address from '../components/Address.astro';
+import { getSite, yearsSince } from '../lib/site';
+import { fillTokens } from '../lib/schedule';
+import { getEntry } from 'astro:content';
+import bandSteps from '../assets/photos/band-church-steps.jpg';
+import brass from '../assets/photos/brass-close-up.jpg';
+import church from '../assets/photos/band-in-church.jpg';
+import gym from '../assets/photos/concert-band-gym.jpg';
 
 const site = await getSite();
+const impact = (await getEntry('impact', 'current'))?.data;
+const schedule = await fillTokens('{{schedule}}');
 ---
 
-<BaseLayout title={site.name} description={site.tagline} noindex>
-  <main class="container">
-    <h1>{site.name}</h1>
-    <p>Our new website is on its way.</p>
+<PageLayout
+  title="Portuguese Band of San Leandro | Free Music Lessons & Community Band"
+  description="Free music lessons for ages 8 to 108 and a volunteer community band in San Leandro, CA, serving Castro Valley, San Lorenzo, Hayward and Oakland since 1980."
+>
+  <Hero
+    photos={[
+      { src: bandSteps, alt: 'The full band in green uniforms on church steps, with flags' },
+      { src: brass, alt: 'Tuba and saxophone players performing in white uniforms' },
+      { src: church, alt: 'The band performing inside a church' },
+      { src: gym, alt: 'The concert band rehearsing with the conductor' },
+    ]}
+  >
+    <h1>We've built a community around music</h1>
+    <p class="subtitle">and you're invited to join us</p>
     <p>
-      <a href="/test">Infrastructure test page</a>
+      Free music lessons, a band for every age and skill level, and live music for our community,
+      since {site.foundingYear}.
     </p>
-  </main>
-</BaseLayout>
+  </Hero>
+
+  <RouterLinks />
+
+  <Section title="Our story">
+    <p>
+      Our band was founded in {site.foundingYear} by amateur musicians, mostly Portuguese
+      immigrants, who wanted to enrich their community through music. More than{' '}
+      {`${yearsSince(site.foundingYear)} years`} later, our goal remains the same: impacting lives
+      through music education and mentorship. Today we're a diverse, all-volunteer group of
+      musicians of every age and background.
+    </p>
+    <p>
+      <a href="/about">Our story</a>
+    </p>
+  </Section>
+
+  <Section title="Free lessons for ages 8 to 108">
+    <p>
+      Every lesson we teach is free. Our music teacher, who also teaches in San Leandro schools,
+      guides beginner and intermediate students on woodwinds, brass and percussion, and you can
+      start any time of year.
+    </p>
+    <p>{schedule}</p>
+    <Actions>
+      <ButtonLink href="/lessons">Learn with us</ButtonLink>
+    </Actions>
+  </Section>
+
+  <Section title="A band for every age and skill level">
+    <p>
+      Our volunteer band is a mixed-age group of {impact?.bandMusicians ?? ''} musicians. Younger
+      musicians play alongside experienced ones, learning in a way a peer-aged group can't match. No
+      auditions: just show up on a Friday night.
+    </p>
+    <Testimonial audience="musicians" />
+    <Actions>
+      <ButtonLink href="/join">Join the band</ButtonLink>
+    </Actions>
+  </Section>
+
+  <Section title="Keep music free for our community">
+    <p>
+      Our lessons are free, our band runs on volunteers, and our board isn't paid. Every dollar goes
+      to our building and our musical needs: sheet music, uniforms, instrument repairs and the
+      carpools that get us to performances.
+    </p>
+    <Actions>
+      <ButtonLink href="/give">Give</ButtonLink>
+      <a href="/impact">See our impact</a>
+    </Actions>
+  </Section>
+
+  <Section title="Come see us">
+    <p>
+      We play about a dozen parades and half a dozen concerts every year, and host fundraiser
+      dinners with classic Portuguese meals. Here's what's coming up:
+    </p>
+    <EventList calendar="social" limit={1} empty="No fundraisers are scheduled right now." />
+    <EventList calendar="performances" limit={2} empty="No performances are scheduled right now." />
+    <p>
+      <a href="/events">All events</a>
+    </p>
+  </Section>
+
+  <Section title="Our leadership">
+    <PeopleGrid role="leadership" compact />
+    <p>
+      <a href="/about">Meet the team</a>
+    </p>
+  </Section>
+
+  <Section title="Visit us">
+    <Address directions />
+    <p>
+      <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a> ·
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+    </p>
+    <p>
+      <a href="/contact">Contact us</a>
+    </p>
+  </Section>
+</PageLayout>
 
 <style>
-  main {
-    display: grid;
-    gap: var(--space-m);
-    padding-block: var(--space-xl);
+  .subtitle {
+    font-size: var(--step-1);
   }
 </style>

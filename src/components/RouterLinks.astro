@@ -1,0 +1,49 @@
+---
+// "I want to…": sends each visitor to their page.
+const routes = [
+  { href: '/lessons', action: 'Learn an instrument', detail: 'Free lessons for ages 8 to 108' },
+  { href: '/join', action: 'Play in the band', detail: 'No auditions, just show up' },
+  {
+    href: '/give',
+    action: 'Support the band',
+    detail: 'Give, become a member or come to an event',
+  },
+];
+---
+
+<nav class="router" aria-label="I want to">
+  <h2>I want to…</h2>
+  <ul>
+    {routes.map(({ href, action, detail }) => (
+      <li>
+        <a href={href}>
+          <strong>{action}</strong>
+          <span>{detail}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  ul {
+    display: grid;
+    gap: var(--space-s);
+    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    display: grid;
+    gap: 0.25rem;
+    padding: var(--space-s);
+    border: 2px solid var(--color-hunter-green);
+    border-radius: var(--radius);
+    text-decoration: none;
+  }
+
+  span {
+    color: var(--color-text);
+  }
+</style>

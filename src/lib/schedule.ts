@@ -74,3 +74,12 @@ function summarize(schedule: Awaited<ReturnType<typeof getSchedule>>) {
     )
     .join('; ');
 }
+
+/** Schedule items keyed by id: `(await getScheduleMap()).beginner.time`. */
+export async function getScheduleMap() {
+  const schedule = await getSchedule();
+  return Object.fromEntries(schedule.map((item) => [item.id, item])) as Record<
+    string,
+    (typeof schedule)[number]
+  >;
+}

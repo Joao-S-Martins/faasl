@@ -1,0 +1,107 @@
+---
+// Contact form. The form service isn't chosen yet (docs/todo.md), so the
+// form renders but doesn't send.
+import Todo from './Todo.astro';
+
+const topics = ['Lessons', 'Joining the band', 'Giving', 'Something else'];
+// Set once a form service is chosen.
+const action: string | undefined = undefined;
+---
+
+<form class="contact-form" method="post" action={action}>
+  {!action && <Todo block>choose a form service; this form doesn't send yet</Todo>}
+  <p>
+    <label for="name">
+      Full name <span aria-hidden="true">*</span>
+    </label>
+    <input id="name" name="name" autocomplete="name" required />
+  </p>
+  <p>
+    <label for="email">
+      Email <span aria-hidden="true">*</span>
+    </label>
+    <input id="email" name="email" type="email" autocomplete="email" required />
+  </p>
+  <p>
+    <label for="phone">Phone</label>
+    <input id="phone" name="phone" type="tel" autocomplete="tel" />
+  </p>
+  <fieldset>
+    <legend>May we text this number?</legend>
+    <label>
+      <input type="radio" name="texting" value="yes" /> Yes
+    </label>
+    <label>
+      <input type="radio" name="texting" value="no" /> No
+    </label>
+  </fieldset>
+  <p>
+    <label for="topic">
+      What's this about? <span aria-hidden="true">*</span>
+    </label>
+    <select id="topic" name="topic" required>
+      <option value="">Choose one</option>
+      {topics.map((topic) => (
+        <option>{topic}</option>
+      ))}
+    </select>
+  </p>
+  <p>
+    <label for="message">
+      Message <span aria-hidden="true">*</span>
+    </label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+  </p>
+  <p class="note">* Required</p>
+  <p>
+    <button type="submit" disabled={!action}>
+      Send
+    </button>
+  </p>
+</form>
+
+<style>
+  .contact-form {
+    display: grid;
+    gap: var(--space-s);
+    max-width: 36rem;
+  }
+
+  label {
+    display: block;
+    font-weight: 700;
+  }
+
+  fieldset label {
+    display: inline-flex;
+    gap: 0.25rem;
+    margin-right: var(--space-s);
+    font-weight: 400;
+  }
+
+  input:not([type='radio']),
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #767676;
+    border-radius: 0.25rem;
+  }
+
+  button {
+    padding: 0.625rem 1.125rem;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--color-hunter-green);
+    color: var(--color-white);
+    font-weight: 700;
+  }
+
+  button:disabled {
+    opacity: 0.6;
+  }
+
+  .note {
+    font-size: var(--step--1);
+  }
+</style>

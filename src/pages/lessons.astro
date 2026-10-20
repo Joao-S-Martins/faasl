@@ -1,0 +1,174 @@
+---
+import { getEntry } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Section from '../components/Section.astro';
+import FactList from '../components/FactList.astro';
+import Actions from '../components/Actions.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import PeopleGrid from '../components/PeopleGrid.astro';
+import InstrumentPicker from '../components/InstrumentPicker';
+import StoreList from '../components/StoreList.astro';
+import MapEmbed from '../components/MapEmbed.astro';
+import CalendarLink from '../components/CalendarLink.astro';
+import FaqList from '../components/FaqList.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Todo from '../components/Todo.astro';
+import { getCollection } from 'astro:content';
+import { getScheduleMap } from '../lib/schedule';
+import { getSite } from '../lib/site';
+import rehearsal from '../assets/photos/students-rehearsal.jpg';
+
+const site = await getSite();
+const s = await getScheduleMap();
+const program = (await getEntry('lessons', 'program'))!.data;
+const instruments = (await getCollection('instruments')).map(({ id, data }) => ({
+  id,
+  name: data.name,
+  beginnerFriendly: data.beginnerFriendly,
+  demoStartSeconds: data.demoStartSeconds,
+}));
+---
+
+<PageLayout
+  title="Free Music Lessons in San Leandro"
+  description="Free group band lessons for ages 8 to 108 in San Leandro, CA. Woodwinds, brass and percussion. Start any time of year."
+>
+  <PageHeader
+    title="Free Music Lessons"
+    subtitle="for ages 8 and up, in San Leandro"
+    image={rehearsal}
+    imageAlt="Students rehearsing with the conductor"
+  >
+    <p>
+      When we say <em>free lessons</em>, we really mean it. Our volunteers and donors make it
+      possible to teach every student without charging a cent. From beginners to those with a few
+      years of experience, you're welcome to start any time of year. It's always a great time to
+      learn, from ages 8 to 108.
+    </p>
+    <FactList
+      facts={[
+        { term: 'Cost', detail: program.cost },
+        { term: 'Ages', detail: '8 to 108' },
+        {
+          term: 'When',
+          detail: `${s.beginner.day}s: beginners ${s.beginner.time}, intermediate ${s.intermediate.time}`,
+        },
+        { term: 'Where', detail: `${site.clubhouse.street}, ${site.clubhouse.city}` },
+      ]}
+    />
+    <p>
+      <strong>No sign-up needed: just come to a class on {s.beginner.day}s.</strong> Questions
+      first?
+      <a href="/contact">Contact us</a>
+    </p>
+  </PageHeader>
+
+  <Section title="How it works">
+    <p>
+      Lessons are taught in small groups once a week, for {s.beginner.length}. They're comparable
+      to, and a great complement to, many public school music programs.
+    </p>
+    <ul>
+      <li>
+        <strong>Beginner class ({s.beginner.time}):</strong> introduces new musicians to their
+        instruments and to reading music.
+      </li>
+      <li>
+        <strong>Intermediate class ({s.intermediate.time}):</strong> builds on the basics with more
+        challenging music and music theory. Many of our band volunteers also use it to learn a
+        second or third instrument.
+      </li>
+      <li>
+        <strong>The band:</strong> many of our musicians started in these classes. Our conductor,
+        Geronimo, joined as a middle school student.
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="Your teacher">
+    <PeopleGrid role="teacher" />
+  </Section>
+
+  <Section title="What students learn">
+    <ul>
+      <li>How to play and care for their instrument</li>
+      <li>How to read music and keep time</li>
+      <li>Common scales, musical keys and notation</li>
+      <li>Musical etiquette, and how to practice at home</li>
+    </ul>
+    <figure>
+      <blockquote>
+        <p>Building a regular practice routine at home is the key to succeeding in music.</p>
+      </blockquote>
+      <figcaption>— Every successful musician, ever!</figcaption>
+    </figure>
+  </Section>
+
+  <Section title="Choose an instrument">
+    <p>
+      Our program is built around concert band and marching music, so we teach woodwinds, brass and
+      percussion, but not strings or piano. Tap an instrument to see and hear it. ★ marks the most
+      common choices for beginners.
+    </p>
+    <InstrumentPicker client:visible videoId={program.demoVideoId} instruments={instruments} />
+  </Section>
+
+  <Section title="What you'll need">
+    <p>Each student needs their own instrument and method book.</p>
+    <ul>
+      <li>
+        <strong>Method book:</strong> <cite>{program.methodBook.title}</cite> (the red one).{' '}
+        {program.methodBook.note}
+      </li>
+      <li>
+        <strong>Accessories:</strong>
+        <ul>
+          {program.accessories.map(({ instruments, items }) => (
+            <li>
+              {instruments}: {items.charAt(0).toLowerCase() + items.slice(1)}
+            </li>
+          ))}
+        </ul>
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="Where to rent or buy">
+    <p>Our musicians have been happy with these local shops:</p>
+    <StoreList kind="local" />
+    <MapEmbed
+      src="https://www.google.com/maps/d/embed?mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa"
+      title="Map of recommended music stores"
+      label="Show the store map"
+    />
+    <p>
+      Popular online shops (but we recommend a local store with knowledgeable staff when possible):
+    </p>
+    <StoreList kind="online" />
+  </Section>
+
+  <Section title="Stay in the loop">
+    <ul>
+      <li>
+        <strong>Remind:</strong> lesson updates for students and families.
+        <Todo>how to join the lessons Remind list</Todo>
+      </li>
+      <li>
+        <CalendarLink calendar="lessons" />
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="FAQ">
+    <FaqList />
+  </Section>
+
+  <Section title="Ready to start?">
+    <Testimonial audience="students" />
+    <p>Come to the next class. Questions first?</p>
+    <Actions>
+      <ButtonLink href="/contact">Contact us</ButtonLink>
+    </Actions>
+  </Section>
+</PageLayout>

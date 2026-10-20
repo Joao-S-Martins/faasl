@@ -1,0 +1,23 @@
+---
+// Music stores that are currently open (src/content/stores.yaml).
+import { getCollection } from 'astro:content';
+
+interface Props {
+  kind: 'local' | 'online';
+}
+
+const { kind } = Astro.props;
+const stores = (
+  await getCollection('stores', ({ data }) => data.status === 'open' && data.kind === kind)
+).sort((a, b) => a.data.name.localeCompare(b.data.name));
+---
+
+<ul class="stores">
+  {stores.map(({ data }) => (
+    <li>
+      <a href={data.url}>{data.name}</a>
+      {data.city && `, ${data.city}`}
+      {data.address && <span class="address"> · {data.address}</span>}
+    </li>
+  ))}
+</ul>

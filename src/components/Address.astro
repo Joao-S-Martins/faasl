@@ -1,0 +1,33 @@
+---
+// Clubhouse (or mailing) address as a semantic <address>.
+import { getSite } from '../lib/site';
+
+interface Props {
+  which?: 'clubhouse' | 'mailing';
+  /** Add a "Directions" link (clubhouse only). */
+  directions?: boolean;
+}
+
+const { which = 'clubhouse', directions = false } = Astro.props;
+const site = await getSite();
+const a = which === 'clubhouse' ? site.clubhouse : site.mailingAddress;
+const query = encodeURIComponent(`${a.street}, ${a.city}, ${a.region} ${a.postalCode}`);
+---
+
+<address>
+  {a.street}
+  <br />
+  {`${a.city}, ${a.region} ${a.postalCode}`}
+  {directions && (
+    <>
+      <br />
+      <a href={`https://www.google.com/maps/search/?api=1&query=${query}`}>Directions</a>
+    </>
+  )}
+</address>
+
+<style>
+  address {
+    font-style: normal;
+  }
+</style>

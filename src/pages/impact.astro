@@ -1,0 +1,125 @@
+---
+import { getEntry } from 'astro:content';
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Section from '../components/Section.astro';
+import FactList from '../components/FactList.astro';
+import PeopleGrid from '../components/PeopleGrid.astro';
+import Todo from '../components/Todo.astro';
+import { getSite, yearsSince } from '../lib/site';
+
+const site = await getSite();
+const impact = (await getEntry('impact', 'current'))!.data;
+const cities = site.areaServed.join(', ');
+---
+
+<PageLayout
+  title="Our Impact"
+  description="Free music education and community performances in San Leandro since 1980. Mission, programs, numbers, governance and documents for the Portuguese Band of San Leandro, a 501(c)(3) nonprofit."
+>
+  <PageHeader
+    title="Our Impact"
+    subtitle={`free music education and community music since ${site.foundingYear}`}
+  />
+
+  <Section title="Our mission">
+    <p>
+      The Portuguese Band of San Leandro provides free music education and mentorship to musicians
+      of all ages, and brings live music to our community.
+    </p>
+    <Todo block>final mission wording with the board (this is the working draft)</Todo>
+  </Section>
+
+  <Section title="At a glance">
+    <FactList
+      facts={[
+        {
+          term: 'Founded',
+          detail: `${site.foundingYear} (${yearsSince(site.foundingYear)} years of free music education)`,
+        },
+        { term: 'Status', detail: `501(c)(3) nonprofit, EIN ${site.ein}` },
+        { term: 'Run by', detail: 'Volunteers' },
+        { term: 'Lessons', detail: 'Free, weekly, ages 8 to 108' },
+        {
+          term: 'Lesson classes',
+          detail: `${impact.classes} classes, each with ${impact.regularStudentsPerClass} regular students (${impact.studentsPerClassPerYear} per class over a year)`,
+        },
+        { term: 'Band', detail: `${impact.bandMusicians} musicians (${impact.year})` },
+        {
+          term: 'Performances',
+          detail: `${impact.paradesPerYear} parades and ${impact.concertsPerYear} concerts a year`,
+        },
+        { term: 'Where', detail: cities },
+      ]}
+    />
+  </Section>
+
+  <Section title="Our programs">
+    <ul>
+      <li>
+        <strong>Free music lessons:</strong> weekly beginner and intermediate group classes for ages
+        8 to 108, taught by a music teacher who also teaches in San Leandro schools. Students can
+        start any time of year.
+      </li>
+      <li>
+        <strong>Volunteer community band:</strong> a mixed-age band where students play alongside
+        experienced musicians, rehearsing weekly. No auditions, no fees.
+      </li>
+      <li>
+        <strong>Community performances:</strong> parades, festivals, city events and holiday
+        caroling around the SF Bay and Central Valley, free to the public.
+      </li>
+      <li>
+        <strong>Community dinners:</strong> fundraiser dinners throughout the year that bring people
+        together and support the programs.
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="Who we serve">
+    <p>
+      Students and musicians from San Leandro and neighboring communities, including{' '}
+      {site.areaServed.slice(1, -1).join(', ')} and {site.areaServed.at(-1)}, from age 8 to adults
+      of every age. Lessons and band membership are free, so cost is never a barrier to music.
+    </p>
+    <Todo block>revisit this section later, with local search in mind</Todo>
+  </Section>
+
+  <Section title="Governance">
+    <p>
+      FAASL is governed by a volunteer board of directors. Board members aren't paid; our funds go
+      to our building and our musical needs.
+    </p>
+    <PeopleGrid role="leadership" compact />
+    <Todo block>full board list with roles; research fund use before adding claims</Todo>
+  </Section>
+
+  <Section title="Documents">
+    <Todo block>
+      IRS determination letter, most recent Form 990, annual report or financial summary (PDFs)
+    </Todo>
+  </Section>
+
+  <Section title="Verify us">
+    <ul>
+      <li>
+        <a href="https://apps.irs.gov/app/eos/">IRS Tax Exempt Organization Search</a>: search EIN{' '}
+        {site.ein}
+      </li>
+      <li>
+        Candid (GuideStar) profile <Todo>claim and link</Todo>
+      </li>
+      <li>
+        California Attorney General, Registry of Charitable Trusts{' '}
+        <Todo>confirm status and link</Todo>
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="Grants and partnerships">
+    <p>
+      Contact us at <a href={`mailto:${site.email}`}>{site.email}</a>.
+      <Todo>a named contact, if any</Todo>
+    </p>
+  </Section>
+</PageLayout>

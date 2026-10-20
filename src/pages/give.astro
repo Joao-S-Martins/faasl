@@ -1,0 +1,121 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Section from '../components/Section.astro';
+import EventList from '../components/EventList.astro';
+import CalendarLink from '../components/CalendarLink.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Actions from '../components/Actions.astro';
+import ButtonLink from '../components/ButtonLink.astro';
+import Todo from '../components/Todo.astro';
+import { getSite, isProduction } from '../lib/site';
+
+const site = await getSite();
+// TODO: prices (docs/todo.md). Items without a price are hidden in production.
+const gifts: { price?: number; does: string }[] = [
+  { does: 'buys sheet music for a new piece for the whole band' },
+  { does: 'feeds the band dinner after rehearsal' },
+  { does: 'covers a typical instrument repair' },
+  { does: 'outfits a musician in our uniform' },
+  { does: 'supports the carpools that get our musicians to performances' },
+];
+const shownGifts = gifts.filter((gift) => gift.price || !isProduction);
+---
+
+<PageLayout
+  title="Support Free Music Education in San Leandro"
+  description="Donate to the Portuguese Band of San Leandro, a 501(c)(3) nonprofit offering free music lessons and free community performances since 1980. Gifts are tax-deductible."
+>
+  <PageHeader title="Support the Band" subtitle="keep music free for our community">
+    <p>
+      Since {site.foundingYear}, every lesson we teach has been free. Kids and adults learn an
+      instrument at no cost, young musicians are mentored by experienced ones, and our volunteer
+      band brings live music to parades, festivals and community events across the Bay Area. All of
+      it runs on volunteers and on the generosity of people like you.
+    </p>
+    <Actions>
+      <Todo>Donate button (online giving provider not chosen yet)</Todo>
+    </Actions>
+  </PageHeader>
+
+  {shownGifts.length > 0 && (
+    <Section title="What your gift does">
+      <ul>
+        {shownGifts.map((gift) => (
+          <li>
+            <strong>{gift.price ? `$${gift.price}` : <Todo>price</Todo>}</strong> {gift.does}
+          </li>
+        ))}
+      </ul>
+    </Section>
+  )}
+
+  <Section title="Become a member">
+    <p>
+      Join the FAASL family as a supporting member with an annual membership fee. Members keep our
+      lessons free year after year.
+    </p>
+    <Todo block>annual amount and what members receive (a full Members page comes in v3.1)</Todo>
+  </Section>
+
+  <Section title="Give in someone's name">
+    <p>
+      Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember
+      someone who shared our love of music. Just let us know who your gift honors.
+    </p>
+    <Todo block>how (a field in the donation form, or contact us)</Todo>
+  </Section>
+
+  <Section title="Join us at a fundraiser dinner">
+    <p>
+      Throughout the year we host dinners that bring classic Portuguese meals to the table, along
+      with some American staples. Every ticket supports our free music programs. Tickets are
+      available at the door or from any board member.
+    </p>
+    <EventList
+      calendar="social"
+      limit={3}
+      empty="No fundraisers are scheduled right now. Add our social calendar to yours to hear about the next one."
+    />
+    <p>
+      <CalendarLink calendar="social" />
+    </p>
+  </Section>
+
+  <Section title="Other ways to help">
+    <ul>
+      <li>
+        <strong>Donate an instrument</strong> you no longer play, and we'll put it back to work
+      </li>
+      <li>
+        <strong>Come hear us play</strong> at a parade, festival or concert (
+        <a href="/events">events</a>)
+      </li>
+      <li>
+        <strong>Volunteer</strong> your time and skills (
+        <a href="/about#get-involved">get involved</a>)
+      </li>
+      <li>
+        <strong>Spread the word:</strong> follow us and share our events
+      </li>
+    </ul>
+  </Section>
+
+  <Section title="For businesses">
+    <p>
+      Many employers match their employees' charitable gifts, often doubling them. Ask your HR or
+      giving program whether FAASL qualifies. Interested in supporting us as a business?
+    </p>
+    <Actions>
+      <ButtonLink href="/contact">Contact us</ButtonLink>
+    </Actions>
+    <Testimonial audience="donors" />
+  </Section>
+
+  <Section title="The details">
+    <p>
+      The {site.legalName} is a 501(c)(3) nonprofit organization, EIN {site.ein}. Donations are
+      tax-deductible to the extent allowed by law.
+    </p>
+  </Section>
+</PageLayout>

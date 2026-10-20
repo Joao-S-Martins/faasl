@@ -1,0 +1,26 @@
+---
+import { getSite } from '../lib/site';
+
+const site = await getSite();
+---
+
+<ul class="social">
+  {site.social.map(({ name, handle, url }) => (
+    <li>
+      <a href={url} rel="me">
+        {name}
+        {handle && <span class="handle"> {handle}</span>}
+      </a>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--space-s);
+    padding: 0;
+    list-style: none;
+  }
+</style>
