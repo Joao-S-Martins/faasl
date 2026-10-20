@@ -102,7 +102,29 @@ The same code builds slightly differently when `SITE_ENV=beta`:
   - The shortcut-subdomain redirects can move to Cloudflare and be tested early
   - Launch day becomes a single, reversible change (point `www` at the new site)
 
-## 6. Optional later: pull-request previews
+## 6. Scheduled content refresh (weekly)
+
+Events come from the public Google Calendars **when the site is built**, so the site must be rebuilt for new events to appear. A scheduled workflow does this automatically.
+
+| | Beta | Production |
+|---|---|---|
+| When | Weekly (e.g. Monday ~5 am Pacific) + a manual "Refresh now" button | Same schedule + manual button |
+| What it builds | The latest `v3` (later `main`) commit | **The latest approved release**, unchanged, with fresh calendar data |
+| Approval | None | None needed: no new code ships, only the last release you already approved |
+
+How it stays safe:
+- **No unapproved code reaches production.** The refresh rebuilds the exact tag of the latest published release. New code still needs a release and your approval (§3).
+- It uses a separate GitHub environment, `production-refresh`, limited to release tags, holding the same least-privilege Cloudflare token. The approval gate on `production` stays as is.
+- **If Google Calendar can't be reached or returns bad data, the build fails and nothing is deployed:** the site keeps last week's events, and GitHub emails you about the failed run.
+- **Between rebuilds,** a few lines of JavaScript hide events whose date has passed, so the list never shows stale events for a week.
+
+Things to know:
+- **Scheduled workflows only run from the default branch** (`main`). Until `v3` is merged at launch, use the manual button for beta refreshes (the beta doesn't need real events yet anyway).
+- **GitHub pauses scheduled workflows in public repos after 60 days with no repository activity.** It emails a warning first; re-enabling is one click (*Actions → workflow → Enable*). Any commit resets the clock.
+- Schedules run in UTC and can start a few minutes late at busy times. Weekly is plenty; daily would also be free if events change often.
+- This environment can't reach Google Calendar, so the calendar loader gets tested with a sample feed here and for real in GitHub Actions.
+
+## 7. Optional later: pull-request previews
 
 Each pull request can get its own temporary preview address (Workers "versions" upload without deploying), posted as a comment on the PR. Useful if others start contributing; not needed for v3.
 

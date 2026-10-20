@@ -87,7 +87,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | 5 | What students learn | 4 bullet points + "practice at home" tip | Copy §5.1 |
 | 6 | Choose an instrument | Instrument picker with demo video; beginner instruments marked; "no strings or piano" | `instruments`, `lessons` |
 | 7 | What to buy | Method book + accessories by instrument | `lessons` |
-| 8 | Where to rent or buy | Open local stores + online shops; map ❓ | `stores` |
+| 8 | Where to rent or buy | Open local stores + online shops + **store map** (Google My Maps embed, loaded on tap so the page stays fast) | `stores`, map |
 | 9 | Stay in the loop | Remind sign-up instructions + lessons calendar | `lessons` (Remind TODO), `calendars` |
 | 10 | FAQ | 5 questions | `faqs` |
 | 11 | Testimonial | A student or parent quote | `stories` |
@@ -95,7 +95,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 **Search:** title "Free Music Lessons in San Leandro". Description: "Free group band lessons for ages 8 and up in San Leandro, CA. Woodwinds, brass and percussion. New beginner classes start every February." Structured data: `FAQPage`, `Course` ❓.
 
-❓ Keep the Google My Maps store map, or just list stores with addresses (simpler, faster)?
+✅ Keep the store map. It lives in your Google account, so the A & G Music pin needs removing there (`todo.md`).
 
 ---
 
@@ -182,13 +182,15 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | # | Section | Content | Source |
 |---|---|---|---|
 | 1 | Upcoming | Upcoming events as a list (date, name, place), each with `Event` structured data | Google Calendar at build time + daily rebuild |
-| 2 | Calendars | Subscribe buttons for the 3 calendars | `calendars` |
+| 2 | Calendars | Subscribe buttons for **Performances** and **Social events** | `calendars` |
 | 3 | What we perform at | Parades, festivals, city events, caroling | Copy §3.2 |
 | 4 | Past events | Later: event write-ups with galleries | `events` (after launch) |
 
 **Search:** structured `Event` data can put performances directly in Google results.
 
-❓ Show all three calendars, or only Performances and Social events publicly (lessons on `/lessons` and `/members`)?
+✅ Calendars are separate: Performances and Social events on `/events` (and Home); Lessons & rehearsals on `/lessons` and `/members` only.
+
+**Freshness:** event lists are rebuilt from Google Calendar **weekly** (and on demand), and a tiny script hides events that have already passed between rebuilds. See `deployment.md` §6.
 
 ---
 

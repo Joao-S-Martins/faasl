@@ -72,6 +72,9 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 - [x] 🤖 `deploy-production.yml`: on a published GitHub Release or manual start → waits for your approval → deploy to `faasl` (disabled until launch)
 - [ ] 🤝 First beta deploy of the test page to its `*.workers.dev` address; check it on a real phone
 - [ ] 🤝 💡 Move faasl.org DNS to Cloudflare early (copy every record, especially MX/TXT; `www` keeps pointing at the old host), then attach `beta.faasl.org`. Can happen any time before the stakeholder beta.
+- [ ] 🤖 Google Calendar loader: Performances and Social events into an `events` collection at build time (tested with a sample feed; real feed in CI); past events hidden by a tiny script
+- [ ] 🤖 `refresh.yml`: weekly scheduled + manual rebuild of beta (latest commit) and production (latest approved release, no new code) — `deployment.md` §6
+- [ ] 🧑 GitHub: create the `production-refresh` environment (release tags only) with the same Cloudflare secrets
 - [ ] 🤖 Lighthouse check in CI (report only for now; budgets once the design exists)
 
 ## Phase 2 — Section planning
@@ -209,6 +212,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
   - [ ] Call Music Unlimited and Allegro Music to confirm they're open and still rent band instruments
   - [ ] Decide: replace Musician's Friend (now an off-price outlet) with Music & Arts?
   - [ ] Any new shops to add?
+  - [ ] Update the Google My Maps store map: remove A & G Music, check the other pins
 - [ ] **Remind notifications:** link and step-by-step instructions for joining the Remind list for lesson updates
 - [ ] **Review the mission statement:** decide on official wording (the README uses "music education and mentorship for underserved youth in the East Bay")
 - [ ] **Donate button:** decide yes/no and the provider (PayPal, Givebutter, Zeffy…), then point `donate.faasl.org` at it
