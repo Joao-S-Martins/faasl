@@ -8,10 +8,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PersonCard from '../components/PersonCard.astro';
 import InstrumentPicker from '../components/InstrumentPicker';
 import rehearsal from '../assets/photos/students-rehearsal.jpg';
-import { getSite, yearsSince } from '../lib/site';
+import { getSite, isVisible, yearsSince } from '../lib/site';
 
 const site = await getSite();
-const people = (await getCollection('people', ({ data }) => data.published)).sort(
+const people = (await getCollection('people', isVisible)).sort(
   (a, b) => a.data.order - b.data.order,
 );
 const instruments = (await getCollection('instruments')).map(({ id, data }) => ({
@@ -24,7 +24,7 @@ const stores = (await getCollection('stores', ({ data }) => data.status === 'ope
   a.data.name.localeCompare(b.data.name),
 );
 const faqs = (await getCollection('faqs')).sort((a, b) => a.data.order - b.data.order);
-const [story] = await getCollection('stories', ({ data }) => data.published);
+const [story] = await getCollection('stories', isVisible);
 const builtAt = new Date().toISOString();
 ---
 

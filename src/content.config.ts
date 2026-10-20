@@ -52,7 +52,8 @@ const people = defineCollection({
       instruments: z.array(z.string()).default([]),
       memberSince: z.number().int().optional(),
       order: z.number().default(100),
-      published: z.boolean().default(true),
+      // Drafts show on beta with a "Draft" badge and are left out of production.
+      draft: z.boolean().default(false),
       tags: z.array(reference('tags')).default([]),
     }),
 });
@@ -144,7 +145,8 @@ const stories = defineCollection({
       audiences: z.array(z.enum(['students', 'families', 'musicians', 'donors', 'funders'])),
       photo: image().optional(),
       externalUrl: z.url().optional(),
-      published: z.boolean().default(true),
+      // Drafts show on beta with a "Draft" badge and are left out of production.
+      draft: z.boolean().default(false),
       tags: z.array(reference('tags')).default([]),
     }),
 });

@@ -221,7 +221,7 @@ John was born into our program, pushed in his stroller as his father volunteered
 > [!NOTE]
 > The current site has no Teachers section, but the home page promises "credentialed music teachers". Giving each teacher a short bio (name, instruments, credentials) supports that claim, and is good for SEO and for parents' trust. Should this live on the Lessons page, the About page, or both?
 
-**Edgard Gonzalez** — *Music Teacher* (TODO: confirm exact title)
+**Edgard Gonzalez** — *Music Teacher & Assistant Conductor*
 🖼️ TODO: headshot (see `todo.md`)
 TODO: Bio, 2–3 sentences. **Must mention that he teaches music for San Leandro schools.** Other points: instruments taught, education / credentials, how he's connected to the FAASL, something personal.
 - **Teaches:** TODO (e.g. beginner class, woodwinds, brass, percussion)
@@ -247,7 +247,7 @@ TODO: Bio, 2–3 sentences. **Must mention that he teaches music for San Leandro
 
 When we say *free lessons*, we really mean it. Our volunteers and donors make it possible to teach every student without charging a cent. From beginners to those with a few years of experience, you're welcome to start any time of year. It's always a great time to learn, from ages 8 to 108.
 
-**[Contact us to get started](/contact)**
+**No sign-up needed: just come to a Friday class.** Questions first? **[Contact us](/contact)**
 
 | | |
 |---|---|
@@ -364,21 +364,21 @@ Arrive 10 minutes early to assemble your instrument and warm up. Parents are wel
 
 ### 5.11 Closing call to action
 
-**Ready to start?** **[Contact us](/contact)**
+**Ready to start?** Come to the next Friday class. Questions first? **[Contact us](/contact)**
 
 ---
 
 ## 5b. Join page (`/join`) — 📝 in review
 
-**Page title:** Play With Us (❓ or "Join the Band")
-**Meta description:** TODO after review, e.g. "Join a community band in San Leandro for experienced and aspiring musicians. Concert and marching music, festas, parades and festivals."
+**Page title:** Join the Band
+**Meta description:** Join a free community band in San Leandro, CA. Experienced and aspiring musicians welcome, no audition. Concert and marching music, festas, parades and festivals.
 
-# Play With Us
+# Join the Band
 #### a community band for experienced and aspiring musicians alike
 
 Whether you've played for decades or your instrument's been collecting dust, there's a seat for you in our volunteer band. We're a mixed-age group of new and experienced musicians, dedicated to improving one another as much as ourselves. Younger musicians play alongside older ones, learning in a way that simply can't be replicated in a peer-aged group. Experienced musicians take pride in helping the next generation while growing their own skills with a challenging and changing repertoire.
 
-**[Come sit in at a rehearsal](/contact)**
+**Just show up.** There are no auditions and no sign-up. Bring your instrument to any rehearsal; we always have extra sheet music ready for you to read.
 
 ### What we play
 
@@ -387,8 +387,6 @@ We play concert band and marching music, and we perform around the SF Bay and Ce
 - **Music festivals:** we host guest bands, or they host us
 - **City events:** the Cherry Festival parade and others
 - **Caroling:** bringing cheer to the holiday season
-
-*[1–2 short performance videos: TODO]*
 
 ### Rehearsals
 
@@ -403,17 +401,17 @@ We play concert band and marching music, and we perform around the SF Bay and Ce
 **Geronimo Rojas** — *Band Conductor*
 Geronimo has been a member of our volunteer band since he was a young middle school student. His love of music has earned him scholarships and taken him traveling. Now he leads the band that supported his journey.
 
-**TODO: name** — *Assistant Conductor*
-TODO: bio. Teaches music for San Leandro schools.
+**Edgard Gonzalez** — *Music Teacher & Assistant Conductor*
+TODO: bio (see §4). Teaches music for San Leandro schools.
 
-### Played in school? Come back to music.
+### Coming back to music, or starting fresh?
 
-That instrument in the back of your closet still has music in it. Many of our members returned to playing after years away, and the band is a welcoming place to rediscover it. Want to brush up first, or learn a second instrument? Our [intermediate lessons](/lessons) are open to band members too.
+That instrument in the back of your closet still has music in it. Many of our members returned to playing after years away, and the band is a welcoming place to rediscover it. Adults are also welcome to start from scratch: our [free lessons](/lessons) teach beginners of any age, and many band members use the intermediate class to brush up or learn a second instrument.
 
 > "After joining FAASL, I think I've grown as a musician because I have the opportunity to play with more experienced musicians."
 > — Aubury Freed
 
-**Ready to play?** Tell us your instrument and a little about your experience, and we'll invite you to a rehearsal. **[Contact us](/contact)**
+**Ready to play?** Come to the next rehearsal. Questions first? **[Contact us](/contact)**
 
 ---
 

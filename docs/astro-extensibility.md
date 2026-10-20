@@ -138,7 +138,7 @@ const people = defineCollection({
     instruments: z.array(z.string()).default([]),
     memberSince: z.number().optional(), // lets the site compute "for X years"
     tags: z.array(reference('tags')).default([]),
-    published: z.boolean().default(true),
+    draft: z.boolean().default(false), // shown on beta with a badge, hidden in production
   }),
 });
 

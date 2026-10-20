@@ -99,7 +99,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 3. Join the band `/join`
+## 3. Join the band `/join` — 📝 copy in review (`content.md` §5b)
 
 **Job:** a skilled or aspiring musician decides to come to a rehearsal.
 
@@ -107,12 +107,11 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 |---|---|---|---|
 | 1 | Intro | General invitation to skilled and aspiring musicians; mixed ages and levels | New copy, based on §3.2 "Grow" |
 | 2 | What we play | Concert and marching music; festas, parades, festivals, caroling | Copy §3.2 "Perform" |
-| 3 | Watch us | 1–2 performance videos (lightweight embeds) | YouTube (to collect) |
-| 4 | Our conductors | Geronimo + Assistant Conductor cards (assistant: name and bio TODO) | `people` |
+| 4 | Our conductors | Geronimo + Edgard (assistant conductor) cards | `people` |
 | 5 | Rehearsals | 2 hours with a break; day and time ❓; place | `lessons` (`bandRehearsal`), `site` |
 | 6 | Testimonial | Musician quote (Aubury Freed) | `stories` |
 | 7 | Returning players | "Played in school? Come back to music." (from the old Remote Restart idea) | New copy |
-| 8 | CTA | "Come sit in at a rehearsal": contact | `/contact` |
+| 8 | CTA | "Just show up": no audition, no sign-up, extra sheet music on hand | `/contact` for questions |
 
 **Search:** title "Join a Community Band in the East Bay". Keywords: community band San Leandro, adult band, marching band Bay Area.
 
@@ -218,7 +217,7 @@ As in `content.md` §6b: onboarding (printable forms from `memberForms`), where 
 | Content | File | Status |
 |---|---|---|
 | Organization facts | `site.yaml` | ✅ (mission statement to add) |
-| People | `people/*.md` | ✅ leaders; Edgard unpublished stub |
+| People | `people/*.md` | ✅ leaders; Edgard (teacher & assistant conductor) as a draft |
 | Instruments | `instruments.yaml` | ✅ |
 | Lessons program | `lessons.yaml` | ✅ (Remind TODO) |
 | FAQ | `faqs.yaml` | ✅ |

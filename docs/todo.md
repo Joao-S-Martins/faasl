@@ -196,7 +196,6 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Annual report or financial summary; IRS determination letter; recent Form 990
 - [ ] Claim / update the Candid (GuideStar) profile; check California Attorney General Registry of Charities status
 - [ ] Suggested gift amounts tied to real costs (method book, instrument repair, etc.)
-- [ ] 1–2 short performance videos
 
 ### Members page 🧑 (`content.md` §6b)
 - [ ] Current emergency contact / medical form (blank)
@@ -208,7 +207,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Special contacts: who handles what (absences, uniforms, music, general). 💡 Role-based emails (e.g. uniforms@faasl.org) instead of personal numbers.
 
 ### Content items 🧑
-- [ ] **Add Edgard Gonzalez (Music Teacher) and the Assistant Conductor:** name (assistant conductor), exact titles, 2–3 sentence bios that **mention each one teaches music for San Leandro schools**, instruments, credentials, year joined, headshots, and how families should contact Edgard (for the "What if we're late?" FAQ). Edgard appears on Lessons and About; the assistant conductor on Join and About.
+- [ ] **Edgard Gonzalez, Music Teacher & Assistant Conductor:** 2–3 sentence bio that **mentions he teaches music for San Leandro schools**, instruments, credentials, year joined, headshot, and how families should contact him (for the "What if we're late?" FAQ). He appears on Lessons, Join and About; shown on beta as a **Draft** until done.
 - [x] **Review the music stores:** web-searched 2026-10-20 (`content.md` §5.3, `src/content/stores.yaml`). A & G Music (Oakland) has closed and is removed.
   - [ ] Call Music Unlimited and Allegro Music to confirm they're open and still rent band instruments
   - [x] Replaced Musician's Friend with Music & Arts
@@ -249,6 +248,9 @@ No program or tiers exist yet. Define it, then build the page.
 - [ ] `/sponsor` page with tiers, impact, matching gifts and a contact path
 - [ ] Sponsor packet PDF generated from site content (same approach as the brochure)
 - [ ] `sponsor.faasl.org` shortcut; sponsor logos on the site once there are sponsors
+
+### Videos
+- [ ] 1–2 short performance videos on the Join page (and Events)
 
 ### Volunteer & board roles
 - [ ] When roles are being advertised: `/volunteer` page with specific roles and time commitments
