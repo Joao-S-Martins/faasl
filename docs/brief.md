@@ -120,6 +120,17 @@ These become the official palette and design tokens. Exact uses are settled in t
 
 ---
 
+## 5.4 SEO guardrails
+
+**Standing rule:** anything proposed that could hurt search ranking gets flagged with a warning before it's built.
+
+Known guardrails:
+- **Event search data only on single-event pages.** Google's event results only support pages about one event, each with its own URL; list and schedule pages aren't eligible, and misleading event markup can cost the whole site its rich results. So lists (Events, Home, Give, Lessons, Musicians) carry **no** Event data. Proposal: a page per performance or fundraiser (`/events/<date>-<name>`) with Event data (`todo.md`).
+- **No Event data for weekly lessons and rehearsals.** A standing weekly schedule reads to Google like opening hours, which its guidelines exclude, and 50+ near-identical weekly entries risk looking like spam. They're shown as plain text on Lessons and Musicians instead.
+- **Tentative/TBD events** never get Event data until they're confirmed.
+- **No thin or duplicate pages** (e.g. one page per weekly class); each page should have unique, useful content.
+- **One canonical address** (`www.faasl.org`), beta always hidden from search.
+
 ## 6. Decisions to make
 
 ### Structure & navigation

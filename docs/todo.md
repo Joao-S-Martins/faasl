@@ -212,6 +212,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
   - **Performances:** 129 past events since 2017, but only **1** upcoming ("[Tentative] Festival das Filarmónicas 2026", Nov 7, no location or description). New performances need adding, with location and a description (call time, dress code).
   - **Social events:** 40 events, the most recent in **August 2022**. Fundraisers since then were never added.
 - [x] Lessons and Musicians pages list the next three weeks of lessons and rehearsals from the lessons calendar (date, time, title; not on Events, not in search data)
+- [ ] 🤝 **Decide: a page per performance and fundraiser** (`/events/<date>-<name>`), generated from the calendar, carrying Event search data. Required for Google event results (lists aren't eligible); also the home for post-event write-ups and photos later. Weekly lessons and rehearsals stay off (`brief.md` §5.4).
 - [ ] **BAND app** (band messages and RSVPs): install links for iPhone and Android, and step-by-step instructions to join our group, for the Musicians page
 - [ ] **Play-along playlist:** revive and update the YouTube play-along playlist (`practice.faasl.org`) for the Musicians page
 - [ ] **Replace Geronimo as the default contact** for forms, uniforms, music and folders (💡 a role-based address such as members@faasl.org)

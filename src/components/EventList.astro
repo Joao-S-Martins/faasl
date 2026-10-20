@@ -1,6 +1,7 @@
 ---
 // Upcoming events from one calendar (src/content/events.json, refreshed
-// weekly), with Event data for search.
+// weekly). No Event search data on lists: Google only supports it on pages
+// about a single event (see docs/brief.md, SEO guardrails).
 import { getCollection, getEntry } from 'astro:content';
 import { formatEventWhen } from '../lib/format';
 import Todo from './Todo.astro';
@@ -13,15 +14,13 @@ interface Props {
   days?: number;
   /** Date, time and title only (no location or description). */
   compact?: boolean;
-  /** Add Event data for search engines (default true). */
-  searchData?: boolean;
   /** Shown when there's nothing coming up. */
   empty: string;
   /** Heading level for event titles. */
   level?: 3 | 4;
 }
 
-const { calendar, limit, days, empty, level = 3, compact = false, searchData = true } = Astro.props;
+const { calendar, limit, days, empty, level = 3, compact = false } = Astro.props;
 const Heading = `h${level}` as 'h3' | 'h4';
 const now = new Date().toISOString().slice(0, 10);
 const events = (await getCollection('events', ({ data }) => data.calendar.id === calendar))
@@ -31,27 +30,6 @@ const events = (await getCollection('events', ({ data }) => data.calendar.id ===
   .slice(0, limit);
 const calendarEntry = await getEntry('calendars', calendar);
 const hasSamples = events.some(({ data }) => data.sample);
-
-// Tentative events stay out of search data until they're confirmed.
-const structuredData = events
-  .filter(({ data }) => searchData && !data.tentative)
-  .map(({ data }) => ({
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: data.title,
-    startDate: data.start,
-    endDate: data.end,
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    ...(data.location && {
-      location: { '@type': 'Place', name: data.location, address: data.location },
-    }),
-    ...(data.description && { description: data.description }),
-    organizer: {
-      '@type': 'Organization',
-      name: 'Portuguese Band of San Leandro',
-      url: Astro.site?.href,
-    },
-  }));
 ---
 
 {hasSamples && (
@@ -81,9 +59,6 @@ const structuredData = events
   </ol>
 ) : (
   <p>{empty}</p>
-)}
-{structuredData.length > 0 && (
-  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 )}
 
 <style>
