@@ -80,7 +80,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 | # | Section | Content | Source |
 |---|---|---|---|
-| 1 | Intro | "Free music lessons" + ages 8 to 108 + starts every February + CTA "Contact us" | Copy §5.1, `lessons` |
+| 1 | Intro | "Free music lessons" + ages 8 to 108 + start any time of year + CTA "Contact us" | Copy §5.1, `lessons` |
 | 2 | Key facts | Cost: free · Ages: 8+ · When: Fridays 6:30 & 7:15 · Where: 844 Alvarado St. | `lessons`, `site` |
 | 3 | How it works | Group lessons, 30 minutes; beginner → intermediate → volunteer band pathway | Copy §5.1 |
 | 4 | Your teacher | Edgard Gonzalez card (once his details arrive) | `people` |
@@ -93,7 +93,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | 11 | Testimonial | A student or parent quote | `stories` |
 | 12 | CTA | Contact us to start | `/contact` |
 
-**Search:** title "Free Music Lessons in San Leandro". Description: "Free group band lessons for ages 8 and up in San Leandro, CA. Woodwinds, brass and percussion. New beginner classes start every February." Structured data: `FAQPage`, `Course` ❓.
+**Search:** title "Free Music Lessons in San Leandro". Description: "Free group band lessons for ages 8 and up in San Leandro, CA. Woodwinds, brass and percussion. Start any time of year." Structured data: `FAQPage`, `Course` ❓.
 
 ✅ Keep the store map. It lives in your Google account, so the A & G Music pin needs removing there (`todo.md`).
 

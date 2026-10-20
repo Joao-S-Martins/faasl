@@ -116,7 +116,6 @@ const lessons = defineCollection({
   schema: z.object({
     cost: z.string(),
     minimumAge: z.number().int(),
-    beginnerStartMonth: z.string(),
     day: z.string(),
     times: z.array(z.string().regex(/^\d{2}:\d{2}$/)),
     durationMinutes: z.number().int(),

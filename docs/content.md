@@ -92,7 +92,7 @@ These are internal notes, not site copy, but they're useful for voice and tone.
 > [Click here to learn more](/lessons)
 
 > [!NOTE]
-> In v3 this should be an easy-to-toggle announcement with an optional expiry date, so it doesn't stay up for years. Lessons start each February.
+> In v3 this should be an easy-to-toggle announcement with an optional expiry date, so it doesn't stay up for years.
 
 ### Footer
 
@@ -134,7 +134,7 @@ Our founders were mostly Portuguese immigrants with varying musical experience; 
 
 🖼️ `students.jpg`: two young members posed and smiling, holding a clarinet and a flag
 
-A community has to make a priority of providing for its future generations. We do this with our *free* beginner and intermediate programs. All lessons are taught in a group setting, with all the same amenities of our volunteer band. The beginner class introduces new musicians, aged 8+, to their instruments and written music starting each February. The intermediate class is a transitional program whereby students rehearse and perform with our volunteer band, but also have a separate weekly lesson to focus on excerpts and musical theory.
+A community has to make a priority of providing for its future generations. We do this with our *free* beginner and intermediate programs. All lessons are taught in a group setting, with all the same amenities of our volunteer band. The beginner class introduces new musicians, aged 8+, to their instruments and written music. Students can start any time of year. The intermediate class is a transitional program whereby students rehearse and perform with our volunteer band, but also have a separate weekly lesson to focus on excerpts and musical theory.
 
 In our programs, students learn:
 - How to play and maintain their instruments
@@ -237,7 +237,7 @@ TODO: Bio, 2–3 sentences. Suggested points: instruments taught, education / cr
 ## 5. Lessons page (`/lessons`, was `/students.html`)
 
 **Page title:** TODO, e.g. "Free Music Lessons in San Leandro | Portuguese Band of San Leandro"
-**Meta description:** TODO, e.g. "Free group band lessons for ages 8 and up in San Leandro, CA. Woodwinds, brass and percussion. New beginner classes start every February."
+**Meta description:** TODO, e.g. "Free group band lessons for ages 8 and up in San Leandro, CA. Woodwinds, brass and percussion. Students can start any time of year."
 **Social share image:** 🖼️ `img/social/students.jpg`
 **Hero:** 🖼️ `students_slide_1.jpg`
 
@@ -251,7 +251,7 @@ TODO: Bio, 2–3 sentences. Suggested points: instruments taught, education / cr
 
 When we say *free lessons*, we really mean it. We have a large backing of volunteers and donors who help us operate this program without needing to charge our students a cent. With that said, we cannot provide new students with instruments and method books. We do have recommendations for renting-to-own or outright purchasing instruments as well as the very inexpensive books.
 
-Our free lessons are taught in a group session once a week. These lessons are 30 minutes and are comparable and complementary to many public school programs. We start a round of absolute beginner lessons every February for aspiring musicians ages 8 to 108. If you aren't a beginner or you can't wait for February, just [contact us](#contact) to discuss how we can start helping you today!
+Our free lessons are taught in a group session once a week. These lessons are 30 minutes and are comparable and complementary to many public school programs. From beginners to those with a few years of experience, you're welcome to start any time of year. It's always a great time to learn, from ages 8 to 108. [Contact us](#contact) to discuss how we can start helping you today!
 
 In our programs, students learn:
 - How to play and maintain their instruments

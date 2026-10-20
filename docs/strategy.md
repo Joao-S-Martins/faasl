@@ -20,7 +20,7 @@ Related: [`brief.md`](./brief.md) · [`todo.md`](./todo.md)
 | 2 | **Build credibility** with funders and public agencies | An Impact page with numbers, documents and governance that a grant reviewer can check in 5 minutes |
 | 3 | **Attract organizational talent** (board and skilled volunteers) | General "get involved" enquiries. No open roles are advertised in v3; a dedicated page waits for v3.1. |
 | 4 | **Attract musical talent** (skilled and aspiring musicians) | Enquiries from skilled and aspiring musicians |
-| 5 | **Nurture the pipeline** (students, families, amateurs) | Lesson enquiries before February; families on the Remind list; students moving up to the band |
+| 5 | **Nurture the pipeline** (students, families, amateurs) | Lesson enquiries year-round; families on the Remind list; students moving up to the band |
 | 6 | **Celebrate community & heritage** | Content that Portuguese-community members share; supports goal 1 |
 
 Goals 1–2 drive the most new work. Goal 5 is mostly the content we already have, made clearer.
