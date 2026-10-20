@@ -1,5 +1,15 @@
 [
   {
+    "id": "performances-sample-tentative-festival-faasl.org-2026-11-07",
+    "calendar": "performances",
+    "title": "SAMPLE Festival das Filarmónicas",
+    "tentative": true,
+    "start": "2026-11-07",
+    "end": "2026-11-08",
+    "allDay": true,
+    "sample": true
+  },
+  {
     "id": "social-sample-dinner-faasl.org-2026-11-14T02-00-00.000Z",
     "calendar": "social",
     "title": "SAMPLE Fall fundraiser dinner",
@@ -41,6 +51,17 @@
     "allDay": false,
     "location": "844 Alvarado St., San Leandro, CA 94577",
     "description": "Free admission. Call time 2:00 pm.",
+    "sample": true
+  },
+  {
+    "id": "performances-sample-tbd-concert-faasl.org-2027-04-17",
+    "calendar": "performances",
+    "title": "SAMPLE Community concert",
+    "tentative": true,
+    "start": "2027-04-17",
+    "end": "2027-04-18",
+    "allDay": true,
+    "location": "Hayward, CA",
     "sample": true
   },
   {

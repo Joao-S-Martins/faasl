@@ -4,7 +4,7 @@
 //
 //   node scripts/fetch-events.mjs              fetch the live calendars, write events.json
 //   node scripts/fetch-events.mjs --sample     use scripts/fixtures/*.ics instead (offline)
-//   node scripts/fetch-events.mjs --report     print a summary only, don't write
+//   node scripts/fetch-events.mjs --report     summarize every calendar (listed or not), don't write
 //   node scripts/fetch-events.mjs --months 6   how far ahead to look (default 12)
 //
 // The output has no timestamps, so an unchanged calendar produces an identical
@@ -19,7 +19,14 @@ import YAML from 'yaml';
 const ROOT = new URL('../', import.meta.url);
 const OUTPUT = new URL('src/content/events.json', ROOT);
 const TIME_ZONE = 'America/Los_Angeles';
-const MAX_OCCURRENCES = 500;
+// Safety stop for runaway recurrence rules. Steps count from a series' first
+// date, so a weekly event that started in 2015 uses ~600 steps to reach today.
+const MAX_STEPS = 100_000;
+
+// "[Tentative] Festa parade", "TBD: Concert", "Concert (TBD)": we expect the
+// event but don't have a contract with times yet.
+const TENTATIVE =
+  /^\s*[[(]?\s*(tentative|tbd)\s*[\])]?\s*[:\-–—]?\s*|\s*[[(]\s*(tentative|tbd)\s*[\])]\s*$/gi;
 
 const { values: args } = parseArgs({
   options: {
@@ -30,7 +37,8 @@ const { values: args } = parseArgs({
 });
 
 const calendars = YAML.parse(await readFile(new URL('src/content/calendars.yaml', ROOT), 'utf8'));
-const listed = calendars.filter((calendar) => calendar.listEvents);
+// Only listed calendars are written; the report covers every calendar.
+const selected = args.report ? calendars : calendars.filter((calendar) => calendar.listEvents);
 
 // Window: from the start of today (Pacific) to N months ahead.
 const today = new Date(new Date().toLocaleDateString('en-CA', { timeZone: TIME_ZONE }));
@@ -39,14 +47,17 @@ const windowEnd = windowStart.clone();
 windowEnd.month += Number(args.months);
 
 const events = [];
-for (const calendar of listed) {
+const feedStats = {};
+for (const calendar of selected) {
   const ics = await loadCalendar(calendar);
-  events.push(...expand(ics, calendar.id));
+  const { occurrences, stats } = expand(ics, calendar.id);
+  events.push(...occurrences);
+  feedStats[calendar.id] = stats;
 }
 events.sort((a, b) => a.start.localeCompare(b.start) || a.title.localeCompare(b.title));
 
 if (args.report) {
-  printReport(events);
+  printReport(events, feedStats);
 } else {
   await writeFile(OUTPUT, JSON.stringify(events, null, 2) + '\n');
   console.log(`Wrote ${events.length} events to ${OUTPUT.pathname}`);
@@ -81,30 +92,53 @@ function expand(ics, calendarId) {
   }
   for (const exception of exceptions) series.get(exception.uid)?.relateException(exception);
 
-  const results = [];
+  const starts = [...series.values()].map((event) => event.startDate.toString()).sort();
+  const stats = {
+    vevents: root.getAllSubcomponents('vevent').length,
+    series: series.size,
+    recurring: [...series.values()].filter((event) => event.isRecurring()).length,
+    exceptions: exceptions.length,
+    cancelled: [...series.values()].filter(
+      (event) => event.component.getFirstPropertyValue('status') === 'CANCELLED',
+    ).length,
+    earliest: starts[0],
+    latest: starts.at(-1),
+  };
+
+  const occurrences = [];
   for (const event of series.values()) {
     if (event.component.getFirstPropertyValue('status') === 'CANCELLED') continue;
 
     const iterator = event.iterator();
-    for (let i = 0, next; i < MAX_OCCURRENCES && (next = iterator.next()); i++) {
+    let steps = 0;
+    for (let next; (next = iterator.next());) {
+      if (++steps > MAX_STEPS) {
+        throw new Error(`${calendarId}: "${event.summary}" repeats more than ${MAX_STEPS} times`);
+      }
       if (next.compare(windowEnd) >= 0) break;
       const details = event.getOccurrenceDetails(next);
-      if (details.endDate.compare(windowStart) <= 0) continue;
-      if (details.item.component.getFirstPropertyValue('status') === 'CANCELLED') continue;
-      results.push(toEvent(details, calendarId));
+      if (
+        details.endDate.compare(windowStart) > 0 &&
+        details.item.component.getFirstPropertyValue('status') !== 'CANCELLED'
+      ) {
+        occurrences.push(toEvent(details, calendarId));
+      }
       if (!event.isRecurring()) break;
     }
   }
-  return results;
+  return { occurrences, stats };
 }
 
 function toEvent({ item, startDate, endDate }, calendarId) {
   const allDay = startDate.isDate;
   const start = allDay ? startDate.toString() : startDate.toJSDate().toISOString();
+  const summary = clean(item.summary);
+  const tentative = new RegExp(TENTATIVE.source, 'i').test(summary);
   return {
     id: `${calendarId}-${item.uid}-${start}`.replace(/[^\w.-]+/g, '-'),
     calendar: calendarId,
-    title: clean(item.summary),
+    title: summary.replace(TENTATIVE, '').trim() || summary,
+    tentative: tentative || undefined,
     start,
     end: allDay ? endDate.toString() : endDate.toJSDate().toISOString(),
     allDay,
@@ -142,22 +176,40 @@ function htmlToText(html) {
 }
 
 /** A summary for sizing the design: how many events, how often, how long. */
-function printReport(list) {
+/** YYYY-MM-DD in Pacific time (all-day events are already plain dates). */
+function localDate(event) {
+  return event.allDay
+    ? event.start
+    : new Date(event.start).toLocaleDateString('en-CA', { timeZone: TIME_ZONE });
+}
+
+function printReport(list, statsById) {
   const days = (n) => Date.now() + n * 864e5;
   console.log(
     `Upcoming events over the next ${args.months} months (${args.sample ? 'sample' : 'live'} calendars)\n`,
   );
-  for (const calendar of listed) {
+  for (const calendar of selected) {
     const own = list.filter((event) => event.calendar === calendar.id);
+    const feed = statsById[calendar.id];
     const starts = own.map((event) => new Date(event.start).getTime());
     const perMonth = {};
     for (const event of own) {
-      const month = event.start.slice(0, 7);
+      const month = localDate(event).slice(0, 7);
       perMonth[month] = (perMonth[month] ?? 0) + 1;
     }
     const descriptions = own.map((event) => event.description?.length ?? 0);
-    console.log(`${calendar.name} (${calendar.id})`);
-    console.log(`  total: ${own.length}`);
+    console.log(
+      `${calendar.name} (${calendar.id})${calendar.listEvents ? '' : ' [not listed on the site]'}`,
+    );
+    console.log(
+      `  feed: ${feed.vevents} VEVENTs, ${feed.series} events/series (${feed.recurring} recurring), ${feed.exceptions} edited occurrences, ${feed.cancelled} cancelled`,
+    );
+    console.log(
+      `  feed dates: earliest start ${feed.earliest ?? 'none'}, latest start ${feed.latest ?? 'none'}`,
+    );
+    console.log(
+      `  upcoming occurrences: ${own.length} (tentative: ${own.filter((e) => e.tentative).length})`,
+    );
     console.log(
       `  next 30 / 90 / 180 days: ${[30, 90, 180].map((n) => starts.filter((t) => t < days(n)).length).join(' / ')}`,
     );
@@ -179,7 +231,7 @@ function printReport(list) {
       `  next 3: ${
         own
           .slice(0, 3)
-          .map((e) => `${e.start.slice(0, 10)} ${e.title}`)
+          .map((e) => `${localDate(e)} ${e.tentative ? '[tentative] ' : ''}${e.title}`)
           .join(' | ') || 'none'
       }\n`,
     );

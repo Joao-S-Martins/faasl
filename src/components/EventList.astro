@@ -25,23 +25,26 @@ const events = (await getCollection('events', ({ data }) => data.calendar.id ===
 const calendarEntry = await getEntry('calendars', calendar);
 const hasSamples = events.some(({ data }) => data.sample);
 
-const structuredData = events.map(({ data }) => ({
-  '@context': 'https://schema.org',
-  '@type': 'Event',
-  name: data.title,
-  startDate: data.start,
-  endDate: data.end,
-  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  ...(data.location && {
-    location: { '@type': 'Place', name: data.location, address: data.location },
-  }),
-  ...(data.description && { description: data.description }),
-  organizer: {
-    '@type': 'Organization',
-    name: 'Portuguese Band of San Leandro',
-    url: Astro.site?.href,
-  },
-}));
+// Tentative events stay out of search data until they're confirmed.
+const structuredData = events
+  .filter(({ data }) => !data.tentative)
+  .map(({ data }) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: data.title,
+    startDate: data.start,
+    endDate: data.end,
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    ...(data.location && {
+      location: { '@type': 'Place', name: data.location, address: data.location },
+    }),
+    ...(data.description && { description: data.description }),
+    organizer: {
+      '@type': 'Organization',
+      name: 'Portuguese Band of San Leandro',
+      url: Astro.site?.href,
+    },
+  }));
 ---
 
 {hasSamples && (
@@ -55,6 +58,11 @@ const structuredData = events.map(({ data }) => ({
       <li>
         <article>
           <Heading>{data.title}</Heading>
+          {data.tentative && (
+            <p class="tentative">
+              <strong>Tentative:</strong> date expected, times to be confirmed
+            </p>
+          )}
           <p class="when">
             <time datetime={data.start}>{formatEventWhen(data)}</time>
           </p>
@@ -81,6 +89,10 @@ const structuredData = events.map(({ data }) => ({
 
   .when {
     font-weight: 700;
+  }
+
+  .tentative {
+    font-style: italic;
   }
 
   .description {

@@ -109,6 +109,8 @@ const events = defineCollection({
     start: z.string(),
     end: z.string(),
     allDay: z.boolean(),
+    // Expected but not contracted yet ("Tentative" or "TBD" in the calendar title).
+    tentative: z.boolean().optional(),
     location: z.string().optional(),
     description: z.string().optional(),
     sample: z.boolean().optional(),
