@@ -56,4 +56,4 @@ jobs:
         env:
           SITE_ENV: beta
       - name: Events that made it onto the pages
-        run: node scripts/list-built-events.mjs dist/events.html dist/index.html dist/give.html
+        run: node scripts/list-built-events.mjs dist/events.html dist/index.html dist/give.html dist/lessons.html dist/musicians.html

@@ -4,6 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import Section from '../components/Section.astro';
 import FormList from '../components/FormList.astro';
 import CalendarLink from '../components/CalendarLink.astro';
+import EventList from '../components/EventList.astro';
 import Todo from '../components/Todo.astro';
 import { getSite } from '../lib/site';
 import { fillTokens } from '../lib/schedule';
@@ -56,8 +57,15 @@ const thisWeek = await fillTokens('{{schedule}}, at {{address}}.');
     </ul>
   </Section>
 
-  <Section title="This week">
-    <p>{thisWeek}</p>
+  <Section title="Coming up">
+    <p>Regular schedule: {thisWeek}</p>
+    <EventList
+      calendar="lessons"
+      days={21}
+      compact
+      searchData={false}
+      empty="No lessons or rehearsals are scheduled in the next three weeks."
+    />
   </Section>
 
   <Section title="Play along at home">

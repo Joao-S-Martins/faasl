@@ -11,6 +11,7 @@ import InstrumentPicker from '../components/InstrumentPicker';
 import StoreList from '../components/StoreList.astro';
 import MapEmbed from '../components/MapEmbed.astro';
 import CalendarLink from '../components/CalendarLink.astro';
+import EventList from '../components/EventList.astro';
 import FaqList from '../components/FaqList.astro';
 import Testimonial from '../components/Testimonial.astro';
 import Todo from '../components/Todo.astro';
@@ -158,6 +159,15 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
         <CalendarLink calendar="lessons" />
       </li>
     </ul>
+    <h3>Coming up</h3>
+    <EventList
+      calendar="lessons"
+      days={21}
+      compact
+      searchData={false}
+      level={4}
+      empty="No lessons are scheduled in the next three weeks."
+    />
   </Section>
 
   <Section title="FAQ">

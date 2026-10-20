@@ -1,11 +1,12 @@
 # Public Google Calendars. calendarId is the "src" value in the embed link.
 # listEvents: true means scripts/fetch-events.mjs copies its upcoming events
-# into src/content/events.json for the site to list.
+# into src/content/events.json. Each page chooses which calendars it shows:
+# lessons on Lessons and Musicians; performances and social on Events, Home, Give.
 - id: lessons
   name: Lessons & rehearsals
   calendarId: faasl.org_an3en78k4a54qotghed951bdfg@group.calendar.google.com
-  # Shown only on Lessons and Musicians as a subscribe link; events not listed.
-  listEvents: false
+  # Listed only on Lessons and Musicians (next few weeks), never on Events.
+  listEvents: true
 - id: performances
   name: Performances
   calendarId: faasl.org_92pmmquc4hv1bku5n9qq67gf0g@group.calendar.google.com
