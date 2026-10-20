@@ -53,13 +53,13 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 1. Home `/` — 📝 copy in review (`content.md` §3b)
+## 1. Home `/` — ✅ copy reviewed (`content.md` §3b)
 
 **Job:** tell the story in one scroll and send each visitor to their page.
 
 | # | Section | Content | Source |
 |---|---|---|---|
-| 1 | Hero | Photo + "We've built a community around music, and you're invited to join us" + short intro | Copy (`content.md` §3.1), photo |
+| 1 | Hero | Animated photo slideshow (pause button; still image for reduced motion) + "We've built a community around music, and you're invited to join us" + short intro | `content.md` §3b, photos |
 | 2 | **"I want to…" router** | Learn an instrument → `/lessons` · Play in the band → `/join` · Give → `/give` | Fixed links |
 | 3 | Our story | Founded 1980 by Portuguese immigrants; name explained; "X years" calculated | Copy §3.1, `site` |
 | 4 | Learn | Free lessons for ages 8+, credentialed teacher, what students learn → CTA `/lessons` | Copy §3.2, `lessons` |
@@ -67,7 +67,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | 6 | Perform | Parades, festivals, city events, caroling; dinners → CTA `/events` | Copy §3.2 |
 | 7 | Upcoming events | Next 3 performances/social events → `/events` | Google Calendar (build time) |
 | 8 | Support | Short appeal + Donate → `/give`; link to `/impact` | New copy |
-| 9 | Leadership preview | 3 leader cards → `/about` | `people` |
+| 9 | Leadership preview | Faces only (photo, name, title): Lorenza, Geronimo, Edgard, John → `/about` | `people` |
 | 10 | Contact strip | Address, phone, email → `/contact` | `site` |
 
 **Search:** title "Portuguese Band of San Leandro | Free music lessons & community band". Description from the mission statement (pending review). Keywords: Portuguese band San Leandro, filarmónica, community band East Bay.

@@ -1,7 +1,7 @@
 ---
 name: Edgard Gonzalez
 title: Music Teacher & Assistant Conductor
-roles: [teacher, conductor]
+roles: [leadership, teacher, conductor]
 order: 2.5
 tags: [lessons]
 # Drafts show on beta with a "Draft" badge as a reminder, and are left out of

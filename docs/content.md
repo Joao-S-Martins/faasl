@@ -237,7 +237,7 @@ John was born into our program, pushed in his stroller as his father volunteered
 
 ---
 
-## 3b. Home page (`/`, v3) — 📝 in review
+## 3b. Home page (`/`, v3) — ✅ reviewed
 
 > [!NOTE]
 > The v3 home page, built from the reviewed pages. §3 above is the original v2 home page, kept for reference.
@@ -247,7 +247,7 @@ John was born into our program, pushed in his stroller as his father volunteered
 
 ### 1. Hero
 
-🖼️ Hero photo: the full band (e.g. `home_slide_1.jpg`)
+🖼️ Hero: an **animated slideshow** of band photos, like the v2 home page (any photos for now: `home_slide_1`–`4`). Slow crossfade, a pause button, and a still image for visitors who prefer reduced motion. Details in the design phase.
 
 # We've built a community around music
 #### and you're invited to join us
@@ -258,7 +258,7 @@ Free music lessons, a band for every age and skill level, and live music for our
 
 - **Learn an instrument** → [Free lessons](/lessons)
 - **Play in the band** → [Join the band](/join)
-- **Support the band** → [Give](/give)
+- **Support the band:** give, become a member or come to an event → [Give](/give)
 
 ### 3. Our story
 
@@ -284,7 +284,7 @@ Our volunteer band is a mixed-age group of 35+ musicians. Younger musicians play
 
 ### 6. Keep music free for our community
 
-Our lessons are free and our band runs on volunteers, so every gift goes straight to the music: sheet music, uniforms, instrument repairs and the carpools that get us to performances.
+Our lessons are free, our band runs on volunteers, and our board isn't paid. Every dollar goes to our building and our musical needs: sheet music, uniforms, instrument repairs and the carpools that get us to performances.
 
 [Give](/give) · [See our impact](/impact)
 
@@ -298,7 +298,7 @@ We play about a dozen parades and half a dozen concerts every year, and host fun
 
 ### 8. Our leadership
 
-*[Cards: Lorenza (President of the Board), Geronimo (Band Conductor), John (Director of Stuff & Things)]*
+*[Faces only (photo, name and title, no bios) so visitors quickly recognize people: Lorenza (President of the Board), Geronimo (Band Conductor), Edgard (Music Teacher & Assistant Conductor), John (Director of Stuff & Things). May move off Home later.]*
 
 [Meet the team](/about)
 
@@ -537,13 +537,11 @@ Lorenza raised her son in our program years ago. She actively volunteered in non
 **Geronimo Rojas** — *Band Conductor*
 Geronimo has been a member of our volunteer band since he was a young middle school student. His love of music has earned him scholarships and taken him traveling. Now he leads the band that supported his journey.
 
-**João "John" Martins** — *Director of Stuff & Things*
-John was born into our program, pushed in his stroller as his father volunteered musically. He learned to play as a child and continues to help develop the program in new and innovative ways.
-
-### Our teacher
-
 **Edgard Gonzalez** — *Music Teacher & Assistant Conductor*
 TODO: bio (see §4). Teaches music for San Leandro schools.
+
+**João "John" Martins** — *Director of Stuff & Things*
+John was born into our program, pushed in his stroller as his father volunteered musically. He learned to play as a child and continues to help develop the program in new and innovative ways.
 
 ### Get involved
 
@@ -651,7 +649,7 @@ Students and musicians from San Leandro and neighboring communities, including C
 
 ### Governance
 
-FAASL is governed by a volunteer board of directors.
+FAASL is governed by a volunteer board of directors. Board members aren't paid; our funds go to our building and our musical needs.
 - **Lorenza D.L.G. Tomaz**, President of the Board
 - TODO: other board members and officers (names and roles)
 

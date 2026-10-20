@@ -212,6 +212,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] **Replace Geronimo as the default contact** for forms, uniforms, music and folders (💡 a role-based address such as members@faasl.org)
 - [ ] **Annual membership:** amount and what members receive, for the "Become a member" section on Give
 - [ ] **Impact page** (`content.md` §5e):
+  - [ ] **Governance: research how funds are used** before publishing any claim beyond what's confirmed (confirmed: board is unpaid; money goes to the building and musical needs). Check the Form 990 and budget, and agree wording with the board.
   - [ ] Revisit "Who we serve" later, with local search in mind: San Leandro, Castro Valley, San Lorenzo, Hayward, Oakland
   - [ ] Board members and officers (names and roles)
   - [ ] Documents to publish: IRS determination letter, most recent Form 990, annual report or financial summary
