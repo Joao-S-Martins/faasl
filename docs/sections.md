@@ -193,11 +193,11 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 8. Contact `/contact`
+## 8. Contact `/contact` — ✅ copy reviewed (`content.md` §5g)
 
 | # | Section | Content | Source |
 |---|---|---|---|
-| 1 | Form | Name, email, phone, OK to text?, message; spam protection (form service ❓) | `content.md` §6 |
+| 1 | Form | Name, email, phone, OK to text?, topic (Lessons / Joining the band / Giving / Something else), message; invisible spam protection (form service TODO) | `content.md` §5g |
 | 2 | Visit | Clubhouse address + map link | `site` |
 | 3 | Mail & phone | P.O. Box, phone, email | `site` |
 | 4 | Follow us | Social links | `site` |

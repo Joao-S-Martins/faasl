@@ -9,6 +9,7 @@ import PersonCard from '../components/PersonCard.astro';
 import InstrumentPicker from '../components/InstrumentPicker';
 import rehearsal from '../assets/photos/students-rehearsal.jpg';
 import { getSite, isVisible, yearsSince } from '../lib/site';
+import { fillTokens, getSchedule } from '../lib/schedule';
 
 const site = await getSite();
 const people = (await getCollection('people', isVisible)).sort(
@@ -23,7 +24,13 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
 const stores = (await getCollection('stores', ({ data }) => data.status === 'open')).sort((a, b) =>
   a.data.name.localeCompare(b.data.name),
 );
-const faqs = (await getCollection('faqs')).sort((a, b) => a.data.order - b.data.order);
+const faqs = await Promise.all(
+  (await getCollection('faqs'))
+    .sort((a, b) => a.data.order - b.data.order)
+    .map(async ({ data }) => ({ ...data, answer: await fillTokens(data.answer) })),
+);
+const schedule = await getSchedule();
+const scheduleSummary = await fillTokens('{{schedule}}');
 const [story] = await getCollection('stories', isVisible);
 const builtAt = new Date().toISOString();
 ---
@@ -91,11 +98,21 @@ const builtAt = new Date().toISOString();
           </li>
         ))}
       </ul>
+      <h3>Weekly schedule</h3>
+      <p>{scheduleSummary}</p>
+      <ul>
+        {schedule.map((item) => (
+          <li>
+            {item.label}: {item.day}s at {item.time}, {item.length}
+            {item.note && ` (${item.note})`}
+          </li>
+        ))}
+      </ul>
       <h3>FAQ</h3>
-      {faqs.map(({ data }) => (
+      {faqs.map((faq) => (
         <details>
-          <summary>{data.question}</summary>
-          <p>{data.answer}</p>
+          <summary>{faq.question}</summary>
+          <p>{faq.answer}</p>
         </details>
       ))}
     </section>

@@ -27,9 +27,9 @@ faasl:
     - name: Instagram
       handle: '@the.faasl'
       url: https://instagram.com/the.faasl
-    - name: Twitter
+    - name: X
       handle: '@faasl'
-      url: https://twitter.com/faasl
+      url: https://x.com/faasl
     - name: YouTube
       url: https://www.youtube.com/channel/UCIWQ1_SGK9Ql4D9fzNE56cw
     - name: LinkedIn

@@ -1,12 +1,12 @@
 # Lessons FAQ. Shown on the Lessons page and marked up as FAQPage data for search.
 - id: when
   question: When are lessons?
-  answer: Friday evenings. The beginner class is at 6:30 and the intermediate class at 7:15. Check the lessons calendar for changes. Lessons start on time and run 45 minutes.
+  answer: '{{beginner.days}}. The beginner class is at {{beginner.time}} and the intermediate class at {{intermediate.time}}. Check the lessons calendar for changes. Lessons start on time and run {{beginner.length}}.'
   link: { label: Lessons & rehearsals calendar, calendar: lessons }
   order: 1
 - id: how-long
   question: How long are lessons?
-  answer: 45 minutes.
+  answer: '{{beginner.length}}.'
   order: 2
 - id: late
   question: What if we're late?
@@ -14,7 +14,7 @@
   order: 3
 - id: where
   question: Where are lessons?
-  answer: 'In the hall where our volunteer band rehearses: 844 Alvarado St., San Leandro.'
+  answer: 'In the hall where our volunteer band rehearses: {{address}}.'
   order: 4
 - id: anything-else
   question: Anything else?

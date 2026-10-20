@@ -9,6 +9,7 @@ This file holds all the content from the current site (v2), audited and gathered
 - `TODO:` marks content that's missing and needs writing.
 - `🖼️` lines describe the image used in that spot. Image filenames are in `www/img/` (higher-res `@2x` versions sit next to them).
 - `[link text](url)` is a link. Vanity subdomains like `events.faasl.org` are listed in [Section 7](#7-vanity-subdomains--redirects).
+- `{{beginner.time}}`-style tokens mark **schedule facts** (days, times, lengths, address). They're filled in from one file, so the schedule is written in exactly one place. See [Weekly schedule](#weekly-schedule) in §1.
 - Obvious typos were fixed inline. Each fix is listed in [Section 10](#10-audit-log-edits-made-while-transcribing) so you can check them.
 
 **Where this came from:** `www/html/*.html`, `www/html/tmpl/*`, `www/html/blocks/*`, `www/.htaccess.bak`, `www/meta/*` and `branding/` on `main` at commit `68faca3`. I also checked git history for content that was removed or reverted.
@@ -44,13 +45,33 @@ These details show up across many pages, so the new site will store them once.
 > [!NOTE]
 > The README's "underserved youth in the East Bay" wording doesn't appear anywhere on the site. Reviewing the mission statement is tracked in `todo.md`.
 
+### Weekly schedule
+
+**The only place days and times are written.** Source: `src/content/schedule.yaml`. Every page, the FAQ and the structured data read from it, so a schedule change is one edit there.
+
+| Token prefix | What | Day | Time | Length |
+|---|---|---|---|---|
+| `beginner` | Beginner class | Friday | 6:30 pm | 45 minutes |
+| `intermediate` | Intermediate class | Friday | 7:15 pm | 45 minutes |
+| `band` | Band rehearsal | Friday | 8:00 pm | 2 hours, with a break |
+
+**Tokens to use in copy** (anywhere on the site, including the FAQ):
+- `{{beginner.time}}` → 6:30 pm · `{{beginner.days}}` → Fridays · `{{beginner.length}}` → 45 minutes (same for `intermediate` and `band`)
+- `{{band.note}}` → with a break
+- `{{schedule}}` → "Fridays: Beginner class 6:30 pm · Intermediate class 7:15 pm · Band rehearsal 8:00 pm"
+- `{{address}}` → 844 Alvarado St., San Leandro
+
+**Style:** times are always written "6:30 pm" (lowercase pm, with minutes); days are plural for recurring events ("Fridays"). A misspelled token stops the build, so mistakes can't reach the site.
+
+To find every place the schedule appears, search the repo for `{{`.
+
 ### Social accounts
 
 | Network | Handle | URL |
 |---|---|---|
 | Facebook | @the.faasl | https://facebook.com/the.faasl |
 | Instagram | @the.faasl | https://instagram.com/the.faasl |
-| Twitter / X | @faasl | https://twitter.com/faasl |
+| X (formerly Twitter) | @faasl | https://x.com/faasl |
 | YouTube | — | https://www.youtube.com/channel/UCIWQ1_SGK9Ql4D9fzNE56cw |
 | LinkedIn | — | https://www.linkedin.com/company/faasl/ |
 | Newsletter (Mailchimp) archive | — | https://us13.campaign-archive.com/home/?u=f22bc0566c10786141f983313&id=d0d21800a2 |
@@ -247,20 +268,20 @@ TODO: Bio, 2–3 sentences. **Must mention that he teaches music for San Leandro
 
 When we say *free lessons*, we really mean it. Our volunteers and donors make it possible to teach every student without charging a cent. From beginners to those with a few years of experience, you're welcome to start any time of year. It's always a great time to learn, from ages 8 to 108.
 
-**No sign-up needed: just come to a Friday class.** Questions first? **[Contact us](/contact)**
+**No sign-up needed: just come to a class on {{beginner.days}}.** Questions first? **[Contact us](/contact)**
 
 | | |
 |---|---|
 | **Cost** | Free |
 | **Ages** | 8 to 108 |
-| **When** | Fridays: beginners 6:30, intermediate 7:15 |
-| **Where** | 844 Alvarado St., San Leandro |
+| **When** | {{beginner.days}}: beginners {{beginner.time}}, intermediate {{intermediate.time}} |
+| **Where** | {{address}} |
 
 ### 5.2 How it works
 
-Lessons are taught in small groups once a week, for 45 minutes. They're comparable to, and a great complement to, many public school music programs.
-- **Beginner class (6:30):** introduces new musicians to their instruments and to reading music.
-- **Intermediate class (7:15):** builds on the basics with more challenging music and music theory. Many of our band volunteers also use it to learn a second or third instrument.
+Lessons are taught in small groups once a week, for {{beginner.length}}. They're comparable to, and a great complement to, many public school music programs.
+- **Beginner class ({{beginner.time}}):** introduces new musicians to their instruments and to reading music.
+- **Intermediate class ({{intermediate.time}}):** builds on the basics with more challenging music and music theory. Many of our band volunteers also use it to learn a second or third instrument.
 - **The band:** many of our musicians started in these classes. Our conductor, Geronimo, joined as a middle school student.
 
 ### 5.3 Your teacher
@@ -340,16 +361,16 @@ Online, [Woodwind & Brasswind](https://www.wwbw.com) and [Music & Arts](https://
 Marked up as `FAQPage` structured data for search. Source: `src/content/faqs.yaml`.
 
 **When are lessons?**
-Friday evenings. The beginner class is at 6:30 and the intermediate class at 7:15. Check the lessons calendar for changes. Lessons start on time and run 45 minutes.
+{{beginner.days}}. The beginner class is at {{beginner.time}} and the intermediate class at {{intermediate.time}}. Check the lessons calendar for changes. Lessons start on time and run {{beginner.length}}.
 
 **How long are lessons?**
-45 minutes.
+{{beginner.length}}.
 
 **What if we're late?**
 Please let Edgard know as soon as possible if you're running late or will miss a lesson. If you arrive late, come in quietly.
 
 **Where are lessons?**
-In the hall where our volunteer band rehearses: 844 Alvarado St., San Leandro.
+In the hall where our volunteer band rehearses: {{address}}.
 
 **Anything else?**
 Arrive 10 minutes early to assemble your instrument and warm up. Parents are welcome to sit near the class as long as they stay silent, or to chat in the clubhouse.
@@ -364,7 +385,7 @@ Arrive 10 minutes early to assemble your instrument and warm up. Parents are wel
 
 ### 5.11 Closing call to action
 
-**Ready to start?** Come to the next Friday class. Questions first? **[Contact us](/contact)**
+**Ready to start?** Come to the next class. Questions first? **[Contact us](/contact)**
 
 ---
 
@@ -392,9 +413,9 @@ We play concert band and marching music, and we perform around the SF Bay and Ce
 
 | | |
 |---|---|
-| **When** | Fridays at 8:00 pm (right after lessons) |
-| **How long** | 2 hours, with a break |
-| **Where** | 844 Alvarado St., San Leandro |
+| **When** | {{band.days}} at {{band.time}} (right after lessons) |
+| **How long** | {{band.length}}, {{band.note}} |
+| **Where** | {{address}} |
 
 ### Our conductors
 
@@ -612,7 +633,52 @@ What we perform at:
 
 ---
 
-## 6. Contact (shared section, used on Home and Lessons)
+## 5g. Contact page (`/contact`) — ✅ reviewed (form service TODO)
+
+**Page title:** Contact Us
+**Meta description:** Contact the Portuguese Band of San Leandro: {{address}}, CA. Call (510) 357-1449 or email info@faasl.org.
+
+# Contact Us
+#### we'd love to hear from you
+
+Questions about lessons, the band, giving or anything else? Send us a message and we'll get back to you soon. You're also welcome to just stop by on a Friday evening.
+
+### Send a message
+
+| Field | Required | Notes |
+|---|---|---|
+| Full name | ✔ | |
+| Email | ✔ | |
+| Phone | | |
+| May we text this number? | | Yes / No |
+| What's this about? | ✔ | Lessons · Joining the band · Giving · Something else |
+| Message | ✔ | |
+
+Invisible spam protection (replaces the old "what's 22?" question). Messages go to info@faasl.org; the topic appears in the email subject so they're easy to sort. Form service TODO (`todo.md`).
+
+After sending: "Thanks for contacting us. We'll get back to you soon."
+If sending fails: "Sorry, something went wrong. Please email us at info@faasl.org."
+
+### Visit us
+
+844 Alvarado St., San Leandro, CA 94577 · *[Directions]*
+{{schedule}}
+
+### Mail
+
+P.O. Box 2354, San Leandro, CA 94577-0235
+
+### Call or email
+
+(510) 357-1449 (please leave a message) · info@faasl.org
+
+### Follow us
+
+Facebook · Instagram · X · YouTube · LinkedIn
+
+---
+
+## 6. Contact (v2 original; superseded by §5g)
 
 ## Contact us today!
 
@@ -694,7 +760,7 @@ These currently live in `www/.htaccess.bak` on the shared host. They're printed 
 | `stories.faasl.org` | Adobe Express page (`new.express.adobe.com/webpage/QA4cx0phRdfoF`) | ✔ | TODO |
 | `facebook.faasl.org` | facebook.com/the.faasl | ✔ | TODO |
 | `instagram.faasl.org` | instagram.com/the.faasl | ✔ | TODO |
-| `twitter.faasl.org` | twitter.com/faasl | ✔ | TODO |
+| `twitter.faasl.org` | twitter.com/faasl (now x.com/faasl) | ✔ | TODO |
 | `youtube.faasl.org` | YouTube channel `UCIWQ1_SGK9Ql4D9fzNE56cw` | (icon) | TODO |
 | `linkedin.faasl.org` | linkedin.com/company/faasl | (icon) | TODO |
 | `events.faasl.org` | Google Calendar (all 3 calendars) | ✔ | `/events` |
@@ -793,7 +859,7 @@ Content decisions applied (October 2026 review):
 - Conductor: Geronimo Rojas, titled "Band Conductor"
 - John Martins stays on the leadership team
 - Address confirmed: 844 Alvarado St., San Leandro
-- Lessons: Friday, beginner 6:30 and intermediate 7:15, 45 minutes each; students start any time of year
+- Lessons: Friday, beginner 6:30 pm and intermediate 7:15 pm, 45 minutes each; band rehearsal 8:00 pm, 2 hours; students start any time of year (now in `src/content/schedule.yaml`)
 - All social accounts treated as active
 - COVID-19 and Remote Restart pages dropped
 

@@ -1,18 +1,9 @@
 # Facts about the free lesson program, reused on Home, Lessons and the FAQ.
+# Days and times live in schedule.yaml, not here.
 program:
   cost: Free
   minimumAge: 8
   # Students can start any time of year.
-  day: Friday
-  classes:
-    - { name: Beginner, time: '18:30' }
-    - { name: Intermediate, time: '19:15' }
-  durationMinutes: 45
-  bandRehearsal:
-    durationMinutes: 120
-    note: Two hours, with a break.
-    day: Friday
-    time: '20:00'
   methodBook:
     title: Standard of Excellence, Book 1
     note: Buy the version written for your chosen instrument.

@@ -121,19 +121,22 @@ const lessons = defineCollection({
   schema: z.object({
     cost: z.string(),
     minimumAge: z.number().int(),
-    day: z.string(),
-    classes: z.array(z.object({ name: z.string(), time: z.string().regex(/^\d{2}:\d{2}$/) })),
-    durationMinutes: z.number().int(),
-    bandRehearsal: z.object({
-      durationMinutes: z.number().int(),
-      note: z.string(),
-      day: z.string(),
-      time: z.string().regex(/^\d{2}:\d{2}$/),
-    }),
     methodBook: z.object({ title: z.string(), note: z.string() }),
     accessories: z.array(z.object({ instruments: z.string(), items: z.string() })),
     demoVideoId: z.string(),
     remind: z.object({ url: z.url(), instructions: z.string() }).optional(),
+  }),
+});
+
+// Weekly schedule: the only place days and times live (src/content/schedule.yaml).
+const schedule = defineCollection({
+  loader: file('src/content/schedule.yaml'),
+  schema: z.object({
+    label: z.string(),
+    day: z.enum(['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']),
+    start: z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/),
+    minutes: z.number().int().positive(),
+    note: z.string().optional(),
   }),
 });
 
@@ -193,4 +196,5 @@ export const collections = {
   stories,
   memberForms,
   impact,
+  schedule,
 };

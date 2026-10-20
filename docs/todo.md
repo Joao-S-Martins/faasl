@@ -27,7 +27,7 @@ Related: [`brief.md`](./brief.md) (requirements & decisions) · [`strategy.md`](
 - [x] Main address: `www.faasl.org`
 - [x] No launch date
 - [x] CSS framework decided in the design phase
-- [ ] 🧑 **Decide the contact form service** (💡 Web3Forms or Formspree free tiers). Needed by Phase 4.
+- [ ] 🤖 **Compare contact form services** (e.g. Web3Forms, Formspree free tiers: limits, spam protection, custom subject with the topic) → 🧑 decide. Needed by Phase 4.
 - [ ] 🧑 Confirm the existing photo consent form covers publishing on the website (`brief.md` §5.1)
 - [ ] 🧑 Decide the copyright & license statement for content and code (`brief.md` §5.2)
 

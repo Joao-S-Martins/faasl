@@ -1,0 +1,20 @@
+# THE ONLY PLACE weekly days and times live. Every page, the FAQ and the
+# structured data read from here, so a schedule change is one edit.
+# In page copy and the FAQ, use tokens like {{beginner.time}} (see
+# src/lib/schedule.ts for the full list). Unknown tokens fail the build.
+- id: beginner
+  label: Beginner class
+  day: Friday
+  start: '18:30'
+  minutes: 45
+- id: intermediate
+  label: Intermediate class
+  day: Friday
+  start: '19:15'
+  minutes: 45
+- id: band
+  label: Band rehearsal
+  day: Friday
+  start: '20:00'
+  minutes: 120
+  note: with a break
