@@ -462,34 +462,40 @@ Our band runs entirely on volunteers, and there's more to it than music. Help pl
 ## 5d. Give page (`/give`) — 📝 in review
 
 **Page title:** Support Free Music Education in San Leandro
-**Meta description:** Donate to the Portuguese Band of San Leandro, a 501(c)(3) nonprofit offering free music lessons and community performances since 1980. Gifts are tax-deductible.
+**Meta description:** Donate to the Portuguese Band of San Leandro, a 501(c)(3) nonprofit offering free music lessons and free community performances since 1980. Gifts are tax-deductible.
+
+> [!NOTE]
+> **Messaging focus:** lead with the free services that improve the whole community (free lessons, mentorship, generations playing together, music at community events), not only the Portuguese heritage. This widens the appeal to businesses and the broader community as the Portuguese community shrinks.
 
 # Support the Band
-#### keep music free for the next generation
+#### keep music free for our community
 
-Since 1980, every lesson we teach has been free. That's only possible because of people like you. Your gift keeps our teachers teaching, our music stands full of sheet music, and our band marching in parades and festas across the Bay Area.
+Since 1980, every lesson we teach has been free. Kids and adults learn an instrument at no cost, young musicians are mentored by experienced ones, and our volunteer band brings live music to parades, festivals and community events across the Bay Area. All of it runs on volunteers and on the generosity of people like you.
 
 **[Donate]** *(provider TODO)*
 
 ### What your gift does
 
-TODO: 3 examples tied to real costs, e.g.
-- **$X** buys sheet music for a new piece for the whole band
-- **$Y** covers a month of free lessons
-- **$Z** helps outfit a musician in our uniform
+Prices TODO (`todo.md`):
+- **$__** buys sheet music for a new piece for the whole band
+- **$__** feeds the band dinner after rehearsal
+- **$__** covers a typical instrument repair
+- **$__** outfits a musician in our uniform
+- **$__** gets the band to a performance (travel costs)
 
 ### Give in someone's name
 
-Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember someone who shared our love of music. We'll gladly send a note to the person or family you choose. TODO: how (a field in the donation form, or contact us).
+Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember someone who shared our love of music. Just let us know who your gift honors. TODO: how (a field in the donation form, or contact us).
 
 ### Join us at a fundraiser dinner
 
-Throughout the year we host dinners that bring classic Portuguese meals to the table, along with some American staples. Every ticket supports our music programs.
+Throughout the year we host dinners that bring classic Portuguese meals to the table, along with some American staples. Every ticket supports our free music programs. Tickets are available at the door or from any band member.
 
 *[Upcoming social events from the calendar]*
 
 ### Other ways to help
 
+- **Donate an instrument** you no longer play, and we'll put it back to work
 - **Come hear us play** at a parade, festival or concert
 - **Volunteer** your time and skills ([Get involved](/about#get-involved))
 - **Spread the word:** follow us and share our events

@@ -195,7 +195,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Yearly numbers: students taught, musicians in the band, performances per year (no volunteer hours)
 - [ ] Annual report or financial summary; IRS determination letter; recent Form 990
 - [ ] Claim / update the Candid (GuideStar) profile; check California Attorney General Registry of Charities status
-- [ ] Suggested gift amounts tied to real costs (method book, instrument repair, etc.)
+- [ ] Prices for the Give page's "What your gift does": sheet music for a new piece (whole band), band dinner after rehearsal, a typical instrument repair, a uniform, travel to a performance
 
 ### Members page 🧑 (`content.md` §6b)
 - [ ] Current emergency contact / medical form (blank)
@@ -215,7 +215,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
   - [ ] Update the Google My Maps store map: remove A & G Music, check the other pins
 - [ ] **Remind notifications:** get the Remind sign-up link/code and step-by-step instructions for joining the lessons list
 - [ ] **Review the mission statement:** decide on official wording (the README uses "music education and mentorship for underserved youth in the East Bay")
-- [ ] **Donate button:** decide yes/no and the provider (PayPal, Givebutter, Zeffy…), then point `donate.faasl.org` at it
+- [ ] **Donate button:** no online giving yet. Pick a provider (💡 compare free nonprofit options such as Zeffy, Givebutter, PayPal by fees and ease of use), add honor/memorial gift support, then point `donate.faasl.org` at it
 - [ ] **Rewrite the Stories page:** stories double as testimonials, shown as short snippets on several pages (Home, Lessons, Join, Give, Impact). For each story, pick a one- or two-sentence pull quote. Collect **new** member stories / testimonials (a parent, a student, an experienced musician, a board member, a community partner), using the old Adobe Express stories as a starting point; publish them on faasl.org and point `stories.faasl.org` at it
 - [ ] Instrument list: any changes?
 - [ ] "Grow with us" / "Have fun with us" buttons: link to a Join page instead of beginner lessons?

@@ -25,6 +25,8 @@ Related: [`brief.md`](./brief.md) · [`todo.md`](./todo.md)
 
 Goals 1–2 drive the most new work. Goal 5 is mostly the content we already have, made clearer.
 
+> **Messaging note (Oct 2026):** the Portuguese community is shrinking, so donor-facing pages lead with the **free services that improve the whole community** (free lessons, mentorship, generations playing together, music at community events). Heritage stays part of the story but isn't the main appeal.
+
 ## 3. Audiences and what each one needs
 
 | Audience | What convinces them | Their landing page | Main action |
