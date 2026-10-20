@@ -102,7 +102,7 @@ The same code builds slightly differently when `SITE_ENV=beta`:
   - The shortcut-subdomain redirects can move to Cloudflare and be tested early
   - Launch day becomes a single, reversible change (point `www` at the new site)
 
-## 6. Scheduled content refresh (weekly) — proposal
+## 6. Scheduled content refresh (weekly) — ✅ decided: B
 
 Events come from the public Google Calendars, so the site needs rebuilding for new events to appear. Three ways to do it:
 
@@ -118,7 +118,7 @@ Events come from the public Google Calendars, so the site needs rebuilding for n
 
 **Why not a Cloudflare-native process (C)?** Cloudflare's own Git builds can rebuild on a push, but they have no approval step, which would bypass the production gate (§3). A cron Worker with KV keeps events always fresh, but turns the static site into one with code running on every request, which is more to maintain and against the "no server" goal. Worth revisiting only if weekly freshness ever isn't enough.
 
-### Recommended: B, automatic content releases
+### Decided: B, automatic content releases
 
 ```
 weekly schedule (or "Refresh now" button)

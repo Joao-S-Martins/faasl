@@ -73,7 +73,7 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 - [ ] 🤝 First beta deploy of the test page to its `*.workers.dev` address; check it on a real phone
 - [ ] 🤝 💡 Move faasl.org DNS to Cloudflare early (copy every record, especially MX/TXT; `www` keeps pointing at the old host), then attach `beta.faasl.org`. Can happen any time before the stakeholder beta.
 - [ ] 🤖 Google Calendar fetch script: Performances and Social events → `src/content/events/*.json` (tested with a sample feed; real feed in CI)
-- [ ] 🤝 Decide the refresh approach (`deployment.md` §6; 💡 B: automatic content releases with patch tags)
+- [x] 🤝 Refresh approach: B, automatic content releases with patch tags (`deployment.md` §6)
 - [ ] 🤖 `refresh.yml`: weekly + manual; fetch events → commit if changed → tag next patch → deploy (data-only changes skip approval)
 - [ ] 🧑 GitHub: `production-refresh` environment + a narrow credential allowed to commit event data to `main`
 - [ ] 🤖 Lighthouse check in CI (report only for now; budgets once the design exists)
