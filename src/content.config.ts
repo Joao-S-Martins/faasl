@@ -123,8 +123,8 @@ const lessons = defineCollection({
     bandRehearsal: z.object({
       durationMinutes: z.number().int(),
       note: z.string(),
-      day: z.string().optional(),
-      time: z.string().optional(),
+      day: z.string(),
+      time: z.string().regex(/^\d{2}:\d{2}$/),
     }),
     methodBook: z.object({ title: z.string(), note: z.string() }),
     accessories: z.array(z.object({ instruments: z.string(), items: z.string() })),

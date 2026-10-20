@@ -11,7 +11,8 @@ program:
   bandRehearsal:
     durationMinutes: 120
     note: Two hours, with a break.
-    # TODO: day and time (for the Join page)
+    day: Friday
+    time: '20:00'
   methodBook:
     title: Standard of Excellence, Book 1
     note: Buy the version written for your chosen instrument.

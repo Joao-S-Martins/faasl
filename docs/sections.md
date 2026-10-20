@@ -99,7 +99,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 3. Join the band `/join` — 📝 copy in review (`content.md` §5b)
+## 3. Join the band `/join` — ✅ copy reviewed (`content.md` §5b)
 
 **Job:** a skilled or aspiring musician decides to come to a rehearsal.
 
@@ -108,14 +108,14 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | 1 | Intro | General invitation to skilled and aspiring musicians; mixed ages and levels | New copy, based on §3.2 "Grow" |
 | 2 | What we play | Concert and marching music; festas, parades, festivals, caroling | Copy §3.2 "Perform" |
 | 4 | Our conductors | Geronimo + Edgard (assistant conductor) cards | `people` |
-| 5 | Rehearsals | 2 hours with a break; day and time ❓; place | `lessons` (`bandRehearsal`), `site` |
+| 5 | Rehearsals | Fridays 8 pm, 2 hours with a break; place | `lessons` (`bandRehearsal`), `site` |
 | 6 | Testimonial | Musician quote (Aubury Freed) | `stories` |
 | 7 | Returning players | "Played in school? Come back to music." (from the old Remote Restart idea) | New copy |
 | 8 | CTA | "Just show up": no audition, no sign-up, extra sheet music on hand | `/contact` for questions |
 
 **Search:** title "Join a Community Band in the East Bay". Keywords: community band San Leandro, adult band, marching band Bay Area.
 
-❓ Rehearsal day/time to publish? Any skill expectations or audition?
+✅ Fridays at 8 pm, 2 hours with a break. No auditions or official expectations; just show up (extra sheet music on hand).
 
 ---
 
@@ -161,7 +161,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 6. About `/about`
+## 6. About `/about` — 📝 copy in review (`content.md` §5c)
 
 | # | Section | Content | Source |
 |---|---|---|---|

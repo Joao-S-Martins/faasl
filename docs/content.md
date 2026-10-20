@@ -368,7 +368,7 @@ Arrive 10 minutes early to assemble your instrument and warm up. Parents are wel
 
 ---
 
-## 5b. Join page (`/join`) — 📝 in review
+## 5b. Join page (`/join`) — ✅ reviewed
 
 **Page title:** Join the Band
 **Meta description:** Join a free community band in San Leandro, CA. Experienced and aspiring musicians welcome, no audition. Concert and marching music, festas, parades and festivals.
@@ -392,7 +392,7 @@ We play concert band and marching music, and we perform around the SF Bay and Ce
 
 | | |
 |---|---|
-| **When** | TODO: day and time |
+| **When** | Fridays at 8:00 pm (right after lessons) |
 | **How long** | 2 hours, with a break |
 | **Where** | 844 Alvarado St., San Leandro |
 
@@ -412,6 +412,50 @@ That instrument in the back of your closet still has music in it. Many of our me
 > — Aubury Freed
 
 **Ready to play?** Come to the next rehearsal. Questions first? **[Contact us](/contact)**
+
+---
+
+## 5c. About page (`/about`) — 📝 in review
+
+**Page title:** About the Filarmonica Artista Amadora de San Leandro
+**Meta description:** The Portuguese Band of San Leandro (FAASL) is an all-volunteer community band and nonprofit founded in 1980, offering free music lessons and performing across the Bay Area.
+
+# About Us
+#### a community built around music since 1980
+
+### Our story
+
+Our band was founded in 1980 by amateur musicians who wanted to enrich their community through music. More than {years since 1980} years later, *our goal remains the same*: impacting lives through music education and mentorship. We believe in supporting musicians of every walk and stage of life. A love for music bonds us all, and we want to share it with you.
+
+Our founders were mostly Portuguese immigrants with varying musical experience; some had none at all. They pooled their knowledge and resources to help each other and create this band. Today, our all-volunteer organization has grown into a diverse group representing many backgrounds. We each bring our abilities to invest in each other and elevate our lives.
+
+> 💡 Officially the *Filarmonica Artista Amadora de San Leandro*, our name translates to the *Band of Amateur Artists of San Leandro*. Most people call us the FAASL.
+
+### Our heritage
+
+Our Portuguese roots show up in everything we do. Each year we march in Holy Ghost parades hosted by Portuguese communities, and we host dinners that bring classic Portuguese meals to the table, along with some American staples. These fundraisers support our music programs, and breaking bread together reaffirms our commitment to our community.
+
+### Our leadership team
+
+**Lorenza D.L.G. Tomaz** — *President of the Board*
+Lorenza raised her son in our program years ago. She actively volunteered in non-musician roles and has served as the president for over five years now.
+
+**Geronimo Rojas** — *Band Conductor*
+Geronimo has been a member of our volunteer band since he was a young middle school student. His love of music has earned him scholarships and taken him traveling. Now he leads the band that supported his journey.
+
+**João "John" Martins** — *Director of Stuff & Things*
+John was born into our program, pushed in his stroller as his father volunteered musically. He learned to play as a child and continues to help develop the program in new and innovative ways.
+
+### Our teacher
+
+**Edgard Gonzalez** — *Music Teacher & Assistant Conductor*
+TODO: bio (see §4). Teaches music for San Leandro schools.
+
+### Get involved
+
+Our band runs entirely on volunteers. If you have skills to share, from event planning to bookkeeping to photography, we'd love to hear from you. **[Contact us](/contact)**
+
+**Support our work:** [Give](/give) · [Our impact](/impact)
 
 ---
 
