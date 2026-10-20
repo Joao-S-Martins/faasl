@@ -176,7 +176,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 7. Events `/events`
+## 7. Events `/events` — 📝 copy in review (`content.md` §5f)
 
 | # | Section | Content | Source |
 |---|---|---|---|

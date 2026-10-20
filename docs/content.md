@@ -576,6 +576,42 @@ TODO: name and email (or info@faasl.org)
 
 ---
 
+## 5f. Events page (`/events`) — 📝 in review
+
+**Page title:** Events
+**Meta description:** Fundraiser dinners, parades and concerts with the Portuguese Band of San Leandro. Join us at a dinner or come hear us play across the SF Bay Area.
+
+# Events
+#### dinners, parades and concerts
+
+There are two great ways to spend time with us: share a meal at one of our fundraiser dinners, or come hear us play. Our dinners keep our music lessons free, and our performances are free to enjoy.
+
+### Fundraiser dinners and social events
+
+Throughout the year we host dinners that bring classic Portuguese meals to the table, along with some American staples. Every ticket supports our free music programs. Tickets are available at the door or from any band member.
+
+*[Upcoming events from the Social events calendar: date, name, place and description. Refreshed weekly.]*
+*(If none:)* No dinners are scheduled right now. Add our social calendar to yours to hear about the next one.
+
+**[Add social events to your calendar]** · Can't make it? **[Support the band](/give)**
+
+### Performances
+
+We play about a dozen parades and half a dozen concerts every year, from Holy Ghost festas to city celebrations.
+
+*[Upcoming events from the Performances calendar: date, name, place and description (includes musician call times). Refreshed weekly.]*
+*(If none:)* No performances are scheduled right now. Add our performance calendar to yours to hear about the next one.
+
+**[Add performances to your calendar]**
+
+What we perform at:
+- **Holy Ghost parades:** hosted by Portuguese communities throughout the year
+- **Music festivals:** we host guest bands, or they host us
+- **City events:** the Cherry Festival parade and others
+- **Caroling:** bringing cheer to the holiday season
+
+---
+
 ## 6. Contact (shared section, used on Home and Lessons)
 
 ## Contact us today!
