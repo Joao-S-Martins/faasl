@@ -72,7 +72,7 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 - [x] 🤖 `deploy-production.yml`: on a published GitHub Release or manual start → waits for your approval → deploy to `faasl` (disabled until launch)
 - [ ] 🤝 First beta deploy of the test page to its `*.workers.dev` address; check it on a real phone
 - [ ] 🤝 💡 Move faasl.org DNS to Cloudflare early (copy every record, especially MX/TXT; `www` keeps pointing at the old host), then attach `beta.faasl.org`. Can happen any time before the stakeholder beta.
-- [ ] 🤖 Google Calendar fetch script: Performances and Social events (including descriptions, which hold musician call times) → `src/content/events/*.json` (tested with a sample feed; real feed in CI)
+- [ ] 🤖 Google Calendar fetch script: Performances and Social events (including descriptions, which hold call times, ticket prices and dress code). Sample feed for testing includes a **fake raffle** as an example non-dinner fundraiser → `src/content/events/*.json` (tested with a sample feed; real feed in CI)
 - [x] 🤝 Refresh approach: B, automatic content releases with patch tags (`deployment.md` §6)
 - [ ] 🤖 `refresh.yml`: weekly + manual; fetch events → commit if changed → tag next patch → deploy (data-only changes skip approval)
 - [ ] 🧑 GitHub: `production-refresh` environment + a narrow credential allowed to commit event data to `main`
@@ -137,6 +137,7 @@ Built in this order, each reviewed on a preview URL:
 
 ## Phase 6 — Beta for stakeholders
 
+- [ ] 🤝 **Review all page copy and SEO during beta:** titles, descriptions, headings and body text on every page. Make them specific to FAASL: name the instruments we actually play and the dishes we actually serve at dinners (not generic "instruments" and "Portuguese meals"), and work in the neighboring cities (`strategy.md` §4, Local search).
 - [ ] 🤝 Beta address: 💡 `beta.faasl.org` (the old site used it for betas). It can point at the Cloudflare project with one DNS record at the current DNS host, before any full DNS move. Fallback: the free `*.pages.dev` address.
 - [x] 🤖 Beta is hidden from search engines (`noindex`, `robots.txt`, `X-Robots-Tag`). No beta banner.
 - [ ] 🧑 Stakeholder list: board, Edgard, Geronimo, key volunteers, a few parents and members, maybe a friendly donor

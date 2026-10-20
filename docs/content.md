@@ -489,7 +489,7 @@ Honor a loved one, a teacher or a fellow musician with a gift in their name, or 
 
 ### Join us at a fundraiser dinner
 
-Throughout the year we host dinners that bring classic Portuguese meals to the table, along with some American staples. Every ticket supports our free music programs. Tickets are available at the door or from any band member.
+Throughout the year we host dinners that bring classic Portuguese meals to the table, along with some American staples. Every ticket supports our free music programs. Tickets are available at the door or from any board member.
 
 *[Upcoming social events from the calendar]*
 
@@ -576,7 +576,7 @@ TODO: name and email (or info@faasl.org)
 
 ---
 
-## 5f. Events page (`/events`) — 📝 in review
+## 5f. Events page (`/events`) — ✅ reviewed
 
 **Page title:** Events
 **Meta description:** Fundraiser dinners, parades and concerts with the Portuguese Band of San Leandro. Join us at a dinner or come hear us play across the SF Bay Area.
@@ -586,12 +586,12 @@ TODO: name and email (or info@faasl.org)
 
 There are two great ways to spend time with us: share a meal at one of our fundraiser dinners, or come hear us play. Our dinners keep our music lessons free, and our performances are free to enjoy.
 
-### Fundraiser dinners and social events
+### Fundraisers and social events
 
-Throughout the year we host dinners that bring classic Portuguese meals to the table, along with some American staples. Every ticket supports our free music programs. Tickets are available at the door or from any band member.
+Throughout the year we host dinners that bring classic Portuguese meals to the table, along with some American staples, and from time to time other fundraisers like raffles. Every ticket supports our free music programs. Tickets are available at the door or from any board member.
 
-*[Upcoming events from the Social events calendar: date, name, place and description. Refreshed weekly.]*
-*(If none:)* No dinners are scheduled right now. Add our social calendar to yours to hear about the next one.
+*[Upcoming events from the Social events calendar: date, name, place and description (includes ticket prices and dress code). Refreshed weekly.]*
+*(If none:)* No fundraisers are scheduled right now. Add our social calendar to yours to hear about the next one.
 
 **[Add social events to your calendar]** · Can't make it? **[Support the band](/give)**
 
@@ -606,7 +606,7 @@ We play about a dozen parades and half a dozen concerts every year, from Holy Gh
 
 What we perform at:
 - **Holy Ghost parades:** hosted by Portuguese communities throughout the year
-- **Music festivals:** we host guest bands, or they host us
+- **Music festivals**
 - **City events:** the Cherry Festival parade and others
 - **Caroling:** bringing cheer to the holiday season
 
