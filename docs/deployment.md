@@ -102,27 +102,52 @@ The same code builds slightly differently when `SITE_ENV=beta`:
   - The shortcut-subdomain redirects can move to Cloudflare and be tested early
   - Launch day becomes a single, reversible change (point `www` at the new site)
 
-## 6. Scheduled content refresh (weekly)
+## 6. Scheduled content refresh (weekly) — proposal
 
-Events come from the public Google Calendars **when the site is built**, so the site must be rebuilt for new events to appear. A scheduled workflow does this automatically.
+Events come from the public Google Calendars, so the site needs rebuilding for new events to appear. Three ways to do it:
 
-| | Beta | Production |
-|---|---|---|
-| When | Weekly (e.g. Monday ~5 am Pacific) + a manual "Refresh now" button | Same schedule + manual button |
-| What it builds | The latest `v3` (later `main`) commit | **The latest approved release**, unchanged, with fresh calendar data |
-| Approval | None | None needed: no new code ships, only the last release you already approved |
+| | A. Scheduled rebuild | **B. Automatic content release** (recommended) | C. Cloudflare cron Worker |
+|---|---|---|---|
+| How | GitHub Actions rebuilds the latest approved release weekly with fresh calendar data and redeploys | GitHub Actions fetches the calendars, **commits the event data to the repo**, tags a **patch release** (e.g. `v3.0.2` → `v3.0.3`) and deploys it | A small Worker runs on a Cloudflare cron trigger, stores events in Workers KV, and the site reads them when pages are requested |
+| Every live version has a tag | ✘ (refreshes reuse the last tag) | ✅ | ✘ |
+| Event history in git (who/what/when, easy rollback) | ✘ | ✅ | ✘ |
+| Builds are reproducible (don't depend on Google at deploy time) | ✘ | ✅ | n/a |
+| Stays a purely static site | ✅ | ✅ | ✘ code runs on every request |
+| Freshness | Weekly | Weekly (or daily, free) | Hourly or better |
+| Moving parts | Fewest | Moderate | Most (runtime code, KV, cron) |
 
-How it stays safe:
-- **No unapproved code reaches production.** The refresh rebuilds the exact tag of the latest published release. New code still needs a release and your approval (§3).
-- It uses a separate GitHub environment, `production-refresh`, limited to release tags, holding the same least-privilege Cloudflare token. The approval gate on `production` stays as is.
-- **If Google Calendar can't be reached or returns bad data, the build fails and nothing is deployed:** the site keeps last week's events, and GitHub emails you about the failed run.
-- **Between rebuilds,** a few lines of JavaScript hide events whose date has passed, so the list never shows stale events for a week.
+**Why not a Cloudflare-native process (C)?** Cloudflare's own Git builds can rebuild on a push, but they have no approval step, which would bypass the production gate (§3). A cron Worker with KV keeps events always fresh, but turns the static site into one with code running on every request, which is more to maintain and against the "no server" goal. Worth revisiting only if weekly freshness ever isn't enough.
 
-Things to know:
-- **Scheduled workflows only run from the default branch** (`main`). Until `v3` is merged at launch, use the manual button for beta refreshes (the beta doesn't need real events yet anyway).
-- **GitHub pauses scheduled workflows in public repos after 60 days with no repository activity.** It emails a warning first; re-enabling is one click (*Actions → workflow → Enable*). Any commit resets the clock.
-- Schedules run in UTC and can start a few minutes late at busy times. Weekly is plenty; daily would also be free if events change often.
-- This environment can't reach Google Calendar, so the calendar loader gets tested with a sample feed here and for real in GitHub Actions.
+### Recommended: B, automatic content releases
+
+```
+weekly schedule (or "Refresh now" button)
+   │
+   ├─ fetch Performances + Social events from Google Calendar
+   ├─ write src/content/events/*.json  ── no change? stop here (no release)
+   ├─ commit "content: refresh events" to main
+   ├─ check: does the change touch ONLY src/content/events/**?
+   │      no  → stop; a human release is needed
+   ├─ tag the next patch version (v3.0.2 → v3.0.3) + GitHub Release "Content refresh"
+   └─ build that tag → deploy to production (no approval: data only)
+```
+
+**Versioning (semver):** you tag normal releases yourself: `v3.1.0` for new features, `v3.0.x` for fixes. Automatic content refreshes always bump the **patch** number, so every live state still has a tag. Releases are labelled "Content refresh" vs. your own release notes, so the history stays readable.
+
+**Approval rules:**
+- **Your releases** (code changes) → `production` environment → waits for your approval (unchanged).
+- **Content refreshes** → `production-refresh` environment → no approval, but only allowed when the diff since the previous release touches *nothing but* `src/content/events/`. Anything else stops the run.
+
+**Branch protection:** `main` requires pull requests, so the refresh job needs a narrow exception to commit event data directly. That's done with a dedicated credential (a deploy key or GitHub App token) that's allowed to bypass the rule, stored only in the `production-refresh` environment. We'll confirm the exact GitHub setting during setup.
+
+**Things to know:**
+- A release is only made when events actually changed, so quiet weeks create no noise.
+- If Google Calendar fails or returns bad data, nothing is committed or deployed; the site keeps last week's events and GitHub emails you.
+- Between refreshes, a few lines of JavaScript hide events that have already passed.
+- Scheduled workflows only run from the default branch (`main`), so this switches on at launch. Before then, the "Refresh now" button works for beta.
+- GitHub pauses schedules in public repos after 60 days with no commits. Content refreshes count as commits, but a quiet winter could still hit it; GitHub emails first, and re-enabling is one click.
+- Beta keeps the simpler approach: rebuild the latest `v3`/`main` commit on the same schedule.
+- This environment can't reach Google Calendar, so the loader is tested with a sample feed here and for real in GitHub Actions.
 
 ## 7. Optional later: pull-request previews
 
