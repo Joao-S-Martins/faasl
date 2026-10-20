@@ -5,6 +5,12 @@ import Section from '../components/Section.astro';
 import EventList from '../components/EventList.astro';
 import CalendarLink from '../components/CalendarLink.astro';
 import parade from '../assets/photos/parade-carnival.jpg';
+import { getEventPages } from '../lib/events';
+
+// Past events stay listed only if they have a write-up.
+const pastWriteups = (await getEventPages())
+  .filter((page) => !page.event && page.writeup)
+  .sort((a, b) => b.slug.localeCompare(a.slug));
 ---
 
 <PageLayout
@@ -67,4 +73,17 @@ import parade from '../assets/photos/parade-carnival.jpg';
       </li>
     </ul>
   </Section>
+  {pastWriteups.length > 0 && (
+    <Section title="Past events" id="past">
+      <ul>
+        {pastWriteups.map(({ slug, writeup }) => (
+          <li>
+            <a href={`/events/${slug}`}>{writeup!.data.title}</a>
+            {' · '}
+            {writeup!.data.summary}
+          </li>
+        ))}
+      </ul>
+    </Section>
+  )}
 </PageLayout>

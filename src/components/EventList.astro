@@ -4,6 +4,7 @@
 // about a single event (see docs/brief.md, SEO guardrails).
 import { getCollection, getEntry } from 'astro:content';
 import { formatEventWhen } from '../lib/format';
+import { eventHref } from '../lib/events';
 import Todo from './Todo.astro';
 
 interface Props {
@@ -42,7 +43,9 @@ const hasSamples = events.some(({ data }) => data.sample);
     {events.map(({ data }) => (
       <li>
         <article>
-          <Heading>{data.title}</Heading>
+          <Heading>
+            {eventHref(data) ? <a href={eventHref(data)}>{data.title}</a> : data.title}
+          </Heading>
           {data.tentative && (
             <p class="tentative">
               <strong>Tentative:</strong> date expected, times to be confirmed

@@ -1,0 +1,120 @@
+---
+// One page per performance or fundraiser: upcoming events from the calendar,
+// and past events that have a write-up. Upcoming, confirmed events carry
+// Event search data (Google only supports it on single-event pages).
+import { render } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Section from '../../components/Section.astro';
+import CalendarLink from '../../components/CalendarLink.astro';
+import FactList from '../../components/FactList.astro';
+import Todo from '../../components/Todo.astro';
+import { getEventPages, type EventPage } from '../../lib/events';
+import { formatEventWhen, formatLongDate, localDateOf } from '../../lib/format';
+import { getSite } from '../../lib/site';
+import fallbackImage from '../../assets/photos/band-church-steps.jpg';
+
+export async function getStaticPaths() {
+  const pages = await getEventPages();
+  return pages.map((page) => ({ params: { slug: page.slug }, props: { page } }));
+}
+
+const { page } = Astro.props as { page: EventPage };
+const { event, writeup } = page;
+const site = await getSite();
+
+const title = writeup?.data.title ?? event!.title;
+const date = event ? localDateOf(event) : writeup!.data.date.toISOString().slice(0, 10);
+const location = event?.location ?? writeup?.data.location;
+const isUpcoming = Boolean(event);
+const isFundraiser = event?.calendar.id === 'social';
+const Content = writeup ? (await render(writeup)).Content : undefined;
+
+const description = writeup
+  ? writeup.data.summary
+  : `${title} with the Portuguese Band of San Leandro on ${formatLongDate(date)}${location ? ` at ${location}` : ''}.`;
+
+const structuredData =
+  // Google requires a location; tentative events wait until they're confirmed.
+  event && !event.tentative && location
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'Event',
+        name: event.title,
+        startDate: event.start,
+        endDate: event.end,
+        eventStatus: 'https://schema.org/EventScheduled',
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        ...(location && {
+          location: { '@type': 'Place', name: location, address: location },
+        }),
+        ...(event.description && { description: event.description }),
+        image: [new URL(fallbackImage.src, Astro.site).href],
+        organizer: { '@type': 'Organization', name: site.name, url: Astro.site?.href },
+        performer: { '@type': 'MusicGroup', name: site.name },
+      }
+    : undefined;
+---
+
+<PageLayout title={title} description={description} image={fallbackImage.src}>
+  <PageHeader
+    title={title}
+    subtitle={isUpcoming ? (isFundraiser ? 'Fundraiser' : 'Performance') : 'Past event'}
+  >
+    {event?.tentative && (
+      <p>
+        <strong>Tentative:</strong> date expected, times to be confirmed.
+      </p>
+    )}
+    <FactList
+      facts={[
+        { term: 'When', detail: event ? formatEventWhen(event) : formatLongDate(date) },
+        ...(location ? [{ term: 'Where', detail: location }] : []),
+      ]}
+    />
+    {location && (
+      <p>
+        <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`}>
+          Directions
+        </a>
+      </p>
+    )}
+    {!location && isUpcoming && <Todo>add a location to this calendar event</Todo>}
+  </PageHeader>
+
+  {event?.description && (
+    <Section title="Details">
+      <p class="description">{event.description}</p>
+    </Section>
+  )}
+
+  {Content && (
+    <Section title={isUpcoming ? 'About this event' : 'What happened'}>
+      <Content />
+    </Section>
+  )}
+
+  <Section title="More from the band">
+    {isUpcoming && (
+      <p>
+        <CalendarLink calendar={isFundraiser ? 'social' : 'performances'} />
+      </p>
+    )}
+    {isFundraiser && (
+      <p>
+        Can't make it? <a href="/give">Support the band</a>
+      </p>
+    )}
+    <p>
+      <a href="/events">All events</a>
+    </p>
+  </Section>
+</PageLayout>
+
+{structuredData && <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />}
+
+<style>
+  .description {
+    white-space: pre-line;
+  }
+</style>

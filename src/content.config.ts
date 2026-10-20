@@ -159,6 +159,24 @@ const schedule = defineCollection({
   }),
 });
 
+// Write-ups about past performances and fundraisers. A write-up keeps the
+// event's page (/events/<file name>) after the event has passed; name the
+// file after the event's page address, e.g. 2026-11-07-festival-das-filarmonicas-2026.md.
+const eventWriteups = defineCollection({
+  loader: glob({ pattern: '*.{md,mdx}', base: './src/content/event-writeups' }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      date: z.coerce.date(),
+      location: z.string().optional(),
+      summary: z.string(),
+      cover: image().optional(),
+      coverAlt: z.string().optional(),
+      draft: z.boolean().default(false),
+      tags: z.array(reference('tags')).default([]),
+    }),
+});
+
 // Member stories. Each story's quote doubles as a testimonial snippet on the
 // pages for its audiences.
 const stories = defineCollection({
@@ -211,6 +229,7 @@ export const collections = {
   stores,
   calendars,
   events,
+  eventWriteups,
   faqs,
   lessons,
   stories,

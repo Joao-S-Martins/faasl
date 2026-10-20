@@ -37,6 +37,12 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
       - run: npm ci
+      # Reuse resized images from earlier builds instead of reprocessing them.
+      - uses: actions/cache@v6.1.0
+        with:
+          path: node_modules/.astro
+          key: astro-assets-${{ hashFiles('src/assets/**', 'src/content/**/*.jpg') }}
+          restore-keys: astro-assets-
       - run: npm run build
         env:
           SITE_ENV: production
