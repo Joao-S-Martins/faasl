@@ -190,7 +190,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ✅ Calendars are separate: Performances and Social events on `/events` (and Home); Lessons & rehearsals on `/lessons` and `/members` only.
 
-**Freshness:** event lists are rebuilt from Google Calendar **weekly** (and on demand), and a tiny script hides events that have already passed between rebuilds. See `deployment.md` §6.
+**Freshness:** event lists are rebuilt from Google Calendar **weekly** (and on demand), with no JavaScript; an event that ends mid-week stays listed until the next refresh. See `deployment.md` §6.
 
 ---
 

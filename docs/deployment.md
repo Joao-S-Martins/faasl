@@ -143,7 +143,7 @@ weekly schedule (or "Refresh now" button)
 **Things to know:**
 - A release is only made when events actually changed, so quiet weeks create no noise.
 - If Google Calendar fails or returns bad data, nothing is committed or deployed; the site keeps last week's events and GitHub emails you.
-- Between refreshes, a few lines of JavaScript hide events that have already passed.
+- No JavaScript to hide past events: an event that ends between refreshes stays listed until the next weekly refresh.
 - Scheduled workflows only run from the default branch (`main`), so this switches on at launch. Before then, the "Refresh now" button works for beta.
 - GitHub pauses schedules in public repos after 60 days with no commits. Content refreshes count as commits, but a quiet winter could still hit it; GitHub emails first, and re-enabling is one click.
 - Beta keeps the simpler approach: rebuild the latest `v3`/`main` commit on the same schedule.
