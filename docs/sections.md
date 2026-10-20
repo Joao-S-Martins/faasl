@@ -53,7 +53,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 1. Home `/`
+## 1. Home `/` — 📝 copy in review (`content.md` §3b)
 
 **Job:** tell the story in one scroll and send each visitor to their page.
 

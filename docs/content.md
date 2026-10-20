@@ -237,6 +237,79 @@ John was born into our program, pushed in his stroller as his father volunteered
 
 ---
 
+## 3b. Home page (`/`, v3) — 📝 in review
+
+> [!NOTE]
+> The v3 home page, built from the reviewed pages. §3 above is the original v2 home page, kept for reference.
+
+**Page title:** Portuguese Band of San Leandro | Free Music Lessons & Community Band
+**Meta description:** Free music lessons for ages 8 to 108 and a volunteer community band in San Leandro, CA, serving Castro Valley, San Lorenzo, Hayward and Oakland since 1980.
+
+### 1. Hero
+
+🖼️ Hero photo: the full band (e.g. `home_slide_1.jpg`)
+
+# We've built a community around music
+#### and you're invited to join us
+
+Free music lessons, a band for every age and skill level, and live music for our community, since 1980.
+
+### 2. I want to…
+
+- **Learn an instrument** → [Free lessons](/lessons)
+- **Play in the band** → [Join the band](/join)
+- **Support the band** → [Give](/give)
+
+### 3. Our story
+
+Our band was founded in 1980 by amateur musicians, mostly Portuguese immigrants, who wanted to enrich their community through music. More than {years since 1980} years later, our goal remains the same: impacting lives through music education and mentorship. Today we're a diverse, all-volunteer group of musicians of every age and background.
+
+[Our story](/about)
+
+### 4. Free lessons for ages 8 to 108
+
+Every lesson we teach is free. Our music teacher, who also teaches in San Leandro schools, guides beginner and intermediate students on woodwinds, brass and percussion, and you can start any time of year.
+
+{{schedule}}
+
+[Learn with us](/lessons)
+
+### 5. A band for every age and skill level
+
+Our volunteer band is a mixed-age group of 35+ musicians. Younger musicians play alongside experienced ones, learning in a way a peer-aged group can't match. No auditions: just show up on a Friday night.
+
+> "After joining FAASL, I think I've grown as a musician because I have the opportunity to play with more experienced musicians." — Aubury Freed
+
+[Join the band](/join)
+
+### 6. Keep music free for our community
+
+Our lessons are free and our band runs on volunteers, so every gift goes straight to the music: sheet music, uniforms, instrument repairs and the carpools that get us to performances.
+
+[Give](/give) · [See our impact](/impact)
+
+### 7. Come see us
+
+We play about a dozen parades and half a dozen concerts every year, and host fundraiser dinners with classic Portuguese meals. Here's what's coming up:
+
+*[Next fundraiser + next 2 performances, from the calendars]*
+
+[All events](/events)
+
+### 8. Our leadership
+
+*[Cards: Lorenza (President of the Board), Geronimo (Band Conductor), John (Director of Stuff & Things)]*
+
+[Meet the team](/about)
+
+### 9. Visit us
+
+{{address}} · (510) 357-1449 · info@faasl.org
+
+[Contact us](/contact)
+
+---
+
 ## 4. Teachers (new section)
 
 > [!NOTE]
