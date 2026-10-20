@@ -64,6 +64,7 @@ Please collect a few examples. Even "I like the photos on X" or "I hate the menu
 - [ ] Contact form, no server (form service to be decided), spam-protected, emails info@faasl.org
 - [ ] Upcoming events, pulled from the public Google Calendar at build time, plus subscribe links
 - [ ] Teacher, leadership and (later) volunteer bios
+- [ ] Testimonial snippets (pull quotes from member stories) on multiple pages, each linking to the full story
 - [ ] Instrument picker with demo video
 - [ ] Lessons FAQ, materials list, store list, Remind instructions
 - [ ] Impact page with yearly numbers and downloadable documents
@@ -71,6 +72,7 @@ Please collect a few examples. Even "I like the photos on X" or "I hate the menu
 - [ ] Shortcut subdomains and old URLs redirect correctly
 - [ ] Prints cleanly (the lessons page especially)
 - [ ] Beta site for stakeholders, hidden from search engines, with an easy way to send feedback
+- [ ] Automatic deploys to beta; production deploys only with the owner's approval (`deployment.md`)
 - [ ] Later: galleries, event write-ups, stories, tags, search (see `astro-extensibility.md`); Portuguese (v3.1)
 
 ### Quality (non-functional)

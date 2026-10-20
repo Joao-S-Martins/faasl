@@ -20,7 +20,7 @@ Status: **Astro + Cloudflare decided** (Oct 2026). Goals, requirements and open 
 | Events | Google Calendar (unchanged) **plus** a build-time fetch of the Performances calendar | Events render as real HTML with `Event` structured data, so Google can show them. |
 | Newsletter | Mailchimp (unchanged) | Already works. |
 | Analytics | Cloudflare Web Analytics (free, cookieless) + Google Search Console | The old Google Analytics (UA) tag is dead; no cookie banner needed. |
-| Deploys | `git push` → automatic build & deploy | Every branch/PR gets its own preview URL to review before going live. |
+| Deploys | GitHub Actions → Cloudflare Workers | Beta deploys automatically; production only after your approval in GitHub. See [`deployment.md`](./deployment.md). |
 
 Monthly cost: **$0** (you keep paying for the domain registration only).
 

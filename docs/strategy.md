@@ -106,7 +106,7 @@ New vanity shortcuts to consider: `give.`, `donate.` (exists), `join.`, `impact.
 
 Funders and stronger talent respond to evidence. These are mostly yours to collect; the site will display them.
 - Yearly numbers (students, musicians, performances). Volunteer hours are left out: recording is spotty and only covers musicians.
-- New member stories / testimonials (the old Stories page was these): a parent, a student, an experienced musician, a board member, a community partner
+- New member stories / testimonials (the old Stories page was these): a parent, a student, an experienced musician, a board member, a community partner. Each story's pull quote appears as a **testimonial snippet** on the matching audience pages, linking back to the full story.
 - Recent performance photos and 1–2 short videos
 - Annual report / financial summary; IRS letter; recent 990
 - Candid profile; CA Attorney General registry status

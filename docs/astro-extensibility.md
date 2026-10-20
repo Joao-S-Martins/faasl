@@ -235,7 +235,7 @@ A visitor on `/tags/cherry-festival` sees every Cherry Festival write-up from ev
 | Event deep dives with galleries | `events` collection (MDX) + `Gallery` component | Small–medium (once) |
 | Site-wide photo gallery | Page that collects `photos` from all events, filterable by tag | Small |
 | Upcoming events from Google Calendar | Custom loader reading the public iCal feed at build; daily scheduled rebuild | Medium (once) |
-| Member stories | `stories` collection, cross-tagged | Small |
+| Member stories & testimonials | `stories` collection, cross-tagged. Each story has a `quote` (short pull quote) and an `audiences` field, so a `Testimonial` component can show matching snippets on Home, Lessons, Join, Give and Impact, each linking to the full story | Small |
 | Tags across sections | `tags` collection + `/tags/[tag]` page | Small (once) |
 | Site search | Pagefind integration | Small |
 | Portuguese translation | Built-in i18n routing (`/pt/...`), translated content files | Medium |

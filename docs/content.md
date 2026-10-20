@@ -162,6 +162,8 @@ A community must nourish its core. For us, this is our volunteer band. This mixe
 
 > [!NOTE]
 > **Stories:** the member stories live on an external Adobe Express page. Rewriting them as a Stories page on faasl.org is tracked in `todo.md`. Original, human content on your own domain is a real SEO win.
+>
+> **Testimonials are snippets of stories.** Each story has a short pull quote that can appear on other pages (like the Aubury Freed quote here). The full story lives on `/stories`; each snippet links to it. Aubury's quote becomes the first entry.
 
 #### Perform — Public performances
 ##### and social events
@@ -405,11 +407,13 @@ For current members, students and families. **Unlisted** for now: not in the men
 ### New member onboarding
 Everything a new student, family or musician needs to get started, in order:
 
-1. **Emergency contact & medical form** — TODO: current document (PDF to download and print, or a link to a Google Form)
-2. **Uniform agreement** — TODO: current document
-3. **Photo consent form** — TODO: current document (must cover publishing on the website; see `brief.md` §5.1)
+Forms are **printable PDFs** to download, fill in and return.
+
+1. **Emergency contact & medical form** — TODO: current document (PDF)
+2. **Uniform agreement** — TODO: current document (PDF)
+3. **Photo consent form** — TODO: current document (PDF; must cover publishing on the website; see `brief.md` §5.1)
 4. TODO: anything else in the current new-member packet (code of conduct? instrument loan agreement? membership dues?)
-5. Where to return completed forms: TODO (in person to whom / email address / online form)
+5. Where to return completed forms: TODO (in person to whom / email address)
 
 ### Stay in the loop
 - **Remind:** TODO: how to join the lessons Remind list (same instructions as the Lessons page)

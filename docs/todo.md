@@ -59,11 +59,17 @@ Goal: prove the whole pipeline end to end (code → CI → Cloudflare preview) w
 - [ ] 🤝 Check it on a real phone
 
 ### CI & deploys
-- [ ] 🤖 GitHub Actions on every push and PR: install → `astro check` → lint → build
+Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build and deploy; beta deploys automatically, production only with your approval.
+- [ ] 🤖 `ci.yml`: on every push and PR: install → `astro check` → lint → build
 - [ ] 🧑 **Create a Cloudflare account** (free plan, your ownership for now) and enable two-factor login
-- [ ] 🧑 Create the Cloudflare project and connect the GitHub repo (needs your login; I'll give step-by-step instructions)
-- [ ] 🤝 Configure the Cloudflare project: build command, output folder, Node version; production branch = `v3` until launch; previews for other branches
-- [ ] 🤝 Confirm a preview URL deploys on push
+- [ ] 🧑 Create a least-privilege Cloudflare API token (I'll give the exact permissions) and note the account ID
+- [ ] 🧑 GitHub: create environments `beta` and `production`; add the token and account ID as environment secrets; make yourself the required reviewer on `production`, limited to `main` and release tags
+- [ ] 🧑 GitHub: branch protection on `main` (pull requests, CI must pass, no force-push)
+- [ ] 🤖 `wrangler.jsonc` with two Workers (`faasl-beta`, `faasl`) and beta mode (`noindex`, robots block, beta banner)
+- [ ] 🤖 `deploy-beta.yml`: on push to `v3` after CI passes → build in beta mode → deploy to `faasl-beta`
+- [ ] 🤖 `deploy-production.yml`: on a published GitHub Release or manual start → waits for your approval → deploy to `faasl` (disabled until launch)
+- [ ] 🤝 First beta deploy of the test page to its `*.workers.dev` address; check it on a real phone
+- [ ] 🤝 💡 Move faasl.org DNS to Cloudflare early (copy every record, especially MX/TXT; `www` keeps pointing at the old host), then attach `beta.faasl.org`. Can happen any time before the stakeholder beta.
 - [ ] 🤖 Lighthouse check in CI (report only for now; budgets once the design exists)
 
 ## Phase 2 — Section planning
@@ -188,7 +194,8 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Current uniform agreement (blank)
 - [ ] Current photo consent form (blank); confirm it covers the website
 - [ ] Anything else in the new-member packet (code of conduct, instrument loan, dues?)
-- [ ] For each form: printable PDF, online Google Form, or both? Where do completed forms go?
+- [x] Forms are printable (PDF downloads)
+- [ ] Where do completed forms go (in person to whom / email)?
 - [ ] Special contacts: who handles what (absences, uniforms, music, general). 💡 Role-based emails (e.g. uniforms@faasl.org) instead of personal numbers.
 
 ### Content items 🧑
@@ -197,7 +204,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] **Remind notifications:** link and step-by-step instructions for joining the Remind list for lesson updates
 - [ ] **Review the mission statement:** decide on official wording (the README uses "music education and mentorship for underserved youth in the East Bay")
 - [ ] **Donate button:** decide yes/no and the provider (PayPal, Givebutter, Zeffy…), then point `donate.faasl.org` at it
-- [ ] **Rewrite the Stories page:** collect **new** member stories / testimonials (a parent, a student, an experienced musician, a board member, a community partner), using the old Adobe Express stories as a starting point; publish them on faasl.org and point `stories.faasl.org` at it
+- [ ] **Rewrite the Stories page:** stories double as testimonials, shown as short snippets on several pages (Home, Lessons, Join, Give, Impact). For each story, pick a one- or two-sentence pull quote. Collect **new** member stories / testimonials (a parent, a student, an experienced musician, a board member, a community partner), using the old Adobe Express stories as a starting point; publish them on faasl.org and point `stories.faasl.org` at it
 - [ ] Instrument list: any changes?
 - [ ] "Grow with us" / "Have fun with us" buttons: link to a Join page instead of beginner lessons?
 
