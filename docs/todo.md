@@ -195,7 +195,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Yearly numbers: students taught, musicians in the band, performances per year (no volunteer hours)
 - [ ] Annual report or financial summary; IRS determination letter; recent Form 990
 - [ ] Claim / update the Candid (GuideStar) profile; check California Attorney General Registry of Charities status
-- [ ] Prices for the Give page's "What your gift does": sheet music for a new piece (whole band), band dinner after rehearsal, a typical instrument repair, a uniform, travel to a performance
+- [ ] Prices for the Give page's "What your gift does": sheet music for a new piece (whole band), band dinner after rehearsal, a typical instrument repair, a uniform, carpool support for a performance
 
 ### Members page 🧑 (`content.md` §6b)
 - [ ] Current emergency contact / medical form (blank)

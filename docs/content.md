@@ -459,7 +459,7 @@ Our band runs entirely on volunteers, and there's more to it than music. Help pl
 
 ---
 
-## 5d. Give page (`/give`) — 📝 in review
+## 5d. Give page (`/give`) — ✅ reviewed (prices and donation provider TODO)
 
 **Page title:** Support Free Music Education in San Leandro
 **Meta description:** Donate to the Portuguese Band of San Leandro, a 501(c)(3) nonprofit offering free music lessons and free community performances since 1980. Gifts are tax-deductible.
@@ -481,7 +481,7 @@ Prices TODO (`todo.md`):
 - **$__** feeds the band dinner after rehearsal
 - **$__** covers a typical instrument repair
 - **$__** outfits a musician in our uniform
-- **$__** gets the band to a performance (travel costs)
+- **$__** supports the carpools that get our musicians to performances
 
 ### Give in someone's name
 
@@ -509,6 +509,70 @@ Many employers match their employees' charitable gifts, often doubling them. Ask
 ### The details
 
 The Filarmonica Artista Amadora de San Leandro is a 501(c)(3) nonprofit organization, EIN 94-2930722. Donations are tax-deductible to the extent allowed by law.
+
+---
+
+## 5e. Impact page (`/impact`) — 📝 in review
+
+**Page title:** Our Impact
+**Meta description:** Free music education and community performances in San Leandro since 1980. Mission, programs, numbers, governance and documents for the Portuguese Band of San Leandro, a 501(c)(3) nonprofit.
+
+> [!NOTE]
+> Written for grant reviewers, agencies and corporate giving teams: facts first, easy to verify, nothing they have to hunt for. Every TODO is in `todo.md`.
+
+# Our Impact
+#### free music education and community music since 1980
+
+### Our mission
+
+TODO: mission statement (`todo.md`). Draft to react to: *"The Portuguese Band of San Leandro provides free music education and mentorship to musicians of all ages, and brings live music to our community."*
+
+### At a glance
+
+| | |
+|---|---|
+| **Founded** | 1980 ({years since 1980} years of free music education) |
+| **Status** | 501(c)(3) nonprofit, EIN 94-2930722 |
+| **Run by** | Volunteers |
+| **Lessons** | Free, weekly, ages 8 to 108 |
+| **Students per year** | TODO |
+| **Musicians in the band** | TODO |
+| **Performances per year** | TODO |
+| **Where** | San Leandro and the SF Bay Area (Alameda County) |
+
+### Our programs
+
+- **Free music lessons:** weekly beginner and intermediate group classes for ages 8 to 108, taught by a music teacher who also teaches in San Leandro schools. Students can start any time of year.
+- **Volunteer community band:** a mixed-age band where students play alongside experienced musicians, rehearsing weekly. No auditions, no fees.
+- **Community performances:** parades, festivals, city events and holiday caroling around the SF Bay and Central Valley, free to the public.
+- **Community dinners:** fundraiser dinners throughout the year that bring people together and support the programs.
+
+### Who we serve
+
+Students and musicians from San Leandro and neighboring communities, from age 8 to adults of every age. Lessons and band membership are free, so cost is never a barrier to music. TODO: anything you can share about who participates (e.g. share of youth, schools represented, neighborhoods).
+
+### Governance
+
+FAASL is governed by a volunteer board of directors.
+- **Lorenza D.L.G. Tomaz**, President of the Board
+- TODO: other board members and officers (names and roles)
+
+### Documents
+
+TODO (PDFs):
+- IRS determination letter (501(c)(3))
+- Most recent Form 990
+- Annual report or financial summary
+
+### Verify us
+
+- **IRS Tax Exempt Organization Search:** search EIN 94-2930722 (https://apps.irs.gov/app/eos/)
+- **Candid (GuideStar) profile:** TODO (claim and update)
+- **California Attorney General, Registry of Charitable Trusts:** TODO (confirm current status)
+
+### Contact about grants and partnerships
+
+TODO: name and email (or info@faasl.org)
 
 ---
 

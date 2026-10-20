@@ -119,7 +119,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 4. Give `/give` — 📝 copy in review (`content.md` §5d)
+## 4. Give `/give` — ✅ copy reviewed (`content.md` §5d)
 
 **Job:** a community donor gives, and knows it's tax-deductible and well used.
 
@@ -140,7 +140,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 5. Impact `/impact`
+## 5. Impact `/impact` — 📝 copy in review (`content.md` §5e)
 
 **Job:** a grant reviewer or agency can verify FAASL in five minutes.
 
