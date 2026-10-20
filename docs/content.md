@@ -86,13 +86,9 @@ These are internal notes, not site copy, but they're useful for voice and tone.
 > [!NOTE]
 > A **Donate** button is tracked in `todo.md`. For a 501(c)(3) it's usually the second most important call to action.
 
-### Announcement banner (Home and Students)
+### Announcement banner
 
-> ## New music lessons start soon!
-> [Click here to learn more](/lessons)
-
-> [!NOTE]
-> In v3 this should be an easy-to-toggle announcement with an optional expiry date, so it doesn't stay up for years.
+Dropped in v3 (the old "New music lessons start soon!" banner). No announcement banner on the new site.
 
 ### Footer
 
@@ -251,7 +247,7 @@ TODO: Bio, 2–3 sentences. Suggested points: instruments taught, education / cr
 
 When we say *free lessons*, we really mean it. We have a large backing of volunteers and donors who help us operate this program without needing to charge our students a cent. With that said, we cannot provide new students with instruments and method books. We do have recommendations for renting-to-own or outright purchasing instruments as well as the very inexpensive books.
 
-Our free lessons are taught in a group session once a week. These lessons are 30 minutes and are comparable and complementary to many public school programs. From beginners to those with a few years of experience, you're welcome to start any time of year. It's always a great time to learn, from ages 8 to 108. [Contact us](#contact) to discuss how we can start helping you today!
+Our free lessons are taught in a group session once a week. These lessons are 45 minutes and are comparable and complementary to many public school programs. From beginners to those with a few years of experience, you're welcome to start any time of year. It's always a great time to learn, from ages 8 to 108. [Contact us](#contact) to discuss how we can start helping you today!
 
 In our programs, students learn:
 - How to play and maintain their instruments
@@ -321,7 +317,7 @@ Our musicians have been happy to work with these local music shops through the y
 - [JAMS Music, Dublin](https://www.jamsmusicdublin.com/)
 - [Allegro Music, Fremont](http://www.allegromusic.net/)
 
-[Woodwind & Brasswind](https://www.wwbw.com) and [Musician's Friend](https://www.musiciansfriend.com) are popular online shops, but we recommend visiting a local store with knowledgeable staff when possible.
+[Woodwind & Brasswind](https://www.wwbw.com) and [Music & Arts](https://www.musicarts.com) are popular online shops, but we recommend visiting a local store with knowledgeable staff when possible.
 
 **Map:** Google My Maps embed of the stores (`mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa`)
 
@@ -342,11 +338,11 @@ Our musicians have been happy to work with these local music shops through the y
 > v3 will mark these up as `FAQPage` structured data, so keeping them as clear question/answer pairs helps search.
 
 **When are lessons?**
-Typically Friday nights at 6:30 and 7:15. Check the calendar for updates. Each lesson is punctual and runs a half hour.
+Friday evenings. The beginner class is at 6:30 and the intermediate class at 7:15. Check the calendar for updates. Each lesson is punctual and runs 45 minutes.
 [Lessons & rehearsals calendar](https://calendar.google.com/calendar/embed?src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&ctz=America/Los_Angeles)
 
 **How long are lessons?**
-30 minutes for the instructional time. Intermediate students will also participate in the volunteer band rehearsal, which runs about 90 minutes.
+45 minutes for the instructional time. Intermediate students will also participate in the volunteer band rehearsal, which runs about 90 minutes.
 
 **What if we're late?**
 Please notify Edgard ASAP if you're running late or have to miss a lesson entirely. When arriving late, enter quietly.
@@ -547,7 +543,7 @@ Content decisions applied (October 2026 review):
 - Conductor: Geronimo Rojas, titled "Band Conductor"
 - John Martins stays on the leadership team
 - Address confirmed: 844 Alvarado St., San Leandro
-- Lessons: Friday 6:30 and 7:15
+- Lessons: Friday, beginner 6:30 and intermediate 7:15, 45 minutes each; students start any time of year
 - All social accounts treated as active
 - COVID-19 and Remote Restart pages dropped
 

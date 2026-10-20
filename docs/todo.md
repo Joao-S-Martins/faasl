@@ -82,12 +82,12 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 
 Draft plans for every page are in [`sections.md`](./sections.md), ready for review. Structured content files for them are in `src/content/`.
 
-- [x] 🤖 Move structured content into content files with schemas: stores, FAQ, calendars, lessons program, announcements, stories, member forms
+- [x] 🤖 Move structured content into content files with schemas: stores, FAQ, calendars, lessons program, stories, member forms
 - [ ] 🧑 Review `sections.md` and answer its ❓ questions
 - [ ] 🤖 Move long page copy from `content.md` into Markdown page files
 
 - [ ] 🤝 Information architecture: confirm the site map (`strategy.md` §7), the **hybrid long home page**, and launch priority
-- [ ] 🤝 Global: header & mobile nav, footer, announcement banner, SEO defaults, 404 page
+- [ ] 🤝 Global: header & mobile nav, footer, SEO defaults, 404 page
 - [ ] 🤝 Home (long scrolling story + "I want to…" audience router)
 - [ ] 🤝 Lessons: about, instruments + demo video, materials & stores, FAQ, Remind sign-up
 - [ ] 🤝 Join the band (general invitation to skilled and aspiring musicians: repertoire, conductor, sit-in invite)
@@ -106,13 +106,13 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [ ] 🤖 2–3 visual directions as quick mockups (mobile first) for you to pick from
 - [ ] 🤖 Wireframes for the home page and one inner page (phone → tablet → desktop)
 - [ ] 🤝 Design tokens finalized (colors, type scale, spacing, radii, shadows)
-- [ ] 🤖 Core component set: buttons/CTAs, cards, section headers, nav, footer, banner, FAQ accordion
+- [ ] 🤖 Core component set: buttons/CTAs, cards, section headers, nav, footer, FAQ accordion
 - [ ] 🧑 Approve the design → unlocks Phase 4
 
 ## Phase 4 — Build sections
 
 Built in this order, each reviewed on a preview URL:
-- [ ] 🤖 Global layout (header, nav, footer, banner)
+- [ ] 🤖 Global layout (header, nav, footer)
 - [ ] 🤖 Home
 - [ ] 🤖 Lessons
 - [ ] 🤖 About (leadership + teachers)
@@ -211,10 +211,10 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] **Gather Edgard Gonzalez's details:** exact title, 2–3 sentence bio, instruments, credentials, year joined, headshot, and how families should contact him (for the "What if we're late?" FAQ)
 - [x] **Review the music stores:** web-searched 2026-10-20 (`content.md` §5.3, `src/content/stores.yaml`). A & G Music (Oakland) has closed and is removed.
   - [ ] Call Music Unlimited and Allegro Music to confirm they're open and still rent band instruments
-  - [ ] Decide: replace Musician's Friend (now an off-price outlet) with Music & Arts?
+  - [x] Replaced Musician's Friend with Music & Arts
   - [ ] Any new shops to add?
   - [ ] Update the Google My Maps store map: remove A & G Music, check the other pins
-- [ ] **Remind notifications:** link and step-by-step instructions for joining the Remind list for lesson updates
+- [ ] **Remind notifications:** get the Remind sign-up link/code and step-by-step instructions for joining the lessons list
 - [ ] **Review the mission statement:** decide on official wording (the README uses "music education and mentorship for underserved youth in the East Bay")
 - [ ] **Donate button:** decide yes/no and the provider (PayPal, Givebutter, Zeffy…), then point `donate.faasl.org` at it
 - [ ] **Rewrite the Stories page:** stories double as testimonials, shown as short snippets on several pages (Home, Lessons, Join, Give, Impact). For each story, pick a one- or two-sentence pull quote. Collect **new** member stories / testimonials (a parent, a student, an experienced musician, a board member, a community partner), using the old Adobe Express stories as a starting point; publish them on faasl.org and point `stories.faasl.org` at it

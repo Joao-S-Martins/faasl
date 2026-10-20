@@ -4,8 +4,10 @@ program:
   minimumAge: 8
   # Students can start any time of year.
   day: Friday
-  times: ['18:30', '19:15']
-  durationMinutes: 30
+  classes:
+    - { name: Beginner, time: '18:30' }
+    - { name: Intermediate, time: '19:15' }
+  durationMinutes: 45
   methodBook:
     title: Standard of Excellence, Book 1
     note: Buy the version written for your chosen instrument.

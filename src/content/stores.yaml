@@ -57,10 +57,10 @@
   status: open
   lastChecked: 2026-10-20
   notes: Merged into sister brand Music & Arts (Guitar Center family) in 2024; wwbw.com still operates. Music & Arts also has Bay Area stores and band rental programs.
-- id: musicians-friend
-  name: Musician's Friend
+- id: music-and-arts
+  name: Music & Arts
   kind: online
-  url: https://www.musiciansfriend.com
+  url: https://www.musicarts.com
   status: open
   lastChecked: 2026-10-20
-  notes: Relaunched in May 2026 as an off-price outlet (overstock, open-box). Less suited to beginner band instruments; consider replacing with Music & Arts.
+  notes: Replaced Musician's Friend (now an off-price outlet). Sister brand of Woodwind & Brasswind (same company since 2024); also has Bay Area stores and band rental programs.

@@ -33,7 +33,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 - Persistent **Donate** button (goes to `/give`)
 - Phone pattern ❓ (design phase): hamburger menu, bottom bar, or sticky Donate
 
-**Announcement banner** (`announcements`): one short message with a link, shown only between its start and expiry dates. Example: "New music lessons start soon!" Nov–Feb.
+**Announcement banner:** none (dropped for good).
 
 **Footer**
 - Short mission line + 501(c)(3) statement + EIN
@@ -81,8 +81,8 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | # | Section | Content | Source |
 |---|---|---|---|
 | 1 | Intro | "Free music lessons" + ages 8 to 108 + start any time of year + CTA "Contact us" | Copy §5.1, `lessons` |
-| 2 | Key facts | Cost: free · Ages: 8+ · When: Fridays 6:30 & 7:15 · Where: 844 Alvarado St. | `lessons`, `site` |
-| 3 | How it works | Group lessons, 30 minutes; beginner → intermediate → volunteer band pathway | Copy §5.1 |
+| 2 | Key facts | Cost: free · Ages: 8 to 108 · When: Fridays, beginner 6:30, intermediate 7:15 · Where: 844 Alvarado St. | `lessons`, `site` |
+| 3 | How it works | Group lessons, 45 minutes; beginner → intermediate → volunteer band pathway | Copy §5.1 |
 | 4 | Your teacher | Edgard Gonzalez card (once his details arrive) | `people` |
 | 5 | What students learn | 4 bullet points + "practice at home" tip | Copy §5.1 |
 | 6 | Choose an instrument | Instrument picker with demo video; beginner instruments marked; "no strings or piano" | `instruments`, `lessons` |
@@ -224,7 +224,6 @@ As in `content.md` §6b: onboarding (printable forms from `memberForms`), where 
 | FAQ | `faqs.yaml` | ✅ |
 | Calendars | `calendars.yaml` | ✅ |
 | Music stores | `stores.yaml` | ✅ checked 2026-10-20 (see `todo.md`) |
-| Announcements | `announcements.yaml` | ✅ |
 | Stories / testimonials | `stories/*.md` | ✅ Aubury's quote; new stories to collect |
 | Member forms | `member-forms.yaml` | ✅ titles; PDFs to collect |
 | Tags | `tags.yaml` | ✅ starter set |

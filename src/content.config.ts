@@ -117,23 +117,12 @@ const lessons = defineCollection({
     cost: z.string(),
     minimumAge: z.number().int(),
     day: z.string(),
-    times: z.array(z.string().regex(/^\d{2}:\d{2}$/)),
+    classes: z.array(z.object({ name: z.string(), time: z.string().regex(/^\d{2}:\d{2}$/) })),
     durationMinutes: z.number().int(),
     methodBook: z.object({ title: z.string(), note: z.string() }),
     accessories: z.array(z.object({ instruments: z.string(), items: z.string() })),
     demoVideoId: z.string(),
     remind: z.object({ url: z.url(), instructions: z.string() }).optional(),
-  }),
-});
-
-// Site-wide announcement banner, shown between `starts` and `expires`.
-const announcements = defineCollection({
-  loader: file('src/content/announcements.yaml'),
-  schema: z.object({
-    message: z.string(),
-    link: z.object({ label: z.string(), href: z.string() }).optional(),
-    starts: z.coerce.date(),
-    expires: z.coerce.date(),
   }),
 });
 
@@ -175,7 +164,6 @@ export const collections = {
   calendars,
   faqs,
   lessons,
-  announcements,
   stories,
   memberForms,
 };

@@ -69,7 +69,6 @@ Please collect a few examples. Even "I like the photos on X" or "I hate the menu
 - [ ] Instrument picker with demo video
 - [ ] Lessons FAQ, materials list, store list, Remind instructions
 - [ ] Impact page with yearly numbers and downloadable documents
-- [ ] Toggleable announcement banner with an expiry date ("New lessons start soon!")
 - [ ] Shortcut subdomains and old URLs redirect correctly
 - [ ] Prints cleanly (the lessons page especially)
 - [ ] Beta site for stakeholders, hidden from search engines (no beta banner)

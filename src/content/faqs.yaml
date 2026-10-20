@@ -1,12 +1,12 @@
 # Lessons FAQ. Shown on the Lessons page and marked up as FAQPage data for search.
 - id: when
   question: When are lessons?
-  answer: Typically Friday nights at 6:30 and 7:15. Check the lessons calendar for updates. Each lesson is punctual and runs a half hour.
+  answer: Friday evenings. The beginner class is at 6:30 and the intermediate class at 7:15. Check the lessons calendar for changes. Lessons start on time and run 45 minutes.
   link: { label: Lessons & rehearsals calendar, calendar: lessons }
   order: 1
 - id: how-long
   question: How long are lessons?
-  answer: 30 minutes of instruction. Intermediate students also take part in the volunteer band rehearsal, which runs about 90 minutes.
+  answer: 45 minutes of instruction. Intermediate students also take part in the volunteer band rehearsal, which runs about 90 minutes.
   order: 2
 - id: late
   question: What if we're late?
