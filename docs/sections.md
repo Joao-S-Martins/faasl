@@ -119,7 +119,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 4. Give `/give`
+## 4. Give `/give` — 📝 copy in review (`content.md` §5d)
 
 **Job:** a community donor gives, and knows it's tax-deductible and well used.
 
@@ -161,7 +161,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 6. About `/about` — 📝 copy in review (`content.md` §5c)
+## 6. About `/about` — ✅ copy reviewed (`content.md` §5c)
 
 | # | Section | Content | Source |
 |---|---|---|---|

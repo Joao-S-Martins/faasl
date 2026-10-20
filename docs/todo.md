@@ -177,7 +177,7 @@ Built in this order, each reviewed on a preview URL:
 
 ### Dates & ages to update
 - [ ] 🤖 "Over 35 years later" → years since 1980, calculated automatically
-- [ ] 🧑 Lorenza's bio: "has served as the president for over five years now" → give a start year so it can be calculated
+- [ ] 🧑 Lorenza's bio: give the year she became president so "for over five years" can be calculated, and **re-evaluate the rest of her bio** later
 - [ ] 🤖 Copyright line "© 2007–{year}": calculated automatically
 - [x] 🧑 Beginner age range: ages 8 to 108, confirmed
 - [x] 🧑 "Starting each February": no longer true. Students start any time of year (copy updated).

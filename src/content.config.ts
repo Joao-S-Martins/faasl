@@ -51,6 +51,8 @@ const people = defineCollection({
       photo: image().optional(),
       instruments: z.array(z.string()).default([]),
       memberSince: z.number().int().optional(),
+      // Year the person took on their current title, for "for X years" copy.
+      roleSince: z.number().int().optional(),
       order: z.number().default(100),
       // Drafts show on beta with a "Draft" badge and are left out of production.
       draft: z.boolean().default(false),

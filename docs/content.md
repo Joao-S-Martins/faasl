@@ -415,7 +415,7 @@ That instrument in the back of your closet still has music in it. Many of our me
 
 ---
 
-## 5c. About page (`/about`) — 📝 in review
+## 5c. About page (`/about`) — ✅ reviewed (Lorenza's bio to re-evaluate later)
 
 **Page title:** About the Filarmonica Artista Amadora de San Leandro
 **Meta description:** The Portuguese Band of San Leandro (FAASL) is an all-volunteer community band and nonprofit founded in 1980, offering free music lessons and performing across the Bay Area.
@@ -453,9 +453,56 @@ TODO: bio (see §4). Teaches music for San Leandro schools.
 
 ### Get involved
 
-Our band runs entirely on volunteers. If you have skills to share, from event planning to bookkeeping to photography, we'd love to hear from you. **[Contact us](/contact)**
+Our band runs entirely on volunteers, and there's more to it than music. Help plan our fundraiser dinners, tell our story online and in the community, photograph our performances, or keep a marching band moving between parades and festivals. If you have skills to share, we'd love to hear from you. **[Contact us](/contact)**
 
 **Support our work:** [Give](/give) · [Our impact](/impact)
+
+---
+
+## 5d. Give page (`/give`) — 📝 in review
+
+**Page title:** Support Free Music Education in San Leandro
+**Meta description:** Donate to the Portuguese Band of San Leandro, a 501(c)(3) nonprofit offering free music lessons and community performances since 1980. Gifts are tax-deductible.
+
+# Support the Band
+#### keep music free for the next generation
+
+Since 1980, every lesson we teach has been free. That's only possible because of people like you. Your gift keeps our teachers teaching, our music stands full of sheet music, and our band marching in parades and festas across the Bay Area.
+
+**[Donate]** *(provider TODO)*
+
+### What your gift does
+
+TODO: 3 examples tied to real costs, e.g.
+- **$X** buys sheet music for a new piece for the whole band
+- **$Y** covers a month of free lessons
+- **$Z** helps outfit a musician in our uniform
+
+### Give in someone's name
+
+Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember someone who shared our love of music. We'll gladly send a note to the person or family you choose. TODO: how (a field in the donation form, or contact us).
+
+### Join us at a fundraiser dinner
+
+Throughout the year we host dinners that bring classic Portuguese meals to the table, along with some American staples. Every ticket supports our music programs.
+
+*[Upcoming social events from the calendar]*
+
+### Other ways to help
+
+- **Come hear us play** at a parade, festival or concert
+- **Volunteer** your time and skills ([Get involved](/about#get-involved))
+- **Spread the word:** follow us and share our events
+
+### For businesses
+
+Many employers match their employees' charitable gifts, often doubling them. Ask your HR or giving program whether FAASL qualifies. Interested in supporting us as a business? **[Contact us](/contact)**
+
+> TODO: a quote from a parent or donor (from the new stories)
+
+### The details
+
+The Filarmonica Artista Amadora de San Leandro is a 501(c)(3) nonprofit organization, EIN 94-2930722. Donations are tax-deductible to the extent allowed by law.
 
 ---
 
