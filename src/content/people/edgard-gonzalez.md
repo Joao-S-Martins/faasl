@@ -8,4 +8,4 @@ tags: [lessons]
 published: false
 ---
 
-TODO: Bio, 2–3 sentences.
+TODO: Bio, 2–3 sentences. Mention that he teaches music for San Leandro schools.

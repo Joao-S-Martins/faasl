@@ -166,11 +166,11 @@ A community must nourish its core. For us, this is our volunteer band. This mixe
 
 🖼️ `performing.jpg`: band marching at a carnival / street fair
 
-A community thrives when it shares its talents with others. We work with our contacts in neighboring communities to maintain a robust performance schedule that takes us around the SF Bay and into the Central Valley every year. These performances give our musicians both a sense of accomplishment and a drive to improve. We host many dinners during the year, organized by the board for the benefit of our music programs. These fundraisers bring classic Portuguese meals to our tables, as well as some American staples. Breaking bread together reaffirms our commitment to our community.
+A community thrives when it shares its talents with others. We work with our contacts in neighboring communities to maintain a robust performance schedule that takes us around the SF Bay and Central Valley every year. These performances give our musicians both a sense of accomplishment and a drive to improve. We host many dinners during the year, organized by the board for the benefit of our music programs. These fundraisers bring classic Portuguese meals to our tables, as well as some American staples. Breaking bread together reaffirms our commitment to our community.
 
 Common performances each year:
 - **Holy Ghost parades:** Many parades are hosted by Portuguese organizations each year
-- **Music festivals:** Similar bands host us for concerts just as we host our own
+- **Music festivals:** We host guest bands, or they host us
 - **City events:** Cherry Festival parade and others
 - **Caroling:** Bringing cheer to the holiday season
 
@@ -223,7 +223,7 @@ John was born into our program, pushed in his stroller as his father volunteered
 
 **Edgard Gonzalez** — *Music Teacher* (TODO: confirm exact title)
 🖼️ TODO: headshot (see `todo.md`)
-TODO: Bio, 2–3 sentences. Suggested points: instruments taught, education / credentials, teaching background, how he's connected to the FAASL, something personal.
+TODO: Bio, 2–3 sentences. **Must mention that he teaches music for San Leandro schools.** Other points: instruments taught, education / credentials, how he's connected to the FAASL, something personal.
 - **Teaches:** TODO (e.g. beginner class, woodwinds, brass, percussion)
 - **Credentials:** TODO
 - **Joined FAASL:** TODO (year)
@@ -365,6 +365,55 @@ Arrive 10 minutes early to assemble your instrument and warm up. Parents are wel
 ### 5.11 Closing call to action
 
 **Ready to start?** **[Contact us](/contact)**
+
+---
+
+## 5b. Join page (`/join`) — 📝 in review
+
+**Page title:** Play With Us (❓ or "Join the Band")
+**Meta description:** TODO after review, e.g. "Join a community band in San Leandro for experienced and aspiring musicians. Concert and marching music, festas, parades and festivals."
+
+# Play With Us
+#### a community band for experienced and aspiring musicians alike
+
+Whether you've played for decades or your instrument's been collecting dust, there's a seat for you in our volunteer band. We're a mixed-age group of new and experienced musicians, dedicated to improving one another as much as ourselves. Younger musicians play alongside older ones, learning in a way that simply can't be replicated in a peer-aged group. Experienced musicians take pride in helping the next generation while growing their own skills with a challenging and changing repertoire.
+
+**[Come sit in at a rehearsal](/contact)**
+
+### What we play
+
+We play concert band and marching music, and we perform around the SF Bay and Central Valley every year:
+- **Holy Ghost parades:** hosted by Portuguese communities throughout the year
+- **Music festivals:** we host guest bands, or they host us
+- **City events:** the Cherry Festival parade and others
+- **Caroling:** bringing cheer to the holiday season
+
+*[1–2 short performance videos: TODO]*
+
+### Rehearsals
+
+| | |
+|---|---|
+| **When** | TODO: day and time |
+| **How long** | 2 hours, with a break |
+| **Where** | 844 Alvarado St., San Leandro |
+
+### Our conductors
+
+**Geronimo Rojas** — *Band Conductor*
+Geronimo has been a member of our volunteer band since he was a young middle school student. His love of music has earned him scholarships and taken him traveling. Now he leads the band that supported his journey.
+
+**TODO: name** — *Assistant Conductor*
+TODO: bio. Teaches music for San Leandro schools.
+
+### Played in school? Come back to music.
+
+That instrument in the back of your closet still has music in it. Many of our members returned to playing after years away, and the band is a welcoming place to rediscover it. Want to brush up first, or learn a second instrument? Our [intermediate lessons](/lessons) are open to band members too.
+
+> "After joining FAASL, I think I've grown as a musician because I have the opportunity to play with more experienced musicians."
+> — Aubury Freed
+
+**Ready to play?** Tell us your instrument and a little about your experience, and we'll invite you to a rehearsal. **[Contact us](/contact)**
 
 ---
 

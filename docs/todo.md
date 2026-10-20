@@ -208,7 +208,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Special contacts: who handles what (absences, uniforms, music, general). 💡 Role-based emails (e.g. uniforms@faasl.org) instead of personal numbers.
 
 ### Content items 🧑
-- [ ] **Gather Edgard Gonzalez's details:** exact title, 2–3 sentence bio, instruments, credentials, year joined, headshot, and how families should contact him (for the "What if we're late?" FAQ)
+- [ ] **Add Edgard Gonzalez (Music Teacher) and the Assistant Conductor:** name (assistant conductor), exact titles, 2–3 sentence bios that **mention each one teaches music for San Leandro schools**, instruments, credentials, year joined, headshots, and how families should contact Edgard (for the "What if we're late?" FAQ). Edgard appears on Lessons and About; the assistant conductor on Join and About.
 - [x] **Review the music stores:** web-searched 2026-10-20 (`content.md` §5.3, `src/content/stores.yaml`). A & G Music (Oakland) has closed and is removed.
   - [ ] Call Music Unlimited and Allegro Music to confirm they're open and still rent band instruments
   - [x] Replaced Musician's Friend with Music & Arts
