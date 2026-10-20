@@ -130,7 +130,7 @@ Our founders were mostly Portuguese immigrants with varying musical experience; 
 
 🖼️ `students.jpg`: two young members posed and smiling, holding a clarinet and a flag
 
-A community has to make a priority of providing for its future generations. We do this with our *free* beginner and intermediate programs. All lessons are taught in a group setting, with all the same amenities of our volunteer band. The beginner class introduces new musicians, aged 8+, to their instruments and written music. Students can start any time of year. The intermediate class is a transitional program whereby students rehearse and perform with our volunteer band, but also have a separate weekly lesson to focus on excerpts and musical theory.
+A community has to make a priority of providing for its future generations. We do this with our *free* beginner and intermediate programs. All lessons are taught in a group setting, with all the same amenities of our volunteer band. The beginner class introduces new musicians, aged 8+, to their instruments and written music. Students can start any time of year. The intermediate class builds on the basics with more challenging music and music theory, and many band volunteers use it to learn a second or third instrument.
 
 In our programs, students learn:
 - How to play and maintain their instruments
@@ -230,46 +230,58 @@ TODO: Bio, 2–3 sentences. Suggested points: instruments taught, education / cr
 
 ---
 
-## 5. Lessons page (`/lessons`, was `/students.html`)
-
-**Page title:** TODO, e.g. "Free Music Lessons in San Leandro | Portuguese Band of San Leandro"
-**Meta description:** TODO, e.g. "Free group band lessons for ages 8 and up in San Leandro, CA. Woodwinds, brass and percussion. Students can start any time of year."
-**Social share image:** 🖼️ `img/social/students.jpg`
-**Hero:** 🖼️ `students_slide_1.jpg`
+## 5. Lessons page (`/lessons`, was `/students.html`) — ✅ reviewed
 
 > [!NOTE]
-> The old pages all shared one generic title and description. Unique, keyword-rich titles per page ("free music lessons San Leandro") are one of the quickest SEO wins. The suggestions above are placeholders for you to edit.
+> **Reviewed with you on 2026-10-20.** This is the final copy for the page, top to bottom. Structured parts (key facts, instruments, accessories, stores, FAQ) come from the content files in `src/content/` and are reproduced here so the whole page reads in one place. Open items: Edgard's card and the Remind sign-up (both in `todo.md`).
 
-### 5.1 About our free lessons
+**Page title:** Free Music Lessons in San Leandro
+**Meta description:** Free group band lessons for ages 8 to 108 in San Leandro, CA. Woodwinds, brass and percussion. Start any time of year.
+**Social share image:** 🖼️ `img/social/students.jpg` (to regenerate)
+**Hero:** 🖼️ `students_slide_1.jpg`
 
-## About our free lessons
-#### and how to get started
+### 5.1 Intro
 
-When we say *free lessons*, we really mean it. We have a large backing of volunteers and donors who help us operate this program without needing to charge our students a cent. With that said, we cannot provide new students with instruments and method books. We do have recommendations for renting-to-own or outright purchasing instruments as well as the very inexpensive books.
+# Free Music Lessons
+#### for ages 8 and up, in San Leandro
 
-Our free lessons are taught in a group session once a week. These lessons are 45 minutes and are comparable and complementary to many public school programs. From beginners to those with a few years of experience, you're welcome to start any time of year. It's always a great time to learn, from ages 8 to 108. [Contact us](#contact) to discuss how we can start helping you today!
+When we say *free lessons*, we really mean it. Our volunteers and donors make it possible to teach every student without charging a cent. From beginners to those with a few years of experience, you're welcome to start any time of year. It's always a great time to learn, from ages 8 to 108.
 
-In our programs, students learn:
-- How to play and maintain their instruments
+**[Contact us to get started](/contact)**
+
+| | |
+|---|---|
+| **Cost** | Free |
+| **Ages** | 8 to 108 |
+| **When** | Fridays: beginners 6:30, intermediate 7:15 |
+| **Where** | 844 Alvarado St., San Leandro |
+
+### 5.2 How it works
+
+Lessons are taught in small groups once a week, for 45 minutes. They're comparable to, and a great complement to, many public school music programs.
+- **Beginner class (6:30):** introduces new musicians to their instruments and to reading music.
+- **Intermediate class (7:15):** builds on the basics with more challenging music and music theory. Many of our band volunteers also use it to learn a second or third instrument.
+- **The band:** many of our musicians started in these classes. Our conductor, Geronimo, joined as a middle school student.
+
+### 5.3 Your teacher
+
+*[Edgard Gonzalez card: photo, title, bio. Appears once his details arrive (`todo.md`). See §4.]*
+
+### 5.4 What students learn
+
+- How to play and care for their instrument
 - How to read music and keep time
-- Common scales, musical keys, and notations
-- Musical etiquette and how to practice at home
+- Common scales, musical keys and notation
+- Musical etiquette, and how to practice at home
 
-> 💡 Building a regular practice routine at home is the core of succeeding in music.
+> 💡 Building a regular practice routine at home is the key to succeeding in music.
 > — Every successful musician, ever!
 
-Our program is built around concert band and marching music. Because of this, we only teach instruments that are common to those types of music. This includes woodwinds, brass, and some percussion, but excludes strings (violins, guitars) and keyed instruments (piano).
+### 5.5 Choose an instrument
 
-### 5.2 Choose an instrument
+Our program is built around concert band and marching music, so we teach woodwinds, brass and percussion, but not strings or piano. Tap an instrument to see and hear it. ★ marks the most common choices for beginners.
 
-## Choose an instrument
-#### and fall head-over-heels in love
-
-Click to play the video or select an instrument to jump directly to its demo.
-
-**Demo video:** YouTube `CCTeSjpDsIs` (https://youtu.be/CCTeSjpDsIs)
-
-Instruments marked ★ are the most common for beginners.
+*[Instrument picker with the demo video, YouTube `CCTeSjpDsIs`; instruments and timestamps in `src/content/instruments.yaml`]*
 
 | Instrument | Beginner-friendly | Demo timestamp |
 |---|---|---|
@@ -290,75 +302,69 @@ Instruments marked ★ are the most common for beginners.
 | Snare drum | ★ | 18:43 |
 | Pitched percussion | | 19:38 |
 
-> [!NOTE]
-> Is the instrument list still accurate? Each instrument could get its own short section ("What is it like to play the clarinet?"). That would be great long-tail SEO content for parents, but it's optional.
+### 5.6 What you'll need
 
-### 5.3 Educational materials and recommended stores
+Each student needs their own instrument and method book.
+- **Method book:** *Standard of Excellence, Book 1* (the red one). Buy the version written for your instrument.
+- **Accessories:**
+  - Most woodwinds: extra reeds (size 2.5), a swab and cork grease
+  - Flutes: a cleaning cloth or swab
+  - Most brass: valve oil and slide grease
+  - Trombones: slide oil
+  - Drums: an extra pair of sticks
 
-## Educational materials
-#### and recommended stores
+🖼️ `standards-of-excel-001.jpg` (third-party photo, credit drumsonsale.com; replace with our own if possible)
 
-Each student will need a copy of the red instructional method book, *"Standard of Excellence, Book 1"*.
+### 5.7 Where to rent or buy
 
-🖼️ `standards-of-excel-001.jpg`: a short stack of the red method books (image credit: drumsonsale.com)
-
-> ⚠️ Purchase the version of the book that is written for your chosen instrument.
-
-Additionally, here is a list of items that your instrument will regularly need:
-- **Most woodwinds:** Extra reeds (size 2.5), a swab & cork grease
-- **Flutes:** Cleaning cloth or swab
-- **Most brass:** Valve oil & slide grease
-- **Trombones:** Slide oil
-- **Drums:** An extra pair of sticks
-
-Our musicians have been happy to work with these local music shops through the years:
+Our musicians have been happy with these local shops:
 - [Music Unlimited, San Leandro](https://www.facebook.com/MusicUnlimitedSanLeandro/)
 - [ABC Music, Castro Valley](https://www.facebook.com/abcmusiccastrovalley/)
 - [JAMS Music, Dublin](https://www.jamsmusicdublin.com/)
 - [Allegro Music, Fremont](http://www.allegromusic.net/)
 
-[Woodwind & Brasswind](https://www.wwbw.com) and [Music & Arts](https://www.musicarts.com) are popular online shops, but we recommend visiting a local store with knowledgeable staff when possible.
+*[Store map: Google My Maps `mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa`, loaded on tap]*
 
-**Map:** Google My Maps embed of the stores (`mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa`)
-
-> [!NOTE]
-> **Stores checked 2026-10-20** by web search (details and sources in `src/content/stores.yaml`):
-> - **A & G Music, Oakland: closed.** Yelp and MapQuest list it as permanently closed (a forum post says June 2024). Removed.
-> - **Music Unlimited, San Leandro:** appears open, operating as the showroom for the Instrumentpro online store. No website found.
-> - **ABC Music, Castro Valley:** open (Yelp updated September 2026). Its old website link was swapped for its Facebook page.
-> - **JAMS Music, Dublin:** open; own website current, with school band rentals.
-> - **Allegro Music, Fremont:** probably open (directory listings, a February 2026 review); website not verified.
-> - **Woodwind & Brasswind:** merged into Music & Arts in 2024; wwbw.com still operates. **Musician's Friend:** relaunched in May 2026 as an off-price outlet, less suited to beginners. 💡 Consider listing **Music & Arts** instead (Bay Area stores and band rental programs).
->
-> A phone call is the only sure check; worth doing for Music Unlimited and Allegro before launch. The image credit for the method books should also be confirmed, or the photo swapped for your own.
-
-### 5.4 FAQs
+Online, [Woodwind & Brasswind](https://www.wwbw.com) and [Music & Arts](https://www.musicarts.com) are popular, but we recommend a local store with knowledgeable staff when possible.
 
 > [!NOTE]
-> v3 will mark these up as `FAQPage` structured data, so keeping them as clear question/answer pairs helps search.
+> **Stores checked 2026-10-20** by web search (details and sources in `src/content/stores.yaml`): A & G Music (Oakland) has closed and is removed; Musician's Friend was replaced with Music & Arts. Calls to Music Unlimited and Allegro, and updating the map pins, are in `todo.md`.
+
+### 5.8 Stay in the loop
+
+- **Remind:** TODO: how to join the lessons list (`todo.md`)
+- **Lessons & rehearsals calendar:** [Add to your calendar](https://calendar.google.com/calendar/embed?src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&ctz=America/Los_Angeles)
+
+### 5.9 FAQ
+
+Marked up as `FAQPage` structured data for search. Source: `src/content/faqs.yaml`.
 
 **When are lessons?**
-Friday evenings. The beginner class is at 6:30 and the intermediate class at 7:15. Check the calendar for updates. Each lesson is punctual and runs 45 minutes.
-[Lessons & rehearsals calendar](https://calendar.google.com/calendar/embed?src=faasl.org_an3en78k4a54qotghed951bdfg%40group.calendar.google.com&ctz=America/Los_Angeles)
+Friday evenings. The beginner class is at 6:30 and the intermediate class at 7:15. Check the lessons calendar for changes. Lessons start on time and run 45 minutes.
 
 **How long are lessons?**
-45 minutes for the instructional time. Intermediate students will also participate in the volunteer band rehearsal, which runs about 90 minutes.
+45 minutes.
 
 **What if we're late?**
-Please notify Edgard ASAP if you're running late or have to miss a lesson entirely. When arriving late, enter quietly.
+Please let Edgard know as soon as possible if you're running late or will miss a lesson. If you arrive late, come in quietly.
 
 **Where are lessons?**
-Lessons are taught in the same hall where our volunteer band rehearses.
-844 Alvarado St., San Leandro, CA 94577
+In the hall where our volunteer band rehearses: 844 Alvarado St., San Leandro.
 
 **Anything else?**
-Students should arrive 10 minutes early to assemble their instruments and warm up. Parents are welcome to sit near the class so long as they are completely silent. Parents can also talk in the clubhouse.
+Arrive 10 minutes early to assemble your instrument and warm up. Parents are welcome to sit near the class as long as they stay silent, or to chat in the clubhouse.
 
-> [!WARNING]
-> "Notify Steve" was changed to Edgard. How families reach him is part of gathering Edgard's details in `todo.md`.
+> [!NOTE]
+> How families reach Edgard is part of gathering his details in `todo.md`.
 
-**How do I get lesson updates?**
-TODO: Instructions and link for joining the Remind notifications list for lessons (tracked in `todo.md`).
+### 5.10 Testimonial
+
+> "After joining FAASL, I think I've grown as a musician because I have the opportunity to play with more experienced musicians."
+> — Aubury Freed
+
+### 5.11 Closing call to action
+
+**Ready to start?** **[Contact us](/contact)**
 
 ---
 

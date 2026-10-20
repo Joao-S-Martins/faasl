@@ -6,17 +6,17 @@
   order: 1
 - id: how-long
   question: How long are lessons?
-  answer: 45 minutes of instruction. Intermediate students also take part in the volunteer band rehearsal, which runs about 90 minutes.
+  answer: 45 minutes.
   order: 2
 - id: late
   question: What if we're late?
-  answer: Please let Edgard know as soon as possible if you're running late or have to miss a lesson. When arriving late, enter quietly.
+  answer: Please let Edgard know as soon as possible if you're running late or will miss a lesson. If you arrive late, come in quietly.
   order: 3
 - id: where
   question: Where are lessons?
-  answer: Lessons are taught in the same hall where our volunteer band rehearses, at 844 Alvarado St., San Leandro.
+  answer: 'In the hall where our volunteer band rehearses: 844 Alvarado St., San Leandro.'
   order: 4
 - id: anything-else
   question: Anything else?
-  answer: Students should arrive 10 minutes early to assemble their instruments and warm up. Parents are welcome to sit near the class as long as they're completely silent, or to chat in the clubhouse.
+  answer: Arrive 10 minutes early to assemble your instrument and warm up. Parents are welcome to sit near the class as long as they stay silent, or to chat in the clubhouse.
   order: 5

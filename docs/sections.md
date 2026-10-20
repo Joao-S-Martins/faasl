@@ -74,7 +74,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 2. Lessons `/lessons`
+## 2. Lessons `/lessons` — ✅ copy reviewed (`content.md` §5)
 
 **Job:** a parent on a phone finds out it's free, who it's for, when and where, what to buy, and how to start, in that order.
 
@@ -109,7 +109,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | 2 | What we play | Concert and marching music; festas, parades, festivals, caroling | Copy §3.2 "Perform" |
 | 3 | Watch us | 1–2 performance videos (lightweight embeds) | YouTube (to collect) |
 | 4 | Our conductor | Geronimo's card | `people` |
-| 5 | Rehearsals | Day, time, place ❓ | New (`lessons`/`site`) |
+| 5 | Rehearsals | 2 hours with a break; day and time ❓; place | `lessons` (`bandRehearsal`), `site` |
 | 6 | Testimonial | Musician quote (Aubury Freed) | `stories` |
 | 7 | Returning players | "Played in school? Come back to music." (from the old Remote Restart idea) | New copy |
 | 8 | CTA | "Come sit in at a rehearsal": contact | `/contact` |

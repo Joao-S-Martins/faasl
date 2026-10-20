@@ -8,6 +8,10 @@ program:
     - { name: Beginner, time: '18:30' }
     - { name: Intermediate, time: '19:15' }
   durationMinutes: 45
+  bandRehearsal:
+    durationMinutes: 120
+    note: Two hours, with a break.
+    # TODO: day and time (for the Join page)
   methodBook:
     title: Standard of Excellence, Book 1
     note: Buy the version written for your chosen instrument.

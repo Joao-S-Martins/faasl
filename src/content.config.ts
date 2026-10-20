@@ -119,6 +119,12 @@ const lessons = defineCollection({
     day: z.string(),
     classes: z.array(z.object({ name: z.string(), time: z.string().regex(/^\d{2}:\d{2}$/) })),
     durationMinutes: z.number().int(),
+    bandRehearsal: z.object({
+      durationMinutes: z.number().int(),
+      note: z.string(),
+      day: z.string().optional(),
+      time: z.string().optional(),
+    }),
     methodBook: z.object({ title: z.string(), note: z.string() }),
     accessories: z.array(z.object({ instruments: z.string(), items: z.string() })),
     demoVideoId: z.string(),
