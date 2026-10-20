@@ -1,4 +1,4 @@
-# Printable onboarding forms for the Members page. Put the PDFs in
+# Printable onboarding forms for the Musicians page. Put the PDFs in
 # public/forms/ and set `file`. Forms without a file show "coming soon".
 - id: emergency-contact
   title: Emergency contact & medical form

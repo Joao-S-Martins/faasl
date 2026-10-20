@@ -506,7 +506,7 @@ Prices TODO (`todo.md`):
 
 ### Become a member
 
-Join the FAASL family as a supporting member with an annual membership fee of **$__** *(TODO: amount and what members receive)*. Members keep our lessons free year after year.
+Join the FAASL family as a supporting member with an annual membership fee of **$__** *(TODO: amount and what members receive)*. Members keep our lessons free year after year. *(In v3.1 this links to a new `/members` page about membership benefits.)*
 
 ### Give in someone's name
 
@@ -720,14 +720,14 @@ Messages shown after submitting:
 
 ---
 
-## 6b. Members page (`/members`) — ✅ reviewed
+## 6b. Musicians page (`/musicians`, renamed from Members) — ✅ reviewed
 
-For current students, families and musicians. Linked quietly from the footer ("For members") and kept out of search results; no login. **Only blank forms and general information go here:** completed forms, medical details and personal phone numbers never appear on the site.
+For current students, families and musicians. Linked quietly from the footer ("For musicians") and kept out of search results; no login. **Only blank forms and general information go here:** completed forms, medical details and personal phone numbers never appear on the site.
 
-**Page title:** Members
-**Meta description:** Forms, calendars and contacts for current members of the Portuguese Band of San Leandro.
+**Page title:** Musicians
+**Meta description:** Forms, calendars and contacts for current students, families and band musicians of the Portuguese Band of San Leandro.
 
-# Members
+# Musicians
 #### everything for current students, families and musicians
 
 Welcome to the band! This page has the forms, apps, calendars and contacts you'll need.
@@ -807,7 +807,7 @@ These currently live in `www/.htaccess.bak` on the shared host. They're printed 
 Also: old page URLs (`/index.html`, `/students.html`, `/covid.html`, `/remote.html`, `/hall.html`) should get permanent (301) redirects to their v3 equivalents (`/covid.html` and `/remote.html` → Home), so existing Google rankings and bookmarks carry over.
 
 > [!NOTE]
-> **Members page idea:** the member-only links (practice playlist, RSVP, calendars, volunteer form) could go on one unlisted `/members` page rather than in the public footer. The volunteer hours log is no longer featured.
+> **Musicians page (was the "Members page idea"):** the member-only links (practice playlist, RSVP, calendars, volunteer form) could go on the `/musicians` page rather than in the public footer. The volunteer hours log is no longer featured.
 
 ---
 

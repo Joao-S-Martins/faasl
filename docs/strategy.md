@@ -37,7 +37,7 @@ Goals 1–2 drive the most new work. Goal 5 is mostly the content we already hav
 | **Portuguese-community donors** | Heritage, tradition, familiar faces and festas, multi-generation families, honoring loved ones | `/give` | Donate, attend a dinner, honor/memorial gift |
 | **Corporate donors & sponsors** | Measurable community impact (youth served, free education), visibility for their brand, employee engagement | v3: "Businesses" section on `/give` · v3.1: `/sponsor` | Matching gift / talk to us |
 | **Government & grant funders** scouting non-profits | Mission, programs, outcomes, service area, governance, financial transparency, legal status | `/impact` | Contact; download documents |
-| Current members & families | Onboarding forms (emergency, uniform, photo consent), BAND app, Remind, calendars, contacts, play-along playlist | `/members` (footer link, not in search) | Complete onboarding; stay in the loop |
+| Current members & families | Onboarding forms (emergency, uniform, photo consent), BAND app, Remind, calendars, contacts, play-along playlist | `/musicians` (footer link, not in search) | Complete onboarding; stay in the loop |
 
 ### Home page as a router
 The long scrolling home page tells the whole story once, then sends each audience to its page:
@@ -131,6 +131,6 @@ Funders and stronger talent respond to evidence. These are mostly yours to colle
 | `/events` | Events | unchanged (fundraiser dinners featured) |
 | `/stories` | Stories | rewritten with new member stories / testimonials; feeds every audience page |
 | `/contact` | Contact | unchanged |
-| `/members` | Members (footer link, not in search) | adds onboarding forms, BAND app and contacts |
+| `/musicians` | Musicians (footer link, not in search) | adds onboarding forms, BAND app and contacts |
 
 Launch priority 💡: Home, Lessons, Join, Give, Impact, About, Contact first. Then Events, Stories, galleries. Sponsor and Volunteer pages are v3.1.

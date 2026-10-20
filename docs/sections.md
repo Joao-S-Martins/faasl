@@ -18,7 +18,8 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | `/about` | About us | Everyone, especially donors and funders | ✅ |
 | `/events` | Events | Community, members | ✅ |
 | `/contact` | Contact | Everyone | ✅ |
-| `/members` | Members (footer link, not in search) | Current members & families | ✅ |
+| `/musicians` | Musicians (footer link, not in search) | Current students, families & band musicians | ✅ |
+| `/members` | Paid membership benefits | Supporting members | v3.1 |
 | `/stories` | Member stories | Everyone | After launch (snippets appear from day one) |
 | `/sponsor`, `/volunteer` | | Businesses, organizational talent | v3.1 |
 | `/pt/...` | Portuguese pages | Portuguese community | v3.1 |
@@ -37,11 +38,11 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 **Footer**
 - Short mission line + 501(c)(3) statement + EIN
-- "For members" link to `/members`
+- "For musicians" link to `/musicians`
 - Clubhouse address, mailing address, phone, info@faasl.org (`site`)
 - Social links (`site`)
 - Copyright line (wording pending the ownership decision, `brief.md` §5.2)
-- No long subdomain list (those move to `/members` or are simply redirects)
+- No long subdomain list (those move to `/musicians` or are simply redirects)
 
 **Search & sharing defaults** (built: `SeoHead`)
 - Title pattern: "Page title | Portuguese Band of San Leandro"
@@ -188,7 +189,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 **Search:** structured `Event` data can put performances directly in Google results.
 
-✅ Calendars are separate: Performances and Social events on `/events` (and Home); Lessons & rehearsals on `/lessons` and `/members` only.
+✅ Calendars are separate: Performances and Social events on `/events` (and Home); Lessons & rehearsals on `/lessons` and `/musicians` only.
 
 **Freshness:** event lists are rebuilt from Google Calendar **weekly** (and on demand), with no JavaScript; an event that ends mid-week stays listed until the next refresh. See `deployment.md` §6.
 
@@ -207,9 +208,9 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 9. Members `/members` — ✅ copy reviewed (`content.md` §6b)
+## 9. Musicians `/musicians` — ✅ copy reviewed (`content.md` §6b)
 
-Onboarding forms (printable PDFs from `memberForms`, returned to Geronimo for now), BAND app and Remind sign-up, calendars, the one-line schedule, the play-along playlist, and who to contact. Linked quietly from the footer ("For members") and kept out of search results; no login.
+Onboarding forms (printable PDFs from `musicianForms`, returned to Geronimo for now), BAND app and Remind sign-up, calendars, the one-line schedule, the play-along playlist, and who to contact. Linked quietly from the footer ("For musicians") and kept out of search results; no login.
 ---
 
 ## 10. Content model status

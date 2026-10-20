@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import siteHeaders from './src/integrations/site-headers.mjs';
 
 // Pages that should never appear in the sitemap.
-const UNLISTED = ['/test', '/members', '/404'];
+const UNLISTED = ['/test', '/musicians', '/404'];
 
 export default defineConfig({
   site: 'https://www.faasl.org',

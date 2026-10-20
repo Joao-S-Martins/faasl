@@ -158,9 +158,9 @@ const stories = defineCollection({
     }),
 });
 
-// Printable onboarding forms for the Members page (src/content/member-forms.yaml).
-const memberForms = defineCollection({
-  loader: file('src/content/member-forms.yaml'),
+// Printable onboarding forms for the Musicians page (src/content/musician-forms.yaml).
+const musicianForms = defineCollection({
+  loader: file('src/content/musician-forms.yaml'),
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
@@ -194,7 +194,7 @@ export const collections = {
   faqs,
   lessons,
   stories,
-  memberForms,
+  musicianForms,
   impact,
   schedule,
 };

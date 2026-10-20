@@ -96,7 +96,7 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [ ] 🤝 About: history & heritage, leadership, teachers, short "Get involved" note
 - [ ] 🤝 Events: upcoming (from Google Calendar), fundraiser dinners, subscribe links; past write-ups later
 - [ ] 🤝 Contact: form, address, phone, map, socials
-- [x] 🤝 Members: onboarding forms, BAND app, Remind, calendars, play-along playlist, contacts (`content.md` §6b); footer link, kept out of search
+- [x] 🤝 Musicians (was Members): onboarding forms, BAND app, Remind, calendars, play-along playlist, contacts (`content.md` §6b); footer link, kept out of search
 - [ ] 🤝 Later sections, so the content model leaves room for them: stories, event deep dives, galleries, volunteer bios, tags, search
 
 ## Phase 3 — ⏸ Design (pause before building sections)
@@ -121,7 +121,7 @@ Built in this order, each reviewed on a preview URL:
 - [ ] 🤖 Impact
 - [ ] 🤖 Contact (+ form service)
 - [ ] 🤖 Events (calendar loader)
-- [ ] 🤖 Members
+- [ ] 🤖 Musicians
 - [ ] 🤖 404 page, print styles
 
 ## Phase 5 — Pre-launch
@@ -197,7 +197,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Annual report or financial summary; IRS determination letter; recent Form 990
 - [ ] Prices for the Give page's "What your gift does": sheet music for a new piece (whole band), band dinner after rehearsal, a typical instrument repair, a uniform, carpool support for a performance
 
-### Members page 🧑 (`content.md` §6b)
+### Musicians page 🧑 (`content.md` §6b)
 - [ ] Current emergency contact / medical form (blank)
 - [ ] Current uniform agreement (blank)
 - [ ] Current photo consent form (blank); confirm it covers the website
@@ -207,8 +207,8 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [x] Special contacts: Edgard for lessons; Geronimo for forms, uniforms, music and folders (to be replaced); info@faasl.org for everything else
 
 ### Content items 🧑
-- [ ] **BAND app** (band messages and RSVPs): install links for iPhone and Android, and step-by-step instructions to join our group, for the Members page
-- [ ] **Play-along playlist:** revive and update the YouTube play-along playlist (`practice.faasl.org`) for the Members page
+- [ ] **BAND app** (band messages and RSVPs): install links for iPhone and Android, and step-by-step instructions to join our group, for the Musicians page
+- [ ] **Play-along playlist:** revive and update the YouTube play-along playlist (`practice.faasl.org`) for the Musicians page
 - [ ] **Replace Geronimo as the default contact** for forms, uniforms, music and folders (💡 a role-based address such as members@faasl.org)
 - [ ] **Annual membership:** amount and what members receive, for the "Become a member" section on Give
 - [ ] **Impact page** (`content.md` §5e):
@@ -246,6 +246,11 @@ Goal: a brochure that **regenerates itself from the site's content**, with nothi
 ## v3.1
 
 Follow-up work after the v3 launch.
+
+### Paid membership page
+- [ ] New `/members` page focused on paid membership: annual fee, benefits, how to join and renew
+- [ ] Link it from Give ("Become a member") and decide whether membership is paid through the donation provider
+- [ ] `members.faasl.org` shortcut
 
 ### Portuguese language
 - [ ] Portuguese version of key pages (Home, Lessons, Give, About) under `/pt/`, using Astro's built-in i18n routing
