@@ -27,6 +27,10 @@ create a release (tag) ──► CI checks ──► ⏸ waits for YOUR approval
 
 ## 1. Cloudflare setup
 
+- **A dedicated FAASL Cloudflare account**, separate from your personal one (blog, side projects). Rule of thumb: one Cloudflare account per *owner*, not per site.
+  - Create it with an faasl.org address (e.g. `web@faasl.org`), then invite your personal login as **Super Administrator**. You manage both from one dashboard with the account switcher.
+  - Why: it can be handed over or shared with a board member without exposing your personal sites; a leaked FAASL deploy token can only touch FAASL resources; limits, billing and activity logs stay separate.
+
 - **Cloudflare Workers with static assets.** Third-party write-ups (unconfirmed against Cloudflare's own docs) say Cloudflare now recommends this for new projects over the older Pages product. It serves our static Astro build for free, supports `_headers` and `_redirects` files, and keeps version history for instant rollbacks.
 - **Two separate Workers from one config file** (`wrangler.jsonc` with a `beta` and a `production` environment): `faasl-beta` and `faasl`. Beta can never overwrite production by accident, because they're different deployments with different addresses.
 - **No Cloudflare Git integration.** Cloudflare can also build directly from GitHub, but then any push to the production branch goes live with no approval step. With GitHub Actions doing all deploys, there's one path to production, and it has a gate.
@@ -104,8 +108,9 @@ Each pull request can get its own temporary preview address (Workers "versions" 
 
 ## 7. Setup checklist (also in `todo.md`, Phase 1)
 
-- 🧑 Create the Cloudflare account; turn on two-factor login
-- 🧑 Create a Cloudflare API token (I'll give the exact permissions) and copy the account ID
+- 🧑 Create the **FAASL** Cloudflare account with an faasl.org email; turn on two-factor login
+- 🧑 Invite your personal Cloudflare login to it as Super Administrator
+- 🧑 Inside the FAASL account: choose the `workers.dev` subdomain, create the API token ("Edit Cloudflare Workers" template, limited to the FAASL account) and copy the account ID
 - 🧑 In GitHub: create environments `beta` and `production`; add the token and account ID as environment secrets; set yourself as required reviewer on `production`, limited to `main` and release tags
 - 🧑 In GitHub: branch protection on `main`
 - 🤖 `wrangler.jsonc`, the three workflows, beta mode, README instructions

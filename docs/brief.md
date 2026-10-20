@@ -20,7 +20,7 @@ Related: [`strategy.md`](./strategy.md) (goals, audiences & landing pages) · [`
 - ✅ **Brand colors carry over:** the current greens, golds and whites become official tokens (§5.3)
 - ✅ **Beta launch** for stakeholders before the public launch
 - ✅ **No launch date:** quality over deadline
-- ✅ **Ownership:** you own the accounts (Cloudflare, GitHub, domain) for now
+- ✅ **Ownership:** you own and run the accounts (Cloudflare, GitHub, domain) for now. FAASL gets its **own** Cloudflare account on an faasl.org email, with your personal login added as Super Administrator, so it can be handed over later.
 - ✅ **Deferred to v3.1:** Portuguese-language version; newsletter (Mailchimp or other); sponsorship program & `/sponsor` page; volunteer/board roles page
 - ✅ **No volunteer-hours figures** on the site (recording is spotty and only covers musicians)
 - ✅ **CSS framework:** decided during the design phase, after seeing designs (you lean towards using one)
