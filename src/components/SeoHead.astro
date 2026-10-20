@@ -38,6 +38,7 @@ const organization = {
     postalCode: site.clubhouse.postalCode,
     addressCountry: 'US',
   },
+  areaServed: site.areaServed.map((name) => ({ '@type': 'City', name })),
   sameAs: site.social.map((s) => s.url),
 };
 ---

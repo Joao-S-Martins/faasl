@@ -140,7 +140,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 5. Impact `/impact` — 📝 copy in review (`content.md` §5e)
+## 5. Impact `/impact` — ✅ copy reviewed (`content.md` §5e)
 
 **Job:** a grant reviewer or agency can verify FAASL in five minutes.
 
@@ -227,5 +227,5 @@ As in `content.md` §6b: onboarding (printable forms from `memberForms`), where 
 | Member forms | `member-forms.yaml` | ✅ titles; PDFs to collect |
 | Tags | `tags.yaml` | ✅ starter set |
 | Page copy (long prose) | `pages/*.md` | Next: move from `content.md` |
-| Impact numbers | `impact.yaml` | To collect |
+| Impact numbers | `impact.yaml` | ✅ 2026 figures |
 | Upcoming events | Google Calendar | Next: build-time loader |

@@ -89,6 +89,9 @@ No sponsorship program exists yet. Defining the program and its tiers is v3.1 wo
 - Third-party verification links: **IRS Tax Exempt Organization Search**, **Candid (GuideStar) profile** (a "Seal of Transparency" is free and widely checked by funders), **California Attorney General Registry of Charities** status
 - `Organization` structured data so search engines and funders see consistent facts
 
+### Local search
+Target San Leandro and neighboring cities: **Castro Valley, San Lorenzo, Hayward, Oakland**. They're listed in the organization's structured data (`areaServed`) and should appear naturally in page copy (Lessons, Join, Impact "Who we serve").
+
 ## 5. Domains & subdomains
 
 **Recommendation: one site at `www.faasl.org`, with audience pages as folders, and vanity subdomains that redirect to them.**

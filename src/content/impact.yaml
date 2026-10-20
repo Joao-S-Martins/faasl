@@ -1,0 +1,9 @@
+# Yearly numbers for the Impact page. Update once a year.
+current:
+  year: 2026
+  bandMusicians: '35+'
+  classes: 2
+  regularStudentsPerClass: '12+'
+  studentsPerClassPerYear: 'about 20'
+  paradesPerYear: 'about 12'
+  concertsPerYear: 'about 6'

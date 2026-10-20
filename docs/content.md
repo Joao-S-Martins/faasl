@@ -512,7 +512,7 @@ The Filarmonica Artista Amadora de San Leandro is a 501(c)(3) nonprofit organiza
 
 ---
 
-## 5e. Impact page (`/impact`) — 📝 in review
+## 5e. Impact page (`/impact`) — ✅ reviewed (mission, governance, documents and "who we serve" TODO)
 
 **Page title:** Our Impact
 **Meta description:** Free music education and community performances in San Leandro since 1980. Mission, programs, numbers, governance and documents for the Portuguese Band of San Leandro, a 501(c)(3) nonprofit.
@@ -525,7 +525,7 @@ The Filarmonica Artista Amadora de San Leandro is a 501(c)(3) nonprofit organiza
 
 ### Our mission
 
-TODO: mission statement (`todo.md`). Draft to react to: *"The Portuguese Band of San Leandro provides free music education and mentorship to musicians of all ages, and brings live music to our community."*
+TODO: final wording with the board (`todo.md`). Working draft: *"The Portuguese Band of San Leandro provides free music education and mentorship to musicians of all ages, and brings live music to our community."*
 
 ### At a glance
 
@@ -535,10 +535,10 @@ TODO: mission statement (`todo.md`). Draft to react to: *"The Portuguese Band of
 | **Status** | 501(c)(3) nonprofit, EIN 94-2930722 |
 | **Run by** | Volunteers |
 | **Lessons** | Free, weekly, ages 8 to 108 |
-| **Students per year** | TODO |
-| **Musicians in the band** | TODO |
-| **Performances per year** | TODO |
-| **Where** | San Leandro and the SF Bay Area (Alameda County) |
+| **Lesson classes** | 2 classes, each with 12+ regular students (about 20 per class over a year) |
+| **Musicians in the band** | 35+ (2026) |
+| **Performances per year** | About 18: around 12 parades and 6 concerts |
+| **Where** | San Leandro and neighboring cities: Castro Valley, San Lorenzo, Hayward, Oakland |
 
 ### Our programs
 
@@ -549,7 +549,7 @@ TODO: mission statement (`todo.md`). Draft to react to: *"The Portuguese Band of
 
 ### Who we serve
 
-Students and musicians from San Leandro and neighboring communities, from age 8 to adults of every age. Lessons and band membership are free, so cost is never a barrier to music. TODO: anything you can share about who participates (e.g. share of youth, schools represented, neighborhoods).
+Students and musicians from San Leandro and neighboring communities, including Castro Valley, San Lorenzo, Hayward and Oakland, from age 8 to adults of every age. Lessons and band membership are free, so cost is never a barrier to music. TODO: revisit this section later (`todo.md`).
 
 ### Governance
 

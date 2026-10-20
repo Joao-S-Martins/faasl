@@ -27,6 +27,8 @@ const site = defineCollection({
       region: z.string(),
       postalCode: z.string(),
     }),
+    // Cities we serve, for local search (structured data and page copy).
+    areaServed: z.array(z.string()),
     social: z.array(z.object({ name: z.string(), handle: z.string().optional(), url: z.url() })),
   }),
 });
@@ -165,6 +167,20 @@ const memberForms = defineCollection({
   }),
 });
 
+// Yearly numbers for the Impact page (src/content/impact.yaml).
+const impact = defineCollection({
+  loader: file('src/content/impact.yaml'),
+  schema: z.object({
+    year: z.number().int(),
+    bandMusicians: z.string(),
+    classes: z.number().int(),
+    regularStudentsPerClass: z.string(),
+    studentsPerClassPerYear: z.string(),
+    paradesPerYear: z.string(),
+    concertsPerYear: z.string(),
+  }),
+});
+
 export const collections = {
   site,
   tags,
@@ -176,4 +192,5 @@ export const collections = {
   lessons,
   stories,
   memberForms,
+  impact,
 };

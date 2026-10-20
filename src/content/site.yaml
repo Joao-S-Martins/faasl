@@ -19,6 +19,7 @@ faasl:
     city: San Leandro
     region: CA
     postalCode: '94577'
+  areaServed: [San Leandro, Castro Valley, San Lorenzo, Hayward, Oakland]
   social:
     - name: Facebook
       handle: '@the.faasl'

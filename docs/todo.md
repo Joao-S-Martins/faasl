@@ -192,9 +192,8 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] 🧑 Pick new campaign shortcuts for the audience pages (💡 `give.`, `join.`, `impact.`, `lessons.`), optionally tagged for analytics (`strategy.md` §5)
 
 ### Proof assets for funders & talent (`strategy.md` §6) 🧑
-- [ ] Yearly numbers: students taught, musicians in the band, performances per year (no volunteer hours)
+- [x] Yearly numbers: 35+ band musicians; 2 classes of 12+ regulars (about 20 each per year); about 12 parades and 6 concerts
 - [ ] Annual report or financial summary; IRS determination letter; recent Form 990
-- [ ] Claim / update the Candid (GuideStar) profile; check California Attorney General Registry of Charities status
 - [ ] Prices for the Give page's "What your gift does": sheet music for a new piece (whole band), band dinner after rehearsal, a typical instrument repair, a uniform, carpool support for a performance
 
 ### Members page 🧑 (`content.md` §6b)
@@ -207,6 +206,13 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Special contacts: who handles what (absences, uniforms, music, general). 💡 Role-based emails (e.g. uniforms@faasl.org) instead of personal numbers.
 
 ### Content items 🧑
+- [ ] **Impact page** (`content.md` §5e):
+  - [ ] Revisit "Who we serve" later, with local search in mind: San Leandro, Castro Valley, San Lorenzo, Hayward, Oakland
+  - [ ] Board members and officers (names and roles)
+  - [ ] Documents to publish: IRS determination letter, most recent Form 990, annual report or financial summary
+  - [ ] Claim/update the Candid (GuideStar) profile; confirm California Attorney General registry status
+  - [ ] Grant and partnership contact (a person, or info@faasl.org)
+  - [ ] Update the yearly numbers each year (`src/content/impact.yaml`)
 - [ ] **Edgard Gonzalez, Music Teacher & Assistant Conductor:** 2–3 sentence bio that **mentions he teaches music for San Leandro schools**, instruments, credentials, year joined, headshot, and how families should contact him (for the "What if we're late?" FAQ). He appears on Lessons, Join and About; shown on beta as a **Draft** until done.
 - [x] **Review the music stores:** web-searched 2026-10-20 (`content.md` §5.3, `src/content/stores.yaml`). A & G Music (Oakland) has closed and is removed.
   - [ ] Call Music Unlimited and Allegro Music to confirm they're open and still rent band instruments
@@ -214,7 +220,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
   - [ ] Any new shops to add?
   - [ ] Update the Google My Maps store map: remove A & G Music, check the other pins
 - [ ] **Remind notifications:** get the Remind sign-up link/code and step-by-step instructions for joining the lessons list
-- [ ] **Review the mission statement:** decide on official wording (the README uses "music education and mentorship for underserved youth in the East Bay")
+- [ ] **Mission statement:** work out final wording with the board (working draft in `content.md` §5e)
 - [ ] **Donate button:** no online giving yet. Pick a provider (💡 compare free nonprofit options such as Zeffy, Givebutter, PayPal by fees and ease of use), add honor/memorial gift support, then point `donate.faasl.org` at it
 - [ ] **Rewrite the Stories page:** stories double as testimonials, shown as short snippets on several pages (Home, Lessons, Join, Give, Impact). For each story, pick a one- or two-sentence pull quote. Collect **new** member stories / testimonials (a parent, a student, an experienced musician, a board member, a community partner), using the old Adobe Express stories as a starting point; publish them on faasl.org and point `stories.faasl.org` at it
 - [ ] Instrument list: any changes?
