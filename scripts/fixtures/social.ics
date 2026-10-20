@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FAASL//Sample social events//EN
+X-WR-CALNAME:Social events (SAMPLE)
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VEVENT
+UID:sample-dinner@faasl.org
+DTSTART:20261114T020000Z
+DTEND:20261114T060000Z
+SUMMARY:SAMPLE Fall fundraiser dinner
+LOCATION:844 Alvarado St.\, San Leandro\, CA 94577
+DESCRIPTION:Tickets: $40 adults\, $20 kids under 12.<br>Dress: casual.<br>Menu: sopas and linguiça.
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-raffle@faasl.org
+DTSTART;VALUE=DATE:20270206
+DTEND;VALUE=DATE:20270207
+SUMMARY:SAMPLE Winter raffle drawing
+LOCATION:844 Alvarado St.\, San Leandro\, CA 94577
+DESCRIPTION:Fake raffle for testing. Tickets $5 each from any board member. Drawing at the clubhouse.
+END:VEVENT
+END:VCALENDAR

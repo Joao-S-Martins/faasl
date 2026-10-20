@@ -32,3 +32,17 @@ jobs:
       - run: npm run build
         env:
           SITE_ENV: ${{ inputs.site-env || 'development' }}
+
+  # Summarizes the live Google Calendars in the job log (how many events, how
+  # often, description lengths). Informational only; never fails CI.
+  events-report:
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run events:report

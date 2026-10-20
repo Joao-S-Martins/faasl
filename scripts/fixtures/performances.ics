@@ -1,0 +1,70 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//FAASL//Sample performances//EN
+X-WR-CALNAME:Performances (SAMPLE)
+X-WR-TIMEZONE:America/Los_Angeles
+BEGIN:VTIMEZONE
+TZID:America/Los_Angeles
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0800
+TZOFFSETTO:-0700
+TZNAME:PDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0700
+TZOFFSETTO:-0800
+TZNAME:PST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:sample-past-parade@faasl.org
+DTSTART;TZID=America/Los_Angeles:20260913T100000
+DTEND;TZID=America/Los_Angeles:20260913T130000
+SUMMARY:SAMPLE Past parade (should not appear)
+LOCATION:San Leandro\, CA
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-caroling@faasl.org
+DTSTART;TZID=America/Los_Angeles:20261212T170000
+DTEND;TZID=America/Los_Angeles:20261212T190000
+SUMMARY:SAMPLE Holiday caroling
+LOCATION:Downtown San Leandro\, CA
+DESCRIPTION:Call time 4:30 pm at the clubhouse.<br>Dress: winter uniform\, Santa hats welcome.
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-concert@faasl.org
+DTSTART;TZID=America/Los_Angeles:20270321T150000
+DTEND;TZID=America/Los_Angeles:20270321T170000
+SUMMARY:SAMPLE Spring concert with a guest band
+LOCATION:844 Alvarado St.\, San Leandro\, CA 94577
+DESCRIPTION:<b>Free admission.</b> Call time 2:00 pm.
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-festa-parades@faasl.org
+DTSTART;TZID=America/Los_Angeles:20270509T110000
+DTEND;TZID=America/Los_Angeles:20270509T140000
+RRULE:FREQ=WEEKLY;COUNT=4
+SUMMARY:SAMPLE Holy Ghost festa parade
+LOCATION:Various halls\, SF Bay Area
+DESCRIPTION:Recurring sample: four Sundays in a row. Call time 10:00 am.
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-festa-parades@faasl.org
+RECURRENCE-ID;TZID=America/Los_Angeles:20270516T110000
+DTSTART;TZID=America/Los_Angeles:20270516T130000
+DTEND;TZID=America/Los_Angeles:20270516T160000
+SUMMARY:SAMPLE Holy Ghost festa parade (moved to 1 pm)
+LOCATION:Hayward\, CA
+END:VEVENT
+BEGIN:VEVENT
+UID:sample-cancelled@faasl.org
+DTSTART;TZID=America/Los_Angeles:20261205T100000
+DTEND;TZID=America/Los_Angeles:20261205T120000
+STATUS:CANCELLED
+SUMMARY:SAMPLE Cancelled parade (should not appear)
+END:VEVENT
+END:VCALENDAR

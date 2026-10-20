@@ -1,0 +1,89 @@
+[
+  {
+    "id": "social-sample-dinner-faasl.org-2026-11-14T02-00-00.000Z",
+    "calendar": "social",
+    "title": "SAMPLE Fall fundraiser dinner",
+    "start": "2026-11-14T02:00:00.000Z",
+    "end": "2026-11-14T06:00:00.000Z",
+    "allDay": false,
+    "location": "844 Alvarado St., San Leandro, CA 94577",
+    "description": "Tickets: $40 adults, $20 kids under 12.\nDress: casual.\nMenu: sopas and linguiça.",
+    "sample": true
+  },
+  {
+    "id": "performances-sample-caroling-faasl.org-2026-12-13T01-00-00.000Z",
+    "calendar": "performances",
+    "title": "SAMPLE Holiday caroling",
+    "start": "2026-12-13T01:00:00.000Z",
+    "end": "2026-12-13T03:00:00.000Z",
+    "allDay": false,
+    "location": "Downtown San Leandro, CA",
+    "description": "Call time 4:30 pm at the clubhouse.\nDress: winter uniform, Santa hats welcome.",
+    "sample": true
+  },
+  {
+    "id": "social-sample-raffle-faasl.org-2027-02-06",
+    "calendar": "social",
+    "title": "SAMPLE Winter raffle drawing",
+    "start": "2027-02-06",
+    "end": "2027-02-07",
+    "allDay": true,
+    "location": "844 Alvarado St., San Leandro, CA 94577",
+    "description": "Fake raffle for testing. Tickets $5 each from any board member. Drawing at the clubhouse.",
+    "sample": true
+  },
+  {
+    "id": "performances-sample-concert-faasl.org-2027-03-21T22-00-00.000Z",
+    "calendar": "performances",
+    "title": "SAMPLE Spring concert with a guest band",
+    "start": "2027-03-21T22:00:00.000Z",
+    "end": "2027-03-22T00:00:00.000Z",
+    "allDay": false,
+    "location": "844 Alvarado St., San Leandro, CA 94577",
+    "description": "Free admission. Call time 2:00 pm.",
+    "sample": true
+  },
+  {
+    "id": "performances-sample-festa-parades-faasl.org-2027-05-09T18-00-00.000Z",
+    "calendar": "performances",
+    "title": "SAMPLE Holy Ghost festa parade",
+    "start": "2027-05-09T18:00:00.000Z",
+    "end": "2027-05-09T21:00:00.000Z",
+    "allDay": false,
+    "location": "Various halls, SF Bay Area",
+    "description": "Recurring sample: four Sundays in a row. Call time 10:00 am.",
+    "sample": true
+  },
+  {
+    "id": "performances-sample-festa-parades-faasl.org-2027-05-16T20-00-00.000Z",
+    "calendar": "performances",
+    "title": "SAMPLE Holy Ghost festa parade (moved to 1 pm)",
+    "start": "2027-05-16T20:00:00.000Z",
+    "end": "2027-05-16T23:00:00.000Z",
+    "allDay": false,
+    "location": "Hayward, CA",
+    "sample": true
+  },
+  {
+    "id": "performances-sample-festa-parades-faasl.org-2027-05-23T18-00-00.000Z",
+    "calendar": "performances",
+    "title": "SAMPLE Holy Ghost festa parade",
+    "start": "2027-05-23T18:00:00.000Z",
+    "end": "2027-05-23T21:00:00.000Z",
+    "allDay": false,
+    "location": "Various halls, SF Bay Area",
+    "description": "Recurring sample: four Sundays in a row. Call time 10:00 am.",
+    "sample": true
+  },
+  {
+    "id": "performances-sample-festa-parades-faasl.org-2027-05-30T18-00-00.000Z",
+    "calendar": "performances",
+    "title": "SAMPLE Holy Ghost festa parade",
+    "start": "2027-05-30T18:00:00.000Z",
+    "end": "2027-05-30T21:00:00.000Z",
+    "allDay": false,
+    "location": "Various halls, SF Bay Area",
+    "description": "Recurring sample: four Sundays in a row. Call time 10:00 am.",
+    "sample": true
+  }
+]

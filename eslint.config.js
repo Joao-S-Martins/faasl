@@ -12,7 +12,7 @@ export default defineConfig(
   astro.configs.recommended,
   {
     // Config files and integrations run in Node.
-    files: ['*.{js,mjs}', 'src/integrations/**/*.mjs'],
+    files: ['*.{js,mjs}', 'src/integrations/**/*.mjs', 'scripts/**/*.mjs'],
     languageOptions: { globals: globals.node },
   },
 );

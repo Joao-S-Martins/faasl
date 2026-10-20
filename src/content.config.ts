@@ -95,6 +95,23 @@ const calendars = defineCollection({
   schema: z.object({
     name: z.string(),
     calendarId: z.string(),
+    listEvents: z.boolean(),
+  }),
+});
+
+// Upcoming events copied from the listed calendars by scripts/fetch-events.mjs.
+// Don't edit by hand: the weekly content release rewrites it.
+const events = defineCollection({
+  loader: file('src/content/events.json'),
+  schema: z.object({
+    calendar: reference('calendars'),
+    title: z.string(),
+    start: z.string(),
+    end: z.string(),
+    allDay: z.boolean(),
+    location: z.string().optional(),
+    description: z.string().optional(),
+    sample: z.boolean().optional(),
   }),
 });
 
@@ -191,6 +208,7 @@ export const collections = {
   instruments,
   stores,
   calendars,
+  events,
   faqs,
   lessons,
   stories,
