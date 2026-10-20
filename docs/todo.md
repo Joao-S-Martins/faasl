@@ -207,7 +207,11 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [x] Special contacts: Edgard for lessons; Geronimo for forms, uniforms, music and folders (to be replaced); info@faasl.org for everything else
 
 ### Content items 🧑
-- [ ] **Keep the public Google Calendars up to date.** The first live report (2026-10-20) found only **1** upcoming performance in the next 12 months ("[Tentative] Festival das Filarmónicas 2026", Nov 7, no location or description) and **0** social events, versus about 12 parades, 6 concerts and several dinners a year. The site can only list what's on the calendars: add each event with a location and a description (call time, tickets, dress code).
+- [ ] **Keep the public Google Calendars up to date.** Live check (2026-10-20, next 12 months):
+  - **Lessons & rehearsals:** healthy. 17 recurring series, 156 upcoming occurrences (beginner, intermediate, rehearsal every Friday), all with location and description.
+  - **Performances:** 129 past events since 2017, but only **1** upcoming ("[Tentative] Festival das Filarmónicas 2026", Nov 7, no location or description). New performances need adding, with location and a description (call time, dress code).
+  - **Social events:** 40 events, the most recent in **August 2022**. Fundraisers since then were never added.
+- [ ] Decide whether the Lessons and Musicians pages should list the next few lessons and rehearsals (and schedule changes) from the lessons calendar
 - [ ] **BAND app** (band messages and RSVPs): install links for iPhone and Android, and step-by-step instructions to join our group, for the Musicians page
 - [ ] **Play-along playlist:** revive and update the YouTube play-along playlist (`practice.faasl.org`) for the Musicians page
 - [ ] **Replace Geronimo as the default contact** for forms, uniforms, music and folders (💡 a role-based address such as members@faasl.org)
