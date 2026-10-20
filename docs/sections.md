@@ -18,7 +18,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | `/about` | About us | Everyone, especially donors and funders | ✅ |
 | `/events` | Events | Community, members | ✅ |
 | `/contact` | Contact | Everyone | ✅ |
-| `/members` | Members (unlisted) | Current members & families | ✅ |
+| `/members` | Members (footer link, not in search) | Current members & families | ✅ |
 | `/stories` | Member stories | Everyone | After launch (snippets appear from day one) |
 | `/sponsor`, `/volunteer` | | Businesses, organizational talent | v3.1 |
 | `/pt/...` | Portuguese pages | Portuguese community | v3.1 |
@@ -37,6 +37,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 **Footer**
 - Short mission line + 501(c)(3) statement + EIN
+- "For members" link to `/members`
 - Clubhouse address, mailing address, phone, info@faasl.org (`site`)
 - Social links (`site`)
 - Copyright line (wording pending the ownership decision, `brief.md` §5.2)
@@ -206,10 +207,9 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 
 ---
 
-## 9. Members `/members` (unlisted)
+## 9. Members `/members` — ✅ copy reviewed (`content.md` §6b)
 
-As in `content.md` §6b: onboarding (printable forms from `memberForms`), where to return them, Remind, calendars, RSVP, volunteer form, practice playlist (hidden if the page is ever listed), special contacts. Hidden from search; a switch lets it be listed later without the practice playlist.
-
+Onboarding forms (printable PDFs from `memberForms`, returned to Geronimo for now), BAND app and Remind sign-up, calendars, the one-line schedule, the play-along playlist, and who to contact. Linked quietly from the footer ("For members") and kept out of search results; no login.
 ---
 
 ## 10. Content model status

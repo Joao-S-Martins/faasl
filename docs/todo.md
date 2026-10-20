@@ -96,7 +96,7 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [ ] 🤝 About: history & heritage, leadership, teachers, short "Get involved" note
 - [ ] 🤝 Events: upcoming (from Google Calendar), fundraiser dinners, subscribe links; past write-ups later
 - [ ] 🤝 Contact: form, address, phone, map, socials
-- [ ] 🤝 Members (unlisted): onboarding forms, Remind, calendars, RSVP, practice playlist, special contacts (`content.md` §6b). Include a switch to list it publicly later with the practice playlist hidden.
+- [x] 🤝 Members: onboarding forms, BAND app, Remind, calendars, play-along playlist, contacts (`content.md` §6b); footer link, kept out of search
 - [ ] 🤝 Later sections, so the content model leaves room for them: stories, event deep dives, galleries, volunteer bios, tags, search
 
 ## Phase 3 — ⏸ Design (pause before building sections)
@@ -203,10 +203,14 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [ ] Current photo consent form (blank); confirm it covers the website
 - [ ] Anything else in the new-member packet (code of conduct, instrument loan, dues?)
 - [x] Forms are printable (PDF downloads)
-- [ ] Where do completed forms go (in person to whom / email)?
-- [ ] Special contacts: who handles what (absences, uniforms, music, general). 💡 Role-based emails (e.g. uniforms@faasl.org) instead of personal numbers.
+- [x] Completed forms go to Geronimo for now
+- [x] Special contacts: Edgard for lessons; Geronimo for forms, uniforms, music and folders (to be replaced); info@faasl.org for everything else
 
 ### Content items 🧑
+- [ ] **BAND app** (band messages and RSVPs): install links for iPhone and Android, and step-by-step instructions to join our group, for the Members page
+- [ ] **Play-along playlist:** revive and update the YouTube play-along playlist (`practice.faasl.org`) for the Members page
+- [ ] **Replace Geronimo as the default contact** for forms, uniforms, music and folders (💡 a role-based address such as members@faasl.org)
+- [ ] **Annual membership:** amount and what members receive, for the "Become a member" section on Give
 - [ ] **Impact page** (`content.md` §5e):
   - [ ] Revisit "Who we serve" later, with local search in mind: San Leandro, Castro Valley, San Lorenzo, Hayward, Oakland
   - [ ] Board members and officers (names and roles)

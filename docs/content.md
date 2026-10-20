@@ -504,6 +504,10 @@ Prices TODO (`todo.md`):
 - **$__** outfits a musician in our uniform
 - **$__** supports the carpools that get our musicians to performances
 
+### Become a member
+
+Join the FAASL family as a supporting member with an annual membership fee of **$__** *(TODO: amount and what members receive)*. Members keep our lessons free year after year.
+
 ### Give in someone's name
 
 Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember someone who shared our love of music. Just let us know who your gift honors. TODO: how (a field in the donation form, or contact us).
@@ -716,38 +720,55 @@ Messages shown after submitting:
 
 ---
 
-## 6b. Members page (`/members`, unlisted)
+## 6b. Members page (`/members`) — ✅ reviewed
 
-For current members, students and families. **Unlisted** for now: not in the menu and hidden from search engines, but anyone with the link can open it (no login). It may be listed publicly later, **without the practice playlist** (the "music link"). The site will have a switch for that, so listing it is a one-line change.
+For current students, families and musicians. Linked quietly from the footer ("For members") and kept out of search results; no login. **Only blank forms and general information go here:** completed forms, medical details and personal phone numbers never appear on the site.
 
-> [!WARNING]
-> Because anyone with the link can see this page, it must only hold **blank** forms and general information. Completed forms (emergency contacts, medical info, signatures) never go on the website; they're returned on paper, by email, or through a Google Form that only the board can see. The same goes for personal phone numbers (see "Special contacts" below).
+**Page title:** Members
+**Meta description:** Forms, calendars and contacts for current members of the Portuguese Band of San Leandro.
 
-### New member onboarding
-Everything a new student, family or musician needs to get started, in order:
+# Members
+#### everything for current students, families and musicians
 
-Forms are **printable PDFs** to download, fill in and return.
+Welcome to the band! This page has the forms, apps, calendars and contacts you'll need.
 
-1. **Emergency contact & medical form** — TODO: current document (PDF)
-2. **Uniform agreement** — TODO: current document (PDF)
-3. **Photo consent form** — TODO: current document (PDF; must cover publishing on the website; see `brief.md` §5.1)
-4. TODO: anything else in the current new-member packet (code of conduct? instrument loan agreement? membership dues?)
-5. Where to return completed forms: TODO (in person to whom / email address)
+### New member? Start here
+
+Print, fill in and return these forms:
+
+1. **Emergency contact & medical form** · [Download PDF] *(TODO: PDF)*
+2. **Uniform agreement** · [Download PDF] *(TODO: PDF)*
+3. **Photo consent form** · [Download PDF] *(TODO: PDF)*
+
+Return completed forms to **Geronimo**. *(TODO: replace with a role-based contact)*
 
 ### Stay in the loop
-- **Remind:** TODO: how to join the lessons Remind list (same instructions as the Lessons page)
-- **Calendars:** subscribe links for Lessons & rehearsals, Performances, Social events (see §3.3)
-- **RSVP form** (`rsvp.faasl.org`)
-- **Volunteer form** (`volunteer.faasl.org`)
 
-### Practice
-- **Practice playlist** (`practice.faasl.org`, YouTube). ⚠ Hidden if the page is ever listed publicly.
+- **BAND app:** we use BAND for band messages and RSVPs. *(TODO: install links for iPhone and Android, plus how to join our group)*
+- **Remind:** lesson updates for students and families. *(TODO: how to join)*
+- **Calendars:** add any of these to your phone or computer:
+  - Lessons & rehearsals
+  - Performances
+  - Social events
 
-### Special contacts
-TODO: who to contact for what, e.g. absences and lateness (Edgard?), uniforms, music and folders, general questions (info@faasl.org).
+### This week
+
+{{schedule}}, at {{address}}.
+
+### Play along at home
+
+Practice with our play-along playlist on YouTube. [Open the playlist] *(TODO: revive and update the playlist)*
+
+### Who to contact
+
+| For | Contact |
+|---|---|
+| Missing or late to a lesson | Edgard *(TODO: how)* |
+| Forms, uniforms, music and folders | Geronimo *(TODO: replace with a role-based contact)* |
+| Everything else | info@faasl.org |
 
 > [!NOTE]
-> 💡 Prefer **role-based email addresses** (e.g. uniforms@faasl.org forwarding to the right volunteer) or "message us on Remind" over personal phone numbers. They survive volunteers changing roles and keep personal numbers off a public page.
+> Removed after review: the volunteer Google Form (no longer used) and the RSVP form (now only for special recruiting events; RSVPs happen in BAND). Their shortcuts, `volunteer.faasl.org` and `rsvp.faasl.org`, keep redirecting to the forms.
 
 ---
 
