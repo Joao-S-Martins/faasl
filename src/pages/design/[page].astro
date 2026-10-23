@@ -249,21 +249,107 @@ const taglines = [
       (staff lines, notes, a sharp, a fermata) in hunter green on white, with gold only as a small
       accent. Decorative only.
     </p>
-    <h3>Staff tile</h3>
-    <TilePattern variant="staff" />
-    <h3>Rosette of notes ✅ preferred</h3>
+    <h3>Rosette of notes ✅ chosen</h3>
     <p>
       Beamed eighth notes turned four times around a gold ring, on a square tile with a margin like
       grout. Each corner carries a quarter ring and a gold quarter circle, so four tiles suggest one
-      ring across the grout, as on a tiled wall.
+      ring across the grout, as on a tiled wall. Nothing is drawn in the grout.
     </p>
     <TilePattern variant="rosette" height="18rem" />
+
+    <h3>Staff tile, for horizontal bands</h3>
+    <p>
+      A sharp, beamed notes and a fermata on a staff, built like the rosette (same face, grout and
+      corners) so the two sit together. Used one tile high, as a band.
+    </p>
+
+    <h4>Under a page header</h4>
+    <div class="example">
+      <div class="mock-header">
+        <p class="mock-kicker">Lessons</p>
+        <p class="mock-title">Free music lessons in San Leandro</p>
+      </div>
+      <TilePattern variant="staff" tile={48} height="48px" frame={false} />
+    </div>
+
+    <h4>Between sections</h4>
+    <div class="example mock-page">
+      <p>…the end of one section, with its call to action.</p>
+      <TilePattern variant="staff" tile={40} height="40px" frame={false} />
+      <p>The next section starts here.</p>
+    </div>
+
+    <h4>A tile panel: staff border around rosettes</h4>
+    <p class="note">
+      The classic layout of a Portuguese tile panel: a border row framing a field of patterned
+      tiles. For a heritage section or the About page.
+    </p>
+    <div class="example panel">
+      <TilePattern variant="staff" tile={64} height="64px" frame={false} />
+      <TilePattern variant="rosette" tile={64} height="128px" frame={false} />
+      <TilePattern variant="staff" tile={64} height="64px" frame={false} />
+    </div>
+
+    <h4>Above the footer</h4>
+    <div class="example">
+      <TilePattern variant="staff" tile={32} height="32px" frame={false} />
+      <div class="mock-footer">
+        Portuguese Band of San Leandro · Where generations play together.
+      </div>
+    </div>
+
     <h3>Subtle staff, for section backgrounds</h3>
     <TilePattern variant="subtle" height="4rem" />
   </Section>
 </PageLayout>
 
 <style>
+  .example {
+    margin-block: var(--space-s) var(--space-m);
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .mock-page {
+    padding-block: var(--space-s);
+  }
+
+  .mock-page p {
+    margin: var(--space-s) var(--space-m);
+  }
+
+  .mock-header {
+    padding: var(--space-m);
+    background: var(--color-hunter-green);
+    color: var(--color-white);
+  }
+
+  .mock-kicker {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .mock-title {
+    font-family: var(--font-heading);
+    font-size: var(--step-3);
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .mock-footer {
+    padding: var(--space-m);
+    background: var(--color-hunter-green);
+    color: var(--color-white);
+    font-size: var(--step--1);
+  }
+
+  .panel {
+    border: 0;
+    border-radius: 0;
+  }
+
   .name-lead {
     font-family: var(--font-heading);
     font-size: var(--step-3);

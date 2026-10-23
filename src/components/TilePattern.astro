@@ -8,10 +8,12 @@ interface Props {
   ink?: string;
   accent?: string;
   ground?: string;
-  /** Rosette only: the gap between tiles. */
+  /** Wall tiles (staff, rosette): the gap between tiles. */
   grout?: string;
   height?: string;
   tile?: number;
+  /** Rounded outline around the whole pattern; off for bands and panels. */
+  frame?: boolean;
 }
 
 const {
@@ -22,24 +24,35 @@ const {
   grout = 'var(--color-off-white)',
   height = '7rem',
   tile = 96,
+  frame = true,
 } = Astro.props;
 const id = `tile-${variant}-${Math.random().toString(36).slice(2, 8)}`;
 const width = variant === 'subtle' ? tile * 2 : tile;
+
+// Shared by the wall tiles (staff, rosette): a square face inside a grout
+// margin, with corner motifs drawn from the face corners so nothing crosses
+// the grout. Four neighbors complete each corner ring by eye.
+const cornerArcs =
+  'M3 19 A16 16 0 0 0 19 3 M77 3 A16 16 0 0 0 93 19 M93 77 A16 16 0 0 0 77 93 M19 93 A16 16 0 0 0 3 77';
+const cornerDots =
+  'M3 3 H10 A7 7 0 0 1 3 10 Z M93 3 V10 A7 7 0 0 1 86 3 Z M93 93 H86 A7 7 0 0 1 93 86 Z M3 93 V86 A7 7 0 0 1 10 93 Z';
 ---
 
-<svg class="tiles" style={`height:${height}`} aria-hidden="true" focusable="false">
+<svg
+  class:list={['tiles', { frame }]}
+  style={`height:${height}`}
+  aria-hidden="true"
+  focusable="false"
+>
   <defs>
     {variant === 'staff' && (
       <pattern id={id} width={tile} height={tile} patternUnits="userSpaceOnUse" viewBox="0 0 96 96">
-        <rect width="96" height="96" fill={ground} />
+        <rect width="96" height="96" fill={grout} />
+        <rect x="3" y="3" width="90" height="90" fill={ground} />
+        <path d={cornerArcs} fill="none" stroke={ink} stroke-width="1.5" />
+        <path d={cornerDots} fill={accent} />
         <g fill="none" stroke={ink} stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="90" height="90" rx="2" stroke-width="1.5" />
-          {/* corner quarter-circles meet neighbouring tiles to form rings */}
-          <path
-            d="M3 17 A14 14 0 0 0 17 3 M79 3 A14 14 0 0 0 93 17 M93 79 A14 14 0 0 0 79 93 M17 93 A14 14 0 0 0 3 79"
-            stroke={accent}
-            stroke-width="2"
-          />
+          <rect x="3" y="3" width="90" height="90" stroke-width="1" />
           {/* staff */}
           <path d="M14 40 H82 M14 46 H82 M14 52 H82 M14 58 H82 M14 64 H82" stroke-width="1.2" />
           {/* sharp */}
@@ -63,18 +76,8 @@ const width = variant === 'subtle' ? tile * 2 : tile;
         {/* grout between tiles, then the tile itself */}
         <rect width="96" height="96" fill={grout} />
         <rect x="3" y="3" width="90" height="90" fill={ground} />
-        {/* corner motifs drawn from each face corner, so they stay on the
-            tile; four neighbors complete the ring by eye, across the grout */}
-        <path
-          d="M3 19 A16 16 0 0 0 19 3 M77 3 A16 16 0 0 0 93 19 M93 77 A16 16 0 0 0 77 93 M19 93 A16 16 0 0 0 3 77"
-          fill="none"
-          stroke={ink}
-          stroke-width="1.5"
-        />
-        <path
-          d="M3 3 H10 A7 7 0 0 1 3 10 Z M93 3 V10 A7 7 0 0 1 86 3 Z M93 93 H86 A7 7 0 0 1 93 86 Z M3 93 V86 A7 7 0 0 1 10 93 Z"
-          fill={accent}
-        />
+        <path d={cornerArcs} fill="none" stroke={ink} stroke-width="1.5" />
+        <path d={cornerDots} fill={accent} />
         <g fill="none" stroke={ink} stroke-linecap="round" stroke-width="1.5">
           <rect x="3" y="3" width="90" height="90" stroke-width="1" />
           <circle cx="48" cy="48" r="35" />
@@ -133,6 +136,9 @@ const width = variant === 'subtle' ? tile * 2 : tile;
   .tiles {
     display: block;
     width: 100%;
+  }
+
+  .frame {
     border-radius: var(--radius);
     border: 1px solid #ddd;
   }
