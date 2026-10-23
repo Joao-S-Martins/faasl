@@ -75,7 +75,7 @@ a {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-faasl-green);
+  outline: 3px solid var(--color-hunter-green);
   outline-offset: 2px;
 }
 

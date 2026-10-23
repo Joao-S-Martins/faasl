@@ -3,14 +3,9 @@
 // production). /design/brand is the brand guide; decisions live in
 // docs/brand.md.
 import '@fontsource-variable/fraunces';
-import '@fontsource-variable/source-sans-3';
-import '@fontsource/barlow-condensed/600.css';
 import '@fontsource/barlow-condensed/700.css';
 import '@fontsource/barlow/400.css';
 import '@fontsource/barlow/600.css';
-import '@fontsource/abril-fatface';
-import '@fontsource/lato/400.css';
-import '@fontsource/lato/700.css';
 import PageLayout from '../../layouts/PageLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import Section from '../../components/Section.astro';
@@ -18,7 +13,7 @@ import Logo from '../../components/Logo.astro';
 import TilePattern from '../../components/TilePattern.astro';
 import ButtonLink from '../../components/ButtonLink.astro';
 import Actions from '../../components/Actions.astro';
-import { contrast, rating } from '../../lib/contrast';
+import { contrast } from '../../lib/contrast';
 import { getSite, isProduction } from '../../lib/site';
 
 export function getStaticPaths() {
@@ -28,53 +23,66 @@ export function getStaticPaths() {
 const site = await getSite();
 
 const palette = [
-  { name: 'Hunter green', hex: '#355749', role: 'Primary: buttons, links, headings' },
   {
-    name: 'FAASL green',
-    hex: '#00A079',
-    role: 'Official green: bands of color, icons, large type',
+    name: 'Hunter green',
+    hex: '#355749',
+    role: 'The brand color: buttons, links, headings, dark bands (the jacket and tie)',
   },
-  { name: 'Gold', hex: '#F3DD3E', role: 'Accent: the lyre, highlights, Donate' },
-  { name: 'Light gold', hex: '#FFEB5B', role: 'Light backgrounds, highlights' },
-  { name: 'White', hex: '#FFFFFF', role: 'Page background (uniform shirts, pants, hats)' },
-  { name: 'Off-white', hex: '#F0F0F0', role: 'Surfaces, text on dark green' },
+  {
+    name: 'Gold',
+    hex: '#F3DD3E',
+    role: 'Only the lyre and small uniform-like accents (thin lines, trim, dots). Never text, buttons or backgrounds.',
+  },
+  { name: 'White', hex: '#FFFFFF', role: 'Page background (shirts, pants, hats)' },
+  { name: 'Off-white', hex: '#F0F0F0', role: 'Surfaces and cards' },
   { name: 'Ink', hex: '#333333', role: 'Body text' },
 ];
 
+const retired = [
+  {
+    name: 'FAASL green',
+    hex: '#00A079',
+    why: 'Not a good representation; hunter green leads instead.',
+  },
+  { name: 'Light gold', hex: '#FFEB5B', why: 'Gold is reserved for the lyre and accents.' },
+];
+
+// Only text pairs at 4.5:1 or better are allowed, at any size; pairs that break
+// a brand rule are not allowed whatever their ratio.
 const pairs = [
   { fg: '#333333', bg: '#FFFFFF', label: 'Ink on white' },
+  { fg: '#333333', bg: '#F0F0F0', label: 'Ink on off-white' },
   { fg: '#355749', bg: '#FFFFFF', label: 'Hunter green on white' },
+  { fg: '#355749', bg: '#F0F0F0', label: 'Hunter green on off-white' },
   { fg: '#FFFFFF', bg: '#355749', label: 'White on hunter green' },
-  { fg: '#F3DD3E', bg: '#355749', label: 'Gold on hunter green' },
-  { fg: '#333333', bg: '#F3DD3E', label: 'Ink on gold' },
-  { fg: '#355749', bg: '#FFEB5B', label: 'Hunter green on light gold' },
-  { fg: '#FFFFFF', bg: '#00A079', label: 'White on FAASL green' },
-  { fg: '#333333', bg: '#00A079', label: 'Ink on FAASL green' },
-  { fg: '#00A079', bg: '#FFFFFF', label: 'FAASL green on white' },
-  { fg: '#F3DD3E', bg: '#FFFFFF', label: 'Gold on white' },
-].map((pair) => ({ ...pair, ratio: contrast(pair.fg, pair.bg) }));
+  { fg: '#F0F0F0', bg: '#355749', label: 'Off-white on hunter green' },
+  { fg: '#F3DD3E', bg: '#355749', label: 'Gold on hunter green', rule: 'gold is never text' },
+  { fg: '#333333', bg: '#F3DD3E', label: 'Ink on gold', rule: 'gold is never a background' },
+  { fg: '#F3DD3E', bg: '#FFFFFF', label: 'Gold on white', rule: 'unreadable' },
+  { fg: '#FFFFFF', bg: '#00A079', label: 'White on FAASL green', rule: 'retired color' },
+].map((pair) => {
+  const ratio = contrast(pair.fg, pair.bg);
+  const allowed = !pair.rule && ratio >= 4.5;
+  const verdict = allowed ? 'Allowed' : `Not allowed: ${pair.rule ?? 'below 4.5:1'}`;
+  return { ...pair, ratio, allowed, verdict };
+});
 
 const fontPairs = [
   {
-    id: 'a',
-    name: 'A · Warm heritage',
-    heading: "'Fraunces Variable', Georgia, serif",
-    body: "'Source Sans 3 Variable', system-ui, sans-serif",
-    note: 'Fraunces (a soft, characterful serif) with Source Sans 3. Trustworthy and warm; reads well for long text and giving pages.',
-  },
-  {
     id: 'b',
-    name: 'B · Marching band',
+    name: 'B · Marching band (your favorite)',
     heading: "'Barlow Condensed', 'Arial Narrow', sans-serif",
+    headingWeight: 700,
     body: "'Barlow', system-ui, sans-serif",
-    note: 'Barlow Condensed with Barlow. Uniform-like, energetic and modern; strong for headings and event listings.',
+    note: 'Barlow Condensed headings with Barlow text. Uniform-like, energetic and modern.',
   },
   {
-    id: 'c',
-    name: 'C · Familiar (closest to v2)',
-    heading: "'Abril Fatface', Georgia, serif",
-    body: "'Lato', system-ui, sans-serif",
-    note: 'Abril Fatface (the free cousin of the old site’s Abril Display) with Lato. Bold and classic; headings only, never long text.',
+    id: 'd',
+    name: 'D · Heritage headings, marching text',
+    heading: "'Fraunces Variable', Georgia, serif",
+    headingWeight: 650,
+    body: "'Barlow', system-ui, sans-serif",
+    note: 'Fraunces headings (from the warm heritage pairing) with Barlow text. Warmer, more trustworthy headlines; same clean text.',
   },
 ];
 
@@ -88,7 +96,6 @@ const taglines = [
     text: 'Free music lessons and live music for our community, since 1980.',
     source: 'New option',
   },
-  { text: 'Music for every age. Free since 1980.', source: 'New option (short)' },
   { text: 'Where generations play together.', source: 'New option (short)' },
 ];
 ---
@@ -126,20 +133,13 @@ const taglines = [
           <p class="lockup-official">{site.legalName}</p>
         </div>
       </div>
-      <div class="lockup on-gold">
-        <Logo size={64} />
-        <div>
-          <p class="lockup-name">{site.name}</p>
-          <p class="lockup-official">{site.legalName}</p>
-        </div>
-      </div>
       <div class="lockup stacked on-white">
         <Logo size={96} />
         <p class="lockup-name">{site.name}</p>
       </div>
     </div>
     <p class="note">
-      The gold lyre works on white and hunter green; on gold backgrounds it switches to ink. The
+      The gold lyre on white or hunter green. Gold appears only in the lyre and small accents. The
       uniform crest joins these once a vector exists.
     </p>
   </Section>
@@ -157,6 +157,21 @@ const taglines = [
         </li>
       ))}
     </ul>
+    <h3>Retired</h3>
+    <ul class="swatches retired">
+      {retired.map(({ name, hex, why }) => (
+        <li>
+          <span class="chip" style={`background:${hex}`} />
+          <span>
+            <s>
+              <strong>{name}</strong> <code>{hex}</code>
+            </s>
+            <br />
+            <span class="note">{why}</span>
+          </span>
+        </li>
+      ))}
+    </ul>
     <h3>The uniform</h3>
     <div
       class="uniform"
@@ -166,17 +181,23 @@ const taglines = [
       <span style="background:#FFFFFF;color:#333">Shirt, pants, hat</span>
       <span style="background:#F3DD3E;color:#333">Lyre</span>
     </div>
-    <p class="note">Site green to be matched to a daylight photo of a jacket.</p>
+    <p class="note">Hunter green to be checked against a daylight photo of a jacket.</p>
   </Section>
 
-  <Section title="Readable color pairs">
-    <p>Checked against WCAG 2.2 AA (4.5:1 for normal text, 3:1 for large text).</p>
+  <Section title="Text and background pairs">
+    <p>
+      Rule: text may only use <strong>allowed</strong> pairs, which meet WCAG 2.2 AA at 4.5:1 or
+      better at any size. Ratios use the WCAG formula, which measures brightness, not how vivid a
+      color looks. Anything else is not allowed, even where WCAG would permit large text.
+    </p>
     <ul class="pairs">
-      {pairs.map(({ fg, bg, label, ratio }) => (
-        <li style={`color:${fg};background:${bg}`}>
-          <strong>{label}</strong>
-          <span>
-            {ratio}:1 · {rating(ratio)}
+      {pairs.map(({ fg, bg, label, ratio, allowed, verdict }) => (
+        <li class:list={{ blocked: !allowed }}>
+          <span class="sample" style={`color:${fg};background:${bg}`}>
+            {label}
+          </span>
+          <span class="verdict">
+            {allowed ? '✓' : '✗'} {verdict} · {ratio}:1
           </span>
         </li>
       ))}
@@ -194,11 +215,16 @@ const taglines = [
       </a>
       <a href="#">A text link</a>
     </Actions>
+    <p class="accent-rule">A gold accent line, like uniform trim</p>
   </Section>
 
   <Section title="Font pairings">
-    {fontPairs.map(({ id, name, heading, body, note }) => (
-      <article class="font-pair" id={`fonts-${id}`} style={`--heading:${heading};--body:${body}`}>
+    {fontPairs.map(({ id, name, heading, headingWeight, body, note }) => (
+      <article
+        class="font-pair"
+        id={`fonts-${id}`}
+        style={`--heading:${heading};--heading-weight:${headingWeight};--body:${body}`}
+      >
         <p class="pair-name">{name}</p>
         <p class="pair-h1">We've built a community around music</p>
         <p class="pair-h2">Free music lessons for ages 8 to 108</p>
@@ -226,23 +252,18 @@ const taglines = [
     </ol>
   </Section>
 
-  <Section title="Portuguese tile pattern">
+  <Section title="Musical tile patterns">
     <p>
-      An <em>azulejo</em>-inspired pattern recolored into our palette instead of the traditional
-      blue, for dividers, bands and heritage sections.
+      Hand-painted tiles are traditionally blue on white. These borrow the idea with musical motifs
+      (staff lines, notes, a sharp, a fermata) in hunter green on white, with gold only as a small
+      accent. Decorative only.
     </p>
-    <TilePattern />
-    <TilePattern colors={{ ground: '#355749', shape: '#00A079', accent: '#F3DD3E' }} />
-    <TilePattern
-      colors={{ ground: '#FFFFFF', shape: '#F0F0F0', accent: '#FFEB5B' }}
-      height="4rem"
-      tile={36}
-    />
-    <TilePattern
-      colors={{ ground: '#F3DD3E', shape: '#FFEB5B', accent: '#FFFFFF' }}
-      height="2rem"
-      tile={24}
-    />
+    <h3>Staff tile</h3>
+    <TilePattern variant="staff" />
+    <h3>Rosette of notes</h3>
+    <TilePattern variant="rosette" />
+    <h3>Subtle staff, for section backgrounds</h3>
+    <TilePattern variant="subtle" height="4rem" />
   </Section>
 </PageLayout>
 
@@ -308,15 +329,6 @@ const taglines = [
     color: #f3dd3e;
   }
 
-  .on-gold {
-    background: #f3dd3e;
-    color: #333;
-  }
-
-  .on-gold :global(.logo) {
-    color: #333;
-  }
-
   .swatches {
     display: grid;
     gap: var(--space-xs);
@@ -362,16 +374,43 @@ const taglines = [
 
   .pairs li {
     display: grid;
+    gap: 0.25rem;
+  }
+
+  .sample {
     padding: var(--space-s);
     border: 1px solid #ddd;
     border-radius: var(--radius);
+    font-weight: 700;
+  }
+
+  .verdict {
+    font-size: var(--step--1);
+  }
+
+  .blocked .sample {
+    text-decoration: line-through;
+  }
+
+  .blocked .verdict {
+    color: #a12;
+    font-weight: 700;
+  }
+
+  .retired .chip {
+    opacity: 0.5;
+  }
+
+  .accent-rule {
+    padding-bottom: var(--space-xs);
+    border-bottom: 3px solid var(--color-gold);
   }
 
   .donate-sample {
     padding: 0.375rem 0.875rem;
     border-radius: var(--radius);
-    background: var(--color-gold);
-    color: var(--color-ink);
+    background: var(--color-hunter-green);
+    color: var(--color-white);
     font-weight: 700;
     text-decoration: none;
   }
@@ -395,7 +434,7 @@ const taglines = [
   .pair-h1 {
     font-family: var(--heading);
     font-size: var(--step-3);
-    font-weight: 700;
+    font-weight: var(--heading-weight);
     line-height: 1.1;
     color: var(--color-hunter-green);
   }
@@ -403,14 +442,9 @@ const taglines = [
   .pair-h2 {
     font-family: var(--heading);
     font-size: var(--step-2);
-    font-weight: 600;
+    font-weight: var(--heading-weight);
     line-height: 1.15;
     color: var(--color-hunter-green);
-  }
-
-  #fonts-c .pair-h1,
-  #fonts-c .pair-h2 {
-    font-weight: 400;
   }
 
   .pair-accents {

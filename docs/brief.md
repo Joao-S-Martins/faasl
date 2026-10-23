@@ -104,21 +104,9 @@ You already have a consent form, so **no new form is needed for the website.** T
   - README / `LICENSE.md`: "FAASL.org by **FAASL Volunteers**", licensed CC BY-NC-SA 4.0 (and `www/package.json` says CC-BY-NC-ND-4.0)
 - ❓ Decide who the site's content and code belong to, and state it consistently. 💡 Common pattern: **content and photos © the organization** (footer), **site code** under your name or an open-source license in `LICENSE.md`. Worth a quick conversation with the board; this isn't legal advice.
 
-### 5.3 Brand colors (from the current site)
+### 5.3 Brand colors
 
-These become the official palette and design tokens. Exact uses are settled in the design phase.
-
-| Token | Hex | Where it comes from | Use it for |
-|---|---|---|---|
-| **Hunter green** | `#355749` | v2 primary color (links, buttons, favicon tile) | Primary text accents, buttons, headers. White text on it passes AA (8.0:1). |
-| **FAASL green** | `#00A079` | Official brand color (Pantone Green CP, `branding/`) | Large headings, bands of color, icons. ⚠ White text on it only passes for large text (3.3:1). |
-| **Gold** | `#F3DD3E` | v2 accent (gold buttons, header highlights) | Highlights, CTA buttons with dark text (9.2:1 with `#333`). ⚠ Never gold text on white (1.4:1). |
-| **Light gold** | `#FFEB5B` | v2 backgrounds (calendar, section patterns) | Light section backgrounds, banners |
-| **White** | `#FFFFFF` | v2 background | Page background |
-| **Off-white** | `#F0F0F0` | v2 text on dark backgrounds | Text on dark green, subtle backgrounds |
-| Dark text | `#333333` | v2 body text | Body text |
-
----
+See [`brand.md`](./brand.md) (Colors). Hunter green `#355749` leads; gold `#F3DD3E` only for the lyre and small accents; white, off-white and ink for the rest. FAASL green and light gold are retired. Text only uses pairs at 4.5:1 or better.
 
 ## 5.4 SEO guardrails
 

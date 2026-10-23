@@ -1,13 +1,13 @@
 /*
- * Design tokens. Colors carry over from the v2 site (see docs/brief.md §5.3).
+ * Design tokens. Colors: docs/brand.md and docs/brief.md §5.3.
  * Type, spacing and the rest are placeholders until the design phase.
  */
 :root {
-  /* Brand palette */
+  /* Brand palette (docs/brand.md): hunter green leads; gold is only for the
+     lyre and small uniform-like accents (thin lines, trim), never text or
+     backgrounds. */
   --color-hunter-green: #355749;
-  --color-faasl-green: #00a079;
   --color-gold: #f3dd3e;
-  --color-light-gold: #ffeb5b;
   --color-white: #ffffff;
   --color-off-white: #f0f0f0;
   --color-ink: #333333;
@@ -18,6 +18,10 @@
   --color-link: var(--color-hunter-green);
   --color-surface: var(--color-off-white);
   --color-accent: var(--color-gold);
+
+  /* Review markers (TODOs and drafts on beta only; not part of the brand) */
+  --color-review-bg: #fff3a6;
+  --color-review-line: #c9a800;
 
   /* Type (system fonts until the design phase picks a typeface) */
   --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;

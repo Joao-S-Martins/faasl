@@ -25,18 +25,22 @@ Design cue: green and white dominate, with gold as the accent (the lyre). When a
 
 ## Colors
 
-The v2 palette carries over (`brief.md` §5.3): hunter green `#355749`, FAASL green `#00A079`, gold `#F3DD3E`, light gold `#FFEB5B`, white, off-white `#F0F0F0`, ink `#333333`.
+- **Hunter green `#355749` is the brand color** (the jacket and tie): buttons, links, headings, dark bands.
+- **Gold `#F3DD3E` is only for the lyre and small uniform-like accents** (thin lines, trim, dots). Never text, buttons or backgrounds.
+- White `#FFFFFF`, off-white `#F0F0F0` and ink `#333333` for backgrounds, surfaces and text.
+- **Retired:** FAASL green `#00A079` (not a good representation) and light gold `#FFEB5B`.
+- **Text rule:** only pairs at **4.5:1 or better** (WCAG 2.2 AA at any size) are allowed: ink, hunter green on white or off-white; white or off-white on hunter green. Everything else is not allowed, even where WCAG would permit large text. The brand guide page (`/design/brand` on beta) shows each pair with its ratio.
 
 ## Typography
 
-Not tied to any fonts. The old site used Adobe fonts (Abril Display, Annabelle, Serenity) and the old brochure used Mr Eaves XL Modern and Monarcha. v3 uses **free, self-hosted fonts**, chosen in the design phase from a few pairings shown on beta.
+Not tied to any fonts; v3 uses **free, self-hosted fonts**. Favorite so far: **B, Barlow Condensed headings with Barlow text**. Being considered: **D, Fraunces headings with Barlow text** (warmer headlines). Both are on the brand guide page.
 
 ## Portuguese motifs
 
-Left out in the past because they clashed with the brand colors or the inclusive message. Now welcome in moderation: Portuguese culture is widely appreciated in the Bay Area, and many members aren't Portuguese.
-- 💡 Recolor traditional motifs (e.g. *azulejo* tile patterns) into the brand greens and golds instead of the classic blue, so they belong to our palette.
-- Use as accents (dividers, backgrounds, heritage sections), not as the main look.
-- Keep religious symbols out unless specifically wanted.
+Left out in the past because they clashed with the brand colors or the inclusive message. Now welcome in moderation.
+- Traditional tiles are blue on white and rarely geometric, so a recolored geometric tile looked wrong and was dropped.
+- **Direction: tile patterns built from musical motifs** (staff lines, notes, sharps, fermatas) in hunter green on white, gold only as a small accent. First drafts on the brand guide page.
+- Use as accents (dividers, backgrounds, heritage sections), not the main look. No religious symbols unless specifically wanted.
 
 ## Voice
 
@@ -49,7 +53,7 @@ Left out in the past because they clashed with the brand colors or the inclusive
 
 - Current: "We're committed to impacting lives through music education and mentorship." (the best so far; open to an update)
 - From the old brochure: "Dedicated to bringing free music education and public performance opportunities to the greater East Bay."
-- New options to explore in the design phase.
+- New options: "Free music lessons and live music for our community, since 1980." and "Where generations play together." ("Music for every age. Free since 1980." was dropped as weak.)
 
 ## Photography
 
