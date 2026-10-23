@@ -17,10 +17,10 @@ const site = await getSite();
 <BaseLayout title="Share image" description="The social share image." noindex>
   <div class="card">
     <div class="tiles">
-      <TilePattern variant="checker" tile={105} height="630px" frame={false} />
+      <TilePattern variant="checker" tile={96} height="630px" frame={false} center="both" />
     </div>
     <div class="box">
-      <Logo size={112} />
+      <Logo size={100} />
       <p class="name">{site.name}</p>
       <p class="official">{site.legalName}</p>
       <p class="tagline">{site.tagline}</p>
@@ -43,40 +43,50 @@ const site = await getSite();
     inset: 0;
   }
 
+  /* Eight by four tiles, centered on grout lines so no tile is cut by
+     the box; the gold border sits inside a green margin, apart from the
+     tiles' gold corners. */
   .box {
     position: relative;
     display: grid;
+    align-content: center;
     justify-items: center;
-    gap: 14px;
-    padding: 40px 64px 44px;
+    gap: 12px;
+    width: 768px;
+    height: 384px;
     background: var(--color-hunter-green);
     color: var(--color-white);
     text-align: center;
-    border: 6px solid var(--color-gold);
-    box-shadow: 0 0 0 10px var(--color-hunter-green);
+  }
+
+  .box::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border: 5px solid var(--color-gold);
   }
 
   .box :global(.logo) {
     color: var(--color-gold);
-    margin-bottom: 6px;
+    margin-bottom: 4px;
   }
 
   .name {
     font-family: var(--font-heading);
-    font-size: 64px;
+    font-size: 58px;
     font-weight: 700;
     line-height: 1;
   }
 
   .official {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 600;
   }
 
   .tagline {
     padding-top: 14px;
     border-top: 3px solid var(--color-gold);
-    font-size: 30px;
+    font-size: 28px;
     font-style: italic;
   }
 </style>

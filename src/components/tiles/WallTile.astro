@@ -2,7 +2,8 @@
 // One wall tile (96 × 96): a square face inside a grout margin, with corner
 // motifs drawn from the face corners so nothing crosses the grout; four
 // neighbors complete each corner ring by eye. Used inside TilePattern's SVG
-// patterns (docs/brand.md, Portuguese motifs).
+// patterns (docs/brand.md, Portuguese motifs). The face outline is inset
+// by half its stroke so it never reaches the grout.
 interface Props {
   kind: 'rosette' | 'staff';
   x?: number;
@@ -30,37 +31,42 @@ const cornerDots =
   {kind === 'staff' && (
     <g>
       <g fill="none" stroke={ink} stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="3" width="90" height="90" stroke-width="1" />
-        {/* staff */}
-        <path d="M14 36 H82 M14 42 H82 M14 48 H82 M14 54 H82 M14 60 H82" stroke-width="1.2" />
-        {/* stems: up on the right for low notes, down on the left for high */}
-        <path d="M29.4 53 V33 M47.4 50 V30 M59.4 44 V27 M68.6 40 V60" stroke-width="1.6" />
-        <path d="M47.4 30.5 L59.4 27.5" stroke-width="4" />
+        <rect x="3.5" y="3.5" width="89" height="89" stroke-width="1" />
       </g>
-      {/* half note, two beamed eighth notes, quarter note */}
-      <ellipse
-        cx="26"
-        cy="54"
-        rx="3.8"
-        ry="2.7"
-        transform="rotate(-22 26 54)"
-        fill={ground}
-        stroke={ink}
-        stroke-width="1.5"
-      />
-      <g fill={ink}>
-        <ellipse cx="44" cy="51" rx="4.2" ry="3" transform="rotate(-22 44 51)" />
-        <ellipse cx="56" cy="45" rx="4.2" ry="3" transform="rotate(-22 56 45)" />
-        <ellipse cx="72" cy="39" rx="4.2" ry="3" transform="rotate(-22 72 39)" />
+      {/* the staff and notes sit 2 units low, so their optical center is the tile's */}
+      <g transform="translate(0 2)">
+        <g fill="none" stroke={ink} stroke-linecap="round" stroke-linejoin="round">
+          {/* staff */}
+          <path d="M11 36 H85 M11 42 H85 M11 48 H85 M11 54 H85 M11 60 H85" stroke-width="1.35" />
+          {/* stems: up on the right for low notes, down on the left for high */}
+          <path d="M29.4 53 V33 M47.4 50 V30 M59.4 44 V27 M68.6 40 V60" stroke-width="1.6" />
+          <path d="M47.4 30.5 L59.4 27.5" stroke-width="4" />
+        </g>
+        {/* half note, two beamed eighth notes, quarter note */}
+        <ellipse
+          cx="26"
+          cy="54"
+          rx="3.8"
+          ry="2.7"
+          transform="rotate(-22 26 54)"
+          fill={ground}
+          stroke={ink}
+          stroke-width="1.5"
+        />
+        <g fill={ink}>
+          <ellipse cx="44" cy="51" rx="4.2" ry="3" transform="rotate(-22 44 51)" />
+          <ellipse cx="56" cy="45" rx="4.2" ry="3" transform="rotate(-22 56 45)" />
+          <ellipse cx="72" cy="39" rx="4.2" ry="3" transform="rotate(-22 72 39)" />
+        </g>
       </g>
     </g>
   )}
   {kind === 'rosette' && (
     <g>
       <g fill="none" stroke={ink} stroke-linecap="round" stroke-width="1.5">
-        <rect x="3" y="3" width="90" height="90" stroke-width="1" />
+        <rect x="3.5" y="3.5" width="89" height="89" stroke-width="1" />
         <circle cx="48" cy="48" r="35" />
-        <circle cx="48" cy="48" r="9" stroke={accent} stroke-width="2" />
+        <circle cx="48" cy="48" r="9" stroke={accent} stroke-width="2.5" />
       </g>
       {/* beamed eighth notes, turned four times. Stems up on the right of
           the notehead, as written; a beam instead of flags, so the turn
@@ -74,7 +80,7 @@ const cornerDots =
             d="M45.4 35.4 V23 M55.4 35.4 V23"
             fill="none"
             stroke={ink}
-            stroke-width="1.6"
+            stroke-width="1.4"
             stroke-linecap="round"
           />
           <path d="M45.4 24 H55.4" stroke={ink} stroke-width="3.5" />

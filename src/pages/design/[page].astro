@@ -255,7 +255,7 @@ const taglines = [
       grout. Each corner carries a quarter ring and a gold quarter circle, so four tiles suggest one
       ring across the grout, as on a tiled wall. Nothing is drawn in the grout.
     </p>
-    <TilePattern variant="rosette" height="18rem" />
+    <TilePattern variant="rosette" height="18rem" center="both" />
 
     <h3>Staff tile, for horizontal bands</h3>
     <p>
@@ -269,13 +269,13 @@ const taglines = [
         <p class="mock-kicker">Lessons</p>
         <p class="mock-title">Free music lessons in San Leandro</p>
       </div>
-      <TilePattern variant="staff" tile={48} height="48px" frame={false} />
+      <TilePattern variant="staff" tile={64} height="64px" frame={false} center="x" />
     </div>
 
     <h4>Between sections</h4>
     <div class="example mock-page">
       <p>…the end of one section, with its call to action.</p>
-      <TilePattern variant="staff" tile={40} height="40px" frame={false} />
+      <TilePattern variant="staff" tile={48} height="48px" frame={false} center="x" />
       <p>The next section starts here.</p>
     </div>
 
@@ -285,14 +285,14 @@ const taglines = [
       tiles. For a heritage section or the About page.
     </p>
     <div class="example panel">
-      <TilePattern variant="staff" tile={64} height="64px" frame={false} />
-      <TilePattern variant="rosette" tile={64} height="128px" frame={false} />
-      <TilePattern variant="staff" tile={64} height="64px" frame={false} />
+      <TilePattern variant="staff" tile={64} height="64px" frame={false} center="x" />
+      <TilePattern variant="rosette" tile={64} height="128px" frame={false} center="x" />
+      <TilePattern variant="staff" tile={64} height="64px" frame={false} center="x" />
     </div>
 
     <h4>Above the footer</h4>
     <div class="example">
-      <TilePattern variant="staff" tile={32} height="32px" frame={false} />
+      <TilePattern variant="staff" tile={48} height="48px" frame={false} center="x" />
       <div class="mock-footer">
         Portuguese Band of San Leandro · Where generations play together.
       </div>
