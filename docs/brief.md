@@ -47,8 +47,9 @@ See [`strategy.md`](./strategy.md). In short:
 
 Please collect a few examples. Even "I like the photos on X" or "I hate the menu on Y" is useful.
 
-- [x] **[awesomeorchestra.com](https://awesomeorchestra.com)**: a fan of its design, structure and organization. Not to copy its design or text, but a model for how organized and clear our messaging can grow to be over time.
+- [x] **[awesomeorchestra.com](https://awesomeorchestra.com)**: mainly its **organization**: structure and clear messaging. The design is nice, but the organization is what to learn from. Not to copy its design or text.
 - [ ] 2–4 more websites you like (any topic): what do you like about each?
+  - Candidates to look at (Oct 2026): music and youth programs: musicwill.org, sphinxmusic.org, elsistemausa.org, laphil.com/learn/yola, sfsymphony.org (youth orchestra pages), dallaswinds.org, marineband.marines.mil · nonprofits: 826valencia.org, accfb.org, charitywater.org, habitat.org, codeforamerica.org · information design: gov.uk, nps.gov (a park's "Plan your visit"), khanacademy.org
 - [ ] 1–2 other community bands, youth music programs or filarmónicas, as peers
 - [ ] 1–2 non-profit sites with donation and sponsor pages you find convincing
 - [ ] Anything you specifically **don't** want
