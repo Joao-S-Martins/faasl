@@ -76,6 +76,15 @@ jobs:
 
 (Action versions get pinned to exact releases when it's built.)
 
+### Switches (GitHub repository variables)
+
+| Variable | Effect | Default (not set) |
+|---|---|---|
+| `BETA_DEPLOY_PAUSED` = `true` | Checks still run on every push, but beta isn't deployed | Beta deploys on every push to `v3` |
+| `PRODUCTION_DEPLOY_ENABLED` = `true` | Allows production deploys (still behind your approval) | Production deploys are off |
+
+⚠️ These must be **repository variables**: *Settings → Secrets and variables → Actions → Variables → Repository variables*. A variable created inside an environment (like `beta`) is invisible to these on/off checks, because GitHub evaluates them before loading the environment. Secrets are different: the Cloudflare secrets **should** stay inside the `beta` and `production` environments.
+
 ## 3. How production is protected
 
 Several layers, each cheap to set up:

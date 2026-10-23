@@ -18,7 +18,9 @@ concurrency:
 jobs:
   ci:
     # Disabled until launch: set the repository variable
-    # PRODUCTION_DEPLOY_ENABLED to "true".
+    # PRODUCTION_DEPLOY_ENABLED to "true". It must be a *repository* variable
+    # (Settings → Secrets and variables → Actions → Variables → Repository
+    # variables); environment variables aren't visible to this check.
     if: vars.PRODUCTION_DEPLOY_ENABLED == 'true'
     uses: ./.github/workflows/ci.yml
     with:

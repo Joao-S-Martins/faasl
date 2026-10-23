@@ -22,6 +22,10 @@ jobs:
 
   deploy:
     needs: ci
+    # Pause switch: set the *repository* variable BETA_DEPLOY_PAUSED to "true"
+    # (Settings → Secrets and variables → Actions → Variables → Repository
+    # variables). Environment variables aren't visible to this check.
+    if: vars.BETA_DEPLOY_PAUSED != 'true'
     runs-on: ubuntu-latest
     environment:
       name: beta
