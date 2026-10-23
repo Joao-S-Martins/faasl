@@ -62,10 +62,11 @@ Goal: prove the whole pipeline end to end (code → CI → Cloudflare preview) w
 ### CI & deploys
 Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build and deploy; beta deploys automatically, production only with your approval.
 - [x] 🤖 `ci.yml`: on every push and PR: install → `astro check` → lint → build
-- [ ] 🧑 **Create a dedicated FAASL Cloudflare account** (free plan) with an faasl.org email (e.g. `web@faasl.org`); enable two-factor login. Keep personal sites in your personal account (`deployment.md` §1).
+- [x] 🧑 **Create a dedicated FAASL Cloudflare account** (free plan) with an faasl.org email (e.g. `web@faasl.org`); enable two-factor login. Keep personal sites in your personal account (`deployment.md` §1).
 - [ ] 🧑 Invite your personal Cloudflare login to the FAASL account as Super Administrator
-- [ ] 🧑 In the FAASL account: choose the `workers.dev` subdomain; create the API token ("Edit Cloudflare Workers" template, limited to the FAASL account); note the account ID
-- [ ] 🧑 GitHub: create environments `beta` and `production`; add the token and account ID as environment secrets; make yourself the required reviewer on `production`, limited to `main` and release tags
+- [x] 🧑 In the FAASL account: choose the `workers.dev` subdomain; create the API token ("Edit Cloudflare Workers" template, limited to the FAASL account); note the account ID Subdomain: `faasl` → beta at https://faasl-beta.faasl.workers.dev
+- [x] 🧑 GitHub: `beta` environment with `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; `BETA_DEPLOY_ENABLED` = true
+- [ ] 🧑 GitHub: `production` environment (same secrets, you as required reviewer, limited to `main` and release tags) — before launch
 - [ ] 🧑 GitHub: branch protection on `main` (pull requests, CI must pass, no force-push)
 - [x] 🤖 `wrangler.jsonc` with two Workers (`faasl-beta`, `faasl`) and beta mode (`noindex`, robots block)
 - [x] 🤖 `deploy-beta.yml`: on push to `v3` after CI passes → build in beta mode → deploy to `faasl-beta`
