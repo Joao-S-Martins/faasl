@@ -1,4 +1,5 @@
 ---
+import WallTile from './tiles/WallTile.astro';
 import { MEASURES, writeStaff } from '../lib/staff';
 
 // Patterns built from musical motifs, drawn like hand-painted tiles in the
@@ -6,16 +7,17 @@ import { MEASURES, writeStaff } from '../lib/staff';
 // (docs/brand.md, Portuguese motifs). Decorative only.
 interface Props {
   /**
-   * Wall tiles: `staff` (one tile high, for bands) and `rosette`.
+   * Wall tiles: `staff` (one tile high, for bands), `rosette`, and
+   * `checker` (the two alternating).
    * Staff lines: `line` (one long staff, a section break) and `field`
    * (offset staves, a background).
    */
-  variant?: 'staff' | 'rosette' | 'line' | 'field';
+  variant?: 'staff' | 'rosette' | 'checker' | 'line' | 'field';
   /** Line color (hunter green by default) and accent (gold, used sparingly). */
   ink?: string;
   accent?: string;
   ground?: string;
-  /** Wall tiles (staff, rosette): the gap between tiles. */
+  /** Wall tiles: the gap between tiles. */
   grout?: string;
   height?: string;
   tile?: number;
@@ -50,13 +52,7 @@ const fieldStaves = [
 ];
 const staffWidth = MEASURES.length * MEASURE;
 
-// Shared by the wall tiles (staff, rosette): a square face inside a grout
-// margin, with corner motifs drawn from the face corners so nothing crosses
-// the grout. Four neighbors complete each corner ring by eye.
-const cornerArcs =
-  'M3 19 A16 16 0 0 0 19 3 M77 3 A16 16 0 0 0 93 19 M93 77 A16 16 0 0 0 77 93 M19 93 A16 16 0 0 0 3 77';
-const cornerDots =
-  'M3 3 H10 A7 7 0 0 1 3 10 Z M93 3 V10 A7 7 0 0 1 86 3 Z M93 93 H86 A7 7 0 0 1 93 86 Z M3 93 V86 A7 7 0 0 1 10 93 Z';
+const colors = { ink, accent, ground, grout };
 ---
 
 <svg
@@ -66,70 +62,28 @@ const cornerDots =
   focusable="false"
 >
   <defs>
+    {variant === 'checker' && (
+      <pattern
+        id={id}
+        width={tile * 2}
+        height={tile * 2}
+        patternUnits="userSpaceOnUse"
+        viewBox="0 0 192 192"
+      >
+        <WallTile kind="rosette" {...colors} />
+        <WallTile kind="staff" x={96} {...colors} />
+        <WallTile kind="staff" y={96} {...colors} />
+        <WallTile kind="rosette" x={96} y={96} {...colors} />
+      </pattern>
+    )}
     {variant === 'staff' && (
       <pattern id={id} width={tile} height={tile} patternUnits="userSpaceOnUse" viewBox="0 0 96 96">
-        <rect width="96" height="96" fill={grout} />
-        <rect x="3" y="3" width="90" height="90" fill={ground} />
-        <path d={cornerArcs} fill="none" stroke={ink} stroke-width="1.5" />
-        <path d={cornerDots} fill={accent} />
-        <g fill="none" stroke={ink} stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="90" height="90" stroke-width="1" />
-          {/* staff */}
-          <path d="M14 36 H82 M14 42 H82 M14 48 H82 M14 54 H82 M14 60 H82" stroke-width="1.2" />
-          {/* stems: up on the right for low notes, down on the left for high */}
-          <path d="M29.4 53 V33 M47.4 50 V30 M59.4 44 V27 M68.6 40 V60" stroke-width="1.6" />
-          <path d="M47.4 30.5 L59.4 27.5" stroke-width="4" />
-        </g>
-        {/* half note, two beamed eighth notes, quarter note */}
-        <ellipse
-          cx="26"
-          cy="54"
-          rx="3.8"
-          ry="2.7"
-          transform="rotate(-22 26 54)"
-          fill={ground}
-          stroke={ink}
-          stroke-width="1.5"
-        />
-        <g fill={ink}>
-          <ellipse cx="44" cy="51" rx="4.2" ry="3" transform="rotate(-22 44 51)" />
-          <ellipse cx="56" cy="45" rx="4.2" ry="3" transform="rotate(-22 56 45)" />
-          <ellipse cx="72" cy="39" rx="4.2" ry="3" transform="rotate(-22 72 39)" />
-        </g>
+        <WallTile kind="staff" {...colors} />
       </pattern>
     )}
     {variant === 'rosette' && (
       <pattern id={id} width={tile} height={tile} patternUnits="userSpaceOnUse" viewBox="0 0 96 96">
-        {/* grout between tiles, then the tile itself */}
-        <rect width="96" height="96" fill={grout} />
-        <rect x="3" y="3" width="90" height="90" fill={ground} />
-        <path d={cornerArcs} fill="none" stroke={ink} stroke-width="1.5" />
-        <path d={cornerDots} fill={accent} />
-        <g fill="none" stroke={ink} stroke-linecap="round" stroke-width="1.5">
-          <rect x="3" y="3" width="90" height="90" stroke-width="1" />
-          <circle cx="48" cy="48" r="35" />
-          <circle cx="48" cy="48" r="9" stroke={accent} stroke-width="2" />
-        </g>
-        {/* beamed eighth notes, turned four times. Stems up on the right of
-            the notehead, as written; a beam instead of flags, so the turn
-            never reads as a pinwheel. */}
-        {[0, 90, 180, 270].map((angle) => (
-          <g
-            transform={`rotate(${angle} 48 48) translate(48 48) scale(1.15) translate(-48 -48)`}
-            fill={ink}
-          >
-            <path
-              d="M45.4 35.4 V23 M55.4 35.4 V23"
-              fill="none"
-              stroke={ink}
-              stroke-width="1.6"
-              stroke-linecap="round"
-            />
-            <path d="M45.4 24 H55.4" stroke={ink} stroke-width="3.5" />
-            <ellipse cx="42" cy="36" rx="3.8" ry="2.7" transform="rotate(-22 42 36)" />
-            <ellipse cx="52" cy="36" rx="3.8" ry="2.7" transform="rotate(-22 52 36)" />
-          </g>
-        ))}
+        <WallTile kind="rosette" {...colors} />
       </pattern>
     )}
     {(variant === 'line' || variant === 'field') && (
