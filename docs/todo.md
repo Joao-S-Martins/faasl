@@ -102,7 +102,7 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 
 ## Phase 3 — ⏸ Design (pause before building sections)
 
-- [ ] 🧑 Inspirations collected (`brief.md` §4)
+- [x] 🧑 Inspirations collected (`brief.md` §3, lessons in §3.1)
 - [ ] 🤝 Brand decisions (`brand.md`)
   - [x] Names, colors, fonts (set B), voice, main tagline (board review pending), tile and staff patterns
   - [x] Logo: keep the gold lyre for the site; uniform crest waits for a vector

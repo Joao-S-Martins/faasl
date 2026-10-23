@@ -48,12 +48,61 @@ See [`strategy.md`](./strategy.md). In short:
 Please collect a few examples. Even "I like the photos on X" or "I hate the menu on Y" is useful.
 
 - [x] **[awesomeorchestra.com](https://awesomeorchestra.com)**: mainly its **organization**: structure and clear messaging. The design is nice, but the organization is what to learn from. Not to copy its design or text.
-- [ ] 2–4 more websites you like (any topic): what do you like about each?
+- [x] 2–4 more websites you like (any topic): what do you like about each? (reviewed Oct 2026, see §3.1)
   - Candidates to look at (Oct 2026): music and youth programs: musicwill.org, sphinxmusic.org, elsistemausa.org, laphil.com/learn/yola, sfsymphony.org (youth orchestra pages), dallaswinds.org, marineband.marines.mil · nonprofits: 826valencia.org, accfb.org, charitywater.org, habitat.org, codeforamerica.org · information design: gov.uk, nps.gov (a park's "Plan your visit"), khanacademy.org
 - [ ] 1–2 other community bands, youth music programs or filarmónicas, as peers
 - [ ] 1–2 non-profit sites with donation and sponsor pages you find convincing
 - [ ] Anything you specifically **don't** want
 - [ ] Mood words. 💡 From the brand notes: *spirited, fun, generous, creative*. Maybe also: *proud, welcoming, trustworthy, traditional-meets-modern*?
+
+### 3.1 What we learned from the inspirations (Oct 2026)
+
+Your notes on the sites above, turned into design rules. The full list of sites reviewed is in §3.
+
+**Header and navigation**
+- The header and logo **start large over the landing image, then shrink** to a compact bar once you scroll past it. *(Music Will takes too much header space; this fixes that.)*
+- A **small Donate button that stays available** near the bottom of the screen: present, never pushy. **No donate pop-ups.** *(Music Will is too forceful; ACCFB's modal is hated.)*
+- A **hamburger menu** on phones, short and clearly grouped. *(Sphinx, 826 Valencia and El Sistema work; the Dallas Winds menu is too long.)* **No sideways-scrolling link rows** at the top. *(Code for America)*
+- A slim utility strip above the menu is fine, but only where there's no big image under it. *(ACCFB)*
+
+**Landing page**
+- **Long enough to tell the story, no longer.** *(Sphinx is about right on desktop; Music Will runs long.)*
+- A **video hero** (a short, silent loop) is preferred over an embedded YouTube player. *(YOLA, SF Symphony)* Embedded videos are fine further down the page.
+- The banner must still work on a **sideways phone**; Music Will's gets too thin.
+- **Partners and sponsors** may appear on the home page. *(Dallas Winds; to decide)*
+
+**Layout and shapes**
+- Content lives in **floating boxes with rounded corners**. *(Music Will, ACCFB)*
+- **Boxes overlap** images or cross background colors, so an image looks shaped around the text. *(Sphinx's "Support our work" box, charity: water)*
+- On desktop, **image and text alternate sides** as you scroll. *(Music Will)*
+- **Vary the design assets as you scroll** (tiles, staff, photos, color bands), but **give bold backgrounds a break**, never one after another. *(Music Will does this well; Dallas Winds is relentless.)* The old site's bold color changes shouldn't come back as they were; our tile and staff patterns can do that job.
+- **Full-width background images** behind testimonials or the Give page, with bold color separators. *(Sphinx performing artists)*
+- **Generous margins on phones** *(NPS, ACCFB)*, and **overlays stay on phones** instead of disappearing. *(NPS)*
+- **Collapse long lists on phones** (accordions). *(gov.uk doesn't.)*
+- A **sideways-scrolling row** works for a set of cards, e.g. events or stories. *(charity: water)*
+- Imagery can be **lighter on phones** than on desktop. *(826 Valencia)*
+
+**Numbers**
+- **Bold, big stats** (musicians, students, years, performances). *(El Sistema)* Never a plain list. *(YOLA is boring.)*
+
+**Motion**
+- **Little motion, and it moves whole content blocks together**, never small pieces separately. *(El Sistema)* **Not slow:** content is already there, not loaded as you arrive. *(Sphinx)*
+- **One or two repeating touches at most** *(charity: water's "100%")*. **No whimsy, nothing distracting.** *(826 Valencia, Dallas Winds)*
+- Always honors reduced-motion settings.
+
+**Tone**
+- **Not too clean or plain** *(SF Symphony, gov.uk, Code for America on phones)*. With a limited palette, the **tiles, staff and photos** have to add the life that Khan Academy gets from its colors.
+- **Not crowded** with news and donation asks. *(YOLA, Habitat)*
+- **Phrases to play with:** "Your support is instrumental" *(YOLA)* and "Your gifts make concerts possible" *(SF Symphony)*, as in "make community happen" or "make smiles happen".
+- **Hate:** cut-out photos of people with instruments. *(El Sistema)*
+
+**Maybe later:** a shop. *(826 Valencia)*
+
+**SEO and speed guardrails for these ideas**
+- ⚠ **Video hero:** a big video can slow the first screen, which Google measures. So: a small, silent, compressed loop with a still image shown first; the still image, not the video, is what loads first. The video is skipped on reduced-motion settings and on slow connections.
+- ⚠ **Content that appears as you scroll:** it must be in the page from the start and only *animate* in. Content that loads late can be missed by search engines and makes the page jump.
+- ⚠ **Shrinking header:** it must not push the page content around as it shrinks. Google measures page jumps.
+- ⚠ **Sideways-scrolling rows:** every card stays in the page; nothing is loaded only when scrolled to.
 
 ---
 
