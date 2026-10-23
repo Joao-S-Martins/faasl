@@ -106,10 +106,11 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [ ] 🤝 Brand decisions (`brand.md`)
   - [x] Names, colors, fonts (set B), voice, main tagline (board review pending), tile and staff patterns
   - [x] Logo: keep the gold lyre for the site; uniform crest waits for a vector
-  - [ ] Icons (💡 a small open-source set such as Lucide)
+  - [x] Icons: Lucide (free, open source); added with the first components that need icons
   - [ ] Motion (hero slideshow, any scroll effects; always with reduced-motion support)
   - [ ] Photo style (waits for the recent photos on Google Drive)
-  - [ ] Favicon and social share image (made from the lyre and the brand colors)
+  - [x] Favicon: the gold lyre on a hunter-green disc (was gold on transparent, nearly invisible in light browser tabs)
+  - [ ] Social share image, 1200×630 (made from the lyre and the brand colors)
 - [ ] 🤖 2–3 visual directions as quick mockups (mobile first) for you to pick from
 - [ ] 🤖 Wireframes for the home page and one inner page (phone → tablet → desktop)
 - [ ] 🤝 Design tokens finalized (colors, type scale, spacing, radii, shadows)

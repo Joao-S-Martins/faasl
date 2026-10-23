@@ -15,6 +15,8 @@ Translation: "Band of Amateur Artists of San Leandro".
 ## Logos
 
 - **Minimalist logo** (`src/assets/logo.svg`): a gold lyre in a circle. Used now for the header and favicon.
+- **Favicon and app icons:** the gold lyre on hunter green: a disc for browser tabs (`public/favicon.svg`, `favicon.ico`), a square for phone home screens (`apple-touch-icon.png`) and for search engines' organization logo (`logo.png`, 512 px). Never gold on transparent: it nearly disappears on white.
+- **Icons:** [Lucide](https://lucide.dev), a free open-source set; simple line icons that match the line-drawn patterns. Drawn in hunter green or white, never gold.
 - **Uniform crest:** worn on the uniforms, but there's no good vector file, so it's not on the site yet. Getting a vector is on `todo.md`.
 - The **bass drum head** reads "Filarmónica Artista Amadora · 1980 · San Leandro Cal." in a classic circular lettering, a nice reference for heritage styling.
 
