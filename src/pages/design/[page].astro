@@ -298,8 +298,93 @@ const taglines = [
       </div>
     </div>
 
-    <h3>Subtle staff, for section backgrounds</h3>
+    <h3>Subtle staff, for section breaks and backgrounds</h3>
+    <p>
+      One long, faint staff with a few notes. Quiet enough to sit behind text; it never carries
+      meaning, so it stays decorative. On green it's drawn in white.
+    </p>
     <TilePattern variant="subtle" height="4rem" />
+
+    <h4>Section break: one staff between sections</h4>
+    <div class="example mock-page">
+      <p>…the end of one section, with its call to action.</p>
+      <TilePattern variant="subtle" height="48px" frame={false} />
+      <p>The next section starts here.</p>
+    </div>
+
+    <h4>Page header background</h4>
+    <div class="example on-staff mock-header">
+      <div class="staff-bg">
+        <TilePattern
+          variant="subtle"
+          ink="var(--color-white)"
+          ground="var(--color-hunter-green)"
+          height="100%"
+          frame={false}
+        />
+      </div>
+      <p class="mock-kicker">Join the band</p>
+      <p class="mock-title">Experienced and aspiring musicians alike</p>
+    </div>
+
+    <h4>Call to action block</h4>
+    <div class="example on-staff mock-cta">
+      <div class="staff-bg">
+        <TilePattern variant="subtle" ground="var(--color-off-white)" height="100%" frame={false} />
+      </div>
+      <p class="mock-title">Keep music lessons free</p>
+      <p>Your gift buys method books, repairs instruments and keeps the band playing.</p>
+      <ButtonLink href="#">Donate</ButtonLink>
+    </div>
+
+    <h4>Behind a testimonial snippet</h4>
+    <div class="example on-staff mock-quote">
+      <div class="staff-bg">
+        <TilePattern variant="subtle" height="100%" frame={false} />
+      </div>
+      <blockquote>
+        <p>“A pull quote from a member story goes here, one or two sentences long.”</p>
+        <footer>Member name, instrument</footer>
+      </blockquote>
+    </div>
+
+    <h4>Numbers strip</h4>
+    <div class="example on-staff mock-numbers">
+      <div class="staff-bg">
+        <TilePattern
+          variant="subtle"
+          ink="var(--color-white)"
+          ground="var(--color-hunter-green)"
+          height="100%"
+          frame={false}
+        />
+      </div>
+      <ul>
+        <li>
+          <strong>35+</strong> musicians
+        </li>
+        <li>
+          <strong>12</strong> parades a year
+        </li>
+        <li>
+          <strong>6</strong> concerts a year
+        </li>
+      </ul>
+    </div>
+
+    <h4>Footer background</h4>
+    <div class="example on-staff mock-footer">
+      <div class="staff-bg">
+        <TilePattern
+          variant="subtle"
+          ink="var(--color-white)"
+          ground="var(--color-hunter-green)"
+          height="100%"
+          frame={false}
+        />
+      </div>
+      <p>Portuguese Band of San Leandro · Where generations play together.</p>
+    </div>
   </Section>
 </PageLayout>
 
@@ -343,6 +428,65 @@ const taglines = [
     background: var(--color-hunter-green);
     color: var(--color-white);
     font-size: var(--step--1);
+  }
+
+  /* the staff sits behind the block's content */
+  .on-staff {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .staff-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .mock-cta,
+  .mock-quote {
+    display: grid;
+    gap: var(--space-s);
+    justify-items: start;
+    padding: var(--space-l) var(--space-m);
+  }
+
+  .mock-cta .mock-title {
+    color: var(--color-hunter-green);
+  }
+
+  .mock-quote blockquote {
+    margin: 0;
+    font-size: var(--step-1);
+    font-style: italic;
+  }
+
+  .mock-quote footer {
+    margin-top: var(--space-xs);
+    font-size: var(--step--1);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .mock-numbers {
+    padding: var(--space-m);
+    color: var(--color-white);
+  }
+
+  .mock-numbers ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--space-s);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .mock-numbers strong {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--step-3);
   }
 
   .panel {
