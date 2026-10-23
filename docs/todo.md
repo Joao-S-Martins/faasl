@@ -75,7 +75,7 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 - [ ] 🤝 💡 Move faasl.org DNS to Cloudflare early (copy every record, especially MX/TXT; `www` keeps pointing at the old host), then attach `beta.faasl.org`. Can happen any time before the stakeholder beta.
 - [x] 🤖 Google Calendar fetch script (`npm run events`): Performances and Social events, with descriptions (call times, ticket prices, dress code), recurring/moved/cancelled/all-day events → `src/content/events.json`. Sample feeds include a fake raffle (`npm run events:sample`); CI prints a live report (`npm run events:report`)
 - [x] 🤝 Refresh approach: B, automatic content releases with patch tags (`deployment.md` §6)
-- [ ] 🤖 `refresh.yml`: weekly + manual; fetch events → commit if changed → tag next patch → deploy (data-only changes skip approval)
+- [ ] 🤖 `refresh.yml`: weekly + manual; fetch events → commit if changed → tag next patch → deploy (data-only changes skip approval) **After the design phase:** sample events stay on beta until then.
 - [ ] 🧑 GitHub: `production-refresh` environment + a narrow credential allowed to commit event data to `main`
 - [ ] 🤖 Lighthouse check in CI (report only for now; budgets once the design exists)
 

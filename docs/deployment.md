@@ -155,7 +155,8 @@ weekly schedule (or "Refresh now" button)
 - No JavaScript to hide past events: an event that ends between refreshes stays listed until the next weekly refresh.
 - Scheduled workflows only run from the default branch (`main`), so this switches on at launch. Before then, the "Refresh now" button works for beta.
 - GitHub pauses schedules in public repos after 60 days with no commits. Content refreshes count as commits, but a quiet winter could still hit it; GitHub emails first, and re-enabling is one click.
-- Beta keeps the simpler approach: rebuild the latest `v3`/`main` commit on the same schedule.
+- Beta needs no schedule of its own: after launch it deploys on every push to `main`, so the refresh commit updates beta too.
+- **Until the design phase is done, beta keeps the sample events** (`npm run events:sample`) so designs have dinners, raffles, tentative and recurring events to show. The refresh workflow is built afterwards.
 - This environment can't reach Google Calendar, so the loader is tested with a sample feed here and for real in GitHub Actions.
 
 ## 7. Optional later: pull-request previews
