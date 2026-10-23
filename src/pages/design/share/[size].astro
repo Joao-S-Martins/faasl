@@ -2,22 +2,14 @@
 // The social share image, laid out as a page so it uses the real fonts,
 // logo and tiles. Built only outside production. To update public/share.png,
 // screenshot this page at exactly 1200×630 (docs/brand.md, Share image).
-// `-square` puts the text in a square box that survives square crops.
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import Logo from '../../../components/Logo.astro';
 import TilePattern from '../../../components/TilePattern.astro';
 import { getSite, isProduction } from '../../../lib/site';
 
 export function getStaticPaths() {
-  return isProduction
-    ? []
-    : [
-        { params: { size: '1200x630' }, props: { square: false } },
-        { params: { size: '1200x630-square' }, props: { square: true } },
-      ];
+  return isProduction ? [] : [{ params: { size: '1200x630' } }];
 }
-
-const { square } = Astro.props;
 
 const site = await getSite();
 ---
@@ -27,7 +19,7 @@ const site = await getSite();
     <div class="tiles">
       <TilePattern variant="checker" tile={96} height="630px" frame={false} center="both" />
     </div>
-    <div class:list={['box', { square }]}>
+    <div class="box">
       <Logo size={100} />
       <p class="name">{site.name}</p>
       <p class="official">{site.legalName}</p>
@@ -51,28 +43,23 @@ const site = await getSite();
     inset: 0;
   }
 
-  /* Eight by four tiles (the square: six by six), centered on grout lines
-     and inset by half the grout, so the gap around the box matches the gap
-     between tiles and no tile is cut. The gold border sits inside a green
-     margin, apart from the tiles' gold corners. */
+  /* Six by six tiles, centered on grout lines and inset by half the grout,
+     so the gap around the box matches the gap between tiles and no tile is
+     cut. Square, so square crops (some messaging apps) keep all of it. The
+     gold border sits inside a green margin, apart from the tiles' gold
+     corners. */
   .box {
     position: relative;
     display: grid;
     align-content: center;
     justify-items: center;
-    gap: 12px;
-    width: calc(8 * 96px - 6px);
-    height: calc(4 * 96px - 6px);
-    background: var(--color-hunter-green);
-    color: var(--color-white);
-    text-align: center;
-  }
-
-  .box.square {
+    gap: 16px;
     width: calc(6 * 96px - 6px);
     height: calc(6 * 96px - 6px);
     padding-inline: 48px;
-    gap: 16px;
+    background: var(--color-hunter-green);
+    color: var(--color-white);
+    text-align: center;
   }
 
   .box::before {
@@ -89,7 +76,7 @@ const site = await getSite();
 
   .name {
     font-family: var(--font-heading);
-    font-size: 58px;
+    font-size: 68px;
     font-weight: 700;
     line-height: 1;
   }
@@ -104,11 +91,5 @@ const site = await getSite();
     border-top: 3px solid var(--color-gold);
     font-size: 28px;
     font-style: italic;
-  }
-</style>
-
-<style>
-  .square .name {
-    font-size: 68px;
   }
 </style>
