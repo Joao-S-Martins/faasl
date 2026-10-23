@@ -72,10 +72,10 @@ Your notes on the sites above, turned into design rules. The full list of sites 
 - **Partners and sponsors** may appear on the home page. *(Dallas Winds; to decide)*
 
 **Layout and shapes**
-- Content lives in **floating boxes with rounded corners**. *(Music Will, ACCFB)*
+- Content lives in **floating boxes**, *(Music Will, ACCFB)* **mixing rounded and sharp corners**: a box's corners sharpen where it meets or butts against another box or band, especially on phones, and stay rounded where it floats free.
 - **Boxes overlap** images or cross background colors, so an image looks shaped around the text. *(Sphinx's "Support our work" box, charity: water)*
 - On desktop, **image and text alternate sides** as you scroll. *(Music Will)*
-- **Vary the design assets as you scroll** (tiles, staff, photos, color bands), but **give bold backgrounds a break**, never one after another. *(Music Will does this well; Dallas Winds is relentless.)* The old site's bold color changes shouldn't come back as they were; our tile and staff patterns can do that job.
+- **Vary the design assets as you scroll** (tiles, staff, photos, color bands). *(Music Will does this well.)* **Bold color backgrounds and dividers are one tool among several**, used now and then, never one after another and never the default. *(Dallas Winds is relentless.)* The old site's bold color changes shouldn't come back as they were; our tile and staff patterns can do part of that job.
 - **Full-width background images** behind testimonials or the Give page, with bold color separators. *(Sphinx performing artists)*
 - **Generous margins on phones** *(NPS, ACCFB)*, and **overlays stay on phones** instead of disappearing. *(NPS)*
 - **Collapse long lists on phones** (accordions). *(gov.uk doesn't.)*
@@ -83,10 +83,11 @@ Your notes on the sites above, turned into design rules. The full list of sites 
 - Imagery can be **lighter on phones** than on desktop. *(826 Valencia)*
 
 **Numbers**
-- **Bold, big stats** (musicians, students, years, performances). *(El Sistema)* Never a plain list. *(YOLA is boring.)*
+- **Bold, big stats** (musicians, students, years, performances), **each with imagery: a large icon or graphic beside or above the number.** *(El Sistema)* Never a plain list. *(YOLA is boring.)*
 
 **Motion**
-- **Little motion, and it moves whole content blocks together**, never small pieces separately. *(El Sistema)* **Not slow:** content is already there, not loaded as you arrive. *(Sphinx)*
+- **Little motion, and it moves whole content blocks together**, never small pieces separately. *(El Sistema)*
+- **Nothing slow:** no slow loading and no long animations. Content is in the page from the start (also what search engines need), and any animation is short (about 0.3 s or less). *(Sphinx felt slow on both counts.)*
 - **One or two repeating touches at most** *(charity: water's "100%")*. **No whimsy, nothing distracting.** *(826 Valencia, Dallas Winds)*
 - Always honors reduced-motion settings.
 
