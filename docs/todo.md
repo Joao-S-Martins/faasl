@@ -208,6 +208,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [x] Special contacts: Edgard for lessons; Geronimo for forms, uniforms, music and folders (to be replaced); info@faasl.org for everything else
 
 ### Content items 🧑
+- [ ] **Uniform crest as a vector (SVG):** the crest on the uniforms isn't on the site because there's no good vector file. Options: find the original artwork (uniform supplier, embroidery company, whoever designed it), or have it redrawn as SVG from a high-resolution photo or scan. Then decide where it's used alongside the minimalist logo.
 - [ ] **Keep the public Google Calendars up to date.** Live check (2026-10-20, next 12 months):
   - **Lessons & rehearsals:** healthy. 17 recurring series, 156 upcoming occurrences (beginner, intermediate, rehearsal every Friday), all with location and description.
   - **Performances:** 129 past events since 2017, but only **1** upcoming ("[Tentative] Festival das Filarmónicas 2026", Nov 7, no location or description). New performances need adding, with location and a description (call time, dress code).
