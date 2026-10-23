@@ -120,7 +120,7 @@ Today the site is mostly one long page with in-page anchors. For SEO, **each top
 | `/` | Intro, Learn / Grow / Perform teasers, upcoming events, CTA | "Portuguese band San Leandro" |
 | `/lessons` | Free lessons, instruments, materials & stores, FAQ | "free music lessons San Leandro / East Bay" |
 | `/join` | Joining the volunteer band (adults, returning players, ex-Remote Restart idea) | "community band East Bay", "adult band" |
-| `/about` | History, name, leadership, **teachers (Edgard Gonzalez)**, our hall | "FAASL", "Filarmonica Artista Amadora" |
+| `/about` | History, name, leadership, **teachers (Edgard Gonzalez)**, our hall | "FAASL", "Filarmónica Artista Amadora" |
 | `/events` | Upcoming performances & social events, calendar subscribe links | "Holy Ghost parade band", "Cherry Festival" |
 | `/stories` | Member stories (brought in from Adobe Express) | brand + trust |
 | `/support` | Donate, volunteer, 501(c)(3)/EIN | "donate music education San Leandro" |

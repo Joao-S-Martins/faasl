@@ -208,6 +208,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [x] Special contacts: Edgard for lessons; Geronimo for forms, uniforms, music and folders (to be replaced); info@faasl.org for everything else
 
 ### Content items 🧑
+- [ ] **Recent photos via Google Drive:** connect the organization's Google Workspace so recent photos can be shared for review (and a daylight photo of a uniform jacket to match the site green)
 - [ ] **Uniform crest as a vector (SVG):** the crest on the uniforms isn't on the site because there's no good vector file. Options: find the original artwork (uniform supplier, embroidery company, whoever designed it), or have it redrawn as SVG from a high-resolution photo or scan. Then decide where it's used alongside the minimalist logo.
 - [ ] **Keep the public Google Calendars up to date.** Live check (2026-10-20, next 12 months):
   - **Lessons & rehearsals:** healthy. 17 recurring series, 156 upcoming occurrences (beginner, intermediate, rehearsal every Friday), all with location and description.

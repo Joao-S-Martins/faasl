@@ -1,7 +1,9 @@
 # Organization facts, edited here once and reused across the site.
 faasl:
   name: Portuguese Band of San Leandro
-  legalName: Filarmonica Artista Amadora de San Leandro
+  # Official name, with the accent (the board wants it on the site).
+  legalName: Filarmónica Artista Amadora de San Leandro
+  # Members' shorthand; avoid on public pages except where the name is explained.
   alternateName: FAASL
   nameTranslation: Band of Amateur Artists of San Leandro
   tagline: We're committed to impacting lives through music education and mentorship.

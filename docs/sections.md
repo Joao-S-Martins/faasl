@@ -174,7 +174,7 @@ Related: [`strategy.md`](./strategy.md) (audiences & site map) · [`content.md`]
 | 5 | Get involved | Short note inviting skilled volunteers to contact us | New copy |
 | 6 | Our home | ❓ hall mention (deferred to v3.1) | — |
 
-**Search:** title "About the Filarmonica Artista Amadora de San Leandro". Captures searches for the official name and "FAASL".
+**Search:** title "About the Filarmónica Artista Amadora de San Leandro". Captures searches for the official name and "FAASL".
 
 ---
 

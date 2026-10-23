@@ -23,7 +23,7 @@ These details show up across many pages, so the new site will store them once.
 | Field | Value |
 |---|---|
 | Common name | Portuguese Band of San Leandro |
-| Official name | Filarmonica Artista Amadora de San Leandro |
+| Official name | Filarmónica Artista Amadora de San Leandro |
 | Abbreviation | FAASL ("the FAASL") |
 | Name translation | Band of Amateur Artists of San Leandro |
 | Founded | 1980 |
@@ -36,7 +36,7 @@ These details show up across many pages, so the new site will store them once.
 | Phone | (510) 357-1449 |
 | General email | info@faasl.org |
 | Hall rental email (removed page) | rental@faasl.org |
-| Copyright line | © 2007–{current year} Filarmonica Artista Amadora de San Leandro. All rights reserved. |
+| Copyright line | © 2007–{current year} Filarmónica Artista Amadora de San Leandro. All rights reserved. |
 | Brand color | Green — Pantone Green CP, HEX `#00A079`, RGB 0 160 121, CMYK 93 0 63 0 |
 | Secondary color (favicon/tile) | `#355749` |
 | Full palette | Greens, golds and whites from v2 are the official v3 palette; see `brief.md` §5.3 |
@@ -116,7 +116,7 @@ Dropped in v3 (the old "New music lessons start soon!" banner). No announcement 
 - Social icons: Facebook, Instagram, Twitter, YouTube, LinkedIn
 - Quick links: see [Section 7](#7-vanity-subdomains--redirects). The footer listed every vanity subdomain.
 - Copyright line and 501(c)(3) statement:
-  > The Filarmonica Artista Amadora de San Leandro is a [501(c)(3) non-profit](https://apps.irs.gov/app/eos/) organization. EIN: 94-2930722
+  > The Filarmónica Artista Amadora de San Leandro is a [501(c)(3) non-profit](https://apps.irs.gov/app/eos/) organization. EIN: 94-2930722
 
 > [!NOTE]
 > I'd suggest a shorter footer in v3: nav links, social icons, address/phone/email and the non-profit line. The long subdomain list is useful to members but adds clutter for new visitors. A "Members" page could hold those links instead (see Section 7).
@@ -125,7 +125,7 @@ Dropped in v3 (the old "New music lessons start soon!" banner). No announcement 
 
 ## 3. Home page (`/`)
 
-**Page title:** Portuguese Band of San Leandro – Filarmonica Artista Amadora de San Leandro
+**Page title:** Portuguese Band of San Leandro – Filarmónica Artista Amadora de San Leandro
 **Meta description:** We're committed to impacting lives through music education and mentorship.
 **Social share image:** 🖼️ `img/social/index.jpg`
 
@@ -136,7 +136,7 @@ Dropped in v3 (the old "New music lessons start soon!" banner). No announcement 
 
 Our group was founded in 1980 by amateur musicians who wanted to enrich their community through music. Over 35 years later, *our goal remains the same*. We remain committed to impacting lives through music education and mentorship opportunities. We firmly believe in supporting musicians of all walks and stages of life. A love for music bonds us all and we want to share it with you.
 
-> 💡 Officially the *Filarmonica Artista Amadora de San Leandro*, our name translates to the *Band of Amateur Artists of San Leandro*.
+> 💡 Officially the *Filarmónica Artista Amadora de San Leandro*, our name translates to the *Band of Amateur Artists of San Leandro*.
 > — aka the FAASL
 
 Our founders were mostly Portuguese immigrants with varying musical experience; some with no experience at all. They pooled their knowledge and resources to help each other and create this band. Today, our all-volunteer organization has grown into a heterogeneous group representing many different social classes and backgrounds. We each pool our abilities to invest in each other and elevate our lives.
@@ -511,7 +511,7 @@ That instrument in the back of your closet still has music in it. Many of our me
 
 ## 5c. About page (`/about`) — ✅ reviewed (Lorenza's bio to re-evaluate later)
 
-**Page title:** About the Filarmonica Artista Amadora de San Leandro
+**Page title:** About the Filarmónica Artista Amadora de San Leandro
 **Meta description:** The Portuguese Band of San Leandro (FAASL) is an all-volunteer community band and nonprofit founded in 1980, offering free music lessons and performing across the Bay Area.
 
 # About Us
@@ -523,7 +523,7 @@ Our band was founded in 1980 by amateur musicians who wanted to enrich their com
 
 Our founders were mostly Portuguese immigrants with varying musical experience; some had none at all. They pooled their knowledge and resources to help each other and create this band. Today, our all-volunteer organization has grown into a diverse group representing many backgrounds. We each bring our abilities to invest in each other and elevate our lives.
 
-> 💡 Officially the *Filarmonica Artista Amadora de San Leandro*, our name translates to the *Band of Amateur Artists of San Leandro*. Most people call us the FAASL.
+> 💡 Officially the *Filarmónica Artista Amadora de San Leandro*, our name translates to the *Band of Amateur Artists of San Leandro*. Most people call us the FAASL.
 
 ### Our heritage
 
@@ -604,7 +604,7 @@ Many employers match their employees' charitable gifts, often doubling them. Ask
 
 ### The details
 
-The Filarmonica Artista Amadora de San Leandro is a 501(c)(3) nonprofit organization, EIN 94-2930722. Donations are tax-deductible to the extent allowed by law.
+The Filarmónica Artista Amadora de San Leandro is a 501(c)(3) nonprofit organization, EIN 94-2930722. Donations are tax-deductible to the extent allowed by law.
 
 ---
 

@@ -100,7 +100,7 @@ You already have a consent form, so **no new form is needed for the website.** T
 ### 5.2 Ownership & copyright
 - You own and run the accounts for now. 💡 Keep a short private handover note (which accounts exist, where credentials are, how to deploy) so the site can be passed on later if needed.
 - The current site has **two different statements**:
-  - Footer: "© 2007–{year} Filarmonica Artista Amadora de San Leandro. All rights reserved."
+  - Footer: "© 2007–{year} Filarmónica Artista Amadora de San Leandro. All rights reserved."
   - README / `LICENSE.md`: "FAASL.org by **FAASL Volunteers**", licensed CC BY-NC-SA 4.0 (and `www/package.json` says CC-BY-NC-ND-4.0)
 - ❓ Decide who the site's content and code belong to, and state it consistently. 💡 Common pattern: **content and photos © the organization** (footer), **site code** under your name or an open-source license in `LICENSE.md`. Worth a quick conversation with the board; this isn't legal advice.
 
