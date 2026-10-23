@@ -54,20 +54,26 @@ const cornerDots =
         <g fill="none" stroke={ink} stroke-linecap="round" stroke-linejoin="round">
           <rect x="3" y="3" width="90" height="90" stroke-width="1" />
           {/* staff */}
-          <path d="M14 40 H82 M14 46 H82 M14 52 H82 M14 58 H82 M14 64 H82" stroke-width="1.2" />
-          {/* sharp */}
-          <path d="M21 41 V61 M25 39 V59 M18 49 L28 46 M18 55 L28 52" stroke-width="1.4" />
-          {/* beamed eighth notes and a quarter note */}
-          <path d="M43.5 58 V32 M57.5 52 V30 M71.5 61 V37" stroke-width="1.6" />
-          <path d="M43.5 32 L57.5 30" stroke-width="4" />
-          {/* fermata */}
-          <path d="M38 24 A10 9 0 0 1 58 24" stroke-width="1.8" />
+          <path d="M14 36 H82 M14 42 H82 M14 48 H82 M14 54 H82 M14 60 H82" stroke-width="1.2" />
+          {/* stems: up on the right for low notes, down on the left for high */}
+          <path d="M29.4 53 V33 M47.4 50 V30 M59.4 44 V27 M68.6 40 V60" stroke-width="1.6" />
+          <path d="M47.4 30.5 L59.4 27.5" stroke-width="4" />
         </g>
+        {/* half note, two beamed eighth notes, quarter note */}
+        <ellipse
+          cx="26"
+          cy="54"
+          rx="3.8"
+          ry="2.7"
+          transform="rotate(-22 26 54)"
+          fill={ground}
+          stroke={ink}
+          stroke-width="1.5"
+        />
         <g fill={ink}>
-          <ellipse cx="40" cy="58" rx="4.2" ry="3" transform="rotate(-22 40 58)" />
-          <ellipse cx="54" cy="52" rx="4.2" ry="3" transform="rotate(-22 54 52)" />
-          <ellipse cx="68" cy="61" rx="4.2" ry="3" transform="rotate(-22 68 61)" />
-          <circle cx="48" cy="22" r="1.8" fill={accent} />
+          <ellipse cx="44" cy="51" rx="4.2" ry="3" transform="rotate(-22 44 51)" />
+          <ellipse cx="56" cy="45" rx="4.2" ry="3" transform="rotate(-22 56 45)" />
+          <ellipse cx="72" cy="39" rx="4.2" ry="3" transform="rotate(-22 72 39)" />
         </g>
       </pattern>
     )}

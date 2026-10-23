@@ -43,7 +43,7 @@ Left out in the past because they clashed with the brand colors or the inclusive
 - ✅ **Rosette tile (chosen):** beamed eighth notes turned four times around a gold ring. `<TilePattern variant="rosette" />`.
   - Built like a tiled wall: square tiles with square corners, separated by plain grout (off-white). Corner motifs (a quarter ring and a gold quarter circle) stay on each tile; nothing is drawn in the grout or crosses it. Four tiles complete the corner ring by eye.
   - Notes are written correctly: stems up on the right of the notehead, heads tilted. **Never flags on a figure that's turned around a center:** rotated flags read as a pinwheel or swastika. Use beams, or notes without flags.
-- **Staff tile, for horizontal bands:** a sharp, beamed notes and a fermata on a staff, built the same way as the rosette so they sit together. Used one tile high: under a page header, between sections, above the footer, or as the border of a tile panel around rosettes. Examples on the brand guide. `<TilePattern variant="staff" tile={48} height="48px" frame={false} />`.
+- **Staff tile, for horizontal bands:** a half note, two beamed eighth notes and a quarter note on a staff (no key signature, no fermata), built the same way as the rosette so they sit together. Used one tile high: under a page header, between sections, above the footer, or as the border of a tile panel around rosettes. Examples on the brand guide. `<TilePattern variant="staff" tile={48} height="48px" frame={false} />`.
 - **Subtle staff:** faint staff lines and notes for section backgrounds.
 - Use as accents (dividers, backgrounds, heritage sections), not the main look. No religious symbols unless specifically wanted.
 
