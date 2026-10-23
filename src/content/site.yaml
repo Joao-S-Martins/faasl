@@ -6,7 +6,8 @@ faasl:
   # Members' shorthand; avoid on public pages except where the name is explained.
   alternateName: FAASL
   nameTranslation: Band of Amateur Artists of San Leandro
-  tagline: We're committed to impacting lives through music education and mentorship.
+  # Main line for now, pending the board; alternatives in docs/brand.md (Taglines).
+  tagline: Where generations play together.
   foundingYear: 1980
   ein: 94-2930722
   email: info@faasl.org

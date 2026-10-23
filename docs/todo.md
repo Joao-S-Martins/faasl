@@ -208,6 +208,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 - [x] Special contacts: Edgard for lessons; Geronimo for forms, uniforms, music and folders (to be replaced); info@faasl.org for everything else
 
 ### Content items 🧑
+- [ ] **Tagline:** board review of "Where generations play together." (alternatives in `brand.md`)
 - [ ] **Review the "band dinner after rehearsal" gift example on Give.** It stays on beta for now, but it describes a free perk for band members, which the board prefers not to list (`brand.md`, Voice). Before launch: decide keep/reword/drop, and provide details (what it costs, how it's described).
 - [ ] **Recent photos via Google Drive:** connect the organization's Google Workspace so recent photos can be shared for review (and a daylight photo of a uniform jacket to match the site green)
 - [ ] **Uniform crest as a vector (SVG):** the crest on the uniforms isn't on the site because there's no good vector file. Options: find the original artwork (uniform supplier, embroidery company, whoever designed it), or have it redrawn as SVG from a high-resolution photo or scan. Then decide where it's used alongside the minimalist logo.

@@ -33,7 +33,7 @@ Design cue: green and white dominate, with gold as the accent (the lyre). When a
 
 ## Typography
 
-Not tied to any fonts; v3 uses **free, self-hosted fonts**. Favorite so far: **B, Barlow Condensed headings with Barlow text**. Being considered: **D, Fraunces headings with Barlow text** (warmer headlines). Both are on the brand guide page.
+✅ **Font set B:** **Barlow Condensed** for headings and **Barlow** for text, free and self-hosted (`@fontsource`). Applied site-wide through `--font-heading` and `--font-body` in `src/styles/tokens.css`.
 
 ## Portuguese motifs
 
@@ -51,9 +51,14 @@ Left out in the past because they clashed with the brand colors or the inclusive
 
 ## Taglines
 
-- Current: "We're committed to impacting lives through music education and mentorship." (the best so far; open to an update)
-- From the old brochure: "Dedicated to bringing free music education and public performance opportunities to the greater East Bay."
-- New options: "Free music lessons and live music for our community, since 1980." and "Where generations play together." ("Music for every age. Free since 1980." was dropped as weak.)
+✅ **Main line for now: "Where generations play together."** (pending the board; in `src/content/site.yaml`)
+
+Kept in our pocket:
+- "We're committed to impacting lives through music education and mentorship." (previous tagline)
+- "Dedicated to bringing free music education and public performance opportunities to the greater East Bay." (2018 brochure)
+- "Free music lessons and live music for our community, since 1980."
+
+Dropped: "Music for every age. Free since 1980." (weak)
 
 ## Photography
 

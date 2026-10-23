@@ -2,10 +2,6 @@
 // Design-phase pages, built only for beta and local previews (never in
 // production). /design/brand is the brand guide; decisions live in
 // docs/brand.md.
-import '@fontsource-variable/fraunces';
-import '@fontsource/barlow-condensed/700.css';
-import '@fontsource/barlow/400.css';
-import '@fontsource/barlow/600.css';
 import PageLayout from '../../layouts/PageLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import Section from '../../components/Section.astro';
@@ -70,33 +66,28 @@ const pairs = [
 const fontPairs = [
   {
     id: 'b',
-    name: 'B · Marching band (your favorite)',
+    name: 'B · Marching band (chosen)',
     heading: "'Barlow Condensed', 'Arial Narrow', sans-serif",
     headingWeight: 700,
     body: "'Barlow', system-ui, sans-serif",
     note: 'Barlow Condensed headings with Barlow text. Uniform-like, energetic and modern.',
   },
-  {
-    id: 'd',
-    name: 'D · Heritage headings, marching text',
-    heading: "'Fraunces Variable', Georgia, serif",
-    headingWeight: 650,
-    body: "'Barlow', system-ui, sans-serif",
-    note: 'Fraunces headings (from the warm heritage pairing) with Barlow text. Warmer, more trustworthy headlines; same clean text.',
-  },
 ];
 
 const taglines = [
-  { text: site.tagline, source: 'Current tagline' },
+  { text: site.tagline, source: 'Main line for now (pending the board)' },
+  {
+    text: "We're committed to impacting lives through music education and mentorship.",
+    source: 'Alternative: previous tagline',
+  },
   {
     text: 'Dedicated to bringing free music education and public performance opportunities to the greater East Bay.',
-    source: 'From the 2018 brochure',
+    source: 'Alternative: from the 2018 brochure',
   },
   {
     text: 'Free music lessons and live music for our community, since 1980.',
-    source: 'New option',
+    source: 'Alternative',
   },
-  { text: 'Where generations play together.', source: 'New option (short)' },
 ];
 ---
 
@@ -218,7 +209,7 @@ const taglines = [
     <p class="accent-rule">A gold accent line, like uniform trim</p>
   </Section>
 
-  <Section title="Font pairings">
+  <Section title="Fonts">
     {fontPairs.map(({ id, name, heading, headingWeight, body, note }) => (
       <article
         class="font-pair"
