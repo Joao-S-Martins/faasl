@@ -1,0 +1,77 @@
+---
+// The social share image, laid out as a page so it uses the real fonts,
+// logo and tiles. Built only outside production. To update public/share.png,
+// screenshot this page at exactly 1200×630 (docs/brand.md, Share image).
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Logo from '../../../components/Logo.astro';
+import TilePattern from '../../../components/TilePattern.astro';
+import { getSite, isProduction } from '../../../lib/site';
+
+export function getStaticPaths() {
+  return isProduction ? [] : [{ params: { size: '1200x630' } }];
+}
+
+const site = await getSite();
+---
+
+<BaseLayout title="Share image" description="The social share image." noindex>
+  <div class="card">
+    <div class="text">
+      <Logo size={132} />
+      <p class="name">{site.name}</p>
+      <p class="official">{site.legalName}</p>
+      <p class="tagline">{site.tagline}</p>
+    </div>
+    <div class="tiles">
+      <TilePattern variant="rosette" tile={126} height="630px" frame={false} />
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .card {
+    display: grid;
+    grid-template-columns: 1fr 378px;
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: var(--color-hunter-green);
+    color: var(--color-white);
+  }
+
+  .text {
+    display: grid;
+    align-content: center;
+    justify-items: start;
+    gap: 18px;
+    padding: 0 64px 0 80px;
+  }
+
+  .text :global(.logo) {
+    color: var(--color-gold);
+    margin-bottom: 8px;
+  }
+
+  .name {
+    font-family: var(--font-heading);
+    font-size: 76px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .official {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  .tagline {
+    padding-top: 18px;
+    border-top: 3px solid var(--color-gold);
+    font-size: 34px;
+    font-style: italic;
+  }
+
+  .tiles {
+    border-left: 6px solid var(--color-gold);
+  }
+</style>

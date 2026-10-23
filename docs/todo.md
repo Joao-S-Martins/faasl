@@ -110,7 +110,7 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
   - [ ] Motion (hero slideshow, any scroll effects; always with reduced-motion support)
   - [ ] Photo style (waits for the recent photos on Google Drive)
   - [x] Favicon: the gold lyre on a hunter-green disc (was gold on transparent, nearly invisible in light browser tabs)
-  - [ ] Social share image, 1200×630 (made from the lyre and the brand colors)
+  - [x] Social share image, 1200×630 (`public/share.png`); later: a band photo per page
 - [ ] 🤖 2–3 visual directions as quick mockups (mobile first) for you to pick from
 - [ ] 🤖 Wireframes for the home page and one inner page (phone → tablet → desktop)
 - [ ] 🤝 Design tokens finalized (colors, type scale, spacing, radii, shadows)
