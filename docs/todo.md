@@ -111,7 +111,8 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
   - [ ] Photo style (waits for the recent photos on Google Drive)
   - [x] Favicon: the gold lyre on a hunter-green disc (was gold on transparent, nearly invisible in light browser tabs)
   - [x] Social share image, 1200×630 (`public/share.png`); later: a band photo per page
-- [ ] 🤖 2–3 visual directions as quick mockups (mobile first) for you to pick from
+- [x] 🤖 2–3 visual directions as quick mockups (mobile first) for you to pick from: A, Tiles and paper; B, Photo-led (`/design/a/home`, `/design/b/home`, and `/lessons` for each; beta only)
+- [ ] 🧑 Pick a direction, or mix parts of them
 - [ ] 🤖 Wireframes for the home page and one inner page (phone → tablet → desktop)
 - [ ] 🤝 Design tokens finalized (colors, type scale, spacing, radii, shadows)
 - [ ] 🤖 Core component set: buttons/CTAs, cards, section headers, nav, footer, FAQ accordion

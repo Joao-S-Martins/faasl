@@ -1,0 +1,111 @@
+---
+// Upcoming performances and fundraisers as a sideways-scrolling row of cards
+// (docs/brief.md §3.1, after charity: water). Every card is in the page from
+// the start; nothing loads as you scroll.
+import { getCollection } from 'astro:content';
+import { formatEventWhen } from '../../lib/format';
+import { eventHref, PAGE_CALENDARS } from '../../lib/events';
+import Todo from '../Todo.astro';
+
+interface Props {
+  limit?: number;
+}
+
+const { limit = 6 } = Astro.props;
+const today = new Date().toISOString().slice(0, 10);
+const events = (
+  await getCollection('events', ({ data }) => PAGE_CALENDARS.includes(data.calendar.id))
+)
+  .filter(({ data }) => data.end.slice(0, 10) >= today)
+  .sort((a, b) => a.data.start.localeCompare(b.data.start))
+  .slice(0, limit);
+const month = (iso: string) =>
+  new Date(`${iso.slice(0, 10)}T12:00:00`).toLocaleString('en-US', { month: 'short' });
+---
+
+{events.some(({ data }) => data.sample) && <Todo block>sample events, not the real calendars</Todo>}
+<ol class="cards">
+  {events.map(({ data }) => (
+    <li>
+      <article class="card">
+        <p class="date" aria-hidden="true">
+          <span>{month(data.start)}</span>
+          <strong>{Number(data.start.slice(8, 10))}</strong>
+        </p>
+        <div>
+          <h3>{eventHref(data) ? <a href={eventHref(data)}>{data.title}</a> : data.title}</h3>
+          {data.tentative && <p class="tentative">Tentative</p>}
+          <p>
+            <time datetime={data.start}>{formatEventWhen(data)}</time>
+          </p>
+          {data.location && <p class="where">{data.location.split(',')[0]}</p>}
+        </div>
+      </article>
+    </li>
+  ))}
+</ol>
+
+<style>
+  .cards {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: min(80%, 18rem);
+    gap: var(--space-s);
+    margin: 0 calc(var(--gutter) * -1);
+    padding: 0.25rem var(--gutter) var(--space-s);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    list-style: none;
+  }
+
+  li {
+    scroll-snap-align: start;
+  }
+
+  .card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: var(--space-s);
+    height: 100%;
+    padding: var(--space-m);
+    border-radius: var(--radius);
+    background: var(--color-white);
+    box-shadow: 0 4px 14px rgb(0 0 0 / 0.08);
+  }
+
+  .date {
+    align-self: start;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    min-width: 3.5rem;
+    padding: 0.5rem;
+    border-radius: var(--radius);
+    background: var(--color-hunter-green);
+    color: var(--color-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .date strong {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: var(--step-1);
+  }
+
+  h3 a {
+    color: var(--color-hunter-green);
+  }
+
+  .tentative {
+    font-style: italic;
+  }
+
+  .where {
+    font-size: var(--step--1);
+  }
+</style>

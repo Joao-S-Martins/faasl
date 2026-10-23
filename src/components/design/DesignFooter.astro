@@ -1,0 +1,122 @@
+---
+// Design-phase footer: green, with the faint staff behind it.
+import TilePattern from '../TilePattern.astro';
+import Logo from '../Logo.astro';
+import { mainNav } from '../../lib/navigation';
+import { getSite } from '../../lib/site';
+
+const site = await getSite();
+---
+
+<footer class="dfooter">
+  <TilePattern variant="staff" tile={48} height="48px" frame={false} center="x" />
+  <div class="body">
+    <div class="field">
+      <TilePattern
+        variant="field"
+        height="100%"
+        frame={false}
+        ink="var(--color-white)"
+        ground="var(--color-hunter-green)"
+      />
+    </div>
+    <div class="inner">
+      <div class="who">
+        <Logo size={56} />
+        <p class="name">{site.name}</p>
+        <p>{site.legalName}</p>
+        <p class="tagline">{site.tagline}</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul>
+          {mainNav.map(({ href, label }) => (
+            <li>
+              <a href={href}>{label}</a>
+            </li>
+          ))}
+          <li>
+            <a href="/musicians">Musicians</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="contact">
+        <p>
+          {site.clubhouse.street}
+          <br />
+          {site.clubhouse.city}, {site.clubhouse.region} {site.clubhouse.postalCode}
+        </p>
+        <p>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <br />
+          <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a>
+        </p>
+        <p class="legal">501(c)(3) nonprofit · EIN {site.ein}</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .dfooter {
+    margin-top: 0;
+  }
+
+  .body {
+    position: relative;
+    isolation: isolate;
+    background: var(--color-hunter-green);
+    color: var(--color-white);
+  }
+
+  .field {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .inner {
+    display: grid;
+    gap: var(--space-l);
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding: var(--space-xl) var(--gutter) 5rem;
+  }
+
+  .who :global(.logo) {
+    color: var(--color-gold);
+  }
+
+  .name {
+    font-family: var(--font-heading);
+    font-size: var(--step-2);
+    font-weight: 700;
+  }
+
+  .tagline {
+    font-style: italic;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: start;
+    gap: 0.5rem var(--space-l);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .legal {
+    font-size: var(--step--1);
+  }
+
+  @media (min-width: 48rem) {
+    .inner {
+      grid-template-columns: 2fr 1fr 1.5fr;
+    }
+  }
+</style>

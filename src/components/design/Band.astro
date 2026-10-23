@@ -1,0 +1,78 @@
+---
+// A full-width section with one of the page's backgrounds. Bold green is one
+// tool among several: use it now and then, never twice in a row
+// (docs/brief.md §3.1).
+import TilePattern from '../TilePattern.astro';
+
+interface Props {
+  bg?: 'white' | 'tint' | 'green' | 'field' | 'field-green';
+  /** Narrow text column instead of the full content width. */
+  narrow?: boolean;
+  id?: string;
+  label?: string;
+}
+
+const { bg = 'white', narrow = false, id, label } = Astro.props;
+const field = bg === 'field' || bg === 'field-green';
+---
+
+<section class:list={['band', bg]} id={id} aria-label={label}>
+  {field && (
+    <div class="band-bg">
+      <TilePattern
+        variant="field"
+        height="100%"
+        frame={false}
+        ink={bg === 'field-green' ? 'var(--color-white)' : undefined}
+        ground={bg === 'field-green' ? 'var(--color-hunter-green)' : undefined}
+      />
+    </div>
+  )}
+  <div class:list={['band-inner', { narrow }]}>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .band {
+    position: relative;
+    isolation: isolate;
+    padding-block: var(--space-xl);
+  }
+
+  .band-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+
+  .band-inner {
+    max-width: var(--content-width);
+    margin-inline: auto;
+    padding-inline: var(--gutter);
+  }
+
+  .narrow {
+    max-width: 44rem;
+  }
+
+  .tint {
+    background: var(--color-off-white);
+  }
+
+  .green,
+  .field-green {
+    background: var(--color-hunter-green);
+    color: var(--color-white);
+  }
+
+  .green :global(a),
+  .field-green :global(a) {
+    color: inherit;
+  }
+
+  .green :global(h2),
+  .field-green :global(h2) {
+    color: inherit;
+  }
+</style>

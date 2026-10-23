@@ -1,0 +1,70 @@
+---
+// Big, bold numbers, each with a large icon above it (docs/brief.md §3.1).
+import type { AstroComponent } from '@lucide/astro';
+
+interface Props {
+  stats: { icon: AstroComponent; value: string; label: string }[];
+  /** `dark` for green backgrounds. */
+  tone?: 'light' | 'dark';
+}
+
+const { stats, tone = 'light' } = Astro.props;
+---
+
+<ul class:list={['stats', tone]}>
+  {stats.map(({ icon: Icon, value, label }) => (
+    <li>
+      <Icon size={56} stroke-width={1.5} aria-hidden="true" class="icon" />
+      <strong>{value}</strong>
+      <span>{label}</span>
+    </li>
+  ))}
+</ul>
+
+<style>
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-l) var(--space-m);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  li {
+    display: grid;
+    justify-items: center;
+    gap: 0.25rem;
+  }
+
+  .icon {
+    color: var(--color-hunter-green);
+    margin-bottom: 0.25rem;
+  }
+
+  .dark .icon {
+    color: var(--color-white);
+  }
+
+  strong {
+    font-family: var(--font-heading);
+    font-size: clamp(2.75rem, 2rem + 3vw, 4rem);
+    line-height: 1;
+    color: var(--color-hunter-green);
+  }
+
+  .dark strong {
+    color: var(--color-white);
+  }
+
+  span {
+    font-weight: 600;
+  }
+
+  @media (min-width: 48rem) {
+    .stats {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>
