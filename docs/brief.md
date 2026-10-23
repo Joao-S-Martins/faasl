@@ -128,9 +128,9 @@ Known guardrails:
 - ❓ Mobile navigation pattern: hamburger menu, bottom tab bar, or sticky "Donate" button? (design phase)
 
 ### Brand & visual design (design phase)
-- ❓ **Logo:** keep `Logo.svg` as is, or refresh?
+- ✅ **Logo:** keep the gold lyre (`src/assets/logo.svg`); the uniform crest waits for a vector (`brand.md`)
 - ❓ **CSS framework** (e.g. Tailwind) vs. plain CSS: decide after seeing the designs
-- ❓ **Typography:** the old site used Adobe Typekit. 💡 Switch to self-hosted open-source fonts (faster, free).
+- ✅ **Typography:** font set B, Barlow Condensed and Barlow, self-hosted (`brand.md`)
 - ❓ Icon set. 💡 A small open-source set (e.g. Lucide or Phosphor) instead of Font Awesome.
 - ❓ Animations: the old site slid sections in on scroll. Keep subtle motion, or none?
 - ❓ Dark mode. 💡 Light only for v3.
