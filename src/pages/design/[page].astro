@@ -300,15 +300,16 @@ const taglines = [
 
     <h3>Subtle staff, for section breaks and backgrounds</h3>
     <p>
-      One long, faint staff with a few notes. Quiet enough to sit behind text; it never carries
-      meaning, so it stays decorative. On green it's drawn in white.
+      A long staff with a written melody: eight different measures of quarter, half, whole and
+      eighth notes (beamed or flagged), with bar lines. As a section break it's one staff; as a
+      background, closely packed staves, each starting at a different measure, kept very faint. On
+      green it's drawn in white.
     </p>
-    <TilePattern variant="subtle" height="4rem" />
 
     <h4>Section break: one staff between sections</h4>
     <div class="example mock-page">
       <p>…the end of one section, with its call to action.</p>
-      <TilePattern variant="subtle" height="48px" frame={false} />
+      <TilePattern variant="line" height="48px" frame={false} />
       <p>The next section starts here.</p>
     </div>
 
@@ -316,7 +317,7 @@ const taglines = [
     <div class="example on-staff mock-header">
       <div class="staff-bg">
         <TilePattern
-          variant="subtle"
+          variant="field"
           ink="var(--color-white)"
           ground="var(--color-hunter-green)"
           height="100%"
@@ -330,7 +331,7 @@ const taglines = [
     <h4>Call to action block</h4>
     <div class="example on-staff mock-cta">
       <div class="staff-bg">
-        <TilePattern variant="subtle" ground="var(--color-off-white)" height="100%" frame={false} />
+        <TilePattern variant="field" ground="var(--color-off-white)" height="100%" frame={false} />
       </div>
       <p class="mock-title">Keep music lessons free</p>
       <p>Your gift buys method books, repairs instruments and keeps the band playing.</p>
@@ -340,7 +341,7 @@ const taglines = [
     <h4>Behind a testimonial snippet</h4>
     <div class="example on-staff mock-quote">
       <div class="staff-bg">
-        <TilePattern variant="subtle" height="100%" frame={false} />
+        <TilePattern variant="field" height="100%" frame={false} />
       </div>
       <blockquote>
         <p>“A pull quote from a member story goes here, one or two sentences long.”</p>
@@ -352,7 +353,7 @@ const taglines = [
     <div class="example on-staff mock-numbers">
       <div class="staff-bg">
         <TilePattern
-          variant="subtle"
+          variant="field"
           ink="var(--color-white)"
           ground="var(--color-hunter-green)"
           height="100%"
@@ -376,7 +377,7 @@ const taglines = [
     <div class="example on-staff mock-footer">
       <div class="staff-bg">
         <TilePattern
-          variant="subtle"
+          variant="field"
           ink="var(--color-white)"
           ground="var(--color-hunter-green)"
           height="100%"

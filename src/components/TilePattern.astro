@@ -1,9 +1,16 @@
 ---
-// Tile patterns built from musical motifs (staff lines, notes, fermatas,
-// sharps), drawn like hand-painted tiles in the brand colors
+import { MEASURES, writeStaff } from '../lib/staff';
+
+// Patterns built from musical motifs, drawn like hand-painted tiles in the
+// brand colors
 // (docs/brand.md, Portuguese motifs). Decorative only.
 interface Props {
-  variant?: 'staff' | 'rosette' | 'subtle';
+  /**
+   * Wall tiles: `staff` (one tile high, for bands) and `rosette`.
+   * Staff lines: `line` (one long staff, a section break) and `field`
+   * (offset staves, a background).
+   */
+  variant?: 'staff' | 'rosette' | 'line' | 'field';
   /** Line color (hunter green by default) and accent (gold, used sparingly). */
   ink?: string;
   accent?: string;
@@ -27,7 +34,21 @@ const {
   frame = true,
 } = Astro.props;
 const id = `tile-${variant}-${Math.random().toString(36).slice(2, 8)}`;
-const width = variant === 'subtle' ? tile * 2 : tile;
+
+// The staff lines: eight different measures, so the repeat is hard to spot.
+// `field` offsets each staff by a few measures and packs them closely.
+const MEASURE = 96;
+const lineStaff = writeStaff(MEASURES, 12, MEASURE);
+const fieldOrder = [3, 6, 1, 4, 7, 2, 5, 0];
+const fieldStaves = [
+  writeStaff(MEASURES, 8, MEASURE),
+  writeStaff(
+    fieldOrder.map((i) => MEASURES[i]),
+    48,
+    MEASURE,
+  ),
+];
+const staffWidth = MEASURES.length * MEASURE;
 
 // Shared by the wall tiles (staff, rosette): a square face inside a grout
 // margin, with corner motifs drawn from the face corners so nothing crosses
@@ -111,27 +132,33 @@ const cornerDots =
         ))}
       </pattern>
     )}
-    {variant === 'subtle' && (
+    {(variant === 'line' || variant === 'field') && (
       <pattern
         id={id}
-        width={width}
-        height={tile / 2}
+        width={staffWidth}
+        height={variant === 'line' ? 48 : 80}
         patternUnits="userSpaceOnUse"
-        viewBox="0 0 192 48"
       >
-        <rect width="192" height="48" fill={ground} />
-        <g fill="none" stroke={ink} stroke-width="1" opacity="0.18">
-          <path d="M0 12 H192 M0 18 H192 M0 24 H192 M0 30 H192 M0 36 H192" />
-          <path
-            d="M43 33 V13 M99 27 V9 M151 36 V16 M151 16 C156 19 159 21 157 26"
-            stroke-width="1.4"
-          />
-        </g>
-        <g fill={ink} opacity="0.18">
-          <ellipse cx="40" cy="33" rx="3.6" ry="2.6" transform="rotate(-22 40 33)" />
-          <ellipse cx="96" cy="27" rx="3.6" ry="2.6" transform="rotate(-22 96 27)" />
-          <ellipse cx="148" cy="36" rx="3.6" ry="2.6" transform="rotate(-22 148 36)" />
-        </g>
+        <rect width={staffWidth} height={variant === 'line' ? 48 : 80} fill={ground} />
+        {(variant === 'line' ? [lineStaff] : fieldStaves).map((staff) => (
+          <g opacity={variant === 'line' ? 0.35 : 0.16} stroke-linecap="round">
+            <path d={staff.lines} fill="none" stroke={ink} stroke-width="1" />
+            <path d={staff.beams} fill="none" stroke={ink} stroke-width="3" stroke-linecap="butt" />
+            <path d={staff.flags} fill={ink} />
+            {staff.heads.map((head) => (
+              <ellipse
+                cx={head.x}
+                cy={head.y}
+                rx={head.whole ? 4.2 : 3.6}
+                ry="2.6"
+                transform={head.whole ? undefined : `rotate(-22 ${head.x} ${head.y})`}
+                fill={head.open ? ground : ink}
+                stroke={head.open ? ink : 'none'}
+                stroke-width={head.whole ? 1.8 : 1.2}
+              />
+            ))}
+          </g>
+        ))}
       </pattern>
     )}
   </defs>
