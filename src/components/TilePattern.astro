@@ -4,6 +4,8 @@
 // (docs/brand.md, Portuguese motifs). Decorative only.
 interface Props {
   variant?: 'staff' | 'rosette' | 'subtle';
+  /** Rosette only: the note turned around the center. */
+  note?: 'eighths' | 'quarter' | 'half';
   /** Line color (hunter green by default) and accent (gold, used sparingly). */
   ink?: string;
   accent?: string;
@@ -14,13 +16,14 @@ interface Props {
 
 const {
   variant = 'staff',
+  note = 'eighths',
   ink = 'var(--color-hunter-green)',
   accent = 'var(--color-gold)',
   ground = 'var(--color-white)',
   height = '7rem',
   tile = 96,
 } = Astro.props;
-const id = `tile-${variant}-${Math.random().toString(36).slice(2, 8)}`;
+const id = `tile-${variant}-${note}-${Math.random().toString(36).slice(2, 8)}`;
 const width = variant === 'subtle' ? tile * 2 : tile;
 ---
 
@@ -60,21 +63,62 @@ const width = variant === 'subtle' ? tile * 2 : tile;
         <rect width="96" height="96" fill={ground} />
         <g fill="none" stroke={ink} stroke-linecap="round" stroke-width="1.5">
           <circle cx="48" cy="48" r="30" />
-          <circle cx="48" cy="48" r="9" stroke={accent} stroke-width="2" />
-          <path d="M3 3 H93 V93 H3 Z" stroke-width="1" />
+          <circle cx="48" cy="48" r="8" stroke={accent} stroke-width="2" />
+          {/* large corner arcs: four tiles meet to make one ring */}
+          <path d="M0 24 A24 24 0 0 0 24 0 M72 0 A24 24 0 0 0 96 24 M96 72 A24 24 0 0 0 72 96 M24 96 A24 24 0 0 0 0 72" />
         </g>
-        {/* one eighth note, turned four times around the center */}
+        {/* a whole note at each corner, completed where four tiles meet */}
+        {[
+          [0, 0],
+          [96, 0],
+          [0, 96],
+          [96, 96],
+        ].map(([x, y]) => (
+          <g>
+            <ellipse cx={x} cy={y} rx="6" ry="4.2" fill={accent} />
+            <ellipse cx={x} cy={y} rx="2.4" ry="2.6" fill={ground} />
+          </g>
+        ))}
+        {/* the figure, turned four times. Stems up on the right of the
+            notehead, as written; beams or no flags, so it never reads as a
+            pinwheel. */}
         {[0, 90, 180, 270].map((angle) => (
           <g transform={`rotate(${angle} 48 48)`}>
-            <path
-              d="M54 22 V40 M54 22 C60 26 64 28 62 34"
-              fill="none"
-              stroke={ink}
-              stroke-width="1.6"
-              stroke-linecap="round"
-            />
-            <ellipse cx="50.5" cy="40" rx="4" ry="2.8" transform="rotate(-22 50.5 40)" fill={ink} />
-            <circle cx="6" cy="6" r="2" fill={accent} />
+            {note === 'eighths' && (
+              <g fill={ink}>
+                <path
+                  d="M45.4 35.4 V23 M55.4 35.4 V23"
+                  fill="none"
+                  stroke={ink}
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                />
+                <path d="M45.4 24 H55.4" stroke={ink} stroke-width="3.5" />
+                <ellipse cx="42" cy="36" rx="3.8" ry="2.7" transform="rotate(-22 42 36)" />
+                <ellipse cx="52" cy="36" rx="3.8" ry="2.7" transform="rotate(-22 52 36)" />
+              </g>
+            )}
+            {note !== 'eighths' && (
+              <g>
+                <path
+                  d="M49.4 35.4 V21"
+                  fill="none"
+                  stroke={ink}
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                />
+                <ellipse
+                  cx="46"
+                  cy="36"
+                  rx="3.8"
+                  ry="2.7"
+                  transform="rotate(-22 46 36)"
+                  fill={note === 'half' ? ground : ink}
+                  stroke={ink}
+                  stroke-width={note === 'half' ? 1.4 : 0}
+                />
+              </g>
+            )}
           </g>
         ))}
       </pattern>
