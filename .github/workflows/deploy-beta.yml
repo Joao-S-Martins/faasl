@@ -22,13 +22,10 @@ jobs:
 
   deploy:
     needs: ci
-    # Skipped until Cloudflare is set up: set the repository variable
-    # BETA_DEPLOY_ENABLED to "true".
-    if: vars.BETA_DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-latest
     environment:
       name: beta
-      url: ${{ vars.BETA_URL }}
+      url: https://faasl-beta.faasl.workers.dev
     steps:
       - uses: actions/checkout@v7.0.1
       - uses: actions/setup-node@v7.1.0

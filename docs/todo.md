@@ -65,7 +65,7 @@ Full plan: [`deployment.md`](./deployment.md). GitHub Actions does every build a
 - [x] 🧑 **Create a dedicated FAASL Cloudflare account** (free plan) with an faasl.org email (e.g. `web@faasl.org`); enable two-factor login. Keep personal sites in your personal account (`deployment.md` §1).
 - [ ] 🧑 Invite your personal Cloudflare login to the FAASL account as Super Administrator
 - [x] 🧑 In the FAASL account: choose the `workers.dev` subdomain; create the API token ("Edit Cloudflare Workers" template, limited to the FAASL account); note the account ID Subdomain: `faasl` → beta at https://faasl-beta.faasl.workers.dev
-- [x] 🧑 GitHub: `beta` environment with `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; `BETA_DEPLOY_ENABLED` = true
+- [x] 🧑 GitHub: `beta` environment with `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`; beta deploys run on every push to `v3` (the on/off variable was removed once Cloudflare was set up)
 - [ ] 🧑 GitHub: `production` environment (same secrets, you as required reviewer, limited to `main` and release tags) — before launch
 - [ ] 🧑 GitHub: branch protection on `main` (pull requests, CI must pass, no force-push)
 - [x] 🤖 `wrangler.jsonc` with two Workers (`faasl-beta`, `faasl`) and beta mode (`noindex`, robots block)
