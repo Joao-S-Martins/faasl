@@ -1,0 +1,29 @@
+# One-time: print the text of the old Adobe Express stories page into the
+# job log, since it can't be reached from the dev container. Delete after use.
+name: Scrape stories
+on:
+  push:
+    branches: [v3]
+    paths: [.github/workflows/scrape-stories.yml]
+permissions:
+  contents: read
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm i --no-save playwright@1.48.2 && npx playwright install --with-deps chromium
+      - run: |
+          cat > scrape.mjs <<'JS'
+          import { chromium } from 'playwright';
+          const b = await chromium.launch();
+          const p = await b.newPage({ viewport: { width: 1280, height: 900 } });
+          await p.goto('https://stories.faasl.org', { waitUntil: 'networkidle', timeout: 60000 });
+          for (let i = 0; i < 40; i++) { await p.mouse.wheel(0, 900); await p.waitForTimeout(300); }
+          await p.waitForTimeout(2000);
+          console.log('URL', p.url());
+          console.log('=====TEXT=====');
+          console.log(await p.evaluate(() => document.body.innerText));
+          console.log('=====END=====');
+          await b.close();
+          JS
+          node scrape.mjs
