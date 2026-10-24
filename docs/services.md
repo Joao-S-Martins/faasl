@@ -18,6 +18,19 @@ The site is static, so the form needs a service to receive submissions and email
 | **Google Form** (our Google Workspace) | Unlimited; answers in a Google Sheet | Google's | Build the form in Google; link or embed it | ⚠️ Off-brand embed, but owned by the org and familiar to the board |
 | **Our own Cloudflare Worker + Turnstile** | Free at our size | Turnstile (Cloudflare's invisible check) ([Cloudflare example](https://developers.cloudflare.com/workers/examples/turnstile-html-rewriter), [Astro walkthrough](https://www.rhelmer.org/blog/astro-turnstile-cloudflare-workers/)) | Server code we maintain, plus email sending that works best once faasl.org's DNS is on Cloudflare | ❌ Against "no server"; revisit only if we outgrow the others |
 
+### Our own form handler on Cloudflare (looked at more closely, Oct 2026)
+
+Possible, and probably free, with one dependency on the domain move:
+- **The code:** a small handler (about 60 lines) added to the Worker that already serves the site. It receives the form, checks it, and sends one email to info@faasl.org; nothing is stored. Static pages stay free and unlimited; only form submissions count against the free plan's 100,000 requests a day ([Workers limits](https://developers.cloudflare.com/workers/platform/limits)).
+- **Spam:** Cloudflare Turnstile, free with unlimited checks ([Turnstile plans](https://developers.cloudflare.com/turnstile/plans/)), plus a hidden honeypot field.
+- **Sending the email is the catch:**
+  - Cloudflare's Workers email binding is configured in `wrangler.jsonc` with no API key to store, but it needs faasl.org's DNS on Cloudflare ([Email Service: send emails](https://developers.cloudflare.com/email-service/get-started/send-emails/)). That happens at launch (Phase 7).
+  - Before a domain is fully set up for sending, it can only send to verified addresses in our account ([Flavio Copes](https://flaviocopes.com/cloudflare-email-service/)). That's all we need: one verified info@faasl.org.
+  - Our email is on Google Workspace, whose MX records sit on faasl.org itself. Email Routing can run on a subdomain instead, so Google's records stay untouched ([subdomains](https://developers.cloudflare.com/email-routing/setup/subdomains/)). To confirm when we do it.
+  - ⚠️ Cloudflare's newer Email Service (public beta in 2026) reportedly needs the $5/month Workers Paid plan to send to arbitrary addresses ([DEV](https://dev.to/sohom_47/how-to-send-email-from-cloudflare-workers-1e9p)). Sending only to our own verified address is the free path to confirm.
+- **Timing:** the form can't send until the domain is on Cloudflare, which is also when the site launches. So it could be built and tested on beta now (Turnstile and checks working, email logged instead of sent), and switched on at the DNS move.
+- **Trade-off:** no third party, no monthly limits, nothing stored anywhere; but it's code we own and maintain, and the beta contact form stays off until launch.
+
 **Recommendation: Web3Forms.** The most generous free tier with nothing to maintain, and it works with the form we already have (a plain HTML form post). Formspree is a good fallback; its 50/month would only bite during a big recruiting push.
 
 - **Free tiers:** the Web3Forms numbers come mostly from comparison blogs, some written by competitors ([splitforms](https://splitforms.com/blog/formspree-vs-web3forms)), and paid-plan prices disagree between sources. The free tier is all we need; confirm it on web3forms.com.
@@ -67,7 +80,7 @@ Whichever we pick:
 
 ## 3. Decisions needed
 
-1. **Contact form:** Web3Forms (recommended), Formspree, or a Google Form?
+1. **Contact form:** Web3Forms (recommended for working right away), our own Cloudflare handler (works from launch, no third party), Formspree, or a Google Form?
 2. **Donations:** Zeffy (recommended; free, with a tip prompt) or Givebutter (no prompt, about 3%)? This is likely a board conversation; a test donation on each helps.
 3. **Account owner:** the faasl.org address the accounts are created under.
 4. **On the Give page:** a link to the provider's page, or an embedded form?
