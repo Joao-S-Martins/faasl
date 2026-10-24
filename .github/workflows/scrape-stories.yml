@@ -25,7 +25,7 @@ jobs:
           p.on('response', async (r) => {
             const t = r.headers()['content-type'] || '';
             if (!t.includes('json')) return;
-            try { const j = await r.json(); console.log('JSON', r.url().slice(0, 150)); walk(j); } catch {}
+            try { const u = r.url(); const j = await r.json(); console.log('JSON', u.slice(0, 200)); if (!/adobe\.(com|io)\/(.*)(locale|strings|i18n|feature|flags)/.test(u)) { const before = strings.size; walk(j); if (strings.size - before > 0) console.log('  +', strings.size - before, 'strings'); } } catch {}
           });
           await p.goto('https://stories.faasl.org', { waitUntil: 'load', timeout: 90000 });
           await p.waitForTimeout(8000);
@@ -53,8 +53,8 @@ jobs:
               }));
             } catch (e) { console.log('ERR', e.message); }
           }
-          console.log('=====JSON STRINGS=====');
-          console.log([...strings].join('\n---\n'));
+          console.log('=====JSON STRINGS (with band words)=====');
+          console.log([...strings].filter((x) => /band|music|FAASL|play|famil|son|daughter|grand|portug/i.test(x) && !/Adobe|Express|template|Firefly/i.test(x)).join('\n---\n'));
           console.log('=====END=====');
           await b.close();
           JS
