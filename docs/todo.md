@@ -125,6 +125,8 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [x] 🤖 Component catalog (`/design/components`): 39 components with examples, code, options and usage; phone/tablet/desktop previews; guidelines page
 - [x] 🤖 Accessibility and performance checks (`design-system.md` §8): axe clean, Lighthouse 94–100, no-JS, zoom, small screens, print
 - [ ] 🧑 Keyboard-only and screen reader pass on a real phone
+- [ ] 🤖 Fonts: preload the two most-used files and size-matched fallbacks (or Astro's Fonts API); drop unused weights (`design-system.md` §9)
+- [ ] 🤖 A daily rebuild so past events drop off on time, alongside the weekly content release (`deployment.md` §6)
 
 ## Phase 4 — Build sections
 
