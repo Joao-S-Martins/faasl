@@ -52,6 +52,11 @@ const field = bg === 'field' || bg === 'field-green';
     padding-inline: var(--gutter);
   }
 
+  /* every section heading gets the same space below it */
+  .band-inner > :global(h2) {
+    margin-bottom: var(--space-s);
+  }
+
   .narrow {
     max-width: 44rem;
   }
