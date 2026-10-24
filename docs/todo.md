@@ -199,13 +199,10 @@ Landscape, at least 2000px wide, people facing the camera or in action, subject 
 - [ ] **Bios appear in too many places** (Home, About, and Impact before this pass): decide where bios live and where only names and photos show.
 
 ### Quotes 🧑
-- [ ] **More member quotes:** only Aubury's is in the site; the other good ones are on the old stories page (stories.faasl.org, an Adobe Express page I can't reach from here). Paste them in, or send the page text, and I'll add each as a story (`src/content/stories/`). Each page then picks a different quote.
-- [ ] **A student or family quote** for "Ready to start?" on Lessons (Home already uses Aubury's)
-- [ ] **Another musician quote** for Join (Home uses Aubury's)
+- [x] **Member quotes:** the six stories from the old stories page (stories.faasl.org, Adobe Express) are copied in full into `src/content/stories/`, each with a short pull quote. Home and Join: Aubury, Manuel; Lessons: Erika; Give: Lorenza; Impact: Manuel (bonds), Rui (three generations). Donald's isn't shown yet; it names Steve Silva as director, so check it's current before using it.
+- [ ] **Ask each person** if we may keep using their quote on the new site, and for a photo (optional)
 - [ ] **Ryan, the San Leandro High School band director:** the difference he sees in students who take part (Impact)
-- [ ] **A family quote about tradition** (Impact or About)
-- [ ] **A quote about bonding** in the band (Impact or Join)
-- [ ] **A donor quote** for Give
+- [ ] **A donor quote** for Give (Lorenza's, about volunteering and fundraising, holds the spot)
 
 ### New headshots 🧑
 - [ ] Lorenza D.L.G. Tomaz (President of the Board)

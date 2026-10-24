@@ -24,6 +24,7 @@ import MapEmbed from '../components/blocks/MapEmbed.astro';
 import CalendarLink from '../components/content/CalendarLink.astro';
 import EventList from '../components/content/EventList.astro';
 import FaqList from '../components/content/FaqList.astro';
+import Testimonial from '../components/content/Testimonial.astro';
 import Todo from '../components/layout/Todo.astro';
 import { getScheduleMap } from '../lib/schedule';
 import { getSite } from '../lib/site';
@@ -228,9 +229,7 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
     <QuoteBox>
       <div class="stack">
         <h2>Ready to start?</h2>
-        <Todo block>
-          a quote from a student or family (Home already uses Aubury's; docs/todo.md)
-        </Todo>
+        <Testimonial audience="families" />
         <p>
           Come to the next class, {s.beginner.day} at {s.beginner.time}. Questions first?
         </p>
