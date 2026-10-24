@@ -113,13 +113,15 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
   - [x] Social share image, 1200×630 (`public/share.png`); later: a band photo per page
 - [x] 🤖 2–3 visual directions as quick mockups (mobile first) for you to pick from: A, Tiles and paper; B, Photo-led (`/design/a/home`, `/design/b/home`, and `/lessons` for each; beta only)
 - [x] 🤖 Direction C, the mix (`/design/c/home`, `/design/c/lessons`): B's header and balance of backgrounds, A's text box overlapping the hero photo (so the heading never depends on the photo for contrast), A's quote box on the staff background, the tile wall with whole rows of tiles, events on green, leadership cards in a sideways row on phones, B's Lessons page with A's tile rules
-- [ ] 🧑 Decide: stats on light or on dark (C uses dark; A shows light)
+- [x] 🧑 Stats: white with bold hunter-green numbers; events on green with the staff field (Oct 2026)
 - [ ] 🧑 Later: reconsider B's heading over the photo once the hero video exists
-- [ ] 🧑 Pick a direction, or mix parts of them
-- [ ] 🤖 Wireframes for the home page and one inner page (phone → tablet → desktop)
-- [ ] 🤝 Design tokens finalized (colors, type scale, spacing, radii, shadows)
-- [ ] 🤖 Core component set: buttons/CTAs, cards, section headers, nav, footer, FAQ accordion
-- [ ] 🧑 Approve the design → unlocks Phase 4
+- [x] 🧑 Direction C approved
+- [x] 🤖 Expert reviews: front-end plan review and web design review at 7 screen sizes; outcomes in `design-system.md`
+- [x] 🤖 Canonical links fixed (they ended in `.html`) and checked in CI (`npm run check:seo`)
+- [x] 🤖 Wireframes for the home page and one inner page: covered by Direction C at phone, tablet and desktop
+- [x] 🧑 Plain CSS, no framework; component catalog like the Bootstrap/Tailwind docs instead of Storybook (`design-system.md`)
+- [x] 🧑 Approve the design → unlocks Phase 4
+- [ ] 🤖 Build the design system (`design-system.md` §10): styles and checks, layout, blocks, Home and Lessons, other pages, catalog, cleanup, accessibility and performance checks
 
 ## Phase 4 — Build sections
 
@@ -170,6 +172,12 @@ Built in this order, each reviewed on a preview URL:
 ---
 
 ## Content gathering (runs alongside all phases)
+
+### Photos 🧑
+- [ ] **Clubhouse photo** for "Visit us" on the home page: the outside of 844 Alvarado St., landscape, daytime, recognizable from the street
+
+### Quotes 🧑
+- [ ] **A student or family quote** for "Ready to start?" on Lessons (Home already uses Aubury's)
 
 ### New headshots 🧑
 - [ ] Lorenza D.L.G. Tomaz (President of the Board)

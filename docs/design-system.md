@@ -1,161 +1,164 @@
-# FAASL.org v3: Design system plan
+# FAASL.org v3: Design system
 
-**Status:** plan, for review before building (Oct 2026). Direction C is approved (`/design/c/home`, `/design/c/lessons`); this plan turns its pieces into the site's real component system.
-Related: [`brand.md`](./brand.md) (colors, type, patterns, voice) · [`brief.md`](./brief.md) §3.1 (design rules from the inspirations) · [`architecture.md`](./architecture.md)
+**Status:** approved plan, revised after a front-end engineering review and a web design review (Oct 2026). Direction C (`/design/c/home`, `/design/c/lessons`) is the approved design; this turns its pieces into the site's component system.
+Related: [`brand.md`](./brand.md) (colors, type, patterns, voice) · [`brief.md`](./brief.md) §3.1 (design rules) and §5.4 (SEO guardrails)
 
 ## Goals
 
-1. **Change a look in one place.** A style lives in exactly one component or token; pages never restyle things.
-2. **Build pages by stacking sections.** A page is a short, readable list of sections; reordering or reusing a section is moving lines.
-3. **Mix and match through a small set of options** with the same names everywhere, not through class names.
+1. **Change a look in one place.** A style lives in one component or token; pages never restyle things.
+2. **Build pages by stacking sections.** A page reads as a short list of sections.
+3. **Mix and match through a few options** with the same names everywhere.
 4. **Plain CSS, structured and componentized.** No CSS framework. Simple, semantic HTML.
-5. **A catalog like Bootstrap's or Tailwind's docs**, beta only, documenting every token and component with live examples, options and usage notes.
-6. **The agreed rules hold:** WCAG 4.5:1 text contrast, gold only for the lyre and trim, tile sizes in whole pixels, mobile first, SEO guardrails (content in the page from the start, no layout shift), reduced motion respected.
+5. **A catalog like the Bootstrap or Tailwind docs**, beta only.
+6. **The agreed rules hold:** 4.5:1 text contrast, gold only for the lyre and trim, whole-pixel tile sizes, mobile first, SEO guardrails, reduced motion.
 
-Not a goal: enforcing layout rules in code. "Bold green is one tool among several, never twice in a row" stays a written guideline, because there may be an exception some day.
+Written guidelines, not code: "bold green is one tool among several, rarely twice in a row" stays a guideline, because exceptions may come.
 
-## 1. Layers
+## 1. Structure
 
-| Layer | Folder | What | Changes |
-|---|---|---|---|
-| **Tokens** | `src/styles/tokens.css` | Every value with a name: color roles, type scale, spacing, radii, shadows, tile sizes, motion durations, breakpoints (as comments; CSS custom properties can't be used in media queries) | Rare; a change restyles the whole site |
-| **Base** | `src/styles/base.css` (from `global.css`) | Reset, element defaults (headings, links, lists, focus), font loading | Rare |
-| **Utilities** | `src/styles/utilities.css` | A handful of single-purpose classes: `.stack` (vertical rhythm between children), `.center`, `.lead`, `.visually-hidden`, `.measure` (reading width) | Rare; resist adding more |
-| **Surfaces** | `src/components/surfaces/` | What a section sits on | Add one occasionally |
-| **Blocks** | `src/components/blocks/` | Reusable layout pieces that don't know about content | The design toolbox |
-| **Content components** | `src/components/content/` | Render a collection (people, events, FAQ, stores, schedule, testimonials) | When content types change |
-| **Sections** | `src/sections/<page>/` and `src/sections/shared/` | Real content placed in blocks, one file per section | Once per section; reused across pages |
-| **Layout** | `src/layouts/`, `src/components/layout/` | Document, header, footer, Donate button | Rare |
-| **Pages** | `src/pages/` | Page metadata (title, description) plus a list of sections | Often, and trivially |
+```
+src/styles/
+  tokens.css      every named value
+  base.css        reset, element defaults, contrast context
+  utilities.css   a handful of helper classes
+src/components/
+  blocks/         layout pieces that don't know about content (Surface, MediaFeature, StatGrid…)
+  content/        render a collection (PeopleList, EventCards, FaqList, StoreList…)
+  layout/         header, footer, Donate button
+  patterns/       TilePattern, WallTile (tile and staff art)
+src/sections/     sections used on two or more pages (rule of two); one-off sections stay inline in the page
+src/pages/        page metadata plus a list of sections
+```
 
-### Cascade layers
+### CSS layers
 
-All CSS declares its layer, so priority is predictable and the "event card text turned white on green" class of bug can't recur:
+`@layer reset, base, components, utilities;` is declared first thing in `<head>` (an inline style in `BaseLayout`), so the order never depends on how Astro bundles files.
+
+- `reset` and `base` come from `base.css`; every component wraps its scoped `<style>` in `@layer components { … }`; `utilities.css` is `@layer utilities`.
+- Unlayered CSS beats every layer, so **every style in `src/` declares a layer** (a `verify` check fails otherwise; the React island's CSS module is wrapped too). Inline `style=""` is only for computed values like a tile pattern's height.
+- No `!important`, except the reduced-motion reset in the `reset` layer.
+
+### Contrast context
+
+Surfaces and boxes that paint a background set `data-on="light"` or `data-on="dark"`. That sets inherited custom properties, not descendant color rules, so the nearest painted ancestor always wins (a white card inside a green section keeps dark text):
 
 ```css
-/* src/styles/layers.css, imported first */
-@layer tokens, base, surfaces, blocks, content, sections, utilities, overrides;
+[data-on='light'] { --text: var(--color-ink); --heading: var(--color-hunter-green); --link: var(--color-hunter-green); --focus: var(--color-hunter-green); color: var(--text); }
+[data-on='dark']  { --text: var(--color-white); --heading: var(--color-white); --link: var(--color-white); --focus: var(--color-white); color: var(--text); }
+h1, h2, h3 { color: var(--heading); }  a { color: var(--link); }
+:focus-visible { outline: 2px solid var(--focus); box-shadow: 0 0 0 4px var(--focus-halo); }
 ```
 
-- Astro's scoped component styles go inside the matching layer: `<style> @layer blocks { … } </style>`.
-- `utilities` sits late so a utility always wins over block defaults; `overrides` is for rare, commented one-off fixes.
-- Components never use `!important`.
+Focus rings stay visible on every background (white ring with a green halo on dark).
 
-## 2. The shared options
+### Breakpoints
 
-Every surface and block uses the same option names and meanings. These are the levers for mixing and matching.
+Two, written as comments in `tokens.css` (CSS can't read custom properties in media queries), mobile-first range syntax:
+- `(width >= 40rem)`: tablet tweaks (wider gutters, side-by-side link rows, 3-up paths).
+- `(width >= 64rem)`: desktop (photo-and-box overlaps side by side, full menu).
 
-| Option | Values | Meaning | Used by |
-|---|---|---|---|
-| `surface` | `plain` · `tint` · `green` · `staff` · `staff-green` · `photo` | What the section sits on | `Surface` (every section) |
-| `tone` | `white` · `tint` · `green` | Color of a box or card on top of a surface | `MediaFeature`, `Card`, `Callout`, `QuoteBox` |
-| `side` | `left` · `right` | Which side the photo sits on (desktop) | `MediaFeature`, `PhotoBand` |
-| `width` | `content` · `narrow` | Content width or reading width | `Surface` |
-| `well` | `true` · `false` | A sideways row sits in the recessed tray | `CardRow` |
-| `level` | `2` · `3` | Heading level, so blocks nest correctly | Blocks with a heading |
+Tablets keep the phone layout for overlaps, with wider gutters (`clamp(1rem, 4vw, 2.5rem)`), text capped at about 65 characters and photos capped at 60% of the screen height. A lint check rejects other `min-width` values.
 
-Rules the blocks enforce themselves, so pages can't break them:
-- **Contrast:** text inside a green surface or box is white; cards inside keep their own dark text (one rule in `base.css` via a `[data-on="dark"]` context attribute that surfaces and boxes set, instead of per-component fixes).
-- **Corners:** boxes are rounded where they float free and square where they butt against a photo, another box or a section edge (handled inside each block, per breakpoint).
-- **Tile sizes:** `TileBand` and `TileWall` accept only 48, 64 or 96 px; heights are whole rows.
-- **Breakpoints:** phone layout up to 64rem (tablets included), desktop from 64rem; card grids may switch at 48rem.
+## 2. Shared options
 
-## 3. Component inventory (from Direction C)
-
-| Component | From | Notes |
+| Option | Values | Meaning |
 |---|---|---|
-| **Surfaces** | | |
-| `Surface` | `design/Band.astro` | `surface`, `width`, `id`, `label`; sets heading spacing and `data-on` |
-| **Blocks** | | |
-| `Hero` | `HomeMock` hero C | Photo, text box overlapping its bottom, sits on the same surface as the next section (`surface` prop); `data-landing` for the header; video slot (still first, reduced-motion and slow-connection aware) |
-| `PageHero` | `LessonsMock` top C | Smaller hero for inner pages |
-| `PathLinks` | `HomeMock` paths | The "I want to…" blocks (icon, title, text, link) |
-| `MediaFeature` | `design/Feature.astro` | Photo plus overlapping box; `side`, `tone` |
-| `PhotoBand` | `design/PhotoBand.astro` | Full-width photo with a box over it (kept for later) |
-| `StatGrid` | `design/StatGrid.astro` | Icon, number, label; rows aligned |
-| `StepRow` | `LessonsMock` steps | Numbered boxes that butt together; last one emphasized |
-| `FactRow` | `LessonsMock` facts | Icon, term, detail |
-| `CardRow` | `design/EventCards` + `PeopleGrid scroll` | Sideways row on phones and tablets, grid or row on desktop; `well` |
-| `ScrollWell` | `design/ScrollWell.astro` | The tray; used by `CardRow` |
-| `QuoteBox` | `HomeMock` quote box | Testimonial in a box (pairs with `surface="staff"`) |
-| `Callout` | `LessonsMock` callout | Gold-edged note |
-| `Accordion` | `LessonsMock` accordions | `<details>` group, same look for FAQ and lists |
-| `TileBand` | `TilePattern variant="staff"` | Horizontal rule of staff tiles |
-| `TileWall` | `HomeMock` give-wall | Checker wall with a box cutting into it |
-| `PhotoBreak` | `HomeMock` parade figure | Full-width photo as a separator |
-| `Button` | `ButtonLink` + `.button-light` | `variant`: `primary` · `secondary` · `on-dark` |
-| **Patterns** | `TilePattern`, `tiles/WallTile`, `lib/staff.ts` | Unchanged |
-| **Layout** | `design/DesignHeader`, `DesignFooter`, `DonateButton`, `DesignLayout` | Replace `SiteHeader`, `SiteFooter`, `PageLayout` |
+| `surface` | `plain` · `tint` · `green` | What a section sits on (white, off-white, hunter green) |
+| `pattern` | `none` · `field` | The faint staff lines on top of the surface |
+| `tone` | `plain` · `tint` · `green` | A box or card's own color |
+| `side` | `left` · `right` | Photo side on desktop |
+| `width` | `content` · `narrow` | Content width or reading width (about 65ch) |
+| `well` | boolean | A sideways row sits in the recessed tray |
+| `title`, `level`, `id` | | `Surface` renders the section heading itself, labels the section with it (`aria-labelledby`), and blocks inside default to `level` 3 |
 
-Retired after the move: `Section`, `PageHeader`, `Hero` (old), `RouterLinks`, `FactList`, `Actions` (becomes a utility or part of `Button` groups), `design/HomeMock`, `design/LessonsMock`, directions A and B.
+Blocks derive light and dark styling from the context (no `tone="dark"` props on stats or trays).
 
-## 4. Pages as section lists
+Rules the blocks enforce: corners rounded where a box floats, square where it butts against a photo, box or section edge; tile sizes 48, 64 or 96 px with whole rows; tile walls and boxes snap to grout lines.
 
-```astro
----
-// src/pages/index.astro
-import PageLayout from '../layouts/PageLayout.astro';
-import HomeHero from '../sections/home/HomeHero.astro';
-import Paths from '../sections/home/Paths.astro';
-import LessonsTeaser from '../sections/shared/LessonsTeaser.astro';
-…
----
-<PageLayout title="…" description="…">
-  <HomeHero />
-  <Paths />
-  <LessonsTeaser side="left" />
-  <CommunityStats surface="staff-green" />
-  <BandTeaser side="right" />
-  <MemberQuote audience="musicians" surface="staff" />
-  <SupportWall />
-  <UpcomingEvents surface="green" well />
-  <PhotoBreak photo="parade" />
-  <Leadership well />
-  <Visit surface="tint" />
-</PageLayout>
-```
+## 3. Tokens to add
 
-- Sections accept the shared options where it makes sense, so the same section can sit on a different surface on another page.
-- Section files hold the copy (or read it from content collections) and choose blocks; they hold no layout CSS of their own beyond spacing tweaks.
+- **Radii:** `--r-box` 8px · `--r-control` 6px · `--r-pill` 999px · `--r-tray` 16px (0 where a box meets something).
+- **Shadows:** `--shadow-float` `0 8px 24px rgb(0 0 0 / 0.12)` and none; the tray's inset shadow.
+- **Space:** `--space-section` `clamp(3.5rem, 8vw, 7rem)`; heading to body 1.5rem; body to buttons 2rem.
+- **Gutters:** `--gutter` `clamp(1rem, 4vw, 2.5rem)`.
+- **Colors** for the tray rims and hover (`--color-hunter-dark`), the focus halo, the grout and frame grays, and overlays via `color-mix()`; no raw colors in components.
+- **Motion:** `--duration-fast` 0.2s.
+- **Header heights** (`--header-h` large and compact) for `scroll-padding-top`.
 
-## 5. The catalog (`/design/components`, beta only)
+## 4. Components (from Direction C)
 
-Modeled on the Bootstrap and Tailwind docs: a sidebar of categories, one page per component, each with a short description, live examples, an options table and usage notes.
+| Component | Folder | Notes |
+|---|---|---|
+| `Surface` | blocks | `surface`, `pattern`, `width`, `title`, `level`, `id`; sets `data-on` |
+| `Hero` | blocks | Photo with the text box overlapping its bottom, sitting on the next section's surface; still first, video later; `object-position` tuned for phones |
+| `PageHero` | blocks | Smaller hero for inner pages |
+| `PathLinks` | blocks | "I want to…" links, inside the content width, whole card clickable with an arrow; 3-up from tablet |
+| `MediaFeature` | blocks | Photo with an overlapping box; `side`, `tone` |
+| `PhotoBreak` | blocks | Full-width photo as a separator |
+| `PhotoBand` | blocks | Full-width photo with a box over it (kept for later) |
+| `StatGrid` | blocks | Icon, number, label in aligned rows; balanced label wraps |
+| `FactRow` | blocks | Small label, big answer (for Lessons: cost, ages, when, how to start) |
+| `StepRow` | blocks | Numbered boxes that butt together; last one emphasized |
+| `CardRow` + `ScrollWell` | blocks | Sideways row on phones and tablets; focusable region for keyboard scrolling; `well` |
+| `QuoteBox` | blocks | Testimonial in a box |
+| `Callout` | blocks | Gold-edged note |
+| `Accordion` | blocks | `<details>` group with a green chevron, 56px rows, on the page grid |
+| `TileBand`, `TileWall` | blocks | Tile rule; checker wall with a box snapped to the grout |
+| `Button`, `ButtonRow` | blocks | `primary` · `secondary`, adapting to the context; `ButtonRow` replaces `Actions` |
+| `LinkMore` | blocks | "All events", "Meet the team": 44px tall with an arrow |
+| `PeopleList`, `EventCards`, `FaqList`, `StoreList`, `Testimonial`… | content | Existing content components, restyled |
+| `SiteHeader`, `SiteFooter`, `DonateButton`, `PageLayout` | layout | From C (see §5) |
+| `TilePattern`, `WallTile` | patterns | Deterministic ids (no `Math.random()`) |
 
-- **Pages:** Overview · Tokens (colors with contrast pairs, type scale, spacing, radii, shadows, motion) · Surfaces · each Block · Patterns · Layout (header, footer, Donate) · Guidelines (green rhythm, corners, tile sizes, contrast, motion, SEO).
-- **Examples live next to each component**: `Button.examples.astro` beside `Button.astro`, exporting a list of named examples (title, notes, rendered example). The catalog collects them with `import.meta.glob`, so adding a component's examples file adds its catalog page; nothing else to register.
-- **Options tables** come from a small typed `meta` export in each examples file (option, values, default, description), so the docs sit with the code.
-- **Viewport previews:** each example can be shown at phone, tablet and desktop widths side by side (an `<iframe>` of a bare example route at a fixed width), since many blocks change at 64rem.
-- **Real content and images:** examples use the real collections and `astro:assets`, so the catalog can't drift from the site.
-- **Never in production:** routes return no paths when `SITE_ENV` is production; `/design` stays in the sitemap's unlisted list and in `robots.txt` disallow on beta (beta is noindex anyway).
-- **Copy-paste snippets:** each example shows the Astro usage (`<MediaFeature side="right" tone="tint">…`), generated from the example's props.
+Retired: `Section`, `PageHeader`, old `Hero`, `RouterLinks`, `FactList`, `Actions`, the `design/` prototypes, directions A and B, `test.astro`.
 
-The brand guide (`/design/brand`) folds into the catalog as its Tokens and Patterns pages; the share image page stays.
+## 5. Header, menu and footer fixes (from the reviews)
 
-## 6. Conventions
+- **Header over photos:** a dark fade of at least 60% behind all header text (text shadow doesn't count toward contrast); the name balanced as "Portuguese Band / of San Leandro"; compact header whenever the screen is under 500px tall.
+- **Header state:** pages with a landing photo render `<html data-hero="in">` from the server; pages without one start compact (no flash).
+- **Phone menu:** no text shadow; scrolls when taller than the screen; closes on Escape (focus back to the button), outside tap and link tap; links in two groups (Lessons, Join, Events · Give, Impact, About, Contact); Donate as a green button at the bottom. Works without JavaScript.
+- **Fixed header:** `scroll-padding-top` so anchors, skip links and focused items aren't hidden under it; bottom padding for the Donate button.
+- **Donate button:** a white ring so it shows on green.
+- **Desktop nav links** padded to 44px tall.
+- **Footer:** no mid-word breaks in "501(c)(3)" or ZIP+4; bottom rule aligned to the grid.
 
-- **Naming:** components in PascalCase by what they are (`MediaFeature`), not how they look (`GreenBox`). Options are lowercase words from the table in §2.
-- **Props:** typed `interface Props`, defaults in destructuring, one-line JSDoc per prop.
-- **Slots:** a default slot for the main content; named slots only when a block has two content areas (`<Fragment slot="actions">`).
-- **CSS inside components:** scoped `<style>` wrapped in the component's layer; tokens only (no raw colors or sizes except where documented, like tile geometry); mobile-first media queries at 48rem and 64rem.
-- **No content in blocks;** no layout in content components; sections do the pairing.
-- **Accessibility:** every interactive block has a keyboard path; decorative SVGs `aria-hidden`; headings follow page order (`level` prop).
-- **Each component file starts with a short comment:** what it is, which options it takes, any rule it enforces.
+## 6. Page decisions (owner, Oct 2026)
 
-## 7. Migration steps
+**Home:** hero on green, Learn / Play / Give, lessons feature, stats on **white with bold hunter-green numbers**, band feature, member quote on the off-white staff field, support tile wall (phone layout keeps the tiles above the box), **"Come see us" on green with the staff field** with events in the tray, parade photo, leadership in the tray, **"Visit us" kept, with a photo of the clubhouse** (TODO: photo), footer.
 
-1. Add `layers.css`, split `global.css` into `base.css` and `utilities.css`; wrap existing component styles in layers.
-2. Expand tokens (shadows, motion, tile sizes, on-dark text) and replace raw values in the design components.
-3. Move Direction C components into `surfaces/`, `blocks/` and `content/` with the §2 options; add `data-on` contrast context.
-4. Replace `SiteHeader`, `SiteFooter`, `PageLayout` with C's header, footer, Donate button and layout.
-5. Rebuild `index` and `lessons` from section files to match `/design/c/*`; compare screenshots at 390, 820 and 1280 px.
-6. Rebuild the other pages (Join, Give, Impact, About, Events, event pages, Contact, Musicians, 404) with the same blocks.
-7. Build the catalog and examples files; fold the brand guide in.
-8. Remove directions A and B, the old components and `test.astro`; keep a few screenshots in `docs/` for B's heading-over-photo idea.
-9. Checks: `astro check`, lint, format, build; Lighthouse on mobile for Home and Lessons (performance, accessibility, SEO ≥ 95; no layout shift from the header); keyboard pass; reduced-motion pass.
+**Lessons:** hero, facts (small label, big answer; 4th fact "How to start"), "Plan your first visit" button, how it works (step boxes, the last "The volunteer band"), staff tile rule, teacher, what students learn, instrument picker (buttons across the full width, player under them, scrolls into view on phones; unavailable instruments in ink with a dashed border), getting ready and FAQ accordions, **"Ready to start?" on off-white with the staff field**, with **a placeholder for a different quote** (TODO: a student or family quote).
 
-## 8. Open questions
+## 7. The catalog (`/design/components`, beta only)
 
-- Breakpoints as tokens: CSS can't read custom properties in media queries. Options: document them as comments (planned), or adopt `@custom-media` through a PostCSS plugin (one small dependency).
-- Whether the catalog's viewport previews should use iframes (true widths, slower) or container queries on blocks (faster, but blocks would need to respond to their container instead of the screen).
-- Whether `Section` survives as a thin wrapper inside `Surface` for heading markup (`aria-labelledby`), or `Surface` takes a `title` prop itself.
+Modeled on the Bootstrap and Tailwind docs: a sidebar of categories; one page per component with a description, live examples, an options table and usage notes; Guidelines pages generated from this document.
+
+- **Examples are small files** beside each component (`blocks/MediaFeature/examples/right-tint.astro`), collected with `import.meta.glob` twice: once to render, once with `?raw` to show the source exactly as written (Astro's built-in `<Code>` highlights it).
+- **Options tables** come from a typed `meta` export keyed by the component's `Props`, so `astro check` fails when an option is undocumented.
+- **Viewport previews:** phone, tablet and desktop iframes, loaded on demand and scaled to fit.
+- **Real content and images**, so the catalog can't drift from the site.
+- **Never in production:** one `src/pages/design/[...path].astro` route returns no paths in production; CI checks `dist/design` doesn't exist in production builds. Beta is already noindex.
+- The brand guide becomes the catalog's Tokens and Patterns pages; the share image page stays.
+
+## 8. Checks
+
+- Existing: `astro check`, lint, format, build, `check:seo` (canonical links match the sitemap).
+- Add: every `<style>` declares a layer; only the two breakpoints; no `dist/design` in production; stable HTML between builds.
+- Before calling the migration done: axe on every page at 390 and 1280; contrast of every surface × tone pair, the header over photos and focus rings; Lighthouse mobile ≥ 95 on Home and Lessons (layout shift from the header and fonts); keyboard-only pass; JavaScript off; 200% zoom; 320px wide and sideways phone; Lessons print preview.
+
+## 9. Also from the reviews
+
+- **Fonts:** preload the two most-used files and add size-matched fallbacks (or Astro's Fonts API) so text doesn't jump on load; drop unused weights.
+- **Images:** quality about 70, smaller `sizes` for features on phones and tablets.
+- **Daily rebuild:** upcoming events are filtered at build time, so a scheduled daily build keeps past events off the site (with the weekly content release in `deployment.md`).
+- **Later:** the instrument picker could become a small plain-JavaScript component, dropping React.
+
+## 10. Migration steps
+
+1. Styles: layers, tokens, `base.css` (with the contrast context), `utilities.css`; checks.
+2. Layout: header, menu, footer, Donate button and `PageLayout` from C with the §5 fixes.
+3. Blocks and content components with the §2 options.
+4. Home and Lessons rebuilt from blocks per §6; compare at 390, 820, 844×390, 1280 and 1600.
+5. The other pages on the same blocks.
+6. The catalog.
+7. Remove A, B, the prototypes, old components and `test.astro`; keep a few screenshots of B's heading-over-photo idea in `docs/`.
+8. The §8 checks.
