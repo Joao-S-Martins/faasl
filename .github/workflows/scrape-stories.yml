@@ -15,17 +15,15 @@ jobs:
       - run: |
           cat > scrape.mjs <<'JS'
           import { chromium } from 'playwright';
+          import fs from 'fs';
           const b = await chromium.launch();
           const p = await b.newPage({ viewport: { width: 1280, height: 900 } });
-          const strings = new Set();
-          const walk = (v) => {
-            if (typeof v === 'string') { if (v.length > 30 && / /.test(v) && !/^(https?:|data:|M\d)/.test(v)) strings.add(v); }
-            else if (v && typeof v === 'object') Object.values(v).forEach(walk);
-          };
+          const hits = [];
           p.on('response', async (r) => {
-            const t = r.headers()['content-type'] || '';
-            if (!t.includes('json')) return;
-            try { const u = r.url(); const j = await r.json(); console.log('JSON', u.slice(0, 200)); if (!/adobe\.(com|io)\/(.*)(locale|strings|i18n|feature|flags)/.test(u)) { const before = strings.size; walk(j); if (strings.size - before > 0) console.log('  +', strings.size - before, 'strings'); } } catch {}
+            try {
+              const t = await r.text();
+              if (/Aubury/i.test(t)) hits.push({ url: r.url(), type: r.headers()['content-type'], t });
+            } catch {}
           });
           await p.goto('https://stories.faasl.org', { waitUntil: 'load', timeout: 90000 });
           await p.waitForTimeout(8000);
@@ -34,27 +32,17 @@ jobs:
             await p.waitForTimeout(400);
           }
           await p.waitForTimeout(3000);
-          console.log('URL', p.url());
           for (const f of p.frames()) {
-            console.log('=====FRAME', f.url().slice(0, 150));
-            try {
-              console.log(await f.evaluate(() => {
-                const out = [];
-                const visit = (root) => {
-                  const w = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT | NodeFilter.SHOW_TEXT);
-                  for (let n = w.currentNode; n; n = w.nextNode()) {
-                    if (n.nodeType === 3) { const s = n.textContent.trim(); if (s) out.push(s); }
-                    else if (n.shadowRoot) visit(n.shadowRoot);
-                    else if (n.alt) out.push('[alt] ' + n.alt);
-                  }
-                };
-                visit(document.body);
-                return out.join('\n');
-              }));
-            } catch (e) { console.log('ERR', e.message); }
+            const txt = await f.evaluate(() => document.body ? document.body.innerText : '').catch(() => '');
+            if (/Aubury/i.test(txt)) { console.log('=====FRAME TEXT', f.url().slice(0, 150)); console.log(txt); }
           }
-          console.log('=====JSON STRINGS (with band words)=====');
-          console.log([...strings].filter((x) => /band|music|FAASL|play|famil|son|daughter|grand|portug/i.test(x) && !/Adobe|Express|template|Firefly/i.test(x)).join('\n---\n'));
+          console.log('=====HITS', hits.length);
+          for (const h of hits) {
+            console.log('=====HIT', h.url.slice(0, 200), h.type, h.t.length);
+            const clean = h.t.replace(/<[^>]+>/g, ' ').replace(/\\n|\\u[0-9a-f]{4}/gi, ' ');
+            const strs = [...clean.matchAll(/"([^"\\]{25,}(?:\\.[^"\\]*)*)"/g)].map((m) => m[1]).filter((x) => / \w+ \w+ /.test(x) && !/^https?:|^data:/.test(x));
+            console.log(strs.length ? [...new Set(strs)].join('\n---\n') : clean.slice(0, 20000));
+          }
           console.log('=====END=====');
           await b.close();
           JS
