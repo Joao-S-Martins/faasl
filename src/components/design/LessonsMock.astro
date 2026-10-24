@@ -25,7 +25,7 @@ import rehearsal from '../../assets/photos/students-rehearsal.jpg';
 import gym from '../../assets/photos/concert-band-gym.jpg';
 
 interface Props {
-  direction: 'a' | 'b';
+  direction: 'a' | 'b' | 'c';
 }
 
 const { direction: d } = Astro.props;
@@ -126,14 +126,14 @@ const steps = [
   </ol>
 </Band>
 
-{d === 'a' && <TilePattern variant="staff" tile={64} height="64px" frame={false} center="x" />}
+{d !== 'b' && <TilePattern variant="staff" tile={64} height="64px" frame={false} center="x" />}
 
 <Band>
   <Feature
     image={gym}
     alt="The concert band rehearsing with the conductor"
     side="right"
-    tone={d === 'a' ? 'tint' : 'green'}
+    tone={d === 'b' ? 'green' : 'tint'}
   >
     <h2>Your teacher</h2>
     <PeopleGrid role="teacher" />
@@ -263,6 +263,21 @@ const steps = [
     box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
   }
 
+  /* C: B's header over the photo, A's text box overlapping it */
+  .top.c .top-photo {
+    height: clamp(14rem, 45svh, 28rem);
+  }
+
+  .top.c .top-text {
+    position: relative;
+    width: min(100% - 2 * var(--gutter), 34rem);
+    margin: -3rem auto 0;
+    padding: var(--space-m);
+    border-radius: var(--radius);
+    background: var(--color-white);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  }
+
   .top.b {
     min-height: max(22rem, min(60svh, 36rem));
     color: var(--color-white);
@@ -301,7 +316,8 @@ const steps = [
   }
 
   @media (min-width: 48rem) {
-    .top.a .top-text {
+    .top.a .top-text,
+    .top.c .top-text {
       margin: -5rem 0 0 max(var(--gutter), (100% - var(--content-width)) / 2 + var(--gutter));
       padding: var(--space-l);
     }

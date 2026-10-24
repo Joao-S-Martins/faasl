@@ -135,9 +135,12 @@ const nav = mainNav.map((item) =>
     color: var(--color-gold);
   }
 
+  /* Over the photo: a dark fade behind the bar and a soft shadow on the
+     text, so it stays readable over light photos and video */
   :global([data-hero='in']) .over-photo {
-    background: linear-gradient(rgb(0 0 0 / 0.55), transparent);
+    background: linear-gradient(rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.35) 70%, transparent);
     box-shadow: none;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 0.6);
   }
 
   .wide-nav {

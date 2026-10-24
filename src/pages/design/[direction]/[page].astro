@@ -9,14 +9,17 @@ import { isProduction } from '../../../lib/site';
 
 export function getStaticPaths() {
   if (isProduction) return [];
-  return ['a', 'b'].flatMap((direction) =>
+  return ['a', 'b', 'c'].flatMap((direction) =>
     ['home', 'lessons'].map((page) => ({ params: { direction, page } })),
   );
 }
 
-const { direction, page } = Astro.params as { direction: 'a' | 'b'; page: 'home' | 'lessons' };
+const { direction, page } = Astro.params as {
+  direction: 'a' | 'b' | 'c';
+  page: 'home' | 'lessons';
+};
 const base = `/design/${direction}`;
-const names = { a: 'A, Tiles and paper', b: 'B, Photo-led' };
+const names = { a: 'A, Tiles and paper', b: 'B, Photo-led', c: 'C, the mix' };
 ---
 
 <DesignLayout title={`Direction ${names[direction]}: ${page}`} direction={direction}>

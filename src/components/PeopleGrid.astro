@@ -7,15 +7,17 @@ import PersonCard from './PersonCard.astro';
 interface Props {
   role: 'leadership' | 'teacher' | 'conductor' | 'volunteer' | 'musician';
   compact?: boolean;
+  /** A sideways-scrolling row on phones; a grid from tablets up. */
+  scroll?: boolean;
 }
 
-const { role, compact = false } = Astro.props;
+const { role, compact = false, scroll = false } = Astro.props;
 const people = (
   await getCollection('people', (entry) => isVisible(entry) && entry.data.roles.includes(role))
 ).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<div class="people">
+<div class:list={['people', { scroll }]}>
   {people.map((person) => (
     <PersonCard person={person} compact={compact} />
   ))}
@@ -26,5 +28,22 @@ const people = (
     display: grid;
     gap: var(--space-m);
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  }
+
+  @media (max-width: 47.99rem) {
+    .scroll {
+      grid-template-columns: none;
+      grid-auto-flow: column;
+      grid-auto-columns: min(70%, 15rem);
+      gap: var(--space-s);
+      margin-inline: calc(var(--gutter) * -1);
+      padding: 0.25rem var(--gutter) var(--space-s);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+
+    .scroll > :global(*) {
+      scroll-snap-align: start;
+    }
   }
 </style>

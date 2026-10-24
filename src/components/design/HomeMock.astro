@@ -30,7 +30,7 @@ import together from '../../assets/photos/growing-together.jpg';
 import parade from '../../assets/photos/parade-carnival.jpg';
 
 interface Props {
-  direction: 'a' | 'b';
+  direction: 'a' | 'b' | 'c';
   base: string;
 }
 
@@ -101,7 +101,7 @@ const stats = [
   </div>
 </section>
 
-<nav class:list={['paths', d]} aria-label="I want to…">
+<nav class:list={['paths', d === 'a' ? 'a' : 'b']} aria-label="I want to…">
   <ul>
     {paths.map(({ icon: Icon, title, text, href }) => (
       <li>
@@ -116,12 +116,7 @@ const stats = [
 </nav>
 
 <Band bg={d === 'a' ? 'white' : 'tint'}>
-  <Feature
-    image={rehearsal}
-    alt="Students rehearsing with the conductor"
-    side="left"
-    tone={d === 'a' ? 'white' : 'white'}
-  >
+  <Feature image={rehearsal} alt="Students rehearsing with the conductor" side="left" tone="white">
     <h2>Free lessons for ages 8 to 108</h2>
     <p>
       Every lesson we teach is free. Our music teacher, who also teaches in San Leandro schools,
@@ -183,14 +178,22 @@ const stats = [
       <h2 class="center">Music in our community</h2>
       <StatGrid stats={stats} tone="dark" />
     </Band>
-    <PhotoBand
-      image={together}
-      alt="Musicians of different generations playing together"
-      align="right"
-      tone="white"
-    >
-      <Testimonial audience="musicians" />
-    </PhotoBand>
+    {d === 'c' ? (
+      <Band bg="field" narrow>
+        <div class="quote-box">
+          <Testimonial audience="musicians" />
+        </div>
+      </Band>
+    ) : (
+      <PhotoBand
+        image={together}
+        alt="Musicians of different generations playing together"
+        align="right"
+        tone="white"
+      >
+        <Testimonial audience="musicians" />
+      </PhotoBand>
+    )}
     <Band>
       <Feature image={young} alt="Young members of the band in uniform" side="right" tone="tint">
         <h2>A band for every age and skill level</h2>
@@ -206,7 +209,7 @@ const stats = [
     </Band>
     <section class="give-wall">
       <div class="wall">
-        <TilePattern variant="checker" tile={96} height="100%" frame={false} center="both" />
+        <TilePattern variant="checker" tile={96} height="100%" frame={false} center="x" />
       </div>
       <div class="give-box">
         <h2>Your support is instrumental</h2>
@@ -224,7 +227,7 @@ const stats = [
   </>
 )}
 
-<Band bg={d === 'a' ? 'white' : 'tint'}>
+<Band bg={d === 'a' ? 'white' : d === 'c' ? 'green' : 'tint'}>
   <h2>Come see us</h2>
   <p class="lead">
     We play about a dozen parades and half a dozen concerts every year, and host fundraiser dinners
@@ -236,7 +239,7 @@ const stats = [
   </p>
 </Band>
 
-{d === 'b' && (
+{d !== 'a' && (
   <figure class="parade">
     <Image
       src={parade}
@@ -250,7 +253,7 @@ const stats = [
 
 <Band bg={d === 'a' ? 'tint' : 'white'}>
   <h2>Our leadership</h2>
-  <PeopleGrid role="leadership" compact />
+  <PeopleGrid role="leadership" compact scroll={d === 'c'} />
   <p>
     <a href="/about">Meet the team</a>
   </p>
@@ -293,6 +296,21 @@ const stats = [
   }
 
   .hero.a .hero-text {
+    position: relative;
+    width: min(100% - 2 * var(--gutter), 40rem);
+    margin: -4rem auto 0;
+    padding: var(--space-m);
+    border-radius: var(--radius);
+    background: var(--color-white);
+    box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
+  }
+
+  /* C: B's header over the photo, A's text box overlapping it */
+  .hero.c .hero-photo {
+    height: clamp(20rem, 62svh, 38rem);
+  }
+
+  .hero.c .hero-text {
     position: relative;
     width: min(100% - 2 * var(--gutter), 40rem);
     margin: -4rem auto 0;
@@ -412,7 +430,8 @@ const stats = [
       grid-template-columns: repeat(3, 1fr);
     }
 
-    .hero.a .hero-text {
+    .hero.a .hero-text,
+    .hero.c .hero-text {
       margin: -6rem 0 0 max(var(--gutter), (100% - var(--content-width)) / 2 + var(--gutter));
       padding: var(--space-l);
     }
@@ -458,8 +477,9 @@ const stats = [
     display: grid;
   }
 
+  /* Heights are whole rows of 96 px tiles, so no row is cut */
   .wall {
-    height: 12rem;
+    height: 192px;
   }
 
   .give-box {
@@ -474,7 +494,7 @@ const stats = [
   @media (min-width: 48rem) {
     .give-wall {
       grid-template-columns: 1fr minmax(0, 36rem) var(--space-xl);
-      min-height: 30rem;
+      height: 480px;
       align-items: center;
     }
 
