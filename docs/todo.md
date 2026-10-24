@@ -262,6 +262,8 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
   - **Social events:** 40 events, the most recent in **August 2022**. Fundraisers since then were never added.
 - [x] Lessons and Musicians pages list the next three weeks of lessons and rehearsals from the lessons calendar (date, time, title; not on Events, not in search data)
 - [x] 🤖 **A page per performance and fundraiser** (`/events/<date>-<name>`), generated from the calendar. Confirmed events with a location carry Event search data; tentative ones don't. Past events drop off at the weekly refresh unless they have a write-up in `src/content/event-writeups/` (then they stay, listed under "Past events"). Weekly lessons and rehearsals get no pages (`brief.md` §5.4).
+- [x] 🤖 **Write-ups with photos and video:** a gallery grid that opens in a lightbox (PhotoSwipe), shown on the sample spring concert; how-to in [`event-writeups.md`](./event-writeups.md)
+- [ ] 🧑 **First real write-up:** pick a recent event, gather 6 to 20 photos (consent forms!) and a clip or two, then follow `event-writeups.md`
 - [ ] **BAND app** (band messages and RSVPs): install links for iPhone and Android, and step-by-step instructions to join our group, for the Musicians page
 - [ ] **Play-along playlist:** revive and update the YouTube play-along playlist (`practice.faasl.org`) for the Musicians page
 - [ ] **Replace Geronimo as the default contact** for forms, uniforms, music and folders (💡 a role-based address such as members@faasl.org)

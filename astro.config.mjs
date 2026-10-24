@@ -4,6 +4,7 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import siteHeaders from './src/integrations/site-headers.mjs';
+import draftMedia from './src/integrations/draft-media.mjs';
 
 // Pages that should never appear in the sitemap.
 const UNLISTED = ['/musicians', '/404', '/design', '/message-'];
@@ -42,5 +43,6 @@ export default defineConfig({
       filter: (page) => !UNLISTED.some((path) => new URL(page).pathname.startsWith(path)),
     }),
     siteHeaders(),
+    draftMedia(),
   ],
 });

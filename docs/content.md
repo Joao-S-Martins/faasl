@@ -674,6 +674,8 @@ TODO: name and email (or info@faasl.org)
 
 ## 5f. Events page (`/events`) — ✅ reviewed
 
+Past events with a write-up keep their page, with photos and video: see [`event-writeups.md`](./event-writeups.md).
+
 **Page title:** Events
 **Meta description:** Fundraiser dinners, parades and concerts with the Portuguese Band of San Leandro. Join us at a dinner or come hear us play across the SF Bay Area.
 

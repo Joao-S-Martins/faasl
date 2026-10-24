@@ -1,0 +1,24 @@
+---
+import Gallery from '../../components/blocks/Gallery.astro';
+import gym from '../../assets/photos/concert-band-gym.jpg';
+import brass from '../../assets/photos/brass-close-up.jpg';
+import young from '../../assets/photos/young-members.jpg';
+import together from '../../assets/photos/growing-together.jpg';
+import poster from '../../content/event-writeups/2026-05-17-sample-spring-concert/sample-clip-poster.jpg';
+---
+
+<Gallery
+  label="Sample photos and video"
+  items={[
+    { image: gym, alt: 'The band playing in a gym', caption: 'The full band on stage.' },
+    {
+      video: '/media/events/2026-05-17-sample-spring-concert/sample-clip.mp4',
+      poster,
+      alt: 'A slow pan across the band',
+      caption: 'A sample clip.',
+    },
+    { image: brass, alt: 'Brass players reading their music', caption: 'The brass section.' },
+    { image: young, alt: 'Young band members in uniform' },
+    { image: together, alt: 'Older and younger musicians side by side' },
+  ]}
+/>

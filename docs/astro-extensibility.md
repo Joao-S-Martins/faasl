@@ -19,6 +19,8 @@ The important part: **new sections don't need new plugins.** A section is a cont
 
 ## 2. Photos & interactive galleries
 
+> ✅ **Built (Oct 2026)** with PhotoSwipe 5, for event write-ups: photos and short video clips. How to make one: [`event-writeups.md`](./event-writeups.md). Photos sit in a folder next to the write-up rather than inside an `events/<name>/` folder as sketched below.
+
 ### What's built in
 - `<Image>` / `<Picture>` resize, convert to WebP/AVIF, generate `srcset` for each screen size, set width/height (no layout jumping) and lazy-load. Responsive image layouts can be set once for the whole site.
 - `getImage()` produces an optimized URL in code, useful for a lightbox's full-size version.

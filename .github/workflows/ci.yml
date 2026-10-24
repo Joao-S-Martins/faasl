@@ -39,6 +39,10 @@ jobs:
       - name: No design pages in production builds
         if: inputs.site-env == 'production'
         run: test ! -e dist/design
+      # Clips of draft write-ups (like the sample) stay out of production
+      - name: No sample clips in production builds
+        if: inputs.site-env == 'production'
+        run: test ! -e dist/media/events/2026-05-17-sample-spring-concert
 
   # Runs the live Google Calendar pipeline end to end: summarizes every
   # calendar, writes events.json from the live feeds, builds the site and lists

@@ -7,6 +7,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 import Surface from '../../components/blocks/Surface.astro';
 import CalendarLink from '../../components/content/CalendarLink.astro';
 import DetailList from '../../components/blocks/DetailList.astro';
+import Gallery from '../../components/blocks/Gallery.astro';
 import Todo from '../../components/layout/Todo.astro';
 import { getEventPages, type EventPage } from '../../lib/events';
 import { formatEventWhen, formatLongDate, localDateOf } from '../../lib/format';
@@ -28,6 +29,11 @@ const location = event?.location ?? writeup?.data.location;
 const isUpcoming = Boolean(event);
 const isFundraiser = event?.calendar.id === 'social';
 const Content = writeup ? (await render(writeup)).Content : undefined;
+const gallery = writeup?.data.gallery ?? [];
+// The share image: the write-up's cover, else its first photo.
+const firstPhoto = gallery.find((item) => 'image' in item);
+const shareImage =
+  writeup?.data.cover ?? (firstPhoto && 'image' in firstPhoto ? firstPhoto.image : fallbackImage);
 
 const description = writeup
   ? writeup.data.summary
@@ -48,14 +54,14 @@ const structuredData =
           location: { '@type': 'Place', name: location, address: location },
         }),
         ...(event.description && { description: event.description }),
-        image: [new URL(fallbackImage.src, Astro.site).href],
+        image: [new URL(shareImage.src, Astro.site).href],
         organizer: { '@type': 'Organization', name: site.name, url: Astro.site?.href },
         performer: { '@type': 'MusicGroup', name: site.name },
       }
     : undefined;
 ---
 
-<PageLayout title={title} description={description} image={fallbackImage.src} bare>
+<PageLayout title={title} description={description} image={shareImage.src} bare>
   <Surface surface="tint">
     <div class="stack measure">
       <h1>{title}</h1>
@@ -97,6 +103,12 @@ const structuredData =
       <div class="stack">
         <Content />
       </div>
+    </Surface>
+  )}
+
+  {gallery.length > 0 && (
+    <Surface title="Photos and video">
+      <Gallery items={gallery} label={`Photos and video from ${title}`} />
     </Surface>
   )}
 

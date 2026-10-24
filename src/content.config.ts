@@ -164,6 +164,8 @@ const schedule = defineCollection({
 // Write-ups about past performances and fundraisers. A write-up keeps the
 // event's page (/events/<file name>) after the event has passed; name the
 // file after the event's page address, e.g. 2026-11-07-festival-das-filarmonicas-2026.md.
+// Photos go in a folder with the same name; video clips in
+// public/media/events/<same name>/ (docs/event-writeups.md).
 const eventWriteups = defineCollection({
   loader: glob({ pattern: '*.{md,mdx}', base: './src/content/event-writeups' }),
   schema: ({ image }) =>
@@ -174,6 +176,22 @@ const eventWriteups = defineCollection({
       summary: z.string(),
       cover: image().optional(),
       coverAlt: z.string().optional(),
+      // Photos and clips shown after the write-up, opening in a lightbox.
+      gallery: z
+        .array(
+          z.union([
+            z.object({ image: image(), alt: z.string(), caption: z.string().optional() }),
+            z.object({
+              video: z
+                .string()
+                .regex(/^\/media\/events\/.+\.(mp4|webm)$/, 'a clip in public/media/events/'),
+              poster: image(),
+              alt: z.string(),
+              caption: z.string().optional(),
+            }),
+          ]),
+        )
+        .default([]),
       draft: z.boolean().default(false),
       tags: z.array(reference('tags')).default([]),
     }),
