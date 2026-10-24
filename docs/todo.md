@@ -123,7 +123,8 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [x] 🧑 Approve the design → unlocks Phase 4
 - [x] 🤖 Design system built (`design-system.md`): styles and checks, layout, blocks, every page moved to blocks, prototypes and the test page removed
 - [x] 🤖 Component catalog (`/design/components`): 39 components with examples, code, options and usage; phone/tablet/desktop previews; guidelines page
-- [ ] 🤖 Accessibility and performance checks (`design-system.md` §8)
+- [x] 🤖 Accessibility and performance checks (`design-system.md` §8): axe clean, Lighthouse 94–100, no-JS, zoom, small screens, print
+- [ ] 🧑 Keyboard-only and screen reader pass on a real phone
 
 ## Phase 4 — Build sections
 

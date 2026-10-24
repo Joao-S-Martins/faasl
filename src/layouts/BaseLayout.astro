@@ -31,6 +31,12 @@ const { hero = false, ...props } = Astro.props;
     <style is:inline>
       @layer reset, base, components, utilities;
     </style>
+    {/* JavaScript is on: the header may start large over a landing photo and
+        shrink later. Without it, the header stays compact and the Donate
+        button visible (docs/design-system.md §5). Runs before first paint. */}
+    <script is:inline>
+      document.documentElement.classList.add('js');
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#355749" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -40,5 +46,11 @@ const { hero = false, ...props } = Astro.props;
   </head>
   <body>
     <slot />
+    {/* open every accordion before printing, so printouts are complete */}
+    <script is:inline>
+      addEventListener('beforeprint', () =>
+        document.querySelectorAll('details').forEach((d) => d.setAttribute('open', '')),
+      );
+    </script>
   </body>
 </html>

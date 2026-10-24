@@ -84,7 +84,8 @@ const groups = [
   }
 
   // On pages with a landing photo ([data-landing]), the header stays large
-  // until only the bottom 15% of the photo is left on screen.
+  // until only the bottom 15% of the photo is left on screen. (The large
+  // state needs the .js class, so without JavaScript it stays compact.)
   const landing = document.querySelector('[data-landing]');
   const root = document.documentElement;
   if (landing && root.dataset.hero) {
@@ -162,12 +163,12 @@ const groups = [
        for it. The fade is at least 60% black behind all the text, so white
        text stays at 4.5:1 over any photo. */
     @media (min-height: 31.25rem) {
-      :global([data-hero='in']) .site-header {
+      :global(.js[data-hero='in']) .site-header {
         background: linear-gradient(rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.6));
         box-shadow: none;
       }
 
-      :global([data-hero='in']) .site-header::after {
+      :global(.js[data-hero='in']) .site-header::after {
         content: '';
         position: absolute;
         inset: 100% 0 auto;
@@ -176,16 +177,16 @@ const groups = [
         pointer-events: none;
       }
 
-      :global([data-hero='in']) .bar {
+      :global(.js[data-hero='in']) .bar {
         min-height: var(--header-h-large);
       }
 
-      :global([data-hero='in']) .brand :global(svg) {
+      :global(.js[data-hero='in']) .brand :global(svg) {
         width: 64px;
         height: 64px;
       }
 
-      :global([data-hero='in']) .name {
+      :global(.js[data-hero='in']) .name {
         font-size: 1.6rem;
       }
     }

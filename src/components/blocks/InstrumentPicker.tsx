@@ -54,7 +54,7 @@ export default function InstrumentPicker({ videoId, instruments }: Props) {
           </li>
         ))}
       </ul>
-      <div className={styles.video} ref={video}>
+      <div className={styles.video} ref={video} data-print-hide>
         {src ? (
           <iframe
             key={src}

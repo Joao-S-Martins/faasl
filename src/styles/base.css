@@ -144,3 +144,60 @@
     margin-inline: auto;
   }
 }
+
+/* Printing (the Lessons page especially, docs/brief.md §4): no fixed header,
+   floating button, patterns or menus; plain black on white; link addresses
+   shown; accordions are opened by BaseLayout before printing. */
+@layer base {
+  @media print {
+    .site-header,
+    .donate-float,
+    .menu,
+    [aria-hidden='true']:has(> svg),
+    .tile-band,
+    .field,
+    .wall,
+    [data-print-hide] {
+      display: none !important;
+    }
+
+    :root,
+    [data-on] {
+      --text: #000;
+      --heading: #000;
+      --link: #000;
+      --button-bg: #000;
+      --button-text: #fff;
+      color: #000 !important;
+      background: #fff !important;
+    }
+
+    main.below-header,
+    .hero {
+      padding-top: 0 !important;
+    }
+
+    /* compact: smaller photos and section spacing, so pages fill up */
+    .surface {
+      padding-block: 1.25rem !important;
+    }
+
+    .hero .photo,
+    .feature .photo {
+      height: 5cm !important;
+    }
+
+    a[href^='http']::after {
+      content: ' (' attr(href) ')';
+      font-size: 0.85em;
+    }
+
+    .feature,
+    .quote-box,
+    .steps li,
+    details {
+      break-inside: avoid;
+      box-shadow: none !important;
+    }
+  }
+}

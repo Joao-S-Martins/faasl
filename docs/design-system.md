@@ -147,6 +147,13 @@ Modeled on the Bootstrap and Tailwind docs: a sidebar of categories; one page pe
 - `check:styles`: every `<style>` and CSS file declares a layer; only the two breakpoints; no `!important` outside the reduced-motion reset.
 - CI: production builds contain no `dist/design` (brand guide, catalog and share image page are beta only).
 - Still to add: stable HTML between builds.
+
+**Results (Oct 2026, local build):**
+- axe (WCAG 2.2 AA and best practices) on every page at 390 and 1280px, before and after scrolling: no violations.
+- Lighthouse, mobile settings: Home and Lessons 94–95 performance, 100 accessibility, 100 best practices, 100 SEO (production build); layout shift 0.001–0.012. Caching and compression findings are left to Cloudflare.
+- No JavaScript: header compact, Donate visible, menu works. 320px, 200% zoom and sideways phone: no sideways scrolling.
+- Print: no header, buttons or patterns; accordions open; smaller photos.
+- Still to do by hand: a keyboard-only pass and a screen reader pass on a real phone.
 - Before calling the migration done: axe on every page at 390 and 1280; contrast of every surface × tone pair, the header over photos and focus rings; Lighthouse mobile ≥ 95 on Home and Lessons (layout shift from the header and fonts); keyboard-only pass; JavaScript off; 200% zoom; 320px wide and sideways phone; Lessons print preview.
 
 ## 9. Also from the reviews

@@ -2,7 +2,7 @@
 // - every <style> and .css file in src/ declares a cascade layer (unlayered
 //   CSS would beat every layer); tokens.css is exempt (custom properties only)
 // - media queries use only the two breakpoints (40rem, 64rem), mobile first
-// - no !important outside the reduced-motion reset in base.css
+// - no !important outside base.css (the reduced-motion reset and print styles)
 import { readFile, readdir } from 'node:fs/promises';
 import { join } from 'node:path';
 

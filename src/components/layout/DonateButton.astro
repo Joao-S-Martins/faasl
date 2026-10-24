@@ -5,10 +5,12 @@
 import HandHeart from '@lucide/astro/icons/hand-heart';
 ---
 
-<a class="donate-float" href="/give">
-  <HandHeart size={18} aria-hidden="true" />
-  Donate
-</a>
+<aside aria-label="Donate">
+  <a class="donate-float" href="/give">
+    <HandHeart size={18} aria-hidden="true" />
+    Donate
+  </a>
+</aside>
 
 <style>
   @layer components {
@@ -37,7 +39,7 @@ import HandHeart from '@lucide/astro/icons/hand-heart';
         transform var(--duration-fast);
     }
 
-    :global([data-hero='in']) .donate-float {
+    :global(.js[data-hero='in']) .donate-float {
       opacity: 0;
       transform: translateY(0.5rem);
       pointer-events: none;
