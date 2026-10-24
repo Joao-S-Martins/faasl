@@ -1,6 +1,7 @@
 ---
 import { getEntry } from 'astro:content';
 import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
 import DetailList from '../components/blocks/DetailList.astro';
 import PeopleList from '../components/content/PeopleList.astro';
@@ -15,15 +16,17 @@ const cities = site.areaServed.join(', ');
 <PageLayout
   title="Our Impact"
   description="Free music education and community performances in San Leandro since 1980. Mission, programs, numbers, governance and documents for the Portuguese Band of San Leandro, a 501(c)(3) nonprofit."
-
+  hero
   bare
 >
-  <Surface surface="tint">
-    <div class="stack measure">
-      <h1>Our Impact</h1>
-      <p class="sub">{`free music education and community music since ${site.foundingYear}`}</p>
-    </div>
-  </Surface>
+  <Hero
+    size="page"
+    surface="tint"
+    needs="students in a lesson with the teacher, or young and older musicians side by side"
+  >
+    <h1>Our Impact</h1>
+    <p class="sub">{`free music education and community music since ${site.foundingYear}`}</p>
+  </Hero>
 
   <Surface title="Our mission">
     <div class="stack">

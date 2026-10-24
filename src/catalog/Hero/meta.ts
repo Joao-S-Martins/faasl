@@ -9,8 +9,18 @@ export default defineMeta(Hero, {
     'The landing photo at the top of a page, with the title box overlapping its bottom edge, so the heading never depends on the photo for contrast.',
   source: 'src/components/blocks/Hero.astro',
   options: {
-    image: { values: 'imported image', description: 'The photo (from src/assets).' },
+    image: {
+      values: 'imported image',
+      description:
+        "The photo (from src/assets). Leave out while it's missing: beta shows a placeholder, production the title box alone.",
+    },
     alt: { values: 'string', description: 'What the photo shows.' },
+    needs: {
+      values: 'string',
+      default: 'a photo',
+      description:
+        'Without an image: the photo the page needs, shown in the placeholder (and listed in docs/todo.md, Photos).',
+    },
     size: {
       values: 'home · page',
       default: 'home',
@@ -31,6 +41,7 @@ export default defineMeta(Hero, {
   examples: [
     { file: 'home', title: 'Home size, on green', viewports: true },
     { file: 'page', title: 'Page size, on tint' },
+    { file: 'missing', title: 'Photo still missing (beta placeholder)' },
   ],
   notes: [
     'Pass `hero` to PageLayout on pages that open with a Hero: the header starts large over the photo.',

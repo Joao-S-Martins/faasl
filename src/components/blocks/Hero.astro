@@ -8,17 +8,31 @@
 // The box content (h1, text) goes in the default slot.
 import type { ImageMetadata } from 'astro';
 import { Image } from 'astro:assets';
+import Todo from '../layout/Todo.astro';
+import { isProduction } from '../../lib/site';
 
 interface Props {
-  image: ImageMetadata;
-  alt: string;
+  /** Leave out while the photo is missing: beta shows a placeholder naming
+      the photo needed; production shows the title box alone. */
+  image?: ImageMetadata;
+  alt?: string;
+  /** The photo this page needs, shown in the placeholder (docs/todo.md, Photos). */
+  needs?: string;
   size?: 'home' | 'page';
   surface?: 'plain' | 'tint' | 'green';
   /** Where to keep the photo's subject when it's cropped on phones. */
   focus?: string;
 }
 
-const { image, alt, size = 'home', surface = 'plain', focus = 'center 30%' } = Astro.props;
+const {
+  image,
+  alt = '',
+  needs = 'a photo',
+  size = 'home',
+  surface = 'plain',
+  focus = 'center 30%',
+} = Astro.props;
+const placeholder = !image && !isProduction;
 ---
 
 <section
@@ -27,18 +41,26 @@ const { image, alt, size = 'home', surface = 'plain', focus = 'center 30%' } = A
   data-on={surface === 'green' ? 'dark' : 'light'}
   style={`--focus-point: ${focus}`}
 >
-  <Image
-    src={image}
-    alt={alt}
-    width={2000}
-    widths={[640, 1000, 1600, 2000]}
-    sizes="100vw"
-    quality={70}
-    loading="eager"
-    fetchpriority="high"
-    class="photo"
-  />
-  <div class="box" data-on="light">
+  {image ? (
+    <Image
+      src={image}
+      alt={alt}
+      width={2000}
+      widths={[640, 1000, 1600, 2000]}
+      sizes="100vw"
+      quality={70}
+      loading="eager"
+      fetchpriority="high"
+      class="photo"
+    />
+  ) : (
+    placeholder && (
+      <div class="photo missing">
+        <Todo block>hero photo: {needs} (docs/todo.md, Photos)</Todo>
+      </div>
+    )
+  )}
+  <div class:list={['box', { alone: !image && !placeholder }]} data-on="light">
     <slot />
   </div>
 </section>
@@ -74,6 +96,23 @@ const { image, alt, size = 'home', surface = 'plain', focus = 'center 30%' } = A
 
     .page .photo {
       height: clamp(14rem, 45svh, 28rem);
+    }
+
+    .missing {
+      display: grid;
+      place-items: center;
+      padding: calc(var(--header-h-large) + var(--space-m)) var(--gutter) 5rem;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--color-off-white) 0 12px,
+        var(--color-white) 12px 24px
+      );
+    }
+
+    /* no photo in production yet: the box sits below the header, no overlap
+       (two classes, so it wins over the overlap margins below) */
+    .box.alone {
+      margin-top: calc(var(--header-h) + var(--space-m));
     }
 
     .box {

@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
 import ContactForm from '../components/blocks/ContactForm.astro';
 import Address from '../components/content/Address.astro';
@@ -16,13 +17,20 @@ const schedule = await fillTokens('{{schedule}}');
   description={await fillTokens(
     `Contact the Portuguese Band of San Leandro: {{address}}, CA. Call ${site.phone} or email ${site.email}.`,
   )}
-
+  hero
   bare
 >
+  <Hero
+    size="page"
+    surface="tint"
+    needs="the clubhouse at 844 Alvarado St. from the street (the same photo as Visit us on Home)"
+  >
+    <h1>Contact Us</h1>
+    <p class="sub">we'd love to hear from you</p>
+  </Hero>
+
   <Surface surface="tint">
     <div class="stack measure">
-      <h1>Contact Us</h1>
-      <p class="sub">we'd love to hear from you</p>
       <p>
         Questions about lessons, the band, giving or anything else? Send us a message and we'll get
         back to you soon. You're also welcome to just stop by on a Friday evening.

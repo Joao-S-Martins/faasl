@@ -1,5 +1,6 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
+import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
 import ButtonRow from '../components/blocks/ButtonRow.astro';
 import Button from '../components/blocks/Button.astro';
@@ -24,13 +25,20 @@ const shownGifts = gifts.filter((gift) => gift.price || !isProduction);
 <PageLayout
   title="Support Free Music Education in San Leandro"
   description="Donate to the Portuguese Band of San Leandro, a 501(c)(3) nonprofit offering free music lessons and free community performances since 1980. Gifts are tax-deductible."
-
+  hero
   bare
 >
+  <Hero
+    size="page"
+    surface="tint"
+    needs="a fundraiser dinner, or the band performing for the community (warm, people smiling)"
+  >
+    <h1>Support the Band</h1>
+    <p class="sub">keep music free for our community</p>
+  </Hero>
+
   <Surface surface="tint">
     <div class="stack measure">
-      <h1>Support the Band</h1>
-      <p class="sub">keep music free for our community</p>
       <p>
         Since {site.foundingYear}, every lesson we teach has been free. Kids and adults learn an
         instrument at no cost, young musicians are mentored by experienced ones, and our volunteer

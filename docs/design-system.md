@@ -160,7 +160,7 @@ Modeled on the Bootstrap and Tailwind docs: a sidebar of categories; one page pe
 
 - **Fonts:** preload the two most-used files and add size-matched fallbacks (or Astro's Fonts API) so text doesn't jump on load; drop unused weights.
 - **Images:** quality about 70, smaller `sizes` for features on phones and tablets.
-- **Daily rebuild:** upcoming events are filtered at build time, so a scheduled daily build keeps past events off the site (with the weekly content release in `deployment.md`).
+- **Rebuilds:** upcoming events are filtered at build time. The weekly content release (`deployment.md` §6) is enough (owner, Oct 2026): an event can stay listed for up to a week after it happens.
 - **Later:** the instrument picker could become a small plain-JavaScript component, dropping React.
 
 ## 10. Migration steps

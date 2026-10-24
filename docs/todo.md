@@ -126,7 +126,6 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [x] 🤖 Accessibility and performance checks (`design-system.md` §8): axe clean, Lighthouse 94–100, no-JS, zoom, small screens, print
 - [ ] 🧑 Keyboard-only and screen reader pass on a real phone
 - [ ] 🤖 Fonts: preload the two most-used files and size-matched fallbacks (or Astro's Fonts API); drop unused weights (`design-system.md` §9)
-- [ ] 🤖 A daily rebuild so past events drop off on time, alongside the weekly content release (`deployment.md` §6)
 
 ## Phase 4 — Build sections
 
@@ -179,6 +178,14 @@ Built in this order, each reviewed on a preview URL:
 ## Content gathering (runs alongside all phases)
 
 ### Photos 🧑
+Landscape, at least 2000px wide, people facing the camera or in action, subject in the upper middle (the title box covers the bottom). Pages without one show a striped placeholder naming the photo on beta.
+- [ ] **Give** hero: a fundraiser dinner, or the band performing for the community (warm, people smiling)
+- [ ] **Impact** hero: students in a lesson with the teacher, or young and older musicians side by side
+- [ ] **Contact** hero: the clubhouse at 844 Alvarado St. from the street (the same photo works for "Visit us" on Home)
+- [ ] **About** hero: a photo of its own (it reuses Home's church-steps photo); a historical or founders' photo would be ideal
+- [ ] **Events** hero: a photo of its own (it reuses the parade photo from Home); a concert or festival shot
+- [ ] **Join** hero: fine for now (growing-together); a current rehearsal shot would be stronger
+- [ ] Musicians and the 404 page don't need heroes
 - [ ] **Clubhouse photo** for "Visit us" on the home page: the outside of 844 Alvarado St., landscape, daytime, recognizable from the street
 
 ### Quotes 🧑
