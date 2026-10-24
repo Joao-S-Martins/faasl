@@ -14,6 +14,7 @@ import Feature from './Feature.astro';
 import StatGrid from './StatGrid.astro';
 import PhotoBand from './PhotoBand.astro';
 import EventCards from './EventCards.astro';
+import ScrollWell from './ScrollWell.astro';
 import TilePattern from '../TilePattern.astro';
 import ButtonLink from '../ButtonLink.astro';
 import Actions from '../Actions.astro';
@@ -234,7 +235,7 @@ const stats = [
     We play about a dozen parades and half a dozen concerts every year, and host fundraiser dinners
     with classic Portuguese meals.
   </p>
-  <EventCards />
+  <EventCards well={d === 'c'} />
   <p>
     <a href="/events">All events</a>
   </p>
@@ -254,7 +255,13 @@ const stats = [
 
 <Band bg={d === 'a' ? 'tint' : 'white'}>
   <h2>Our leadership</h2>
-  <PeopleGrid role="leadership" compact scroll={d === 'c'} />
+  {d === 'c' ? (
+    <ScrollWell tone="light">
+      <PeopleGrid role="leadership" compact scroll />
+    </ScrollWell>
+  ) : (
+    <PeopleGrid role="leadership" compact />
+  )}
   <p>
     <a href="/about">Meet the team</a>
   </p>
