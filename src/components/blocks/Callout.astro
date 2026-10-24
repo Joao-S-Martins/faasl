@@ -1,0 +1,18 @@
+---
+// A short note set apart with a thin gold edge, for the one thing a reader
+// shouldn't miss ("No sign-up needed…").
+---
+
+<div class="callout" data-on="light">
+  <slot />
+</div>
+
+<style>
+  @layer components {
+    .callout {
+      padding: var(--space-s) var(--space-m);
+      border-left: 4px solid var(--color-gold);
+      background: var(--color-off-white);
+    }
+  }
+</style>

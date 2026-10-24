@@ -1,0 +1,69 @@
+---
+// Key facts at a glance: a small label above a big answer, with an icon
+// ("Cost: Free", "Ages: 8 to 108"). Top-aligned however long the answers.
+import type { AstroComponent } from '@lucide/astro';
+
+interface Props {
+  facts: { icon: AstroComponent; label: string; value: string; detail?: string }[];
+}
+
+const { facts } = Astro.props;
+---
+
+<dl class="facts">
+  {facts.map(({ icon: Icon, label, value, detail }) => (
+    <div>
+      <Icon size={32} stroke-width={1.5} aria-hidden="true" class="icon" />
+      <dt>{label}</dt>
+      <dd>
+        <strong>{value}</strong>
+        {detail && <span>{detail}</span>}
+      </dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  @layer components {
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-l) var(--space-m);
+      align-items: start;
+    }
+
+    .icon {
+      color: var(--heading);
+      margin-bottom: var(--space-xs);
+    }
+
+    dt {
+      font-size: var(--step--1);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    dd {
+      display: grid;
+      margin: 0;
+    }
+
+    strong {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 1.6rem + 1.5vw, 2.5rem);
+      line-height: 1.05;
+      color: var(--heading);
+    }
+
+    span {
+      font-size: var(--step--1);
+    }
+
+    @media (width >= 40rem) {
+      .facts {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+</style>

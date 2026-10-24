@@ -1,0 +1,115 @@
+---
+// The landing photo at the top of a page, with the title box overlapping its
+// bottom edge so the heading never depends on the photo for contrast.
+// Marked [data-landing] for the header (pass `hero` to PageLayout).
+//   size:    home (tall) · page (inner pages)
+//   surface: the color around the box, matching the section below so the
+//            two read as one
+// The box content (h1, text) goes in the default slot.
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+  size?: 'home' | 'page';
+  surface?: 'plain' | 'tint' | 'green';
+  /** Where to keep the photo's subject when it's cropped on phones. */
+  focus?: string;
+}
+
+const { image, alt, size = 'home', surface = 'plain', focus = 'center 30%' } = Astro.props;
+---
+
+<section
+  class:list={['hero', size, surface]}
+  data-landing
+  data-on={surface === 'green' ? 'dark' : 'light'}
+  style={`--focus-point: ${focus}`}
+>
+  <Image
+    src={image}
+    alt={alt}
+    width={2000}
+    widths={[640, 1000, 1600, 2000]}
+    sizes="100vw"
+    quality={70}
+    loading="eager"
+    fetchpriority="high"
+    class="photo"
+  />
+  <div class="box" data-on="light">
+    <slot />
+  </div>
+</section>
+
+<style>
+  @layer components {
+    .hero {
+      display: grid;
+      padding-bottom: var(--space-m);
+    }
+
+    .plain {
+      background: var(--color-white);
+    }
+
+    .tint {
+      background: var(--color-off-white);
+    }
+
+    .green {
+      background: var(--color-hunter-green);
+    }
+
+    .photo {
+      width: 100%;
+      object-fit: cover;
+      object-position: var(--focus-point);
+    }
+
+    .home .photo {
+      height: clamp(20rem, 62svh, 38rem);
+    }
+
+    .page .photo {
+      height: clamp(14rem, 45svh, 28rem);
+    }
+
+    .box {
+      position: relative;
+      width: min(100% - 2 * var(--gutter), 40rem);
+      margin: -4rem auto 0;
+      padding: var(--space-m);
+      border-radius: var(--r-box);
+      background: var(--color-white);
+      box-shadow: var(--shadow-float);
+    }
+
+    .page .box {
+      margin-top: -3rem;
+    }
+
+    .box > :global(* + *) {
+      margin-top: var(--space-xs);
+    }
+
+    @media (width >= 40rem) {
+      .photo {
+        object-position: center;
+      }
+    }
+
+    @media (width >= 64rem) {
+      .box {
+        width: min(100% - 2 * var(--gutter), 44rem);
+        margin: -6rem 0 0 max(var(--gutter), (100% - var(--content-width)) / 2);
+        padding: var(--space-l);
+      }
+
+      .page .box {
+        margin-top: -5rem;
+      }
+    }
+  }
+</style>

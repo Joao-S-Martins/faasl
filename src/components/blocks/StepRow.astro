@@ -1,0 +1,84 @@
+---
+// Numbered steps as boxes that butt together (square where they meet,
+// rounded at the outer corners); the last step is emphasized in green.
+// Stacked on phones, side by side from tablets.
+interface Props {
+  steps: { title: string; text: string }[];
+  /** Heading level for step titles. */
+  level?: 3 | 4;
+}
+
+const { steps, level = 3 } = Astro.props;
+const Heading = `h${level}` as 'h3' | 'h4';
+---
+
+<ol class="steps" style={`--steps: ${steps.length}`}>
+  {steps.map(({ title, text }, i) => (
+    <li data-on={i === steps.length - 1 ? 'dark' : 'light'}>
+      <span class="n" aria-hidden="true">
+        {i + 1}
+      </span>
+      <Heading>{title}</Heading>
+      <p>{text}</p>
+    </li>
+  ))}
+</ol>
+
+<style>
+  @layer components {
+    .steps {
+      display: grid;
+      gap: 3px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li {
+      padding: var(--space-m);
+      background: var(--color-off-white);
+    }
+
+    li:last-child {
+      background: var(--color-hunter-green);
+    }
+
+    li:first-child {
+      border-radius: var(--r-box) var(--r-box) 0 0;
+    }
+
+    li:last-child {
+      border-radius: 0 0 var(--r-box) var(--r-box);
+    }
+
+    .n {
+      display: inline-grid;
+      place-items: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      margin-bottom: var(--space-xs);
+      border: 2px solid currentColor;
+      border-radius: 50%;
+      font-weight: 700;
+    }
+
+    li > :global(h3),
+    li > :global(h4) {
+      margin-bottom: var(--space-xs);
+    }
+
+    @media (width >= 40rem) {
+      .steps {
+        grid-template-columns: repeat(var(--steps, 3), 1fr);
+      }
+
+      li:first-child {
+        border-radius: var(--r-box) 0 0 var(--r-box);
+      }
+
+      li:last-child {
+        border-radius: 0 var(--r-box) var(--r-box) 0;
+      }
+    }
+  }
+</style>

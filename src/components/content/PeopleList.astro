@@ -1,0 +1,57 @@
+---
+// People with a role (leadership, teacher, conductor…), in `order`.
+//   layout:  grid · row (a sideways row on phones and tablets, CardRow)
+//   well:    the row sits in the recessed tray
+//   compact: photo, name and title only (no bio)
+import { getCollection } from 'astro:content';
+import { isVisible } from '../../lib/site';
+import PersonCard from './PersonCard.astro';
+import CardRow from '../blocks/CardRow.astro';
+
+interface Props {
+  role: 'leadership' | 'teacher' | 'conductor' | 'volunteer' | 'musician';
+  compact?: boolean;
+  layout?: 'grid' | 'row';
+  well?: boolean;
+  /** Names the scrolling row for screen readers (layout="row"). */
+  label?: string;
+}
+
+const { role, compact = false, layout = 'grid', well = false, label = 'People' } = Astro.props;
+const people = (
+  await getCollection('people', (entry) => isVisible(entry) && entry.data.roles.includes(role))
+).sort((a, b) => a.data.order - b.data.order);
+---
+
+{layout === 'row' ? (
+  <CardRow label={label} well={well}>
+    <ul>
+      {people.map((person) => (
+        <li>
+          <PersonCard person={person} compact={compact} />
+        </li>
+      ))}
+    </ul>
+  </CardRow>
+) : (
+  <ul class="people">
+    {people.map((person) => (
+      <li>
+        <PersonCard person={person} compact={compact} />
+      </li>
+    ))}
+  </ul>
+)}
+
+<style>
+  @layer components {
+    .people {
+      display: grid;
+      gap: var(--space-m);
+      grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+</style>

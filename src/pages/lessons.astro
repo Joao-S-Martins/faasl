@@ -1,24 +1,33 @@
 ---
-import { getEntry } from 'astro:content';
+// Lessons: everything a family needs to start (docs/design-system.md §6).
+import { getCollection, getEntry } from 'astro:content';
+import BadgeDollarSign from '@lucide/astro/icons/badge-dollar-sign';
+import Cake from '@lucide/astro/icons/cake';
+import Clock from '@lucide/astro/icons/clock';
+import DoorOpen from '@lucide/astro/icons/door-open';
 import PageLayout from '../layouts/PageLayout.astro';
-import PageHeader from '../components/PageHeader.astro';
-import Section from '../components/Section.astro';
-import FactList from '../components/FactList.astro';
-import Actions from '../components/Actions.astro';
-import ButtonLink from '../components/ButtonLink.astro';
-import PeopleGrid from '../components/PeopleGrid.astro';
+import Hero from '../components/blocks/Hero.astro';
+import Surface from '../components/blocks/Surface.astro';
+import FactRow from '../components/blocks/FactRow.astro';
+import StepRow from '../components/blocks/StepRow.astro';
+import TileBand from '../components/blocks/TileBand.astro';
+import MediaFeature from '../components/blocks/MediaFeature.astro';
+import QuoteBox from '../components/blocks/QuoteBox.astro';
+import Accordion from '../components/blocks/Accordion.astro';
+import Button from '../components/blocks/Button.astro';
+import ButtonRow from '../components/blocks/ButtonRow.astro';
+import PeopleList from '../components/content/PeopleList.astro';
 import InstrumentPicker from '../components/InstrumentPicker';
 import StoreList from '../components/StoreList.astro';
 import MapEmbed from '../components/MapEmbed.astro';
 import CalendarLink from '../components/CalendarLink.astro';
 import EventList from '../components/EventList.astro';
 import FaqList from '../components/FaqList.astro';
-import Testimonial from '../components/Testimonial.astro';
 import Todo from '../components/Todo.astro';
-import { getCollection } from 'astro:content';
 import { getScheduleMap } from '../lib/schedule';
 import { getSite } from '../lib/site';
 import rehearsal from '../assets/photos/students-rehearsal.jpg';
+import gym from '../assets/photos/concert-band-gym.jpg';
 
 const site = await getSite();
 const s = await getScheduleMap();
@@ -34,150 +43,213 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
 <PageLayout
   title="Free Music Lessons in San Leandro"
   description="Free group band lessons for ages 8 to 108 in San Leandro, CA. Woodwinds, brass and percussion. Start any time of year."
+  hero
+  bare
 >
-  <PageHeader
-    title="Free Music Lessons"
-    subtitle="for ages 8 and up, in San Leandro"
-    image={rehearsal}
-    imageAlt="Students rehearsing with the conductor"
-  >
-    <p>
+  <Hero image={rehearsal} alt="Students rehearsing with the conductor" size="page" surface="tint">
+    <h1>Free Music Lessons</h1>
+    <p class="sub">for ages 8 and up, in San Leandro</p>
+  </Hero>
+
+  <Surface surface="tint">
+    <p class="lead">
       When we say <em>free lessons</em>, we really mean it. Our volunteers and donors make it
       possible to teach every student without charging a cent. From beginners to those with a few
       years of experience, you're welcome to start any time of year. It's always a great time to
       learn, from ages 8 to 108.
     </p>
-    <FactList
-      facts={[
-        { term: 'Cost', detail: program.cost },
-        { term: 'Ages', detail: '8 to 108' },
-        {
-          term: 'When',
-          detail: `${s.beginner.day}s: beginners ${s.beginner.time}, intermediate ${s.intermediate.time}`,
-        },
-        { term: 'Where', detail: `${site.clubhouse.street}, ${site.clubhouse.city}` },
-      ]}
-    />
-    <p>
-      <strong>No sign-up needed: just come to a class on {s.beginner.day}s.</strong> Questions
-      first?
-      <a href="/contact">Contact us</a>
-    </p>
-  </PageHeader>
+    <div class="facts">
+      <FactRow
+        facts={[
+          { icon: BadgeDollarSign, label: 'Cost', value: program.cost },
+          { icon: Cake, label: 'Ages', value: '8 to 108' },
+          {
+            icon: Clock,
+            label: 'When',
+            value: `${s.beginner.day}s`,
+            detail: `Beginners ${s.beginner.time}, intermediate ${s.intermediate.time}`,
+          },
+          {
+            icon: DoorOpen,
+            label: 'How to start',
+            value: 'Just come',
+            detail: `${s.beginner.day} at ${s.beginner.time}, ${site.clubhouse.street}. No sign-up needed.`,
+          },
+        ]}
+      />
+    </div>
+    <ButtonRow>
+      <Button href="#getting-ready">Plan your first visit</Button>
+      <a href="/contact">Questions? Contact us</a>
+    </ButtonRow>
+  </Surface>
 
-  <Section title="How it works">
-    <p>
+  <Surface title="How it works">
+    <p class="lead">
       Lessons are taught in small groups once a week, for {s.beginner.length}. They're comparable
       to, and a great complement to, many public school music programs.
     </p>
-    <ul>
-      <li>
-        <strong>Beginner class ({s.beginner.time}):</strong> introduces new musicians to their
-        instruments and to reading music.
-      </li>
-      <li>
-        <strong>Intermediate class ({s.intermediate.time}):</strong> builds on the basics with more
-        challenging music and music theory. Many of our band volunteers also use it to learn a
-        second or third instrument.
-      </li>
-      <li>
-        <strong>The band:</strong> many of our musicians started in these classes. Our conductor,
-        Geronimo, joined as a middle school student.
-      </li>
-    </ul>
-  </Section>
+    <div class="steps">
+      <StepRow
+        steps={[
+          {
+            title: `Beginner class, ${s.beginner.time}`,
+            text: 'Introduces new musicians to their instruments and to reading music.',
+          },
+          {
+            title: `Intermediate class, ${s.intermediate.time}`,
+            text: 'More challenging music and music theory. Many band volunteers use it to learn a second or third instrument.',
+          },
+          {
+            title: 'The volunteer band',
+            text: 'Many of our musicians started in these classes. Our conductor, Geronimo, joined as a middle school student.',
+          },
+        ]}
+      />
+    </div>
+  </Surface>
 
-  <Section title="Your teacher">
-    <PeopleGrid role="teacher" />
-  </Section>
+  <TileBand />
 
-  <Section title="What students learn">
-    <ul>
-      <li>How to play and care for their instrument</li>
-      <li>How to read music and keep time</li>
-      <li>Common scales, musical keys and notation</li>
-      <li>Musical etiquette, and how to practice at home</li>
-    </ul>
-    <figure>
-      <blockquote>
-        <p>Building a regular practice routine at home is the key to succeeding in music.</p>
-      </blockquote>
-      <figcaption>— Every successful musician, ever!</figcaption>
-    </figure>
-  </Section>
+  <Surface>
+    <MediaFeature
+      image={gym}
+      alt="The concert band rehearsing with the conductor"
+      side="right"
+      tone="tint"
+    >
+      <h2>Your teacher</h2>
+      <PeopleList role="teacher" />
+    </MediaFeature>
+  </Surface>
 
-  <Section title="Choose an instrument">
-    <p>
+  <Surface surface="green" pattern="field" width="centered">
+    <QuoteBox>
+      <div class="stack">
+        <h2>What students learn</h2>
+        <ul>
+          <li>How to play and care for their instrument</li>
+          <li>How to read music and keep time</li>
+          <li>Common scales, musical keys and notation</li>
+          <li>Musical etiquette, and how to practice at home</li>
+        </ul>
+        <figure class="practice">
+          <blockquote>
+            <p>Building a regular practice routine at home is the key to succeeding in music.</p>
+          </blockquote>
+          <figcaption>— Every successful musician, ever!</figcaption>
+        </figure>
+      </div>
+    </QuoteBox>
+  </Surface>
+
+  <Surface title="Choose an instrument">
+    <p class="lead">
       Our program is built around concert band and marching music, so we teach woodwinds, brass and
       percussion, but not strings or piano. Tap an instrument to see and hear it. ★ marks the most
       common choices for beginners.
     </p>
     <InstrumentPicker client:visible videoId={program.demoVideoId} instruments={instruments} />
-  </Section>
+  </Surface>
 
-  <Section title="What you'll need">
-    <p>Each student needs their own instrument and method book.</p>
-    <ul>
-      <li>
-        <strong>Method book:</strong> <cite>{program.methodBook.title}</cite> (the red one).{' '}
-        {program.methodBook.note}
-      </li>
-      <li>
-        <strong>Accessories:</strong>
+  <Surface surface="tint" title="Getting ready" id="getting-ready" width="narrow">
+    <Accordion>
+      <details>
+        <summary>What you'll need</summary>
+        <p>Each student needs their own instrument and method book.</p>
         <ul>
+          <li>
+            <strong>Method book:</strong> <cite>{program.methodBook.title}</cite> (the red one).{' '}
+            {program.methodBook.note}
+          </li>
           {program.accessories.map(({ instruments, items }) => (
             <li>
-              {instruments}: {items.charAt(0).toLowerCase() + items.slice(1)}
+              <strong>{instruments}:</strong> {items.charAt(0).toLowerCase() + items.slice(1)}
             </li>
           ))}
         </ul>
-      </li>
-    </ul>
-  </Section>
+      </details>
+      <details>
+        <summary>Where to rent or buy</summary>
+        <p>Our musicians have been happy with these local shops:</p>
+        <StoreList kind="local" />
+        <MapEmbed
+          src="https://www.google.com/maps/d/embed?mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa"
+          title="Map of recommended music stores"
+          label="Show the store map"
+        />
+        <p>
+          Popular online shops (we recommend a local store with knowledgeable staff when possible):
+        </p>
+        <StoreList kind="online" />
+      </details>
+      <details>
+        <summary>Stay in the loop</summary>
+        <ul>
+          <li>
+            <strong>Remind:</strong> lesson updates for students and families.
+            <Todo>how to join the lessons Remind list</Todo>
+          </li>
+          <li>
+            <CalendarLink calendar="lessons" />
+          </li>
+        </ul>
+        <h3>Coming up</h3>
+        <EventList
+          calendar="lessons"
+          days={21}
+          compact
+          level={4}
+          empty="No lessons are scheduled in the next three weeks."
+        />
+      </details>
+    </Accordion>
+  </Surface>
 
-  <Section title="Where to rent or buy">
-    <p>Our musicians have been happy with these local shops:</p>
-    <StoreList kind="local" />
-    <MapEmbed
-      src="https://www.google.com/maps/d/embed?mid=1Rf94gdKG8Bf4opaiKifwnX2ZrOpaziRa"
-      title="Map of recommended music stores"
-      label="Show the store map"
-    />
-    <p>
-      Popular online shops (but we recommend a local store with knowledgeable staff when possible):
-    </p>
-    <StoreList kind="online" />
-  </Section>
+  <Surface title="FAQ" width="narrow">
+    <Accordion>
+      <FaqList />
+    </Accordion>
+  </Surface>
 
-  <Section title="Stay in the loop">
-    <ul>
-      <li>
-        <strong>Remind:</strong> lesson updates for students and families.
-        <Todo>how to join the lessons Remind list</Todo>
-      </li>
-      <li>
-        <CalendarLink calendar="lessons" />
-      </li>
-    </ul>
-    <h3>Coming up</h3>
-    <EventList
-      calendar="lessons"
-      days={21}
-      compact
-      level={4}
-      empty="No lessons are scheduled in the next three weeks."
-    />
-  </Section>
-
-  <Section title="FAQ">
-    <FaqList />
-  </Section>
-
-  <Section title="Ready to start?">
-    <Testimonial audience="students" />
-    <p>Come to the next class. Questions first?</p>
-    <Actions>
-      <ButtonLink href="/contact">Contact us</ButtonLink>
-    </Actions>
-  </Section>
+  <Surface surface="tint" pattern="field" width="centered">
+    <QuoteBox>
+      <div class="stack">
+        <h2>Ready to start?</h2>
+        <Todo block>
+          a quote from a student or family (Home already uses Aubury's; docs/todo.md)
+        </Todo>
+        <p>
+          Come to the next class, {s.beginner.day} at {s.beginner.time}. Questions first?
+        </p>
+        <ButtonRow>
+          <Button href="/contact">Contact us</Button>
+        </ButtonRow>
+      </div>
+    </QuoteBox>
+  </Surface>
 </PageLayout>
+
+<style>
+  @layer components {
+    .sub {
+      font-size: var(--step-1);
+      font-weight: 600;
+    }
+
+    .lead {
+      margin-bottom: var(--space-m);
+    }
+
+    .facts,
+    .steps {
+      margin-top: var(--space-l);
+    }
+
+    .practice {
+      margin-top: var(--space-m);
+      font-size: var(--step-1);
+      font-style: italic;
+    }
+  }
+</style>

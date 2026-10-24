@@ -1,0 +1,33 @@
+---
+// A full-width photo between sections, as a breather.
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
+interface Props {
+  image: ImageMetadata;
+  alt: string;
+}
+
+const { image, alt } = Astro.props;
+---
+
+<figure class="photo-break">
+  <Image
+    src={image}
+    alt={alt}
+    width={2000}
+    widths={[640, 1000, 1600, 2000]}
+    sizes="100vw"
+    quality={70}
+  />
+</figure>
+
+<style>
+  @layer components {
+    .photo-break :global(img) {
+      width: 100%;
+      height: clamp(12rem, 40vw, 28rem);
+      object-fit: cover;
+    }
+  }
+</style>

@@ -1,0 +1,107 @@
+---
+// Upcoming performances and fundraisers as a sideways-scrolling row of cards
+// (CardRow). No Event search data here: Google only supports it on pages
+// about one event (docs/brief.md §5.4).
+//   well: the row sits in the recessed tray
+import { getCollection } from 'astro:content';
+import { formatEventWhen } from '../../lib/format';
+import { eventHref, PAGE_CALENDARS } from '../../lib/events';
+import Todo from '../Todo.astro';
+import CardRow from '../blocks/CardRow.astro';
+
+interface Props {
+  limit?: number;
+  well?: boolean;
+  /** Shown when there's nothing coming up. */
+  empty?: string;
+}
+
+const {
+  limit = 6,
+  well = false,
+  empty = 'Nothing is scheduled right now. Check back soon.',
+} = Astro.props;
+const today = new Date().toISOString().slice(0, 10);
+const events = (
+  await getCollection('events', ({ data }) => PAGE_CALENDARS.includes(data.calendar.id))
+)
+  .filter(({ data }) => data.end.slice(0, 10) >= today)
+  .sort((a, b) => a.data.start.localeCompare(b.data.start))
+  .slice(0, limit);
+const month = (iso: string) =>
+  new Date(`${iso.slice(0, 10)}T12:00:00`).toLocaleString('en-US', { month: 'short' });
+---
+
+{events.some(({ data }) => data.sample) && <Todo block>sample events, not the real calendars</Todo>}
+{events.length ? (
+  <CardRow label="Upcoming events" well={well} scroll="always" cardWidth="18rem">
+    <ol>
+      {events.map(({ data }) => (
+        <li>
+          <article class="card event" data-on="light">
+            <p class="date" aria-hidden="true">
+              <span>{month(data.start)}</span>
+              <strong>{Number(data.start.slice(8, 10))}</strong>
+            </p>
+            <div>
+              <h3>{eventHref(data) ? <a href={eventHref(data)}>{data.title}</a> : data.title}</h3>
+              {data.tentative && <p class="tentative">Tentative</p>}
+              <p>
+                <time datetime={data.start}>{formatEventWhen(data)}</time>
+              </p>
+              {data.location && <p class="where">{data.location.split(',')[0]}</p>}
+            </div>
+          </article>
+        </li>
+      ))}
+    </ol>
+  </CardRow>
+) : (
+  <p>{empty}</p>
+)}
+
+<style>
+  @layer components {
+    .event {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: var(--space-s);
+      height: 100%;
+      padding: var(--space-m);
+      border-radius: var(--r-box);
+      background: var(--color-white);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .date {
+      align-self: start;
+      display: grid;
+      justify-items: center;
+      min-width: 3.5rem;
+      padding: 0.5rem;
+      border-radius: var(--r-control);
+      background: var(--color-hunter-green);
+      color: var(--color-white);
+      font-weight: 700;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .date strong {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: var(--step-1);
+    }
+
+    .tentative {
+      font-style: italic;
+    }
+
+    .where {
+      font-size: var(--step--1);
+    }
+  }
+</style>

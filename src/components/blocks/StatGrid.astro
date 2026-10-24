@@ -1,0 +1,68 @@
+---
+// Big numbers, each with a large icon above it. Every stat stacks from the
+// top in fixed rows, so icons, numbers and the first line of each label line
+// up across the row. Colors follow the surface (bold green on light, white
+// on green).
+import type { AstroComponent } from '@lucide/astro';
+
+interface Props {
+  stats: { icon: AstroComponent; value: string; label: string }[];
+}
+
+const { stats } = Astro.props;
+---
+
+<ul class="stats">
+  {stats.map(({ icon: Icon, value, label }) => (
+    <li>
+      <Icon size={56} stroke-width={1.5} aria-hidden="true" class="icon" />
+      <strong>{value}</strong>
+      <span>{label}</span>
+    </li>
+  ))}
+</ul>
+
+<style>
+  @layer components {
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-l) var(--space-m);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+
+    li {
+      display: grid;
+      grid-template-rows: 3.75rem auto auto;
+      align-content: start;
+      justify-items: center;
+      gap: 0.25rem;
+    }
+
+    .icon {
+      align-self: end;
+      color: var(--heading);
+    }
+
+    strong {
+      font-family: var(--font-heading);
+      font-size: var(--step-4);
+      line-height: 1;
+      color: var(--heading);
+    }
+
+    span {
+      font-weight: 600;
+      text-wrap: balance;
+    }
+
+    @media (width >= 40rem) {
+      .stats {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+</style>

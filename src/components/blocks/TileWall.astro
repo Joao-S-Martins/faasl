@@ -1,0 +1,68 @@
+---
+// A wall of alternating rosette and staff tiles with a box cutting into it
+// (the support appeal). Desktop: six rows of 96px tiles, the box snapped to
+// the grout lines (five tiles wide, four rows tall, inset by half the grout)
+// so no tile is cut by its edge. Phones and tablets: two rows of 64px tiles
+// above the box.
+import TilePattern from '../patterns/TilePattern.astro';
+---
+
+<section class="tile-wall" data-on="light">
+  <div class="wall" aria-hidden="true">
+    <TilePattern variant="checker" tile={64} height="128px" frame={false} center="x" />
+  </div>
+  <div class="wall wide" aria-hidden="true">
+    <TilePattern variant="checker" tile={96} height="576px" frame={false} center="x" />
+  </div>
+  <div class="box stack">
+    <slot />
+  </div>
+</section>
+
+<style>
+  @layer components {
+    .tile-wall {
+      position: relative;
+      background: var(--color-white);
+    }
+
+    .wide {
+      display: none;
+    }
+
+    .box {
+      padding: var(--space-l) var(--gutter) var(--space-section);
+      max-width: calc(var(--measure) + 2 * var(--gutter));
+    }
+
+    @media (width >= 64rem) {
+      .tile-wall {
+        height: 576px;
+      }
+
+      .wall {
+        display: none;
+      }
+
+      .wide {
+        display: block;
+      }
+
+      /* the grid's center line is a grout line: the box starts one tile right
+         of it and spans five tiles and four rows, inset by half the grout */
+      .box {
+        position: absolute;
+        top: calc(96px + 3px);
+        left: calc(50% + 3px);
+        width: calc(5 * 96px - 6px);
+        height: calc(4 * 96px - 6px);
+        display: grid;
+        align-content: center;
+        padding: var(--space-l);
+        border-radius: var(--r-box);
+        background: var(--color-white);
+        box-shadow: var(--shadow-float);
+      }
+    }
+  }
+</style>

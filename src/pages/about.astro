@@ -2,7 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Section from '../components/Section.astro';
-import PeopleGrid from '../components/PeopleGrid.astro';
+import PeopleList from '../components/content/PeopleList.astro';
 import Actions from '../components/Actions.astro';
 import ButtonLink from '../components/ButtonLink.astro';
 import { getSite, yearsSince } from '../lib/site';
@@ -54,7 +54,7 @@ const site = await getSite();
   </Section>
 
   <Section title="Our leadership team">
-    <PeopleGrid role="leadership" />
+    <PeopleList role="leadership" />
   </Section>
 
   <Section title="Get involved" id="get-involved">

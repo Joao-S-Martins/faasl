@@ -13,13 +13,13 @@ import Band from './Band.astro';
 import Feature from './Feature.astro';
 import StatGrid from './StatGrid.astro';
 import PhotoBand from './PhotoBand.astro';
-import EventCards from './EventCards.astro';
+import EventCards from '../content/EventCards.astro';
 import ScrollWell from './ScrollWell.astro';
 import TilePattern from '../patterns/TilePattern.astro';
 import ButtonLink from '../ButtonLink.astro';
 import Actions from '../Actions.astro';
 import Testimonial from '../Testimonial.astro';
-import PeopleGrid from '../PeopleGrid.astro';
+import PeopleList from '../content/PeopleList.astro';
 import Address from '../Address.astro';
 import Todo from '../Todo.astro';
 import { getSite, yearsSince } from '../../lib/site';
@@ -257,10 +257,10 @@ const stats = [
   <h2>Our leadership</h2>
   {d === 'c' ? (
     <ScrollWell tone="light">
-      <PeopleGrid role="leadership" compact scroll />
+      <PeopleList role="leadership" compact layout="row" label="Our leadership" />
     </ScrollWell>
   ) : (
-    <PeopleGrid role="leadership" compact />
+    <PeopleList role="leadership" compact />
   )}
   <p>
     <a href="/about">Meet the team</a>

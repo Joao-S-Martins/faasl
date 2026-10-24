@@ -1,0 +1,46 @@
+---
+// A link styled as a call to action. Adapts to its surface through the
+// contrast context: green on light surfaces, white on green ones.
+//   primary:   filled
+//   secondary: outlined
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+}
+
+const { href, variant = 'primary' } = Astro.props;
+---
+
+<a class:list={['button', variant]} href={href}>
+  <slot />
+</a>
+
+<style>
+  @layer components {
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: 44px;
+      padding: 0.5rem 1.25rem;
+      border: 2px solid var(--button-bg);
+      border-radius: var(--r-control);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .primary {
+      background: var(--button-bg);
+      color: var(--button-text);
+    }
+
+    .secondary {
+      background: transparent;
+      color: var(--button-bg);
+    }
+
+    .button:hover {
+      text-decoration: underline;
+    }
+  }
+</style>

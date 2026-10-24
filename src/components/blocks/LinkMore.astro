@@ -1,0 +1,29 @@
+---
+// A "see more" link with an arrow ("All events", "Meet the team"): a 44px
+// tap target, set a little apart from the content above it.
+import ArrowRight from '@lucide/astro/icons/arrow-right';
+
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a class="link-more" href={href}>
+  <slot />
+  <ArrowRight size={18} aria-hidden="true" />
+</a>
+
+<style>
+  @layer components {
+    .link-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      min-height: 44px;
+      margin-top: var(--space-m);
+      font-weight: 700;
+    }
+  }
+</style>

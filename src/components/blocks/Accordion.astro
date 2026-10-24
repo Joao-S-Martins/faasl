@@ -1,0 +1,59 @@
+---
+// Groups <details> elements (in the default slot) into an accordion: 56px
+// rows with a green chevron, on the page grid. Used for the FAQ and for long
+// lists that collapse on every screen size.
+---
+
+<div class="accordion">
+  <slot />
+</div>
+
+<style>
+  @layer components {
+    .accordion :global(details) {
+      border-bottom: 1px solid var(--color-line);
+    }
+
+    .accordion :global(summary) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-s);
+      min-height: 56px;
+      padding-block: var(--space-xs);
+      font-size: var(--step-1);
+      font-weight: 700;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .accordion :global(summary::-webkit-details-marker) {
+      display: none;
+    }
+
+    /* the chevron: a rotated corner, drawn so it inherits the heading color */
+    .accordion :global(summary::after) {
+      content: '';
+      flex: none;
+      width: 0.6rem;
+      height: 0.6rem;
+      margin-right: 0.3rem;
+      border-right: 2.5px solid var(--heading);
+      border-bottom: 2.5px solid var(--heading);
+      transform: rotate(45deg) translateY(-25%);
+      transition: transform var(--duration-fast);
+    }
+
+    .accordion :global(details[open] > summary::after) {
+      transform: rotate(-135deg) translateY(-25%);
+    }
+
+    .accordion :global(details > :not(summary)) {
+      margin-bottom: var(--space-s);
+    }
+
+    .accordion :global(details > * + :not(summary)) {
+      margin-top: var(--space-xs);
+    }
+  }
+</style>

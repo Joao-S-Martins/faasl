@@ -3,11 +3,6 @@
  * last, so they win over component defaults. Resist adding more.
  */
 @layer utilities {
-  /* vertical rhythm between children */
-  .stack > * + * {
-    margin-top: var(--stack-space, var(--space-s));
-  }
-
   .text-center {
     text-align: center;
   }

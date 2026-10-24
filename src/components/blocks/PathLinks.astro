@@ -1,0 +1,107 @@
+---
+// The "I want to…" links under the home hero: each a whole clickable block
+// with an icon, a title, a line of text and an arrow. Stacked on phones,
+// three across from tablets; the row stays inside the content width.
+import type { AstroComponent } from '@lucide/astro';
+import ArrowRight from '@lucide/astro/icons/arrow-right';
+
+interface Props {
+  label: string;
+  links: { icon: AstroComponent; title: string; text: string; href: string }[];
+}
+
+const { label, links } = Astro.props;
+---
+
+<nav class="paths" aria-label={label} data-on="dark">
+  <ul>
+    {links.map(({ icon: Icon, title, text, href }) => (
+      <li>
+        <a href={href}>
+          <Icon size={36} stroke-width={1.5} aria-hidden="true" />
+          <strong>{title}</strong>
+          <span>{text}</span>
+          <ArrowRight size={20} aria-hidden="true" class="arrow" />
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  @layer components {
+    .paths {
+      background: var(--color-hunter-green);
+    }
+
+    ul {
+      display: grid;
+      gap: 2px;
+      max-width: calc(var(--content-width) + 2 * var(--gutter));
+      margin: 0 auto;
+      padding: 0;
+      list-style: none;
+    }
+
+    li + li {
+      border-top: 2px solid var(--color-gold);
+    }
+
+    a {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      column-gap: var(--space-s);
+      align-items: center;
+      height: 100%;
+      padding: var(--space-m) var(--gutter);
+      text-decoration: none;
+    }
+
+    a > :global(svg:first-child) {
+      grid-row: span 2;
+    }
+
+    .arrow {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      transition: transform var(--duration-fast);
+    }
+
+    strong {
+      font-family: var(--font-heading);
+      font-size: var(--step-2);
+      line-height: 1.1;
+    }
+
+    a:hover {
+      background: var(--color-hunter-dark);
+    }
+
+    a:hover strong {
+      text-decoration: underline;
+    }
+
+    a:hover .arrow {
+      transform: translateX(3px);
+    }
+
+    @media (width >= 40rem) {
+      ul {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      li + li {
+        border-top: 0;
+        border-left: 2px solid var(--color-gold);
+      }
+
+      a {
+        padding-inline: var(--space-m);
+      }
+
+      strong {
+        font-size: var(--step-1);
+      }
+    }
+  }
+</style>

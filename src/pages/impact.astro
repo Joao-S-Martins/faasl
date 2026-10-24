@@ -4,7 +4,7 @@ import PageLayout from '../layouts/PageLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Section from '../components/Section.astro';
 import FactList from '../components/FactList.astro';
-import PeopleGrid from '../components/PeopleGrid.astro';
+import PeopleList from '../components/content/PeopleList.astro';
 import Todo from '../components/Todo.astro';
 import { getSite, yearsSince } from '../lib/site';
 
@@ -90,7 +90,7 @@ const cities = site.areaServed.join(', ');
       The band is governed by a volunteer board of directors. Board members aren't paid; our funds
       go to our building and our musical needs.
     </p>
-    <PeopleGrid role="leadership" compact />
+    <PeopleList role="leadership" compact />
     <Todo block>full board list with roles; research fund use before adding claims</Todo>
   </Section>
 

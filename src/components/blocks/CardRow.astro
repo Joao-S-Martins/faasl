@@ -1,0 +1,85 @@
+---
+// A row of cards that scrolls sideways (with a peek of the next card) on
+// phones and tablets, and lays out as a grid on desktop unless `scroll` is
+// `always`. Every card is in the page from the start. The row is a focusable,
+// labelled region, so it can be scrolled with the keyboard.
+//   well:   sit in the recessed tray (ScrollWell)
+//   scroll: until-desktop · always
+// Put a <ul> or <ol> of cards in the default slot.
+import ScrollWell from './ScrollWell.astro';
+
+interface Props {
+  label: string;
+  well?: boolean;
+  scroll?: 'until-desktop' | 'always';
+  /** Card width while scrolling. */
+  cardWidth?: string;
+}
+
+const { label, well = false, scroll = 'until-desktop', cardWidth = '17rem' } = Astro.props;
+const Tray = well ? ScrollWell : Fragment;
+---
+
+<Tray>
+  <div
+    class:list={['card-row', scroll, { 'in-well': well }]}
+    role="region"
+    aria-label={label}
+    tabindex="0"
+    style={`--card-width: ${cardWidth}`}
+  >
+    <slot />
+  </div>
+</Tray>
+
+<style>
+  @layer components {
+    .card-row {
+      --pad: var(--gutter);
+      overflow-x: auto;
+      margin-inline: calc(var(--gutter) * -1);
+      padding: 0.25rem var(--pad) var(--space-s);
+      scroll-snap-type: x mandatory;
+      scroll-padding-inline: var(--pad);
+    }
+
+    .in-well {
+      --pad: 1rem;
+      margin: 0;
+      padding-block: 1rem;
+    }
+
+    .card-row > :global(ul),
+    .card-row > :global(ol) {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: min(78%, var(--card-width));
+      gap: var(--space-s);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .card-row > :global(* > li) {
+      scroll-snap-align: start;
+    }
+
+    @media (width >= 64rem) {
+      .until-desktop {
+        overflow: visible;
+        margin-inline: 0;
+        padding-inline: 0;
+      }
+
+      .until-desktop.in-well {
+        padding: 1rem;
+      }
+
+      .until-desktop > :global(ul),
+      .until-desktop > :global(ol) {
+        grid-auto-flow: row;
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+      }
+    }
+  }
+</style>

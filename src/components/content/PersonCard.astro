@@ -1,0 +1,83 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { render } from 'astro:content';
+import { Image } from 'astro:assets';
+
+interface Props {
+  person: CollectionEntry<'people'>;
+  /** Photo, name and title only (no bio), for quick recognition. */
+  compact?: boolean;
+}
+
+const { person, compact = false } = Astro.props;
+const { name, title, photo, draft } = person.data;
+const { Content } = await render(person);
+---
+
+<article class:list={['person', 'card', { draft }]} data-on="light">
+  {draft && <p class="draft-badge">Draft: details needed</p>}
+  {photo ? (
+    <Image src={photo} alt={`Portrait of ${name}`} width={160} height={160} class="photo" />
+  ) : (
+    <div class="photo placeholder" aria-hidden="true" />
+  )}
+  <h3>{name}</h3>
+  <p class="title">{title}</p>
+  {!compact && (
+    <div class="bio">
+      <Content />
+    </div>
+  )}
+</article>
+
+<style>
+  @layer components {
+    /* off-white on white sections; white inside a light tray (--card-bg) */
+    .person {
+      display: grid;
+      justify-items: center;
+      align-content: start;
+      gap: var(--space-xs);
+      height: 100%;
+      padding: var(--space-m);
+      border-radius: var(--r-box);
+      background: var(--card-bg, var(--color-off-white));
+      text-align: center;
+    }
+
+    .draft {
+      outline: 3px dashed var(--color-review-line);
+      outline-offset: -3px;
+    }
+
+    .draft-badge {
+      padding: 0.125rem 0.5rem;
+      border-radius: var(--r-pill);
+      background: var(--color-review-bg);
+      color: var(--color-ink);
+      font-size: var(--step--1);
+      font-weight: 700;
+    }
+
+    .photo {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .placeholder {
+      background: var(--color-white);
+      border: 2px dashed var(--color-line);
+    }
+
+    /* the name leads; the role is plain text, so they don't compete */
+    .title {
+      color: var(--text);
+    }
+
+    .bio {
+      font-size: var(--step--1);
+    }
+  }
+</style>

@@ -1,131 +1,223 @@
 ---
+// Home: the whole story once, routing each audience to its page
+// (docs/design-system.md §6).
+import { getEntry } from 'astro:content';
+import GraduationCap from '@lucide/astro/icons/graduation-cap';
+import EighthNotes from '@lucide/astro/icons/eighth-notes';
+import HandHeart from '@lucide/astro/icons/hand-heart';
+import Users from '@lucide/astro/icons/users';
+import Flag from '@lucide/astro/icons/flag';
+import CalendarHeart from '@lucide/astro/icons/calendar-heart';
 import PageLayout from '../layouts/PageLayout.astro';
-import Hero from '../components/Hero.astro';
-import RouterLinks from '../components/RouterLinks.astro';
-import Section from '../components/Section.astro';
-import ButtonLink from '../components/ButtonLink.astro';
-import Actions from '../components/Actions.astro';
+import Hero from '../components/blocks/Hero.astro';
+import PathLinks from '../components/blocks/PathLinks.astro';
+import Surface from '../components/blocks/Surface.astro';
+import MediaFeature from '../components/blocks/MediaFeature.astro';
+import StatGrid from '../components/blocks/StatGrid.astro';
+import QuoteBox from '../components/blocks/QuoteBox.astro';
+import TileWall from '../components/blocks/TileWall.astro';
+import PhotoBreak from '../components/blocks/PhotoBreak.astro';
+import Button from '../components/blocks/Button.astro';
+import ButtonRow from '../components/blocks/ButtonRow.astro';
+import LinkMore from '../components/blocks/LinkMore.astro';
+import EventCards from '../components/content/EventCards.astro';
+import PeopleList from '../components/content/PeopleList.astro';
 import Testimonial from '../components/Testimonial.astro';
-import EventList from '../components/EventList.astro';
-import PeopleGrid from '../components/PeopleGrid.astro';
 import Address from '../components/Address.astro';
+import Todo from '../components/Todo.astro';
 import { getSite, yearsSince } from '../lib/site';
 import { fillTokens } from '../lib/schedule';
-import { getEntry } from 'astro:content';
 import bandSteps from '../assets/photos/band-church-steps.jpg';
-import brass from '../assets/photos/brass-close-up.jpg';
-import church from '../assets/photos/band-in-church.jpg';
-import gym from '../assets/photos/concert-band-gym.jpg';
+import rehearsal from '../assets/photos/students-rehearsal.jpg';
+import young from '../assets/photos/young-members.jpg';
+import parade from '../assets/photos/parade-carnival.jpg';
 
 const site = await getSite();
-const impact = (await getEntry('impact', 'current'))?.data;
+const impact = (await getEntry('impact', 'current'))!.data;
 const schedule = await fillTokens('{{schedule}}');
+const number = (text: string) => text.replace(/^about\s+/i, '');
 ---
 
 <PageLayout
   title="Portuguese Band of San Leandro | Free Music Lessons & Community Band"
   description="Free music lessons for ages 8 to 108 and a volunteer community band in San Leandro, CA, serving Castro Valley, San Lorenzo, Hayward and Oakland since 1980."
+  hero
+  bare
 >
   <Hero
-    photos={[
-      { src: bandSteps, alt: 'The full band in green uniforms on church steps, with flags' },
-      { src: brass, alt: 'Tuba and saxophone players performing in white uniforms' },
-      { src: church, alt: 'The band performing inside a church' },
-      { src: gym, alt: 'The concert band rehearsing with the conductor' },
-    ]}
+    image={bandSteps}
+    alt="The full band in green uniforms on church steps, with flags"
+    surface="green"
   >
     <h1>We've built a community around music</h1>
-    <p class="subtitle">and you're invited to join us</p>
+    <p class="sub">and you're invited to join us</p>
     <p>
       Free music lessons, a band for every age and skill level, and live music for our community,
       since {site.foundingYear}.
     </p>
+    <Todo block>
+      a short silent video loop here (the photo shows first; no video for reduced motion or slow
+      connections)
+    </Todo>
   </Hero>
 
-  <RouterLinks />
+  <PathLinks
+    label="I want to…"
+    links={[
+      {
+        icon: GraduationCap,
+        title: 'Learn an instrument',
+        text: 'Free lessons, ages 8 to 108',
+        href: '/lessons',
+      },
+      {
+        icon: EighthNotes,
+        title: 'Play in the band',
+        text: 'No auditions, Friday nights',
+        href: '/join',
+      },
+      { icon: HandHeart, title: 'Give', text: 'Keep music free', href: '/give' },
+    ]}
+  />
 
-  <Section title="Our story">
-    <p>
-      Our band was founded in {site.foundingYear} by amateur musicians, mostly Portuguese
-      immigrants, who wanted to enrich their community through music. More than{' '}
-      {`${yearsSince(site.foundingYear)} years`} later, our goal remains the same: impacting lives
-      through music education and mentorship. Today we're a diverse, all-volunteer group of
-      musicians of every age and background.
-    </p>
-    <p>
-      <a href="/about">Our story</a>
-    </p>
-  </Section>
+  <Surface surface="tint">
+    <MediaFeature image={rehearsal} alt="Students rehearsing with the conductor" side="left">
+      <h2>Free lessons for ages 8 to 108</h2>
+      <p>
+        Every lesson we teach is free. Our music teacher, who also teaches in San Leandro schools,
+        guides beginner and intermediate students on woodwinds, brass and percussion, and you can
+        start any time of year.
+      </p>
+      <p>{schedule}</p>
+      <ButtonRow>
+        <Button href="/lessons">Learn with us</Button>
+      </ButtonRow>
+    </MediaFeature>
+  </Surface>
 
-  <Section title="Free lessons for ages 8 to 108">
-    <p>
-      Every lesson we teach is free. Our music teacher, who also teaches in San Leandro schools,
-      guides beginner and intermediate students on woodwinds, brass and percussion, and you can
-      start any time of year.
-    </p>
-    <p>{schedule}</p>
-    <Actions>
-      <ButtonLink href="/lessons">Learn with us</ButtonLink>
-    </Actions>
-  </Section>
+  <Surface title="Music in our community" centerTitle>
+    <StatGrid
+      stats={[
+        {
+          icon: CalendarHeart,
+          value: `${yearsSince(site.foundingYear)}`,
+          label: `years of music, since ${site.foundingYear}`,
+        },
+        { icon: Users, value: impact.bandMusicians, label: 'musicians in the band' },
+        {
+          icon: GraduationCap,
+          value: number(impact.studentsPerClassPerYear),
+          label: 'students per class each year',
+        },
+        {
+          icon: Flag,
+          value: number(impact.paradesPerYear),
+          label: `parades and ${number(impact.concertsPerYear)} concerts a year`,
+        },
+      ]}
+    />
+  </Surface>
 
-  <Section title="A band for every age and skill level">
-    <p>
-      Our volunteer band is a mixed-age group of {impact?.bandMusicians ?? ''} musicians. Younger
-      musicians play alongside experienced ones, learning in a way a peer-aged group can't match. No
-      auditions: just show up on a Friday night.
-    </p>
-    <Testimonial audience="musicians" />
-    <Actions>
-      <ButtonLink href="/join">Join the band</ButtonLink>
-    </Actions>
-  </Section>
+  <Surface surface="tint">
+    <MediaFeature image={young} alt="Young members of the band in uniform" side="right">
+      <h2>A band for every age and skill level</h2>
+      <p>
+        Our volunteer band is a mixed-age group of {impact.bandMusicians} musicians. Younger
+        musicians play alongside experienced ones, learning in a way a peer-aged group can't match.
+        No auditions: just show up on a Friday night.
+      </p>
+      <ButtonRow>
+        <Button href="/join">Join the band</Button>
+      </ButtonRow>
+    </MediaFeature>
+  </Surface>
 
-  <Section title="Keep music free for our community">
+  <Surface pattern="field" width="centered">
+    <QuoteBox>
+      <Testimonial audience="musicians" />
+    </QuoteBox>
+  </Surface>
+
+  <TileWall>
+    <h2>Your support is instrumental</h2>
     <p>
       Our lessons are free, our band runs on volunteers, and our board isn't paid. Every dollar goes
       to our building and our musical needs: sheet music, uniforms, instrument repairs and the
       carpools that get us to performances.
     </p>
-    <Actions>
-      <ButtonLink href="/give">Give</ButtonLink>
+    <ButtonRow>
+      <Button href="/give">Give</Button>
       <a href="/impact">See our impact</a>
-    </Actions>
-  </Section>
+    </ButtonRow>
+  </TileWall>
 
-  <Section title="Come see us">
-    <p>
+  <Surface surface="green" pattern="field" title="Come see us">
+    <p class="lead">
       We play about a dozen parades and half a dozen concerts every year, and host fundraiser
-      dinners with classic Portuguese meals. Here's what's coming up:
+      dinners with classic Portuguese meals.
     </p>
-    <EventList calendar="social" limit={1} empty="No fundraisers are scheduled right now." />
-    <EventList calendar="performances" limit={2} empty="No performances are scheduled right now." />
-    <p>
-      <a href="/events">All events</a>
-    </p>
-  </Section>
+    <EventCards well />
+    <LinkMore href="/events">All events</LinkMore>
+  </Surface>
 
-  <Section title="Our leadership">
-    <PeopleGrid role="leadership" compact />
-    <p>
-      <a href="/about">Meet the team</a>
-    </p>
-  </Section>
+  <PhotoBreak image={parade} alt="The band marching in a parade" />
 
-  <Section title="Visit us">
-    <Address directions />
-    <p>
-      <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a> ·
-      <a href={`mailto:${site.email}`}>{site.email}</a>
-    </p>
-    <p>
-      <a href="/contact">Contact us</a>
-    </p>
-  </Section>
+  <Surface title="Our leadership">
+    <PeopleList role="leadership" compact layout="row" well label="Our leadership" />
+    <LinkMore href="/about">Meet the team</LinkMore>
+  </Surface>
+
+  <Surface surface="tint" title="Visit us">
+    <div class="visit">
+      <div class="clubhouse-photo">
+        <Todo block>a photo of our clubhouse at 844 Alvarado St. (docs/todo.md, Photos)</Todo>
+      </div>
+      <div class="stack">
+        <p>
+          <strong>Our clubhouse</strong>
+        </p>
+        <Address directions />
+        <p>
+          <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a>
+          <br />
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+        <LinkMore href="/contact">Contact us</LinkMore>
+      </div>
+    </div>
+  </Surface>
 </PageLayout>
 
 <style>
-  .subtitle {
-    font-size: var(--step-1);
+  @layer components {
+    .sub {
+      font-size: var(--step-1);
+      font-weight: 600;
+    }
+
+    .lead {
+      margin-bottom: var(--space-m);
+    }
+
+    .visit {
+      display: grid;
+      gap: var(--space-m);
+      align-items: center;
+    }
+
+    .clubhouse-photo {
+      display: grid;
+      place-items: center;
+      aspect-ratio: 3 / 2;
+      padding: var(--space-m);
+      border-radius: var(--r-box);
+      background: var(--color-white);
+    }
+
+    @media (width >= 40rem) {
+      .visit {
+        grid-template-columns: 3fr 2fr;
+      }
+    }
   }
 </style>

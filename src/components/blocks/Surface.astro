@@ -1,0 +1,126 @@
+---
+// A full-width page section: what it sits on, an optional heading, and the
+// content column (docs/design-system.md §2). Sets the contrast context, so
+// text, links, buttons and focus rings inside adapt to the surface.
+//   surface: plain (white) · tint (off-white) · green
+//   pattern: field adds the faint staff lines
+//   width:   content (full content width) · narrow (reading width, on the
+//            page grid) · centered (reading width, centered; for a quote box)
+//   title:   renders the section heading and labels the section with it
+// Bold green is one tool among several: rarely two green sections in a row
+// (a written guideline, not enforced).
+import TilePattern from '../patterns/TilePattern.astro';
+
+interface Props {
+  surface?: 'plain' | 'tint' | 'green';
+  pattern?: 'none' | 'field';
+  width?: 'content' | 'narrow' | 'centered';
+  /** Section heading; without one the section needs no landmark name. */
+  title?: string;
+  /** Heading level for the title (blocks inside use the next level). */
+  level?: 2 | 3;
+  /** Anchor id; defaults to the title, slugified. */
+  id?: string;
+  /** Center the heading (for stat grids and similar). */
+  centerTitle?: boolean;
+}
+
+const {
+  surface = 'plain',
+  pattern = 'none',
+  width = 'content',
+  title,
+  level = 2,
+  centerTitle = false,
+} = Astro.props;
+const id =
+  Astro.props.id ??
+  title
+    ?.toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+const Heading = `h${level}` as 'h2' | 'h3';
+const dark = surface === 'green';
+const Tag = title ? 'section' : 'div';
+---
+
+<Tag
+  class:list={['surface', surface]}
+  id={id}
+  aria-labelledby={title ? `${id}-title` : undefined}
+  data-on={dark ? 'dark' : 'light'}
+>
+  {pattern === 'field' && (
+    <div class="field" aria-hidden="true">
+      <TilePattern
+        variant="field"
+        height="100%"
+        frame={false}
+        ink={dark ? 'var(--color-white)' : undefined}
+        ground={
+          dark
+            ? 'var(--color-hunter-green)'
+            : surface === 'tint'
+              ? 'var(--color-off-white)'
+              : undefined
+        }
+      />
+    </div>
+  )}
+  <div class:list={['inner', width]}>
+    {title && (
+      <Heading id={`${id}-title`} class:list={['title', { 'text-center': centerTitle }]}>
+        {title}
+      </Heading>
+    )}
+    <slot />
+  </div>
+</Tag>
+
+<style>
+  @layer components {
+    .surface {
+      position: relative;
+      isolation: isolate;
+      padding-block: var(--space-section);
+    }
+
+    .plain {
+      background: var(--color-white);
+    }
+
+    .tint {
+      background: var(--color-off-white);
+    }
+
+    .green {
+      background: var(--color-hunter-green);
+    }
+
+    .field {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+    }
+
+    .inner {
+      max-width: calc(var(--content-width) + 2 * var(--gutter));
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    /* narrow keeps the left edge of the page grid */
+    .narrow > :global(*) {
+      max-width: var(--measure);
+    }
+
+    .centered {
+      max-width: calc(var(--measure) + 2 * var(--gutter));
+    }
+
+    /* every section heading has the same space below it */
+    .title {
+      margin-bottom: var(--space-m);
+    }
+  }
+</style>

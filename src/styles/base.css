@@ -64,6 +64,8 @@
     --link: var(--color-hunter-green);
     --focus: var(--color-hunter-green);
     --focus-halo: var(--color-white);
+    --button-bg: var(--color-hunter-green);
+    --button-text: var(--color-white);
   }
 
   [data-on='dark'] {
@@ -72,6 +74,8 @@
     --link: var(--color-white);
     --focus: var(--color-white);
     --focus-halo: var(--color-hunter-green);
+    --button-bg: var(--color-white);
+    --button-text: var(--color-hunter-green);
   }
 
   [data-on] {
@@ -127,6 +131,12 @@
     outline: 2px solid var(--focus);
     outline-offset: 2px;
     box-shadow: 0 0 0 4px var(--focus-halo);
+  }
+
+  /* vertical rhythm between children; a default, so components can set
+     their own spacing (e.g. ButtonRow's larger gap above buttons) */
+  .stack > * + * {
+    margin-top: var(--stack-space, var(--space-s));
   }
 
   .container {

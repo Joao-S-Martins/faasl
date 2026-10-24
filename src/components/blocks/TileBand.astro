@@ -1,0 +1,15 @@
+---
+// A horizontal rule of staff tiles, one tile high, centered so cut tiles are
+// equal on both sides. Tile sizes stay whole-pixel (docs/brand.md).
+import TilePattern from '../patterns/TilePattern.astro';
+
+interface Props {
+  tile?: 48 | 64;
+}
+
+const { tile = 64 } = Astro.props;
+---
+
+<div class="tile-band" aria-hidden="true">
+  <TilePattern variant="staff" tile={tile} height={`${tile}px`} frame={false} center="x" />
+</div>

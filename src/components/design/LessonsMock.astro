@@ -12,7 +12,7 @@ import Feature from './Feature.astro';
 import TilePattern from '../patterns/TilePattern.astro';
 import ButtonLink from '../ButtonLink.astro';
 import Actions from '../Actions.astro';
-import PeopleGrid from '../PeopleGrid.astro';
+import PeopleList from '../content/PeopleList.astro';
 import InstrumentPicker from '../InstrumentPicker';
 import StoreList from '../StoreList.astro';
 import CalendarLink from '../CalendarLink.astro';
@@ -136,7 +136,7 @@ const steps = [
     tone={d === 'b' ? 'green' : 'tint'}
   >
     <h2>Your teacher</h2>
-    <PeopleGrid role="teacher" />
+    <PeopleList role="teacher" />
   </Feature>
 </Band>
 

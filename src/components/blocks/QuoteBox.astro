@@ -1,0 +1,19 @@
+---
+// A white box for a quote or a short message, floating on its surface
+// (pairs well with the staff field). The quote goes in the default slot.
+---
+
+<div class="quote-box" data-on="light">
+  <slot />
+</div>
+
+<style>
+  @layer components {
+    .quote-box {
+      padding: var(--space-l);
+      border-radius: var(--r-box);
+      background: var(--color-white);
+      box-shadow: var(--shadow-soft);
+    }
+  }
+</style>
