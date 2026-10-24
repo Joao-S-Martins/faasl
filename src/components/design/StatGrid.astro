@@ -32,15 +32,19 @@ const { stats, tone = 'light' } = Astro.props;
     text-align: center;
   }
 
+  /* Every stat stacks from the top, so icons, numbers and the first line
+     of each label line up across the row however long the labels are */
   li {
     display: grid;
+    grid-template-rows: 3.75rem auto auto;
+    align-content: start;
     justify-items: center;
     gap: 0.25rem;
   }
 
   .icon {
+    align-self: end;
     color: var(--color-hunter-green);
-    margin-bottom: 0.25rem;
   }
 
   .dark .icon {
