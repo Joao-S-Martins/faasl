@@ -135,7 +135,7 @@ Built in this order, each reviewed on a preview URL:
 - [x] 🤖 Print styles
 - [ ] 🧑 Page-by-page review on a phone (copy and layout), now that every page uses the final design
 - [x] 🤖 Contact form: our own handler on Cloudflare (`worker/`), with Turnstile and a trap field; tested; checks run on beta, emails off until launch
-- [ ] 🧑 Try the beta contact form on your phone: it should land on "Thanks for your message"
+- [x] 🧑 Beta contact form tested on a phone (Oct 2026): lands on "Thanks for your message"
 - [ ] 🤝 Donation provider chosen; Donate buttons point to it (Give page)
 - [ ] 🤖 Motion: hero video loop or slideshow, once there's footage (`brand.md`)
 
