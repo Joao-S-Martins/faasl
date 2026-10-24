@@ -1,0 +1,19 @@
+---
+import Surface from '../../components/blocks/Surface.astro';
+import StatGrid from '../../components/blocks/StatGrid.astro';
+import CalendarHeart from '@lucide/astro/icons/calendar-heart';
+import Users from '@lucide/astro/icons/users';
+import GraduationCap from '@lucide/astro/icons/graduation-cap';
+import Flag from '@lucide/astro/icons/flag';
+---
+
+<Surface surface="green" pattern="field" title="Music in our community" centerTitle>
+  <StatGrid
+    stats={[
+      { icon: CalendarHeart, value: '46', label: 'years of music, since 1980' },
+      { icon: Users, value: '35+', label: 'musicians in the band' },
+      { icon: GraduationCap, value: '20', label: 'students per class each year' },
+      { icon: Flag, value: '12', label: 'parades and 6 concerts a year' },
+    ]}
+  />
+</Surface>

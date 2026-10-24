@@ -1,0 +1,17 @@
+---
+import Surface from '../../components/blocks/Surface.astro';
+import MediaFeature from '../../components/blocks/MediaFeature.astro';
+import Button from '../../components/blocks/Button.astro';
+import ButtonRow from '../../components/blocks/ButtonRow.astro';
+import rehearsal from '../../assets/photos/students-rehearsal.jpg';
+---
+
+<Surface surface="tint">
+  <MediaFeature image={rehearsal} alt="Students rehearsing" side="left">
+    <h2>Free lessons for ages 8 to 108</h2>
+    <p>Every lesson we teach is free, and you can start any time of year.</p>
+    <ButtonRow>
+      <Button href="/lessons">Learn with us</Button>
+    </ButtonRow>
+  </MediaFeature>
+</Surface>

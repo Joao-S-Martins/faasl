@@ -1,0 +1,38 @@
+---
+import Surface from '../../components/blocks/Surface.astro';
+import CardRow from '../../components/blocks/CardRow.astro';
+---
+
+<Surface surface="green" pattern="field">
+  <CardRow label="Example cards" well scroll="always">
+    <ul>
+      <li>
+        <div class="demo-card">Card one</div>
+      </li>
+      <li>
+        <div class="demo-card">Card two</div>
+      </li>
+      <li>
+        <div class="demo-card">Card three</div>
+      </li>
+      <li>
+        <div class="demo-card">Card four</div>
+      </li>
+      <li>
+        <div class="demo-card">Card five</div>
+      </li>
+    </ul>
+  </CardRow>
+</Surface>
+
+<style>
+  @layer components {
+    .demo-card {
+      height: 8rem;
+      padding: var(--space-m);
+      border-radius: var(--r-box);
+      background: var(--card-bg, var(--color-off-white));
+      color: var(--color-ink);
+    }
+  }
+</style>

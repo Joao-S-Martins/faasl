@@ -132,18 +132,21 @@ Retired: `Section`, `PageHeader`, old `Hero`, `RouterLinks`, `FactList`, `Action
 
 Modeled on the Bootstrap and Tailwind docs: a sidebar of categories; one page per component with a description, live examples, an options table and usage notes; Guidelines pages generated from this document.
 
-- **Examples are small files** beside each component (`blocks/MediaFeature/examples/right-tint.astro`), collected with `import.meta.glob` twice: once to render, once with `?raw` to show the source exactly as written (Astro's built-in `<Code>` highlights it).
-- **Options tables** come from a typed `meta` export keyed by the component's `Props`, so `astro check` fails when an option is undocumented.
-- **Viewport previews:** phone, tablet and desktop iframes, loaded on demand and scaled to fit.
+- **Each component has a folder in `src/catalog/`** with a `meta.ts` (description, options, examples, usage notes) and one small `.astro` file per example. Examples are collected with `import.meta.glob` twice: once to render, once with `?raw` to show the source exactly as written (Astro's built-in `<Code>` highlights it).
+- **Options tables** come from `meta.ts`, typed from the component's props, so `astro check` fails when an option is undocumented.
+- **Adding a component to the catalog:** create `src/catalog/<Name>/meta.ts` with `defineMeta(Component, { … })` and its example files; the page appears automatically.
+- **Viewport previews:** examples marked `viewports: true` also show in phone, tablet and desktop frames (`/design/preview/…`), loaded on demand and scaled to fit.
 - **Real content and images**, so the catalog can't drift from the site.
-- **Never in production:** one `src/pages/design/[...path].astro` route returns no paths in production; CI checks `dist/design` doesn't exist in production builds. Beta is already noindex.
+- **Never in production:** the catalog routes (`src/pages/design/components/[...slug].astro`, `src/pages/design/preview/[...slug].astro`) return no paths in production; CI checks `dist/design` doesn't exist in production builds. Beta is already noindex.
+- **Guidelines page:** renders this document, so there's one source.
 - The brand guide becomes the catalog's Tokens and Patterns pages; the share image page stays.
 
 ## 8. Checks
 
 - Existing: `astro check`, lint, format, build, `check:seo` (canonical links match the sitemap).
 - `check:styles`: every `<style>` and CSS file declares a layer; only the two breakpoints; no `!important` outside the reduced-motion reset.
-- Still to add: no `dist/design` in production; stable HTML between builds.
+- CI: production builds contain no `dist/design` (brand guide, catalog and share image page are beta only).
+- Still to add: stable HTML between builds.
 - Before calling the migration done: axe on every page at 390 and 1280; contrast of every surface × tone pair, the header over photos and focus rings; Lighthouse mobile ≥ 95 on Home and Lessons (layout shift from the header and fonts); keyboard-only pass; JavaScript off; 200% zoom; 320px wide and sideways phone; Lessons print preview.
 
 ## 9. Also from the reviews

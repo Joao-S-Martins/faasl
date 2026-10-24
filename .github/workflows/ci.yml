@@ -34,6 +34,10 @@ jobs:
         env:
           SITE_ENV: ${{ inputs.site-env || 'development' }}
       - run: npm run check:seo
+      # The design pages (brand guide, catalog, share image) are beta only
+      - name: No design pages in production builds
+        if: inputs.site-env == 'production'
+        run: test ! -e dist/design
 
   # Runs the live Google Calendar pipeline end to end: summarizes every
   # calendar, writes events.json from the live feeds, builds the site and lists

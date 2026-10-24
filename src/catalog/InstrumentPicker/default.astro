@@ -1,0 +1,14 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import InstrumentPicker from '../../components/blocks/InstrumentPicker';
+
+const program = (await getEntry('lessons', 'program'))!.data;
+const instruments = (await getCollection('instruments')).map(({ id, data }) => ({
+  id,
+  name: data.name,
+  beginnerFriendly: data.beginnerFriendly,
+  demoStartSeconds: data.demoStartSeconds,
+}));
+---
+
+<InstrumentPicker client:visible videoId={program.demoVideoId} instruments={instruments} />

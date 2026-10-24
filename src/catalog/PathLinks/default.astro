@@ -1,0 +1,25 @@
+---
+import PathLinks from '../../components/blocks/PathLinks.astro';
+import GraduationCap from '@lucide/astro/icons/graduation-cap';
+import EighthNotes from '@lucide/astro/icons/eighth-notes';
+import HandHeart from '@lucide/astro/icons/hand-heart';
+---
+
+<PathLinks
+  label="I want to…"
+  links={[
+    {
+      icon: GraduationCap,
+      title: 'Learn an instrument',
+      text: 'Free lessons, ages 8 to 108',
+      href: '/lessons',
+    },
+    {
+      icon: EighthNotes,
+      title: 'Play in the band',
+      text: 'No auditions, Friday nights',
+      href: '/join',
+    },
+    { icon: HandHeart, title: 'Give', text: 'Keep music free', href: '/give' },
+  ]}
+/>

@@ -1,0 +1,21 @@
+---
+import FactRow from '../../components/blocks/FactRow.astro';
+import BadgeDollarSign from '@lucide/astro/icons/badge-dollar-sign';
+import Cake from '@lucide/astro/icons/cake';
+import Clock from '@lucide/astro/icons/clock';
+import DoorOpen from '@lucide/astro/icons/door-open';
+---
+
+<FactRow
+  facts={[
+    { icon: BadgeDollarSign, label: 'Cost', value: 'Free' },
+    { icon: Cake, label: 'Ages', value: '8 to 108' },
+    {
+      icon: Clock,
+      label: 'When',
+      value: 'Fridays',
+      detail: 'Beginners 6:30 pm, intermediate 7:15 pm',
+    },
+    { icon: DoorOpen, label: 'How to start', value: 'Just come', detail: 'No sign-up needed.' },
+  ]}
+/>

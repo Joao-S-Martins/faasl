@@ -1,0 +1,25 @@
+---
+// One catalog example on its own page, framed at phone, tablet and desktop
+// widths by the catalog. Beta and local builds only.
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { entries } from '../../../catalog';
+import { isProduction } from '../../../lib/site';
+
+export function getStaticPaths() {
+  if (isProduction) return [];
+  return entries.flatMap((entry) =>
+    entry.examples
+      .filter((example) => example.viewports)
+      .map((example) => ({
+        params: { slug: `${entry.slug}/${example.file}` },
+        props: { Component: example.Component },
+      })),
+  );
+}
+
+const { Component } = Astro.props;
+---
+
+<BaseLayout title="Preview" description="Catalog preview (beta only)." noindex>
+  <Component />
+</BaseLayout>

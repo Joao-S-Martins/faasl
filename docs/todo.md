@@ -122,7 +122,7 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [x] 🧑 Plain CSS, no framework; component catalog like the Bootstrap/Tailwind docs instead of Storybook (`design-system.md`)
 - [x] 🧑 Approve the design → unlocks Phase 4
 - [x] 🤖 Design system built (`design-system.md`): styles and checks, layout, blocks, every page moved to blocks, prototypes and the test page removed
-- [ ] 🤖 Component catalog (`/design/components`)
+- [x] 🤖 Component catalog (`/design/components`): 39 components with examples, code, options and usage; phone/tablet/desktop previews; guidelines page
 - [ ] 🤖 Accessibility and performance checks (`design-system.md` §8)
 
 ## Phase 4 — Build sections

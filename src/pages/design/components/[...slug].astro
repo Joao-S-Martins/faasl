@@ -1,0 +1,426 @@
+---
+// The component catalog, modeled on the Bootstrap and Tailwind docs: a
+// sidebar of components, and for each one a description, live examples with
+// their source, an options table and usage notes (docs/design-system.md §7).
+// Beta and local builds only: production builds have no paths here.
+import { Code } from 'astro:components';
+import PageLayout from '../../../layouts/PageLayout.astro';
+import { entries, GROUPS } from '../../../catalog';
+import { isProduction } from '../../../lib/site';
+import Guide from '../../../../docs/design-system.md';
+
+export function getStaticPaths() {
+  if (isProduction) return [];
+  return [
+    { params: { slug: undefined } },
+    { params: { slug: 'guidelines' } },
+    ...entries.map((entry) => ({ params: { slug: entry.slug } })),
+  ];
+}
+
+const { slug } = Astro.params;
+const entry = entries.find((e) => e.slug === slug);
+const viewports = [
+  { name: 'Phone', width: 390, height: 760 },
+  { name: 'Tablet', width: 820, height: 900 },
+  { name: 'Desktop', width: 1280, height: 860 },
+];
+const pageTitle = entry ? entry.meta.title : slug === 'guidelines' ? 'Guidelines' : 'Components';
+---
+
+<PageLayout title={`${pageTitle} · Catalog`} description="Component catalog (beta only)." bare>
+  <div class="catalog">
+    <details class="side" open>
+      <summary>Components</summary>
+      <nav aria-label="Catalog">
+        <p>
+          <a href="/design/components" aria-current={!slug ? 'page' : undefined}>
+            Overview
+          </a>
+        </p>
+        <p>
+          <a
+            href="/design/components/guidelines"
+            aria-current={slug === 'guidelines' ? 'page' : undefined}
+          >
+            Guidelines
+          </a>
+        </p>
+        <p>
+          <a href="/design/brand">Brand guide (tokens, colors, type, patterns)</a>
+        </p>
+        {GROUPS.map((group) => (
+          <>
+            <h2>{group}</h2>
+            <ul>
+              {entries
+                .filter((e) => e.meta.group === group)
+                .map((e) => (
+                  <li>
+                    <a
+                      href={`/design/components/${e.slug}`}
+                      aria-current={e.slug === slug ? 'page' : undefined}
+                    >
+                      {e.meta.title}
+                    </a>
+                  </li>
+                ))}
+            </ul>
+          </>
+        ))}
+      </nav>
+    </details>
+
+    <div class="doc">
+      {!slug && (
+        <article class="stack">
+          <h1>Component catalog</h1>
+          <p class="lead">
+            Every building block of the site, with live examples, the code to use it, its options
+            and the rules it follows. Pages are short lists of sections built from these.
+          </p>
+          <p>
+            Start with <a href="/design/components/guidelines">the guidelines</a>, then pick a
+            component. Colors, type and patterns are in the <a href="/design/brand">brand guide</a>.
+          </p>
+          {GROUPS.map((group) => (
+            <section class="stack">
+              <h2>{group}</h2>
+              <ul class="cards">
+                {entries
+                  .filter((e) => e.meta.group === group)
+                  .map((e) => (
+                    <li>
+                      <a href={`/design/components/${e.slug}`}>
+                        <strong>{e.meta.title}</strong>
+                        <span>{e.meta.description}</span>
+                      </a>
+                    </li>
+                  ))}
+              </ul>
+            </section>
+          ))}
+        </article>
+      )}
+
+      {slug === 'guidelines' && (
+        <article class="prose">
+          <Guide />
+        </article>
+      )}
+
+      {entry && (
+        <article class="stack">
+          <p class="group">{entry.meta.group}</p>
+          <h1>{entry.meta.title}</h1>
+          <p class="lead">{entry.meta.description}</p>
+          <p class="source">
+            Source: <code>{entry.meta.source}</code>
+          </p>
+
+          {entry.examples.map(({ title, notes, Component, source, file, viewports: frames }) => (
+            <section class="example">
+              <h2>{title}</h2>
+              {notes && <p>{notes}</p>}
+              <div class="live">
+                <Component />
+              </div>
+              {frames && (
+                <details class="frames">
+                  <summary>Show on phone, tablet and desktop</summary>
+                  <div class="frame-row">
+                    {viewports.map(({ name, width, height }) => (
+                      <figure style={`--w: ${width}px; --h: ${height}px`}>
+                        <div class="frame">
+                          <iframe
+                            src={`/design/preview/${entry.slug}/${file}`}
+                            title={`${title} at ${name} width`}
+                            width={width}
+                            height={height}
+                            loading="lazy"
+                          />
+                        </div>
+                        <figcaption>
+                          {name}, {width}px
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </details>
+              )}
+              <details class="code">
+                <summary>Code</summary>
+                <Code code={source} lang="astro" />
+              </details>
+            </section>
+          ))}
+
+          <section class="stack">
+            <h2>Options</h2>
+            {Object.keys(entry.meta.options).length ? (
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Option</th>
+                      <th>Values</th>
+                      <th>Default</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Object.entries(entry.meta.options).map(([name, option]) => (
+                      <tr>
+                        <td>
+                          <code>{name}</code>
+                        </td>
+                        <td>{option.values}</td>
+                        <td>{option.default ? <code>{option.default}</code> : '—'}</td>
+                        <td>{option.description}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ) : (
+              <p>No options.</p>
+            )}
+            {entry.meta.slot && (
+              <p>
+                <strong>Content (slot):</strong> {entry.meta.slot}
+              </p>
+            )}
+          </section>
+
+          {entry.meta.notes && (
+            <section class="stack">
+              <h2>Usage</h2>
+              <ul>
+                {entry.meta.notes.map((note) => (
+                  <li>{note}</li>
+                ))}
+              </ul>
+            </section>
+          )}
+        </article>
+      )}
+    </div>
+  </div>
+</PageLayout>
+
+<style>
+  @layer components {
+    .catalog {
+      display: grid;
+      gap: var(--space-l);
+      max-width: calc(90rem + 2 * var(--gutter));
+      margin-inline: auto;
+      padding: var(--space-l) var(--gutter) var(--space-section);
+    }
+
+    .side summary {
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .side nav {
+      display: grid;
+      gap: var(--space-xs);
+      padding-top: var(--space-s);
+    }
+
+    .side h2 {
+      margin-top: var(--space-s);
+      font-size: var(--step-0);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .side ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .side a {
+      display: block;
+      padding: 0.2rem 0;
+      text-decoration: none;
+    }
+
+    .side [aria-current='page'] {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+
+    .doc {
+      min-width: 0;
+    }
+
+    .group {
+      font-size: var(--step--1);
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .source code,
+    td code {
+      font-size: 0.9em;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+      gap: var(--space-s);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .cards a {
+      display: grid;
+      gap: 0.25rem;
+      height: 100%;
+      padding: var(--space-m);
+      border-radius: var(--r-box);
+      background: var(--color-off-white);
+      color: var(--color-ink);
+      text-decoration: none;
+    }
+
+    .cards strong {
+      color: var(--color-hunter-green);
+      font-size: var(--step-1);
+    }
+
+    .example {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-s);
+      padding-top: var(--space-l);
+      border-top: 1px solid var(--color-line);
+    }
+
+    /* the live example sits in a frame that shows the page edge */
+    .live {
+      overflow: hidden;
+      border: 1px solid var(--color-line);
+      border-radius: var(--r-box);
+    }
+
+    .code summary,
+    .frames summary {
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .code :global(pre) {
+      margin-top: var(--space-xs);
+      padding: var(--space-s);
+      border-radius: var(--r-box);
+      font-size: 0.85rem;
+      overflow-x: auto;
+    }
+
+    .frame-row {
+      display: flex;
+      gap: var(--space-m);
+      overflow-x: auto;
+      padding-block: var(--space-s);
+    }
+
+    /* each frame shows the page at its true width, scaled to fit */
+    figure {
+      flex: none;
+      margin: 0;
+      --scale: 0.4;
+    }
+
+    .frame {
+      width: calc(var(--w) * var(--scale));
+      height: calc(var(--h) * var(--scale));
+      overflow: hidden;
+      border: 1px solid var(--color-line);
+      border-radius: var(--r-box);
+    }
+
+    .frame iframe {
+      width: var(--w);
+      height: var(--h);
+      border: 0;
+      transform: scale(var(--scale));
+      transform-origin: 0 0;
+    }
+
+    figcaption {
+      font-size: var(--step--1);
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--step--1);
+    }
+
+    th,
+    td {
+      padding: 0.5rem;
+      border-bottom: 1px solid var(--color-line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .prose :global(> * + *) {
+      margin-top: var(--space-s);
+    }
+
+    .prose :global(h2) {
+      margin-top: var(--space-l);
+    }
+
+    .prose :global(pre) {
+      padding: var(--space-s);
+      border-radius: var(--r-box);
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+
+    .prose :global(table) {
+      display: block;
+      overflow-x: auto;
+      border-collapse: collapse;
+      font-size: var(--step--1);
+    }
+
+    .prose :global(th),
+    .prose :global(td) {
+      padding: 0.4rem;
+      border-bottom: 1px solid var(--color-line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    @media (width >= 64rem) {
+      .catalog {
+        grid-template-columns: 15rem minmax(0, 1fr);
+      }
+
+      .side {
+        position: sticky;
+        top: calc(var(--header-h) + 1rem);
+        align-self: start;
+        max-height: calc(100vh - var(--header-h) - 2rem);
+        overflow-y: auto;
+      }
+
+      figure {
+        --scale: 0.5;
+      }
+    }
+  }
+</style>

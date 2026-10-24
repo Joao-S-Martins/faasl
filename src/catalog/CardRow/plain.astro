@@ -1,0 +1,35 @@
+---
+import CardRow from '../../components/blocks/CardRow.astro';
+---
+
+<CardRow label="Example cards" scroll="always">
+  <ul>
+    <li>
+      <div class="demo-card">Card one</div>
+    </li>
+    <li>
+      <div class="demo-card">Card two</div>
+    </li>
+    <li>
+      <div class="demo-card">Card three</div>
+    </li>
+    <li>
+      <div class="demo-card">Card four</div>
+    </li>
+    <li>
+      <div class="demo-card">Card five</div>
+    </li>
+  </ul>
+</CardRow>
+
+<style>
+  @layer components {
+    .demo-card {
+      height: 8rem;
+      padding: var(--space-m);
+      border-radius: var(--r-box);
+      background: var(--card-bg, var(--color-off-white));
+      color: var(--color-ink);
+    }
+  }
+</style>
