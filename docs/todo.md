@@ -134,14 +134,15 @@ Built in this order, each reviewed on a preview URL:
 - [x] 🤖 Home, Lessons, About, Join, Give, Impact, Contact, Events and event pages, Musicians, 404 on the design system
 - [x] 🤖 Print styles
 - [ ] 🧑 Page-by-page review on a phone (copy and layout), now that every page uses the final design
-- [ ] 🤝 Contact form service chosen and connected (the form is disabled until then)
+- [x] 🤖 Contact form: our own handler on Cloudflare (`worker/`), with Turnstile and a trap field; tested; checks run on beta, emails off until launch
+- [ ] 🧑 Try the beta contact form on your phone: it should land on "Thanks for your message"
 - [ ] 🤝 Donation provider chosen; Donate buttons point to it (Give page)
 - [ ] 🤖 Motion: hero video loop or slideshow, once there's footage (`brand.md`)
 
 ## Phase 5 — Pre-launch
 
 - [ ] 🧑 Confirm where faasl.org email lives and who controls the domain registration
-- [ ] 🤝 Contact form service set up and tested to info@faasl.org
+- [ ] 🤝 Contact form emails tested to info@faasl.org (at the DNS move, Phase 7)
 - [ ] 🤝 Cloudflare Web Analytics on
 - [ ] 🤖 Accessibility audit (WCAG 2.2 AA) and fixes
 - [ ] 🤖 SEO audit: titles, descriptions, structured data validation, sitemap, social share images
@@ -163,6 +164,7 @@ Built in this order, each reviewed on a preview URL:
 - [ ] 🤝 Add faasl.org to Cloudflare; **verify every DNS record (especially MX/TXT for email)** against the current host
 - [ ] 🤝 Switch nameservers; attach `www.faasl.org` (and redirect `faasl.org` → `www`); production branch → `main` (merge `v3`)
 - [ ] 🤝 Shortcut subdomain redirect rules live; run the redirect tests against production
+- [ ] 🤝 Switch on the contact form's email: Turnstile widget, Email Routing on `forms.faasl.org`, verify info@faasl.org, email binding (`deployment.md` §6b)
 - [ ] 🤖 Allow indexing (`robots.txt`), submit the sitemap
 - [ ] 🧑 Google Search Console + Bing Webmaster Tools verified
 - [ ] 🧑 Google Business Profile for the clubhouse

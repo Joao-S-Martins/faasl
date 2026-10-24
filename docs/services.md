@@ -1,6 +1,6 @@
 # FAASL.org v3: Contact form and donation services
 
-**Status:** comparison for a decision (Oct 2026). Prices and limits change; confirm on each service's own pricing page before signing up. Several sources below are comparison blogs written by competing services, noted where it matters.
+**Status:** contact form decided: ✅ **our own Cloudflare handler**, built Oct 2026 and switched on at launch (`deployment.md` §6b). Donations: comparison for a decision. Prices and limits change; confirm on each service's own pricing page before signing up. Several sources below are comparison blogs written by competing services, noted where it matters.
 Related: [`todo.md`](./todo.md) Phase 4 · [`brief.md`](./brief.md) §5 (budget $0/month, no server)
 
 ---
@@ -80,7 +80,7 @@ Whichever we pick:
 
 ## 3. Decisions needed
 
-1. **Contact form:** Web3Forms (recommended for working right away), our own Cloudflare handler (works from launch, no third party), Formspree, or a Google Form?
+1. ✅ **Contact form:** our own Cloudflare handler (owner, Oct 2026).
 2. **Donations:** Zeffy (recommended; free, with a tip prompt) or Givebutter (no prompt, about 3%)? This is likely a board conversation; a test donation on each helps.
 3. **Account owner:** the faasl.org address the accounts are created under.
 4. **On the Give page:** a link to the provider's page, or an embedded form?

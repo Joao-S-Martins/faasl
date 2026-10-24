@@ -6,7 +6,7 @@ import sitemap from '@astrojs/sitemap';
 import siteHeaders from './src/integrations/site-headers.mjs';
 
 // Pages that should never appear in the sitemap.
-const UNLISTED = ['/musicians', '/404', '/design'];
+const UNLISTED = ['/musicians', '/404', '/design', '/message-'];
 
 export default defineConfig({
   site: 'https://www.faasl.org',
@@ -24,6 +24,14 @@ export default defineConfig({
         access: 'public',
         values: ['development', 'beta', 'production'],
         default: 'development',
+      }),
+      // The contact form's Turnstile widget (docs/services.md §1). Public by
+      // design; set by the production deploy at launch. The default is
+      // Cloudflare's always-pass test key.
+      PUBLIC_TURNSTILE_SITE_KEY: envField.string({
+        context: 'client',
+        access: 'public',
+        default: '1x00000000000000000000AA',
       }),
     },
   },

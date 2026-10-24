@@ -1,30 +1,31 @@
 ---
-// Contact form. The form service isn't chosen yet (docs/todo.md), so the
-// form renders but doesn't send.
+// The contact form. A plain HTML form posted to our own handler on
+// Cloudflare (worker/contact.js), which checks it and emails it to
+// info@faasl.org; it answers with /message-sent or /message-not-sent.
+// Spam protection: Cloudflare Turnstile (an invisible check) and a hidden
+// field bots fill in. Emails are switched on at launch (docs/deployment.md).
+import { PUBLIC_TURNSTILE_SITE_KEY } from 'astro:env/client';
 import Todo from '../layout/Todo.astro';
-
-const topics = ['Lessons', 'Joining the band', 'Giving', 'Something else'];
-// Set once a form service is chosen.
-const action: string | undefined = undefined;
+import { TOPICS } from '../../../worker/contact.js';
 ---
 
-<form class="contact-form" method="post" action={action}>
-  {!action && <Todo block>choose a form service; this form doesn't send yet</Todo>}
+<form class="contact-form" method="post" action="/api/contact">
+  <Todo block>messages are checked but not emailed until launch (docs/deployment.md)</Todo>
   <p>
     <label for="name">
       Full name <span aria-hidden="true">*</span>
     </label>
-    <input id="name" name="name" autocomplete="name" required />
+    <input id="name" name="name" autocomplete="name" maxlength="100" required />
   </p>
   <p>
     <label for="email">
       Email <span aria-hidden="true">*</span>
     </label>
-    <input id="email" name="email" type="email" autocomplete="email" required />
+    <input id="email" name="email" type="email" autocomplete="email" maxlength="200" required />
   </p>
   <p>
     <label for="phone">Phone</label>
-    <input id="phone" name="phone" type="tel" autocomplete="tel" />
+    <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40" />
   </p>
   <fieldset>
     <legend>May we text this number?</legend>
@@ -41,7 +42,7 @@ const action: string | undefined = undefined;
     </label>
     <select id="topic" name="topic" required>
       <option value="">Choose one</option>
-      {topics.map((topic) => (
+      {TOPICS.map((topic) => (
         <option>{topic}</option>
       ))}
     </select>
@@ -50,15 +51,21 @@ const action: string | undefined = undefined;
     <label for="message">
       Message <span aria-hidden="true">*</span>
     </label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+    <textarea id="message" name="message" rows="6" maxlength="5000" required></textarea>
   </p>
+  {/* left empty by people; bots fill it in */}
+  <p class="trap" aria-hidden="true">
+    <label for="website">Leave this empty</label>
+    <input id="website" name="website" tabindex="-1" autocomplete="off" />
+  </p>
+  <div class="cf-turnstile" data-sitekey={PUBLIC_TURNSTILE_SITE_KEY} data-theme="light"></div>
   <p class="note">* Required</p>
   <p>
-    <button type="submit" disabled={!action}>
-      Send
-    </button>
+    <button type="submit">Send</button>
   </p>
 </form>
+{/* Turnstile, Cloudflare's privacy-friendly check, on this page only */}
+<script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <style>
   @layer components {
@@ -85,21 +92,23 @@ const action: string | undefined = undefined;
     textarea {
       width: 100%;
       padding: 0.5rem;
-      border: 1px solid #767676;
-      border-radius: 0.25rem;
+      border: 1px solid var(--color-ink);
+      border-radius: var(--r-control);
     }
 
     button {
-      padding: 0.625rem 1.125rem;
+      min-height: 44px;
+      padding: 0.5rem 1.25rem;
       border: 0;
-      border-radius: var(--radius);
+      border-radius: var(--r-control);
       background: var(--color-hunter-green);
       color: var(--color-white);
       font-weight: 700;
     }
 
-    button:disabled {
-      opacity: 0.6;
+    .trap {
+      position: absolute;
+      left: -9999px;
     }
 
     .note {

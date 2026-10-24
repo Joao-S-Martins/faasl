@@ -15,4 +15,9 @@ export default defineConfig(
     files: ['*.{js,mjs}', 'src/integrations/**/*.mjs', 'scripts/**/*.mjs'],
     languageOptions: { globals: globals.node },
   },
+  {
+    // The Worker runs on Cloudflare (web APIs); its tests run in Node.
+    files: ['worker/**/*.js'],
+    languageOptions: { globals: { ...globals.serviceworker, ...globals.node } },
+  },
 );

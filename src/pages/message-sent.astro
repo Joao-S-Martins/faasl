@@ -1,0 +1,23 @@
+---
+// Where the contact form lands after a message goes through
+// (worker/contact.js). Not in the sitemap or search.
+import PageLayout from '../layouts/PageLayout.astro';
+import Surface from '../components/blocks/Surface.astro';
+import Button from '../components/blocks/Button.astro';
+import ButtonRow from '../components/blocks/ButtonRow.astro';
+import Todo from '../components/layout/Todo.astro';
+---
+
+<PageLayout title="Message sent" description="Thanks for your message." noindex bare>
+  <Surface surface="tint" width="narrow">
+    <div class="stack">
+      <h1>Thanks for your message</h1>
+      <p class="lead">We'll get back to you soon, usually within a few days.</p>
+      <Todo block>on beta the message was checked but not emailed; email turns on at launch</Todo>
+      <ButtonRow>
+        <Button href="/">Back to the home page</Button>
+        <a href="/events">See what's coming up</a>
+      </ButtonRow>
+    </div>
+  </Surface>
+</PageLayout>

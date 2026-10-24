@@ -1,22 +1,51 @@
-// Cloudflare Workers config: two separate Workers serve the static build.
-// Deploys run from GitHub Actions only (see docs/deployment.md).
+// Cloudflare Workers config: the static build, plus a small Worker for the
+// contact form (worker/index.js). Static pages never run Worker code, so they
+// stay free and unlimited; only /api/* does. Deploys run from GitHub Actions
+// only (see docs/deployment.md).
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "faasl-dev",
+  "main": "./worker/index.js",
   "compatibility_date": "2026-10-01",
   "assets": {
     "directory": "./dist",
+    "binding": "ASSETS",
     "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"],
+  },
+  // The contact form (docs/services.md §1). Email stays off until launch.
+  "vars": {
+    "CONTACT_TO": "info@faasl.org",
+    "CONTACT_FROM": "website@forms.faasl.org",
+    "EMAIL_ENABLED": "false",
+    // Cloudflare's always-pass test secret until a real Turnstile widget exists
+    "TURNSTILE_TEST_MODE": "true",
   },
   "env": {
     "beta": {
       "name": "faasl-beta",
       "workers_dev": true,
+      "vars": {
+        "CONTACT_TO": "info@faasl.org",
+        "CONTACT_FROM": "website@forms.faasl.org",
+        "EMAIL_ENABLED": "false",
+        "TURNSTILE_TEST_MODE": "true",
+      },
     },
     "production": {
       "name": "faasl",
       // Served from www.faasl.org once DNS is on Cloudflare (Phase 7).
       "workers_dev": false,
+      // At launch (docs/deployment.md, Contact form): set EMAIL_ENABLED to
+      // "true", TURNSTILE_TEST_MODE to "false", add the TURNSTILE_SECRET
+      // secret, and add the email binding:
+      //   "send_email": [{ "name": "EMAIL", "destination_address": "info@faasl.org" }]
+      "vars": {
+        "CONTACT_TO": "info@faasl.org",
+        "CONTACT_FROM": "website@forms.faasl.org",
+        "EMAIL_ENABLED": "false",
+        "TURNSTILE_TEST_MODE": "false",
+      },
     },
   },
 }

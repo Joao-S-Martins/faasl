@@ -1,0 +1,30 @@
+---
+// Where the contact form lands when a message can't be sent
+// (worker/contact.js). Not in the sitemap or search.
+import PageLayout from '../layouts/PageLayout.astro';
+import Surface from '../components/blocks/Surface.astro';
+import Button from '../components/blocks/Button.astro';
+import ButtonRow from '../components/blocks/ButtonRow.astro';
+import { getSite } from '../lib/site';
+
+const site = await getSite();
+---
+
+<PageLayout title="Message not sent" description="Your message couldn't be sent." noindex bare>
+  <Surface surface="tint" width="narrow">
+    <div class="stack">
+      <h1>Sorry, your message wasn't sent</h1>
+      <p class="lead">
+        Please go back and check that every required field is filled in, then try again. The page
+        should still have what you wrote.
+      </p>
+      <p>
+        Still not working? Email us at <a href={`mailto:${site.email}`}>{site.email}</a> or call{' '}
+        <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a>.
+      </p>
+      <ButtonRow>
+        <Button href="/contact">Back to the contact page</Button>
+      </ButtonRow>
+    </div>
+  </Surface>
+</PageLayout>

@@ -159,6 +159,28 @@ weekly schedule (or "Refresh now" button)
 - **Until the design phase is done, beta keeps the sample events** (`npm run events:sample`) so designs have dinners, raffles, tentative and recurring events to show. The refresh workflow is built afterwards.
 - This environment can't reach Google Calendar, so the loader is tested with a sample feed here and for real in GitHub Actions.
 
+## 6b. Contact form (our own handler) — switch on at launch
+
+The form posts to `/api/contact`, handled by a small Worker (`worker/contact.js`, tests in `worker/contact.test.js`, `npm test`). It checks the fields, a hidden trap field and Cloudflare Turnstile, then emails info@faasl.org. Static pages never run this code (`run_worker_first: ["/api/*"]` in `wrangler.jsonc`), so they stay free.
+
+**Until launch** (beta and local): every check runs with Cloudflare's always-pass Turnstile test keys, and messages are logged instead of emailed (`EMAIL_ENABLED: "false"`). Visitors land on `/message-sent` or `/message-not-sent`.
+
+**At launch, once faasl.org's DNS is on Cloudflare** (Phase 7):
+1. **Turnstile widget:** Cloudflare dashboard → Turnstile → add a widget for `www.faasl.org` (free).
+   - Put the **site key** in the GitHub repository variable `PUBLIC_TURNSTILE_SITE_KEY` and pass it to the production build as an environment variable.
+   - Put the **secret** on the production Worker: `npx wrangler secret put TURNSTILE_SECRET --env production`. Never in the repo.
+2. **Email sending without touching Google Workspace mail:** turn on Email Routing for a **subdomain** (`forms.faasl.org`), not faasl.org itself, so the Google MX records stay as they are.
+   - Add **info@faasl.org** as a verified destination address; Cloudflare emails a confirmation link to that inbox.
+   - Before saving anything, compare the DNS records Cloudflare proposes against the current ones (brief §5: email must not break).
+3. **`wrangler.jsonc`, production:**
+   - add `"send_email": [{ "name": "EMAIL", "destination_address": "info@faasl.org" }]`
+   - set `EMAIL_ENABLED` to `"true"`
+   - keep `TURNSTILE_TEST_MODE` at `"false"`
+4. **Test:**
+   - Send a real message from www.faasl.org/contact. Check it arrives, that Reply goes to the sender, and that it doesn't land in spam.
+   - Send one with the trap field filled in (browser dev tools) and check it's refused.
+5. **If sending to our own verified address turns out to need a paid plan:** decide between $5/month Workers Paid or a free email API. Only the `send` function in `worker/index.js` changes.
+
 ## 7. Optional later: pull-request previews
 
 Each pull request can get its own temporary preview address (Workers "versions" upload without deploying), posted as a comment on the PR. Useful if others start contributing; not needed for v3.
