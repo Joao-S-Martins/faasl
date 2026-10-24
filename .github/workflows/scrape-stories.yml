@@ -39,9 +39,13 @@ jobs:
           console.log('=====HITS', hits.length);
           for (const h of hits) {
             console.log('=====HIT', h.url.slice(0, 200), h.type, h.t.length);
-            const clean = h.t.replace(/<[^>]+>/g, ' ').replace(/\\n|\\u[0-9a-f]{4}/gi, ' ');
-            const strs = [...clean.matchAll(/"([^"\\]{25,}(?:\\.[^"\\]*)*)"/g)].map((m) => m[1]).filter((x) => / \w+ \w+ /.test(x) && !/^https?:|^data:/.test(x));
-            console.log(strs.length ? [...new Set(strs)].join('\n---\n') : clean.slice(0, 20000));
+            if (/html/.test(h.type || '')) {
+              const q = await b.newPage();
+              await q.setContent(h.t.replace(/<script[\s\S]*?<\/script>/gi, ''), { waitUntil: 'domcontentloaded' }).catch(() => {});
+              console.log(await q.evaluate(() => document.body.innerText));
+              console.log('[alts]', (await q.evaluate(() => [...document.querySelectorAll('[alt],[title]')].map((e) => e.alt || e.title).filter(Boolean))).join(' | '));
+              await q.close();
+            } else console.log(h.t.slice(0, 3000));
           }
           console.log('=====END=====');
           await b.close();
