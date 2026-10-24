@@ -178,13 +178,7 @@ const stats = [
       <h2 class="center">Music in our community</h2>
       <StatGrid stats={stats} tone="dark" />
     </Band>
-    {d === 'c' ? (
-      <Band bg="field" narrow>
-        <div class="quote-box">
-          <Testimonial audience="musicians" />
-        </div>
-      </Band>
-    ) : (
+    {d === 'b' && (
       <PhotoBand
         image={together}
         alt="Musicians of different generations playing together"
@@ -207,6 +201,13 @@ const stats = [
         </Actions>
       </Feature>
     </Band>
+    {d === 'c' && (
+      <Band bg="field" narrow>
+        <div class="quote-box">
+          <Testimonial audience="musicians" />
+        </div>
+      </Band>
+    )}
     <section class="give-wall">
       <div class="wall">
         <TilePattern variant="checker" tile={96} height="100%" frame={false} center="x" />
@@ -305,7 +306,13 @@ const stats = [
     box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
   }
 
-  /* C: B's header over the photo, A's text box overlapping it */
+  /* C: B's header over the photo, A's text box overlapping it, on the
+     same green as the "I want to…" blocks below, so they read as one */
+  .hero.c {
+    padding-bottom: var(--space-m);
+    background: var(--color-hunter-green);
+  }
+
   .hero.c .hero-photo {
     height: clamp(20rem, 62svh, 38rem);
   }
@@ -425,11 +432,17 @@ const stats = [
     background: #2b473b;
   }
 
-  @media (min-width: 48rem) {
+  @media (min-width: 64rem) {
     .paths ul {
       grid-template-columns: repeat(3, 1fr);
     }
 
+    .paths a {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 64rem) {
     .hero.a .hero-text,
     .hero.c .hero-text {
       margin: -6rem 0 0 max(var(--gutter), (100% - var(--content-width)) / 2 + var(--gutter));
@@ -491,7 +504,7 @@ const stats = [
     margin-top: var(--space-s);
   }
 
-  @media (min-width: 48rem) {
+  @media (min-width: 64rem) {
     .give-wall {
       grid-template-columns: 1fr minmax(0, 36rem) var(--space-xl);
       height: 480px;

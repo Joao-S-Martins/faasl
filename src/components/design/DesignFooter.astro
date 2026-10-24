@@ -1,5 +1,5 @@
 ---
-// Design-phase footer: green, with the faint staff behind it.
+// Design-phase footer: plain green under a row of staff tiles.
 import TilePattern from '../TilePattern.astro';
 import Logo from '../Logo.astro';
 import { mainNav } from '../../lib/navigation';
@@ -11,15 +11,6 @@ const site = await getSite();
 <footer class="dfooter">
   <TilePattern variant="staff" tile={48} height="48px" frame={false} center="x" />
   <div class="body">
-    <div class="field">
-      <TilePattern
-        variant="field"
-        height="100%"
-        frame={false}
-        ink="var(--color-white)"
-        ground="var(--color-hunter-green)"
-      />
-    </div>
     <div class="inner">
       <div class="who">
         <Logo size={56} />
@@ -66,12 +57,6 @@ const site = await getSite();
     isolation: isolate;
     background: var(--color-hunter-green);
     color: var(--color-white);
-  }
-
-  .field {
-    position: absolute;
-    inset: 0;
-    z-index: -1;
   }
 
   .inner {

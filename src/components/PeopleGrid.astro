@@ -30,6 +30,13 @@ const people = (
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   }
 
+  /* From tablets up, narrower columns so a short row doesn't leave one card alone */
+  @media (min-width: 48rem) {
+    .scroll {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+  }
+
   @media (max-width: 47.99rem) {
     .scroll {
       grid-template-columns: none;

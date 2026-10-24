@@ -263,7 +263,12 @@ const steps = [
     box-shadow: 0 8px 24px rgb(0 0 0 / 0.12);
   }
 
-  /* C: B's header over the photo, A's text box overlapping it */
+  /* C: B's header over the photo, A's text box overlapping it, on the
+     same off-white as the section below, so they read as one */
+  .top.c {
+    background: var(--color-off-white);
+  }
+
   .top.c .top-photo {
     height: clamp(14rem, 45svh, 28rem);
   }
@@ -315,7 +320,7 @@ const steps = [
     font-weight: 600;
   }
 
-  @media (min-width: 48rem) {
+  @media (min-width: 64rem) {
     .top.a .top-text,
     .top.c .top-text {
       margin: -5rem 0 0 max(var(--gutter), (100% - var(--content-width)) / 2 + var(--gutter));

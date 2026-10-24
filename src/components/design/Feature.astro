@@ -75,7 +75,8 @@ const { image, alt, side = 'left', tone = 'white' } = Astro.props;
     margin-top: var(--space-s);
   }
 
-  @media (min-width: 48rem) {
+  /* Tablets keep the phone layout; the overlap needs desktop width */
+  @media (min-width: 64rem) {
     .feature {
       grid-template-columns: repeat(12, 1fr);
       align-items: center;
