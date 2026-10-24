@@ -60,7 +60,7 @@ const steps = [
     text: 'More challenging music and music theory. Many band volunteers use it to learn a second or third instrument.',
   },
   {
-    title: 'The band',
+    title: 'The volunteer band',
     text: 'Many of our musicians started in these classes. Our conductor, Geronimo, joined as a middle school student.',
   },
 ];
@@ -113,7 +113,7 @@ const steps = [
     Lessons are taught in small groups once a week, for {s.beginner.length}. They're comparable to,
     and a great complement to, many public school music programs.
   </p>
-  <ol class="steps">
+  <ol class:list={['steps', d]}>
     {steps.map(({ title, text }, i) => (
       <li>
         <span class="n" aria-hidden="true">
@@ -217,7 +217,7 @@ const steps = [
   </div>
 </Band>
 
-<Band bg={d === 'a' ? 'tint' : 'green'} narrow>
+<Band bg={d === 'a' ? 'tint' : d === 'c' ? 'field-green' : 'green'} narrow>
   <div class:list={['ready', d]}>
     <h2>Ready to start?</h2>
     <Testimonial audience="students" />
@@ -416,7 +416,9 @@ const steps = [
     margin-bottom: var(--space-xs);
   }
 
-  .b .steps li {
+  /* on a white section the class boxes need their own color */
+  .steps.b li:not(:last-child),
+  .steps.c li:not(:last-child) {
     background: var(--color-off-white);
   }
 

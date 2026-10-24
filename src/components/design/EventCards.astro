@@ -55,6 +55,8 @@ const month = (iso: string) =>
     padding: 0.25rem var(--gutter) var(--space-s);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    /* snap cards to the gutter, not the screen edge */
+    scroll-padding-inline: var(--gutter);
     list-style: none;
   }
 

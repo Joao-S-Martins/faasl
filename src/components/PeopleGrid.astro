@@ -7,7 +7,7 @@ import PersonCard from './PersonCard.astro';
 interface Props {
   role: 'leadership' | 'teacher' | 'conductor' | 'volunteer' | 'musician';
   compact?: boolean;
-  /** A sideways-scrolling row on phones; a grid from tablets up. */
+  /** A sideways-scrolling row on phones and tablets; a grid on desktop. */
   scroll?: boolean;
 }
 
@@ -30,23 +30,25 @@ const people = (
     grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
   }
 
-  /* From tablets up, narrower columns so a short row doesn't leave one card alone */
-  @media (min-width: 48rem) {
+  /* Desktop: narrower columns so a short row doesn't leave one card alone */
+  @media (min-width: 64rem) {
     .scroll {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
   }
 
-  @media (max-width: 47.99rem) {
+  @media (max-width: 63.99rem) {
     .scroll {
       grid-template-columns: none;
       grid-auto-flow: column;
-      grid-auto-columns: min(70%, 15rem);
+      grid-auto-columns: min(75%, 17rem);
       gap: var(--space-s);
       margin-inline: calc(var(--gutter) * -1);
       padding: 0.25rem var(--gutter) var(--space-s);
       overflow-x: auto;
       scroll-snap-type: x mandatory;
+      /* snap cards to the gutter, not the screen edge */
+      scroll-padding-inline: var(--gutter);
     }
 
     .scroll > :global(*) {
