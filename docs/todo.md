@@ -130,17 +130,13 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 ## Phase 4 — Build sections
 
 Built in this order, each reviewed on a preview URL:
-- [ ] 🤖 Global layout (header, nav, footer)
-- [ ] 🤖 Home
-- [ ] 🤖 Lessons
-- [ ] 🤖 About (leadership + teachers)
-- [ ] 🤖 Join
-- [ ] 🤖 Give
-- [ ] 🤖 Impact
-- [ ] 🤖 Contact (+ form service)
-- [ ] 🤖 Events (calendar loader)
-- [ ] 🤖 Musicians
-- [ ] 🤖 404 page, print styles
+- [x] 🤖 Global layout (header, nav, footer) (Oct 2026, design system)
+- [x] 🤖 Home, Lessons, About, Join, Give, Impact, Contact, Events and event pages, Musicians, 404 on the design system
+- [x] 🤖 Print styles
+- [ ] 🧑 Page-by-page review on a phone (copy and layout), now that every page uses the final design
+- [ ] 🤝 Contact form service chosen and connected (the form is disabled until then)
+- [ ] 🤝 Donation provider chosen; Donate buttons point to it (Give page)
+- [ ] 🤖 Motion: hero video loop or slideshow, once there's footage (`brand.md`)
 
 ## Phase 5 — Pre-launch
 
