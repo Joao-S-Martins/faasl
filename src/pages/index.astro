@@ -6,8 +6,8 @@ import GraduationCap from '@lucide/astro/icons/graduation-cap';
 import EighthNotes from '@lucide/astro/icons/eighth-notes';
 import HandHeart from '@lucide/astro/icons/hand-heart';
 import Users from '@lucide/astro/icons/users';
-import Flag from '@lucide/astro/icons/flag';
-import CalendarHeart from '@lucide/astro/icons/calendar-heart';
+import Drum from '@lucide/astro/icons/drum';
+import PartyPopper from '@lucide/astro/icons/party-popper';
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/blocks/Hero.astro';
 import PathLinks from '../components/blocks/PathLinks.astro';
@@ -99,7 +99,7 @@ const number = (text: string) => text.replace(/^about\s+/i, '');
     <StatGrid
       stats={[
         {
-          icon: CalendarHeart,
+          icon: PartyPopper,
           value: `${yearsSince(site.foundingYear)}`,
           label: `years of music, since ${site.foundingYear}`,
         },
@@ -110,7 +110,7 @@ const number = (text: string) => text.replace(/^about\s+/i, '');
           label: 'students per class each year',
         },
         {
-          icon: Flag,
+          icon: Drum,
           value: number(impact.paradesPerYear),
           label: `parades and ${number(impact.concertsPerYear)} concerts a year`,
         },
