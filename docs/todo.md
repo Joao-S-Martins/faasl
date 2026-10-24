@@ -186,8 +186,26 @@ Landscape, at least 2000px wide, people facing the camera or in action, subject 
 - [ ] Musicians and the 404 page don't need heroes
 - [ ] **Clubhouse photo** for "Visit us" on the home page: the outside of 844 Alvarado St., landscape, daytime, recognizable from the street
 
+### Lessons page 🧑
+- [ ] **Replace the instrument demo video:** the YouTube video is now private. Upload or pick a public one and update `demoVideoId` in `src/content/lessons.yaml`.
+- [ ] **Photo of the method book** (Standard of Excellence, Book 1, the red one) for "What you'll need"; our own photo of the book, not the publisher's cover image.
+- [ ] **Amazon link for the books, maybe with an affiliate tag:** an Amazon Associates account in the band's name pays a small commission. It requires a short disclosure on the page ("As an Amazon Associate we earn from qualifying purchases"). Decide whether it's worth it.
+- [ ] **Revisit the store list and map** (`src/content/stores.yaml` and the Google My Map): which stores families actually use now.
+- [ ] **Check the Google Calendar links:** on a phone, one link opened an empty calendar page and another downloaded an iCal file instead of showing the calendar. Fix the links, and maybe add a short page on adding our calendars to iPhone and Android.
+
+### Impact page 🧑
+- [ ] **More numbers:** the share of revenue that goes to programs rather than administration (from the 990: ProPublica lists 2024 revenue of about $92.9k and expenses of about $88.4k), and estimates of volunteer hours and hours of performances for the community each year.
+- [ ] **Board of directors:** names, roles and short bios. It's a different board from the leadership team shown on Home and About.
+- [ ] **Bios appear in too many places** (Home, About, and Impact before this pass): decide where bios live and where only names and photos show.
+
 ### Quotes 🧑
+- [ ] **More member quotes:** only Aubury's is in the site; the other good ones are on the old stories page (stories.faasl.org, an Adobe Express page I can't reach from here). Paste them in, or send the page text, and I'll add each as a story (`src/content/stories/`). Each page then picks a different quote.
 - [ ] **A student or family quote** for "Ready to start?" on Lessons (Home already uses Aubury's)
+- [ ] **Another musician quote** for Join (Home uses Aubury's)
+- [ ] **Ryan, the San Leandro High School band director:** the difference he sees in students who take part (Impact)
+- [ ] **A family quote about tradition** (Impact or About)
+- [ ] **A quote about bonding** in the band (Impact or Join)
+- [ ] **A donor quote** for Give
 
 ### New headshots 🧑
 - [ ] Lorenza D.L.G. Tomaz (President of the Board)
@@ -225,7 +243,7 @@ Every `*.faasl.org` shortcut in `content.md` §7 must keep working.
 ### Proof assets for funders & talent (`strategy.md` §6) 🧑
 - [x] Yearly numbers: 35+ band musicians; 2 classes of 12+ regulars (about 20 each per year); about 12 parades and 6 concerts
 - [ ] Annual report or financial summary; IRS determination letter; recent Form 990
-- [ ] Prices for the Give page's "What your gift does": sheet music for a new piece (whole band), band dinner after rehearsal, a typical instrument repair, a uniform, carpool support for a performance
+- [ ] **Review the gift amounts** on Give ("What your gift does"). Test amounts in place (Oct 2026): uniform $500, instrument repair $250, band dinner $150, sheet music $100, carpools $50
 
 ### Musicians page 🧑 (`content.md` §6b)
 - [ ] Current emergency contact / medical form (blank)

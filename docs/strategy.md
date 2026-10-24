@@ -90,7 +90,7 @@ No sponsorship program exists yet. Defining the program and its tiers is v3.1 wo
 - `Organization` structured data so search engines and funders see consistent facts
 
 ### Local search
-Target San Leandro and neighboring cities: **Castro Valley, San Lorenzo, Hayward, Oakland**. They're listed in the organization's structured data (`areaServed`) and should appear naturally in page copy (Lessons, Join, Impact "Who we serve").
+Target San Leandro and neighboring cities: **Castro Valley, San Lorenzo, Hayward, Oakland, Alameda, Union City, Newark, Dublin, Pleasanton, San Ramon** (the last six added Oct 2026). They're listed in the organization's structured data (`areaServed`) and should appear naturally in page copy (Lessons, Join, Impact "Who we serve").
 
 ## 5. Domains & subdomains
 

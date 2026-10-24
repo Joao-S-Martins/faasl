@@ -29,6 +29,7 @@ const site = defineCollection({
     }),
     // Cities we serve, for local search (structured data and page copy).
     areaServed: z.array(z.string()),
+    classification: z.string(),
     social: z.array(z.object({ name: z.string(), handle: z.string().optional(), url: z.url() })),
   }),
 });
@@ -141,6 +142,7 @@ const lessons = defineCollection({
     cost: z.string(),
     minimumAge: z.number().int(),
     methodBook: z.object({ title: z.string(), note: z.string() }),
+    intermediateBook: z.object({ title: z.string(), color: z.string() }),
     accessories: z.array(z.object({ instruments: z.string(), items: z.string() })),
     demoVideoId: z.string(),
     remind: z.object({ url: z.url(), instructions: z.string() }).optional(),

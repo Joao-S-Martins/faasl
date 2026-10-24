@@ -13,6 +13,7 @@ import StepRow from '../components/blocks/StepRow.astro';
 import TileBand from '../components/blocks/TileBand.astro';
 import MediaFeature from '../components/blocks/MediaFeature.astro';
 import QuoteBox from '../components/blocks/QuoteBox.astro';
+import Quote from '../components/blocks/Quote.astro';
 import Accordion from '../components/blocks/Accordion.astro';
 import Button from '../components/blocks/Button.astro';
 import ButtonRow from '../components/blocks/ButtonRow.astro';
@@ -133,12 +134,11 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
           <li>Common scales, musical keys and notation</li>
           <li>Musical etiquette, and how to practice at home</li>
         </ul>
-        <figure class="practice">
-          <blockquote>
+        <div class="practice">
+          <Quote by="Every successful musician, ever!">
             <p>Building a regular practice routine at home is the key to succeeding in music.</p>
-          </blockquote>
-          <figcaption>— Every successful musician, ever!</figcaption>
-        </figure>
+          </Quote>
+        </div>
       </div>
     </QuoteBox>
   </Surface>
@@ -149,6 +149,10 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
       percussion, but not strings or piano. Tap an instrument to see and hear it. ★ marks the most
       common choices for beginners.
     </p>
+    <Todo block>
+      the demo video is now private on YouTube: replace it with a public one and update demoVideoId
+      in src/content/lessons.yaml (docs/todo.md)
+    </Todo>
     <InstrumentPicker client:visible videoId={program.demoVideoId} instruments={instruments} />
   </Surface>
 
@@ -156,7 +160,10 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
     <Accordion>
       <details>
         <summary>What you'll need</summary>
-        <p>Each student needs their own instrument and method book.</p>
+        <p>Each beginning student needs their own instrument and method book.</p>
+        <Todo block>
+          a photo of the method book here, and possibly an Amazon affiliate link (docs/todo.md)
+        </Todo>
         <ul>
           <li>
             <strong>Method book:</strong> <cite>{program.methodBook.title}</cite> (the red one).{' '}
@@ -168,9 +175,14 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
             </li>
           ))}
         </ul>
+        <p>
+          Each intermediate student needs <cite>{program.intermediateBook.title}</cite> (the{' '}
+          {program.intermediateBook.color} one).
+        </p>
       </details>
       <details>
         <summary>Where to rent or buy</summary>
+        <Todo block>revisit the store list and map (docs/todo.md)</Todo>
         <p>Our musicians have been happy with these local shops:</p>
         <StoreList kind="local" />
         <MapEmbed
@@ -243,8 +255,6 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
 
     .practice {
       margin-top: var(--space-m);
-      font-size: var(--step-1);
-      font-style: italic;
     }
   }
 </style>

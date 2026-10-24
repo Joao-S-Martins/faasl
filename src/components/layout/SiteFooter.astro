@@ -6,11 +6,11 @@ import TilePattern from '../patterns/TilePattern.astro';
 import Logo from '../patterns/Logo.astro';
 import Address from '../content/Address.astro';
 import SocialLinks from '../content/SocialLinks.astro';
-import Todo from './Todo.astro';
 import { mainNav } from '../../lib/navigation';
 import { getSite } from '../../lib/site';
 
 const site = await getSite();
+// The end year is the year the site was built, so it stays current.
 const year = new Date().getFullYear();
 ---
 
@@ -57,10 +57,7 @@ const year = new Date().getFullYear();
       </section>
     </div>
     <div class="bottom">
-      <p class="copyright">
-        {`© 2007–${year} ${site.legalName}. All rights reserved.`}
-        <Todo>confirm copyright and license wording (docs/brief.md §5.2)</Todo>
-      </p>
+      <p class="copyright">{`© 2007–${year} ${site.legalName}. All rights reserved.`}</p>
     </div>
   </div>
 </footer>

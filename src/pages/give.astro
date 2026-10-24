@@ -8,18 +8,56 @@ import EventList from '../components/content/EventList.astro';
 import CalendarLink from '../components/content/CalendarLink.astro';
 import Testimonial from '../components/content/Testimonial.astro';
 import Todo from '../components/layout/Todo.astro';
+import LinkMore from '../components/blocks/LinkMore.astro';
+import Drum from '@lucide/astro/icons/drum';
+import Ticket from '@lucide/astro/icons/ticket';
+import HandHelping from '@lucide/astro/icons/hand-helping';
+import Share2 from '@lucide/astro/icons/share-2';
 import { getSite, isProduction } from '../lib/site';
 
 const site = await getSite();
 // TODO: prices (docs/todo.md). Items without a price are hidden in production.
+// Test amounts for now (owner, Oct 2026); review in docs/todo.md. Shown
+// highest first.
 const gifts: { price?: number; does: string }[] = [
-  { does: 'buys sheet music for a new piece for the whole band' },
-  { does: 'feeds the band dinner after rehearsal' },
-  { does: 'covers a typical instrument repair' },
-  { does: 'outfits a musician in our uniform' },
-  { does: 'supports the carpools that get our musicians to performances' },
-];
+  { price: 500, does: 'outfits a musician in our uniform' },
+  { price: 250, does: 'covers a typical instrument repair' },
+  { price: 150, does: 'feeds the band dinner after rehearsal' },
+  { price: 100, does: 'buys sheet music for a new piece for the whole band' },
+  { price: 50, does: 'supports the carpools that get our musicians to performances' },
+].sort((a, b) => (b.price ?? 0) - (a.price ?? 0));
 const shownGifts = gifts.filter((gift) => gift.price || !isProduction);
+
+const ways = [
+  {
+    icon: Drum,
+    title: 'Donate an instrument',
+    text: "Have one you no longer play? We'd love to put it back to work.",
+    href: '/contact',
+    link: 'Tell us about it',
+  },
+  {
+    icon: Ticket,
+    title: 'Come hear us play',
+    text: 'Parades, festivals, concerts and dinners all year round.',
+    href: '/events',
+    link: "See what's coming up",
+  },
+  {
+    icon: HandHelping,
+    title: 'Volunteer',
+    text: 'Share your time and skills, on stage or behind the scenes.',
+    href: '/about#get-involved',
+    link: 'Get involved',
+  },
+  {
+    icon: Share2,
+    title: 'Spread the word',
+    text: 'Follow us and share our events with your friends.',
+    href: '/contact#follow-us',
+    link: 'Follow us',
+  },
+];
 ---
 
 <PageLayout
@@ -54,10 +92,12 @@ const shownGifts = gifts.filter((gift) => gift.price || !isProduction);
   {shownGifts.length > 0 && (
     <Surface title="What your gift does">
       <div class="stack">
-        <ul>
+        <Todo block>test amounts: review the gift amounts (docs/todo.md)</Todo>
+        <ul class="gifts">
           {shownGifts.map((gift) => (
             <li>
-              <strong>{gift.price ? `$${gift.price}` : <Todo>price</Todo>}</strong> {gift.does}
+              <strong>{gift.price ? `$${gift.price}` : <Todo>price</Todo>}</strong>
+              <span>{gift.does}</span>
             </li>
           ))}
         </ul>
@@ -104,32 +144,25 @@ const shownGifts = gifts.filter((gift) => gift.price || !isProduction);
   </Surface>
 
   <Surface title="Other ways to help">
-    <div class="stack">
-      <ul>
+    <ul class="ways">
+      {ways.map(({ icon: Icon, title, text, href, link }) => (
         <li>
-          <strong>Donate an instrument</strong> you no longer play, and we'll put it back to work
+          <Icon size={36} stroke-width={1.5} aria-hidden="true" />
+          <h3>{title}</h3>
+          <p>{text}</p>
+          <LinkMore href={href}>{link}</LinkMore>
         </li>
-        <li>
-          <strong>Come hear us play</strong> at a parade, festival or concert (
-          <a href="/events">events</a>)
-        </li>
-        <li>
-          <strong>Volunteer</strong> your time and skills (
-          <a href="/about#get-involved">get involved</a>)
-        </li>
-        <li>
-          <strong>Spread the word:</strong> follow us and share our events
-        </li>
-      </ul>
-    </div>
+      ))}
+    </ul>
   </Surface>
 
   <Surface title="For businesses" surface="tint">
     <div class="stack">
       <p>
         Many employers match their employees' charitable gifts, often doubling them. Ask your HR or
-        giving program whether the Portuguese Band of San Leandro qualifies. Interested in
-        supporting us as a business?
+        giving program whether we qualify. Our registered name is the{' '}
+        <strong>{site.legalName}</strong>, a 501(c)(3) nonprofit (EIN {site.ein}), classified as{' '}
+        {site.classification}. Interested in supporting us as a business?
       </p>
       <ButtonRow>
         <Button href="/contact">Contact us</Button>
@@ -147,3 +180,59 @@ const shownGifts = gifts.filter((gift) => gift.price || !isProduction);
     </div>
   </Surface>
 </PageLayout>
+
+<style>
+  @layer components {
+    .gifts {
+      display: grid;
+      gap: var(--space-s);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .gifts li {
+      display: grid;
+      grid-template-columns: 5.5rem 1fr;
+      align-items: baseline;
+      gap: var(--space-s);
+    }
+
+    .gifts strong {
+      font-family: var(--font-heading);
+      font-size: var(--step-3);
+      line-height: 1;
+      color: var(--heading);
+    }
+
+    .ways {
+      display: grid;
+      gap: var(--space-l) var(--space-m);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .ways li {
+      display: grid;
+      align-content: start;
+      gap: var(--space-xs);
+    }
+
+    .ways :global(svg:first-child) {
+      color: var(--heading);
+    }
+
+    @media (width >= 40rem) {
+      .ways {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (width >= 64rem) {
+      .ways {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+  }
+</style>

@@ -85,6 +85,13 @@ const Tag = title ? 'section' : 'div';
       padding-block: var(--space-section);
     }
 
+    /* Right under a Hero, half the usual gap between the title box and the
+       first line (owner review, Oct 2026): the Hero's own bottom padding
+       plus this make up the gap. */
+    :global(.hero) + .surface {
+      padding-top: calc((var(--space-m) + var(--space-section)) / 2 - var(--space-m));
+    }
+
     .plain {
       background: var(--color-white);
     }

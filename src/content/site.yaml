@@ -22,7 +22,20 @@ faasl:
     city: San Leandro
     region: CA
     postalCode: '94577'
-  areaServed: [San Leandro, Castro Valley, San Lorenzo, Hayward, Oakland]
+  areaServed:
+    - San Leandro
+    - Castro Valley
+    - San Lorenzo
+    - Hayward
+    - Oakland
+    - Alameda
+    - Union City
+    - Newark
+    - Dublin
+    - Pleasanton
+    - San Ramon
+  # The IRS classification (NTEE code), from the band's GuideStar profile.
+  classification: 'Arts, Culture and Humanities: Music (NTEE A68)'
   social:
     - name: Facebook
       handle: '@the.faasl'

@@ -7,6 +7,10 @@ program:
   methodBook:
     title: Standard of Excellence, Book 1
     note: Buy the version written for your chosen instrument.
+  # For students in the intermediate class.
+  intermediateBook:
+    title: Standard of Excellence, Book 2
+    color: blue
   accessories:
     - { instruments: Most woodwinds, items: 'Extra reeds (size 2.5), a swab and cork grease' }
     - { instruments: Flutes, items: Cleaning cloth or swab }

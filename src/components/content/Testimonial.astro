@@ -1,44 +1,37 @@
 ---
-// A pull quote from a member story, picked for an audience.
+// A pull quote from a member story, picked for an audience. Pages that share
+// an audience pick different stories (`pick`), so a quote isn't repeated
+// around the site; until there are enough stories, beta shows a TODO.
 import { getCollection } from 'astro:content';
 import { isVisible } from '../../lib/site';
 import Todo from '../layout/Todo.astro';
+import Quote from '../blocks/Quote.astro';
 
 type Audience = 'students' | 'families' | 'musicians' | 'donors' | 'funders';
 
 interface Props {
   audience: Audience;
+  /** Which of the matching stories (0 = first), so pages don't repeat one. */
+  pick?: number;
 }
 
-const { audience } = Astro.props;
-const [story] = await getCollection(
-  'stories',
-  (entry) => isVisible(entry) && entry.data.audiences.includes(audience),
-);
+const { audience, pick = 0 } = Astro.props;
+const stories = (
+  await getCollection(
+    'stories',
+    (entry) => isVisible(entry) && entry.data.audiences.includes(audience),
+  )
+).sort((a, b) => a.id.localeCompare(b.id));
+const story = stories[pick];
 ---
 
 {story ? (
-  <figure class="testimonial">
-    <blockquote>
-      <p>“{story.data.quote}”</p>
-    </blockquote>
-    <figcaption>— {story.data.name}</figcaption>
-  </figure>
+  <Quote by={story.data.name}>
+    <p>“{story.data.quote}”</p>
+  </Quote>
 ) : (
-  <Todo block>a quote for {audience} (from the new member stories)</Todo>
+  <Todo block>
+    {pick > 0 ? 'another' : 'a'} quote for {audience} (from the new member stories; docs/todo.md,
+    Quotes)
+  </Todo>
 )}
-
-<style>
-  @layer components {
-    .testimonial {
-      margin: 0;
-      padding-left: var(--space-s);
-      border-left: 4px solid var(--color-accent);
-    }
-
-    blockquote {
-      margin: 0;
-      font-size: var(--step-1);
-    }
-  }
-</style>

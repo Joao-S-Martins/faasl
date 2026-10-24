@@ -153,7 +153,8 @@ You already have a consent form, so **no new form is needed for the website.** T
 - The current site has **two different statements**:
   - Footer: "© 2007–{year} Filarmónica Artista Amadora de San Leandro. All rights reserved."
   - README / `LICENSE.md`: "FAASL.org by **FAASL Volunteers**", licensed CC BY-NC-SA 4.0 (and `www/package.json` says CC-BY-NC-ND-4.0)
-- ❓ Decide who the site's content and code belong to, and state it consistently. 💡 Common pattern: **content and photos © the organization** (footer), **site code** under your name or an open-source license in `LICENSE.md`. Worth a quick conversation with the board; this isn't legal advice.
+- ✅ **Decided (Oct 2026):** the footer reads "© 2007–{current year} Filarmónica Artista Amadora de San Leandro. All rights reserved."; the end year is filled in when the site builds.
+- ❓ The code's license in `LICENSE.md` (older wording says FAASL Volunteers) can be settled later. 💡 Common pattern: **content and photos © the organization** (footer), **site code** under your name or an open-source license in `LICENSE.md`. Worth a quick conversation with the board; this isn't legal advice.
 
 ### 5.3 Brand colors
 

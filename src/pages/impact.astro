@@ -4,7 +4,6 @@ import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
 import DetailList from '../components/blocks/DetailList.astro';
-import PeopleList from '../components/content/PeopleList.astro';
 import Todo from '../components/layout/Todo.astro';
 import { getSite, yearsSince } from '../lib/site';
 
@@ -61,6 +60,15 @@ const cities = site.areaServed.join(', ');
           { term: 'Where', detail: cities },
         ]}
       />
+      <Todo block>
+        more numbers: the share of revenue that goes to programs rather than administration, and
+        estimates of volunteer hours and hours of performances for the community each year
+        (docs/todo.md)
+      </Todo>
+      <Todo block>
+        quotes: Ryan, the San Leandro High School band director, on the difference he sees in
+        students who take part; a family on tradition; someone on the bonds the band builds
+      </Todo>
     </div>
   </Surface>
 
@@ -105,14 +113,10 @@ const cities = site.areaServed.join(', ');
         The band is governed by a volunteer board of directors. Board members aren't paid; our funds
         go to our building and our musical needs.
       </p>
-      <PeopleList
-        role="leadership"
-        compact
-        layout="row"
-        well
-        label="Board and leadership, scrolls sideways"
-      />
-      <Todo block>full board list with roles; research fund use before adding claims</Todo>
+      <Todo block>
+        the board of directors (a different board from the leadership team on Home and About), with
+        names, roles and short bios; research fund use before adding claims (docs/todo.md)
+      </Todo>
     </div>
   </Surface>
 

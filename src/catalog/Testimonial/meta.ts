@@ -12,6 +12,12 @@ export default defineMeta(Testimonial, {
       values: 'students · families · musicians · donors · funders',
       description: 'Who the quote should speak to.',
     },
+    pick: {
+      values: 'number',
+      default: '0',
+      description: "Which of the matching stories, so two pages don't repeat the same quote.",
+    },
   },
+  notes: ['Uses the Quote block, so every quote on the site looks the same.'],
   examples: [{ file: 'default', title: 'Default' }],
 });
