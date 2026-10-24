@@ -15,7 +15,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "verify": "npm run check && npm run lint && npm run format:check && npm run build",
+    "verify": "npm run check && npm run lint && npm run format:check && npm run build && npm run check:seo",
+    "check:seo": "node scripts/check-canonicals.mjs",
     "events": "node scripts/fetch-events.mjs",
     "events:sample": "node scripts/fetch-events.mjs --sample",
     "events:report": "node scripts/fetch-events.mjs --report"

@@ -1,5 +1,5 @@
 ---
-import { isProduction, getSite } from '../lib/site';
+import { isProduction, getSite, publicPath } from '../lib/site';
 
 interface Props {
   title: string;
@@ -15,7 +15,7 @@ const { title, description, noindex = false, image = '/share.png' } = Astro.prop
 const site = await getSite();
 
 const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
-const canonical = new URL(Astro.url.pathname, Astro.site);
+const canonical = new URL(publicPath(Astro.url.pathname), Astro.site);
 const imageUrl = new URL(image, Astro.site);
 const robots = noindex || !isProduction ? 'noindex, nofollow' : 'index, follow';
 

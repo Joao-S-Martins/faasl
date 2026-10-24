@@ -1,10 +1,10 @@
 ---
 import { mainNav } from '../../lib/navigation';
-import { getSite } from '../../lib/site';
+import { getSite, publicPath } from '../../lib/site';
 import logo from '../../assets/logo.svg';
 
 const site = await getSite();
-const current = Astro.url.pathname;
+const current = publicPath(Astro.url.pathname);
 ---
 
 <header class="site-header">

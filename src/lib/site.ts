@@ -22,3 +22,12 @@ export function isVisible({ data }: { data: { draft?: boolean } }) {
 export function yearsSince(year: number, now = new Date()) {
   return now.getFullYear() - year;
 }
+
+/**
+ * A page's public path. Pages are built as files (`/lessons.html`) but served
+ * without the extension (`/lessons`, `/`), which is what canonical links, the
+ * sitemap and current-page checks must use.
+ */
+export function publicPath(pathname: string) {
+  return pathname.replace(/(?:\/index)?\.html$/, '').replace(/^$/, '/') || '/';
+}

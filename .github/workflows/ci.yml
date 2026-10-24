@@ -32,6 +32,7 @@ jobs:
       - run: npm run build
         env:
           SITE_ENV: ${{ inputs.site-env || 'development' }}
+      - run: npm run check:seo
 
   # Runs the live Google Calendar pipeline end to end: summarizes every
   # calendar, writes events.json from the live feeds, builds the site and lists
