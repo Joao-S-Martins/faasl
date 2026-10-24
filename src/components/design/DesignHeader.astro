@@ -126,6 +126,11 @@ const nav = mainNav.map((item) =>
     font-size: 1.6rem;
   }
 
+  /* The compact bar gets a thin gold edge, like uniform trim */
+  :global(html:not([data-hero='in'])) .dheader {
+    box-shadow: 0 2px 0 var(--color-gold);
+  }
+
   .over-photo {
     background: var(--color-hunter-green);
     color: var(--color-white);
