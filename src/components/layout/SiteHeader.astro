@@ -1,19 +1,35 @@
 ---
+// The site header (docs/design-system.md §5). Fixed, so changing size never
+// moves the page. On pages that open on a landing photo it starts large and
+// see-through over the photo (a dark fade keeps the text at 4.5:1), then
+// becomes a compact green bar with a gold edge once the photo scrolls away.
+// Phones and tablets get a menu button (<details>, works without
+// JavaScript); desktops the full menu.
+import Menu from '@lucide/astro/icons/menu';
 import { mainNav } from '../../lib/navigation';
 import { getSite, publicPath } from '../../lib/site';
-import logo from '../../assets/logo.svg';
+import Logo from '../Logo.astro';
 
 const site = await getSite();
 const current = publicPath(Astro.url.pathname);
+const [first, ...rest] = site.name.split(' of ');
+// Menu groups on phones: what people come to do, then about us
+const groups = [
+  mainNav.filter(({ href }) => ['/lessons', '/join', '/events'].includes(href)),
+  mainNav.filter(({ href }) => !['/lessons', '/join', '/events'].includes(href)),
+];
 ---
 
-<header class="site-header">
-  <div class="container bar">
+<header class="site-header" data-on="dark">
+  <div class="bar">
     <a class="brand" href="/">
-      <img src={logo.src} alt="" width="40" height="40" />
-      <span>{site.name}</span>
+      <Logo size={64} />
+      <span class="name">
+        <span>{first}</span>
+        {rest.length > 0 && <span>of {rest.join(' of ')}</span>}
+      </span>
     </a>
-    <nav aria-label="Main">
+    <nav aria-label="Main" class="wide-nav">
       <ul>
         {mainNav.map(({ href, label }) => (
           <li>
@@ -24,51 +40,246 @@ const current = publicPath(Astro.url.pathname);
         ))}
       </ul>
     </nav>
-    <a class="donate" href="/give">
-      Donate
-    </a>
+    <details class="menu">
+      <summary aria-label="Menu">
+        <Menu size={28} aria-hidden="true" />
+      </summary>
+      <nav aria-label="Main" class="menu-panel" data-on="light">
+        {groups.map((group) => (
+          <ul>
+            {group.map(({ href, label }) => (
+              <li>
+                <a href={href} aria-current={current === href ? 'page' : undefined}>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ))}
+        <a class="menu-donate" href="/give">
+          Donate
+        </a>
+      </nav>
+    </details>
   </div>
 </header>
 
+<script>
+  // The menu also closes on Escape (focus returns to the button), on a tap
+  // outside it and on choosing a link. Without JavaScript it still opens and
+  // closes with its button.
+  const menu = document.querySelector<HTMLDetailsElement>('.site-header .menu');
+  if (menu) {
+    const close = (focus = false) => {
+      menu.open = false;
+      if (focus) menu.querySelector('summary')?.focus();
+    };
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && menu.open) close(true);
+    });
+    document.addEventListener('click', (e) => {
+      if (menu.open && !menu.contains(e.target as Node)) close();
+    });
+    menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => close()));
+  }
+
+  // On pages with a landing photo ([data-landing]), the header stays large
+  // until only the bottom 15% of the photo is left on screen.
+  const landing = document.querySelector('[data-landing]');
+  const root = document.documentElement;
+  if (landing && root.dataset.hero) {
+    new IntersectionObserver(
+      ([entry]) => {
+        root.dataset.hero = entry.isIntersecting ? 'in' : 'out';
+      },
+      { rootMargin: '0px 0px -85% 0px' },
+    ).observe(landing);
+  }
+</script>
+
 <style>
-  .site-header {
-    border-bottom: 1px solid #ddd;
-  }
+  @layer components {
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 20;
+      background: var(--color-hunter-green);
+      box-shadow: 0 2px 0 var(--color-gold);
+      transition: background-color var(--duration-fast);
+    }
 
-  .bar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: var(--space-xs) var(--space-m);
-    padding-block: var(--space-s);
-  }
+    .bar {
+      display: flex;
+      align-items: center;
+      gap: var(--space-m);
+      max-width: var(--content-width);
+      min-height: var(--header-h);
+      margin-inline: auto;
+      padding: 0.5rem var(--gutter);
+      transition: min-height var(--duration-fast);
+    }
 
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: var(--space-xs);
-    font-weight: 700;
-    text-decoration: none;
-  }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-right: auto;
+      color: var(--text);
+      text-decoration: none;
+    }
 
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs) var(--space-s);
-    padding: 0;
-    list-style: none;
-  }
+    .brand :global(.logo) {
+      color: var(--color-gold);
+    }
 
-  [aria-current='page'] {
-    font-weight: 700;
-  }
+    .brand :global(svg) {
+      width: 40px;
+      height: 40px;
+      transition:
+        width var(--duration-fast),
+        height var(--duration-fast);
+    }
 
-  .donate {
-    padding: 0.375rem 0.875rem;
-    border-radius: var(--radius);
-    background: var(--color-hunter-green);
-    color: var(--color-white);
-    font-weight: 700;
-    text-decoration: none;
+    /* Two halves that wrap as whole phrases: "Portuguese Band / of San Leandro" */
+    .name {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.05;
+      transition: font-size var(--duration-fast);
+    }
+
+    .name > span {
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .name > span + span {
+      margin-left: 0.25em;
+    }
+
+    /* Large and see-through over the landing photo, on screens tall enough
+       for it. The fade is at least 60% black behind all the text, so white
+       text stays at 4.5:1 over any photo. */
+    @media (min-height: 31.25rem) {
+      :global([data-hero='in']) .site-header {
+        background: linear-gradient(rgb(0 0 0 / 0.7), rgb(0 0 0 / 0.6));
+        box-shadow: none;
+      }
+
+      :global([data-hero='in']) .site-header::after {
+        content: '';
+        position: absolute;
+        inset: 100% 0 auto;
+        height: 3rem;
+        background: linear-gradient(rgb(0 0 0 / 0.6), transparent);
+        pointer-events: none;
+      }
+
+      :global([data-hero='in']) .bar {
+        min-height: var(--header-h-large);
+      }
+
+      :global([data-hero='in']) .brand :global(svg) {
+        width: 64px;
+        height: 64px;
+      }
+
+      :global([data-hero='in']) .name {
+        font-size: 1.6rem;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .wide-nav {
+      display: none;
+    }
+
+    .wide-nav ul {
+      display: flex;
+      gap: var(--space-xs);
+    }
+
+    /* 44px tall tap targets */
+    .wide-nav a {
+      display: block;
+      padding: 0.6rem 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .wide-nav a:hover,
+    .wide-nav [aria-current='page'] {
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+    }
+
+    .menu summary {
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      color: var(--text);
+      list-style: none;
+      cursor: pointer;
+    }
+
+    .menu summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .menu-panel {
+      position: absolute;
+      inset: 100% 0 auto;
+      display: grid;
+      gap: var(--space-s);
+      max-height: calc(100dvh - var(--header-h));
+      overflow-y: auto;
+      padding: var(--space-s) var(--gutter) var(--space-m);
+      background: var(--color-white);
+      box-shadow: var(--shadow-float);
+    }
+
+    .menu-panel ul + ul {
+      padding-top: var(--space-s);
+      border-top: 2px solid var(--color-off-white);
+    }
+
+    .menu-panel li a {
+      display: block;
+      padding: 0.6rem 0;
+      font-size: var(--step-1);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .menu-panel [aria-current='page'] {
+      text-decoration: underline;
+    }
+
+    .menu-donate {
+      justify-self: start;
+      padding: 0.625rem 1.5rem;
+      border-radius: var(--r-control);
+      background: var(--color-hunter-green);
+      color: var(--color-white);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (width >= 64rem) {
+      .wide-nav {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+      }
+    }
   }
 </style>

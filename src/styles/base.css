@@ -1,0 +1,136 @@
+/*
+ * Reset and element defaults, plus the contrast context
+ * (docs/design-system.md §1). The layer order is declared in BaseLayout.
+ */
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    /* anchors, skip links and focused items clear the fixed header and the
+       floating Donate button */
+    scroll-padding-top: calc(var(--header-h) + 1rem);
+    scroll-padding-bottom: 4rem;
+  }
+
+  img,
+  picture,
+  svg,
+  video,
+  iframe {
+    display: block;
+    max-width: 100%;
+  }
+
+  img {
+    height: auto;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer base {
+  /* The contrast context. Anything that paints a background sets
+     data-on="light" or "dark"; these inherited properties then color its
+     text, headings, links and focus rings, and the nearest painted ancestor
+     always wins (a white card in a green section keeps dark text). */
+  :root,
+  [data-on='light'] {
+    --text: var(--color-ink);
+    --heading: var(--color-hunter-green);
+    --link: var(--color-hunter-green);
+    --focus: var(--color-hunter-green);
+    --focus-halo: var(--color-white);
+  }
+
+  [data-on='dark'] {
+    --text: var(--color-white);
+    --heading: var(--color-white);
+    --link: var(--color-white);
+    --focus: var(--color-white);
+    --focus-halo: var(--color-hunter-green);
+  }
+
+  [data-on] {
+    color: var(--text);
+  }
+
+  body {
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: var(--step-0);
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--heading);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--step-3);
+  }
+
+  h2 {
+    font-size: var(--step-2);
+  }
+
+  h3 {
+    font-size: var(--step-1);
+  }
+
+  p,
+  li,
+  dd {
+    text-wrap: pretty;
+  }
+
+  a {
+    color: var(--link);
+    text-underline-offset: 0.15em;
+  }
+
+  /* Visible on every background: a ring in the context's focus color with a
+     halo in the opposite color */
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px var(--focus-halo);
+  }
+
+  .container {
+    width: min(100% - 2 * var(--gutter), var(--content-width));
+    margin-inline: auto;
+  }
+}

@@ -1,70 +1,151 @@
 ---
-import { getSite } from '../../lib/site';
+// The site footer: plain green under a row of staff tiles, with the names
+// and legal line, the main menu, both addresses, phone and email, social
+// links, the Musicians link and the copyright.
+import TilePattern from '../patterns/TilePattern.astro';
+import Logo from '../Logo.astro';
 import Address from '../Address.astro';
 import SocialLinks from '../SocialLinks.astro';
 import Todo from '../Todo.astro';
+import { mainNav } from '../../lib/navigation';
+import { getSite } from '../../lib/site';
 
 const site = await getSite();
 const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
-  <div class="container columns">
-    <section aria-label="About">
-      <p>
-        <strong>{site.name}</strong>
+  <TilePattern variant="staff" tile={48} height="48px" frame={false} center="x" />
+  <div class="body" data-on="dark">
+    <div class="inner">
+      <section class="who" aria-label="About">
+        <Logo size={56} />
+        <p class="name">{site.name}</p>
+        <p class="tagline">{site.tagline}</p>
+        <p class="legal">
+          The {site.legalName} is a <span class="nowrap">501(c)(3)</span> nonprofit organization.
+          <span class="nowrap">EIN: {site.ein}</span>
+        </p>
+      </section>
+      <nav aria-label="Footer">
+        <h2>Explore</h2>
+        <ul class="links">
+          {mainNav.map(({ href, label }) => (
+            <li>
+              <a href={href}>{label}</a>
+            </li>
+          ))}
+          <li>
+            <a href="/musicians">For musicians</a>
+          </li>
+        </ul>
+      </nav>
+      <section aria-label="Visit and contact">
+        <h2>Clubhouse</h2>
+        <Address directions />
+        <h2>Mail</h2>
+        <Address which="mailing" />
+        <p>
+          <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a>
+          <br />
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+      </section>
+      <section aria-label="Follow us">
+        <h2>Follow us</h2>
+        <SocialLinks />
+      </section>
+    </div>
+    <div class="bottom">
+      <p class="copyright">
+        {`© 2007–${year} ${site.legalName}. All rights reserved.`}
+        <Todo>confirm copyright and license wording (docs/brief.md §5.2)</Todo>
       </p>
-      <p>{site.tagline}</p>
-      <p>
-        The {site.legalName} is a 501(c)(3) nonprofit organization. EIN: {site.ein}
-      </p>
-    </section>
-    <section aria-label="Visit and contact">
-      <p>
-        <strong>Clubhouse</strong>
-      </p>
-      <Address directions />
-      <p>
-        <strong>Mail</strong>
-      </p>
-      <Address which="mailing" />
-      <p>
-        <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a>
-        <br />
-        <a href={`mailto:${site.email}`}>{site.email}</a>
-      </p>
-    </section>
-    <section aria-label="Follow and more">
-      <p>
-        <strong>Follow us</strong>
-      </p>
-      <SocialLinks />
-      <p>
-        <a href="/musicians">For musicians</a>
-      </p>
-    </section>
+    </div>
   </div>
-  <p class="container copyright">
-    {`© 2007–${year} ${site.legalName}. All rights reserved.`}
-    <Todo>confirm copyright and license wording (docs/brief.md §5.2)</Todo>
-  </p>
 </footer>
 
 <style>
-  .site-footer {
-    margin-top: var(--space-xl);
-    padding-block: var(--space-l);
-    background: var(--color-surface);
-    font-size: var(--step--1);
-  }
+  @layer components {
+    .body {
+      background: var(--color-hunter-green);
+      color: var(--color-white);
+      padding-bottom: 5rem;
+    }
 
-  .columns {
-    display: grid;
-    gap: var(--space-m);
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-  }
+    .inner {
+      display: grid;
+      gap: var(--space-l);
+      max-width: var(--content-width);
+      margin-inline: auto;
+      padding: var(--space-xl) var(--gutter) var(--space-l);
+    }
 
-  .copyright {
-    margin-top: var(--space-m);
+    .who :global(.logo) {
+      color: var(--color-gold);
+    }
+
+    .name {
+      font-family: var(--font-heading);
+      font-size: var(--step-2);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-top: var(--space-xs);
+    }
+
+    .tagline {
+      font-style: italic;
+    }
+
+    .legal,
+    .copyright {
+      font-size: var(--step--1);
+    }
+
+    .legal {
+      margin-top: var(--space-s);
+    }
+
+    h2 {
+      margin: var(--space-s) 0 var(--space-xs);
+      font-size: var(--step-1);
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      justify-content: start;
+      gap: 0.5rem var(--space-l);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .bottom {
+      max-width: var(--content-width);
+      margin-inline: auto;
+      padding-inline: var(--gutter);
+    }
+
+    .copyright {
+      padding-top: var(--space-m);
+      border-top: 1px solid color-mix(in srgb, var(--color-white) 25%, transparent);
+    }
+
+    @media (width >= 40rem) {
+      .inner {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (width >= 64rem) {
+      .inner {
+        grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      }
+    }
   }
 </style>

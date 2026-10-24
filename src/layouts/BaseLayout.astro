@@ -6,22 +6,31 @@ import '@fontsource/barlow/400.css';
 import '@fontsource/barlow/400-italic.css';
 import '@fontsource/barlow/600.css';
 import '@fontsource/barlow/700.css';
-import '../styles/global.css';
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/utilities.css';
 
 interface Props {
   title: string;
   description: string;
   noindex?: boolean;
   image?: string;
+  /** The page opens on a landing photo: the header starts large over it. */
+  hero?: boolean;
 }
 
-const props = Astro.props;
+const { hero = false, ...props } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en-US">
+<html lang="en-US" data-hero={hero ? 'in' : undefined}>
   <head>
     <meta charset="utf-8" />
+    {/* CSS layer order, declared before any stylesheet so bundling order
+        can't change it (docs/design-system.md §1) */}
+    <style is:inline>
+      @layer reset, base, components, utilities;
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#355749" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />

@@ -17,7 +17,7 @@ const query = encodeURIComponent(`${a.street}, ${a.city}, ${a.region} ${a.postal
 <address>
   {a.street}
   <br />
-  {`${a.city}, ${a.region} ${a.postalCode}`}
+  <span class="nowrap">{`${a.city}, ${a.region} ${a.postalCode}`}</span>
   {directions && (
     <>
       <br />

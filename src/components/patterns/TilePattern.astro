@@ -1,6 +1,6 @@
 ---
-import WallTile from './tiles/WallTile.astro';
-import { MEASURES, writeStaff } from '../lib/staff';
+import WallTile from './WallTile.astro';
+import { MEASURES, writeStaff } from '../../lib/staff';
 
 // Patterns built from musical motifs, drawn like hand-painted tiles in the
 // brand colors
@@ -42,7 +42,12 @@ const {
   center,
 } = Astro.props;
 const origin = { x: center ? '50%' : 0, y: center === 'both' ? '50%' : 0 };
-const id = `tile-${variant}-${Math.random().toString(36).slice(2, 8)}`;
+// A stable id from the options: the same pattern always gets the same id, so
+// builds are repeatable, and two identical patterns on a page can share one.
+const key = JSON.stringify([variant, ink, accent, ground, grout, tile, center]);
+let hash = 0;
+for (const ch of key) hash = (hash * 31 + ch.charCodeAt(0)) >>> 0;
+const id = `tile-${variant}-${hash.toString(36)}`;
 
 // The staff lines: eight different measures, so the repeat is hard to spot.
 // `field` offsets each staff by a few measures and packs them closely.

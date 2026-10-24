@@ -1,0 +1,37 @@
+/*
+ * A handful of single-purpose helpers (docs/design-system.md §1). They come
+ * last, so they win over component defaults. Resist adding more.
+ */
+@layer utilities {
+  /* vertical rhythm between children */
+  .stack > * + * {
+    margin-top: var(--stack-space, var(--space-s));
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  /* a larger intro paragraph */
+  .lead {
+    font-size: var(--step-1);
+    max-width: var(--measure);
+  }
+
+  .measure {
+    max-width: var(--measure);
+  }
+
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

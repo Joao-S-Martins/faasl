@@ -1,41 +1,63 @@
 ---
-// Every site page: base document + skip link + header + main + footer.
+// Every site page: document, skip link, fixed header, main, footer and the
+// floating Donate button (docs/design-system.md §5).
+//   hero: the page opens on a landing photo ([data-landing]); the header
+//         starts large over it and the Donate button waits until it scrolls
+//         away. Without it, the header starts compact and the content starts
+//         below it.
+//   bare: sections run full width (built from Surface blocks). Pages not yet
+//         moved to blocks leave it off and get the old centered column.
 import BaseLayout from './BaseLayout.astro';
 import SiteHeader from '../components/layout/SiteHeader.astro';
 import SiteFooter from '../components/layout/SiteFooter.astro';
+import DonateButton from '../components/layout/DonateButton.astro';
 
 interface Props {
   title: string;
   description: string;
   noindex?: boolean;
   image?: string;
+  hero?: boolean;
+  bare?: boolean;
 }
 
-const props = Astro.props;
+const { hero = false, bare = false, ...props } = Astro.props;
 ---
 
-<BaseLayout {...props}>
+<BaseLayout {...props} hero={hero}>
   <a class="skip-link" href="#main">
     Skip to content
   </a>
   <SiteHeader />
-  <main id="main" class="container">
+  <main id="main" class:list={{ container: !bare, 'below-header': !hero }}>
     <slot />
   </main>
   <SiteFooter />
+  <DonateButton />
 </BaseLayout>
 
 <style>
-  .skip-link {
-    position: absolute;
-    left: -999px;
-  }
+  @layer components {
+    .skip-link {
+      position: absolute;
+      left: -999px;
+    }
 
-  .skip-link:focus {
-    left: var(--gutter);
-    top: var(--gutter);
-    padding: var(--space-xs) var(--space-s);
-    background: var(--color-white);
-    z-index: 10;
+    .skip-link:focus {
+      left: var(--gutter);
+      top: var(--gutter);
+      z-index: 30;
+      padding: var(--space-xs) var(--space-s);
+      background: var(--color-white);
+    }
+
+    .below-header {
+      padding-top: var(--header-h);
+    }
+
+    /* the old centered column, until every page is built from blocks */
+    .container {
+      padding-bottom: var(--space-section);
+    }
   }
 </style>
