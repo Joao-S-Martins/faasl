@@ -1,6 +1,6 @@
 ---
 // Clubhouse (or mailing) address as a semantic <address>.
-import { getSite } from '../lib/site';
+import { getSite } from '../../lib/site';
 
 interface Props {
   which?: 'clubhouse' | 'mailing';
@@ -27,7 +27,9 @@ const query = encodeURIComponent(`${a.street}, ${a.city}, ${a.region} ${a.postal
 </address>
 
 <style>
-  address {
-    font-style: normal;
+  @layer components {
+    address {
+      font-style: normal;
+    }
   }
 </style>

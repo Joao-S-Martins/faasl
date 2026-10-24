@@ -17,13 +17,13 @@ import Accordion from '../components/blocks/Accordion.astro';
 import Button from '../components/blocks/Button.astro';
 import ButtonRow from '../components/blocks/ButtonRow.astro';
 import PeopleList from '../components/content/PeopleList.astro';
-import InstrumentPicker from '../components/InstrumentPicker';
-import StoreList from '../components/StoreList.astro';
-import MapEmbed from '../components/MapEmbed.astro';
-import CalendarLink from '../components/CalendarLink.astro';
-import EventList from '../components/EventList.astro';
-import FaqList from '../components/FaqList.astro';
-import Todo from '../components/Todo.astro';
+import InstrumentPicker from '../components/blocks/InstrumentPicker';
+import StoreList from '../components/content/StoreList.astro';
+import MapEmbed from '../components/blocks/MapEmbed.astro';
+import CalendarLink from '../components/content/CalendarLink.astro';
+import EventList from '../components/content/EventList.astro';
+import FaqList from '../components/content/FaqList.astro';
+import Todo from '../components/layout/Todo.astro';
 import { getScheduleMap } from '../lib/schedule';
 import { getSite } from '../lib/site';
 import rehearsal from '../assets/photos/students-rehearsal.jpg';
@@ -232,11 +232,6 @@ const instruments = (await getCollection('instruments')).map(({ id, data }) => (
 
 <style>
   @layer components {
-    .sub {
-      font-size: var(--step-1);
-      font-weight: 600;
-    }
-
     .lead {
       margin-bottom: var(--space-m);
     }

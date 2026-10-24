@@ -1,0 +1,41 @@
+---
+// Details as a two-column description list ("Founded: 1980", "Where: …"),
+// for reference facts. For a few headline facts, use FactRow.
+interface Props {
+  facts: { term: string; detail: string }[];
+}
+
+const { facts } = Astro.props;
+---
+
+<dl class="facts">
+  {facts.map(({ term, detail }) => (
+    <div>
+      <dt>{term}</dt>
+      <dd>{detail}</dd>
+    </div>
+  ))}
+</dl>
+
+<style>
+  @layer components {
+    .facts {
+      display: grid;
+      gap: var(--space-xs);
+    }
+
+    .facts div {
+      display: grid;
+      grid-template-columns: 8rem 1fr;
+      gap: var(--space-s);
+    }
+
+    dt {
+      font-weight: 700;
+    }
+
+    dd {
+      margin: 0;
+    }
+  }
+</style>

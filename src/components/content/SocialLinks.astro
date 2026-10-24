@@ -1,5 +1,5 @@
 ---
-import { getSite } from '../lib/site';
+import { getSite } from '../../lib/site';
 
 const site = await getSite();
 ---
@@ -16,11 +16,13 @@ const site = await getSite();
 </ul>
 
 <style>
-  .social {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs) var(--space-s);
-    padding: 0;
-    list-style: none;
+  @layer components {
+    .social {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xs) var(--space-s);
+      padding: 0;
+      list-style: none;
+    }
   }
 </style>

@@ -1,6 +1,6 @@
 ---
 // The weekly schedule from src/content/schedule.yaml.
-import { getSchedule } from '../lib/schedule';
+import { getSchedule } from '../../lib/schedule';
 
 interface Props {
   /** Only these schedule ids (default: all). */
@@ -24,17 +24,19 @@ const schedule = (await getSchedule()).filter((item) => !only || only.includes(i
 </dl>
 
 <style>
-  .schedule div {
-    display: grid;
-    gap: 0 var(--space-s);
-    grid-template-columns: 11rem 1fr;
-  }
+  @layer components {
+    .schedule div {
+      display: grid;
+      gap: 0 var(--space-s);
+      grid-template-columns: 11rem 1fr;
+    }
 
-  dt {
-    font-weight: 700;
-  }
+    dt {
+      font-weight: 700;
+    }
 
-  dd {
-    margin: 0;
+    dd {
+      margin: 0;
+    }
   }
 </style>

@@ -1,13 +1,12 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import PageHeader from '../components/PageHeader.astro';
-import Section from '../components/Section.astro';
-import EventList from '../components/EventList.astro';
-import CalendarLink from '../components/CalendarLink.astro';
-import Testimonial from '../components/Testimonial.astro';
-import Actions from '../components/Actions.astro';
-import ButtonLink from '../components/ButtonLink.astro';
-import Todo from '../components/Todo.astro';
+import Surface from '../components/blocks/Surface.astro';
+import ButtonRow from '../components/blocks/ButtonRow.astro';
+import Button from '../components/blocks/Button.astro';
+import EventList from '../components/content/EventList.astro';
+import CalendarLink from '../components/content/CalendarLink.astro';
+import Testimonial from '../components/content/Testimonial.astro';
+import Todo from '../components/layout/Todo.astro';
 import { getSite, isProduction } from '../lib/site';
 
 const site = await getSite();
@@ -25,98 +24,118 @@ const shownGifts = gifts.filter((gift) => gift.price || !isProduction);
 <PageLayout
   title="Support Free Music Education in San Leandro"
   description="Donate to the Portuguese Band of San Leandro, a 501(c)(3) nonprofit offering free music lessons and free community performances since 1980. Gifts are tax-deductible."
+
+  bare
 >
-  <PageHeader title="Support the Band" subtitle="keep music free for our community">
-    <p>
-      Since {site.foundingYear}, every lesson we teach has been free. Kids and adults learn an
-      instrument at no cost, young musicians are mentored by experienced ones, and our volunteer
-      band brings live music to parades, festivals and community events across the Bay Area. All of
-      it runs on volunteers and on the generosity of people like you.
-    </p>
-    <Actions>
-      <Todo>Donate button (online giving provider not chosen yet)</Todo>
-    </Actions>
-  </PageHeader>
+  <Surface surface="tint">
+    <div class="stack measure">
+      <h1>Support the Band</h1>
+      <p class="sub">keep music free for our community</p>
+      <p>
+        Since {site.foundingYear}, every lesson we teach has been free. Kids and adults learn an
+        instrument at no cost, young musicians are mentored by experienced ones, and our volunteer
+        band brings live music to parades, festivals and community events across the Bay Area. All
+        of it runs on volunteers and on the generosity of people like you.
+      </p>
+      <ButtonRow>
+        <Todo>Donate button (online giving provider not chosen yet)</Todo>
+      </ButtonRow>
+    </div>
+  </Surface>
 
   {shownGifts.length > 0 && (
-    <Section title="What your gift does">
-      <ul>
-        {shownGifts.map((gift) => (
-          <li>
-            <strong>{gift.price ? `$${gift.price}` : <Todo>price</Todo>}</strong> {gift.does}
-          </li>
-        ))}
-      </ul>
-    </Section>
+    <Surface title="What your gift does">
+      <div class="stack">
+        <ul>
+          {shownGifts.map((gift) => (
+            <li>
+              <strong>{gift.price ? `$${gift.price}` : <Todo>price</Todo>}</strong> {gift.does}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Surface>
   )}
 
-  <Section title="Become a member">
-    <p>
-      Join the band's family as a supporting member with an annual membership fee. Members keep our
-      lessons free year after year.
-    </p>
-    <Todo block>annual amount and what members receive (a full Members page comes in v3.1)</Todo>
-  </Section>
+  <Surface title="Become a member" surface="tint">
+    <div class="stack">
+      <p>
+        Join the band's family as a supporting member with an annual membership fee. Members keep
+        our lessons free year after year.
+      </p>
+      <Todo block>annual amount and what members receive (a full Members page comes in v3.1)</Todo>
+    </div>
+  </Surface>
 
-  <Section title="Give in someone's name">
-    <p>
-      Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember
-      someone who shared our love of music. Just let us know who your gift honors.
-    </p>
-    <Todo block>how (a field in the donation form, or contact us)</Todo>
-  </Section>
+  <Surface title="Give in someone's name">
+    <div class="stack">
+      <p>
+        Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember
+        someone who shared our love of music. Just let us know who your gift honors.
+      </p>
+      <Todo block>how (a field in the donation form, or contact us)</Todo>
+    </div>
+  </Surface>
 
-  <Section title="Join us at a fundraiser dinner">
-    <p>
-      Throughout the year we host dinners that bring classic Portuguese meals to the table, along
-      with some American staples. Every ticket supports our free music programs. Tickets are
-      available at the door or from any board member.
-    </p>
-    <EventList
-      calendar="social"
-      limit={3}
-      empty="No fundraisers are scheduled right now. Add our social calendar to yours to hear about the next one."
-    />
-    <p>
-      <CalendarLink calendar="social" />
-    </p>
-  </Section>
+  <Surface title="Join us at a fundraiser dinner" surface="tint">
+    <div class="stack">
+      <p>
+        Throughout the year we host dinners that bring classic Portuguese meals to the table, along
+        with some American staples. Every ticket supports our free music programs. Tickets are
+        available at the door or from any board member.
+      </p>
+      <EventList
+        calendar="social"
+        limit={3}
+        empty="No fundraisers are scheduled right now. Add our social calendar to yours to hear about the next one."
+      />
+      <p>
+        <CalendarLink calendar="social" />
+      </p>
+    </div>
+  </Surface>
 
-  <Section title="Other ways to help">
-    <ul>
-      <li>
-        <strong>Donate an instrument</strong> you no longer play, and we'll put it back to work
-      </li>
-      <li>
-        <strong>Come hear us play</strong> at a parade, festival or concert (
-        <a href="/events">events</a>)
-      </li>
-      <li>
-        <strong>Volunteer</strong> your time and skills (
-        <a href="/about#get-involved">get involved</a>)
-      </li>
-      <li>
-        <strong>Spread the word:</strong> follow us and share our events
-      </li>
-    </ul>
-  </Section>
+  <Surface title="Other ways to help">
+    <div class="stack">
+      <ul>
+        <li>
+          <strong>Donate an instrument</strong> you no longer play, and we'll put it back to work
+        </li>
+        <li>
+          <strong>Come hear us play</strong> at a parade, festival or concert (
+          <a href="/events">events</a>)
+        </li>
+        <li>
+          <strong>Volunteer</strong> your time and skills (
+          <a href="/about#get-involved">get involved</a>)
+        </li>
+        <li>
+          <strong>Spread the word:</strong> follow us and share our events
+        </li>
+      </ul>
+    </div>
+  </Surface>
 
-  <Section title="For businesses">
-    <p>
-      Many employers match their employees' charitable gifts, often doubling them. Ask your HR or
-      giving program whether the Portuguese Band of San Leandro qualifies. Interested in supporting
-      us as a business?
-    </p>
-    <Actions>
-      <ButtonLink href="/contact">Contact us</ButtonLink>
-    </Actions>
-    <Testimonial audience="donors" />
-  </Section>
+  <Surface title="For businesses" surface="tint">
+    <div class="stack">
+      <p>
+        Many employers match their employees' charitable gifts, often doubling them. Ask your HR or
+        giving program whether the Portuguese Band of San Leandro qualifies. Interested in
+        supporting us as a business?
+      </p>
+      <ButtonRow>
+        <Button href="/contact">Contact us</Button>
+      </ButtonRow>
+      <Testimonial audience="donors" />
+    </div>
+  </Surface>
 
-  <Section title="The details">
-    <p>
-      The {site.legalName} is a 501(c)(3) nonprofit organization, EIN {site.ein}. Donations are
-      tax-deductible to the extent allowed by law.
-    </p>
-  </Section>
+  <Surface title="The details">
+    <div class="stack">
+      <p>
+        The {site.legalName} is a 501(c)(3) nonprofit organization, EIN {site.ein}. Donations are
+        tax-deductible to the extent allowed by law.
+      </p>
+    </div>
+  </Surface>
 </PageLayout>

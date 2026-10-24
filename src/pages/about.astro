@@ -1,10 +1,10 @@
 ---
 import PageLayout from '../layouts/PageLayout.astro';
-import PageHeader from '../components/PageHeader.astro';
-import Section from '../components/Section.astro';
+import Hero from '../components/blocks/Hero.astro';
+import Surface from '../components/blocks/Surface.astro';
+import ButtonRow from '../components/blocks/ButtonRow.astro';
+import Button from '../components/blocks/Button.astro';
 import PeopleList from '../components/content/PeopleList.astro';
-import Actions from '../components/Actions.astro';
-import ButtonLink from '../components/ButtonLink.astro';
 import { getSite, yearsSince } from '../lib/site';
 import bandSteps from '../assets/photos/band-church-steps.jpg';
 
@@ -14,60 +14,74 @@ const site = await getSite();
 <PageLayout
   title={`About the ${site.legalName}`}
   description="The Portuguese Band of San Leandro (Filarmónica Artista Amadora de San Leandro) is an all-volunteer community band and nonprofit founded in 1980, offering free music lessons and performing across the Bay Area."
+
+  hero
+  bare
 >
-  <PageHeader
-    title="About Us"
-    subtitle={`a community built around music since ${site.foundingYear}`}
+  <Hero
     image={bandSteps}
-    imageAlt="The full band in green uniforms on church steps, with flags"
-  />
+    alt="The full band in green uniforms on church steps, with flags"
+    size="page"
+    surface="tint"
+  >
+    <h1>About Us</h1>
+    <p class="sub">{`a community built around music since ${site.foundingYear}`}</p>
+  </Hero>
 
-  <Section title="Our story">
-    <p>
-      Our band was founded in {site.foundingYear} by amateur musicians who wanted to enrich their
-      community through music. More than {yearsSince(site.foundingYear)} years later,{' '}
-      <em>our goal remains the same</em>: impacting lives through music education and mentorship. We
-      believe in supporting musicians of every walk and stage of life. A love for music bonds us
-      all, and we want to share it with you.
-    </p>
-    <p>
-      Our founders were mostly Portuguese immigrants with varying musical experience; some had none
-      at all. They pooled their knowledge and resources to help each other and create this band.
-      Today, our all-volunteer organization has grown into a diverse group representing many
-      backgrounds. We each bring our abilities to invest in each other and elevate our lives.
-    </p>
-    <aside>
+  <Surface title="Our story">
+    <div class="stack">
       <p>
-        Officially the <em>{site.legalName}</em>, our name translates to the{' '}
-        <em>{site.nameTranslation}</em>. Our members call us the {site.alternateName}.
+        Our band was founded in {site.foundingYear} by amateur musicians who wanted to enrich their
+        community through music. More than {yearsSince(site.foundingYear)} years later,{' '}
+        <em>our goal remains the same</em>: impacting lives through music education and mentorship.
+        We believe in supporting musicians of every walk and stage of life. A love for music bonds
+        us all, and we want to share it with you.
       </p>
-    </aside>
-  </Section>
+      <p>
+        Our founders were mostly Portuguese immigrants with varying musical experience; some had
+        none at all. They pooled their knowledge and resources to help each other and create this
+        band. Today, our all-volunteer organization has grown into a diverse group representing many
+        backgrounds. We each bring our abilities to invest in each other and elevate our lives.
+      </p>
+      <aside>
+        <p>
+          Officially the <em>{site.legalName}</em>, our name translates to the{' '}
+          <em>{site.nameTranslation}</em>. Our members call us the {site.alternateName}.
+        </p>
+      </aside>
+    </div>
+  </Surface>
 
-  <Section title="Our heritage">
-    <p>
-      Our Portuguese roots show up in everything we do. Each year we march in Holy Ghost parades
-      hosted by Portuguese communities, and we host dinners that bring classic Portuguese meals to
-      the table, along with some American staples. These fundraisers support our music programs, and
-      breaking bread together reaffirms our commitment to our community.
-    </p>
-  </Section>
+  <Surface title="Our heritage" surface="tint">
+    <div class="stack">
+      <p>
+        Our Portuguese roots show up in everything we do. Each year we march in Holy Ghost parades
+        hosted by Portuguese communities, and we host dinners that bring classic Portuguese meals to
+        the table, along with some American staples. These fundraisers support our music programs,
+        and breaking bread together reaffirms our commitment to our community.
+      </p>
+    </div>
+  </Surface>
 
-  <Section title="Our leadership team">
-    <PeopleList role="leadership" />
-  </Section>
+  <Surface title="Our leadership team">
+    <div class="stack">
+      <PeopleList role="leadership" />
+    </div>
+  </Surface>
 
-  <Section title="Get involved" id="get-involved">
-    <p>
-      Our band runs entirely on volunteers, and there's more to it than music. Help plan our
-      fundraiser dinners, tell our story online and in the community, photograph our performances,
-      or keep a marching band moving between parades and festivals. If you have skills to share,
-      we'd love to hear from you.
-    </p>
-    <Actions>
-      <ButtonLink href="/contact">Contact us</ButtonLink>
-      <a href="/give">Give</a>
-      <a href="/impact">Our impact</a>
-    </Actions>
-  </Section>
+  <Surface title="Get involved" id="get-involved" surface="tint">
+    <div class="stack">
+      <p>
+        Our band runs entirely on volunteers, and there's more to it than music. Help plan our
+        fundraiser dinners, tell our story online and in the community, photograph our performances,
+        or keep a marching band moving between parades and festivals. If you have skills to share,
+        we'd love to hear from you.
+      </p>
+      <ButtonRow>
+        <Button href="/contact">Contact us</Button>
+        <a href="/give">Give</a>
+        <a href="/impact">Our impact</a>
+      </ButtonRow>
+    </div>
+  </Surface>
 </PageLayout>

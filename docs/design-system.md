@@ -1,6 +1,6 @@
 # FAASL.org v3: Design system
 
-**Status:** approved plan, revised after a front-end engineering review and a web design review (Oct 2026). Direction C (`/design/c/home`, `/design/c/lessons`) is the approved design; this turns its pieces into the site's component system.
+**Status:** built (Oct 2026), after a front-end engineering review and a web design review. Direction C became the real Home and Lessons pages; directions A and B were removed (B's heading-over-photo hero is kept for reference in [`design-history/`](./design-history/), to reconsider once a hero video exists).
 Related: [`brand.md`](./brand.md) (colors, type, patterns, voice) · [`brief.md`](./brief.md) §3.1 (design rules) and §5.4 (SEO guardrails)
 
 ## Goals
@@ -24,8 +24,8 @@ src/styles/
 src/components/
   blocks/         layout pieces that don't know about content (Surface, MediaFeature, StatGrid…)
   content/        render a collection (PeopleList, EventCards, FaqList, StoreList…)
-  layout/         header, footer, Donate button
-  patterns/       TilePattern, WallTile (tile and staff art)
+  layout/         header, footer, Donate button, SEO head, TODO markers
+  patterns/       TilePattern, WallTile, Logo (brand art)
 src/sections/     sections used on two or more pages (rule of two); one-off sections stay inline in the page
 src/pages/        page metadata plus a list of sections
 ```
@@ -142,7 +142,8 @@ Modeled on the Bootstrap and Tailwind docs: a sidebar of categories; one page pe
 ## 8. Checks
 
 - Existing: `astro check`, lint, format, build, `check:seo` (canonical links match the sitemap).
-- Add: every `<style>` declares a layer; only the two breakpoints; no `dist/design` in production; stable HTML between builds.
+- `check:styles`: every `<style>` and CSS file declares a layer; only the two breakpoints; no `!important` outside the reduced-motion reset.
+- Still to add: no `dist/design` in production; stable HTML between builds.
 - Before calling the migration done: axe on every page at 390 and 1280; contrast of every surface × tone pair, the header over photos and focus rings; Lighthouse mobile ≥ 95 on Home and Lessons (layout shift from the header and fonts); keyboard-only pass; JavaScript off; 200% zoom; 320px wide and sideways phone; Lessons print preview.
 
 ## 9. Also from the reviews

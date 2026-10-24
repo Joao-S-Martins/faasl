@@ -22,9 +22,9 @@ import ButtonRow from '../components/blocks/ButtonRow.astro';
 import LinkMore from '../components/blocks/LinkMore.astro';
 import EventCards from '../components/content/EventCards.astro';
 import PeopleList from '../components/content/PeopleList.astro';
-import Testimonial from '../components/Testimonial.astro';
-import Address from '../components/Address.astro';
-import Todo from '../components/Todo.astro';
+import Testimonial from '../components/content/Testimonial.astro';
+import Address from '../components/content/Address.astro';
+import Todo from '../components/layout/Todo.astro';
 import { getSite, yearsSince } from '../lib/site';
 import { fillTokens } from '../lib/schedule';
 import bandSteps from '../assets/photos/band-church-steps.jpg';
@@ -190,11 +190,6 @@ const number = (text: string) => text.replace(/^about\s+/i, '');
 
 <style>
   @layer components {
-    .sub {
-      font-size: var(--step-1);
-      font-weight: 600;
-    }
-
     .lead {
       margin-bottom: var(--space-m);
     }

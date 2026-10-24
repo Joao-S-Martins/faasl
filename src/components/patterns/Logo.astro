@@ -1,7 +1,7 @@
 ---
 // The lyre logo, inline so it takes the surrounding text color
 // (gold on white or green, ink on gold).
-import raw from '../assets/logo.svg?raw';
+import raw from '../../assets/logo.svg?raw';
 
 interface Props {
   size?: number;
@@ -25,8 +25,10 @@ const svg = raw
 />
 
 <style>
-  .logo {
-    display: inline-flex;
-    line-height: 0;
+  @layer components {
+    .logo {
+      display: inline-flex;
+      line-height: 0;
+    }
   }
 </style>

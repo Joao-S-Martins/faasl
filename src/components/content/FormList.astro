@@ -1,7 +1,7 @@
 ---
 // Printable onboarding forms for the Musicians page.
 import { getCollection } from 'astro:content';
-import Todo from './Todo.astro';
+import Todo from '../layout/Todo.astro';
 
 const forms = (await getCollection('musicianForms')).sort((a, b) => a.data.order - b.data.order);
 ---

@@ -1,8 +1,8 @@
 ---
 // The lessons FAQ, with schedule tokens filled in and FAQPage data for search.
 import { getCollection, getEntry } from 'astro:content';
-import { fillTokens } from '../lib/schedule';
-import { subscribeUrl } from '../lib/calendars';
+import { fillTokens } from '../../lib/schedule';
+import { subscribeUrl } from '../../lib/calendars';
 
 const entries = (await getCollection('faqs')).sort((a, b) => a.data.order - b.data.order);
 const faqs = await Promise.all(
@@ -47,13 +47,15 @@ const structuredData = {
 </div>
 <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 <style>
-  .faq {
-    display: grid;
-    gap: var(--space-xs);
-  }
+  @layer components {
+    .faq {
+      display: grid;
+      gap: var(--space-xs);
+    }
 
-  summary {
-    font-weight: 700;
-    cursor: pointer;
+    summary {
+      font-weight: 700;
+      cursor: pointer;
+    }
   }
 </style>

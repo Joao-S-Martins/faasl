@@ -121,7 +121,9 @@ Draft plans for every page are in [`sections.md`](./sections.md), ready for revi
 - [x] 🤖 Wireframes for the home page and one inner page: covered by Direction C at phone, tablet and desktop
 - [x] 🧑 Plain CSS, no framework; component catalog like the Bootstrap/Tailwind docs instead of Storybook (`design-system.md`)
 - [x] 🧑 Approve the design → unlocks Phase 4
-- [ ] 🤖 Build the design system (`design-system.md` §10): styles and checks, layout, blocks, Home and Lessons, other pages, catalog, cleanup, accessibility and performance checks
+- [x] 🤖 Design system built (`design-system.md`): styles and checks, layout, blocks, every page moved to blocks, prototypes and the test page removed
+- [ ] 🤖 Component catalog (`/design/components`)
+- [ ] 🤖 Accessibility and performance checks (`design-system.md` §8)
 
 ## Phase 4 — Build sections
 

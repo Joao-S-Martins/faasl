@@ -29,6 +29,7 @@ jobs:
       - run: npm run check
       - run: npm run lint
       - run: npm run format:check
+      - run: npm run check:styles
       - run: npm run build
         env:
           SITE_ENV: ${{ inputs.site-env || 'development' }}

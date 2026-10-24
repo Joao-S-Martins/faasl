@@ -3,9 +3,9 @@
 // weekly). No Event search data on lists: Google only supports it on pages
 // about a single event (see docs/brief.md, SEO guardrails).
 import { getCollection, getEntry } from 'astro:content';
-import { formatEventWhen } from '../lib/format';
-import { eventHref } from '../lib/events';
-import Todo from './Todo.astro';
+import { formatEventWhen } from '../../lib/format';
+import { eventHref } from '../../lib/events';
+import Todo from '../layout/Todo.astro';
 
 interface Props {
   calendar: 'lessons' | 'performances' | 'social';
@@ -65,22 +65,24 @@ const hasSamples = events.some(({ data }) => data.sample);
 )}
 
 <style>
-  .events {
-    display: grid;
-    gap: var(--space-m);
-    padding: 0;
-    list-style: none;
-  }
+  @layer components {
+    .events {
+      display: grid;
+      gap: var(--space-m);
+      padding: 0;
+      list-style: none;
+    }
 
-  .when {
-    font-weight: 700;
-  }
+    .when {
+      font-weight: 700;
+    }
 
-  .tentative {
-    font-style: italic;
-  }
+    .tentative {
+      font-style: italic;
+    }
 
-  .description {
-    white-space: pre-line;
+    .description {
+      white-space: pre-line;
+    }
   }
 </style>

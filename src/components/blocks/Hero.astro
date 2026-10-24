@@ -94,6 +94,12 @@ const { image, alt, size = 'home', surface = 'plain', focus = 'center 30%' } = A
       margin-top: var(--space-xs);
     }
 
+    /* the line under the h1 */
+    .box > :global(.sub) {
+      font-size: var(--step-1);
+      font-weight: 600;
+    }
+
     @media (width >= 40rem) {
       .photo {
         object-position: center;

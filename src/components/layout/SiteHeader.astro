@@ -8,7 +8,7 @@
 import Menu from '@lucide/astro/icons/menu';
 import { mainNav } from '../../lib/navigation';
 import { getSite, publicPath } from '../../lib/site';
-import Logo from '../Logo.astro';
+import Logo from '../patterns/Logo.astro';
 
 const site = await getSite();
 const current = publicPath(Astro.url.pathname);

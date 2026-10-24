@@ -147,13 +147,15 @@ const colors = { ink, accent, ground, grout };
 </svg>
 
 <style>
-  .tiles {
-    display: block;
-    width: 100%;
-  }
+  @layer components {
+    .tiles {
+      display: block;
+      width: 100%;
+    }
 
-  .frame {
-    border-radius: var(--radius);
-    border: 1px solid #ddd;
+    .frame {
+      border-radius: var(--radius);
+      border: 1px solid #ddd;
+    }
   }
 </style>

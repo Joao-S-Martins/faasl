@@ -1,7 +1,7 @@
 ---
 // Marks missing content. Visible on beta and local builds as a reminder;
 // renders nothing in production.
-import { isProduction } from '../lib/site';
+import { isProduction } from '../../lib/site';
 
 interface Props {
   /** Render as a block (own paragraph) instead of inline. */
@@ -19,16 +19,18 @@ const Tag = block ? 'p' : 'span';
 )}
 
 <style>
-  .todo {
-    background: var(--color-review-bg);
-    color: var(--color-ink);
-    padding: 0 0.25em;
-    border-radius: 0.25em;
-  }
+  @layer components {
+    .todo {
+      background: var(--color-review-bg);
+      color: var(--color-ink);
+      padding: 0 0.25em;
+      border-radius: 0.25em;
+    }
 
-  .todo.block {
-    display: block;
-    padding: var(--space-xs) var(--space-s);
-    border-left: 4px solid var(--color-review-line);
+    .todo.block {
+      display: block;
+      padding: var(--space-xs) var(--space-s);
+      border-left: 4px solid var(--color-review-line);
+    }
   }
 </style>
