@@ -3,6 +3,9 @@ import { getEntry } from 'astro:content';
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
+import Columns from '../components/blocks/Columns.astro';
+import PhotoBreak from '../components/blocks/PhotoBreak.astro';
+import growing from '../assets/photos/growing-together.jpg';
 import DetailList from '../components/blocks/DetailList.astro';
 import Testimonial from '../components/content/Testimonial.astro';
 import Todo from '../components/layout/Todo.astro';
@@ -28,9 +31,9 @@ const cities = site.areaServed.join(', ');
     <p class="sub">{`free music education and community music since ${site.foundingYear}`}</p>
   </Hero>
 
-  <Surface title="Our mission">
-    <div class="stack">
-      <p>
+  <Surface title="Our mission" surface="green" pattern="field" align="center">
+    <div class="stack measure">
+      <p class="lead">
         The Portuguese Band of San Leandro provides free music education and mentorship to musicians
         of all ages, and brings live music to our community.
       </p>
@@ -39,40 +42,44 @@ const cities = site.areaServed.join(', ');
   </Surface>
 
   <Surface title="At a glance" surface="tint">
-    <div class="stack">
-      <DetailList
-        facts={[
-          {
-            term: 'Founded',
-            detail: `${site.foundingYear} (${yearsSince(site.foundingYear)} years of free music education)`,
-          },
-          { term: 'Status', detail: `501(c)(3) nonprofit, EIN ${site.ein}` },
-          { term: 'Run by', detail: 'Volunteers' },
-          { term: 'Lessons', detail: 'Free, weekly, ages 8 to 108' },
-          {
-            term: 'Lesson classes',
-            detail: `${impact.classes} classes, each with ${impact.regularStudentsPerClass} regular students (${impact.studentsPerClassPerYear} per class over a year)`,
-          },
-          { term: 'Band', detail: `${impact.bandMusicians} musicians (${impact.year})` },
-          {
-            term: 'Performances',
-            detail: `${impact.paradesPerYear} parades and ${impact.concertsPerYear} concerts a year`,
-          },
-          { term: 'Where', detail: cities },
-        ]}
-      />
-      <Todo block>
-        more numbers: the share of revenue that goes to programs rather than administration, and
-        estimates of volunteer hours and hours of performances for the community each year
-        (docs/todo.md)
-      </Todo>
-      <Testimonial audience="funders" pick={1} />
-      <Testimonial audience="funders" />
-      <Todo block>
-        a quote from Ryan, the San Leandro High School band director, on the difference he sees in
-        students who take part
-      </Todo>
-    </div>
+    <Columns>
+      <div class="stack">
+        <DetailList
+          facts={[
+            {
+              term: 'Founded',
+              detail: `${site.foundingYear} (${yearsSince(site.foundingYear)} years of free music education)`,
+            },
+            { term: 'Status', detail: `501(c)(3) nonprofit, EIN ${site.ein}` },
+            { term: 'Run by', detail: 'Volunteers' },
+            { term: 'Lessons', detail: 'Free, weekly, ages 8 to 108' },
+            {
+              term: 'Lesson classes',
+              detail: `${impact.classes} classes, each with ${impact.regularStudentsPerClass} regular students (${impact.studentsPerClassPerYear} per class over a year)`,
+            },
+            { term: 'Band', detail: `${impact.bandMusicians} musicians (${impact.year})` },
+            {
+              term: 'Performances',
+              detail: `${impact.paradesPerYear} parades and ${impact.concertsPerYear} concerts a year`,
+            },
+            { term: 'Where', detail: cities },
+          ]}
+        />
+        <Todo block>
+          more numbers: the share of revenue that goes to programs rather than administration, and
+          estimates of volunteer hours and hours of performances for the community each year
+          (docs/todo.md)
+        </Todo>
+      </div>
+      <div class="stack">
+        <Testimonial audience="funders" pick={1} />
+        <Testimonial audience="funders" />
+        <Todo block>
+          a quote from Ryan, the San Leandro High School band director, on the difference he sees in
+          students who take part
+        </Todo>
+      </div>
+    </Columns>
   </Surface>
 
   <Surface title="Our programs">
@@ -99,57 +106,62 @@ const cities = site.areaServed.join(', ');
     </div>
   </Surface>
 
-  <Surface title="Who we serve" surface="tint">
-    <div class="stack">
-      <p>
-        Students and musicians from San Leandro and neighboring communities, including{' '}
-        {site.areaServed.slice(1, -1).join(', ')} and {site.areaServed.at(-1)}, from age 8 to adults
-        of every age. Lessons and band membership are free, so cost is never a barrier to music.
-      </p>
-      <Todo block>revisit this section later, with local search in mind</Todo>
-    </div>
+  <PhotoBreak image={growing} alt="Musicians of different ages marching and playing together" />
+
+  <Surface surface="tint">
+    <Columns>
+      <div class="stack">
+        <h2 id="who-we-serve">Who we serve</h2>
+        <p>
+          Students and musicians from San Leandro and neighboring communities, including{' '}
+          {site.areaServed.slice(1, -1).join(', ')} and {site.areaServed.at(-1)}, from age 8 to
+          adults of every age. Lessons and band membership are free, so cost is never a barrier to
+          music.
+        </p>
+        <Todo block>revisit this section later, with local search in mind</Todo>
+      </div>
+      <div class="stack">
+        <h2 id="governance">Governance</h2>
+        <p>
+          The band is governed by a volunteer board of directors. Board members aren't paid; our
+          funds go to our building and our musical needs.
+        </p>
+        <Todo block>
+          the board of directors (a different board from the leadership team on Home and About),
+          with names, roles and short bios; research fund use before adding claims (docs/todo.md)
+        </Todo>
+      </div>
+    </Columns>
   </Surface>
 
-  <Surface title="Governance">
-    <div class="stack">
-      <p>
-        The band is governed by a volunteer board of directors. Board members aren't paid; our funds
-        go to our building and our musical needs.
-      </p>
-      <Todo block>
-        the board of directors (a different board from the leadership team on Home and About), with
-        names, roles and short bios; research fund use before adding claims (docs/todo.md)
-      </Todo>
-    </div>
+  <Surface>
+    <Columns>
+      <div class="stack">
+        <h2 id="documents">Documents</h2>
+        <Todo block>
+          IRS determination letter, most recent Form 990, annual report or financial summary (PDFs)
+        </Todo>
+      </div>
+      <div class="stack">
+        <h2 id="verify-us">Verify us</h2>
+        <ul>
+          <li>
+            <a href="https://apps.irs.gov/app/eos/">IRS Tax Exempt Organization Search</a>: search
+            EIN {site.ein}
+          </li>
+          <li>
+            Candid (GuideStar) profile <Todo>claim and link</Todo>
+          </li>
+          <li>
+            California Attorney General, Registry of Charitable Trusts{' '}
+            <Todo>confirm status and link</Todo>
+          </li>
+        </ul>
+      </div>
+    </Columns>
   </Surface>
 
-  <Surface title="Documents" surface="tint">
-    <div class="stack">
-      <Todo block>
-        IRS determination letter, most recent Form 990, annual report or financial summary (PDFs)
-      </Todo>
-    </div>
-  </Surface>
-
-  <Surface title="Verify us">
-    <div class="stack">
-      <ul>
-        <li>
-          <a href="https://apps.irs.gov/app/eos/">IRS Tax Exempt Organization Search</a>: search EIN{' '}
-          {site.ein}
-        </li>
-        <li>
-          Candid (GuideStar) profile <Todo>claim and link</Todo>
-        </li>
-        <li>
-          California Attorney General, Registry of Charitable Trusts{' '}
-          <Todo>confirm status and link</Todo>
-        </li>
-      </ul>
-    </div>
-  </Surface>
-
-  <Surface title="Grants and partnerships" surface="tint">
+  <Surface title="Grants and partnerships" surface="tint" align="center">
     <div class="stack">
       <p>
         Contact us at <a href={`mailto:${site.email}`}>{site.email}</a>.

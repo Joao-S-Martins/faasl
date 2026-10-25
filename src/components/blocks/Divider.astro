@@ -1,0 +1,16 @@
+---
+// A thin gold line across the whole page, between two sections that would
+// otherwise blend together (the green hero and the green path links on Home).
+// Decorative: screen readers skip it.
+---
+
+<div class="divider" aria-hidden="true"></div>
+
+<style>
+  @layer components {
+    .divider {
+      height: 4px;
+      background: var(--color-gold);
+    }
+  }
+</style>

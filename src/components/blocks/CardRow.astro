@@ -2,10 +2,15 @@
 // A row of cards that scrolls sideways (with a peek of the next card) on
 // phones and tablets, and lays out as a grid on desktop unless `scroll` is
 // `always`. Every card is in the page from the start. The row is a focusable,
-// labelled region, so it can be scrolled with the keyboard.
+// labelled region, so it can be scrolled with the keyboard. When the row
+// overflows, arrow buttons under it scroll a page of cards at a time, for
+// mice and trackpads without sideways scrolling (shown only where there's a
+// pointer that can hover; touch screens swipe).
 //   well:   sit in the recessed tray (ScrollWell)
 //   scroll: until-desktop · always
 // Put a <ul> or <ol> of cards in the default slot.
+import ChevronLeft from '@lucide/astro/icons/chevron-left';
+import ChevronRight from '@lucide/astro/icons/chevron-right';
 import ScrollWell from './ScrollWell.astro';
 
 interface Props {
@@ -20,22 +25,55 @@ const { label, well = false, scroll = 'until-desktop', cardWidth = '17rem' } = A
 const Tray = well ? ScrollWell : Fragment;
 ---
 
-<Tray>
-  <div
-    class:list={['card-row', scroll, { 'in-well': well }]}
-    role="region"
-    aria-label={label}
-    tabindex="0"
-    style={`--card-width: ${cardWidth}`}
-  >
-    <slot />
+<div class="card-row-wrap" data-card-row>
+  <Tray>
+    <div
+      class:list={['card-row', scroll, { 'in-well': well }]}
+      role="region"
+      aria-label={label}
+      tabindex="0"
+      style={`--card-width: ${cardWidth}`}
+    >
+      <slot />
+    </div>
+  </Tray>
+  <div class="arrows" hidden>
+    <button type="button" class="arrow" data-step="-1" aria-label={`Scroll back: ${label}`}>
+      <ChevronLeft size={24} aria-hidden="true" />
+    </button>
+    <button type="button" class="arrow" data-step="1" aria-label={`Scroll ahead: ${label}`}>
+      <ChevronRight size={24} aria-hidden="true" />
+    </button>
   </div>
-</Tray>
+</div>
+
+<script>
+  for (const wrap of document.querySelectorAll<HTMLElement>('[data-card-row]')) {
+    const row = wrap.querySelector<HTMLElement>('.card-row')!;
+    const arrows = wrap.querySelector<HTMLElement>('.arrows')!;
+    const [back, ahead] = arrows.querySelectorAll('button');
+    const update = () => {
+      const max = row.scrollWidth - row.clientWidth;
+      arrows.hidden = max <= 1;
+      back.disabled = row.scrollLeft <= 1;
+      ahead.disabled = row.scrollLeft >= max - 1;
+    };
+    for (const button of [back, ahead]) {
+      button.addEventListener('click', () => {
+        // Most of a screen's width; scroll snapping lines the next card up.
+        row.scrollBy({ left: Number(button.dataset.step) * row.clientWidth * 0.85 });
+      });
+    }
+    row.addEventListener('scroll', update, { passive: true });
+    new ResizeObserver(update).observe(row);
+  }
+</script>
 
 <style>
   @layer components {
     .card-row {
       --pad: var(--gutter);
+      scroll-behavior: smooth;
       overflow-x: auto;
       margin-inline: calc(var(--gutter) * -1);
       padding: 0.25rem var(--pad) var(--space-s);
@@ -62,6 +100,50 @@ const Tray = well ? ScrollWell : Fragment;
 
     .card-row > :global(* > li) {
       scroll-snap-align: start;
+    }
+
+    .arrows {
+      display: flex;
+      justify-content: flex-end;
+      gap: var(--space-s);
+      margin-top: var(--space-s);
+    }
+
+    .arrows[hidden] {
+      display: none;
+    }
+
+    .arrow {
+      display: grid;
+      place-items: center;
+      width: 2.75rem;
+      height: 2.75rem;
+      border: 2px solid var(--color-hunter-green);
+      border-radius: 50%;
+      background: var(--color-white);
+      color: var(--color-hunter-green);
+      cursor: pointer;
+    }
+
+    .arrow:hover:not(:disabled) {
+      background: var(--color-off-white);
+    }
+
+    .arrow:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+
+    .arrow:disabled {
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    /* touch screens swipe instead */
+    @media (hover: none) {
+      .arrows {
+        display: none;
+      }
     }
 
     @media (width >= 64rem) {

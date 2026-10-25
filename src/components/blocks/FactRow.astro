@@ -10,7 +10,7 @@ interface Props {
 const { facts } = Astro.props;
 ---
 
-<dl class="facts">
+<dl class="facts" style={`--count: ${facts.length}`}>
   {facts.map(({ icon: Icon, label, value, detail }) => (
     <div>
       <Icon size={32} stroke-width={1.5} aria-hidden="true" class="icon" />
@@ -62,7 +62,7 @@ const { facts } = Astro.props;
 
     @media (width >= 40rem) {
       .facts {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(var(--count), 1fr);
       }
     }
   }

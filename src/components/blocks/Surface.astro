@@ -7,6 +7,8 @@
 //   width:   content (full content width) · narrow (reading width, on the
 //            page grid) · centered (reading width, centered; for a quote box)
 //   title:   renders the section heading and labels the section with it
+//   align:   start (the default) · center (heading, text and buttons centered;
+//            for short statements and calls to action, not lists)
 // Bold green is one tool among several: rarely two green sections in a row
 // (a written guideline, not enforced).
 import TilePattern from '../patterns/TilePattern.astro';
@@ -23,6 +25,8 @@ interface Props {
   id?: string;
   /** Center the heading (for stat grids and similar). */
   centerTitle?: boolean;
+  /** Center everything: heading, text and buttons. */
+  align?: 'start' | 'center';
 }
 
 const {
@@ -32,6 +36,7 @@ const {
   title,
   level = 2,
   centerTitle = false,
+  align = 'start',
 } = Astro.props;
 const id =
   Astro.props.id ??
@@ -67,7 +72,7 @@ const Tag = title ? 'section' : 'div';
       />
     </div>
   )}
-  <div class:list={['inner', width]}>
+  <div class:list={['inner', width, { center: align === 'center' }]}>
     {title && (
       <Heading id={`${id}-title`} class:list={['title', { 'text-center': centerTitle }]}>
         {title}
@@ -123,6 +128,19 @@ const Tag = title ? 'section' : 'div';
 
     .centered {
       max-width: calc(var(--measure) + 2 * var(--gutter));
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .center > :global(*),
+    .center :global(.measure) {
+      margin-inline: auto;
+    }
+
+    .center :global(.button-row) {
+      justify-content: center;
     }
 
     /* every section heading has the same space below it */

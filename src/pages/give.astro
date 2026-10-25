@@ -2,6 +2,9 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
+import Columns from '../components/blocks/Columns.astro';
+import MediaFeature from '../components/blocks/MediaFeature.astro';
+import young from '../assets/photos/young-members.jpg';
 import ButtonRow from '../components/blocks/ButtonRow.astro';
 import Button from '../components/blocks/Button.astro';
 import EventList from '../components/content/EventList.astro';
@@ -90,8 +93,9 @@ const ways = [
   </Surface>
 
   {shownGifts.length > 0 && (
-    <Surface title="What your gift does">
-      <div class="stack">
+    <Surface>
+      <MediaFeature image={young} alt="Two young band members in uniform, smiling" side="right">
+        <h2 id="what-your-gift-does">What your gift does</h2>
         <Todo block>test amounts: review the gift amounts (docs/todo.md)</Todo>
         <ul class="gifts">
           {shownGifts.map((gift) => (
@@ -101,31 +105,34 @@ const ways = [
             </li>
           ))}
         </ul>
-      </div>
+      </MediaFeature>
     </Surface>
   )}
 
-  <Surface title="Become a member" surface="tint">
-    <div class="stack">
-      <p>
-        Join the band's family as a supporting member with an annual membership fee. Members keep
-        our lessons free year after year.
-      </p>
-      <Todo block>annual amount and what members receive (a full Members page comes in v3.1)</Todo>
-    </div>
+  <Surface surface="tint">
+    <Columns>
+      <div class="stack">
+        <h2 id="become-a-member">Become a member</h2>
+        <p>
+          Join the band's family as a supporting member with an annual membership fee. Members keep
+          our lessons free year after year.
+        </p>
+        <Todo block>
+          annual amount and what members receive (a full Members page comes in v3.1)
+        </Todo>
+      </div>
+      <div class="stack">
+        <h2 id="give-in-someones-name">Give in someone's name</h2>
+        <p>
+          Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember
+          someone who shared our love of music. Just let us know who your gift honors.
+        </p>
+        <Todo block>how (a field in the donation form, or contact us)</Todo>
+      </div>
+    </Columns>
   </Surface>
 
-  <Surface title="Give in someone's name">
-    <div class="stack">
-      <p>
-        Honor a loved one, a teacher or a fellow musician with a gift in their name, or remember
-        someone who shared our love of music. Just let us know who your gift honors.
-      </p>
-      <Todo block>how (a field in the donation form, or contact us)</Todo>
-    </div>
-  </Surface>
-
-  <Surface title="Join us at a fundraiser dinner" surface="tint">
+  <Surface title="Join us at a fundraiser dinner">
     <div class="stack">
       <p>
         Throughout the year we host dinners that bring classic Portuguese meals to the table, along
@@ -143,7 +150,7 @@ const ways = [
     </div>
   </Surface>
 
-  <Surface title="Other ways to help">
+  <Surface title="Other ways to help" surface="tint" centerTitle>
     <ul class="ways">
       {ways.map(({ icon: Icon, title, text, href, link }) => (
         <li>
@@ -156,22 +163,25 @@ const ways = [
     </ul>
   </Surface>
 
-  <Surface title="For businesses" surface="tint">
-    <div class="stack">
-      <p>
-        Many employers match their employees' charitable gifts, often doubling them. Ask your HR or
-        giving program whether we qualify. Our registered name is the{' '}
-        <strong>{site.legalName}</strong>, a 501(c)(3) nonprofit (EIN {site.ein}), classified as{' '}
-        {site.classification}. Interested in supporting us as a business?
-      </p>
-      <ButtonRow>
-        <Button href="/contact">Contact us</Button>
-      </ButtonRow>
+  <Surface>
+    <Columns align="center">
+      <div class="stack">
+        <h2 id="for-businesses">For businesses</h2>
+        <p>
+          Many employers match their employees' charitable gifts, often doubling them. Ask your HR
+          or giving program whether we qualify. Our registered name is the{' '}
+          <strong>{site.legalName}</strong>, a 501(c)(3) nonprofit (EIN {site.ein}), classified as{' '}
+          {site.classification}. Interested in supporting us as a business?
+        </p>
+        <ButtonRow>
+          <Button href="/contact">Contact us</Button>
+        </ButtonRow>
+      </div>
       <Testimonial audience="donors" />
-    </div>
+    </Columns>
   </Surface>
 
-  <Surface title="The details">
+  <Surface title="The details" surface="tint">
     <div class="stack">
       <p>
         The {site.legalName} is a 501(c)(3) nonprofit organization, EIN {site.ein}. Donations are

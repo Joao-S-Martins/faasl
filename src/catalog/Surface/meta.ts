@@ -36,6 +36,12 @@ export default defineMeta(Surface, {
       default: 'the title, slugified',
       description: 'Anchor for links to this section.',
     },
+    align: {
+      values: 'start · center',
+      default: 'start',
+      description:
+        'center: heading, text and buttons centered, for short statements and calls to action (not lists).',
+    },
     centerTitle: {
       values: 'boolean',
       default: 'false',

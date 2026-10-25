@@ -1,0 +1,42 @@
+---
+// Two side-by-side columns on desktop, stacked on phones and tablets: a form
+// and its details, a list and a quote, two short related sections. Put the
+// columns in the default slot, one element each.
+//   split: even (half and half) · wide-start (the first column wider)
+//   align: start (top-aligned) · center (vertically centered)
+
+interface Props {
+  split?: 'even' | 'wide-start';
+  align?: 'start' | 'center';
+}
+
+const { split = 'even', align = 'start' } = Astro.props;
+---
+
+<div class:list={['columns', split, align]}>
+  <slot />
+</div>
+
+<style>
+  @layer components {
+    .columns {
+      display: grid;
+      gap: var(--space-l);
+    }
+
+    @media (width >= 64rem) {
+      .columns {
+        grid-template-columns: 1fr 1fr;
+        column-gap: var(--space-xl);
+      }
+
+      .wide-start {
+        grid-template-columns: 3fr 2fr;
+      }
+
+      .center {
+        align-items: center;
+      }
+    }
+  }
+</style>

@@ -35,5 +35,6 @@ export default defineMeta(CardRow, {
   notes: [
     'Every card is in the page from the start; nothing loads as you scroll.',
     'The row is a focusable region, so it scrolls with the keyboard too.',
+    'When the row overflows, round arrow buttons under it (right corner) scroll a screen of cards at a time, for mice and trackpads without sideways scrolling. Touch screens swipe instead, so they get no arrows.',
   ],
 });

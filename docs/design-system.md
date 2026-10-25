@@ -67,7 +67,8 @@ Tablets keep the phone layout for overlaps, with wider gutters (`clamp(1rem, 4vw
 | `pattern` | `none` · `field` | The faint staff lines on top of the surface |
 | `tone` | `plain` · `tint` · `green` | A box or card's own color |
 | `side` | `left` · `right` | Photo side on desktop |
-| `width` | `content` · `narrow` | Content width or reading width (about 65ch) |
+| `width` | `content` · `narrow` · `centered` | Content width, reading width (about 65ch), or reading width centered |
+| `align` | `start` · `center` | `Surface`: center the heading, text and buttons (short statements and calls to action, not lists) |
 | `well` | boolean | A sideways row sits in the recessed tray |
 | `title`, `level`, `id` | | `Surface` renders the section heading itself, labels the section with it (`aria-labelledby`), and blocks inside default to `level` 3 |
 
@@ -92,14 +93,17 @@ Rules the blocks enforce: corners rounded where a box floats, square where it bu
 | `Surface` | blocks | `surface`, `pattern`, `width`, `title`, `level`, `id`; sets `data-on` |
 | `Hero` | blocks | Photo with the text box overlapping its bottom, sitting on the next section's surface; still first, video later; `object-position` tuned for phones |
 | `PageHero` | blocks | Smaller hero for inner pages |
-| `PathLinks` | blocks | "I want to…" links, inside the content width, whole card clickable with an arrow; 3-up from tablet |
+| `PathLinks` | blocks | "I want to…" links, inside the content width, whole card clickable; arrows only when stacked (side by side they'd point at each other); 3-up from tablet |
+| `Divider` | blocks | A thin full-width gold line where two same-colored sections meet (Home: hero and path links) |
+| `Columns` | blocks | Two columns on desktop, stacked below: a form and its details, text and a quote, two short sections; `split`, `align` |
 | `MediaFeature` | blocks | Photo with an overlapping box; `side`, `tone` |
 | `PhotoBreak` | blocks | Full-width photo as a separator |
 | `PhotoBand` | blocks | Full-width photo with a box over it (kept for later) |
 | `StatGrid` | blocks | Icon, number, label in aligned rows; balanced label wraps |
 | `FactRow` | blocks | Small label, big answer (for Lessons: cost, ages, when, how to start) |
 | `StepRow` | blocks | Numbered boxes that butt together; last one emphasized |
-| `CardRow` + `ScrollWell` | blocks | Sideways row on phones and tablets; focusable region for keyboard scrolling; `well` |
+| `CardRow` + `ScrollWell` | blocks | Sideways row on phones and tablets; focusable region for keyboard scrolling; `well`; arrow buttons under the row when it overflows, for mice without sideways scrolling (none on touch screens) |
+| `Gallery` | blocks | Photo and video grid with a PhotoSwipe lightbox (`event-writeups.md`) |
 | `QuoteBox` | blocks | Testimonial in a box |
 | `Callout` | blocks | Gold-edged note |
 | `Accordion` | blocks | `<details>` group with a green chevron, 56px rows, on the page grid |
@@ -127,6 +131,16 @@ Retired: `Section`, `PageHeader`, old `Hero`, `RouterLinks`, `FactList`, `Action
 **Home:** hero on green, Learn / Play / Give, lessons feature, stats on **white with bold hunter-green numbers**, band feature, member quote on the off-white staff field, support tile wall (phone layout keeps the tiles above the box), **"Come see us" on green with the staff field** with events in the tray, parade photo, leadership in the tray, **"Visit us" kept, with a photo of the clubhouse** (TODO: photo), footer.
 
 **Lessons:** hero, facts (small label, big answer; 4th fact "How to start"), "Plan your first visit" button, how it works (step boxes, the last "The volunteer band"), staff tile rule, teacher, what students learn, instrument picker (buttons across the full width, player under them, scrolls into view on phones; unavailable instruments in ink with a dashed border), getting ready and FAQ accordions, **"Ready to start?" on off-white with the staff field**, with **a placeholder for a different quote** (TODO: a student or family quote).
+
+### Varying a page (owner, Oct 2026)
+
+A page of left-aligned heading-and-text sections reads as a document. Past the hero, mix in:
+- **a photo every two or three sections:** `MediaFeature` (alternate `side`) or `PhotoBreak`;
+- **the occasional centered section** (`Surface align="center"`) for a statement or a closing call to action;
+- **`Columns`** for short sections that look thin across the page; pair them;
+- **one green section** for something worth stopping on (often with the staff field and a `FactRow` or statement), still rarely two greens in a row.
+
+Lists, forms and long text stay left-aligned.
 
 ## 7. The catalog (`/design/components`, beta only)
 

@@ -5,6 +5,9 @@ import Surface from '../components/blocks/Surface.astro';
 import EventList from '../components/content/EventList.astro';
 import CalendarLink from '../components/content/CalendarLink.astro';
 import parade from '../assets/photos/parade-carnival.jpg';
+import gym from '../assets/photos/concert-band-gym.jpg';
+import Columns from '../components/blocks/Columns.astro';
+import PhotoBreak from '../components/blocks/PhotoBreak.astro';
 import { getEventPages } from '../lib/events';
 
 // Past events stay listed only if they have a write-up.
@@ -53,35 +56,42 @@ const pastWriteups = (await getEventPages())
     </div>
   </Surface>
 
+  <PhotoBreak image={gym} alt="The band in concert, the conductor on a riser" />
+
   <Surface title="Performances" id="performances" surface="tint">
-    <div class="stack">
-      <p>
-        We play about a dozen parades and half a dozen concerts every year, from Holy Ghost festas
-        to city celebrations.
-      </p>
-      <EventList
-        calendar="performances"
-        empty="No performances are scheduled right now. Add our performance calendar to yours to hear about the next one."
-      />
-      <p>
-        <CalendarLink calendar="performances" />
-      </p>
-      <h3>What we perform at</h3>
-      <ul>
-        <li>
-          <strong>Holy Ghost parades:</strong> hosted by Portuguese communities throughout the year
-        </li>
-        <li>
-          <strong>Music festivals</strong>
-        </li>
-        <li>
-          <strong>City events:</strong> the Cherry Festival parade and others
-        </li>
-        <li>
-          <strong>Caroling:</strong> bringing cheer to the holiday season
-        </li>
-      </ul>
-    </div>
+    <Columns split="wide-start">
+      <div class="stack">
+        <p>
+          We play about a dozen parades and half a dozen concerts every year, from Holy Ghost festas
+          to city celebrations.
+        </p>
+        <EventList
+          calendar="performances"
+          empty="No performances are scheduled right now. Add our performance calendar to yours to hear about the next one."
+        />
+        <p>
+          <CalendarLink calendar="performances" />
+        </p>
+      </div>
+      <div class="stack">
+        <h3>What we perform at</h3>
+        <ul>
+          <li>
+            <strong>Holy Ghost parades:</strong> hosted by Portuguese communities throughout the
+            year
+          </li>
+          <li>
+            <strong>Music festivals</strong>
+          </li>
+          <li>
+            <strong>City events:</strong> the Cherry Festival parade and others
+          </li>
+          <li>
+            <strong>Caroling:</strong> bringing cheer to the holiday season
+          </li>
+        </ul>
+      </div>
+    </Columns>
   </Surface>
   {pastWriteups.length > 0 && (
     <Surface title="Past events" id="past">

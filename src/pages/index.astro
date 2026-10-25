@@ -11,6 +11,7 @@ import PartyPopper from '@lucide/astro/icons/party-popper';
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/blocks/Hero.astro';
 import PathLinks from '../components/blocks/PathLinks.astro';
+import Divider from '../components/blocks/Divider.astro';
 import Surface from '../components/blocks/Surface.astro';
 import MediaFeature from '../components/blocks/MediaFeature.astro';
 import StatGrid from '../components/blocks/StatGrid.astro';
@@ -60,6 +61,8 @@ const number = (text: string) => text.replace(/^about\s+/i, '');
       connections)
     </Todo>
   </Hero>
+
+  <Divider />
 
   <PathLinks
     label="I want to…"

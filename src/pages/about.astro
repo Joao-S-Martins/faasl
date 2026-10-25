@@ -4,9 +4,13 @@ import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
 import ButtonRow from '../components/blocks/ButtonRow.astro';
 import Button from '../components/blocks/Button.astro';
+import MediaFeature from '../components/blocks/MediaFeature.astro';
+import PhotoBreak from '../components/blocks/PhotoBreak.astro';
 import PeopleList from '../components/content/PeopleList.astro';
 import { getSite, yearsSince } from '../lib/site';
 import bandSteps from '../assets/photos/band-church-steps.jpg';
+import gym from '../assets/photos/concert-band-gym.jpg';
+import parade from '../assets/photos/parade-carnival.jpg';
 
 const site = await getSite();
 ---
@@ -28,8 +32,13 @@ const site = await getSite();
     <p class="sub">{`a community built around music since ${site.foundingYear}`}</p>
   </Hero>
 
-  <Surface title="Our story">
-    <div class="stack">
+  <Surface>
+    <MediaFeature
+      image={gym}
+      alt="The band in white uniforms in concert, the conductor on a riser"
+      side="right"
+    >
+      <h2 id="our-story">Our story</h2>
       <p>
         Our band was founded in {site.foundingYear} by amateur musicians who wanted to enrich their
         community through music. More than {yearsSince(site.foundingYear)} years later,{' '}
@@ -49,12 +58,12 @@ const site = await getSite();
           <em>{site.nameTranslation}</em>. Our members call us the {site.alternateName}.
         </p>
       </aside>
-    </div>
+    </MediaFeature>
   </Surface>
 
-  <Surface title="Our heritage" surface="tint">
-    <div class="stack">
-      <p>
+  <Surface title="Our heritage" surface="green" pattern="field" align="center">
+    <div class="stack measure">
+      <p class="lead">
         Our Portuguese roots show up in everything we do. Each year we march in Holy Ghost parades
         hosted by Portuguese communities, and we host dinners that bring classic Portuguese meals to
         the table, along with some American staples. These fundraisers support our music programs,
@@ -69,8 +78,10 @@ const site = await getSite();
     </div>
   </Surface>
 
-  <Surface title="Get involved" id="get-involved" surface="tint">
-    <div class="stack">
+  <PhotoBreak image={parade} alt="The band marching through a street fair" />
+
+  <Surface title="Get involved" id="get-involved" align="center">
+    <div class="stack measure">
       <p>
         Our band runs entirely on volunteers, and there's more to it than music. Help plan our
         fundraiser dinners, tell our story online and in the community, photograph our performances,

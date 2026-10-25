@@ -1,7 +1,8 @@
 ---
 // The "I want to…" links under the home hero: each a whole clickable block
 // with an icon, a title, a line of text and an arrow. Stacked on phones,
-// three across from tablets; the row stays inside the content width.
+// three across from tablets; the row stays inside the content width. Side by
+// side the arrows would point at each other, so they show only when stacked.
 import type { AstroComponent } from '@lucide/astro';
 import ArrowRight from '@lucide/astro/icons/arrow-right';
 
@@ -96,7 +97,12 @@ const { label, links } = Astro.props;
       }
 
       a {
+        grid-template-columns: auto 1fr;
         padding-inline: var(--space-m);
+      }
+
+      .arrow {
+        display: none;
       }
 
       strong {

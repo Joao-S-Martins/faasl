@@ -4,12 +4,18 @@ import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
 import ButtonRow from '../components/blocks/ButtonRow.astro';
 import Button from '../components/blocks/Button.astro';
-import DetailList from '../components/blocks/DetailList.astro';
+import FactRow from '../components/blocks/FactRow.astro';
+import MediaFeature from '../components/blocks/MediaFeature.astro';
+import CalendarDays from '@lucide/astro/icons/calendar-days';
+import Clock from '@lucide/astro/icons/clock';
+import MapPin from '@lucide/astro/icons/map-pin';
 import PeopleList from '../components/content/PeopleList.astro';
 import Testimonial from '../components/content/Testimonial.astro';
 import { getScheduleMap } from '../lib/schedule';
 import { getSite } from '../lib/site';
 import growing from '../assets/photos/growing-together.jpg';
+import church from '../assets/photos/band-in-church.jpg';
+import brass from '../assets/photos/brass-close-up.jpg';
 
 const site = await getSite();
 const s = await getScheduleMap();
@@ -49,8 +55,13 @@ const s = await getScheduleMap();
     </div>
   </Surface>
 
-  <Surface title="What we play">
-    <div class="stack">
+  <Surface>
+    <MediaFeature
+      image={church}
+      alt="The band in green uniforms performing inside a church"
+      side="left"
+    >
+      <h2 id="what-we-play">What we play</h2>
       <p>
         We play concert band and marching music, and we perform around the SF Bay and Central Valley
         every year:
@@ -69,19 +80,27 @@ const s = await getScheduleMap();
           <strong>Caroling:</strong> bringing cheer to the holiday season
         </li>
       </ul>
-    </div>
+    </MediaFeature>
   </Surface>
 
-  <Surface title="Rehearsals" surface="tint">
-    <div class="stack">
-      <DetailList
-        facts={[
-          { term: 'When', detail: `${s.band.day}s at ${s.band.time} (right after lessons)` },
-          { term: 'How long', detail: `${s.band.length}${s.band.note ? `, ${s.band.note}` : ''}` },
-          { term: 'Where', detail: `${site.clubhouse.street}, ${site.clubhouse.city}` },
-        ]}
-      />
-    </div>
+  <Surface title="Rehearsals" surface="green" pattern="field">
+    <FactRow
+      facts={[
+        {
+          icon: CalendarDays,
+          label: 'When',
+          value: `${s.band.day}s`,
+          detail: `${s.band.time}, right after lessons`,
+        },
+        { icon: Clock, label: 'How long', value: s.band.length, detail: s.band.note },
+        {
+          icon: MapPin,
+          label: 'Where',
+          value: 'Our clubhouse',
+          detail: `${site.clubhouse.street}, ${site.clubhouse.city}`,
+        },
+      ]}
+    />
   </Surface>
 
   <Surface title="Our conductors">
@@ -90,8 +109,9 @@ const s = await getScheduleMap();
     </div>
   </Surface>
 
-  <Surface title="Coming back to music, or starting fresh?" surface="tint">
-    <div class="stack">
+  <Surface surface="tint">
+    <MediaFeature image={brass} alt="Brass and saxophone players reading their music" side="right">
+      <h2 id="coming-back">Coming back to music, or starting fresh?</h2>
       <p>
         That instrument in the back of your closet still has music in it. Many of our members
         returned to playing after years away, and the band is a welcoming place to rediscover it.
@@ -100,10 +120,10 @@ const s = await getScheduleMap();
         a second instrument.
       </p>
       <Testimonial audience="musicians" pick={2} />
-    </div>
+    </MediaFeature>
   </Surface>
 
-  <Surface title="Ready to play?">
+  <Surface title="Ready to play?" align="center">
     <div class="stack">
       <p>Come to the next rehearsal. Questions first?</p>
       <ButtonRow>

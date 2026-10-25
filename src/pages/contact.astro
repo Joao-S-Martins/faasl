@@ -2,6 +2,7 @@
 import PageLayout from '../layouts/PageLayout.astro';
 import Hero from '../components/blocks/Hero.astro';
 import Surface from '../components/blocks/Surface.astro';
+import Columns from '../components/blocks/Columns.astro';
 import ContactForm from '../components/blocks/ContactForm.astro';
 import Address from '../components/content/Address.astro';
 import SocialLinks from '../components/content/SocialLinks.astro';
@@ -38,37 +39,47 @@ const schedule = await fillTokens('{{schedule}}');
     </div>
   </Surface>
 
-  <Surface title="Send a message">
-    <div class="stack">
-      <ContactForm />
-    </div>
-  </Surface>
-
-  <Surface title="Visit us" surface="tint">
-    <div class="stack">
-      <Address directions />
-      <p>{schedule}</p>
-    </div>
-  </Surface>
-
-  <Surface title="Mail">
-    <div class="stack">
-      <Address which="mailing" />
-    </div>
-  </Surface>
-
-  <Surface title="Call or email" surface="tint">
-    <div class="stack">
-      <p>
-        <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a> (please leave a message)
-        ·<a href={`mailto:${site.email}`}>{site.email}</a>
-      </p>
-    </div>
-  </Surface>
-
-  <Surface title="Follow us">
-    <div class="stack">
-      <SocialLinks />
-    </div>
+  <Surface>
+    <Columns split="wide-start">
+      <div class="stack">
+        <h2 id="send-a-message">Send a message</h2>
+        <ContactForm />
+      </div>
+      <aside class="details stack" aria-label="Other ways to reach us">
+        <h2 id="visit-us">Visit us</h2>
+        <Address directions />
+        <p>{schedule}</p>
+        <h2 id="call-or-email">Call or email</h2>
+        <p>
+          <a href={`tel:+1${site.phone.replace(/\D/g, '')}`}>{site.phone}</a> (please leave a
+          message)
+          <br />
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+        </p>
+        <h2 id="mail">Mail</h2>
+        <Address which="mailing" />
+        <h2 id="follow-us">Follow us</h2>
+        <SocialLinks />
+      </aside>
+    </Columns>
   </Surface>
 </PageLayout>
+
+<style>
+  @layer components {
+    .details {
+      align-self: start;
+      padding: var(--space-l);
+      border-radius: var(--r-box);
+      background: var(--color-off-white);
+    }
+
+    .details h2 {
+      font-size: var(--step-2);
+    }
+
+    .details h2:not(:first-child) {
+      margin-top: var(--space-m);
+    }
+  }
+</style>
