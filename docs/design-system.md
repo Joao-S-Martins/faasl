@@ -142,6 +142,8 @@ A page of left-aligned heading-and-text sections reads as a document. Past the h
 
 Lists, forms and long text stay left-aligned.
 
+**One quote per page.** Most pages get a single quote (member story or saying); only a page made of stories, like a future Stories page, shows several. Where a second quote seems to fit, use a photo instead.
+
 ## 7. The catalog (`/design/components`, beta only)
 
 Modeled on the Bootstrap and Tailwind docs: a sidebar of categories; one page per component with a description, live examples, an options table and usage notes; Guidelines pages generated from this document.

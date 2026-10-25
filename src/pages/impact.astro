@@ -6,6 +6,8 @@ import Surface from '../components/blocks/Surface.astro';
 import Columns from '../components/blocks/Columns.astro';
 import PhotoBreak from '../components/blocks/PhotoBreak.astro';
 import growing from '../assets/photos/growing-together.jpg';
+import bandSteps from '../assets/photos/band-church-steps.jpg';
+import { Image } from 'astro:assets';
 import DetailList from '../components/blocks/DetailList.astro';
 import Testimonial from '../components/content/Testimonial.astro';
 import Todo from '../components/layout/Todo.astro';
@@ -72,11 +74,19 @@ const cities = site.areaServed.join(', ');
         </Todo>
       </div>
       <div class="stack">
+        <Image
+          src={bandSteps}
+          alt="The whole band in green uniforms on church steps, from the youngest to the oldest"
+          width={800}
+          widths={[400, 800]}
+          sizes="(width >= 64rem) 32rem, 100vw"
+          quality={70}
+          class="glance-photo"
+        />
         <Testimonial audience="funders" pick={1} />
-        <Testimonial audience="funders" />
         <Todo block>
           a quote from Ryan, the San Leandro High School band director, on the difference he sees in
-          students who take part
+          students who take part; it would replace Rui's here (one quote per page)
         </Todo>
       </div>
     </Columns>
@@ -170,3 +180,15 @@ const cities = site.areaServed.join(', ');
     </div>
   </Surface>
 </PageLayout>
+
+<style>
+  @layer components {
+    .glance-photo {
+      width: 100%;
+      aspect-ratio: 3 / 2;
+      object-fit: cover;
+      border-radius: var(--r-box);
+      margin-bottom: var(--space-m);
+    }
+  }
+</style>

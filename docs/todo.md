@@ -199,7 +199,7 @@ Landscape, at least 2000px wide, people facing the camera or in action, subject 
 - [ ] **Bios appear in too many places** (Home, About, and Impact before this pass): decide where bios live and where only names and photos show.
 
 ### Quotes 🧑
-- [x] **Member quotes:** the six stories from the old stories page (stories.faasl.org, Adobe Express) are copied in full into `src/content/stories/`, each with a short pull quote. Home and Join: Aubury, Manuel; Lessons: Erika; Give: Lorenza; Impact: Manuel (bonds), Rui (three generations). Donald's isn't shown yet; it names Steve Silva as director, so check it's current before using it.
+- [x] **Member quotes:** the six stories from the old stories page (stories.faasl.org, Adobe Express) are copied in full into `src/content/stories/`, each with a short pull quote. Home and Join: Aubury, Manuel; Lessons: Erika; Give: Lorenza; Impact: Rui (three generations). One quote per page (owner, Oct 2026). Donald's isn't shown yet; it names Steve Silva as director, so check it's current before using it.
 - [ ] **Ask each person** if we may keep using their quote on the new site, and for a photo (optional)
 - [ ] **Ryan, the San Leandro High School band director:** the difference he sees in students who take part (Impact)
 - [ ] **A donor quote** for Give (Lorenza's, about volunteering and fundraising, holds the spot)
